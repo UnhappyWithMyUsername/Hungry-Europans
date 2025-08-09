@@ -32,7 +32,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="20" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
@@ -108,7 +108,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,389,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" waterdragcoefficient="1" />
       <SuitableTreatment type="thirst" suitability="75" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -155,7 +155,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="70" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -221,7 +221,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="70" />
       <SuitableTreatment type="huskinfection" suitability="30" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
@@ -392,7 +392,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="80" />
       <SuitableTreatment type="huskinfection" suitability="60" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
@@ -502,7 +502,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="80" />
       <SuitableTreatment type="chemaddiction" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -601,7 +601,7 @@
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -694,7 +694,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -783,7 +783,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -875,7 +875,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -969,7 +969,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -1059,7 +1059,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -1200,7 +1200,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="342,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -1249,7 +1249,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -1303,7 +1303,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,66,16,66" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -1388,7 +1388,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,66,16,66" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -1480,7 +1480,7 @@
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
       <LightComponent range="70.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
