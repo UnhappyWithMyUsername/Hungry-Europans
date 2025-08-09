@@ -837,7 +837,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <distiller.distill>DISTILL</distiller.distill><!--Patch 10-->
 <distiller.ethanol>READY TO DISTILL ETHANOL</distiller.ethanol><!--Patch 10-->
 <distiller.flourmixture>READY TO DISTILL SYNTHETIC FLOUR MIXTURE</distiller.flourmixture><!--Patch 17-->
-<distiller.empty>PLEASE INSERT ONE OF THE FOLLOWING:\n-PACK OF SUGAR \n-TODO:</distiller.empty><!--Patch 17-->
+<distiller.empty>PLEASE INSERT ONE OF THE FOLLOWING:\n-PACK OF SUGAR</distiller.empty><!--Patch 17-->
 <distiller.missingitem.yeastshroom>SUGAR INSERTED\nERROR: NO YEAST SHROOM FOUND! PLEASE INSERT 1X YEASTSHROOM.</distiller.missingitem.yeastshroom><!--Patch 17-->
 <distiller.missingitem.sulphuricacid>PULVERIZED SEEDS PACK INSERTED\nERROR: NO ACID FOUND! PLEASE INSERT 1X SULPHURIC ACID.</distiller.missingitem.sulphuricacid><!--Patch 17-->
 <he-distiller.output>Output:</he-distiller.output><!--Patch 10-->

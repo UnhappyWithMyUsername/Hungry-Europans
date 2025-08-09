@@ -97,24 +97,30 @@
         <sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnWearing" range="500.0" volumeproperty="Speed" volume="0.2" loop="true" frequencymultiplier="0.5" />
         <StatValue stattype="FlowResistance" value="0.9" />
       </Wearable>
+      <!-- When couwola cola is inserted: cut walls (colafuel1), weld walls (colafuel2), go faster (colafuel3)        -->
       <Holdable slots="OuterClothes+RightHand" controlpose="true" aimpos="70,5" handle1="-25,-7">
         <RequiredItem items="colafuel3" type="Contained" targetslot="2" />
-        <StatusEffect type="OnUse" targettype="Contained" targets="colafuel3" targetslot="2" Condition="-0.5">
+        <StatusEffect type="OnUse" targettype="Contained" targets="colafuel3" targetslot="2" Condition="-0.1">
           <RequiredItem items="colafuel3" type="Contained" targetslot="2" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" SpeedMultiplier="2.0" PropulsionSpeedMultiplier="2.0" setvalue="true" disabledeltatime="true">
           <RequiredItem items="colafuel3" type="Contained" targetslot="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="500.0" loop="true" volume="1.0" frequencymultiplier="0.35" dontmuffle="true" />
+          <ParticleEmitter particle="steamspray" particlespersecond="10" velocitymin="30" velocitymax="120" distancemin="0" distancemax="10" anglemin="110" anglemax="160" scalemin="1.0" scalemax="1.5" colormultiplier="255,220,180,255" lifetimemultiplier="1" copyentityangle="true"/>
+          <ParticleEmitter particle="colagoosplash" particlespersecond="10" velocitymin="60" velocitymax="200" distancemin="0" distancemax="30" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.5" colormultiplier="255,255,255,150" lifetimemultiplier="1" />
         </StatusEffect>
       </Holdable>
       <RepairTool firedamage="0.0" structurefixamount="0.0" range="250" barrelpos="0,0" combatpriority="10" repairmultiple="true" repairthroughwalls="true" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-5.0" targetforce="10" drawhudwhenequipped="true" crosshairscale="0.2">
         <RequiredItem items="colafuel1,colafuel2" type="Contained" targetslot="2" />
         <RequiredSkill identifier="mechanical" level="50" />
-        <StatusEffect type="OnUse" targettype="Contained" targets="colafuel1,colafuel2" targetslot="2" Condition="-1.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="colafuel1,colafuel2" targetslot="2" Condition="-0.4" />
         <StatusEffect type="OnUse" targettype="This" structurefixamount="-2.0" repairthroughwalls="false" repairthroughholes="true" levelwallfixamount="-5.0" setvalue="true" duration="0.1">
           <RequiredItem items="colafuel1" type="Contained" targetslot="2" />
+          <sound file="Content/Sounds/Water/FlowMedium.ogg" type="OnUse" range="500.0" loop="true" frequencymultiplier="0.5" dontmuffle="true" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="This" structurefixamount="2.0" repairthroughwalls="false" repairthroughholes="false" levelwallfixamount="0.0" setvalue="true" duration="0.1">
           <RequiredItem items="colafuel2" type="Contained" targetslot="2" />
+          <sound file="Content/Sounds/Water/FlowMedium.ogg" type="OnUse" range="500.0" loop="true" frequencymultiplier="0.5" dontmuffle="true" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="This">
           <Conditional InWater="False" />

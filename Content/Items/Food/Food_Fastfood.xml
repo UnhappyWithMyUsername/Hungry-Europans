@@ -49,7 +49,6 @@
       </Holdable>
     </Item>
 
-    <!-- PROTOTYPING SIMPLER FOOD. TODO: COPY THIS AND REPLACE ALL FOODS -->
     <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="25" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />

@@ -333,7 +333,7 @@
           <SpawnItem identifier="he-endwormmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--abyss meat
-        generic abyss meat for anything modded TODO: enable abyssal meat chunk        
+        generic meat for any modded abyss creature TODO: enable abyssal meat chunk        
         I multiply affliction by max health so it doesn't take an eternity to butcher (1 point = 1%)-->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
           <Conditional group="eq abyss" />
@@ -344,11 +344,11 @@
           <Conditional speciesname="neq latcher" />
           <Conditional speciesname="neq charybdis" />
           <Affliction identifier="he-butchered" strength="25" />
-          <!--<SpawnItem identifier="he-abyssalmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />-->
+          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         
         <!-- CORPSE REMOVAL 
-        removes corpse at 100 butchered
+        removes corpse at 100 butchered, don't remove huge corpses because it looks weird
         TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
           <!-- <RequiredItem items="nomeatleft" type="Equipped" msg="itemmsgnomeatleft" /> -->

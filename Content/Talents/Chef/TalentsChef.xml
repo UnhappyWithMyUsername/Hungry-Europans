@@ -299,7 +299,7 @@
       </AbilityGroupInterval> -->
     </Talent>
 
-  <!--Gain a commendation when cooking a gourmet meal TODO: make it clear what is gourmet, add gourmetfood tag to advanced meals? -->
+  <!--Gain a commendation when cooking a gourmet meal TODO: make it clear what is gourmet, make sure to add gourmetfood tag to advanced meals so this triggers -->
     <Talent identifier="he-culinaryschool">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-culinaryschool">

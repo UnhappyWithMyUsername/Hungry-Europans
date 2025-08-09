@@ -46,7 +46,7 @@
         <SlotIcon slotindex="16" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <SlotIcon slotindex="17" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,he-toolbeltlunch" />
-        <SubContainer capacity="6" depth="0.5">
+        <SubContainer capacity="6" depth="0.5" maxstacksize="1">
           <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
         </SubContainer>
       </ItemContainer>
@@ -84,7 +84,7 @@
           </StatusEffect>
         </Attack>
       </MeleeWeapon>
-      <ItemContainer capacity="6" slotsperrow="3" maxstacksize="1" keepopenwhenequipped="true" movableframe="true">
+      <ItemContainer capacity="9" slotsperrow="3" maxstacksize="1" keepopenwhenequipped="true" movableframe="true">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
       </ItemContainer>

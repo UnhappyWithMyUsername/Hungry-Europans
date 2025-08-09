@@ -7,7 +7,7 @@
         <Forcesay message="forcesay.eatingsound" sayinradio="false" />
       </StatusEffect> -->
 
-  <!-- TODO: Fuck the whole eating with E thing, I made items that can be eaten holdable and items that cannot throwable
+  <!-- Fuck the whole eating with E thing, I made items that can be eaten holdable and items that cannot throwable
     Eating behavior should be the same across all items (LMB+RMB), having arbitrary eating and throwing inputs between different items is a problem 
   fix eating without aiming for throwable if devs allow us to use "isaiming" as conditional https://github.com/FakeFishGames/Barotrauma/discussions/16166 -->
 
@@ -213,30 +213,14 @@
     </Deconstruct>
     <Body radius="15" density="12" />
     <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-15,-15" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="90" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-    
-      <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-      <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-        <Conditional IsBot="true" />
-      </StatusEffect>
-      <StatusEffect type="OnSuccess" target="This,UseTarget" duration="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-        <Conditional IsBot="true" />
-        <Conditional stun="gt 0" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-        <Affliction identifier="he-stuffed" amount="0.8" />
-        <Affliction identifier="strengthen" amount="0.4" />
-        <ReduceAffliction type="nausea" amount="0.5" />
-        <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
-        <Affliction identifier="he-vitaminrich" amount="5.0" />
-        <Affliction identifier="spill" amount="1000" probability="0.0005" />
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-      </StatusEffect>
-      
+          
       <!-- Regular eating -->
       <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <ReduceAffliction type="hunger" amount="0.8" />
         <Affliction identifier="he-stuffed" amount="0.8" />
         <Affliction identifier="strengthen" amount="0.4" />
+        <Affliction identifier="he-vitaminrich" amount="5.0" />
         <ReduceAffliction type="nausea" amount="0.5" />
         <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
         <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -802,10 +786,8 @@
   <!-- ///// CROSSBREEDS ///// -->
   <!-- ///// CROSSBREEDS ///// -->
 
-  <!-- TODO: prices -->
-
   <!-- POMACCO (pom x tobacco)
-  heals a little, but gives you tobacco addicition -->
+  heals a little, but gives you tobacco addiction -->
   <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
@@ -1005,7 +987,7 @@
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
     </Deconstruct>
-    <!-- TODO: reenable this when devs fix https://github.com/FakeFishGames/Barotrauma/discussions/16184 -->
+    <!-- TODO: reenable proper light position this when devs fix https://github.com/FakeFishGames/Barotrauma/discussions/16184 -->
     <!-- <LightComponent LightColor="220,150,30,150" range="15" IsOn="true" castshadows="false" lightoffset="22,5" vulnerabletoemp="false" pulseamount="0.6" pulsefrequency="1" flicker="0.5" flickerspeed="0.5">
       <LightTexture texture="Content/Lights/light.png" origin="0.5, 0.5" size="1.0,1.0" />
       <IsActiveConditional HasStatusTag="smoking" />
@@ -1110,10 +1092,7 @@
  <!--LEAVES-->
  <!--LEAVES-->
  <!--LEAVES-->
- 
- 
-  <!-- TODO: Make these into generic leaves, so more kind of plants produce leaves, not just Popnut/Bubbleberry, otherwise they become the only plant you can really use in HE for recipes ?? -->
- 
+  
   <Item name="Bubbleberry Leaf" identifier="bubbleberryleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,plantleaf,distilleringredient" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="389,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />

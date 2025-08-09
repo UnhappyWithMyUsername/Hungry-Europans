@@ -31,9 +31,7 @@ Low:
 - Cake+Slice
 - More fryable food
 - More grillable food
-- Worm infection | causes random stomache pains and will eventually kill the character | can be treated with antibiotics or strong alcohol
-- Tapeworm infection | causes the character to get hungry faster and will eventually kill them | can be treated with antibiotics
-- Check liver damage not working from drunkness in NT comp patch
+- Neurotrauma compatibility
 
 //////////////////////
 //////////////////////
@@ -55,7 +53,7 @@ Low:
 [*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
 [*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
 [*] Unit Load Devices can be swapped to make empty space for your kitchen.
-[*] A lot of new text requiring translation. Will work on making translation easier
+[*] A lot of new text requiring translation. The English file is a mess though, will work on making translation easier in the future
 
 [/List]
 
@@ -86,12 +84,13 @@ Low:
 [b]Other Changes:[/b]
 
 [List]
-[*] Some food and drink items need to be eaten in a specific way (opening bottles, opening jars, eating with fork/spoon...)
-[*] Buffed some of the weaker Chef talents.
+[*] Some food and drink items need to be eaten in a specific way (opening bottles, opening jars, eating with fork/spoon...). Involves using RMB+E or RMB+E or tapping RMB, might not be intuitive though.
 [*] Kitchen equipment sprites were changed to align with the counter when placed in-game. Old equipment might be offset as a result. 
 [*] Machinery and planter pots use placement restrictions: cannot place these items in too close proximity to other items, can only be placed on the ground
+[*] Deconstructing meat no longer gives Alien blood
 [*] Plants are smaller and grow faster, but require more active watering and are more vulnerable to both flooding and fire
 [*] Watering can needs to be refilled in a sink or by inserting a bottle of water
+[*] Buffed some of the weaker Chef talents.
 [*] "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
 [*] "Drunk" can now improve your mood (Only with "Mood" enabled)
 [*] "Drunk" can now make you tired (Only with "Tiredness" enabled)
@@ -99,7 +98,6 @@ Low:
 [*] New output for "Hydroponic Planter" to calculate the seconds until the next produce.
 [*] Garden Sprinkler cycle rate can be set manually
 [*] Rescaled burgers and hotdogs. They felt a bit oversized previously
-[*] Deconstructing meat no longer gives Alien blood
 [*] Made empty cans spawn in or nearby outpost trash cans
 [*] "Hungry Europan" syringe gives you a starter 5 Cooking 5 Butchery
 [*] Removed "Starvation Conciousness Regainer" since you can just feed someone unconcious or use adrenaline
@@ -131,16 +129,15 @@ Low:
 
 Misc TODOs:
 
-- Find a way to use lower condition meat instead of letting it rot. Maybe throw it out the depth charge tube as decoy? 
-- Make tea kettle storable in cafeteria cart
+- Find a way to use lower condition meat since under 50% it can't be used to cook. Maybe throw it out the depth charge tube as decoy? 
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
 - Change drunkness to not apply disoriented while in water and instead slow the character down
 - Skin for Poutine
 - Ethanol gives some radiation resistance
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
 - Fix meat spoiling in fabricators.
-- "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
 - Endworm and Watcher products giving "concealed" affliction to passivy creatures.
+- Make tea kettle storable in cafeteria cart
 
 
 
@@ -148,7 +145,7 @@ LIST OF FOODS IDEAS:
 
 - Sauté with Mushrooms: meat + mushroom
 - Cake + Cake Slice
-- Pasta + pasta recipes?
+- Pasta + pasta recipes
 - Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
 - Endeavour's cuppa: minor healing properties, slow metabolism cures psychosis and hallucinations, cures husk 
 - Grog! It'd be made of sea water and rum.
@@ -176,11 +173,13 @@ LongTermPlans:
 - Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations	
+- "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
 - Kuru sickness
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
 - Abyssal meats?
 - Plant based talents. Craftable item that makes items grow faster? Special fertilizer?
+- Better Entertainer talents to replace the whole "graduation" copy
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
 - Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.

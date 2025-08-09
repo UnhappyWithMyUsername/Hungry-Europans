@@ -32,14 +32,18 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="20" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true"/>
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+        </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="10">
+          <Conditional infection="gt 0" />
           <ReduceAffliction identifier="infection" amount="0.4" />
           <Affliction identifier="burn" amount="0.15" /> 
-          <Sound file="Content/Items/Medical/ITEM_liquid.ogg" range="200" />
         </StatusEffect>        
         
         <!-- Unbottle --> 
@@ -49,7 +53,7 @@
         </StatusEffect>
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-2.0" aimpos="32,28" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-2.0" aimpos="28,24" >
           <Conditional condition="lt 11" />
           <Affliction identifier="he-internalburn" amount="8" />
           <Affliction identifier="psychosisresistance" amount="80" />
@@ -59,12 +63,15 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
           <Remove />
         </StatusEffect>
       </Holdable>
     </Ethanol>
 
-    <TonicLiquid name="Tonic" identifier="tonicliquid" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,drinkitem,can" description="" scale="0.5" impactsoundtag="impact_aluminiumcan_full" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <TonicLiquid name="Tonic" identifier="tonicliquid" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,drinkitem,can" description="" scale="0.5" impactsoundtag="impact_aluminiumcan_full" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -101,20 +108,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,389,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" waterdragcoefficient="1" />
       <SuitableTreatment type="thirst" suitability="75" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional stun="gt 0" />
-          <Conditional IsBot="true" />
-          <Affliction identifier="durationincrease" amount="30" />
-          <ReduceAffliction type="thirst" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -145,6 +139,56 @@
       </Holdable>
       
     </TonicLiquid>
+
+    <Item name="Energy Drink" identifier="energydrink" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="25" fabricationlimitmin="0" fabricationlimitmax="6" />
+      <Deconstruct time="2">
+        <Item identifier="aluminium" amount="1" outcondition="0.5"/>
+      </Deconstruct>
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.525" origin="0.5,0.78"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
+      <Body width="18" height="43" density="11" />
+      <SuitableTreatment type="thirst" suitability="70" />
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+
+        <!-- Unbottle --> 
+        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 11" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
+        </StatusEffect>
+                
+        <!-- Regular drinking RMB after unbottle --> 
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
+          <Conditional condition="lt 11" />
+          <ReduceAffliction identifier="drunk" amount="1.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
+          <ReduceAffliction identifier="hallucinating" amount="1.5" />
+          <Affliction identifier="haste" amount="12.0" />
+          <ReduceAffliction type="thirst" amount="1.5" />
+          <Affliction identifier="fillbladder" amount="2.0" />
+          <Affliction identifier="drank_cola" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>         
+        
+        <StatusEffect type="OnBroken" target="This">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush4.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush5.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush6.ogg" range="350" volume="3" selectionmode="Random" />
+          <Remove />
+          <Spawnitem identifier="he-emptycanenergy1" spawnposition="SameInventory" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+
 
     <!--ADJUSTED ITEM TO APPLY EFFECTS WHILE DRINKING, GET DESTROYED ON IMPACT AND SPAWN EMPTY BOTTLE IF EMPTY-->
     <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Heal Damage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
@@ -177,10 +221,11 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="70" />
       <SuitableTreatment type="huskinfection" suitability="30" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
@@ -189,22 +234,9 @@
           <ReduceAffliction identifier="huskinfection" amount="1" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This, Limb" duration="2">
+          <Conditional infection="gt 0" />
           <ReduceAffliction identifier="infection" amount="1.5" />
           <Affliction identifier="burn" amount="0.15" /> 
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="he-internalburn" amount="2" />
-          <Affliction identifier="psychosisresistance" amount="7" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="2" />
-          <ReduceAffliction identifier="hallucinating" amount="1" />
-          <ReduceAffliction identifier="he-halucinova" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="1" />
-          <Affliction identifier="applydrunk" amount="3" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         
         <!-- Unbottle --> 
@@ -329,73 +361,6 @@
       <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="856,0,21,63" depth="0.6" origin="0.5,0.5" />
     </Item>
 
-    <!--DISABLE NATURAL SPAWNING OF VANILLA ITEM AND CONVERT EXISTING VANILLA ITEM TO MODDED ITEM-->
-    <Item name="Energy Drink" identifier="energydrink" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="25" fabricationlimitmin="0" fabricationlimitmax="6" />
-      <Deconstruct time="2">
-        <Item identifier="aluminium" amount="1" outcondition="0.5"/>
-      </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.525" origin="0.5,0.78"  />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
-      <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="70" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <ReduceAffliction identifier="drunk" amount="1.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
-          <ReduceAffliction identifier="hallucinating" amount="1.5" />
-          <Affliction identifier="haste" amount="12.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
-          <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
-        </StatusEffect>
-                
-        <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
-          <Conditional condition="lt 11" />
-          <ReduceAffliction identifier="drunk" amount="1.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
-          <ReduceAffliction identifier="hallucinating" amount="1.5" />
-          <Affliction identifier="haste" amount="12.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Affliction identifier="drank_cola" amount="1" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>         
-        
-        <StatusEffect type="OnBroken" target="This">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush4.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush5.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush6.ogg" range="350" volume="3" selectionmode="Random" />
-          <Remove />
-          <Spawnitem identifier="he-emptycanenergy1" spawnposition="SameInventory" spawnifinventoryfull="true" />
-        </StatusEffect>
-      </Holdable>
-    </Item>
-
    
     <!--END OF OVERRIDES-->
     <!--END OF OVERRIDES-->
@@ -427,10 +392,11 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="80" />
       <SuitableTreatment type="huskinfection" suitability="60" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
@@ -439,24 +405,9 @@
           <ReduceAffliction identifier="huskinfection" amount="1" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This, Limb" duration="2">
+          <Conditional infection="gt 0" />
           <ReduceAffliction identifier="infection" amount="1.5" />
           <Affliction identifier="burn" amount="0.15" /> 
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="he-internalburn" amount="2" />
-          <Affliction identifier="psychosisresistance" amount="7" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="2" />
-          <ReduceAffliction identifier="hallucinating" amount="1" />
-          <ReduceAffliction identifier="he-halucinova" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="1" />
-          <Affliction identifier="applydrunk" amount="3" />
-          <Affliction identifier="radiationsickness" amount="0.5" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         
         <!-- Unbottle --> 
@@ -527,7 +478,7 @@
       </CustomInterface>
     </Rum>
     
-    <Item name="Doc's Whiskey" identifier="he-whiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Doctor Michael's original whiskey. Approved by Doctors europa-wide. |Alcoholic Beverage |Reduce Hallucinations |Reduce Halucinova Effects |Reduce Chem Addiction |Increase Psychosis Resistance |Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Doc's Whiskey" identifier="he-whiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Doctor Michael's original whiskey. Approved by Doctors europa-wide. |Alcoholic Beverage |Reduce Hallucinations |Reduce Halucinova Effects |Reduce Chem Addiction |Increase Psychosis Resistance |Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -551,28 +502,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="80" />
       <SuitableTreatment type="chemaddiction" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="6" />
-          <Affliction identifier="applydrunk" amount="2.5" />
-          <ReduceAffliction identifier="hallucinating" amount="2.0" />
-          <ReduceAffliction identifier="psychosis" amount="2.0" />
-          <ReduceAffliction identifier="nausea" amount="2" />
-          <ReduceAffliction identifier="he-halucinova" amount="2.0" />
-          <ReduceAffliction identifier="embarrassment" strength="2" />
-          <ReduceAffliction identifier="chemaddiction" amount="0.5" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -641,7 +571,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Halucinova" identifier="he-halucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Keep away from &quot;Sadashi Kira&quot; at all cost! |Alcoholic Beverage |Increase Hallucinations | Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Halucinova" identifier="he-halucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Keep away from &quot;Sadashi Kira&quot; at all cost! |Alcoholic Beverage |Increase Hallucinations | Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -671,25 +601,7 @@
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="drunk" amount="3.0" />
-          <Affliction identifier="he-halucinova" amount="9.0" />
-          <ReduceAffliction identifier="embarrassment" strength="10" />
-          <Affliction identifier="oxygenlow" amount="1.0" />
-          <ReduceAffliction identifier="nausea" amount="2" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
@@ -759,7 +671,7 @@
     <!--BEERS-->
     <!--BEERS-->
     <!--BEERS-->
-    <Item name="Coalition Premium" identifier="he-beercoalitionpremium" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst coalition station inhabitants. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Coalition Premium" identifier="he-beercoalitionpremium" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst coalition station inhabitants. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -782,25 +694,8 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="3" />
-          <Affliction identifier="applydrunk" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="0.25" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -865,7 +760,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Jovian Force" identifier="he-beerjovianforce" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A beer most popular amongst the Separatists. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Jovian Force" identifier="he-beerjovianforce" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A beer most popular amongst the Separatists. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -888,25 +783,8 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="3" />
-          <Affliction identifier="applydrunk" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="0.25" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -971,7 +849,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Liquid Ascension" identifier="he-beerliquidascension" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst members of the church of husk on their way to ascension! |Alcoholic Beverage |Increase Psychosis Resistance |Increase Pressure Immunity |Oxygen Not Included |May contain traces of husk parasites" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Liquid Ascension" identifier="he-beerliquidascension" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst members of the church of husk on their way to ascension! |Alcoholic Beverage |Increase Psychosis Resistance |Increase Pressure Immunity |Oxygen Not Included |May contain traces of husk parasites" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -997,27 +875,8 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="3" />
-          <Affliction identifier="applydrunk" amount="1" />
-          <Affliction identifier="huskinfectionresistance" amount="20" />
-          <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
-          <ReduceAffliction identifier="nausea" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="0.25" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1084,7 +943,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Clown Juice" identifier="he-beerclownjuice" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst pranksters. Praise the honkmother! |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Clown Juice" identifier="he-beerclownjuice" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst pranksters. Praise the honkmother! |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -1110,26 +969,8 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="3" />
-          <Affliction identifier="applydrunk" amount="1" />
-          <Affliction identifier="he-clownjuice" amount="20" />
-          <ReduceAffliction identifier="nausea" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="0.25" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1195,7 +1036,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Reaper's Tribute" identifier="he-beerreaperstribute" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong beer to pay tribute to the reaper. |Alcoholic Beverage |Clear Reaper's Tax |Clears your mind of embarrassment |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Reaper's Tribute" identifier="he-beerreaperstribute" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong beer to pay tribute to the reaper. |Alcoholic Beverage |Clear Reaper's Tax |Clears your mind of embarrassment |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -1218,26 +1059,8 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="3" />
-          <Affliction identifier="applydrunk" amount="1.5" />
-          <Affliction identifier="he-reaperstribute" amount="10" />
-          <ReduceAffliction identifier="nausea" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="0.25" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1303,7 +1126,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Fishtail Cocktail" identifier="he-fishtailcocktail" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Fishtail Cocktail" identifier="he-fishtailcocktail" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1314,25 +1137,8 @@
       <Body width="20" height="56" density="12" />
       <SuitableTreatment type="embarrassment" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="-5,-30" aimpos="12,5" aimable="false" swingwhenaiming="true" swingamount="3,2" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="psychosisresistance" amount="3" />
-          <Affliction identifier="applydrunk" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
-          <ReduceAffliction identifier="embarrassment" strength="0.25" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-                        
-        <!-- Regular drinking RMB after unbottle --> 
+              
+        <!-- Regular drinking RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" >
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1" />
@@ -1379,7 +1185,7 @@
     <!-- SODAS -->
     <!-- SODAS -->
     
-    <Item name="Can of Couwola Cola" identifier="he-colacan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola. Super refreshing and good for when you're absolutely shit-faced and need to sober up a quickly. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,cola,colafuel1" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
+    <Item name="Can of Couwola Cola" identifier="he-colacan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola. Super refreshing and good for when you're absolutely shit-faced and need to sober up a quickly. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,cola,colafuel1" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
@@ -1394,25 +1200,8 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="342,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <ReduceAffliction identifier="drunk" amount="1.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
-          <ReduceAffliction identifier="hallucinating" amount="1.5" />
-          <Affliction identifier="haste" amount="12.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1445,7 +1234,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Can of Couwola Cola Zero" identifier="he-colazerocan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola Zero. No sugar, but full flavor! Very refreshing and good for when you're absolutely shit-faced and need to sober up a quickly." Tags="smallitem,drinkitem,colazero,colafuel2" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
+    <Item name="Can of Couwola Cola Zero" identifier="he-colazerocan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola Zero. No sugar, but full flavor! Very refreshing and good for when you're absolutely shit-faced and need to sober up a quickly." Tags="smallitem,drinkitem,colazero,colafuel2" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
@@ -1460,25 +1249,8 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <ReduceAffliction identifier="drunk" amount="1.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
-          <ReduceAffliction identifier="hallucinating" amount="1.5" />
-          <Affliction identifier="haste" amount="12.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1511,7 +1283,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Couwola Cola" identifier="he-colabottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola. Super refreshing and helpful when you're shit-faced. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,bottle,cola,colafuel1" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Couwola Cola" identifier="he-colabottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola. Super refreshing and helpful when you're shit-faced. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,bottle,cola,colafuel1" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -1531,25 +1303,8 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,66,16,66" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <ReduceAffliction identifier="drunk" amount="1.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
-          <ReduceAffliction identifier="hallucinating" amount="1.5" />
-          <Affliction identifier="haste" amount="12.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1613,7 +1368,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Couwola Cola Zero" identifier="he-colazerobottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Very refreshing and kind of helpful when you're shit-faced." Tags="smallitem,drinkitem,bottle,colazero,colafuel2" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Couwola Cola Zero" identifier="he-colazerobottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Very refreshing and kind of helpful when you're shit-faced." Tags="smallitem,drinkitem,bottle,colazero,colafuel2" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -1633,25 +1388,8 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,66,16,66" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <ReduceAffliction identifier="drunk" amount="1.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
-          <ReduceAffliction identifier="hallucinating" amount="1.5" />
-          <Affliction identifier="haste" amount="12.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1716,7 +1454,7 @@
     </Item>
 
     <!-- Rare couwola radiant, obtained by looting or a quest -->
-    <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -1742,27 +1480,8 @@
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
       <LightComponent range="70.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="0,-5" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="applystomachache" strength="0.25" />
-          <ReduceAffliction identifier="drunk" amount="2.0" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="2.0" />
-          <Affliction identifier="haste" amount="20.0" />
-          <Affliction identifier="radiationsickness" strength="0.2" />
-          <Affliction identifier="he-giveradianttalent" amount="8.0" />
-          <ReduceAffliction type="thirst" amount="1.5" />
-          <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 11" />
@@ -1833,7 +1552,7 @@
     <!-- JUICES -->
     
     <!-- WIP glass of juice -->
-    <Item name="Glass of PomBerry Juice" identifier="he-pomberryjuiceglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="4" >
+    <Item name="Glass of PomBerry Juice" identifier="he-pomberryjuiceglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="4" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" depth="0.499" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" depth="0.525" origin="0.5,0.7"  />
@@ -2008,16 +1727,10 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true">        
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
           <Conditional burn="gt 0" />
@@ -2034,21 +1747,18 @@
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-                
-        <!-- Unbottle - RMB+E --> 
-        <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
-          <Conditional conditionpercentage="gte 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="10" aimpos="0,0" holdpos="30,-15" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimangle="0" aimable="false" setvalue="true" oneshot="true">
-          <Conditional conditionpercentage="gte 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
+
+        <!-- Unbottle --> 
+        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 11" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
         </StatusEffect>
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
           <Conditional InWater="false" />
-          <Conditional HasTag="opened" />
+          <Conditional condition="lt 11" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
@@ -2320,26 +2030,16 @@
         </StatusEffect>   
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true">        
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
-          <Affliction identifier="applystomachache" amount="4" />
-          <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
           <Conditional burn="gt 0" />
           <Conditional burn="lt 2" />
           <ReduceAffliction identifier="burn" amount="0.5" />
           <Affliction identifier="infection" amount="1" probability="0.1"/>
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         
         <!--////////// BOT DRINKING \\\\\\\\\\-->
@@ -2351,21 +2051,18 @@
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-                
-        <!-- Unbottle - RMB+E --> 
-        <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
-          <Conditional conditionpercentage="gte 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="10" aimpos="0,0" holdpos="30,-15" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimangle="0" aimable="false" setvalue="true" oneshot="true">
-          <Conditional conditionpercentage="gte 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
+
+        <!-- Unbottle --> 
+        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 11" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
         </StatusEffect>
                 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
           <Conditional InWater="false" />
-          <Conditional HasTag="opened" />
+          <Conditional condition="lt 11" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
           <Affliction identifier="applystomachache" amount="4" />
@@ -2582,26 +2279,16 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true">        
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
-          <Affliction identifier="applystomachache" amount="8" />
-          <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
           <Conditional burn="gt 0" />
           <Conditional burn="lt 2" />
           <ReduceAffliction identifier="burn" amount="0.5" />
           <Affliction identifier="infection" amount="1" probability="0.1"/>
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         
         <!--////////// BOT DRINKING \\\\\\\\\\-->
@@ -2613,21 +2300,18 @@
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-                
-        <!-- Unbottle - RMB+E --> 
-        <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
-          <Conditional conditionpercentage="gte 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="10" aimpos="0,0" holdpos="30,-15" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimangle="0" aimable="false" setvalue="true" oneshot="true">
-          <Conditional conditionpercentage="gte 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
+
+        <!-- Unbottle --> 
+        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 11" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
         </StatusEffect>
                 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
           <Conditional InWater="false" />
-          <Conditional HasTag="opened" />
+          <Conditional condition="lt 11" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
           <Affliction identifier="applystomachache" amount="8" />
@@ -2815,7 +2499,7 @@
     <!-- TEA -->
     <!-- TEA -->
         
-    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -2830,15 +2514,6 @@
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
         
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2924,7 +2599,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -2940,15 +2615,6 @@
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
-        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
@@ -3036,7 +2702,7 @@
     <!-- COFFEE -->
     <!-- COFFEE -->
     <!-- COFFEE -->
-    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3056,15 +2722,6 @@
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
-        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
@@ -3142,7 +2799,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3160,15 +2817,6 @@
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
-        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
@@ -3244,7 +2892,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3257,17 +2905,8 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand,Any" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
-        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
@@ -3344,7 +2983,7 @@
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
-    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3364,15 +3003,6 @@
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
-        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
@@ -3454,7 +3084,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3472,15 +3102,6 @@
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="3">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
-        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
@@ -3583,22 +3204,10 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true">        
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >           
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional IsBot="true" />
-          <Conditional stun="gt 0" />
-          <Affliction identifier="he-calciumrich" amount="14" />
-          <ReduceAffliction type="thirst" amount="2.0" />
-          <ReduceAffliction identifier="drunk" amount="0.1" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-          <ReduceAffliction identifier="hallucinating" amount="0.1" />
-          <ReduceAffliction identifier="he-halucinova" amount="0.1" />
-          <Affliction identifier="he-stuffed" amount="0.3" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
           <Conditional burn="gt 0" />
@@ -3615,21 +3224,18 @@
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-                
-        <!-- Unbottle - RMB+E --> 
-        <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
-          <Conditional conditionpercentage="gte 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="10" aimpos="0,0" holdpos="30,-15" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimangle="0" aimable="false" setvalue="true" oneshot="true">
-          <Conditional conditionpercentage="gte 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
+
+        <!-- Unbottle --> 
+        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 11" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
         </StatusEffect>
                 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
           <Conditional InWater="false" />
-          <Conditional HasTag="opened" />   
+          <Conditional condition="lt 11" />   
           <Affliction identifier="he-calciumrich" amount="14" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
@@ -3689,7 +3295,7 @@
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
-    <Item name="Cup of Test Tea" identifier="he-teaTEST" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="8" hideinmenus="true" >
+    <Item name="Cup of Test Tea" identifier="he-teaTEST" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="8" hideinmenus="true" >
       <!--<PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3718,15 +3324,6 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
-
-        <!-- When Used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-10.0" disabledeltatime="true"/>
-        <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gt 0" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>   
         
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,-15" setvalue="true" interval="0.5">
@@ -3822,5 +3419,31 @@
         </Button>
       </CustomInterface>
     </Item>
+    
+    
+    
+    
+        <!-- Example code for force-feeding. I'll leave it here in case we want to add it back at some point -->
+        
+        <!-- When used in Health GUI -->
+        <!-- <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
+          <Conditional IsBot="true" />
+          <Conditional stun="gt 0" />
+          <ReduceAffliction identifier="drunk" amount="1.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
+          <ReduceAffliction identifier="hallucinating" amount="1.5" />
+          <Affliction identifier="haste" amount="12.0" />
+          <ReduceAffliction type="thirst" amount="1.5" />
+          <Affliction identifier="fillbladder" amount="2.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect> -->
+    
+    
+    
+    
   </Items>
 </Override>
