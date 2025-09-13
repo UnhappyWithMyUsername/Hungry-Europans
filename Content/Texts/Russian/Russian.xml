@@ -1,0 +1,1394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TO MAKE IT EASIER FOR TRANSLATORS TO FIND NEW ADDITIONS OR CHANGES, I'LL PUT COMMENTS BEHIND EVERYTHING FROM THE CORRESPONDING PATCH
+SEARCH FOR THE FOLLOWING:                                                                                                                      -->
+<!--Patch patchnumber--> <!--FOR EXAMPLE "Patch 8" TO VIEW THE CHANGES OF THE CORRESPONDING PATCH-->
+<!--Changed as of Patch patchnumber--> <!--TO VIEW ANY CHANGES FROM OLDER VERSIONS IN THIS PATCH-->
+
+<!-- Keep in mind: The patch comments are behind/below the changed/added lines -->
+
+
+<!-- TODO: ANNOTATE EVERY TEXT CHANGE WHEN MERGING THE UPDATE FOR THE PROPER PATCH NUMBER, I DID NOT ADD A SINGLE PATCH NOT ANYWHERE, SO I WILL DO IT ON EVERY LINE THAT WAS ADDED OR MODIFIED IN THE DIFF INSTEAD -->
+
+<!-- /////// //////// -->
+<!-- LATEST PATCH: 18 -->
+<!-- /////// //////// -->
+
+<infotexts language="Russian" nowhitespace="true" translatedname="Russian">
+<Override >
+
+<!-- Display names -->
+<displayname.returnitem>[itemname] (Вернуть предмет)</displayname.returnitem>
+<displayname.clean>[itemname] (Очистить)</displayname.clean>
+<displayname.fill>[itemname] (Наполнить)</displayname.fill>
+<displayname.empty>[itemname] (Опустошить)</displayname.empty>
+<displayname.vegetarian>[itemname] (Вегетарианское)</displayname.vegetarian>
+<displayname.humanfooditem>[itemname] (Человек)</displayname.humanfooditem>
+<displayname.crawlerfooditem>[itemname] (Ползун)</displayname.crawlerfooditem>
+<displayname.mudraptorfooditem>[itemname] (Грязевой раптор)</displayname.mudraptorfooditem>
+<displayname.hammerheadfooditem>[itemname] (Молотоглав)</displayname.hammerheadfooditem>
+<displayname.thresherfooditem>[itemname] (Акулий Тигр)</displayname.thresherfooditem>
+<displayname.endwormfooditem>[itemname] (Червь Рока)</displayname.endwormfooditem>
+<displayname.spinelingfooditem>[itemname] (Шипостай)</displayname.spinelingfooditem><!--Patch 13-->
+<displayname.molochfooditem>[itemname] (Молох)</displayname.molochfooditem><!--Patch 13-->
+<displayname.huskfooditem>[itemname] (Хаск)</displayname.huskfooditem><!--Patch 13-->
+<displayname.watcherfooditem>[itemname] (Смотритель)</displayname.watcherfooditem><!--Patch 13-->
+<displayname.alternative>[itemname] (Альтернатива)</displayname.alternative><!--Patch 13-->
+
+<!-- Food Items -->
+<entityname.he-proteinbar1>Протеиновый батончик</entityname.he-proteinbar1>
+<entitydescription.he-proteinbar1>Немного вкусный протеиновый батончик. Немного ускоряет заживление.</entitydescription.he-proteinbar1>
+<entityname.he-chips1>Пакет чипсов из Взрывного Граната</entityname.he-chips1>
+<entitydescription.he-chips1>Сушёные чипсы из Взрывного Граната. Популярный перекус под ежегодный «DUNWICE FACE-OFF».</entitydescription.he-chips1>
+<entityname.he-chips2>Пакет чипсов из мутировавшего Взрывного Граната</entityname.he-chips2>
+<entitydescription.he-chips2>Сушёные чипсы из мутировавшего Взрывного Граната. Говорят, немного ускоряют заживление ожогов.</entitydescription.he-chips2>
+<entityname.he-bread>Хлеб</entityname.he-bread>
+<entitydescription.he-bread>Буханка хлеба.</entitydescription.he-bread>
+<entityname.he-burgerbun>Булочка для бургера</entityname.he-burgerbun>
+<entitydescription.he-burgerbun>Используется при приготовлении бургеров.</entitydescription.he-burgerbun>
+<entityname.he-hotdogbun>Булочка для хот-дога</entityname.he-hotdogbun>
+<entitydescription.he-hotdogbun>Засуньте туда сосиску.</entitydescription.he-hotdogbun>
+<entityname.he-breadslices>Ломтики хлеба</entityname.he-breadslices><!--Patch 10-->
+<entitydescription.he-breadslices>Два ломтика хлеба. Отлично подходят для сэндвичей!</entitydescription.he-breadslices><!--Patch 10-->
+<entityname.he-sandwichbbjam>Сэндвич с вареньем из Пузырягоды</entityname.he-sandwichbbjam><!--Patch 10-->
+<entitydescription.he-sandwichbbjam>Вкусный сэндвич с вареньем из Пузырягоды.</entitydescription.he-sandwichbbjam><!--Patch 10-->
+<entityname.he-sandwichpgjam>Сэндвич с вареньем из Взрывного Граната</entityname.he-sandwichpgjam><!--Patch 13-->
+<entitydescription.he-sandwichpgjam>Вкусный сэндвич с вареньем из Взрывного Граната.</entitydescription.he-sandwichpgjam><!--Patch 13-->
+<entityname.he-cookedjerky>Вяленое мясо</entityname.he-cookedjerky><!--Patch 13-->
+<entitydescription.he-cookedjerky>Вяленое мясо может напоминать по вкусу кожу, зато не портится.</entitydescription.he-cookedjerky><!--Patch 13-->
+
+<!--spineling-->
+<entityname.he-spinelingmeatchunk>Кусок мяса Шипостая</entityname.he-spinelingmeatchunk><!--Patch 13-->
+<entitydescription.he-spinelingmeatchunk>Кусок мяса Шипостая. Портится без охлаждения.</entitydescription.he-spinelingmeatchunk><!--Patch 13-->
+<entityname.he-rawspinelingmeat>Сырое мясо Шипостая</entityname.he-rawspinelingmeat><!--Patch 13-->
+<entitydescription.he-rawspinelingmeat>Портится без охлаждения.</entitydescription.he-rawspinelingmeat><!--Patch 13-->
+<entityname.he-rawspinelingsteak>Сырой стейк из Шипостая</entityname.he-rawspinelingsteak><!--Patch 13-->
+<entitydescription.he-rawspinelingsteak>Портится без охлаждения.</entitydescription.he-rawspinelingsteak><!--Patch 13-->
+<entityname.he-cookedspinelingkebab>Кебаб из Шипостая</entityname.he-cookedspinelingkebab><!--Patch 13-->
+<entitydescription.he-cookedspinelingkebab>После еды остаётся жгучее ощущение.</entitydescription.he-cookedspinelingkebab><!--Patch 13-->
+
+<!--husk-->
+<entityname.he-huskmeatchunk>Кусок мяса Хаска</entityname.he-huskmeatchunk><!--Patch 13-->
+<entitydescription.he-huskmeatchunk>Кусок мяса, срезанный с Хаска. Портится без охлаждения.</entitydescription.he-huskmeatchunk><!--Patch 13-->
+<entityname.he-rawhuskmeat>Сырое мясо Хаска</entityname.he-rawhuskmeat><!--Patch 13-->
+<entitydescription.he-rawhuskmeat>Портится без охлаждения.</entitydescription.he-rawhuskmeat><!--Patch 13-->
+<entityname.he-cookedhuskfilet>Кусок Хаска с омлетом</entityname.he-cookedhuskfilet><!--Patch 18-->
+<entitydescription.he-cookedhuskfilet>Отварной кусок мяса Хаска с омлетом на гарнир. Безопасно к употреблению.</entitydescription.he-cookedhuskfilet><!--Patch 18-->
+
+<!--watcher-->
+<entityname.he-watchermeatchunk>Кусок мяса Смотрителя</entityname.he-watchermeatchunk><!--Patch 13-->
+<entitydescription.he-watchermeatchunk>Кусок мяса Смотрителя. Портится без охлаждения.</entitydescription.he-watchermeatchunk><!--Patch 13-->
+<entityname.he-rawwatchermeat>Сырое мясо Смотрителя</entityname.he-rawwatchermeat><!--Patch 13-->
+<entitydescription.he-rawwatchermeat>Портится без охлаждения.</entitydescription.he-rawwatchermeat><!--Patch 13-->
+<entityname.he-rawwatchersteak>Сырой стейк из Смотрителя</entityname.he-rawwatchersteak><!--Patch 13-->
+<entitydescription.he-rawwatchersteak>Портится без охлаждения.</entitydescription.he-rawwatchersteak><!--Patch 13-->
+<entityname.he-preparedwatchersteak>Подготовленные стейки из Смотрителя</entityname.he-preparedwatchersteak><!--Patch 18-->
+<entitydescription.he-preparedwatchersteak>Вкус заставляет уставиться в пустоту.</entitydescription.he-preparedwatchersteak><!--Patch 18-->
+<entityname.he-cookedwatchersteak>Тарелка «Пастбище Смотрителя»</entityname.he-cookedwatchersteak><!--Patch 18-->
+<entitydescription.he-cookedwatchersteak>Чернильно-чёрный стейк из Смотрителя и овощи для цвета. Ешьте медленно, иначе сойдёте с ума.</entitydescription.he-cookedwatchersteak><!--Patch 18-->
+
+<!--moloch-->
+<entityname.he-molochmeatchunk>Кусок мяса Молоха</entityname.he-molochmeatchunk><!--Patch 13-->
+<entitydescription.he-molochmeatchunk>Кусок мяса Молоха. Портится без охлаждения.</entitydescription.he-molochmeatchunk><!--Patch 13-->
+<entityname.he-rawmolochmeat>Сырое мясо Молоха</entityname.he-rawmolochmeat><!--Patch 13-->
+<entitydescription.he-rawmolochmeat>Портится без охлаждения.</entitydescription.he-rawmolochmeat><!--Patch 13-->
+<entityname.he-rawmolochsteak>Сырой стейк из Молоха</entityname.he-rawmolochsteak><!--Patch 13-->
+<entitydescription.he-rawmolochsteak>Портится без охлаждения.</entitydescription.he-rawmolochsteak><!--Patch 13-->
+<entityname.he-cookedmolochsteak>Стейк из Молоха с фри</entityname.he-cookedmolochsteak><!--Patch 18-->
+<entitydescription.he-cookedmolochsteak>Жевательный стейк из Молоха с картошкой фри — классика придорожных забегаловок.</entitydescription.he-cookedmolochsteak><!--Patch 18-->
+<entityname.he-molochsushi>Суши из Молоха</entityname.he-molochsushi><!--Patch 13-->
+<entitydescription.he-molochsushi>Приправленные кусочки Молоха, завернутые в лист нори.</entitydescription.he-molochsushi><!--Patch 13-->
+
+<!--crawler-->
+<entityname.he-cookedcrawlerfilet>Грудинка Ползуна</entityname.he-cookedcrawlerfilet>
+<entitydescription.he-cookedcrawlerfilet>Хотя это и самая вкусная часть Ползуна, всё ещё довольно мерзкая и жёсткая.</entitydescription.he-cookedcrawlerfilet>
+<entityname.he-crawlermeatchunk>Половина Ползуна</entityname.he-crawlermeatchunk>
+<entitydescription.he-crawlermeatchunk>Ползун, разрубленный пополам. Портится без охлаждения.</entitydescription.he-crawlermeatchunk>
+<entityname.he-crawlermeatchunkspecial>Кусок мяса Ползуна</entityname.he-crawlermeatchunkspecial>
+<entitydescription.he-crawlermeatchunkspecial>Кусок мяса Ползуна.</entitydescription.he-crawlermeatchunkspecial>
+<entityname.he-rawcrawlermeat>Сырое мясо Ползуна</entityname.he-rawcrawlermeat>
+<entitydescription.he-rawcrawlermeat>Портится без охлаждения.</entitydescription.he-rawcrawlermeat>
+
+<!--human-->
+<entityname.he-cookedhumanfilet>Блюдо каннибала</entityname.he-cookedhumanfilet>
+<entitydescription.he-cookedhumanfilet>Избранное блюдо, сделанное для и из голодающих матросов.</entitydescription.he-cookedhumanfilet>
+<entityname.he-cookedhumanlimbs>Варёные человеческие конечности</entityname.he-cookedhumanlimbs>
+<entitydescription.he-cookedhumanlimbs>Убедитесь, что это не ваши товарищи по экипажу...</entitydescription.he-cookedhumanlimbs>
+
+<!--mudraptor-->
+<entityname.he-mudraptormeatchunk>Кусок мяса Грязевого раптора</entityname.he-mudraptormeatchunk>
+<entitydescription.he-mudraptormeatchunk>Хороший кусок мяса, срезанный с Грязевого раптора. Портится без охлаждения.</entitydescription.he-mudraptormeatchunk>
+<entityname.he-rawmudraptormeat>Сырое мясо Грязевого раптора</entityname.he-rawmudraptormeat>
+<entitydescription.he-rawmudraptormeat>Портится без охлаждения.</entitydescription.he-rawmudraptormeat>
+<entityname.he-rawmudraptorroast>Сырой ростбиф из Грязевого раптора</entityname.he-rawmudraptorroast>
+<entitydescription.he-rawmudraptorroast>Пора в печь! Портится без охлаждения.</entitydescription.he-rawmudraptorroast><!--Patch 13-->
+<entityname.he-preparedmudraptorroast>Подготовленный ростбиф из Грязевого раптора</entityname.he-preparedmudraptorroast>
+<entitydescription.he-preparedmudraptorroast>Большой ломоть ростбифа из Грязевого раптора.</entitydescription.he-preparedmudraptorroast>
+<entityname.he-cookedmudraptorroast>Холодный рапторий ростбиф</entityname.he-cookedmudraptorroast>
+<entitydescription.he-cookedmudraptorroast>Холодные ломтики ростбифа из Грязевого раптора с салатом из поп-ореха и Пузырягоды.</entitydescription.he-cookedmudraptorroast>
+
+<!--hammerhead-->
+<entityname.he-hammerheadmeatchunk>Кусок мяса Молотоглава</entityname.he-hammerheadmeatchunk>
+<entitydescription.he-hammerheadmeatchunk>Хороший кусок мяса, срезанный с Молотоглава. Портится без охлаждения.</entitydescription.he-hammerheadmeatchunk>
+<entityname.he-rawhammerheadmeat>Сырое мясо Молотоглава</entityname.he-rawhammerheadmeat>
+<entitydescription.he-rawhammerheadmeat>Портится без охлаждения.</entitydescription.he-rawhammerheadmeat>
+<entityname.he-rawhammerheadspareribs>Сырые рёбра Молотоглава</entityname.he-rawhammerheadspareribs>
+<entitydescription.he-rawhammerheadspareribs>Срезано с массивной грудной клетки. Портится без охлаждения.</entitydescription.he-rawhammerheadspareribs>
+<entityname.he-rawhammerheadroast>Сырой ростбиф из Молотоглава</entityname.he-rawhammerheadroast>
+<entitydescription.he-rawhammerheadroast>Пора в печь. Портится без охлаждения.</entitydescription.he-rawhammerheadroast>
+<entityname.he-hammerheadspawnmeatchunk>Детёныш Молотоглава</entityname.he-hammerheadspawnmeatchunk>
+<entitydescription.he-hammerheadspawnmeatchunk>Малыш Молотоглава. Портится без охлаждения.</entitydescription.he-hammerheadspawnmeatchunk><!--Patch 13-->
+<entityname.he-preparedhammerheadroast>Подготовленный ростбиф из Молотоглава</entityname.he-preparedhammerheadroast>
+<entitydescription.he-preparedhammerheadroast>Большой ломоть ростбифа из Молотоглава.</entitydescription.he-preparedhammerheadroast>
+<entityname.he-cookedhammerheadroast>Молот и омлет</entityname.he-cookedhammerheadroast>
+<entitydescription.he-cookedhammerheadroast>Запечённый Молотоглав с гарниром из омлета, нежно покоящимся на морских водорослях.</entitydescription.he-cookedhammerheadroast>
+<entityname.he-cookedhammerheadspawnpickled>Маринованный детёныш Молотоглава</entityname.he-cookedhammerheadspawnpickled>
+<entitydescription.he-cookedhammerheadspawnpickled>Хотя жареный молотоглав — более популярная еда на станциях, опытные моряки предпочитают насыщенный кисло-сладкий вкус маринованной рыбы.</entitydescription.he-cookedhammerheadspawnpickled>
+<entityname.he-cookedhammerheadspawnfried>Жареный детёныш Молотоглава</entityname.he-cookedhammerheadspawnfried>
+<entitydescription.he-cookedhammerheadspawnfried>Снаружи хрустящий, внутри мягкий — на миг ощущаешь себя вершиной пищевой цепочки.</entitydescription.he-cookedhammerheadspawnfried>
+<entityname.he-cookedhammerheadspareribs>Рёбрышки</entityname.he-cookedhammerheadspareribs>
+<entitydescription.he-cookedhammerheadspareribs>Сладкие и нежные рёбра Молотоглава, вкуснее всего — глодать вокруг кости.</entitydescription.he-cookedhammerheadspareribs><!--Patch 13-->
+
+<!--tresher-->
+<entityname.he-threshermeatchunk>Кусок мяса Акульего</entityname.he-threshermeatchunk>
+<entitydescription.he-threshermeatchunk>Кусок мяса, срезанный с Акульего. Портится без охлаждения.</entitydescription.he-threshermeatchunk>
+<entityname.he-rawthreshermeat>Сырое мясо Акульего</entityname.he-rawthreshermeat>
+<entitydescription.he-rawthreshermeat>Портится без охлаждения.</entitydescription.he-rawthreshermeat>
+<entityname.he-cookedthresherfilet>Филе Акульего с фри</entityname.he-cookedthresherfilet><!--Patch 18-->
+<entitydescription.he-cookedthresherfilet>Филе Акульего, поданное с картофелем фри и немного морских водорослей для свежести.</entitydescription.he-cookedthresherfilet><!--Patch 18-->
+
+<!--endworm-->
+<entityname.he-endwormmeatchunk>Кусок мяса Червя Рока</entityname.he-endwormmeatchunk>
+<entitydescription.he-endwormmeatchunk>Жирный кусок мяса Червя Рока. Портится без охлаждения.</entitydescription.he-endwormmeatchunk>
+<entityname.he-rawendwormmeat>Сырое мясо Червя Рока</entityname.he-rawendwormmeat>
+<entitydescription.he-rawendwormmeat>Портится без охлаждения.</entitydescription.he-rawendwormmeat>
+<entityname.he-humanmeatchunk>Человеческое мясо</entityname.he-humanmeatchunk>
+<entitydescription.he-humanmeatchunk>Части человеческого тела. Портится без охлаждения.</entitydescription.he-humanmeatchunk>
+<entityname.he-rawhumanmeat>Сырое человеческое мясо</entityname.he-rawhumanmeat>
+<entitydescription.he-rawhumanmeat>Портится без охлаждения.</entitydescription.he-rawhumanmeat>
+<entityname.he-endwormhotdog>Хот-дог</entityname.he-endwormhotdog>
+<entitydescription.he-endwormhotdog>Отринь свою религию и приготовься к кулинарному уничтожению.</entitydescription.he-endwormhotdog>
+
+
+<!--plants-->
+<entityname.bubbleberries>Пузырягоды</entityname.bubbleberries><!--Patch 10-->
+<entitydescription.bubbleberries>Очень вкусные и сочные, лопаются под языком.</entitydescription.bubbleberries><!--Patch 10-->
+<entityname.badbubbleberries>Мутировавшие Пузырягоды</entityname.badbubbleberries><!--Patch 10-->
+<entityname.popnut>Поп-орех</entityname.popnut><!--Patch 10-->
+<entitydescription.popnut>Детям нравится с ними играть. Нужно поместить в воду, чтобы он раскрылся и его можно было съесть.</entitydescription.popnut>
+
+<!--Patch 10-->
+<entityname.popnutpopped>Раскрывшийся Поп-орех</entityname.popnutpopped><!--Patch 10-->
+<entitydescription.popnutpopped>Раскрылся, готов к употреблению. Используется в некоторых рецептах.</entitydescription.popnutpopped><!--Patch 10-->
+<entityname.badpopnutpopped>Раскрывшийся мутировавший Поп-орех</entityname.badpopnutpopped><!--Patch 10-->
+<entitydescription.badpopnutpopped>Раскрылся, готов к употреблению. Используется в некоторых рецептах. Может быть опасно оставлять его в воде.</entitydescription.badpopnutpopped><!--Patch 10-->
+<entityname.badpopnut>Мутировавший Поп-орех</entityname.badpopnut><!--Patch 18-->
+<entitydescription.badpopnut>В этом орехе «попа» больше, чем хотелось бы.</entitydescription.badpopnut><!--Patch 18-->
+<entityname.badtobaccobud>Мутировавшая табачная почка</entityname.badtobaccobud><!--Patch 18-->
+<entitydescription.badtobaccobud>Мутировавшая табачная почка с желеобразным глазоподобным наростом, полным психоактивных веществ.</entitydescription.badtobaccobud><!--Patch 18-->
+<entityname.badsaltbulb>Мутировавшая соляная луковица</entityname.badsaltbulb><!--Patch 18-->
+<entitydescription.badsaltbulb>Мутировавший вариант соляной луковицы. Крайне нестабильна.</entitydescription.badsaltbulb><!--Patch 18-->
+
+<!-- SEEDS -->
+<entityname.bubbleberryvineseed>Семя лозы Пузырягоды</entityname.bubbleberryvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-bubbleberryvineseed>-->
+<entitydescription.bubbleberryvineseed>Посадите в плантатор, чтобы вырастить Пузырягоды.</entitydescription.bubbleberryvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-bubbleberryvineseed>-->
+<entityname.popnutvineseed>Семя лозы Поп-ореха</entityname.popnutvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-popnutvineseed>-->
+<entitydescription.popnutvineseed>Посадите в плантатор, чтобы вырастить Поп-орехи.</entitydescription.popnutvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-popnutvineseed>-->
+
+<!-- Drinks -->
+<entityname.he-energydrink1>Энергетический напиток</entityname.he-energydrink1>
+<entitydescription.he-energydrink1>Освежающий энергетик. Хорош, когда вы в хлам и нужно немного протрезветь.</entitydescription.he-energydrink1>
+
+<entityname.rum>Ром</entityname.rum>
+<entitydescription.rum>Крепкий алкогольный напиток. |Алкогольный напиток |Снижает психоз |Снижает галлюцинации |Снижает заражение Хаском (если ниже 90%) |Лечит урон |Повышает сопротивление психозу</entitydescription.rum>
+
+<entityname.he-rum>Пиратский ром</entityname.he-rum>
+<entitydescription.he-rum>Очень крепкий ром, обогащённый ураном для остроты. |Алкогольный напиток |Снижает психоз |Снижает галлюцинации |Снижает заражение Хаском (если ниже 90%) |Имеет целебные свойства |Повышает сопротивление психозу |Немного повышает лучевую болезнь</entitydescription.he-rum>
+
+<entityname.he-whiskey>Виски Доктора</entityname.he-whiskey>
+<entitydescription.he-whiskey>Оригинальный виски доктора Майкла. Одобрен врачами по всей Европе. |Алкогольный напиток |Снижает галлюцинации |Снижает эффекты Галюциновы |Снижает зависимость от химикатов |Повышает сопротивление психозу |Немного лечит</entitydescription.he-whiskey><!--Changed as of Patch 10-->
+
+<entityname.he-halucinova>Галюцинова</entityname.he-halucinova>
+<entitydescription.he-halucinova>Держитесь подальше от «Sadashi Kira» любой ценой! |Алкогольный напиток |Усиливает галлюцинации |Немного лечит</entitydescription.he-halucinova>
+
+<entityname.he-beer>Премиальный лагер Коалиции</entityname.he-beer>
+<entitydescription.he-beer>Популярное пиво среди жителей станций коалиции. |Алкогольный напиток |Повышает сопротивление психозу</entitydescription.he-beer>
+
+<entityname.he-water>Вода</entityname.he-water>
+<entitydescription.he-water>Свежая.</entitydescription.he-water><!--Changed as of Patch 15 | Simplified description to just state it tastes fresh-->
+<entityname.he-waterbeer>Вода</entityname.he-waterbeer><!--Patch 10-->
+<entitydescription.he-waterbeer>Свежая.</entitydescription.he-waterbeer><!--Changed as of Patch 15 | Simplified description to just state it tastes fresh-->
+<entityname.he-waterrum>Вода</entityname.he-waterrum><!--Patch 10-->
+<entitydescription.he-waterrum>Свежая.</entitydescription.he-waterrum><!--Changed as of Patch 15 | Simplified description to just state it tastes fresh-->
+<entityname.he-waterwhiskey>Вода</entityname.he-waterwhiskey><!--Patch 10-->
+<entitydescription.he-waterwhiskey>Свежая.</entitydescription.he-waterwhiskey><!--Changed as of Patch 15 | Simplified description to just state it tastes fresh-->
+<entityname.he-waterhalucinova>Вода</entityname.he-waterhalucinova><!--Patch 10-->
+<entitydescription.he-waterhalucinova>Свежая.</entitydescription.he-waterhalucinova><!--Changed as of Patch 15 | Simplified description to just state it tastes fresh-->
+
+<entityname.he-milk>Молоко Молоха</entityname.he-milk>
+<entitydescription.he-milk>Бутылка молока Молоха. На вкус немного странное. Не спрашивайте, как они добывают молоко из Молоха! Может немного помочь, когда вы в хлам.</entitydescription.he-milk>
+
+<entityname.he-seawaterrum>Вода</entityname.he-seawaterrum><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water"-->
+<entitydescription.he-seawaterrum>Солёная.</entitydescription.he-seawaterrum><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water" and simplified the description to just state it tastes salty-->
+<entityname.he-seawaterwhiskey>Вода</entityname.he-seawaterwhiskey><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water"-->
+<entitydescription.he-seawaterwhiskey>Солёная.</entitydescription.he-seawaterwhiskey><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water" and simplified the description to just state it tastes salty-->
+<entityname.he-seawaterhalucinova>Вода</entityname.he-seawaterhalucinova><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water"-->
+<entitydescription.he-seawaterhalucinova>Солёная.</entitydescription.he-seawaterhalucinova><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water" and simplified the description to just state it tastes salty-->
+<entityname.he-seawater>Вода</entityname.he-seawater><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water"-->
+<entitydescription.he-seawater>Солёная.</entitydescription.he-seawater><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water" and simplified the description to just state it tastes salty-->
+<entityname.he-seawaterbeer>Вода</entityname.he-seawaterbeer><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water"-->
+<entitydescription.he-seawaterbeer>Солёная.</entitydescription.he-seawaterbeer><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water" and simplified the description to just state it tastes salty-->
+
+<entityname.he-toiletwater>Вода</entityname.he-toiletwater><!--Patch 15-->
+<entitydescription.he-toiletwater>Странная.</entitydescription.he-toiletwater><!--Patch 15-->
+<entityname.he-toiletwaterbeer>Вода</entityname.he-toiletwaterbeer><!--Patch 15-->
+<entitydescription.he-toiletwaterbeer>Странная.</entitydescription.he-toiletwaterbeer><!--Patch 15-->
+<entityname.he-toiletwaterrum>Вода</entityname.he-toiletwaterrum><!--Patch 15-->
+<entitydescription.he-toiletwaterrum>Странная.</entitydescription.he-toiletwaterrum><!--Patch 15-->
+<entityname.he-toiletwaterwhiskey>Вода</entityname.he-toiletwaterwhiskey><!--Patch 15-->
+<entitydescription.he-toiletwaterwhiskey>Странная.</entitydescription.he-toiletwaterwhiskey><!--Patch 15-->
+<entityname.he-toiletwaterhalucinova>Вода</entityname.he-toiletwaterhalucinova><!--Patch 15-->
+<entitydescription.he-toiletwaterhalucinova>Странная.</entitydescription.he-toiletwaterhalucinova><!--Patch 15-->
+
+<entityname.he-beercoalitionpremium>Премиум Коалиции</entityname.he-beercoalitionpremium><!--Changed as of Patch 10 | Identifier changed. Previous identifier <entityname.he-beer>-->
+<entitydescription.he-beercoalitionpremium>Популярное пиво среди жителей станций коалиции. |Алкогольный напиток |Повышает сопротивление психозу</entitydescription.he-beercoalitionpremium><!--Changed as of Patch 10 | Identifier changed. Previous identifier <entityname.he-beer>-->
+<entityname.he-beerjovianforce>Йовианская Сила</entityname.he-beerjovianforce><!--Patch 10-->
+<entitydescription.he-beerjovianforce>Пиво, наиболее популярное среди сепаратистов. |Алкогольный напиток |Повышает сопротивление психозу</entitydescription.he-beerjovianforce><!--Patch 10-->
+<entityname.he-beerliquidascension>Жидкое Вознесение</entityname.he-beerliquidascension><!--Patch 10-->
+<entitydescription.he-beerliquidascension>Популярное пиво среди членов церкви хаска на пути к вознесению! |Алкогольный напиток |Повышает сопротивление психозу |Повышает иммунитет к давлению |Без кислорода |Может содержать следы паразитов хаска</entitydescription.he-beerliquidascension><!--Patch 10-->
+<entityname.he-beerclownjuice>Клоунский Сок</entityname.he-beerclownjuice><!--Patch 10-->
+<entitydescription.he-beerclownjuice>Популярное пиво среди шутников. Слава хонк-матери! |Алкогольный напиток |Повышает сопротивление психозу</entitydescription.he-beerclownjuice><!--Patch 10-->
+<entityname.he-beerreaperstribute>Дань Жнецу</entityname.he-beerreaperstribute><!--Patch 10-->
+<entitydescription.he-beerreaperstribute>Крепкое пиво в честь Жнеца. |Алкогольный напиток |Снимает Налог Жнеца |Проясняет голову от смущения |Повышает сопротивление психозу</entitydescription.he-beerreaperstribute><!--Patch 13-->
+
+<entityname.he-cupbubbleberrytea>Чашка чая из Пузырягоды</entityname.he-cupbubbleberrytea><!--Patch 13-->
+<entitydescription.he-cupbubbleberrytea>Говорят, после него долго не хочется пить.</entitydescription.he-cupbubbleberrytea><!--Patch 13-->
+<entityname.he-cuppopnuttea>Чашка чая из Поп-ореха</entityname.he-cuppopnuttea><!--Patch 13-->
+<entitydescription.he-cuppopnuttea>Говорят, после него долго не хочется пить.</entitydescription.he-cuppopnuttea><!--Patch 13-->
+
+<entityname.he-colacan>Банка «Добрый Кола»</entityname.he-colacan><!--Patch 13-->
+<entitydescription.he-colacan>Банка «Добрый Кола». Хороша, когда нужно протрезветь.</entitydescription.he-colacan><!--Patch 13-->
+<entityname.he-colazerocan>Банка «Добрый Кола Zero»</entityname.he-colazerocan><!--Patch 13-->
+<entitydescription.he-colazerocan>Банка «Добрый Кола Zero». Без сахара, но полный вкус! Хороша, когда нужно протрезветь.</entitydescription.he-colazerocan><!--Patch 13-->
+<entityname.he-colabottle>Добрый Кола</entityname.he-colabottle><!--Patch 13-->
+<entitydescription.he-colabottle>Бутылка «Добрый Кола». Хороша, когда нужно протрезветь.</entitydescription.he-colabottle><!--Patch 13-->
+<entityname.he-colazerobottle>Добрый Кола Zero</entityname.he-colazerobottle><!--Patch 13-->
+<entitydescription.he-colazerobottle>Бутылка «Добрый Кола Zero». Ноль сахара, но полный вкус! Хороша, когда нужно протрезветь.</entitydescription.he-colazerobottle><!--Patch 13-->
+<!-- Kegs -->
+<entityname.he-kegempty>Пустая бочка</entityname.he-kegempty><!--Patch 10-->
+<entitydescription.he-kegempty>Пустая бочка для некоторых рецептов. Можно опускать в воду, чтобы набрать грязную воду.</entitydescription.he-kegempty><!--Patch 10-->
+<entityname.he-kegseawater>Бочка морской воды</entityname.he-kegseawater><!--Patch 10-->
+<entitydescription.he-kegseawater>Бочка, полная морской воды. Можно использовать для розлива бутылок на станции пополнения. Можно выпарить до чистой воды на плите или в варочном котле. Также используется в гидропонных плантаторах.</entitydescription.he-kegseawater><!--Patch 10-->
+<entityname.he-kegwater>Бочка воды</entityname.he-kegwater><!--Patch 10-->
+<entitydescription.he-kegwater>Бочка, полная воды. Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegwater><!--Patch 10-->
+<entityname.he-kegcoalitionpremium>Бочка пива «Премиум Коалиции»</entityname.he-kegcoalitionpremium><!--Patch 10-->
+<entitydescription.he-kegcoalitionpremium>Бочка с пивом «Премиум Коалиции». Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegcoalitionpremium><!--Patch 10-->
+<entityname.he-kegjovianforce>Бочка пива «Йовианская Сила»</entityname.he-kegjovianforce><!--Patch 10-->
+<entitydescription.he-kegjovianforce>Бочка с пивом «Йовианская Сила». Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegjovianforce><!--Patch 10-->
+<entityname.he-kegliquidascension>Бочка пива «Жидкое Вознесение»</entityname.he-kegliquidascension><!--Patch 10-->
+<entitydescription.he-kegliquidascension>Бочка с пивом «Жидкое Вознесение». Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegliquidascension><!--Patch 10-->
+<entityname.he-kegclownjuice>Бочка пива «Клоунский Сок»</entityname.he-kegclownjuice><!--Patch 10-->
+<entitydescription.he-kegclownjuice>Бочка с пивом «Клоунский Сок». Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegclownjuice><!--Patch 10-->
+<entityname.he-kegreaperstribute>Бочка пива «Дань Жнецу»</entityname.he-kegreaperstribute><!--Patch 10-->
+<entitydescription.he-kegreaperstribute>Бочка с пивом «Дань Жнецу». Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegreaperstribute><!--Patch 10-->
+<entityname.he-kegrum>Бочка рома</entityname.he-kegrum><!--Patch 10-->
+<entitydescription.he-kegrum>Бочка с ромом. Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegrum><!--Patch 10-->
+<entityname.he-kegpiraterum>Бочка пиратского рома</entityname.he-kegpiraterum><!--Patch 10-->
+<entitydescription.he-kegpiraterum>Бочка с пиратским ромом. Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegpiraterum><!--Patch 10-->
+<entityname.he-kegwhiskey>Бочка виски</entityname.he-kegwhiskey><!--Patch 10-->
+<entitydescription.he-kegwhiskey>Бочка с виски. Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-kegwhiskey><!--Patch 10-->
+<entityname.he-keghalucinova>Бочка Галюциновы</entityname.he-keghalucinova><!--Patch 10-->
+<entitydescription.he-keghalucinova>Бочка с Галюциновой. Можно использовать для розлива бутылок на станции пополнения.</entitydescription.he-keghalucinova><!--Patch 10-->
+<!-- Blueprints -->
+<entityname.he-blueprintbottle>Чертёж бутылки</entityname.he-blueprintbottle><!--Patch 11-->
+<entitydescription.he-blueprintbottle>Чертёж обычной бутылки. Можно использовать в принтере бутылок.</entitydescription.he-blueprintbottle><!--Patch 11-->
+<entityname.he-blueprintbottlebeer>Чертёж пивной бутылки</entityname.he-blueprintbottlebeer><!--Patch 11-->
+<entitydescription.he-blueprintbottlebeer>Чертёж пивной бутылки. Можно использовать в принтере бутылок.</entitydescription.he-blueprintbottlebeer><!--Patch 11-->
+<entityname.he-blueprintbottlerum>Чертёж бутылки для рома</entityname.he-blueprintbottlerum><!--Patch 11-->
+<entitydescription.he-blueprintbottlerum>Чертёж бутылки для рома. Можно использовать в принтере бутылок.</entitydescription.he-blueprintbottlerum><!--Patch 11-->
+<entityname.he-blueprintbottlewhiskey>Чертёж бутылки для виски</entityname.he-blueprintbottlewhiskey><!--Patch 11-->
+<entitydescription.he-blueprintbottlewhiskey>Чертёж бутылки для виски. Можно использовать в принтере бутылок.</entitydescription.he-blueprintbottlewhiskey><!--Patch 11-->
+<entityname.he-blueprintbottlehalucinova>Чертёж бутылки для Галюциновы</entityname.he-blueprintbottlehalucinova><!--Patch 11-->
+<entitydescription.he-blueprintbottlehalucinova>Чертёж бутылки для Галюциновы. Можно использовать в принтере бутылок.</entitydescription.he-blueprintbottlehalucinova><!--Patch 11-->
+<entityname.he-blueprintjar>Чертёж банки</entityname.he-blueprintjar><!--Patch 11-->
+<entitydescription.he-blueprintjar>Чертёж банки. Можно использовать в принтере бутылок.</entitydescription.he-blueprintjar><!--Patch 11-->
+<entityname.he-blueprintshaker>Чертёж шейкера</entityname.he-blueprintshaker><!--Patch 11-->
+<entitydescription.he-blueprintshaker>Чертёж шейкера. Можно использовать в принтере бутылок.</entitydescription.he-blueprintshaker><!--Patch 11-->
+<entityname.he-blueprintcup>Чертёж чашки</entityname.he-blueprintcup><!--Patch 13-->
+<entitydescription.he-blueprintcup>Чертёж чашки. Можно использовать в принтере бутылок.</entitydescription.he-blueprintcup><!--Patch 13-->
+<!-- Ingredients -->
+<entityname.he-emptybottlerum>Пустая бутылка из-под рома</entityname.he-emptybottlerum>
+<entitydescription.he-emptybottlerum>Пустая бутылка из-под рома для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlerum>
+<entityname.he-emptybottlewhiskey>Пустая бутылка из-под виски</entityname.he-emptybottlewhiskey>
+<entitydescription.he-emptybottlewhiskey>Пустая бутылка из-под виски для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlewhiskey>
+<entityname.he-emptybottlehalucinova>Пустая бутылка из-под Галюциновы</entityname.he-emptybottlehalucinova>
+<entitydescription.he-emptybottlehalucinova>Пустая бутылка из-под Галюциновы для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlehalucinova>
+<entityname.he-emptybottlebeer>Пустая пивная бутылка</entityname.he-emptybottlebeer><!--Patch 10-->
+<entitydescription.he-emptybottlebeer>Пустая пивная бутылка для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlebeer><!--Patch 10-->
+<entityname.he-emptybottle>Пустая бутылка</entityname.he-emptybottle>
+<entitydescription.he-emptybottle>Пустая бутылка для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottle>
+<entityname.he-emptyjar>Пустая банка</entityname.he-emptyjar>
+<entitydescription.he-emptyjar>Пустая банка для некоторых рецептов. Можно бросать.</entitydescription.he-emptyjar>
+<entityname.he-emptyshaker>Пустой шейкер</entityname.he-emptyshaker><!--Patch 11-->
+<entitydescription.he-emptyshaker>Пустой шейкер, готовый для соли! Можно бросать.</entitydescription.he-emptyshaker><!--Patch 11-->
+<entityname.he-emptycup>Пустая чашка</entityname.he-emptycup><!--Patch 13-->
+<entityname.he-emptybottlerum2>Пустая бутылка из-под рома</entityname.he-emptybottlerum2><!--Patch 11-->
+<entitydescription.he-emptybottlerum2>Пустая бутылка из-под рома для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlerum2><!--Patch 11-->
+<entityname.he-emptybottlewhiskey2>Пустая бутылка из-под виски</entityname.he-emptybottlewhiskey2><!--Patch 11-->
+<entitydescription.he-emptybottlewhiskey2>Пустая бутылка из-под виски для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlewhiskey2><!--Patch 11-->
+<entityname.he-emptybottlehalucinova2>Пустая бутылка из-под Галюциновы</entityname.he-emptybottlehalucinova2><!--Patch 11-->
+<entitydescription.he-emptybottlehalucinova2>Пустая бутылка из-под Галюциновы для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlehalucinova2><!--Patch 11-->
+<entityname.he-emptybottlebeer2>Пустая пивная бутылка</entityname.he-emptybottlebeer2><!--Patch 11-->
+<entitydescription.he-emptybottlebeer2>Пустая пивная бутылка для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottlebeer2><!--Patch 11-->
+<entityname.he-emptybottle2>Пустая бутылка</entityname.he-emptybottle2><!--Patch 11-->
+<entitydescription.he-emptybottle2>Пустая бутылка для некоторых рецептов. Можно бросать или опускать в воду, чтобы набрать морскую воду.</entitydescription.he-emptybottle2><!--Patch 11-->
+<entityname.he-emptyjar2>Пустая банка</entityname.he-emptyjar2><!--Patch 11-->
+<entitydescription.he-emptyjar2>Пустая банка для некоторых рецептов. Можно бросать.</entitydescription.he-emptyjar2><!--Patch 11-->
+<entityname.he-emptyshaker2>Пустой шейкер</entityname.he-emptyshaker2><!--Patch 11-->
+<entitydescription.he-emptyshaker2>Пустой шейкер, готовый для соли! Можно бросать.</entitydescription.he-emptyshaker2><!--Patch 11-->
+<entityname.he-emptycup2>Пустая чашка</entityname.he-emptycup2><!--Patch 13-->
+<entitydescription.he-emptycup2>Пустая чашка для напитков. Можно бросать или наполнить чаем.</entitydescription.he-emptycup2><!--Patch 13-->
+
+
+
+
+<entityname.he-rawjerky>Сырой джерки</entityname.he-rawjerky><!--Patch 13-->
+<entitydescription.he-rawjerky>Груда солёного сырого джерки. Сушка спасёт даже самое мерзкое мясо. Положите в духовку.</entitydescription.he-rawjerky><!--Patch 13-->
+<entityname.he-salt>Соль</entityname.he-salt>
+<entitydescription.he-salt>Не соли!</entitydescription.he-salt>
+<entityname.he-pepper>Перец</entityname.he-pepper>
+<entitydescription.he-pepper>Сделан из высушенных семян. Перец готов!</entitydescription.he-pepper>
+<entityname.he-sugar>Сахар</entityname.he-sugar>
+<entitydescription.he-sugar>Ох, как сладко!</entitydescription.he-sugar>
+<entityname.he-ketchup>Кетчуп</entityname.he-ketchup>
+<entitydescription.he-ketchup>Сделан из Взрывных Гранатов.</entitydescription.he-ketchup>
+<entityname.he-vinegar>Уксус</entityname.he-vinegar>
+<entitydescription.he-vinegar>Этот запах...</entitydescription.he-vinegar>
+<entityname.he-cookingoil>Кулинарное масло</entityname.he-cookingoil>
+<entitydescription.he-cookingoil>Это не то, что льют в двигатели.</entitydescription.he-cookingoil>
+<entityname.he-flour>Мука</entityname.he-flour>
+<entitydescription.he-flour>Натуральная европанская мука из дроблёных семян с каплей кислоты.</entitydescription.he-flour>
+<entityname.he-glassfragments>Осколки стекла</entityname.he-glassfragments><!--Patch 10-->
+<entitydescription.he-glassfragments>Разбитое стекло. Можно получить, разбивая бутылки, или скрафтить из кварца на фабрикаторе. Используется в фабрикаторе или принтере бутылок.</entitydescription.he-glassfragments><!--Patch 10-->
+<entityname.he-jambubbleberry>Варенье из Пузырягоды</entityname.he-jambubbleberry><!--Patch 10-->
+<entitydescription.he-jambubbleberry>Вкусное варенье из Пузырягоды. Известно, что немного утоляет жажду.</entitydescription.he-jambubbleberry><!--Patch 10-->
+<entityname.he-jampomegrenade>Варенье из Взрывного Граната</entityname.he-jampomegrenade><!--Patch 13-->
+<entitydescription.he-jampomegrenade>Вкусное варенье из Взрывного Граната. Немного сытнее.</entitydescription.he-jampomegrenade><!--Patch 13-->
+<entityname.he-seaweedstrip>Полоски морских водорослей</entityname.he-seaweedstrip><!--Patch 13-->
+<entitydescription.he-seaweedstrip>Морские водоросли, спрессованные и нарезанные полосками. Высушите до нори.</entitydescription.he-seaweedstrip><!--Patch 13-->
+<entityname.he-nori>Нори</entityname.he-nori><!--Patch 13-->
+<entitydescription.he-nori>Высушенные и подготовленные морские водоросли для суши.</entitydescription.he-nori><!--Patch 13-->
+
+<!-- Dairy Products -->
+<entityname.he-icecreambasemilky>Коробка молочной основы для мороженого</entityname.he-icecreambasemilky><!--Patch 13-->
+<entitydescription.he-icecreambasemilky>Основа для молочного мороженого. Храните в охлаждаемом контейнере, чтобы получить съедобное мороженое.</entitydescription.he-icecreambasemilky><!--Patch 13-->
+<entityname.he-icecreamboxmilky>Коробка молочного мороженого</entityname.he-icecreamboxmilky><!--Patch 13-->
+<entitydescription.he-icecreamboxmilky>Коробка молочного мороженого. Говорят, после него дольше чувствуешь стойкость. Полная коробка даёт до 16 шариков.</entitydescription.he-icecreamboxmilky><!--Patch 13-->
+<entityname.he-icecreamballmilky>Шарик молочного мороженого</entityname.he-icecreamballmilky><!--Patch 13-->
+<entitydescription.he-icecreamballmilky>Шарик молочного мороженого. Говорят, после него дольше чувствуешь стойкость.</entitydescription.he-icecreamballmilky><!--Patch 13-->
+<entityname.he-icecreambasepomegrenade>Коробка основы мороженого из Взрывного Граната</entityname.he-icecreambasepomegrenade><!--Patch 13-->
+<entitydescription.he-icecreambasepomegrenade>Основа для мороженого из Взрывного Граната. Храните в охлаждаемом контейнере, чтобы получить съедобное мороженое.</entitydescription.he-icecreambasepomegrenade><!--Patch 13-->
+<entityname.he-icecreamboxpomegrenade>Коробка мороженого из Взрывного Граната</entityname.he-icecreamboxpomegrenade><!--Patch 13-->
+<entitydescription.he-icecreamboxpomegrenade>Коробка мороженого из Взрывного Граната. Вкусная закуска, кажется, чуть снижает боль и повышает стойкость. Полная коробка даёт до 16 шариков.</entitydescription.he-icecreamboxpomegrenade><!--Patch 13-->
+<entityname.he-icecreamballpomegrenade>Шарик мороженого из Взрывного Граната</entityname.he-icecreamballpomegrenade><!--Patch 13-->
+<entitydescription.he-icecreamballpomegrenade>Шарик мороженого из Взрывного Граната. Вкусная закуска, кажется, немного снижает боль и повышает стойкость.</entitydescription.he-icecreamballpomegrenade><!--Patch 13-->
+<entityname.he-icecreambasepopnut>Коробка основы мороженого из Поп-ореха</entityname.he-icecreambasepopnut><!--Patch 13-->
+<entitydescription.he-icecreambasepopnut>Основа для мороженого из Поп-ореха. Храните в охлаждаемом контейнере, чтобы получить съедобное мороженое.</entitydescription.he-icecreambasepopnut><!--Patch 13-->
+<entityname.he-icecreamboxpopnut>Коробка мороженого из Поп-ореха</entityname.he-icecreamboxpopnut><!--Patch 13-->
+<entitydescription.he-icecreamboxpopnut>Коробка мороженого из Поп-ореха. Вкус напоминает шоколад на Земле. Похоже, слегка снижает боль и повышает стойкость. Полная коробка даёт до 16 шариков.</entitydescription.he-icecreamboxpopnut><!--Patch 13-->
+<entityname.he-icecreamballpopnut>Шарик мороженого из Поп-ореха</entityname.he-icecreamballpopnut><!--Patch 13-->
+<entitydescription.he-icecreamballpopnut>Шарик мороженого из Поп-ореха. Вкус напоминает земной шоколад. Похоже, слегка снижает боль, повышает стойкость и неплохо утоляет жажду.</entitydescription.he-icecreamballpopnut><!--Patch 13-->
+<entityname.he-icecreambasebubbleberry>Коробка основы мороженого из Пузырягоды</entityname.he-icecreambasebubbleberry><!--Patch 13-->
+<entitydescription.he-icecreambasebubbleberry>Основа для мороженого из Пузырягоды. Храните в охлаждаемом контейнере, чтобы получить съедобное мороженое.</entitydescription.he-icecreambasebubbleberry><!--Patch 13-->
+<entityname.he-icecreamboxbubbleberry>Коробка мороженого из Пузырягоды</entityname.he-icecreamboxbubbleberry><!--Patch 13-->
+<entitydescription.he-icecreamboxbubbleberry>Коробка мороженого из Пузырягоды. Освежающий вкус, напоминающий землянику на Земле. Похоже, слегка снижает боль и повышает стойкость. Полная коробка даёт до 16 шариков.</entitydescription.he-icecreamboxbubbleberry><!--Patch 13-->
+<entityname.he-icecreamballbubbleberry>Шарик мороженого из Пузырягоды</entityname.he-icecreamballbubbleberry><!--Patch 13-->
+<entitydescription.he-icecreamballbubbleberry>Шарик мороженого из Пузырягоды. Вкус напоминает земной шоколад. Похоже, слегка снижает боль, повышает стойкость и немного утоляет жажду.</entitydescription.he-icecreamballbubbleberry><!--Patch 13-->
+<entityname.he-molochcheesecurd>Сырный сгусток Молоха</entityname.he-molochcheesecurd><!--Patch 13-->
+<entitydescription.he-molochcheesecurd>Постепенно превращается в сыр.</entitydescription.he-molochcheesecurd><!--Patch 13-->
+<entityname.he-molochcheese>Сыр Молоха</entityname.he-molochcheese><!--Patch 13-->
+<entitydescription.he-molochcheese>Сыр из молока Молоха. Можно нарезать на ломтики.</entitydescription.he-molochcheese><!--Patch 13-->
+<entityname.he-molochcheeseslice>Ломтик сыра Молоха</entityname.he-molochcheeseslice><!--Patch 13-->
+<entitydescription.he-molochcheeseslice>Ломтик сыра Молоха.</entitydescription.he-molochcheeseslice><!--Patch 13-->
+<entityname.he-wafflecone>Вафельный рожок</entityname.he-wafflecone><!--Patch 13-->
+<entitydescription.he-wafflecone>Вафля в форме рожка для мороженого. Мороженое растает, если не держать в охлаждаемом контейнере.</entitydescription.he-wafflecone><!--Patch 13-->
+
+<!-- Tools -->
+<entityname.he-enableneeds>Включить «Голод и Жажда»</entityname.he-enableneeds>
+<entitydescription.he-enableneeds>[ПКМ+E] Включает голод и жажду для пользователя, заставляя есть и пить регулярно. Полностью опционально и НЕ требуется для получения баффов от еды и питья. Внимание: нельзя отключить для текущего персонажа после включения. НЕ ИСПОЛЬЗУЙТЕ ПРИ ИГРЕ С «NEEDS» от «LeDoux»!</entitydescription.he-enableneeds>
+<entityname.he-enableextraneeds>Включить «Мочеиспускание и Дефекация»</entityname.he-enableextraneeds><!--Patch 18-->
+<entitydescription.he-enableextraneeds>[ПКМ + E] Включает позывы к мочеиспусканию и дефекации, зависящие от того, что и сколько вы едите и пьёте. Полностью опционально и НЕ требуется для получения баффов от еды и питья. Внимание: нельзя отключить для текущего персонажа после включения.</entitydescription.he-enableextraneeds><!--Patch 18-->
+
+<entityname.he-cleaver>Мясной тесак</entityname.he-cleaver>
+<entitydescription.he-cleaver>Время вышло! Руби!
+
+Может добывать мясо с трупов существ.</entitydescription.he-cleaver>
+<entityname.he-skillbooktheeuropan>Европанец том 66</entityname.he-skillbooktheeuropan>
+<entitydescription.he-skillbooktheeuropan>«... Загляни за завесу времени. Это ты, Роберт? Нет, я — Роберт. Но я также Дорис. Я — мясо. Вкуси меня и стань единым с Червём. ...»</entitydescription.he-skillbooktheeuropan>
+<entityname.he-skillbookauntdoris>ИСКУССТВО ГЛУБИННОЙ КУЛИНАРИИ тётушки Дорис</entityname.he-skillbookauntdoris>
+<entitydescription.he-skillbookauntdoris>Европанский способ готовки.</entitydescription.he-skillbookauntdoris>
+<entityname.he-genesaw>Генетический экстрактор</entityname.he-genesaw>
+<entitydescription.he-genesaw>Может извлечь случайный ген из трупа.</entitydescription.he-genesaw>
+<entityname.extractedgene>Извлечённый ген</entityname.extractedgene>
+<entitydescription.extractedgene>Неопознанный извлечённый ген.</entitydescription.extractedgene>
+
+<!-- Medical -->
+<entityname.he-antistarve>Восстановитель сознания при истощении</entityname.he-antistarve>
+<entitydescription.he-antistarve>Используется для приведения в сознание пациента, потерявшего сознание из-за голода или жажды.</entitydescription.he-antistarve>
+
+<!-- Misc -->
+<entityname.punchgun>Ударо-пушка</entityname.punchgun><!--Patch 13-->
+<entitydescription.punchgun>Буквально!</entitydescription.punchgun><!--Patch 13-->
+<entityname.he-toilet>Туалет</entityname.he-toilet><!--Patch 13-->
+<entitydescription.he-toilet>Справь нужду или избавься от чего-то, смыв это.</entitydescription.he-toilet><!--Patch 13-->
+<entityname.he-outposttoilet>Туалет</entityname.he-outposttoilet><!--Patch 16-->
+<entitydescription.he-outposttoilet>Вариант туалета для использования в модулях аванпостов, который нельзя поднять и переместить.</entitydescription.he-outposttoilet><!--Patch 16-->
+<entityname.he-cafeteriatable>Столовый стол</entityname.he-cafeteriatable><!--Patch 13-->
+<entitydescription.he-cafeteriatable>Передвижной стол, который обычно используется в столовых.</entitydescription.he-cafeteriatable><!--Patch 13-->
+<entityname.he-diningtable1>Обеденный стол</entityname.he-diningtable1><!--Patch 13-->
+<entityname.he-diningtable1large>Обеденный стол (Большой)</entityname.he-diningtable1large><!--Patch 13-->
+<entityname.he-diningtable2>Обеденный стол</entityname.he-diningtable2><!--Patch 13-->
+<entityname.he-cafeteriachair>Столовый стул</entityname.he-cafeteriachair><!--Patch 13-->
+<entitydescription.he-cafeteriachair>Передвижной стул, который обычно используется в столовых.</entitydescription.he-cafeteriachair><!--Patch 13-->
+<entityname.he-chair>Стул</entityname.he-chair><!--Patch 13-->
+<entityname.he-emptycantonic>Пустая банка</entityname.he-emptycantonic><!--Patch 13-->
+<entitydescription.he-emptycantonic>Пустая алюминиевая банка. Можно разобрать на алюминий или бросать.</entitydescription.he-emptycantonic><!--Patch 13-->
+<entityname.he-emptycanenergy1>Пустая банка</entityname.he-emptycanenergy1><!--Patch 13-->
+<entitydescription.he-emptycanenergy1>Пустая алюминиевая банка. Можно разобрать на алюминий или бросать.</entitydescription.he-emptycanenergy1><!--Patch 13-->
+<entityname.he-emptycancola>Пустая банка</entityname.he-emptycancola><!--Patch 13-->
+<entitydescription.he-emptycancola>Пустая алюминиевая банка. Можно разобрать на алюминий или бросать.</entitydescription.he-emptycancola><!--Patch 13-->
+<entityname.he-emptycancolazero>Пустая банка</entityname.he-emptycancolazero><!--Patch 13-->
+<entitydescription.he-emptycancolazero>Пустая алюминиевая банка. Можно разобрать на алюминий или бросать.</entitydescription.he-emptycancolazero><!--Patch 13-->
+<entityname.he-couwolaexosuit>Лимитированная серия экзоскелета «Добрый Кола»</entityname.he-couwolaexosuit><!--Patch 13-->
+<entitydescription.he-couwolaexosuit>Лимитированная серия экзоскелета, выпущенная «Добрый Кола». Он более экономичен в расходе топлива и позволяет владельцу дышать кислородом из окружающей среды, используя кислородные баллоны только по необходимости.</entitydescription.he-couwolaexosuit><!--Patch 13-->
+
+<!-- Gear -->
+<entityname.he-chefscap1>Колпак повара</entityname.he-chefscap1>
+<entitydescription.he-chefscap1>Покажи им, чья это кухня!</entitydescription.he-chefscap1>
+<entityname.he-chefscap2>Колпак повара</entityname.he-chefscap2>
+<entitydescription.he-chefscap2>Покажи им, чья это кухня!</entitydescription.he-chefscap2>
+
+<entityname.he-chefsuniform1>Форма повара</entityname.he-chefsuniform1>
+<entitydescription.he-chefsuniform1>Носят повара по всей Европе!</entitydescription.he-chefsuniform1>
+<entityname.he-chefsuniform2>Форма повара</entityname.he-chefsuniform2>
+<entitydescription.he-chefsuniform2>Носят повара по всей Европе!</entitydescription.he-chefsuniform2>
+
+<entityname.he-chefscapmaster1>Колпак мастер-повара</entityname.he-chefscapmaster1>
+<entitydescription.he-chefscapmaster1>Только для кухонной элиты!</entitydescription.he-chefscapmaster1>
+<entityname.he-chefsuniformmaster1>Форма мастер-повара</entityname.he-chefsuniformmaster1>
+<entitydescription.he-chefsuniformmaster1>Носят мастер-повара!</entitydescription.he-chefsuniformmaster1>
+
+<!-- Fabricators and Containers -->
+<entityname.he-kitchencounter>Кухонная стойка</entityname.he-kitchencounter><!--Changed as of Patch 10-->
+<entitydescription.he-kitchencounter>Вмещает до 18 разных мелких или средних предметов. Имеет встроенные розетки для всей кухонной техники.</entitydescription.he-kitchencounter><!--Changed -->
+<entityname.he-kitchencounter2>Кухонная кладовая</entityname.he-kitchencounter2><!--Changed as of Patch 11 | New identifier-->
+<entitydescription.he-kitchencounter2>Вмещает до 30 разных мелких или средних предметов.</entitydescription.he-kitchencounter2><!--Changed -->
+<entityname.he-refrigerator>Холодильник</entityname.he-refrigerator>
+<entitydescription.he-refrigerator>Предотвращает порчу. Хранит только еду и напитки. Требует питание.</entitydescription.he-refrigerator><!--Changed as of Patch 10-->
+
+<entityname.he-stove>Плита</entityname.he-stove>
+<entitydescription.he-stove>Используется для готовки. Требует питание.</entitydescription.he-stove>
+<entityname.he-brewteaitem>Заварник</entityname.he-brewteaitem>
+<entitydescription.he-brewteaitem>Начните заваривать то, что у вас в чайнике. Выключите плиту, как только услышите свист чайника.</entitydescription.he-brewteaitem>
+<entityname.he-oven>Духовка</entityname.he-oven>
+<entitydescription.he-oven>Используется для выпечки. Требует питание.</entitydescription.he-oven>
+<entityname.he-cuttingboard>Разделочная доска</entityname.he-cuttingboard>
+<entitydescription.he-cuttingboard>Используется для подготовки ингредиентов.</entitydescription.he-cuttingboard>
+<entityname.he-fryer>Фритюрница</entityname.he-fryer><!--Patch 10-->
+<entitydescription.he-fryer>Используется для жарки во фритюре. Требует питание.</entitydescription.he-fryer><!--Patch 10-->
+<entityname.he-electricgrill>Электрогриль</entityname.he-electricgrill><!--Patch 10-->
+<entitydescription.he-electricgrill>Используется для жарки мяса. Требует питание.</entitydescription.he-electricgrill><!--Patch 10-->
+<entityname.he-distiller>Дисти-ферментер</entityname.he-distiller><!--Patch 18-->
+<entitydescription.he-distiller>Используется для дистилляции этанола или ферментации продуктов с природными добавками. Требует питание.</entitydescription.he-distiller><!--Patch 18-->
+<entityname.he-brewkettle>Заварочный котёл</entityname.he-brewkettle><!--Patch 10-->
+<entitydescription.he-brewkettle>Служит для варки бочек с почти любыми напитками. Требует питание.</entitydescription.he-brewkettle><!--Patch 10-->
+<entityname.he-bottleprinter>Принтер бутылок</entityname.he-bottleprinter><!--Patch 10-->
+<entitydescription.he-bottleprinter>Массовое изготовление бутылок. Требует питание.</entitydescription.he-bottleprinter><!--Patch 10-->
+<entityname.he-refillstation>Станция розлива</entityname.he-refillstation><!--Patch 10-->
+<entitydescription.he-refillstation>Используется для наполнения пустых бутылок из бочки.</entitydescription.he-refillstation><!--Patch 10-->
+<entityname.he-coolercrate>Охлаждающий ящик</entityname.he-coolercrate><!--Patch 10-->
+<entitydescription.he-coolercrate>Предотвращает порчу мяса. Требуется батарея.</entitydescription.he-coolercrate><!--Patch 10-->
+<entityname.he-liquorcrate>Ящик для алкоголя</entityname.he-liquorcrate><!--Patch 10-->
+<entitydescription.he-liquorcrate>Хранит и перевозит до 20 бутылок любого типа.</entitydescription.he-liquorcrate><!--Patch 10-->
+<entityname.he-jarcrate>Ящик для банок</entityname.he-jarcrate><!--Patch 11-->
+<entitydescription.he-jarcrate>Хранит и перевозит до 8 банок.</entitydescription.he-jarcrate><!--Patch 11-->
+<entityname.he-colacrate>Ящик «Добрый Кола»</entityname.he-colacrate><!--Patch 13-->
+<entitydescription.he-colacrate>Ящик от «Добрый Кола» для хранения и переноски бутылок. Банки не подходят.</entitydescription.he-colacrate><!--Patch 13-->
+<entityname.he-liquorcrateshelf>Полка для ящиков с алкоголем</entityname.he-liquorcrateshelf><!--Patch 10-->
+<entitydescription.he-liquorcrateshelf>Полка для хранения до 4 ящиков с алкоголем или банками.</entitydescription.he-liquorcrateshelf><!--Patch 10-->
+<entityname.he-liquorcrateshelfsmall>Полка для ящиков (малая)</entityname.he-liquorcrateshelfsmall><!--Patch 10-->
+<entitydescription.he-liquorcrateshelfsmall>Малая полка для хранения до 2 ящиков с алкоголем или банками.</entitydescription.he-liquorcrateshelfsmall><!--Patch 10-->
+<entityname.he-liquordisplayshelf>Выставочная полка для бутылок</entityname.he-liquordisplayshelf><!--Patch 10-->
+<entitydescription.he-liquordisplayshelf>Полка для демонстрации и хранения бутылок. Банки не подходят.</entitydescription.he-liquordisplayshelf><!--Patch 10-->
+<entityname.he-toolbeltlunch>Пояс с ланчбоксом</entityname.he-toolbeltlunch><!--Patch 10-->
+<entitydescription.he-toolbeltlunch>Пояс с прикреплённым ланчбоксом, чтобы еда была под рукой. Немного замедляет.</entitydescription.he-toolbeltlunch><!--Patch 10-->
+<entityname.he-lunchbox>Ланчбокс</entityname.he-lunchbox><!--Patch 10-->
+<entitydescription.he-lunchbox>Коробка с ручкой для переноски еды. Можно прикрепить к поясу на фабрикаторе.</entitydescription.he-lunchbox><!--Patch 10-->
+<entityname.he-hydroponicplanter>Гидропонный плантатор</entityname.he-hydroponicplanter><!--Patch 10-->
+<entitydescription.he-hydroponicplanter>Обеспечивает идеальные условия для подводных растений Европы. Даёт урожай каждые 15 минут. Требует питание.</entitydescription.he-hydroponicplanter><!--Patch 10-->
+<entityname.he-cafeteriacart>Тележка-буфет</entityname.he-cafeteriacart><!--Patch 10-->
+<entitydescription.he-cafeteriacart>Для перевозки и доступного хранения большого количества еды и напитков. Вмещает до 30 разных позиций. Можно размещать.</entitydescription.he-cafeteriacart><!--Patch 10-->
+<entityname.he-teakettle>Чайник</entityname.he-teakettle><!--Patch 13-->
+<entitydescription.he-teakettle>Используется для наполнения чашек чаем. Сначала заварите на плите с чайной смесью внутри.</entitydescription.he-teakettle><!--Patch 13-->
+<entityname.he-sprinkler>Садовый спринклер</entityname.he-sprinkler><!--Patch 14-->
+<entitydescription.he-sprinkler>Автоматически поливает ближайшие растения по таймеру. Требует питание.</entitydescription.he-sprinkler><!--Patch 14-->
+
+<!-- Skills -->
+<skillname.cooking>Кулинария</skillname.cooking>
+<skillname.butchery>Разделка</skillname.butchery>
+
+<!-- Jobs -->
+<jobname.he-chef>Повар</jobname.he-chef>
+<jobdescription.he-chef>Повар отвечает за разделку существ и приготовление блюд для экипажа, чтобы все были сыты и довольны.</jobdescription.he-chef>
+
+<!-- Talent trees -->
+<talenttree.butcher>Мясник</talenttree.butcher><!--Patch 13-->
+<talenttree.entertainer>Артист</talenttree.entertainer><!--Patch 13-->
+<talenttree.chef>Повар</talenttree.chef><!--Patch 13-->
+
+<!-- Talents -->
+<talentname.he-hungryeuropan>Голодный Европанец</talentname.he-hungryeuropan>
+<talentdescription.he-hungryeuropan>Вы голодный европанец и должны регулярно есть и пить.</talentdescription.he-hungryeuropan>
+
+<talentname.he-filthyeuropan>Грязный Европанец</talentname.he-filthyeuropan><!--Patch 13-->
+<talentdescription.he-filthyeuropan>Вы особенный европанец и должны регулярно мочиться и испражняться — в зависимости от того, что и сколько вы едите и пьёте.</talentdescription.he-filthyeuropan><!--Patch 13-->
+
+<talentname.he-poacher>Браконьер</talentname.he-poacher>
+<talentdescription.he-poacher>Получайте дополнительно [xpbonus]% опыта и [moneybonus]% марок в миссиях [missiontype1] и [missiontype2].</talentdescription.he-poacher>
+<talentname.he-saltybusiness>Солёный бизнес</talentname.he-saltybusiness>
+<talentdescription.he-saltybusiness>Впервые открывая контейнер, вы имеете [probability]% шанс найти немного дополнительной соли.</talentdescription.he-saltybusiness>
+<talentname.he-fastfood>Фаст-фуд</talentname.he-fastfood>
+<talentdescription.he-fastfood>Двигайся на [value]% быстрее.\nУвеличивай скорость кухонных фабрикаторов на [amount]%.\nНе влияет на [itemname1] и [itemname2].</talentdescription.he-fastfood><!--Patch 17-->
+<talentname.he-chefattire>Облачение мастер-повара</talentname.he-chefattire>
+<talentdescription.he-chefattire>Открывай рецепты для создания [itemname1] и [itemname2].</talentdescription.he-chefattire>
+<talentname.he-frenzy>Исступление</talentname.he-frenzy>
+<talentdescription.he-frenzy>Наносите на [powerincrease]% больше урона ‖color:gui.orange‖мясными тесаками‖end‖.\nУвеличивает скорость работы на разделочной доске на [amount]%.</talentdescription.he-frenzy>
+<talentname.he-butchershop>Мясная лавка</talentname.he-butchershop>
+<talentdescription.he-butchershop>Вы талантливый мясник, и это видно!\nПолучайте на [amount]% больше денег при продаже мяса!</talentdescription.he-butchershop>
+<talentname.he-coldblood>Хладнокровие</talentname.he-coldblood><!--Patch 13-->
+<talentdescription.he-coldblood>Вы самый крутой здесь.\n‖color:gui.orange‖Мясо‖end‖ больше не портится, а ‖color:gui.orange‖мороженое‖end‖ больше не тает в вашем инвентаре.</talentdescription.he-coldblood><!--Patch 13-->
+<talentname.he-masterchef>Мастер-шеф</talentname.he-masterchef>
+<talentdescription.he-masterchef>Вы стали мастером своего дела и научились экономить ингредиенты при готовке.\nУ вас есть [chance]% шанс не потратить случайный ингредиент при приготовлении блюда.</talentdescription.he-masterchef>
+<talentname.he-lifesaver>Спасатель</talentname.he-lifesaver>
+<talentdescription.he-lifesaver>Получите бонус [amount] к навыку [skill].</talentdescription.he-lifesaver><!--Patch 17-->
+<talentname.he-delicacies>Деликатесы</talentname.he-delicacies>
+<talentdescription.he-delicacies>Открывает следующие рецепты европанских деликатесов:\n[itemname1]\n[itemname2]</talentdescription.he-delicacies><!--Patch 13 | added \n[itemname2] at the end-->
+<talentname.he-huskfood>Еда из Хаска</talentname.he-huskfood><!--Patch 13-->
+<talentdescription.he-huskfood>Теперь вы можете превращать мясо существа [itemname1] в съедобную пищу.</talentdescription.he-huskfood><!--Patch 13-->
+<talentname.he-masterbrewer>Мастер-пивовар</talentname.he-masterbrewer><!--Patch 10-->
+<talentdescription.he-masterbrewer>Открывает следующие рецепты европанских напитков:\n[itemname1]\n[itemname2]\n[itemname3]</talentdescription.he-masterbrewer><!--Patch 10-->
+<talentname.he-tastyfood>Вкусная еда</talentname.he-tastyfood><!--Patch 13-->
+<talentdescription.he-tastyfood>Ваша еда известна как одна из лучших. Если члены экипажа не голодны, они получают ‖color:gui.orange‖Высокий моральный дух‖end‖. Если они сыты, они получают ‖color:gui.orange‖Отличный моральный дух‖end‖, удваивающий следующие бонусы:</talentdescription.he-tastyfood><!--Patch 13-->
+<talentname.he-favorite>Всеобщий любимчик</talentname.he-favorite><!--Patch 13-->
+<talentname.he-piper>Музыкант</talentname.he-piper><!--Patch 13-->
+<talentdescription.he-piper>Игра на волынке рядом с экипажем даёт им следующие бонусы на время игры:\n‖color:gui.orange‖+20 к Оружию\n+20% скорости ходьбы\n+25% урона в ближнем бою\n+25% сопротивления урону ‖end‖.</talentdescription.he-piper><!--Patch 13-->
+<talentname.he-lazygardener>Ленивый садовник</talentname.he-lazygardener><!--Patch 14-->
+<talentdescription.he-lazygardener>Время, потраченное на полив растений, было слишком много для вас.</talentdescription.he-lazygardener><!--Patch 14-->
+<talentname.he-farmersmarket>Фермерский рынок</talentname.he-farmersmarket><!--Patch 17-->
+<talentdescription.he-farmersmarket>Вы можете продавать приготовленную еду на [amount]% дороже.</talentdescription.he-farmersmarket><!--Patch 17-->
+<talentdescription.fooditemscostless>Предметы ‖color:gui.orange‖Еды‖end‖ можно купить на [amount]% дешевле.</talentdescription.fooditemscostless>
+<talentname.he-anatomystudy>Изучение анатомии</talentname.he-anatomystudy><!--Patch 17-->
+<talentname.he-thirstforknowledge>Жажда знаний</talentname.he-thirstforknowledge><!--Patch 17-->
+<talentname.he-steadyhands>Твёрдые руки</talentname.he-steadyhands><!--Patch 17-->
+<talentdescription.he-steadyhands>При прицеливании с оружием ближнего боя получай [amount]% сопротивления оглушению.</talentdescription.he-steadyhands><!--Patch 17-->
+<talentname.he-foodtrucking>Пищевой грузовик</talentname.he-foodtrucking><!--Patch 17-->
+<talentdescription.he-foodtrucking>Получай бонус [helmbonus] к навыку ‖color:gui.orange‖Штурвал‖end‖.\nПри входе на дружественный аванпост получай [outpost] мк.</talentdescription.he-foodtrucking><!--Patch 17-->
+<talentname.he-smellslikeabrewery>Пахнет как пивоварня</talentname.he-smellslikeabrewery><!--Patch 17-->
+<talentname.he-dietarypreference>Пищевые предпочтения</talentname.he-dietarypreference><!--Patch 17-->
+<talentdescription.he-dietarypreferencebase>Выбери один тип врагов и получай [amount]% бонус к урону против них. \nТы получаешь на [percent]% больше пищевых бонусов при приёме пищи.</talentdescription.he-dietarypreferencebase><!--Patch 17-->
+<talentdescription.he-dietarypreferencemudraptor>Выбери ‖color:gui.orange‖Грязевых рапторов‖end‖ как предпочтение и получай [amount]% увеличенный урон против них.</talentdescription.he-dietarypreferencemudraptor><!--Patch 17-->
+<talentdescription.he-dietarypreferencecrawler>Выбери ‖color:gui.orange‖Ползунов‖end‖ как предпочтение и получай [amount]% увеличенный урон против них.</talentdescription.he-dietarypreferencecrawler><!--Patch 17-->
+<talentdescription.he-dietarypreferencethresher>Выбери ‖color:gui.orange‖Акулих‖end‖ как предпочтение и получай [amount]% увеличенный урон против них.</talentdescription.he-dietarypreferencethresher><!--Patch 17-->
+<talentdescription.he-dietarypreferencespineling>Выбери ‖color:gui.orange‖Колючков‖end‖ как предпочтение и получай [amount]% увеличенный урон против них.</talentdescription.he-dietarypreferencespineling><!--Patch 17-->
+<talentdescription.he-dietarypreferencehusk>Выбери ‖color:gui.orange‖Хасков‖end‖ как предпочтение и получай [amount]% увеличенный урон против них.</talentdescription.he-dietarypreferencehusk><!--Patch 17-->
+<talentname.he-culinaryschool>Кулинарная школа</talentname.he-culinaryschool><!--Patch 17-->
+<talentdescription.he-culinaryschool>После завершения миссии первое ‖color:gui.orange‖изысканное‖end‖ блюдо, которое вы приготовите, приносит вам ‖color:gui.orange‖Похвальную грамоту‖end‖.</talentdescription.he-culinaryschool>
+<!--Patch 17-->
+<talentname.he-thinnerslices>Более тонкие ломтики</talentname.he-thinnerslices><!--Patch 17-->
+<talentdescription.he-thinnerslices>Получи [chance]% шанс не потратить сырое мясо при готовке.</talentdescription.he-thinnerslices><!--Patch 17-->
+<talentname.he-dryaging>Сухое созревание</talentname.he-dryaging><!--Patch 17-->
+<talentname.he-slaughterhouse>Бойня</talentname.he-slaughterhouse><!--Patch 17-->
+<talentname.he-seafoodsamurai>Морской самурай</talentname.he-seafoodsamurai><!--Patch 17-->
+<talentdescription.he-seafoodsamurai>Если вы находитесь в открытом море, получайте дополнительные [amount]% [stattype].</talentdescription.he-seafoodsamurai><!--Patch 17-->
+<talentname.he-parttimejob>Подработка</talentname.he-parttimejob><!--Patch 17-->
+<talentname.he-dinnertheater>Обеденный театр</talentname.he-dinnertheater><!--Patch 17-->
+<talentdescription.he-dinnertheater>Игра на волынке продлевает длительность пищевых и питьевых бонусов для вас и близких союзников.</talentdescription.he-dinnertheater><!--Patch 17-->
+<talentname.he-teppanyaki>Тэппаняки</talentname.he-teppanyaki><!--Patch 17-->
+<talentdescription.he-teppanyaki>Когда вы получаете очко навыка [skillname1] или [skillname2], ваш экипаж тоже получает очко.\nНаноси на [powerincrease]% больше урона ‖color:gui.orange‖сковородами‖end‖.</talentdescription.he-teppanyaki><!--Patch 17-->
+<talentname.he-workpromotion>Повышение по работе</talentname.he-workpromotion><!--Patch 17-->
+<talentname.he-headchef>Главный повар</talentname.he-headchef><!--Patch 17-->
+<talentdescription.he-headchef>Союзники в той же комнате получают [amount]% [stattype].</talentdescription.he-headchef><!--Patch 17-->
+<talentname.he-huskegghunt>Охота за яйцами Хасков</talentname.he-huskegghunt><!--Patch 17-->
+<talentdescription.he-huskegghunt>Хаски роняют одно дополнительное [item].</talentdescription.he-huskegghunt><!--Patch 17-->
+<talentname.he-creamery>Молочный завод</talentname.he-creamery>
+<talentdescription.he-creamery>Рецепты, потребляющие [item], имеют [chance]% шанс не потратить одно.\n‖color:gui.orange‖Молохи‖end‖ меньше агрессивны к вам.</talentdescription.he-creamery>
+<talentname.he-shortorderchef>Повар быстрого обслуживания</talentname.he-shortorderchef>
+<talentdescription.he-shortorderchef>Приготовление ‖color:gui.orange‖фаст-фуда‖end‖ имеет [chance]% шанс приготовить второе блюдо бесплатно.\nПосле приготовления фаст-фуда вы получаете [amount]% сопротивления физическому урону и не можете ‖color:gui.orange‖потерять сознание‖end‖ в течение 10 секунд.</talentdescription.he-shortorderchef>
+<afflictionname.he-shortorderflow>Короткий заказ</afflictionname.he-shortorderflow>
+<afflictiondescription.he-shortorderflow>Надо. Продолжать. Готовить.</afflictiondescription.he-shortorderflow>
+<!-- Afflictions -->
+<afflictionname.hunger>Голод</afflictionname.hunger><!--Patch 10-->
+<afflictionname.he-hunger>Голод</afflictionname.he-hunger>
+<afflictiondescription.he-hunger>Желудок доволен.</afflictiondescription.he-hunger>
+<afflictioncauseofdeath.he-hunger>Умер от голода.</afflictioncauseofdeath.he-hunger>
+<afflictioncauseofdeathself.he-hunger>Вы умерли от голода.</afflictioncauseofdeathself.he-hunger>
+<afflictiondescription.he-hunger.self>Желудок урчит!</afflictiondescription.he-hunger.self>
+<afflictiondescription.he-hunger.lethal.self>Почти голодная смерть...</afflictiondescription.he-hunger.lethal.self>
+<afflictiondescription.he-hunger.other.low>У пациента появляется небольшой аппетит.</afflictiondescription.he-hunger.other.low>
+<afflictiondescription.he-hunger.other>Пациент голоден.</afflictiondescription.he-hunger.other>
+<afflictiondescription.he-hunger.lethal.other>Пациент начинает голодать.</afflictiondescription.he-hunger.lethal.other>
+
+<afflictionname.thirst>Жажда</afflictionname.thirst><!--Patch 10-->
+<afflictionname.he-thirst>Жажда</afflictionname.he-thirst>
+<afflictiondescription.he-thirst>Вы чувствуете свежесть.</afflictiondescription.he-thirst>
+<afflictioncauseofdeath.he-thirst>Умер от жажды.</afflictioncauseofdeath.he-thirst>
+<afflictioncauseofdeathself.he-thirst>Вы умерли от жажды.</afflictioncauseofdeathself.he-thirst>
+<afflictiondescription.he-thirst.self>Горло пересохло.</afflictiondescription.he-thirst.self>
+<afflictiondescription.he-thirst.lethal.self>Начинаете умирать от жажды...</afflictiondescription.he-thirst.lethal.self>
+<afflictiondescription.he-thirst.other.low>Пациент начинает испытывать жажду.</afflictiondescription.he-thirst.other.low>
+<afflictiondescription.he-thirst.other>Пациент испытывает жажду.</afflictiondescription.he-thirst.other>
+<afflictiondescription.he-thirst.lethal.other>Пациент начинает умирать от жажды.</afflictiondescription.he-thirst.lethal.other>
+
+<afflictionname.quenched>Утолённая жажда</afflictionname.quenched><!--Patch 13-->
+<afflictiondescription.quenched>Вы не испытываете жажды.</afflictiondescription.quenched><!--Patch 13-->
+<afflictiondescription.quenched.other>Жажда пациента утолена. Некоторое время он не будет испытывать жажду.</afflictiondescription.quenched.other><!--Patch 13-->
+
+<afflictionname.bladder>Мочевой пузырь</afflictionname.bladder><!--Patch 13-->
+<afflictiondescription.bladder>Без давления.</afflictiondescription.bladder><!--Patch 13-->
+<afflictiondescription.bladder.self>Неплохо бы сходить в туалет.</afflictiondescription.bladder.self><!--Patch 13-->
+<afflictiondescription.bladder.self.high>Мочевой пузырь переполнен! Возможна утечка в любой момент!</afflictiondescription.bladder.self.high><!--Patch 13-->
+<afflictiondescription.bladder.other.low>У пациента всё в порядке с мочевым пузырём.</afflictiondescription.bladder.other.low><!--Patch 13-->
+<afflictiondescription.bladder.other>Пациенту бы сходить в туалет.</afflictiondescription.bladder.other><!--Patch 13-->
+<afflictiondescription.bladder.other.high>Мочевой пузырь пациента вот-вот лопнет! Нужно сходить в туалет!</afflictiondescription.bladder.other.high><!--Patch 13-->
+
+<afflictionname.defecate>Потребность в дефекации</afflictionname.defecate><!--Patch 13-->
+<afflictiondescription.defecate>Что вошло — должно выйти.</afflictiondescription.defecate><!--Patch 13-->
+<afflictiondescription.defecate.self>Ваш кишечник в порядке.</afflictiondescription.defecate.self><!--Patch 13-->
+<afflictiondescription.defecate.self.high>Еле сдерживаетесь! Найдите ближайший туалет!</afflictiondescription.defecate.self.high><!--Patch 13-->
+<afflictiondescription.defecate.other.low>У пациента хорошая перистальтика.</afflictiondescription.defecate.other.low><!--Patch 13-->
+<afflictiondescription.defecate.other>Пациент вспотел и выглядит запертым.</afflictiondescription.defecate.other><!--Patch 13-->
+<afflictiondescription.defecate.other.high>Сфинктер пациента вот-вот сдаст!</afflictiondescription.defecate.other.high><!--Patch 13-->
+
+<afflictionname.embarrassment>Смущение</afflictionname.embarrassment><!--Patch 13-->
+<afflictiondescription.embarrassment>Вы смущены и не можете сосредоточиться на работе.</afflictiondescription.embarrassment><!--Patch 13-->
+<afflictiondescription.embarrassment.other>Пациент смущён и не может ни на чём сосредоточиться.</afflictiondescription.embarrassment.other><!--Patch 13-->
+
+<afflictionname.he-starvation>Истощение</afflictionname.he-starvation>
+<afflictiondescription.he-starvation>Голодает...</afflictiondescription.he-starvation>
+<afflictioncauseofdeath.he-starvation>Умер от истощения.</afflictioncauseofdeath.he-starvation>
+<afflictioncauseofdeathself.he-starvation>Вы умерли от истощения.</afflictioncauseofdeathself.he-starvation>
+<afflictiondescription.he-starvation.self>Голодаете...</afflictiondescription.he-starvation.self>
+<afflictiondescription.he-starvation.other>Пациент голодает.</afflictiondescription.he-starvation.other>
+
+<afflictionname.he-dieofthirst>Смерть от жажды</afflictionname.he-dieofthirst>
+<afflictiondescription.he-dieofthirst>Умирает от жажды...</afflictiondescription.he-dieofthirst>
+<afflictioncauseofdeath.he-dieofthirst>Умер от жажды.</afflictioncauseofdeath.he-dieofthirst>
+<afflictioncauseofdeathself.he-dieofthirst>Вы иссохли.</afflictioncauseofdeathself.he-dieofthirst>
+<afflictiondescription.he-dieofthirst.self>Умираете от жажды...</afflictiondescription.he-dieofthirst.self>
+<afflictiondescription.he-dieofthirst.other>Пациент умирает от жажды.</afflictiondescription.he-dieofthirst.other>
+
+<afflictionname.he-increasedswimmingspeedcrawler10>Рост скорости плавания (Еда)</afflictionname.he-increasedswimmingspeedcrawler10><!--Patch 13-->
+<afflictiondescription.he-increasedswimmingspeedcrawler10>Вы плывёте на 10% быстрее.</afflictiondescription.he-increasedswimmingspeedcrawler10><!--Patch 13-->
+<afflictionname.he-increasedswimmingspeedcrawler25>Рост скорости плавания (Еда)</afflictionname.he-increasedswimmingspeedcrawler25><!--Patch 13-->
+<afflictiondescription.he-increasedswimmingspeedcrawler25>Вы плывёте на 25% быстрее.</afflictiondescription.he-increasedswimmingspeedcrawler25><!--Patch 13-->
+<afflictionname.he-increasedswimmingspeedcrawler>Рост скорости плавания (Еда)</afflictionname.he-increasedswimmingspeedcrawler>
+<afflictiondescription.he-increasedswimmingspeedcrawler>Вы плывёте на 50% быстрее.</afflictiondescription.he-increasedswimmingspeedcrawler>
+
+<afflictionname.he-damageresistancemudraptor>Сопротивление урону (Еда)</afflictionname.he-damageresistancemudraptor>
+<afflictiondescription.he-damageresistancemudraptor>Вы получаете на 25% меньше урона.</afflictiondescription.he-damageresistancemudraptor>
+
+<afflictionname.he-increasedwalkingspeedmudraptor>Рост скорости ходьбы (Еда)</afflictionname.he-increasedwalkingspeedmudraptor>
+<afflictiondescription.he-increasedwalkingspeedmudraptor>Вы ходите на 20% быстрее.</afflictiondescription.he-increasedwalkingspeedmudraptor>
+
+<afflictionname.he-damageresistancemoloch25>Сопротивление урону (Еда)</afflictionname.he-damageresistancemoloch25><!--Patch 13-->
+<afflictiondescription.he-damageresistancemoloch25>Вы получаете на 25% меньше урона.</afflictiondescription.he-damageresistancemoloch25><!--Patch 13-->
+<afflictionname.he-damageresistancemoloch>Сопротивление урону (Еда)</afflictionname.he-damageresistancemoloch>
+<afflictiondescription.he-damageresistancemoloch>Вы получаете на 50% меньше урона.</afflictiondescription.he-damageresistancemoloch>
+
+<afflictionname.he-increasedmeleedamagehammerhead>Рост урона в ближнем бою (Еда)</afflictionname.he-increasedmeleedamagehammerhead>
+<afflictiondescription.he-increasedmeleedamagehammerhead>Вы наносите на 25% больше урона в ближнем бою.</afflictiondescription.he-increasedmeleedamagehammerhead>
+
+<afflictionname.he-decreasedoxygenconsumption>Снижение потребления кислорода (Еда)</afflictionname.he-decreasedoxygenconsumption>
+<afflictiondescription.he-decreasedoxygenconsumption>Вам не нужно дышать.</afflictiondescription.he-decreasedoxygenconsumption>
+
+<afflictionname.he-pressureresistance>Сопротивление давлению (Еда)</afflictionname.he-pressureresistance>
+<afflictiondescription.he-pressureresistance>Вы невосприимчивы к давлению.</afflictiondescription.he-pressureresistance>
+
+<afflictionname.he-cannibalskillincrease>Рост навыков (Еда)</afflictionname.he-cannibalskillincrease><!--Patch 9-->
+<afflictiondescription.he-cannibalskillincrease>Все ваши навыки увеличены на 20%.</afflictiondescription.he-cannibalskillincrease><!--Patch 9-->
+
+<afflictionname.he-disguisedashusk>Запах Хаска (Еда)</afflictionname.he-disguisedashusk><!--Patch 13-->
+<afflictiondescription.he-disguisedashusk.self>Уф... от вас несёт заражённой плотью хаска! Хаски, вероятно, примут вас за своего.</afflictiondescription.he-disguisedashusk.self><!--Patch 13-->
+<afflictiondescription.he-disguisedashusk.others>Уф... От пациента несёт заражённой плотью хаска!</afflictiondescription.he-disguisedashusk.others><!--Patch 13-->
+
+<afflictionname.he-alcoholism>Алкоголизм</afflictionname.he-alcoholism>
+<afflictiondescription.he-alcoholism>Пациент доволен... пока получает желаемое.</afflictiondescription.he-alcoholism>
+<advancedafflictiondescription.self.he-alcoholism>Время алкогольного круиза! Вы зависимы от алкоголя.</advancedafflictiondescription.self.he-alcoholism>
+<advancedafflictiondescription.others.he-alcoholism>Пациент страдает алкоголизмом.</advancedafflictiondescription.others.he-alcoholism>
+
+<afflictionname.he-alcoholwithdrawal>Алкогольная абстиненция</afflictionname.he-alcoholwithdrawal>
+<afflictiondescription.he-alcoholwithdrawal>Заметны возбуждение, тремор и признаки тошноты.</afflictiondescription.he-alcoholwithdrawal>
+<afflictioncauseofdeath.he-alcoholwithdrawal>Умер от алкогольной абстиненции</afflictioncauseofdeath.he-alcoholwithdrawal>
+<afflictioncauseofdeathself.he-alcoholwithdrawal>Вы умерли от алкогольной абстиненции.</afflictioncauseofdeathself.he-alcoholwithdrawal>
+<advancedafflictiondescription.self.he-alcoholwithdrawal>Кажется, пора открыть ещё по холодненькой с ребятами!</advancedafflictiondescription.self.he-alcoholwithdrawal><!--Changed as of Patch 8 | identifier was previously "advancedafflictiondescription.self.he-alcoholwithdrawal"-->
+<advancedafflictiondescription.others.he-alcoholwithdrawal>Пациент демонстрирует лёгкие признаки абстиненции.</advancedafflictiondescription.others.he-alcoholwithdrawal><!--Changed as of Patch 8 | identifier was previously "advancedafflictiondescription.others.he-alcoholwithdrawal"-->
+<advancedafflictiondescription.self.he-alcoholwithdrawal.2>Холодное пиво или бутылка рома... Что угодно, чтобы унять эту жуткую жажду алкоголя!</advancedafflictiondescription.self.he-alcoholwithdrawal.2><!--Changed as of Patch 8 | identifier was previously "advancedafflictiondescription.self.he-alcoholwithdrawal.2"-->
+<advancedafflictiondescription.others.he-alcoholwithdrawal.2>Пациент демонстрирует тяжёлые признаки абстиненции.</advancedafflictiondescription.others.he-alcoholwithdrawal.2><!--Changed as of Patch 8 | identifier was previously "advancedafflictiondescription.others.he-alcoholwithdrawal.2"-->
+
+<afflictionname.he-cannibalism>Каннибализм</afflictionname.he-cannibalism><!--Patch 8-->
+<afflictiondescription.he-cannibalism>Пациент доволен... пока получает желаемое.</afflictiondescription.he-cannibalism><!--Patch 8-->
+<advancedafflictiondescription.self.he-cannibalism>Ох! Похоже, вам нравится вкус товарищей по экипажу.</advancedafflictiondescription.self.he-cannibalism><!--Patch 8-->
+<advancedafflictiondescription.others.he-cannibalism>Пациент явно любит особенное мясо.</advancedafflictiondescription.others.he-cannibalism><!--Patch 8-->
+
+<afflictionname.he-hungryforhumanmeat>Жажда человеческого мяса</afflictionname.he-hungryforhumanmeat><!--Patch 8-->
+<afflictiondescription.he-hungryforhumanmeat>Заметны возбуждение и тремор, взгляд пуст.</afflictiondescription.he-hungryforhumanmeat><!--Patch 8-->
+<afflictioncauseofdeath.he-hungryforhumanmeat>Сошёл с ума из-за человеческого мяса.</afflictioncauseofdeath.he-hungryforhumanmeat><!--Patch 8-->
+<afflictioncauseofdeathself.he-hungryforhumanmeat>Вы сошли с ума из-за человеческого мяса.</afflictioncauseofdeathself.he-hungryforhumanmeat><!--Patch 8-->
+<advancedafflictiondescription.self.he-hungryforhumanmeat>Ваши товарищи начинают выглядеть довольно аппетитно!</advancedafflictiondescription.self.he-hungryforhumanmeat><!--Patch 8-->
+<advancedafflictiondescription.others.he-hungryforhumanmeat>Пациент смотрит на вас холодным взглядом.</advancedafflictiondescription.others.he-hungryforhumanmeat><!--Patch 8-->
+<advancedafflictiondescription.self.he-hungryforhumanmeat.2>Трудно на чём-то сосредоточиться. Тянет к человеческой плоти. Хочется убивать. Одни мысли об этом делают руки сильнее.</advancedafflictiondescription.self.he-hungryforhumanmeat.2><!--Patch 8-->
+<advancedafflictiondescription.others.he-hungryforhumanmeat.2>Пациент смотрит холодно и сильно дёргается.</advancedafflictiondescription.others.he-hungryforhumanmeat.2><!--Patch 8-->
+<advancedafflictiondescription.self.he-hungryforhumanmeat.3>Непреодолимое желание вонзить зубы в товарищей. Это единственный способ утолить голод.</advancedafflictiondescription.self.he-hungryforhumanmeat.3><!--Patch 8-->
+<advancedafflictiondescription.others.he-hungryforhumanmeat.3>У пациента тяга к человеческому мясу. Не подносите руку, если хотите сохранить пальцы.</advancedafflictiondescription.others.he-hungryforhumanmeat.3><!--Patch 8-->
+
+<afflictionname.he-drunkinvertcontrols>Дезориентация</afflictionname.he-drunkinvertcontrols>
+<afflictiondescription.he-drunkinvertcontrols>Верх — это низ, а лево... право? Где я?</afflictiondescription.he-drunkinvertcontrols>
+
+<afflictionname.he-stuffed>Сытость</afflictionname.he-stuffed>
+<afflictiondescription.he-stuffed>Желудок полон.</afflictiondescription.he-stuffed>
+<afflictioncauseofdeath.he-stuffed>Задохнулся рвотой.</afflictioncauseofdeath.he-stuffed>
+<afflictioncauseofdeathself.he-stuffed>Вы захлебнулись собственной рвотой.</afflictioncauseofdeathself.he-stuffed>
+<advancedafflictiondescription.self.he-stuffed>Желудок полон.</advancedafflictiondescription.self.he-stuffed>
+<advancedafflictiondescription.self.he-stuffed.2>Желудок на пределе. Если поесть ещё, возможна рвота.</advancedafflictiondescription.self.he-stuffed.2>
+<advancedafflictiondescription.self.he-stuffed.3>Желудок переполнен. Тянет к рвоте.</advancedafflictiondescription.self.he-stuffed.3>
+<advancedafflictiondescription.others.he-stuffed>Желудок полон. Пациент наелся.</advancedafflictiondescription.others.he-stuffed>
+<advancedafflictiondescription.others.he-stuffed.2>Желудок очень полный. Пациент почти переел.</advancedafflictiondescription.others.he-stuffed.2>
+<advancedafflictiondescription.others.he-stuffed.3>Желудок переполнен. Пациента может вырвать.</advancedafflictiondescription.others.he-stuffed.3>
+
+<afflictiondescription.self.he-internalburn.low>Горло раздражено и слегка жжёт.</afflictiondescription.self.he-internalburn.low><!--Patch 13-->
+<afflictiondescription.self.he-internalburn>Горло сильно жжёт. Глотать больно.</afflictiondescription.self.he-internalburn><!--Patch 13-->
+<afflictiondescription.self.he-internalburn.high>Горло горит, как открытое пламя. Едва можете говорить.</afflictiondescription.self.he-internalburn.high><!--Patch 13-->
+<afflictiondescription.others.he-internalburn.low>Горло красное и раздражённое. Видимо, пациент выпил крепкий алкоголь.</afflictiondescription.others.he-internalburn.low><!--Patch 13-->
+<afflictiondescription.others.he-internalburn>Горло сильно раздражено из-за крепких напитков. Пациенту стоит на время воздержаться.</afflictiondescription.others.he-internalburn><!--Patch 13-->
+<afflictiondescription.others.he-internalburn.high>На горле пузырится кожа. Пациент мучается и должен немедленно прекратить употребление алкоголя!</afflictiondescription.others.he-internalburn.high><!--Patch 13-->
+<afflictioncauseofdeath.he-internalburn>Скончался от внутренних ожогов</afflictioncauseofdeath.he-internalburn><!--Patch 13-->
+<afflictioncauseofdeathself.he-internalburn>Вы скончались от внутренних ожогов.</afflictioncauseofdeathself.he-internalburn><!--Patch 13-->
+
+<afflictionname.he-stomachache>Боль в животе</afflictionname.he-stomachache>
+<afflictiondescription.he-stomachache>Желудок болит.</afflictiondescription.he-stomachache>
+<afflictioncauseofdeath.he-stomachache>Задохнулся рвотой.</afflictioncauseofdeath.he-stomachache>
+<afflictioncauseofdeathself.he-stomachache>Вы захлебнулись собственной рвотой.</afflictioncauseofdeathself.he-stomachache>
+<advancedafflictiondescription.self.he-stomachache>Желудок болит, немного подташнивает.</advancedafflictiondescription.self.he-stomachache>
+<advancedafflictiondescription.self.he-stomachache.2>Сильно болит желудок, очень тошнит.</advancedafflictiondescription.self.he-stomachache.2>
+<advancedafflictiondescription.others.he-stomachache>Пациент страдает абдоминальной болью. Вероятно, употребил что-то непригодное.</advancedafflictiondescription.others.he-stomachache>
+
+<afflictionname.he-geneticextraction>Генетическая экстракция</afflictionname.he-geneticextraction>
+<afflictiondescription.he-geneticextraction>Происходит извлечение генов.</afflictiondescription.he-geneticextraction>
+
+<afflictionname.he-butchered>Разделка</afflictionname.he-butchered>
+<afflictiondescription.he-butchered>Труп разделывают на мясо.</afflictiondescription.he-butchered>
+
+<afflictionname.he-halucinova>Галюцинова</afflictionname.he-halucinova>
+<afflictiondescription.he-halucinova.self>Чувствуете, будто уноситесь в иной план бытия.</afflictiondescription.he-halucinova.self>
+<afflictiondescription.he-halucinova.others>Человек явно «улетает».</afflictiondescription.he-halucinova.others>
+
+
+<afflictionname.he-drankpaint>Под краской</afflictionname.he-drankpaint><!-- Patch 18 -->
+<afflictiondescription.he-drankpaint.self>Уууух, краска знатная попалась!</afflictiondescription.he-drankpaint.self><!-- Patch 18 -->
+<afflictiondescription.he-drankpaint.others>Почему-то пациент решил вдохнуть промышленную краску. Проще говоря, он «улетел».</afflictiondescription.he-drankpaint.others><!-- Patch 18 -->
+
+<afflictionname.he-drankredpaint>Под красной краской</afflictionname.he-drankredpaint><!--Patch 13-->
+<afflictiondescription.he-drankredpaint.self>Бро... Краска мощная! На вкус... как Взрывной Гранат?</afflictiondescription.he-drankredpaint.self><!--Patch 13-->
+<afflictiondescription.he-drankredpaint.others>Пациент употребил красную краску. Выдают пятна вокруг рта.</afflictiondescription.he-drankredpaint.others><!--Patch 13-->
+<afflictionname.he-drankgreenpaint>Под зелёной краской</afflictionname.he-drankgreenpaint><!--Patch 13-->
+<afflictiondescription.he-drankgreenpaint.self>Вау... Краска очень крепкая! Привкус соляной луковицы?</afflictiondescription.he-drankgreenpaint.self><!--Patch 13-->
+<afflictiondescription.he-drankgreenpaint.others>Пациент употребил зелёную краску. Выдают пятна вокруг рта.</afflictiondescription.he-drankgreenpaint.others><!--Patch 13-->
+<afflictionname.he-drankbluepaint>Под синей краской</afflictionname.he-drankbluepaint><!--Patch 13-->
+<afflictiondescription.he-drankbluepaint.self>А?! Что? Вода! Нет? Да... Эта вода тааакая странная на вкус!</afflictiondescription.he-drankbluepaint.self><!--Patch 13-->
+<afflictiondescription.he-drankbluepaint.others>Пациент употребил синюю краску. Выдают пятна вокруг рта.</afflictiondescription.he-drankbluepaint.others><!--Patch 13-->
+<afflictionname.he-drankblackpaint>Под чёрной краской</afflictionname.he-drankblackpaint><!--Patch 13-->
+<afflictiondescription.he-drankblackpaint.self>Бля! Это точно была не «Добрый Кола»! Хотя чем-то похоже...</afflictiondescription.he-drankblackpaint.self><!--Patch 13-->
+<afflictiondescription.he-drankblackpaint.others>Пациент употребил чёрную краску. Выдают пятна вокруг рта.</afflictiondescription.he-drankblackpaint.others><!--Patch 13-->
+<afflictionname.he-drankwhitepaint>Под белой краской</afflictionname.he-drankwhitepaint><!--Patch 13-->
+<afflictiondescription.he-drankwhitepaint.self>Мои зубы никогда не выглядели лучше! Самые сияющие на всей Европе!</afflictiondescription.he-drankwhitepaint.self><!--Patch 13-->
+<afflictiondescription.he-drankwhitepaint.others>Пациент употребил белую краску. Выдают пятна вокруг рта. Зато зубы выглядят отлично — лучшие, что вы видели.</afflictiondescription.he-drankwhitepaint.others><!--Patch 13-->
+
+<afflictionname.he-battlemusic>Боевая музыка</afflictionname.he-battlemusic><!--Patch 13-->
+<afflictiondescription.he-battlemusic>Эта музыка заводит. Чувствуете себя крепче, сильнее, быстрее и умелее с оружием. Готовы к бою!</afflictiondescription.he-battlemusic><!--Patch 13-->
+
+<afflictionname.he-apprenticechef>Повар-ученик</afflictionname.he-apprenticechef><!--Patch 17-->
+<afflictiondescription.he-apprenticechef>Готовы готовить под руководством опытного шефа.</afflictiondescription.he-apprenticechef><!--Patch 17-->
+<afflictionname.he-steadyhands>Твёрдая рука</afflictionname.he-steadyhands><!--Patch 17-->
+<afflictiondescription.he-steadyhands>Ваши руки твёрды, нервы крепки.</afflictiondescription.he-steadyhands><!--Patch 17-->
+<!-- MESSAGES -->
+<msg.pickup.interact>[E] Поднять</msg.pickup.interact><!--Patch 10-->
+<bottleprinter.infotext.bottle.regular>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ Обычных БУТЫЛОК.</bottleprinter.infotext.bottle.regular><!--Patch 10-->
+<bottleprinter.infotext.bottle.beer>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ ПИВНЫХ БУТЫЛОК.</bottleprinter.infotext.bottle.beer><!--Patch 10-->
+<bottleprinter.infotext.bottle.rum>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ БУТЫЛОК ДЛЯ РОМА.</bottleprinter.infotext.bottle.rum><!--Patch 10-->
+<bottleprinter.infotext.bottle.whiskey>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ БУТЫЛОК ДЛЯ ВИСКИ.</bottleprinter.infotext.bottle.whiskey><!--Patch 10-->
+<bottleprinter.infotext.bottle.halucinova>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ БУТЫЛОК ДЛЯ ГАЛЮЦИНОВЫ.</bottleprinter.infotext.bottle.halucinova><!--Patch 10-->
+<bottleprinter.infotext.jar>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ БАНОК.</bottleprinter.infotext.jar><!--Patch 10-->
+<bottleprinter.infotext.shaker>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ ШЕЙКЕРОВ.</bottleprinter.infotext.shaker><!--Patch 10-->
+<bottleprinter.infotext.cup>МАТЕРИАЛ ЗАГРУЖЕН\nЧЕРТЁЖ ЗАГРУЖЕН\nГОТОВО К ПЕЧАТИ ЧАШЕК.</bottleprinter.infotext.cup><!--Patch 13-->
+<bottleprinter.print>ПЕЧАТЬ</bottleprinter.print><!--Patch 10-->
+<bottleprinter.missingitem.blueprint>МАТЕРИАЛ ЗАГРУЖЕН\nОШИБКА: НЕ НАЙДЕН ЧЕРТЁЖ! ВСТАВЬТЕ ЧЕРТЁЖ.</bottleprinter.missingitem.blueprint><!--Patch 10-->
+<bottleprinter.missingitem.glassfragments>ЧЕРТЁЖ ЗАГРУЖЕН\nОШИБКА: НЕ НАЙДЕНЫ ОСКОЛКИ СТЕКЛА! ВСТАВЬТЕ ОСКОЛКИ СТЕКЛА.</bottleprinter.missingitem.glassfragments><!--Patch 10-->
+<bottleprinter.empty>ВСТАВЬТЕ ОСКОЛКИ СТЕКЛА И ВЫБЕРИТЕ ЧЕРТЁЖ ДЛЯ НАЧАЛА ИЗГОТОВЛЕНИЯ\n------------------------------------------\nВСТАВЬТЕ ЯЩИК В ВЫХОДНОЙ СЛОТ</bottleprinter.empty><!-- patch 18-->
+
+<bottleprinter.blueprintselection>Выбор модели чертежа</bottleprinter.blueprintselection>
+<bottleprinter.pickblueprint>Выбрать чертёж</bottleprinter.pickblueprint>
+
+
+<he-bottleprinter.output>Доступные печати:</he-bottleprinter.output><!--Patch 10-->
+
+<distiller.distill>ДИСТИЛЛИРОВАТЬ</distiller.distill><!--Patch 10-->
+<distiller.ethanol>ГОТОВО К ДИСТИЛЛЯЦИИ ЭТАНОЛА</distiller.ethanol><!--Patch 10-->
+<distiller.flourmixture>ГОТОВО К ДИСТИЛЛЯЦИИ СИНТЕТИЧЕСКОЙ МУЧНОЙ СМЕСИ</distiller.flourmixture><!--Patch 17-->
+<distiller.empty>ПОЖАЛУЙСТА, ВСТАВЬТЕ ОДНО ИЗ СЛЕДУЮЩЕГО:\n- ПАЧКА САХАРА</distiller.empty><!--Patch 17-->
+<distiller.missingitem.yeastshroom>САХАР ВСТАВЛЕН\nОШИБКА: НЕ НАЙДЕН ГРИБ-ДРОЖЖИ! ВСТАВЬТЕ 1× YEASTSHROOM.</distiller.missingitem.yeastshroom><!--Patch 17-->
+<distiller.missingitem.sulphuricacid>ПАЧКА ДРОБЛЁНЫХ СЕМЯН ВСТАВЛЕНА\nОШИБКА: НЕ НАЙДЕНА КИСЛОТА! ВСТАВЬТЕ 1× SULPHURIC ACID.</distiller.missingitem.sulphuricacid><!--Patch 17-->
+<he-distiller.output>Выход:</he-distiller.output><!--Patch 10-->
+
+<interaction.emptybottle>Опустошить бутылку</interaction.emptybottle><!--Patch 11-->
+<interaction.emptykeg>Опорожнить бочку</interaction.emptykeg><!--Patch 12-->
+<interaction.emptycup>Опустошить чашку</interaction.emptycup><!--Patch 13-->
+<interaction.refillcup>Наполнить чашку</interaction.refillcup><!--Patch 13-->
+<interaction.flushtoilet>Смыть в туалете</interaction.flushtoilet><!--Patch 13-->
+<interaction.breakbottle>Разбить бутылку</interaction.breakbottle><!--Patch 13-->
+<interaction.sleep>Спать | Проснуться</interaction.sleep><!--Patch 13-->
+<interaction.onoff>ВКЛ/ВЫКЛ</interaction.onoff><!--Patch 13-->
+<interaction.refill>Наполнить</interaction.refill><!--Patch 13-->
+<interaction.open>Открыть</interaction.open><!--Patch 13-->
+<!-- ROOM NAMES -->
+<roomname.kitchen>Кухня</roomname.kitchen><!--Patch 10-->
+<roomname.cafeteria>Столовая</roomname.cafeteria><!--Patch 10-->
+<roomname.brewery>Пивоварня</roomname.brewery><!--Patch 10-->
+<roomname.restroom>Туалет</roomname.restroom><!--Patch 13-->
+
+
+
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING
+
+ TODO: sort this text in proper places when done  -->
+
+<itemmsgnomeatleft>На этом трупе больше нет мяса...</itemmsgnomeatleft> 
+
+<!-- RESEARCH STATION -->
+<researchstation.crossbreed>Скрещивание</researchstation.crossbreed>
+<researchstation.crossbreed.infotext>Обнаружена возможная возможность скрещивания.</researchstation.crossbreed.infotext>
+<researchstation.crossbreed.missingitem>Недопустимая комбинация. Попробуйте другое растение.</researchstation.crossbreed.missingitem>
+
+<!-- fruits and plants -->
+<entityname.popnutleaf>Лист Поп-ореха</entityname.popnutleaf>
+<entitydescription.popnutleaf>Можно использовать для заваривания чая.</entitydescription.popnutleaf>
+<entityname.bubbleberryleaf>Лист Пузырягоды</entityname.bubbleberryleaf>
+<entitydescription.bananaseed>Можно использовать для заваривания чая.</entitydescription.bananaseed>
+
+<entityname.bananaseed>Ломтик банана</entityname.bananaseed>
+<entitydescription.bananaseed>Ломтик обычного европанского банана. Можно посадить.</entitydescription.bananaseed>
+
+<entityname.pomacco>Помакко</entityname.pomacco>
+<entitydescription.pomacco>Немного отвратительный, но затягивающий гибрид Взрывного Граната и табака. Успокаивает нервы и желудок.</entitydescription.pomacco>
+<entityname.pomaccoseed>Семя Помакко</entityname.pomaccoseed>
+<entitydescription.pomaccoseed>Генно-инженерное семя гибридного растения Помакко.</entitydescription.pomaccoseed>
+ 
+<entityname.saltgrenade>Салткгранат</entityname.saltgrenade>
+<entitydescription.saltgrenade>Солёный и сочный гибрид Взрывного Граната и соляной луковицы помогает при кровопотере при употреблении. Держите подальше от воды.</entitydescription.saltgrenade>
+<entityname.saltgrenadeseed>Семя Салткграната</entityname.saltgrenadeseed>
+<entitydescription.saltgrenadeseed>Генно-инженерное семя гибридного растения Салткгранат.</entitydescription.saltgrenadeseed>
+
+<entityname.raptorpom>Приманка для раптора</entityname.raptorpom>
+<entitydescription.raptorpom>Сочность Взрывного Граната и токсичность погибели раптора. Вонь привлекает монстров и сводит их с ума.</entitydescription.raptorpom>
+<entityname.raptorpomseed>Семя Приманки для раптора</entityname.raptorpomseed>
+<entitydescription.raptorpomseed>Генно-инженерное семя гибридного растения «Приманка для раптора».</entitydescription.raptorpomseed>
+
+<entityname.raptorbacco>Рапторник</entityname.raptorbacco>
+<entitydescription.raptorbacco>Соединяя токсичность погибели раптора и табака, этот психоактивный плод усиливает физические качества ценой рассудка.</entitydescription.raptorbacco>
+<entityname.raptorbaccoseed>Семя Рапторника</entityname.raptorbaccoseed>
+<entitydescription.raptorbaccoseed>Генно-инженерное семя гибридного растения Рапторник.</entitydescription.raptorbaccoseed>
+
+<entityname.bananacigar>Банановая сигара</entityname.bananacigar>
+<entitydescription.bananacigar>Полый банан с сухими табачными листьями, который можно курить напрямую. Среди клоунов вы выглядите круто, среди остальных — как клоун...</entitydescription.bananacigar>
+<entityname.bananacigarseed>Ломтик Бананакко</entityname.bananacigarseed>
+<entitydescription.bananacigarseed>Генно-инженерный ломтик гибридного растения Бананакко. Можно посадить.</entitydescription.bananacigarseed>  
+
+<entityname.bananagun>Бананолуковица</entityname.bananagun>
+<entitydescription.bananagun>Начинённая мощным натрием, бананолуковица выпускает град фруктовых осколков при сжатии.</entitydescription.bananagun>
+<entityname.bananagunseed>Ломтик Бананолуковицы</entityname.bananagunseed>
+<entitydescription.bananagunseed>Генно-инженерный ломтик гибридного растения Бананолуковица. Можно посадить.</entitydescription.bananagunseed>  
+
+<entityname.bananafuelrod>Радиоактивный банан</entityname.bananafuelrod>
+<entitydescription.bananafuelrod>Необъяснимо облучённый банан тёплый на ощупь и твёрдый на зуб. Клоуны используют их как аварийное топливо для реактора...</entitydescription.bananafuelrod>
+
+<fabricationheader.fertilizeringredient>Ингредиент удобрений</fabricationheader.fertilizeringredient>
+<fabricationdescription.fertilizeringredient>Органические отходы, пригодные для переработки в удобрения.</fabricationdescription.fertilizeringredient>
+<fabricationheader.tobaccoingredient>Табачный ингредиент</fabricationheader.tobaccoingredient>
+<fabricationdescription.tobaccoingredient>Растения, которые могут содержать табак.</fabricationdescription.tobaccoingredient>
+
+ 
+<!-- afflictions (needs) -->
+<afflictionname.mood>Стресс</afflictionname.mood>
+<afflictiondescription.mood.goodmood>Расслаблен и собран.</afflictiondescription.mood.goodmood>
+<afflictiondescription.mood.mediummood>Перерабатываете, но держитесь.</afflictiondescription.mood.mediummood>
+<afflictiondescription.mood.badmood>Злой европан.</afflictiondescription.mood.badmood>
+<afflictiondescription.mood.awfulmood>Угнетён и без мотивации.</afflictiondescription.mood.awfulmood>
+  
+<afflictionname.hygiene>Личная гигиена</afflictionname.hygiene>
+<afflictiondescription.hygiene>Не будь грязным европанцем.</afflictiondescription.hygiene>
+<afflictiondescription.hygiene.self.medium>Чувствуете себя грязным.</afflictiondescription.hygiene.self.medium>
+<afflictiondescription.hygiene.self.high>Пахнете плохо, кожа покрыта налётом.</afflictiondescription.hygiene.self.high>
+<afflictiondescription.hygiene.other.low>Пациент чист — насколько это возможно для моряка.</afflictiondescription.hygiene.other.low>
+<afflictiondescription.hygiene.other.medium>Пациенту не помешало бы хорошенько отмыться.</afflictiondescription.hygiene.other.medium>
+<afflictiondescription.hygiene.other.high>От пациента исходит зловоние из‑за отвратительной гигиены.</afflictiondescription.hygiene.other.high>
+
+<afflictionname.fatigue>Утомление</afflictionname.fatigue>
+<afflictiondescription.fatigue>Уставший работник — плохой работник.</afflictiondescription.fatigue>
+<afflictiondescription.fatigue.self.medium>Чувствуете физическое напряжение.</afflictiondescription.fatigue.self.medium>
+<afflictiondescription.fatigue.self.high>Можете заснуть в любой момент.</afflictiondescription.fatigue.self.high>
+<afflictiondescription.fatigue.other.low>Пациент бодр.</afflictiondescription.fatigue.other.low>
+<afflictiondescription.fatigue.other.medium>Пациенту не помешал бы отдых.</afflictiondescription.fatigue.other.medium>
+<afflictiondescription.fatigue.other.high>Пациент страдает от острого недосыпа.</afflictiondescription.fatigue.other.high>
+
+<!-- afflictions (foodbuffs) -->
+<afflictionname.he-calciumrich>Кальциевая диета</afflictionname.he-calciumrich>
+<afflictiondescription.he-calciumrich>Укрепляет кости и помогает пищеварению.</afflictiondescription.he-calciumrich>
+
+<afflictionname.he-fatrich>Жирная диета</afflictionname.he-fatrich>
+<afflictiondescription.he-fatrich>Полезные жиры смазывают суставы! Движетесь быстрее.</afflictiondescription.he-fatrich>
+
+<afflictionname.he-proteinrich>Белковая диета</afflictionname.he-proteinrich>
+<afflictiondescription.he-proteinrich>Наращивайте массу! Бьёте сильнее и чувствуете уверенность с оружием.</afflictiondescription.he-proteinrich>
+
+<afflictionname.he-vitaminrich>Витаминная диета</afflictionname.he-vitaminrich>
+<afflictiondescription.he-vitaminrich>Стимулирует эритроциты. Дольше задерживаете дыхание и меньше кровоточите.</afflictiondescription.he-vitaminrich>
+
+<afflictionname.he-sugarrich>Сахарная диета</afflictionname.he-sugarrich>
+<afflictiondescription.he-sugarrich>Сахарный прилив держит в тонусе. Быстрее учитесь, улучшается настроение и утомляемость. </afflictiondescription.he-sugarrich>
+
+<afflictionname.he-fiberrich>Клетчаточная диета</afflictionname.he-fiberrich>
+<afflictiondescription.he-fiberrich>Клетчатка помогает пищеварению и при болях в животе. </afflictiondescription.he-fiberrich>
+
+<afflictionname.he-watchermindsense>Чувства Смотрителя</afflictionname.he-watchermindsense>
+<afflictiondescription.he-watchermindsense>Соки Смотрителя текут по вам. Быстрее учитесь и видите скрытую правду мира.</afflictiondescription.he-watchermindsense>
+ 
+<afflictionname.he-tobaccoaddiction>Табачная зависимость</afflictionname.he-tobaccoaddiction>
+<afflictiondescription.he-tobaccoaddiction>Вредно для лёгких. Чувствуете одышку.</afflictiondescription.he-tobaccoaddiction>
+
+<afflictionname.caffeinated>Кофеиновый тонус</afflictionname.caffeinated>
+<afflictiondescription.caffeinated>Чувствуете меньшую усталость и немного быстрее двигаетесь.</afflictiondescription.caffeinated>
+
+<afflictionname.worminfection>Паразитические черви</afflictionname.worminfection>
+<afflictiondescription.worminfection>Вы съели плохую еду и чувствуете, как черви шевелятся в желудке. Лечение: антибиотики.</afflictiondescription.worminfection>
+<afflictionname.tapeworminfection>Ленточный червь</afflictionname.tapeworminfection>
+<afflictiondescription.tapeworminfection>Очень голодный ленточный червь поселился в кишках и делает вас более прожорливым. Лечение: антибиотики.</afflictiondescription.tapeworminfection>
+ 
+<!-- Fabrication tags -->
+<fabricationheader.sugary>Сладкий ингредиент.</fabricationheader.sugary>
+<fabricationdescription.sugary>Любой ингредиент со сладким вкусом.</fabricationdescription.sugary>
+<fabricationheader.salty>Солёный ингредиент.</fabricationheader.salty>
+<fabricationdescription.salty>Любой ингредиент с солёным вкусом.</fabricationdescription.salty>
+<fabricationheader.smallegg>Малое яйцо</fabricationheader.smallegg>
+<fabricationdescription.smallegg>Любое инопланетное яйцо малого калибра.</fabricationdescription.smallegg> 
+ 
+<!-- misc -->
+<entityname.money_5mk>5mk</entityname.money_5mk>
+<entitydescription.money_5mk>Добавляет 5mk на ваш счёт.</entitydescription.money_5mk>
+<entityname.money_25mk>25mk</entityname.money_25mk>
+<entitydescription.money_25mk>Добавляет 25mk на ваш счёт.</entitydescription.money_25mk>
+<entityname.money_50mk>50mk</entityname.money_50mk>
+<entitydescription.money_50mk>Добавляет 50mk на ваш счёт.</entitydescription.money_50mk>
+<entityname.money_75mk>75mk</entityname.money_75mk>
+<entitydescription.money_75mk>Добавляет 75mk на ваш счёт.</entitydescription.money_75mk>
+
+<entityname.shotgunshellsalt>Дробь с солью</entityname.shotgunshellsalt>
+<entitydescription.shotgunshellsalt>Кустарный патрон с доброй старой поваренной солью. Сыпет соль на рану.</entitydescription.shotgunshellsalt>
+
+<entityname.he-omelette>Омлет</entityname.he-omelette>
+<entitydescription.he-omelette>Богат белком и без личинок.</entitydescription.he-omelette>
+
+<entityname.he-popnutbubblesalad>Салат «Поп‑Ягода»</entityname.he-popnutbubblesalad>
+<entitydescription.he-popnutbubblesalad>Полезный и красочный фруктовый салат из Поп-ореха и Пузырягоды.</entitydescription.he-popnutbubblesalad>
+
+<entityname.he-huskcaviarnori>Икра Хаска с нори</entityname.he-huskcaviarnori>
+<entitydescription.he-huskcaviarnori>Яйца хаска нежно уложены на листья нори. Говорят, капля уксуса стерилизует паразита.</entitydescription.he-huskcaviarnori>
+
+<entityname.he-potcrawyum>Кастрюля «Крау-ям»</entityname.he-potcrawyum>
+<entitydescription.he-potcrawyum>Крахмалистый суп из отваренных частей Ползуна. Иногда всплывают глазные яблоки.</entitydescription.he-potcrawyum>
+<entityname.he-crawyumsoup>Крау-ям</entityname.he-crawyumsoup>
+<entitydescription.he-crawyumsoup>Крахмалистый суп из отваренных частей Ползуна. Иногда всплывают глазные яблоки.</entitydescription.he-crawyumsoup>
+
+<entityname.he-potbonebroth>Кастрюля костного бульона</entityname.he-potbonebroth>
+<entitydescription.he-potbonebroth>Мясо Молоха, сваренное на кости. Идеальное средство от похмелья.</entitydescription.he-potbonebroth>
+<entityname.he-bonebroth>Костный бульон</entityname.he-bonebroth>
+<entitydescription.he-bonebroth>Мясо Молоха, сваренное на кости. Идеальное средство от похмелья.</entitydescription.he-bonebroth>
+
+<entityname.he-potseaweedsoup>Кастрюля супа из водорослей</entityname.he-potseaweedsoup>
+<entitydescription.he-potseaweedsoup>Вегетарианский суп с варёными нори и семенами. Хорошо утоляет жажду.</entitydescription.he-potseaweedsoup>
+<entityname.he-seaweedsoup>Суп из водорослей</entityname.he-seaweedsoup>
+<entitydescription.he-seaweedsoup>Вегетарианский суп с варёными нори и семенами. Хорошо утоляет жажду.</entitydescription.he-seaweedsoup>
+
+<entityname.he-potfondue>Кастрюля фондю</entityname.he-potfondue>
+<entitydescription.he-potfondue>Сытное блюдо: макайте кубики хлеба в расплавленный сыр.</entitydescription.he-potfondue>
+<entityname.he-fondue>Фондю</entityname.he-fondue>
+<entitydescription.he-fondue>Сытное блюдо: макайте кубики хлеба в расплавленный сыр.</entitydescription.he-fondue>
+
+<entityname.he-mrepacket>ИРП — пакет</entityname.he-mrepacket>
+<entitydescription.he-mrepacket>Откройте, чтобы получить 2 порции ИРП.</entitydescription.he-mrepacket>
+<entityname.he-mreration>ИРП — сушёный рацион</entityname.he-mreration>
+<entitydescription.he-mreration>Готовая к употреблению еда непонятного состава, не портится. Просто добавьте воды и наслаждайтесь жидкой кашей.</entitydescription.he-mreration>
+
+<entityname.he-fermentedcabbage>Квашеная капуста</entityname.he-fermentedcabbage>
+<entitydescription.he-fermentedcabbage>Обесцвеченные и ферментированные листья приобретают особо кислый вкус. </entitydescription.he-fermentedcabbage>
+
+<entityname.he-fermentedraptorbane>Ферментированная погибель раптора</entityname.he-fermentedraptorbane>
+<entitydescription.he-fermentedraptorbane>При ферментации «погибель раптора» теряет токсичность, становится мягкой и горькой. Даже раптор бы съел. </entitydescription.he-fermentedraptorbane>
+
+<entityname.he-fermentedsaltbulb>Ферментированная соляная луковица</entityname.he-fermentedsaltbulb>
+<entitydescription.he-fermentedsaltbulb>В нужной среде бактерии разлагают соляные луковицы, убирая смертельную солёность и добавляя лёгкую кислинку.</entitydescription.he-fermentedsaltbulb>
+
+<entityname.he-molochefort>Молошфор</entityname.he-molochefort>
+<entitydescription.he-molochefort>Наполовину протухший голубой сыр Молоха, обработанный бактериями — на удивление не смертельно. Поднимает иммунитет.</entitydescription.he-molochefort>
+
+<entityname.he-sauerkraut>Кислая капуста</entityname.he-sauerkraut>
+<entitydescription.he-sauerkraut>Сосиски и квашеная капуста. Лучше всего под пиво и с йодлем.</entitydescription.he-sauerkraut>
+
+<entityname.he-molochtartare>Тартар из Молоха</entityname.he-molochtartare><!--Patch 18-->
+<entitydescription.he-molochtartare>Сырой фарш из Молоха с разбитым яйцом сверху.</entitydescription.he-molochtartare><!--Patch 18-->
+
+<entityname.he-preparedmolochsteak>Обжаренный стейк из Молоха</entityname.he-preparedmolochsteak>
+<entitydescription.he-preparedmolochsteak>Стейк из Молоха, обжаренный на самой большой сковороде. Портится без охлаждения.</entitydescription.he-preparedmolochsteak>
+
+<entityname.he-rawoffal>Сырые потроха</entityname.he-rawoffal>
+<entitydescription.he-rawoffal>Небольшие кусочки органного мяса. Портится без охлаждения.</entitydescription.he-rawoffal>
+
+<entityname.he-blender>Блендер</entityname.he-blender>
+<entitydescription.he-blender>Блендер для соков и смузи. Требует питание.</entitydescription.he-blender>
+
+<entityname.he-emptyglass>Пустой стакан</entityname.he-emptyglass>
+<entitydescription.he-emptyglass>Не забывайте пить воду.</entitydescription.he-emptyglass>
+<entityname.he-waterglass>Стакан воды</entityname.he-waterglass>
+<entitydescription.he-waterglass>Стакан свежей воды.</entitydescription.he-waterglass>
+<entityname.he-pomberryjuiceglass>Стакан сока «Пом‑Ягода»</entityname.he-pomberryjuiceglass>
+<entitydescription.he-pomberryjuiceglass>Стакан свежего сока из Взрывного Граната и Пузырягоды.</entitydescription.he-pomberryjuiceglass>
+
+<forcesay.eatingsound>*Ам-ням-ням...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Глусь...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Хмммф...*</forcesay.eatingsound>
+
+<displayname.boil>[itemname] (Кипятить)</displayname.boil>
+
+<interaction.emptypot>Опустошить кастрюлю</interaction.emptypot>
+
+<!-- Tools -->
+<entityname.he-spoon>Ложка</entityname.he-spoon>
+<entitydescription.he-spoon>Для зачерпывания.</entitydescription.he-spoon>
+<entityname.he-fork>Вилка</entityname.he-fork>
+<entitydescription.he-fork>Как маленький трезубец.</entitydescription.he-fork>
+<entityname.he-dirtyspoon>Грязная ложка</entityname.he-dirtyspoon>
+<entitydescription.he-dirtyspoon>Помойте в раковине.</entitydescription.he-dirtyspoon>
+<entityname.he-dirtyfork>Грязная вилка</entityname.he-dirtyfork>
+<entitydescription.he-dirtyfork>Помойте в раковине.</entitydescription.he-dirtyfork>
+
+<entityname.he-pot>Кастрюля</entityname.he-pot>
+<entitydescription.he-pot>Кастрюля из нержавеющей стали.</entitydescription.he-pot>
+<entityname.he-dirtypot>Грязная кастрюля</entityname.he-dirtypot>
+<entitydescription.he-dirtypot>Кастрюля покрыта налётом. Вымойте в раковине.</entitydescription.he-dirtypot>
+<entityname.he-potwithwater>Кастрюля с водой</entityname.he-potwithwater>
+<entitydescription.he-potwithwater>Кастрюля с водой.</entitydescription.he-potwithwater>
+
+<entityname.he-emptybowl>Миска</entityname.he-emptybowl>
+<entitydescription.he-emptybowl>Керамическая миска. Не уроните.</entitydescription.he-emptybowl>
+<entityname.he-dirtybowl>Грязная миска</entityname.he-dirtybowl>
+<entitydescription.he-dirtybowl>Миска в налёте. Вымойте в раковине.</entitydescription.he-dirtybowl>
+<entityname.he-emptyplate>Тарелка</entityname.he-emptyplate>
+<entitydescription.he-emptyplate>Керамическая тарелка. Не бросайте.</entitydescription.he-emptyplate>
+<entityname.he-dirtyplate>Грязная тарелка</entityname.he-dirtyplate>
+<entitydescription.he-dirtyplate>Тарелка в налёте. Вымойте в раковине.</entitydescription.he-dirtyplate>
+
+<entityname.he-pan>Сковорода</entityname.he-pan>
+<entitydescription.he-pan>Готовьте на плите, а при необходимости дисциплинируйте экипаж.</entitydescription.he-pan>
+
+<entityname.he-milkingtool>Экстрактор молока Молоха</entityname.he-milkingtool>
+<entitydescription.he-milkingtool>Инструмент с успокаивающим эффектом для извлечения молочных секреций из живых Молохов. Знаменит среди одиночных смотрителей маяков...</entitydescription.he-milkingtool>
+
+
+<!-- Fast food -->
+<entityname.he-rawfries>Сырая картошка фри</entityname.he-rawfries>
+<entitydescription.he-rawfries>Из взрывного граната — во фритюрницу.</entitydescription.he-rawfries>
+
+<entityname.he-fries>Картошка фри</entityname.he-fries>
+<entitydescription.he-fries>Хрустящая и солёная картошка фри из взрывного граната.</entitydescription.he-fries>
+
+<entityname.he-poutine>Путин</entityname.he-poutine>
+<entitydescription.he-poutine>Картошка фри с расплавленным сыром и густым соусом. Настолько же жирная, насколько и вкусная.</entitydescription.he-poutine>
+
+<entityname.he-rawnuggets>Куча сырых наггетсов</entityname.he-rawnuggets>
+<entitydescription.he-rawnuggets>Куча сырых наггетсов. Положите во фритюрницу.</entitydescription.he-rawnuggets>
+
+<entityname.he-cookednugget>Наггетс</entityname.he-cookednugget>
+<entitydescription.he-cookednugget>Мясная каша в кляре, обжаренная во фритюре.</entitydescription.he-cookednugget>
+
+<entityname.he-burger>Бургер</entityname.he-burger>
+<entitydescription.he-burger>Кулинарная классика — кирпичик космической колонизации. Говорят, здоровый европанец наполовину состоит из воды, наполовину — из бургера.</entitydescription.he-burger>
+
+<entityname.he-hotdog>Хот-дог</entityname.he-hotdog>
+<entitydescription.he-hotdog>Перекусите посмотрив на состязания грязевых рапторов.</entitydescription.he-hotdog>
+
+<entityname.he-pizza>Пицца</entityname.he-pizza>
+<entitydescription.he-pizza>Плоская основа из теста, хорошая порция сыра, кусочки мяса и, самое главное, сладкие кусочки фруктов в честь старого земного рецепта. Отрежьте себе кусок!</entitydescription.he-pizza>
+<entityname.he-pizzaslice>Кусок пиццы</entityname.he-pizzaslice>
+<entitydescription.he-pizzaslice>Ковабанга!</entitydescription.he-pizzaslice>
+
+<entityname.he-madnessmeal>Обед безумия</entityname.he-madnessmeal>
+<entitydescription.he-madnessmeal>Содержимое:\n - 1x Бургер\n - 8x Наггетсов\n - 1x Банка Колы Коувола\n - 1x Случайная игрушка</entitydescription.he-madnessmeal>
+
+<!-- other ingredients -->
+<entityname.he-rawsausage>Сырая колбаса</entityname.he-rawsausage>
+<entitydescription.he-rawsausage>Ожидайте худшего! Обжарьте на гриле или отварите. Портится без охлаждения.</entitydescription.he-rawsausage>
+<entityname.he-sausage>Обжаренная колбаса</entityname.he-sausage>
+<entitydescription.he-sausage>Ожидайте худшего!</entitydescription.he-sausage>
+<entityname.he-burnedsausage>Подгоревшая колбаса</entityname.he-burnedsausage>
+<entitydescription.he-burnedsausage>Обжарена до обугливания.</entitydescription.he-burnedsausage>
+
+<entityname.he-rawendwormsausage>Сырая колбаса из червя рока</entityname.he-rawendwormsausage>
+<entitydescription.he-rawendwormsausage>Ожидайте червохудшего! Обжарьте на гриле или отварите. Портится без охлаждения.</entitydescription.he-rawendwormsausage>
+<entityname.he-endwormsausage>Колбаса из червя рока</entityname.he-endwormsausage>
+<entitydescription.he-endwormsausage>Ожидайте червохудшего!</entitydescription.he-endwormsausage>
+<entityname.he-burnedendwormsausage>Подгоревшая колбаса</entityname.he-burnedendwormsausage>
+<entitydescription.he-burnedendwormsausage>Обжарена до обугливания.</entitydescription.he-burnedendwormsausage>
+
+<entityname.he-rawmeatpatty>Сырая мясная котлета</entityname.he-rawmeatpatty>
+<entitydescription.he-rawmeatpatty>Обжарьте на гриле. Портится без охлаждения.</entitydescription.he-rawmeatpatty>
+<entityname.he-meatpatty>Обжаренная мясная котлета</entityname.he-meatpatty>
+<entitydescription.he-meatpatty>Обжарена до совершенства.</entitydescription.he-meatpatty>
+<entityname.he-burnedmeatpatty>Подгоревшая мясная котлета</entityname.he-burnedmeatpatty>
+<entitydescription.he-burnedmeatpatty>Обжарена до обугливания.</entitydescription.he-burnedmeatpatty>
+
+<entityname.he-rawspinelingslices>Сырые кусочки спайнлинга</entityname.he-rawspinelingslices>
+<entitydescription.he-rawspinelingslices>Нарубленный спайнлинг. Обжарьте на гриле или на сковороде. Портится без охлаждения.</entitydescription.he-rawspinelingslices>
+<entityname.he-spinelingslices>Обжаренные кусочки спайнлинга</entityname.he-spinelingslices>
+<entitydescription.he-spinelingslices>Обжаренный спайнлинг. Портится без охлаждения.</entitydescription.he-spinelingslices>
+<entityname.he-burnedspinelingslices>Подгоревшие кусочки спайнлинга</entityname.he-burnedspinelingslices>
+<entitydescription.he-burnedspinelingslices>Обжарены до обугливания.</entitydescription.he-burnedspinelingslices>
+
+<entityname.he-proteinalgaecake>Белковый торт из водорослей</entityname.he-proteinalgaecake>
+<entitydescription.he-proteinalgaecake>В них водорослей намного больше, чем белка. Можно сказать, что торт — ложь.</entitydescription.he-proteinalgaecake>
+
+<!-- beverages -->
+<entityname.he-teamixbubbleberry>Чайная смесь «Пузырягода»</entityname.he-teamixbubbleberry>
+<entitydescription.he-teamixbubbleberry>Мелко нарубленные листья Пузырягоды. Заварите в чайнике.</entitydescription.he-teamixbubbleberry>
+
+<entityname.he-teamixpopnut>Чайная смесь «Поп-орех»</entityname.he-teamixpopnut>
+<entitydescription.he-teamixpopnut>Мелко нарубленные листья Поп-ореха. Заварите в чайнике.</entitydescription.he-teamixpopnut>
+
+<entityname.he-coffeemix>Кофейная смесь</entityname.he-coffeemix>
+<entitydescription.he-coffeemix>Кофе был настолько вызывающим привыкание на Земле, что его заменили более здоровой альтернативой — дроблёными табачными почками.</entitydescription.he-coffeemix>
+
+<entityname.he-chocolatemix>Шоколадная смесь</entityname.he-chocolatemix>
+<entitydescription.he-chocolatemix>Добавьте много молока и сахара, чтобы забыть о том, что на Европе кончилось настоящее какао полвека назад.</entitydescription.he-chocolatemix>
+
+<entityname.he-cupcoffee>Чашка кофе</entityname.he-cupcoffee>
+<entitydescription.he-cupcoffee>До горького конца. Предотвращает жажду.</entitydescription.he-cupcoffee>
+
+<entityname.he-mugcoffee>Кружка кофе</entityname.he-mugcoffee>
+<entitydescription.he-mugcoffee>До горького конца. Предотвращает жажду.</entitydescription.he-mugcoffee>
+
+<entityname.he-coffeetogo>Кофе навынос</entityname.he-coffeetogo>
+<entitydescription.he-coffeetogo>До горького конца. Предотвращает жажду.</entitydescription.he-coffeetogo>
+
+<entityname.he-cuphotchocolate>Чашка горячего шоколада</entityname.he-cuphotchocolate>
+<entitydescription.he-cuphotchocolate>Отогревает самых замёрзших моряков. Предотвращает жажду.</entitydescription.he-cuphotchocolate>
+
+<entityname.he-mughotchocolate>Кружка горячего шоколада</entityname.he-mughotchocolate>
+<entitydescription.he-mughotchocolate>Отогревает самых замёрзших моряков. Предотвращает жажду.</entitydescription.he-mughotchocolate>
+
+<!-- filets -->
+<entityname.he-rawcrawlerfilets>Сырое филе ползуна</entityname.he-rawcrawlerfilets>
+<entitydescription.he-rawcrawlerfilets>Кусочки мяса Ползуна. Портится без охлаждения.</entitydescription.he-rawcrawlerfilets>
+
+<entityname.he-preparedcrawlerfilets>Приготовленное филе ползуна</entityname.he-preparedcrawlerfilets>
+<entitydescription.he-preparedcrawlerfilets>Филе Ползуна, запечённое в духовке.</entitydescription.he-preparedcrawlerfilets>
+
+<entityname.he-rawhumanfilets>Сырое человеческое филе</entityname.he-rawhumanfilets>
+<entitydescription.he-rawhumanfilets>Кусочки человеческого мяса. Портится без охлаждения.</entitydescription.he-rawhumanfilets>
+
+<entityname.he-preparedhumanfilets>Приготовленное человеческое филе</entityname.he-preparedhumanfilets>
+<entitydescription.he-preparedhumanfilets>Человеческое филе, запечённое в духовке.</entitydescription.he-preparedhumanfilets>
+
+<entityname.he-rawthresherfilets>Сырое филе акульего</entityname.he-rawthresherfilets>
+<entitydescription.he-rawthresherfilets>Кусочки мяса Акульего. Портится без охлаждения.</entitydescription.he-rawthresherfilets>
+
+<entityname.he-preparedthresherfilets>Приготовленное филе акульего</entityname.he-preparedthresherfilets>
+<entitydescription.he-preparedthresherfilets>Филе Акульего, запечённое в духовке.</entitydescription.he-preparedthresherfilets>
+
+<entityname.he-rawhuskfilets>Сырой кусок хаска</entityname.he-rawhuskfilets>
+<entitydescription.he-rawhuskfilets>Отборные кусочки Хаска без жал. Портится без охлаждения.</entitydescription.he-rawhuskfilets>
+
+<entityname.he-preparedhuskfilets>Отварной кусок хаска</entityname.he-preparedhuskfilets>
+<entitydescription.he-preparedhuskfilets>Варите, пока не перестанет копошиться.</entitydescription.he-preparedhuskfilets>
+
+
+
+
+
+<!-- TRAITS -->
+
+<talentname.he-sleepyeuropan>Сонный европанец</talentname.he-sleepyeuropan>
+<talentdescription.he-sleepyeuropan>Обязательно отдыхайте в кровати время от времени.</talentdescription.he-sleepyeuropan>
+
+<talentname.he-moodyeuropan>Мугливый европанец</talentname.he-moodyeuropan>
+<talentdescription.he-moodyeuropan>Поддерживайте низкий уровень стресса, наслаждаясь любимыми продуктами и напитками.</talentdescription.he-moodyeuropan>
+
+<seleectpreferredfood>Выберите любимую еду:</seleectpreferredfood>
+<seleectpreferreddrink>Выберите любимый напиток:</seleectpreferreddrink>
+<randomizelikedfood>Случайно (выберет 2 случайные блюда)</randomizelikedfood>
+<randomizelikeddrink>Случайно (выберет 1 случайный напиток)</randomizelikeddrink>
+
+<talentname.he-trait_likes_friedfoods>Любит жареное</talentname.he-trait_likes_friedfoods>
+<talentdescription.he-trait_likes_burgers>Вы любите жареную еду.</talentdescription.he-trait_likes_burgers>
+<talentname.he-trait_likes_burgers>Любит бургеры</talentname.he-trait_likes_burgers>
+<talentdescription.he-trait_likes_hotdogs>Вы любите хот-доги.</talentdescription.he-trait_likes_hotdogs>
+<talentname.he-trait_likes_hotdogs>Любит хот-доги</talentname.he-trait_likes_hotdogs>
+<talentdescription.he-trait_likes_pizzas>Вы любите пиццу.</talentdescription.he-trait_likes_pizzas>
+<talentname.he-trait_likes_pizzas>Любит пиццу</talentname.he-trait_likes_pizzas>
+<talentdescription.he-trait_likes_filets>Вы любите филе.</talentdescription.he-trait_likes_filets>
+<talentname.he-trait_likes_filets>Любит филе</talentname.he-trait_likes_filets>
+<talentdescription.he-trait_likes_roasts>Вы любите жаркое.</talentdescription.he-trait_likes_roasts>
+<talentname.he-trait_likes_roasts>Любит жаркое</talentname.he-trait_likes_roasts>
+<talentdescription.he-trait_likes_sandwiches>Вы любите сэндвичи.</talentdescription.he-trait_likes_sandwiches>
+<talentname.he-trait_likes_sandwiches>Любит сэндвичи</talentname.he-trait_likes_sandwiches>
+<talentdescription.he-trait_likes_omelettes>Вы любите омлет.</talentdescription.he-trait_likes_omelettes>
+<talentname.he-trait_likes_omelettes>Любит омлет</talentname.he-trait_likes_omelettes>
+<talentdescription.he-trait_likes_soups>Вы любите суп.</talentdescription.he-trait_likes_soups>
+<talentname.he-trait_likes_soups>Любит суп</talentname.he-trait_likes_soups>
+<talentdescription.he-trait_likes_salads>Вы любите салат.</talentdescription.he-trait_likes_salads>
+<talentname.he-trait_likes_salads>Любит салат</talentname.he-trait_likes_salads>
+<talentdescription.he-trait_likes_sweets>Вы любите сладости.</talentdescription.he-trait_likes_sweets>
+<talentname.he-trait_likes_sweets>Любит сладости</talentname.he-trait_likes_sweets>
+
+<talentname.he-trait_likes_beer>Любит пиво</talentname.he-trait_likes_beer>
+<talentdescription.he-trait_likes_beer>Вы любите пить пиво.</talentdescription.he-trait_likes_beer>
+<talentname.he-trait_likes_rum>Любит ром</talentname.he-trait_likes_rum>
+<talentdescription.he-trait_likes_rum>Вы любите пить ром.</talentdescription.he-trait_likes_rum>
+<talentname.he-trait_likes_whiskey>Любит виски</talentname.he-trait_likes_whiskey>
+<talentdescription.he-trait_likes_whiskey>Вы любите пить виски.</talentdescription.he-trait_likes_whiskey>
+<talentname.he-trait_likes_tea>Любит чай</talentname.he-trait_likes_tea>
+<talentdescription.he-trait_likes_tea>Вы любите пить чай.</talentdescription.he-trait_likes_tea>
+<talentname.he-trait_likes_cola>Любит колу</talentname.he-trait_likes_cola>
+<talentdescription.he-trait_likes_cola>Вы любите пить колу.</talentdescription.he-trait_likes_cola>
+
+
+<eventtext.he-hirechef.freechef>«О, привет! Вы с той подлодки, что только что причалила, верно? Вам не нужен случайно новый повар? Я ищу работу, но на этой станции я не нужен.»</eventtext.he-hirechef.freechef>
+<eventtext.he-hirechef.expensivechef>«Эй, вы с той подлодки, что только что причалила, да? Эта помойка станции только что расторгла мой контракт, и я ищу экипаж.»</eventtext.he-hirechef.expensivechef>
+<eventtext.he-hirechef.howmuch>«Нам подошёл бы повар. Сколько это будет стоить?»</eventtext.he-hirechef.howmuch>
+<eventtext.he-hirechef.joinfree>«Я присоединюсь к вашему экипажу бесплатно! Просто вытащите меня отсюда, мне нужны только кухонные инструменты, и я начну готовить.»</eventtext.he-hirechef.joinfree>
+<eventtext.he-hirechef.joinexpensive>«Всего 1250mk. Это покроет мои игорные долги и будущие расходы на выпивку.»</eventtext.he-hirechef.joinexpensive>
+<eventtext.he-hirechef.welcome>«Добро пожаловать на борт.»</eventtext.he-hirechef.welcome>
+<eventtext.he-hirechef.thinkaboutit>«Я подумаю.»</eventtext.he-hirechef.thinkaboutit>
+<eventtext.he-hirechef.chefhired>«Отлично, пойду наточу ножи!»</eventtext.he-hirechef.chefhired>
+<eventtext.he-hirechef.givemoney>Дать 1250mk</eventtext.he-hirechef.givemoney>
+<eventtext.he-hirechef.nomoney>«Извините, но я не работаю бесплатно. Можете вернуться, когда сможете позволить себе мои услуги.»</eventtext.he-hirechef.nomoney>
+<eventtext.he-hirechef.nothiring>«Мы пока никого не нанимаем.»</eventtext.he-hirechef.nothiring>
+<eventtext.he-hirechef.changeyourmind>«Правда? Ох, я надеялся наконец-то убраться отсюда... Ну ладно, я буду здесь, если передумаете.»</eventtext.he-hirechef.changeyourmind>
+<eventtext.he-hirechef.nokitchen>«На нашей подлодке нет кухни.»</eventtext.he-hirechef.nokitchen>
+<eventtext.he-hirechef.buykitchen>«Очень жаль. Посмотрите в магазине, у них могут быть основы: разделочная доска, раковина...»</eventtext.he-hirechef.buykitchen>
+<eventtext.he-hirechef.nevermind>«Не стоит беспокоиться.»</eventtext.he-hirechef.nevermind>
+
+
+
+<entityname.he-enablesleep>Включить «Усталость и Сон»</entityname.he-enablesleep>
+<entitydescription.he-enablesleep>[RMB + E] ДОПОЛНИТЕЛЬНО: Включает состояние усталости для пользователя, требуя регулярного сна. Предупреждение: Нельзя отключить для текущего персонажа после включения.</entitydescription.he-enablesleep>
+<entityname.he-enablemood>Включить «Настроение и Стресс»</entityname.he-enablemood><!--Patch 18-->
+<entitydescription.he-enablemood>[RMB + E] ДОПОЛНИТЕЛЬНО: Включает состояние настроения для пользователя, вызывая стресс от работы. Снижайте стресс, употребляя любимую еду, напитки, наркотики или отдыхая. Предупреждение: Нельзя отключить для текущего персонажа после включения.</entitydescription.he-enablemood><!--Patch 18-->
+
+<entityname.sink>Раковина</entityname.sink><!--Patch 18-->
+<entitydescription.sink>Обеспечивает свежей водой и моет посуду.</entitydescription.sink><!--Patch 18-->
+
+<entityname.coffeemachine>Кофемашина</entityname.coffeemachine><!--Patch 18-->
+<entitydescription.coffeemachine>Варит чашечку вкусного кофе.</entitydescription.coffeemachine><!--Patch 18-->
+
+<entitydescription.he-emptycup>Пустая чашка для напитков. Можно бросить или наполнить горячим напитком.</entitydescription.he-emptycup><!--Patch 13-->
+<entityname.he-dirtycup>Грязная чашка</entityname.he-dirtycup>
+<entitydescription.he-dirtycup>Грязная. Помойте в раковине.</entitydescription.he-dirtycup>
+
+<entityname.he-emptymug>Пустая кружка</entityname.he-emptymug>
+<entitydescription.he-emptymug>Пустая кружка для напитков. Можно бросить или наполнить горячим напитком.</entitydescription.he-emptymug>
+<entityname.he-dirtymug>Грязная кружка</entityname.he-dirtymug>
+<entitydescription.he-dirtymug>Грязная. Помойте в раковине.</entitydescription.he-dirtymug>
+
+<entityname.he-emptycocktailglass>Пустой бокал для коктейля</entityname.he-emptycocktailglass>
+<entitydescription.he-emptycocktailglass>Нуждается в напитке.</entitydescription.he-emptycocktailglass>
+<entityname.he-dirtycocktailglass>Грязный бокал для коктейля</entityname.he-dirtycocktailglass>
+<entitydescription.dirtycocktailglass>Помойте в раковине.</entitydescription.dirtycocktailglass>
+
+
+
+<entityname.he-canopener>Открывалка</entityname.he-canopener>
+<entitydescription.he-canopener>Может открыть консервную банку.</entitydescription.he-canopener>
+
+<entityname.he-cannedcorn>Консервированная кукуруза</entityname.he-cannedcorn>
+<entitydescription.he-cannedcorn>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedcorn>
+<entityname.he-cannedcornopen>Консервированная кукуруза</entityname.he-cannedcornopen>
+<entitydescription.he-cannedcornopen>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedcornopen>
+<entityname.he-cannedmushrooms>Консервированные грибы</entityname.he-cannedmushrooms>
+<entitydescription.he-cannedmushrooms>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedmushrooms>
+<entityname.he-cannedmushroomssopen>Консервированные грибы</entityname.he-cannedmushroomssopen>
+<entitydescription.he-cannedmushroomssopen>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedmushroomssopen>
+<entityname.he-cannedpotatoes>Консервированная картошка</entityname.he-cannedpotatoes>
+<entitydescription.he-cannedpotatoes>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedpotatoes>
+<entityname.he-cannedpotatoesopen>Консервированная картошка</entityname.he-cannedpotatoesopen>
+<entitydescription.he-cannedpotatoesopen>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedpotatoesopen>
+<entityname.he-cannedtomatoes>Консервированные помидоры</entityname.he-cannedtomatoes>
+<entitydescription.he-cannedtomatoes>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedtomatoes>
+<entityname.he-cannedtomatoesopen>Консервированные помидоры</entityname.he-cannedtomatoesopen>
+<entitydescription.he-cannedtomatoesopen>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedtomatoesopen>
+
+<entityname.he-colaradiantbottle>Добрый Кола Радиант</entityname.he-colaradiantbottle>
+<entitydescription.he-colaradiantbottle>Ощущай перезаряд! Специальная ограниченная серия «Добрый Кола», обогащённая фульгурием.</entitydescription.he-colaradiantbottle>
+
+<entityname.he-dough>Тесто</entityname.he-dough>
+<entitydescription.he-dough>Комок теста, скатанный надеюсь чистыми руками.</entitydescription.he-dough>
+
+<entityname.he-fishtailcocktail>Коктейль «Рыбий хвост»</entityname.he-fishtailcocktail>
+<entitydescription.he-fishtailcocktail>Праздничный алкогольный напиток, чтобы забыть о проблемах.</entitydescription.he-fishtailcocktail>
+
+<entityname.he-nuggetpack>Набор наггетсов</entityname.he-nuggetpack>
+<entitydescription.he-nuggetpack>Коробка с 8 наггетсами.</entitydescription.he-nuggetpack>
+
+<entityname.he-seaweed>Морская трава</entityname.he-seaweed>
+<entitydescription.he-seaweed>Обычные водоросли, обитающие вокруг Европы.</entitydescription.he-seaweed>
+
+<entityname.he-shivcommon>Стеклянный стилет</entityname.he-shivcommon>
+<entitydescription.he-shivcommon>Острая разбитая бутылка, используемая как оружие в барных драках.</entitydescription.he-shivcommon>
+
+<entityname.he-whoopeecushion>Подушка-пукалка</entityname.he-whoopeecushion>
+<entitydescription.he-whoopeecushion>Поставьте друзей в неловкое положение!</entitydescription.he-whoopeecushion>
+
+<entityname.he-bagpipes>Волынка</entityname.he-bagpipes>
+<entitydescription.he-bagpipes>Древний земной инструмент, состоящий из надувного меха, мундштука и нескольких металлических труб, издающих душетрепещущие мелодии.</entitydescription.he-bagpipes>
+
+
+<itemmsgopenuse>[[Использовать]] Открыть</itemmsgopenuse>
+
+<!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
+<eventtext.manualenforceinfo>Список команд ручного принуждения потребностей
+(применяется только к ИГРОКАМ, не к ботам):
+
+‖color:gui.yellow‖manualenforcehungry‖end‖ (Голод и Жажда)
+
+‖color:gui.yellow‖manualenforcefilthy‖end‖ (Мочевой пузырь, Какашки, Гигиена)
+
+‖color:gui.yellow‖manualenforcesleepy‖end‖ (Усталость, Сон)
+
+‖color:gui.yellow‖manualenforcemoody‖end‖ (Стресс. НЕ РЕКОМЕНДУЕТСЯ. Лучше используйте шприц)
+
+‖color:gui.red‖manualenforceallneeds‖end‖ (всё вышеперечисленное)
+</eventtext.manualenforceinfo>
+
+</Override>
+</infotexts>
