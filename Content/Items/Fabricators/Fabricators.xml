@@ -1188,19 +1188,6 @@
         <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
       </DecorativeSprite>
       <Body width="91" height="158" density="15" bodytype="static" />
-      <Deconstruct time="10">
-        <Item identifier="aluminium" amount="2" />
-      </Deconstruct>
-      <!-- <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
-        <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="4" />
-        <RequiredItem identifier="plastic" amount="6" />
-        <RequiredItem identifier="fpgacircuit" amount="3" />
-      </Fabricate> -->
-      <Price baseprice="899" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
