@@ -973,9 +973,10 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <PowerTransfer canbeselected="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
+      <!-- Had to use RelayComponent with power_in and power_out instead of a PowerTransfer as it would otherwise not transfer power if connected to a relay or another kitchen counter/pantry -->
+      <RelayComponent canbeselected="false" allowingameediting="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" /> <!--minsize="350,160" maxsize="420,190"-->
-      </PowerTransfer>
+      </RelayComponent>
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -988,7 +989,8 @@
           <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
         <RequiredItem items="screwdriver" type="Equipped" />
-        <output name="power" displayname="connection.power" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="power_out" displayname="connection.powerout" />
       </ConnectionPanel>
     </Item>
     
@@ -1495,9 +1497,10 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <PowerTransfer canbeselected="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
+      <!-- Had to use RelayComponent with power_in and power_out instead of a PowerTransfer as it would otherwise not transfer power if connected to a relay or another kitchen counter/pantry -->
+      <RelayComponent canbeselected="false" allowingameediting="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" /> <!--minsize="350,160" maxsize="420,190"-->
-      </PowerTransfer>
+      </RelayComponent>
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -1510,7 +1513,8 @@
           <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
         <RequiredItem items="screwdriver" type="Equipped" />
-        <output name="power" displayname="connection.power" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="power_out" displayname="connection.powerout" />
       </ConnectionPanel>
     </Item>
     
