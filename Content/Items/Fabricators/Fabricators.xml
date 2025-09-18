@@ -1100,10 +1100,10 @@
           <Conditional voltage="gt 0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" loop="true" range="500" volume="4" />
         </StatusEffect> -->
-        <StatusEffect type="OnActive" target="This" IsOn="true" targetitemcomponent="Pump" setvalue="true">
+        <StatusEffect type="OnActive" target="This" IsActive="true" targetitemcomponent="ItemComponent" setvalue="true">
           <RequiredItem items="mix" type="Contained" />
           <RequiredItem items="tableware" type="Contained" />
-          <Conditional IsOn="false" />
+          <Conditional IsActive="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
         </StatusEffect>
       </Fabricator>
@@ -1112,19 +1112,19 @@
         <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
         <IsActiveConditional HasTag="coffeemachine" />
       </LightComponent>
-      <Pump IsOn="false" powerconsumption="0" maxflow="0" allowingameediting="false" canbeselected="false" comparison="And">
+      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" type="OnActive" loop="true" range="500" volume="4" />
-        <!-- while the pump is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" tags="stop" duration="0.1" comparison="OR">
+        <!-- while the ItemComponent is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" StatusEffectTags="stop" duration="0.1" comparison="OR">
           <Conditional voltage="lt 0.5" />
           <Conditional IsActive="false" />
         </StatusEffect>
-        <!-- while the pump is on, check for the "stop" status tag to play the end sound effect and turn the pump off -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" setvalue="true">
+        <!-- while the ItemComponent is on, check for the "stop" status tag to play the end sound effect and turn the ItemComponent off -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
           <Conditional HasStatusTag="eq stop" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
         </StatusEffect>
-      </Pump>
+      </ItemComponent>
       <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
       <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
