@@ -34,7 +34,7 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]03/09/2025
+[hr]17/09/2025
 
 [b]Changes:[/b] 
 [List]
@@ -46,7 +46,7 @@ Low:
 [List]
 [*] Fixed kitchen item placements on all included submarines
 [*] Fixed Moloch Steak recipe not using a pan
-[*] Fixed Fondue Pot not being craftable
+[*] Fixed Fondue Pot not being craftable + reduced cost
 [*] Fixed many recipes using Sea Weed Strip not being craftable
 [/List]
 
