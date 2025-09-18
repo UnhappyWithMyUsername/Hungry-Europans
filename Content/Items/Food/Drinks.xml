@@ -109,7 +109,7 @@
       </Deconstruct>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,704,64,64" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,389,18,43" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,389,18,43" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,389,18,43" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,389,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,389,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" waterdragcoefficient="1" />
@@ -160,7 +160,7 @@
       <Deconstruct time="2">
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
@@ -231,7 +231,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="486,212,27,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="Content/Items/Jobgear/TalentGear.png" sourcerect="486,212,27,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="Content/Items/Jobgear/TalentGear.png" sourcerect="486,212,27,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="Content/Items/Jobgear/TalentGear.png" sourcerect="486,212,27,66" depth="0.525" origin="0.5,0.85"  />
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirst" suitability="25" />
@@ -407,7 +407,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,0,27,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,0,27,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,0,27,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,0,27,66" depth="0.525" origin="0.5,0.85"  />
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirst" suitability="25" />
@@ -521,7 +521,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="54,0,27,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="54,0,27,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="54,0,27,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="54,0,27,66" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="82,0,27,66" depth="0.6" maxcondition="99" />
       <Body width="27" height="66" density="15" />
@@ -625,7 +625,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="361,2,31,64" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="361,2,31,64" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="361,0,31,66" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="361,0,31,66" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="393,0,31,66" depth="0.6" maxcondition="99" />
@@ -723,7 +723,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,1,16,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,1,16,65" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,0,16,66" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,0,16,66" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,0,16,66" depth="0.6" maxcondition="99" />
@@ -817,7 +817,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,67,16,65" depth="0.6" maxcondition="99" />
@@ -915,7 +915,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,133,16,65" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,133,16,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,133,16,65" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,133,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,133,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
@@ -1109,7 +1109,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,265,16,65" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,265,16,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,265,16,65" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,265,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,265,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
@@ -1256,7 +1256,7 @@
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="323,23,18,43" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="323,23,18,43" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="323,23,18,43" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="323,23,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="342,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
@@ -1310,7 +1310,7 @@
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,23,18,43" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,23,18,43" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,23,18,43" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,23,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
@@ -1368,7 +1368,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,67,16,65" depth="0.6" maxcondition="99" />
@@ -1458,7 +1458,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" origin="0.5,0.5" />-->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,67,16,65" depth="0.6" maxcondition="99" />
@@ -1555,7 +1555,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="424,133,25,65" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="424,133,25,65" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="424,133,25,65" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="424,133,25,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="450,133,25,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
@@ -1640,7 +1640,7 @@
     <!-- WIP glass of juice -->
     <Item name="Glass of PomBerry Juice" identifier="he-pomberryjuiceglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="4" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" depth="0.499" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
@@ -1720,7 +1720,7 @@
     <!-- WIP glass of water TODO: reenable fabrication -->
     <Item name="Water (glass)" identifier="he-waterglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="4" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.499" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1806,7 +1806,7 @@
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,20,66" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="264,0,20,66" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="90" />
@@ -1908,7 +1908,7 @@
     <Item name="" identifier="he-waterrum" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_rum,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
       <Price sold="false"/> 
       <Fabricate />
@@ -1965,7 +1965,7 @@
     <Item name="" identifier="he-waterwhiskey" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_whiskey,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  />
       <Price sold="false"/> 
       <Fabricate />
@@ -2022,7 +2022,7 @@
     <Item name="" identifier="he-waterhalucinova" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_halucinova,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
       <Price sold="false"/> 
       <Fabricate />
@@ -2079,7 +2079,7 @@
     <Item name="" identifier="he-waterbeer" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_beer,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
       <Price sold="false"/> 
       <Fabricate />
@@ -2142,7 +2142,7 @@
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,140,21,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,148,21,58" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,148,21,58" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,140,21,66" depth="0.525" origin="0.5,0.85" />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="5" />
@@ -2252,7 +2252,7 @@
  
     <Item name="" identifier="he-seawaterrum" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterrum,seawater,water,bottle,seawaterrefill_rum,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
@@ -2297,7 +2297,7 @@
    
     <Item name="" identifier="he-seawaterwhiskey" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterwhiskey,seawater,water,bottle,seawaterrefill_whiskey,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  /> 
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
@@ -2342,7 +2342,7 @@
 
     <Item name="" identifier="he-seawaterhalucinova" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterhalucinova,seawater,water,bottle,seawaterrefill_halucinova,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
@@ -2387,7 +2387,7 @@
        
     <Item name="" identifier="he-seawaterbeer" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterbeer,seawater,water,bottle,seawaterrefill_beer,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
@@ -2439,7 +2439,7 @@
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,140,21,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,148,21,58" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,148,21,58" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,140,21,66" depth="0.525" origin="0.5,0.85"  />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="5" />
@@ -2540,7 +2540,7 @@
 
     <Item name="" identifier="he-toiletwaterrum" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterrum,toiletwater,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
@@ -2581,7 +2581,7 @@
    
     <Item name="" identifier="he-toiletwaterwhiskey" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterwhiskey,toiletwater,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
@@ -2622,7 +2622,7 @@
 
     <Item name="" identifier="he-toiletwaterhalucinova" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterhalucinova,toiletwater,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
@@ -2663,7 +2663,7 @@
        
     <Item name="" identifier="he-toiletwaterbeer" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterbeer,toiletwater,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
@@ -3422,7 +3422,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" origin="0.5,0.5" />
+      <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="222,0,21,66" depth="0.6" maxcondition="99" />
