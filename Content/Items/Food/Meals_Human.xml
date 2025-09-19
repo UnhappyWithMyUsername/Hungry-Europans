@@ -27,8 +27,6 @@
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
           <Conditional hunger="gt 1" targetcontainer="true" />
-
-          <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-cannibalism" amount="0.2" />
@@ -99,7 +97,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-humanmeatchunk" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-humanmeatchunk" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
@@ -113,8 +111,6 @@
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional hunger="gt 1" targetcontainer="true" />
-
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />

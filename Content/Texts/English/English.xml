@@ -10,7 +10,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!-- TODO: ANNOTATE EVERY TEXT CHANGE WHEN MERGING THE UPDATE FOR THE PROPER PATCH NUMBER, I DID NOT ADD A SINGLE PATCH NOT ANYWHERE, SO I WILL DO IT ON EVERY LINE THAT WAS ADDED OR MODIFIED IN THE DIFF INSTEAD -->
 
 <!-- /////// //////// -->
-<!-- LATEST PATCH: 18 -->
+<!-- LATEST PATCH: 19 -->
 <!-- /////// //////// -->
 
 <infotexts language="English" nowhitespace="false" translatedname="English">
@@ -483,16 +483,50 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-refrigerator>Refrigerator</entityname.he-refrigerator>
 <entitydescription.he-refrigerator>Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigerator><!--Changed as of Patch 10-->
 
-<entityname.he-stove>Stove</entityname.he-stove>
-<entitydescription.he-stove>Used for cooking. Needs power.</entitydescription.he-stove>
-<entityname.he-oven>Oven</entityname.he-oven>
-<entitydescription.he-oven>Used for baking. Needs power.</entitydescription.he-oven>
-<entityname.he-cuttingboard>Cutting Board</entityname.he-cuttingboard>
-<entitydescription.he-cuttingboard>Used to prepare ingredients.</entitydescription.he-cuttingboard>
-<entityname.he-fryer>Fryer</entityname.he-fryer><!--Patch 10-->
-<entitydescription.he-fryer>Used for frying stuff. Needs power.</entitydescription.he-fryer><!--Patch 10-->
-<entityname.he-electricgrill>Electric Grill</entityname.he-electricgrill><!--Patch 10-->
-<entitydescription.he-electricgrill>Used for grilling meat. Needs power.</entitydescription.he-electricgrill><!--Patch 10-->
+
+<entityname.sink_installation>Sink (Installation)</entityname.sink_installation><!--Patch 19-->
+<entitydescription.sink_installation>Provides fresh water and cleans tableware.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.sink_installation><!--Patch 19-->
+<entityname.sink>Sink</entityname.sink><!--Patch 19-->
+<entitydescription.sink>Provides fresh water and cleans tableware.</entitydescription.sink><!--Patch 19-->
+
+<entityname.coffeemachine_installation>Coffee Machine (Installation)</entityname.coffeemachine_installation><!--Patch 19-->
+<entitydescription.coffeemachine_installation>Brews a nice cup of coffee.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.coffeemachine_installation><!--Patch 18-->
+<entityname.coffeemachine>Coffee Machine</entityname.coffeemachine><!--Patch 19-->
+<entitydescription.coffeemachine>Brews a nice cup of coffee.</entitydescription.coffeemachine><!--Patch 19-->
+
+<entityname.he-stove_installation>Stove (Installation)</entityname.he-stove_installation><!--Patch 19-->
+<entitydescription.he-stove_installation>Used for cooking. Needs power.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.he-stove_installation><!--Patch 19-->
+<entityname.he-stove>Stove</entityname.he-stove><!--Patch 19-->
+<entitydescription.he-stove>Used for cooking. Needs power.</entitydescription.he-stove><!--Patch 19-->
+
+<entityname.he-oven_installation>Oven (Installation)</entityname.he-oven_installation><!--Patch 19-->
+<entitydescription.he-oven_installation>Used for baking. Needs power.\n- Needs to be installed inside a kitchen counter.</entitydescription.he-oven_installation><!--Patch 19-->
+<entityname.he-oven>Oven</entityname.he-oven><!--Patch 19-->
+<entitydescription.he-oven>Used for baking. Needs power.</entitydescription.he-oven><!--Patch 19-->
+
+<entityname.he-cuttingboard_installation>Cutting Board (Installation)</entityname.he-cuttingboard_installation><!--Patch 19-->
+<entitydescription.he-cuttingboard_installation>Used to prepare ingredients.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.he-cuttingboard_installation><!--Patch 19-->
+<entityname.he-cuttingboard>Cutting Board</entityname.he-cuttingboard><!--Patch 19-->
+<entitydescription.he-cuttingboard>Used to prepare ingredients.</entitydescription.he-cuttingboard><!--Patch 19-->
+
+<entityname.he-fryer_installation>Fryer (Installation)</entityname.he-fryer_installation><!--Patch 19-->
+<entitydescription.he-fryer_installation>Used for frying stuff. Needs power.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.he-fryer_installation><!--Patch 19-->
+<entityname.he-fryer>Fryer</entityname.he-fryer><!--Patch 19-->
+<entitydescription.he-fryer>Used for frying stuff. Needs power.</entitydescription.he-fryer><!--Patch 19-->
+
+<entityname.he-electricgrill_installation>Electric Grill (Installation)</entityname.he-electricgrill_installation><!--Patch 19-->
+<entitydescription.he-electricgrill_installation>Used for grilling meat. Needs power.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.he-electricgrill_installation><!--Patch 19-->
+<entityname.he-electricgrill>Electric Grill</entityname.he-electricgrill><!--Patch 19-->
+<entitydescription.he-electricgrill>Used for grilling meat. Needs power.</entitydescription.he-electricgrill><!--Patch 19-->
+
+<entityname.he-blender_installation>Blender (Installation)</entityname.he-blender_installation><!--Patch 19-->
+<entitydescription.he-blender_installation>A blender that can be used for juices and smoothies. Requires Power.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.he-blender_installation><!--Patch 19-->
+<entityname.he-blender>Blender</entityname.he-blender>
+<entitydescription.he-blender>A blender that can be used for juices and smoothies. Requires Power.</entitydescription.he-blender>
+
+<entityname.installationblocker>Installation Blocker</entityname.installationblocker>
+<entitydescription.installationblocker>Blocks the slot it is installed in to prevent installing or removing other kitchen installations.</entitydescription.installationblocker>
+
 <entityname.he-distiller>Disti-Fermenter</entityname.he-distiller><!--Patch 18-->
 <entitydescription.he-distiller>Can be used to either distill ethanol or ferment foods using a natural adjuvant. Needs power.</entitydescription.he-distiller><!--Patch 18-->
 <entityname.he-brewkettle>Brewing Kettle</entityname.he-brewkettle><!--Patch 10-->
@@ -854,6 +888,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <interaction.onoff>ON/OFF</interaction.onoff><!--Patch 13-->
 <interaction.refill>Refill</interaction.refill><!--Patch 13-->
 <interaction.open>Open</interaction.open><!--Patch 13-->
+<interaction.disassemble>Disassemble</interaction.disassemble><!--Patch 19-->
 <!-- ROOM NAMES -->
 <roomname.kitchen>Kitchen</roomname.kitchen><!--Patch 10-->
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
@@ -1061,9 +1096,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.he-rawoffal>Raw Offal</entityname.he-rawoffal>
 <entitydescription.he-rawoffal>Small bits and pieces of organ meats. Spoils if not refrigerated.</entitydescription.he-rawoffal>
-
-<entityname.he-blender>Blender</entityname.he-blender>
-<entitydescription.he-blender>A blender that can be used for juices and smoothies. Requires Power.</entitydescription.he-blender>
 
 <entityname.he-emptyglass>Empty Glass</entityname.he-emptyglass>
 <entitydescription.he-emptyglass>Stay hydrated.</entitydescription.he-emptyglass>
@@ -1301,12 +1333,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-enablesleep>[RMB + E] EXTRA OPTIONAL: Enables tiredness affliction for the user, causing them to have to sleep regularly. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enablesleep>
 <entityname.he-enablemood>Enable Moody Europan</entityname.he-enablemood><!--Patch 18-->
 <entitydescription.he-enablemood>[RMB + E] EXTRA OPTIONAL: Enables the mood affliction for the user, causing them to get stressed from working. Reduce your stress by eating food of choice, drinking, using drugs or relaxing. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enablemood><!--Patch 18-->
-
-<entityname.sink>Sink</entityname.sink><!--Patch 18-->
-<entitydescription.sink>Provides fresh water and cleans tableware.</entitydescription.sink><!--Patch 18-->
-
-<entityname.coffeemachine>Coffee Machine</entityname.coffeemachine><!--Patch 18-->
-<entitydescription.coffeemachine>Brews a nice cup of coffee.</entitydescription.coffeemachine><!--Patch 18-->
 
 <entitydescription.he-emptycup>An empty cup for drinks. Can be thrown or filled with a hot beverage.</entitydescription.he-emptycup><!--Patch 13-->
 <entityname.he-dirtycup>Dirty Cup</entityname.he-dirtycup>

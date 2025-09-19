@@ -118,9 +118,13 @@
         <StatusEffect type="OnActive" target="Contained" Condition="0.025" interval="1" disabledeltatime="true" targetslot="0">
           <RequiredItem identifier="fulguriumbatterycell" targetslot="0" type="Contained" />
         </StatusEffect>
-        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items -->
-        <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="activecooling" duration="0.1">
+        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items | also set the tag "refrigerated" for Neurotrauma organ compatibility -->
+        <StatusEffect type="OnActive" target="This" disabledeltatime="false" StatusEffectTags="activecooling" SetTags="refrigerated" duration="0.1">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Cooler.ogg" type="OnActive" range="300" loop="true" volume="3" />
+        </StatusEffect>
+        <!-- When running out of power, replace the previously set "refrigerated" tag with "nonrefrigerated" to allow Neurotrauma organs to start rotting -->
+        <StatusEffect type="Always" target="This" disabledeltatime="false" SetTags="nonrefrigerated" setvalue="true" interval="5">
+          <Conditional HasStatusTag="neq activecooling" />
         </StatusEffect>
       </LightComponent>
       <ItemContainer capacity="0" canbeselected="true" selectkey="Use" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0" keepopenwhenequipped="false" movableframe="true" msg="itemmsgopenuse" >
@@ -131,7 +135,7 @@
           </Containable>
         </SubContainer>
         <SubContainer capacity="19">
-          <Containable items="canspoil,canexpire,meat,fooditem,drinkitem,mobilebattery,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+          <Containable items="canspoil,canexpire,meat,fooditem,drinkitem,mobilebattery,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,organ" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
         </SubContainer>
       </ItemContainer>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
@@ -320,7 +324,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Kitchen Counter" identifier="he-kitchencounter" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
+    <Item name="Kitchen Counter" identifier="he-kitchencounter" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" GrabWhenSelected="true" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,299" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="390,687,493,185" depth="0.81" scale="1" offset="0,-45" origin="0.5,0.5"/>
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.796" origin="0.049,-0.022">
@@ -333,16 +337,122 @@
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
+
+        <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
+        <!-- OVEN | check if there is a pre-placed oven -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_oven" duration="0.5" oneshot="true">
+          <Conditional HasTag="oven_installed" />
+        </StatusEffect>
+        <!-- spawn the oven installation item inside of the kitchen counter, if a pre-placed oven was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_oven" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-oven_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- STOVE | check if there is a pre-placed stove -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_stove" duration="0.5" oneshot="true">
+          <Conditional HasTag="stove_installed" />
+        </StatusEffect>
+        <!-- spawn the stove installation item inside of the kitchen counter, if a pre-placed stove was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_stove" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-stove_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+        
+        <!-- ELECTRIC GRILL | check if there is a pre-placed electric grill -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_electricgrill" duration="0.5" oneshot="true">
+          <Conditional HasTag="electricgrill_installed" />
+        </StatusEffect>
+        <!-- spawn the electric grill installation item inside of the kitchen counter, if a pre-placed electric grill was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_electricgrill" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-electricgrill_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- SINK | check if there is a pre-placed sink -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_sink" duration="0.5" oneshot="true">
+          <Conditional HasTag="sink_installed" />
+        </StatusEffect>
+        <!-- spawn the sink installation item inside of the kitchen counter, if a pre-placed sink was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_sink" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="sink_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- CUTTING BOARD | check if there is a pre-placed cutting board -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_cuttingboard" duration="0.5" oneshot="true">
+          <Conditional HasTag="cuttingboard_installed" />
+        </StatusEffect>
+        <!-- spawn the cutting board installation item inside of the kitchen counter, if a pre-placed cutting board was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_cuttingboard" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-cuttingboard_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- FRYER | check if there is a pre-placed fryer -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_fryer" duration="0.5" oneshot="true">
+          <Conditional HasTag="fryer_installed" />
+        </StatusEffect>
+        <!-- spawn the fryer installation item inside of the kitchen counter, if a pre-placed fryer was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_fryer" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-fryer_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- COFFEE MACHINE | check if there is a pre-placed coffee machine -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_coffeemachine" duration="0.5" oneshot="true">
+          <Conditional HasTag="coffeemachine_installed" />
+        </StatusEffect>
+        <!-- spawn the coffee machine installation item inside of the kitchen counter, if a pre-placed coffee machine was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_coffeemachine" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="coffeemachine_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- BLENDER | check if there is a pre-placed blender -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_blender" duration="0.5" oneshot="true">
+          <Conditional HasTag="blender_installed" />
+        </StatusEffect>
+        <!-- spawn the blender installation item inside of the kitchen counter, if a pre-placed blender was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_blender" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-blender_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- CHECK COMPLETED | apply the "check_completed" tag to the container after running the above StatusEffects to prevent a rare item duplication from StatusEffects triggering when they shouldn't -->
+        <StatusEffect type="Always" target="This" SetTags="check_completed" setvalue="true" oneshot="true" />
       </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
+        <!-- unlock inventory again when interacting with the cabinet while it is attached -->
+        <StatusEffect type="OnActive" target="This" comparison="And" setvalue="true" drawinventory="true" allowaccess="true" allowdraganddrop="true" interval="1.1">
+          <Conditional attached="true" />
+          <Conditional drawinventory="false" />
+          <Conditional HasStatusTag="neq detaching" />
+        </StatusEffect>
         <!-- play an opening sound when starting to interact with the container -->
         <StatusEffect type="OnActive" target="this" forceplaysounds="true">
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
-        <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
+        <StatusEffect type="OnActive" target="This" StatusEffectTags="opened" duration="0.1" />
         <!-- turn the ItemComponent component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="true" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
@@ -361,14 +471,452 @@
         <RequiredItem identifier="steel" amount="6" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <ItemContainer capacity="20" canbeselected="true" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
-        <!--Water Icon-->
-        <!-- <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" /> -->
-        <!--PickUp Icon-->
-        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" /> -->
+        <!-- Icon - Oven -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="20" sourcerect="171,938,85,85" origin="0.5,0.5" />
+        <!-- Icon - Stove/Electric Grill -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="21" sourcerect="1,853,85,85" origin="0.5,0.5" />
+        <!-- Icon - Sink -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="22" sourcerect="1,938,85,85" origin="0.5,0.5" />
+        <!-- Icon - Cutting Board -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="23" sourcerect="341,938,85,85" origin="0.5,0.5" />
+        <!-- Icon - Fryer/Coffee Machine/Blender -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="24" sourcerect="256,853,85,85" origin="0.5,0.5" />
         <!--Regular Slots-->
         <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
+        <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
+        <!-- oven -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="he-oven_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_oven" />
+              <Conditional HasTag="oven" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="77,-27" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_oven" />
+              <Conditional HasTag="oven" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_oven" />
+              <Conditional HasTag="oven" targetcontaineditem="true" />
+              <SpawnItem identifier="he-oven" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="77,-27" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_oven" />
+              <Conditional HasTag="oven" targetcontaineditem="true" />
+              <SpawnItem identifier="he-oven" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="oven_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- stove/grill -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="he-stove_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-79,29" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="76,29" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-79,29" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <SpawnItem identifier="he-stove" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="76,29" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <SpawnItem identifier="he-stove" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="he-electricgrill_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-79,43" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="79,43" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-79,43" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <SpawnItem identifier="he-electricgrill" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="79,43" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <SpawnItem identifier="he-electricgrill" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- sink -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="sink_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-6,48" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_sink" />
+              <Conditional HasTag="sink" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="6,48" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_sink" />
+              <Conditional HasTag="sink" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-6,48" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_sink" />
+              <Conditional HasTag="sink" targetcontaineditem="true" />
+              <SpawnItem identifier="sink" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="6,48" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_sink" />
+              <Conditional HasTag="sink" targetcontaineditem="true" />
+              <SpawnItem identifier="sink" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="sink_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- cutting board -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="he-cuttingboard_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="56,45" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-56,45" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="56,45" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <SpawnItem identifier="he-cuttingboard" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-56,45" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <SpawnItem identifier="he-cuttingboard" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- fryer/coffee machine/blender -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="he-fryer_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <SpawnItem identifier="he-fryer" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,53" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <SpawnItem identifier="he-fryer" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="coffeemachine_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="105,69" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <SpawnItem identifier="coffeemachine" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,69" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <SpawnItem identifier="coffeemachine" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="he-blender_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="105,58" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <SpawnItem identifier="he-blender" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,58" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <SpawnItem identifier="he-blender" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="blender_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
         <!--Toolbelt/Backpack Slots-->
         <SubContainer capacity="3" maxstacksize="1">
           <SlotIcon texture="Content/UI/CommandUIAtlas.png" sourcerect="639,926,128,80" origin="0.5,0.5" />
@@ -376,20 +924,59 @@
         </SubContainer>
       </ItemContainer>
       <Body width="507" height="300" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-50" handle1="-220,60" handle2="-220,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
+      <Holdable canbepicked="false" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-50" handle1="-220,60" handle2="-220,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
+        <Upgrade gameversion="2.0.0.0" canbepicked="false" />
         <RequiredItem items="wrench" type="Equipped" />
-        <StatusEffect target="This" type="OnContained">
-          <Conditional attached="false" targetitemcomponentname="Holdable" />
+        <!-- drop all contained items and block inventory access -->
+        <StatusEffect target="This" type="OnPicked" setvalue="true" drawinventory="false" allowaccess="false" allowdraganddrop="false">
+          <Conditional drawinventory="true" />
           <DropContainedItems />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
       </Holdable>
-      <PowerTransfer canbeselected="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
+      <!-- Item gets detached over time via button press when holding a wrench -->
+      <CustomInterface canbeselected="true" Selectkey="Action" drawhudwhenequipped="false">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.10"/>
+        <RequiredItem items="wrench" type="Equipped" />
+        <Button text="interaction.disassemble">
+          <!-- Disable access to the item's inventory -->
+          <StatusEffect type="OnUse" target="This" drawinventory="false" allowaccess="false" allowdraganddrop="false" setvalue="true" />
+          <!-- Drop the first upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="20" delay="1.5" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Drop the second upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="21" delay="3.0" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Drop the third upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="22" delay="4.5" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Drop the fourth upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="23" delay="6.0" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Drop the fifth upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="24" delay="7.5" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Play a sound loop for the entire disassemble duration -->
+          <StatusEffect type="OnUse" target="This" StatusEffectTags="detaching" duration="10" stackable="false">
+            <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="0.75" selectionmode="Random" />
+          </StatusEffect>
+          <!-- Detach the item by dropping all its content, spawning in a copy and removing the original -->
+          <StatusEffect type="OnUse" target="This" delay="10" stackable="false">
+            <DropContainedItems />
+            <SpawnItem identifier="he-kitchencounter" spawnposition="This" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+      <!-- Had to use RelayComponent with power_in and power_out instead of a PowerTransfer as it would otherwise not transfer power if connected to a relay or another kitchen counter/pantry -->
+      <RelayComponent canbeselected="false" allowingameediting="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" /> <!--minsize="350,160" maxsize="420,190"-->
-        <StatusEffect type="InWater" target="This" condition="-0.25">
-          <Conditional voltage="gt 0.1" />
-        </StatusEffect>
-      </PowerTransfer>
+      </RelayComponent>
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -402,11 +989,12 @@
           <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
         <RequiredItem items="screwdriver" type="Equipped" />
-        <output name="power" displayname="connection.power" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="power_out" displayname="connection.powerout" />
       </ConnectionPanel>
     </Item>
     
-    <Item name="Kitchen Pantry" identifier="he-kitchencounter2" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="true" isshootable="true" scale="0.5">
+    <Item name="Kitchen Pantry" identifier="he-kitchencounter2" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="true" isshootable="true" scale="0.5" GrabWhenSelected="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,301,405,204" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.795" origin="0.21,0.275">
         <Conditional HasStatusTag="opened" />
@@ -421,16 +1009,98 @@
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
+
+        <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
+        <!-- STOVE | check if there is a pre-placed stove -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_stove" duration="0.5" oneshot="true">
+          <Conditional HasTag="stove_installed" />
+        </StatusEffect>
+        <!-- spawn the stove installation item inside of the kitchen counter, if a pre-placed stove was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_stove" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-stove_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+        
+        <!-- ELECTRIC GRILL | check if there is a pre-placed electric grill -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_electricgrill" duration="0.5" oneshot="true">
+          <Conditional HasTag="electricgrill_installed" />
+        </StatusEffect>
+        <!-- spawn the electric grill installation item inside of the kitchen counter, if a pre-placed electric grill was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_electricgrill" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-electricgrill_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- CUTTING BOARD | check if there is a pre-placed cutting board -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_cuttingboard" duration="0.5" oneshot="true">
+          <Conditional HasTag="cuttingboard_installed" />
+        </StatusEffect>
+        <!-- spawn the cutting board installation item inside of the kitchen counter, if a pre-placed cutting board was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_cuttingboard" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-cuttingboard_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- FRYER | check if there is a pre-placed fryer -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_fryer" duration="0.5" oneshot="true">
+          <Conditional HasTag="fryer_installed" />
+        </StatusEffect>
+        <!-- spawn the fryer installation item inside of the kitchen counter, if a pre-placed fryer was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_fryer" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-fryer_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- COFFEE MACHINE | check if there is a pre-placed coffee machine -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_coffeemachine" duration="0.5" oneshot="true">
+          <Conditional HasTag="coffeemachine_installed" />
+        </StatusEffect>
+        <!-- spawn the coffee machine installation item inside of the kitchen counter, if a pre-placed coffee machine was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_coffeemachine" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="coffeemachine_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- BLENDER | check if there is a pre-placed blender -->
+        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_blender" duration="0.5" oneshot="true">
+          <Conditional HasTag="blender_installed" />
+        </StatusEffect>
+        <!-- spawn the blender installation item inside of the kitchen counter, if a pre-placed blender was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_blender" />
+          <Conditional HasTag="neq check_completed" />
+          <Conditional attached="true" />
+          <SpawnItem identifier="he-blender_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- CHECK COMPLETED | apply the "check_completed" tag to the container after running the above StatusEffects to prevent a rare item duplication from StatusEffects triggering when they shouldn't -->
+        <StatusEffect type="Always" target="This" SetTags="check_completed" setvalue="true" oneshot="true" />
       </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
+        <!-- unlock inventory again when interacting with the cabinet while it is attached -->
+        <StatusEffect type="OnActive" target="This" comparison="And" setvalue="true" drawinventory="true" allowaccess="true" allowdraganddrop="true" interval="1.1">
+          <Conditional attached="true" />
+          <Conditional drawinventory="false" />
+          <Conditional HasStatusTag="neq detaching" />
+        </StatusEffect>
         <!-- play an opening sound when starting to interact with the container -->
         <StatusEffect type="OnActive" target="this" forceplaysounds="true">
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
-        <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
+        <StatusEffect type="OnActive" target="This" StatusEffectTags="opened" duration="0.1" />
         <!-- turn the ItemComponent on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
@@ -449,29 +1119,403 @@
         <RequiredItem identifier="steel" amount="8" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="30" canbeselected="true" slotsperrow="6" hideitems="true" msg="ItemMsgInteractSelect">
+      <ItemContainer capacity="30" canbeselected="true" slotsperrow="6" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.35,0.55" anchor="Center" style="ItemUI" />
+        <!-- Icon - Stove/Electric Grill -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="30" sourcerect="1,853,85,85" origin="0.5,0.5" />
+        <!-- Icon - Coffee Machine/Blender -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="31" sourcerect="341,853,85,85" origin="0.5,0.5" />
+        <!-- Icon - Fryer/Cutting Board -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="32" sourcerect="86,853,85,85" origin="0.5,0.5" />
         <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
+        <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
+        <!-- stove/grill -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="he-stove_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-55,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="55,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-55,53" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <SpawnItem identifier="he-stove" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="55,53" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_stove" />
+              <Conditional HasTag="stove" targetcontaineditem="true" />
+              <SpawnItem identifier="he-stove" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="he-electricgrill_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-55,67" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="55,67" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-55,67" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <SpawnItem identifier="he-electricgrill" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="55,67" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_electricgrill" />
+              <Conditional HasTag="grill" targetcontaineditem="true" />
+              <SpawnItem identifier="he-electricgrill" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- coffee machine/blender -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="coffeemachine_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="11,93" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-11,93" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="11,93" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <SpawnItem identifier="coffeemachine" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-11,93" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_coffeemachine" />
+              <Conditional HasTag="coffeemachine" targetcontaineditem="true" />
+              <SpawnItem identifier="coffeemachine" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="he-blender_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="11,83" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-11,83" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="11,83" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <SpawnItem identifier="he-blender" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-11,83" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_blender" />
+              <Conditional HasTag="blender" targetcontaineditem="true" />
+              <SpawnItem identifier="he-blender" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="blender_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- fryer/cutting board -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifiers="he-fryer_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="65,77" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-65,77" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="65,77" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <SpawnItem identifier="he-fryer" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-65,77" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_fryer" />
+              <Conditional HasTag="fryer" targetcontaineditem="true" />
+              <SpawnItem identifier="he-fryer" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="he-cuttingboard_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="62,70" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-62,70" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="62,70" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <SpawnItem identifier="he-cuttingboard" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-62,70" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_cuttingboard" />
+              <Conditional HasTag="cuttingboard" targetcontaineditem="true" />
+              <SpawnItem identifier="he-cuttingboard" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
         <SubContainer capacity="3" maxstacksize="1">
           <SlotIcon texture="Content/UI/CommandUIAtlas.png" sourcerect="639,926,128,80" origin="0.5,0.5" />
           <Containable items="mobilecontainer" />
         </SubContainer>
-        <!-- Disabled due to OnClose only working for doors. No way to check if a player stops interacting to play the sound.
-      <StatusEffect type="OnClose" target="this">
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
-      </StatusEffect>-->
       </ItemContainer>
       <Body width="405" height="204" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-105" handle1="-170,60" handle2="-160,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
+      <Holdable canbepicked="false" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-105" handle1="-170,60" handle2="-160,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
+        <Upgrade gameversion="2.0.0.0" canbepicked="false" />
         <RequiredItem items="wrench" type="Equipped" />
-        <StatusEffect target="This" type="OnContained">
-          <Conditional attached="false" targetitemcomponentname="Holdable" />
+        <!-- drop all contained items and block inventory access -->
+        <StatusEffect target="This" type="OnPicked" setvalue="true" drawinventory="false" allowaccess="false" allowdraganddrop="false">
+          <Conditional drawinventory="true" />
           <DropContainedItems />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
       </Holdable>
+      <!-- Item gets detached over time via button press when holding a wrench -->
+      <CustomInterface canbeselected="true" Selectkey="Action" drawhudwhenequipped="false">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.10"/>
+        <RequiredItem items="wrench" type="Equipped" />
+        <Button text="interaction.disassemble">
+          <!-- Disable access to the item's inventory -->
+          <StatusEffect type="OnUse" target="This" drawinventory="false" allowaccess="false" allowdraganddrop="false" setvalue="true" />
+          <!-- Drop the first upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="30" delay="2.5" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Drop the second upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="31" delay="5.0" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Drop the third upgrade after some time -->
+          <StatusEffect type="OnUse" target="Contained" targetslot="32" delay="7.5" stackable="false">
+            <DropItem />
+          </StatusEffect>
+          <!-- Play a sound loop for the entire disassemble duration -->
+          <StatusEffect type="OnUse" target="This" StatusEffectTags="detaching" duration="10" stackable="false">
+            <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="0.75" selectionmode="Random" />
+          </StatusEffect>
+          <!-- Detach the item by dropping all its content, spawning in a copy and removing the original -->
+          <StatusEffect type="OnUse" target="This" delay="10" stackable="false">
+            <DropContainedItems />
+            <SpawnItem identifier="he-kitchencounter2" spawnposition="This" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+      <!-- Had to use RelayComponent with power_in and power_out instead of a PowerTransfer as it would otherwise not transfer power if connected to a relay or another kitchen counter/pantry -->
+      <RelayComponent canbeselected="false" allowingameediting="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" /> <!--minsize="350,160" maxsize="420,190"-->
+      </RelayComponent>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" probability="0.5" />
+          <Affliction identifier="electricshock" strength="60"/>
+          <Affliction identifier="burn" strength="5" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="power_out" displayname="connection.powerout" />
+      </ConnectionPanel>
     </Item>
     
     <Item name="Cafeteria Cart" identifier="he-cafeteriacart" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
@@ -568,17 +1612,22 @@
       -->
       <PowerContainer capacity="300.0" maxrechargespeed="125.0" rechargespeed="125.0" maxoutput="1000.0" canbeselected="true" indicatorposition="5,10" indicatorsize="46,22" ishorizontal="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" /> <!--minsize="350,250" maxsize="420,300"-->
-        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items -->
+        <!-- Constantly drain stored charge (kWmin) by 1 each second -->
         <StatusEffect type="OnActive" target="This" charge="-1" />
-        <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="activecooling" duration="0.1">
+        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items | also set the tag "refrigerated" for Neurotrauma organ compatibility -->
+        <StatusEffect type="OnActive" target="This" disabledeltatime="false" StatusEffectTags="activecooling" SetTags="refrigerated" duration="0.1">
           <Conditional Charge="gt 0.01" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
+        </StatusEffect>
+        <!-- When running out of charge, replace the previously set "refrigerated" tag with "nonrefrigerated" to allow Neurotrauma organs to start rotting -->
+        <StatusEffect type="Always" target="This" disabledeltatime="false" SetTags="nonrefrigerated" setvalue="true" interval="5">
+          <Conditional Charge="lte 0.01" />
         </StatusEffect>
       </PowerContainer>
       <ItemContainer capacity="40" slotsperrow="8" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
-        <Containable items="fooditem,drinkitem,meat,plantitem,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
+        <Containable items="fooditem,drinkitem,meat,plantitem,organ,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
       </ItemContainer>
       <Body width="273" height="380" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="85,-35" handle1="-100,30" handle2="10,-20" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="refrigerator">
@@ -649,28 +1698,24 @@
       </Deconstruct>
       <Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
         <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
-        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items -->
-        <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="activecooling" duration="0.1">
+        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items | also set the tag "refrigerated" for Neurotrauma organ compatibility -->
+        <StatusEffect type="OnActive" target="This" disabledeltatime="false" StatusEffectTags="activecooling" SetTags="refrigerated" duration="0.1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
+        </StatusEffect>
+        <!-- When running out of power, replace the previously set "refrigerated" tag with "nonrefrigerated" to allow Neurotrauma organs to start rotting -->
+        <StatusEffect type="Always" target="This" disabledeltatime="false" SetTags="nonrefrigerated" setvalue="true" interval="5">
+          <Conditional HasStatusTag="neq activecooling" />
         </StatusEffect>
       </Powered>
       <ItemContainer capacity="40" slotsperrow="8" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
-        <Containable items="fooditem,drinkitem,meat,plantitem,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
+        <Containable items="fooditem,drinkitem,meat,plantitem,organ,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
         <StatusEffect type="OnPicked" target="this">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
         </StatusEffect>
       </ItemContainer>
-      <Body width="273" height="380" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="85,-35" handle1="-100,30" handle2="10,-20" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="refrigerator">
-        <RequiredItem items="wrench" type="Equipped" />
-        <StatusEffect target="This" type="OnContained">
-          <Conditional attached="false" targetitemcomponentname="Holdable" />
-          <DropContainedItems />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
-      </Holdable>
+      <Body width="273" height="380" density="30" bodytype="static" />
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -930,7 +1975,7 @@
     <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
     <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" slotsperrow="4" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
       <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
-      <Containable items="crate" />
+      <Containable items="crate" excludeditems="kitchenupgrade" />
     </ItemContainer>
     <SwappableItem price="3000" replacementonuninstall="emptylargedevice" origin="200,150" swapidentifier="largedevice">
       <SchematicSprite texture="Content/Items/Containers/UnitLoadDevice.png" sourcerect="0,0,567,446" />
