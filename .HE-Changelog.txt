@@ -34,20 +34,26 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]17/09/2025
+[hr]19/09/2025[/hr]
 
 [b]Changes:[/b] 
 [List]
-[*] Added power distribution to the electrical grid of the Bulker Abyss Scout
-[*] Changed default size of the sink from 0.5 to 0.45
+[*] Changed the way kitchen fabricators are placed. They are now handled as "Installations" you can plug into dedicated slots inside the kitchen counter/pantry.
+It is recommended to have the submarine stationary while installing something as its placement may be offset while traveling.
+Currently installed kitchen fabricators will not automatically transfer between submarines. You'll need to uninstall them first.
+[*] Changed how to detach kitchen counter and kitchen pantry. You now need to interact with the container while holding a wrench which will allow you to click a "Disassemble" button.
+Once disassembled, you can pick up the container and move it.
+[*] Changed impact tolerance for empty glass containers like bottles, cups, etc.
+You'll need to crouch if you want to drop them without breaking them.
+[*] Changed power transfer for kitchen counter and also added it to the kitchen pantry.
+They now feature a power_in and power_out.
+All existing wires are automatically connected to power_in so you may need to shift some wires from power_in to power_out to fix your equipment not receiving power.
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed kitchen item placements on all included submarines
-[*] Fixed Moloch Steak recipe not using a pan
-[*] Fixed Fondue Pot not being craftable + reduced cost
-[*] Fixed many recipes using Sea Weed Strip not being craftable
+[*] Fixed Refrigerators not being compatible with Neurotrauma organs and limbs
+[*] Fixed collision body of glasses being too large
 [/List]
 
 
