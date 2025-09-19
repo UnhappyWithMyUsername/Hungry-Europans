@@ -1610,7 +1610,8 @@
         </StatusEffect>
       </Powered>
       -->
-      <PowerContainer capacity="300.0" maxrechargespeed="125.0" rechargespeed="125.0" maxoutput="1000.0" canbeselected="true" indicatorposition="5,10" indicatorsize="46,22" ishorizontal="true" msg="ItemMsgInteractSelect">
+      <Upgrade gameversion="2.0.0.0" indicatorposition="5,6" />
+      <PowerContainer capacity="300.0" maxrechargespeed="125.0" rechargespeed="125.0" maxoutput="1000.0" canbeselected="true" indicatorposition="5,6" indicatorsize="46,22" ishorizontal="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" /> <!--minsize="350,250" maxsize="420,300"-->
         <!-- Constantly drain stored charge (kWmin) by 1 each second -->
         <StatusEffect type="OnActive" target="This" charge="-1" />
