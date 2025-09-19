@@ -847,19 +847,15 @@
       <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" comparison="And">
-          <RequiredItem identifier="he-cookingoil" type="Contained" />
-          <RequiredItem tag="allowinfryer" type="Contained" />
-          <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.01">
+        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.1">
           <Conditional HasStatusTag="activefryer" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnActive" targettype="This" tags="activefryer" condition="-0.02" interval="0.1" duration="0.2" comparison="And">
           <RequiredItem identifier="he-cookingoil" type="Contained" />
           <RequiredItem tag="allowinfryer" type="Contained" />
           <Conditional Voltage="gt 0.5" />
+          <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
         </StatusEffect>
         <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
         <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
@@ -974,18 +970,22 @@
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,electricgrill_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="158" height="53" density="30" bodytype="static" />
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1218,160,23" depth="0.796" origin="0.5,-0.355" />
+      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1275,160,23" depth="0.795" origin="0.5,-0.355" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1332,160,23" depth="0.794" origin="0.5,-0.355" maxcondition="0" fadein="false" />
+      <DecorativeSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,33" depth="0.797" origin="0.5,0.745" />
+      <!-- original full sprites
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,56" depth="0.796" origin="0.5,0.44" />
       <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1242,160,56" depth="0.795" origin="0.5,0.44" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1299,160,56" depth="0.794" origin="0.5,0.44" maxcondition="0" fadein="false" />
+      -->
       <ItemComponent>
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This">
+        <StatusEffect type="OnActive" targettype="This" StatusEffectTags="activegrill" condition="-0.03" interval="0.1" duration="0.2" comparison="And">
+          <Conditional Voltage="gt 0.5" />
           <Conditional HasTag="allowongrill" targetcontaineditem="true" />
           <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="0.5" frequencymultiplier="0.7" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="This" tags="activegrill" condition="-0.03" interval="0.1" duration="0.2">
-          <Conditional Voltage="gt 0.5" />
         </StatusEffect>
         <StatusEffect type="OnActive" targettype="Contained">
           <Conditional Hastag="burnedfood" />
@@ -1046,7 +1046,7 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="16" maxstacksize="1" canbeselected="true" hideitems="false" allowuioverlap="false" itempos="50,-30" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86">
+      <ItemContainer selectkey="Select" capacity="16" maxstacksize="1" canbeselected="true" hideitems="false" allowuioverlap="false" itempos="-42,-3" iteminterval="30,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.797,0.798,0.799,0.797,0.798,0.799,0.797,0.798,0.799,0.798,0.799,0.799,0.799,0.799,0.799,0.799">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="747,0,85,85" origin="0.5,0.5" />
         <GuiFrame relativesize="0.22,0.35" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
         <Containable items="allowongrill" />
