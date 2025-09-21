@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <!--watcher-->
-    <Item name="Watcher Meat Chunk" identifier="he-watchermeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Watcher Meat Chunk" identifier="he-watchermeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
@@ -50,7 +50,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Raw Watcher Meat" identifier="he-rawwatchermeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Raw Watcher Meat" identifier="he-rawwatchermeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="288,61,44,30" depth="0.6" origin="0.5,0.5" />
       <Body width="29" radius="15" density="12" />
       <Price baseprice="159" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
@@ -97,7 +97,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Raw Watcher Steak" identifier="he-rawwatchersteak" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Raw Watcher Steak" identifier="he-rawwatchersteak" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,146,93,25" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,146,93,25" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,146,93,25" depth="0.525" origin="0.5,0.5"  />
@@ -149,7 +149,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Watcher Steak" identifier="he-preparedwatchersteak" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Watcher Steak" identifier="he-preparedwatchersteak" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,120,93,25" depth="0.6" origin="0.5,0.5" />
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,120,93,25" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,120,93,25" depth="0.525" origin="0.5,0.65"  />

@@ -298,7 +298,7 @@
     </Item>
 
     <!-- BREAD -->
-    <Item hideinmenus="false" name="Bread" identifier="he-bread" health="16" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Bread" identifier="he-bread" health="16" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -344,7 +344,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Burger Buns" identifier="he-burgerbun" health="8" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Burger Buns" identifier="he-burgerbun" health="8" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -388,7 +388,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Hotdog Bun" identifier="he-hotdogbun" health="8" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Hotdog Bun" identifier="he-hotdogbun" health="8" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -432,7 +432,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Bread Slices" identifier="he-breadslices" health="8" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Bread Slices" identifier="he-breadslices" health="8" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -481,7 +481,7 @@
     <!-- MEAT -->
     <!-- EASY | NO TYPE | NO BUFFS -->
 
-    <Item name="Pile of Raw Jerky" identifier="he-rawjerky" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Pile of Raw Jerky" identifier="he-rawjerky" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.0" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
@@ -532,7 +532,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
     
-    <Item hideinmenus="false" name="Jerky" identifier="he-cookedjerky" health="10" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Jerky" identifier="he-cookedjerky" health="10" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.05" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.05" />
@@ -763,7 +763,7 @@
       </CustomInterface>
     </Item>
     
-    <Item hideinmenus="false" name="Sauerkraut" identifier="he-sauerkraut" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Sauerkraut" identifier="he-sauerkraut" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,60,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,60,68,29" depth="0.525" origin="0.5,0.65" />

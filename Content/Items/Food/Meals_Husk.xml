@@ -4,7 +4,7 @@
     <!-- MEAT -->
     <!--Husk-->
      
-    <Item hideinmenus="false" name="Husk Lump with omelette" identifier="he-cookedhuskfilet" variantof="he-poisoneffectpreset_fork" health="16" category="Misc" subcategory="Food - Husk" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,huskfooditem,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Husk Lump with omelette" identifier="he-cookedhuskfilet" variantof="he-poisoneffectpreset_fork" health="16" category="Misc" subcategory="Food - Husk" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,huskfooditem,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -72,7 +72,7 @@
     </Item>
 
     <!-- Husk Caviar will cause Husk Infection to the person eating it, if they don't use stabilozine before eating -->
-    <Item hideinmenus="false" name="Husk Caviar with Nori" identifier="he-huskcaviarnori" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food - Husk" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,huskfooditem,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Husk Caviar with Nori" identifier="he-huskcaviarnori" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food - Husk" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,huskfooditem,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
