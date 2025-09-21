@@ -4,7 +4,7 @@
     <!-- MEAT -->
     <!--Crawler-->    
     
-    <Item hideinmenus="false" name="Crawler Brisket" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="16" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Crawler Brisket" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="16" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>

@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Mudraptor-->
-    <Item HideInMenus="false" name="Roast" identifier="he-cookedmudraptorroast" variantof="he-poisoneffectpreset_fork" health="15" category="Misc" subcategory="Food - Mudraptor" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,roast,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+    <Item HideInMenus="false" name="Roast" identifier="he-cookedmudraptorroast" variantof="he-poisoneffectpreset_fork" health="15" category="Misc" subcategory="Food - Mudraptor" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,roast,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
