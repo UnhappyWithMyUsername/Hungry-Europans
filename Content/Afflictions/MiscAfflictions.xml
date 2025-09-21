@@ -521,6 +521,60 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
+    <Affliction identifier="applydrunkmedium"
+      description="Converts into normal drunk affliction over time to simulate alcohol taking time to take effect"
+      type="debuff"
+      causeofdeathdescription="Alcohol poisoning"
+      selfcauseofdeathdescription="You have died of alcohol poisoning."
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="100"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.0">
+        <StatusEffect target="Character" delay="6" duration="6" stackable="false" disabledeltatime="false" checkconditionalalways="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional applydrunkmedium="gt 0" />
+          <Affliction identifier="drunk" strength="1.015" />
+          <ReduceAffliction identifier="applydrunkmedium" strength="1.015" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
+
+    <Affliction identifier="applydrunkfast"
+      description="Converts into normal drunk affliction over time to simulate alcohol taking time to take effect"
+      type="debuff"
+      causeofdeathdescription="Alcohol poisoning"
+      selfcauseofdeathdescription="You have died of alcohol poisoning."
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="100"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.0">
+        <StatusEffect target="Character" delay="3" duration="3" stackable="false" disabledeltatime="false" checkconditionalalways="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional applydrunkfast="gt 0" />
+          <Affliction identifier="drunk" strength="1.015" />
+          <ReduceAffliction identifier="applydrunkfast" strength="1.015" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
     
     <Affliction name="Disoriented"
       identifier="he-drunkinvertcontrols"

@@ -63,7 +63,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="he-internalburn" amount="8" />
           <Affliction identifier="psychosisresistance" amount="80" />
-          <Affliction identifier="applydrunk" amount="6.0" />
+          <Affliction identifier="applydrunkfast" amount="6.0" />
           <ReduceAffliction identifier="psychosis" amount="10.0" />
           <ReduceAffliction identifier="hallucinating" amount="10.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
@@ -275,7 +275,7 @@
           <ReduceAffliction identifier="hallucinating" amount="1" />
           <ReduceAffliction identifier="he-halucinova" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="1" />
-          <Affliction identifier="applydrunk" amount="3" />
+          <Affliction identifier="applydrunkfast" amount="3" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="drank_rum" amount="1" />
@@ -451,7 +451,7 @@
           <ReduceAffliction identifier="hallucinating" amount="1" />
           <ReduceAffliction identifier="he-halucinova" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="1" />
-          <Affliction identifier="applydrunk" amount="3" />
+          <Affliction identifier="applydrunkfast" amount="3" />
           <Affliction identifier="radiationsickness" amount="0.5" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
@@ -545,7 +545,7 @@
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="6" />
-          <Affliction identifier="applydrunk" amount="2.5" />
+          <Affliction identifier="applydrunkmedium" amount="2.5" />
           <ReduceAffliction identifier="hallucinating" amount="2.0" />
           <ReduceAffliction identifier="psychosis" amount="2.0" />
           <ReduceAffliction identifier="nausea" amount="2" />
@@ -649,7 +649,7 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="drunk" amount="3.0" />
+          <Affliction identifier="applydrunkmedium" amount="3.0" />
           <Affliction identifier="he-halucinova" amount="9.0" />
           <ReduceAffliction identifier="embarrassment" strength="10" />
           <Affliction identifier="oxygenlow" amount="1.0" />
