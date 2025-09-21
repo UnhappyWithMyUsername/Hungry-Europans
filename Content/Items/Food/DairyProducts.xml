@@ -778,20 +778,24 @@
         </StatusEffect>
         <!--Additional effects-->
         <!--Decrease hunger depending on ice cream balls contained, only if needs are enabled-->
+        <!--Counts towards eating sweets, for decreasing stress-->
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="0" />
           <ReduceAffliction type="hunger" amount="0.4" />
+          <Affliction identifier="ate_sweet" amount="1" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="1" />
           <ReduceAffliction type="hunger" amount="0.4" />
+          <Affliction identifier="ate_sweet" amount="1" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="2" />
           <ReduceAffliction type="hunger" amount="0.4" />
+          <Affliction identifier="ate_sweet" amount="1" />
         </StatusEffect>
         <!--Increase damage resistance affliction if milky ice cream ball is contained-->
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -835,6 +839,7 @@
           <Conditional HasStatusTag="neq secondslot" />
           <Conditional HasStatusTag="neq thirdslot" />
           <Affliction identifier="he-stuffed" amount="0.05" />
+          <Affliction identifier="ate_sweet" amount="1" />
         </StatusEffect>
         <!--Play soft eating sound if containing ice cream-->
         <StatusEffect type="OnUse" target="This">
