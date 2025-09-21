@@ -1226,7 +1226,17 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
-    <Affliction name="Sleeping" identifier="he-sleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <Affliction name="Sleeping" identifier="he-sleep" iconcolors="50,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+      <Description
+        textidentifier="afflictiondescription.he-sleep"
+        target="Self"
+        minstrength="0"
+        maxstrength="1" />
+      <Description
+        textidentifier="afflictiondescription.he-sleep.others"
+        target="OtherCharacter"
+        minstrength="0"
+        maxstrength="1" />
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.9" resistancefor="he-exhaustedsleep" minresistance="1.0" maxresistance="1.0" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
@@ -1278,9 +1288,20 @@
       </PeriodicEffect>
       -->
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
     
-    <Affliction name="" nameidentifier="he-sleep" identifier="he-exhaustedsleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <Affliction name="Sleeping" identifier="he-exhaustedsleep" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+      <Description
+        textidentifier="afflictiondescription.he-exhaustedsleep"
+        target="Self"
+        minstrength="0"
+        maxstrength="1" />
+      <Description
+        textidentifier="afflictiondescription.he-exhaustedsleep.others"
+        target="OtherCharacter"
+        minstrength="0"
+        maxstrength="1" />
       <Effect minstrength="0" maxstrength="60" resistancefor="fatigue" minresistance="1.0" maxresistance="1.0" strengthchange="-1" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
@@ -1335,6 +1356,7 @@
       </PeriodicEffect>
       -->
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
     
     <Affliction identifier="he-hitbypoop" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="30" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">

@@ -702,6 +702,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.embarrassment>You feel embarrassed and can't focus on your work.</afflictiondescription.embarrassment><!--Patch 13-->
 <afflictiondescription.embarrassment.other>The patient seems embarrassed and can't focus on anything.</afflictiondescription.embarrassment.other><!--Patch 13-->
 
+<afflictionname.he-sleep>Sleeping</afflictionname.he-sleep><!--Patch 19-->
+<afflictiondescription.he-sleep>You are asleep, recovering faster from injuries, alcohol and fatigue.</afflictiondescription.he-sleep><!--Patch 19-->
+<afflictiondescription.he-sleep.others>The person is sleeping.</afflictiondescription.he-sleep.others><!--Patch 19-->
+<afflictionname.he-exhaustedsleep>Sleeping</afflictionname.he-exhaustedsleep><!--Patch 19-->
+<afflictiondescription.he-exhaustedsleep>You fell asleep from exhaustion.</afflictiondescription.he-exhaustedsleep><!--Patch 19-->
+<afflictiondescription.he-exhaustedsleep.others>The person is extremely exhausted and fell asleep.</afflictiondescription.he-exhaustedsleep.others><!--Patch 19-->
+
 <afflictionname.he-starvation>Starvation</afflictionname.he-starvation>
 <afflictiondescription.he-starvation>Starving...</afflictiondescription.he-starvation>
 <afflictioncauseofdeath.he-starvation>Starved.</afflictioncauseofdeath.he-starvation>
