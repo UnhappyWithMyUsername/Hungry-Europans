@@ -736,6 +736,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.he-disguisedashusk.self>Ugh... you reek of husk infected flesh! Husks will probably accept you as one of their own.</afflictiondescription.he-disguisedashusk.self><!--Patch 13-->
 <afflictiondescription.he-disguisedashusk.others>Ugh... The patient reeks of husk infected flesh!</afflictiondescription.he-disguisedashusk.others><!--Patch 13-->
 
+<afflictionname.he-clownjuice>Clown Juice</afflictionname.he-clownjuice><!--Patch 20-->
+<afflictiondescription.he-clownjuice>You can feel the Honkmother's grace.</afflictiondescription.he-clownjuice><!--Patch 20-->
+
 <afflictionname.he-alcoholism>Alcoholic</afflictionname.he-alcoholism>
 <afflictiondescription.he-alcoholism>The patient is happy enough... so long as they get what they need.</afflictiondescription.he-alcoholism>
 <advancedafflictiondescription.self.he-alcoholism>It's time for a booze cruise! You're addicted to alcohol.</advancedafflictiondescription.self.he-alcoholism>
