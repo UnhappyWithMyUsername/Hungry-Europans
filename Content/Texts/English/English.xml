@@ -11,6 +11,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <!-- /////// //////// -->
 <!-- LATEST PATCH: 19 -->
+<!-- LATEST PATCH: 19 -->
+<!-- LATEST PATCH: 19 -->
+<!-- LATEST PATCH: 19 -->
 <!-- /////// //////// -->
 
 <infotexts language="English" nowhitespace="false" translatedname="English">
@@ -723,35 +726,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.he-dieofthirst.self>Dying of thirst...</afflictiondescription.he-dieofthirst.self>
 <afflictiondescription.he-dieofthirst.other>The patient is dying of thirst.</afflictiondescription.he-dieofthirst.other>
 
-<afflictionname.he-increasedswimmingspeedcrawler10>Increased Swimming Speed (Food)</afflictionname.he-increasedswimmingspeedcrawler10><!--Patch 13-->
-<afflictiondescription.he-increasedswimmingspeedcrawler10>You swim 10% faster.</afflictiondescription.he-increasedswimmingspeedcrawler10><!--Patch 13-->
-<afflictionname.he-increasedswimmingspeedcrawler25>Increased Swimming Speed (Food)</afflictionname.he-increasedswimmingspeedcrawler25><!--Patch 13-->
-<afflictiondescription.he-increasedswimmingspeedcrawler25>You swim 25% faster.</afflictiondescription.he-increasedswimmingspeedcrawler25><!--Patch 13-->
-<afflictionname.he-increasedswimmingspeedcrawler>Increased Swimming Speed (Food)</afflictionname.he-increasedswimmingspeedcrawler>
-<afflictiondescription.he-increasedswimmingspeedcrawler>You swim 50% faster.</afflictiondescription.he-increasedswimmingspeedcrawler>
-
-<afflictionname.he-damageresistancemudraptor>Damage Resistance (Food)</afflictionname.he-damageresistancemudraptor>
-<afflictiondescription.he-damageresistancemudraptor>You take 25% less damage.</afflictiondescription.he-damageresistancemudraptor>
-
-<afflictionname.he-increasedwalkingspeedmudraptor>Increased Walking Speed (Food)</afflictionname.he-increasedwalkingspeedmudraptor>
-<afflictiondescription.he-increasedwalkingspeedmudraptor>You walk 20% faster.</afflictiondescription.he-increasedwalkingspeedmudraptor>
-
-<afflictionname.he-damageresistancemoloch25>Damage Resistance (Food)</afflictionname.he-damageresistancemoloch25><!--Patch 13-->
-<afflictiondescription.he-damageresistancemoloch25>You take 25% less damage.</afflictiondescription.he-damageresistancemoloch25><!--Patch 13-->
-<afflictionname.he-damageresistancemoloch>Damage Resistance (Food)</afflictionname.he-damageresistancemoloch>
-<afflictiondescription.he-damageresistancemoloch>You take 50% less damage.</afflictiondescription.he-damageresistancemoloch>
-
-<afflictionname.he-increasedmeleedamagehammerhead>Increased Melee Damage (Food)</afflictionname.he-increasedmeleedamagehammerhead>
-<afflictiondescription.he-increasedmeleedamagehammerhead>You deal 25% more melee damage.</afflictiondescription.he-increasedmeleedamagehammerhead>
-
 <afflictionname.he-decreasedoxygenconsumption>Decreased Oxygen Consumption (Food)</afflictionname.he-decreasedoxygenconsumption>
 <afflictiondescription.he-decreasedoxygenconsumption>You don't need to breath.</afflictiondescription.he-decreasedoxygenconsumption>
 
 <afflictionname.he-pressureresistance>Pressure Resistance (Food)</afflictionname.he-pressureresistance>
 <afflictiondescription.he-pressureresistance>You're immune to pressure.</afflictiondescription.he-pressureresistance>
-
-<afflictionname.he-cannibalskillincrease>Increased Skills (Food)</afflictionname.he-cannibalskillincrease><!--Patch 9-->
-<afflictiondescription.he-cannibalskillincrease>All your skills are increased by 20%</afflictiondescription.he-cannibalskillincrease><!--Patch 9-->
 
 <afflictionname.he-disguisedashusk>Husk Stench (Food)</afflictionname.he-disguisedashusk><!--Patch 13-->
 <afflictiondescription.he-disguisedashusk.self>Ugh... you reek of husk infected flesh! Husks will probably accept you as one of their own.</afflictiondescription.he-disguisedashusk.self><!--Patch 13-->
