@@ -1285,8 +1285,7 @@
       <Effect minstrength="0" maxstrength="50"
         dialogflag="filthylight"
         strengthchange="0" >
-        <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
-        <!-- Reduce the hygiene each second if the character is in water -->
+        <!-- Reduce the hygiene each second if the character is in water without clothes -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
           <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
@@ -1308,8 +1307,7 @@
           <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="0.15" />
         </StatusEffect>
-        <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
-        <!-- Reduce the hygiene each second if the character is in water -->
+        <!-- Reduce the hygiene each second if the character is in water without clothes -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
           <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
