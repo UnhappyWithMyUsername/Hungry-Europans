@@ -132,6 +132,10 @@
     <Affliction name="" identifier="ate_sweet" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_sweet" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional trait_dislikes_sweets="neq 1" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect> 
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_sweets="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.0" />
         </StatusEffect> 
@@ -193,6 +197,10 @@
     </Affliction>
     <Affliction name="" identifier="drank_cola" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="drank_cola" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional trait_dislikes_cola="neq 1" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect> 
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_cola="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.0" />
