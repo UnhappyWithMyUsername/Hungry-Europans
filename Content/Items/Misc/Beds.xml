@@ -16,14 +16,17 @@
         <limbposition limb="LeftHand" position="224,-160" allowusinglimb="false" />
         <StatusEffect type="OnPicked" target="This" timeframe="0" setvalue="true" />
         <StatusEffect type="OnActive" target="Character">
-          <ReduceAffliction type="damage" strength="0.05" />
-          <ReduceAffliction identifier="bloodloss" strength="0.05" />
-          <ReduceAffliction identifier="bleeding" strength="0.05" />
-          <ReduceAffliction identifier="nausea" strength="0.05" />
-          <ReduceAffliction identifier="opiatewithdrawal" strength="0.05" />
-          <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
-          <ReduceAffliction identifier="drunk" strength="0.05" />
-          <reduceaffliction identifier="concussion" strength="0.02" />
+          <reduceaffliction type="damage" strength="0.05" />
+          <reduceaffliction identifier="concussion" strength="0.04" />
+          <reduceaffliction identifier="infection" strength="0.02" />
+          <reduceaffliction identifier="bloodloss" strength="0.05" />
+          <reduceaffliction identifier="bleeding" strength="0.05" />
+          <reduceaffliction identifier="nausea" strength="0.5" />
+          <reduceaffliction identifier="drunk" strength="0.5" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.06" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.06" />
+          <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
+          <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
@@ -65,14 +68,17 @@
         <limbposition limb="LeftHand" position="264,-290" allowusinglimb="false" />
         <StatusEffect type="OnPicked" target="This" timeframe="0" setvalue="true" />
         <StatusEffect type="OnActive" target="Character">
-          <ReduceAffliction type="damage" strength="0.05" />
-          <ReduceAffliction identifier="bloodloss" strength="0.05" />
-          <ReduceAffliction identifier="bleeding" strength="0.05" />
-          <ReduceAffliction identifier="nausea" strength="0.05" />
-          <ReduceAffliction identifier="opiatewithdrawal" strength="0.05" />
-          <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
-          <ReduceAffliction identifier="drunk" strength="0.05" />
-          <reduceaffliction identifier="concussion" strength="0.02" />
+          <reduceaffliction type="damage" strength="0.05" />
+          <reduceaffliction identifier="concussion" strength="0.04" />
+          <reduceaffliction identifier="infection" strength="0.02" />
+          <reduceaffliction identifier="bloodloss" strength="0.05" />
+          <reduceaffliction identifier="bleeding" strength="0.05" />
+          <reduceaffliction identifier="nausea" strength="0.5" />
+          <reduceaffliction identifier="drunk" strength="0.5" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.06" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.06" />
+          <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
+          <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
@@ -113,14 +119,17 @@
         <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
         <StatusEffect type="OnPicked" target="This" timeframe="0" setvalue="true" />
         <StatusEffect type="OnActive" target="Character">
-          <ReduceAffliction type="damage" strength="0.05" />
-          <ReduceAffliction identifier="bloodloss" strength="0.1" />
-          <ReduceAffliction identifier="bleeding" strength="0.1" />
-          <ReduceAffliction identifier="nausea" strength="0.1" />
-          <ReduceAffliction identifier="opiatewithdrawal" strength="0.1" />
-          <ReduceAffliction identifier="opiateaddiction" strength="0.1" />
-          <ReduceAffliction identifier="drunk" strength="0.1" />
-          <reduceaffliction identifier="concussion" strength="0.1" />
+          <reduceaffliction type="damage" strength="0.075" />
+          <reduceaffliction identifier="concussion" strength="0.06" />
+          <reduceaffliction identifier="infection" strength="0.025" />
+          <reduceaffliction identifier="bloodloss" strength="0.075" />
+          <reduceaffliction identifier="bleeding" strength="0.075" />
+          <reduceaffliction identifier="nausea" strength="0.75" />
+          <reduceaffliction identifier="drunk" strength="0.75" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.08" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.08" />
+          <reduceaffliction identifier="chemwithdrawal" strength="0.08" />
+          <reduceaffliction identifier="chemaddiction" strength="0.08" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
@@ -160,14 +169,17 @@
         <limbposition limb="LeftHand" position="234,10" allowusinglimb="false" />
         <StatusEffect type="OnPicked" target="This" timeframe="0" setvalue="true" />
         <StatusEffect type="OnActive" target="Character">
-          <ReduceAffliction type="damage" strength="0.05" />
-          <ReduceAffliction identifier="bloodloss" strength="0.05" />
-          <ReduceAffliction identifier="bleeding" strength="0.05" />
-          <ReduceAffliction identifier="nausea" strength="0.05" />
-          <ReduceAffliction identifier="opiatewithdrawal" strength="0.05" />
-          <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
-          <ReduceAffliction identifier="drunk" strength="0.05" />
-          <reduceaffliction identifier="concussion" strength="0.02" />
+          <reduceaffliction type="damage" strength="0.05" />
+          <reduceaffliction identifier="concussion" strength="0.04" />
+          <reduceaffliction identifier="infection" strength="0.02" />
+          <reduceaffliction identifier="bloodloss" strength="0.05" />
+          <reduceaffliction identifier="bleeding" strength="0.05" />
+          <reduceaffliction identifier="nausea" strength="0.5" />
+          <reduceaffliction identifier="drunk" strength="0.5" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.06" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.06" />
+          <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
+          <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
@@ -207,14 +219,16 @@
         <limbposition limb="LeftHand" position="112,-80" allowusinglimb="false" />
         <StatusEffect type="OnPicked" target="This" timeframe="0" setvalue="true" />
         <StatusEffect type="OnActive" target="Character">
-          <ReduceAffliction type="damage" strength="0.05" />
-          <ReduceAffliction identifier="bloodloss" strength="0.05" />
-          <ReduceAffliction identifier="bleeding" strength="0.05" />
-          <ReduceAffliction identifier="nausea" strength="0.05" />
-          <ReduceAffliction identifier="opiatewithdrawal" strength="0.05" />
-          <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
-          <ReduceAffliction identifier="drunk" strength="0.05" />
-          <reduceaffliction identifier="concussion" strength="0.02" />
+          <reduceaffliction identifier="concussion" strength="0.04" />
+          <reduceaffliction identifier="infection" strength="0.02" />
+          <reduceaffliction identifier="bloodloss" strength="0.05" />
+          <reduceaffliction identifier="bleeding" strength="0.05" />
+          <reduceaffliction identifier="nausea" strength="0.5" />
+          <reduceaffliction identifier="drunk" strength="0.5" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.06" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.06" />
+          <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
+          <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
