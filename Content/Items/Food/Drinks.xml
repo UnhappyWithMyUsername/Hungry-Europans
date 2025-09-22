@@ -1673,6 +1673,7 @@
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
           <Affliction identifier="he-sugarrich" amount="15.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
+          <Affliction identifier="ate_sweet" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         

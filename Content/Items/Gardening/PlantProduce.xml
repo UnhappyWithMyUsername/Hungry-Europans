@@ -43,6 +43,7 @@
         <ReduceAffliction type="thirst" amount="0.8" />
         <Affliction identifier="fillbladder" amount="0.8" />
         <Affliction identifier="he-vitaminrich" amount="5.0" />
+        <Affliction identifier="ate_sweet" amount="1.0" />
         <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="200,100,50,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
@@ -224,6 +225,7 @@
         <ReduceAffliction type="nausea" amount="0.5" />
         <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
         <Affliction identifier="spill" amount="1000" probability="0.0005" />
+        <Affliction identifier="ate_sweet" amount="1.0" />
         <ParticleEmitter particle="whitechunks" particlespersecond="3" scalemin="0.2" scalemax="0.35" distancemin="10" distancemax="15" anglemin="95" anglemax="95" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,220,180,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
@@ -274,6 +276,7 @@
         <ReduceAffliction type="thirst" amount="0.8" />
         <Affliction identifier="fillbladder" amount="0.8" />
         <Affliction identifier="he-vitaminrich" amount="5.0" />
+        <Affliction identifier="ate_sweet" amount="1.0" />
         <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="70,125,190,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
@@ -353,6 +356,7 @@
       <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <ReduceAffliction type="hunger" amount="1" />
+        <Affliction identifier="ate_sweet" amount="1.0" />
         <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="90,70,40,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
@@ -806,6 +810,7 @@
         <ReduceAffliction type="psychosis" amount="1.5" />
         <ReduceAffliction type="hunger" amount="0.4" />
         <ReduceAffliction identifier="he-stomachache" amount="1.5" />
+        <Affliction identifier="ate_sweet" amount="1.0" />
         <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="120,105,70,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
