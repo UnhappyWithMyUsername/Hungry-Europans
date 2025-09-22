@@ -300,7 +300,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp1.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp2.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp3.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">
@@ -377,7 +379,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp1.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp2.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp3.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">
@@ -451,7 +455,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp1.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp2.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp3.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">
@@ -524,7 +530,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/SoftBite1.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/SoftBite2.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/SoftBite3.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">
