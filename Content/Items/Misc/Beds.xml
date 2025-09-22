@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+    <!-- military bunks -->
     <Item name="" identifier="opdeco_bunkbeds" width="356" height="264" texturescale="1.0,1.0" scale="0.5" category="Decorative" cargocontaineridentifier="ninjutsucrate" spritecolor="255,255,255,255">
       <Upgrade gameversion="0.12.0.0" noninteractable="false" />
       <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1600,1760,384,264" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
@@ -52,6 +53,8 @@
         </Button>
       </CustomInterface>
     </Item>
+    
+    <!-- covered bunks -->
     <Item name="" identifier="opdeco_bunks1" nameidentifier="opdeco_bunks1" allowattachitems="false" cargocontaineridentifier="ninjutsucrate" width="463" height="398" texturescale="1.0,1.0" scale="0.5" category="Decorative">
       <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1296,1289,463,387" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
       <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,-95" />
@@ -104,6 +107,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" cargocontaineridentifier="ninjutsucrate" noninteractable="false" category="Decorative">
       <Upgrade gameversion="0.12.0.0" noninteractable="false" />
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
@@ -155,6 +159,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="" identifier="opdeco_prisonbed" allowattachitems="true" width="384" height="96" texturescale="1.0,1.0" cargocontaineridentifier="ninjutsucrate" scale="0.5" category="Decorative">
       <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="864,1888,384,96" depth="0.98" premultiplyalpha="false" origin="0.5,0.5" />
       <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true" noninteractablewhenflippedy="true">
@@ -205,6 +210,8 @@
         </Button>
       </CustomInterface>
     </Item>
+
+    <!-- basic bunks -->
     <Item name="" identifier="bunk" width="173" height="129" category="Decorative">
       <sprite texture="Content/Map/MiscStructures.png" sourcerect="1416,1163,173,129" depth="0.85" origin="0.5,0.5" />
       <Controller UserPos="0,-150" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true" noninteractablewhenflippedy="true">
