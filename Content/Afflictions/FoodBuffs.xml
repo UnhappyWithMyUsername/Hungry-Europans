@@ -197,6 +197,7 @@
   
     <!-- FOOD AFFLICTIONS -->
     <!-- Psilotoad -->
+    <!-- UNUSED -->
     <Affliction name="Heightened Adrenalin (Food)"
       identifier="he-alwaysconscious"
       description="Your adrenaline levels are heightened, preventing your from falling unconcious when severely wounded."
@@ -214,6 +215,7 @@
     </Affliction>
     
     <!-- Orangeboy -->
+    <!-- UNUSED -->
     <Affliction name="Heightened Senses (Food)"
       identifier="he-maxweaponskill"
       description="Your senses are temporarily heightened, allowing you to operate every weapon to its full potential."
