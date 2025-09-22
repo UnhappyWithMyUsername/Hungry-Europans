@@ -29,9 +29,9 @@
           <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
           <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
-          <Affliction identifier="he-sleep" amount="1" />
+          <Affliction identifier="he-sleep" amount="2" />
         </StatusEffect>
       </Controller>
       <GreaterComponent TimeFrame="0" canbeselected="false" canbepicked="false" allowingameediting="false" />
@@ -83,9 +83,9 @@
           <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
           <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
-          <Affliction identifier="he-sleep" amount="1" />
+          <Affliction identifier="he-sleep" amount="2" />
         </StatusEffect>
       </Controller>
       <GreaterComponent TimeFrame="0" canbeselected="false" canbepicked="false" allowingameediting="false" />
@@ -135,9 +135,9 @@
           <reduceaffliction identifier="chemwithdrawal" strength="0.08" />
           <reduceaffliction identifier="chemaddiction" strength="0.08" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
-          <Affliction identifier="he-sleep" amount="1" />
+          <Affliction identifier="he-sleep" amount="2" />
         </StatusEffect>
       </Controller>
       <GreaterComponent TimeFrame="0" canbeselected="false" canbepicked="false" allowingameediting="false" />
@@ -186,9 +186,9 @@
           <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
           <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
-          <Affliction identifier="he-sleep" amount="1" />
+          <Affliction identifier="he-sleep" amount="2" />
         </StatusEffect>
       </Controller>
       <GreaterComponent TimeFrame="0" canbeselected="false" canbepicked="false" allowingameediting="false" />
@@ -237,9 +237,9 @@
           <reduceaffliction identifier="chemwithdrawal" strength="0.06" />
           <reduceaffliction identifier="chemaddiction" strength="0.06" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" LowPassMultiplier="0.1" setvalue="true" interval="0.5" duration="0.51" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnActive" target="This,Character" tags="sleeping" multiplyafflictionsbymaxvitality="true">
           <Conditional timeframe="gte 1" targetitemcomponent="GreaterComponent" />
-          <Affliction identifier="he-sleep" amount="1" />
+          <Affliction identifier="he-sleep" amount="2" />
         </StatusEffect>
       </Controller>
       <GreaterComponent TimeFrame="0" canbeselected="false" canbepicked="false" allowingameediting="false" />
