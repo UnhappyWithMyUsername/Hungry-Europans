@@ -610,7 +610,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" origin="0.5,0.5" maxcondition="20" fadein="true" />
       <Body width="52" height="2" density="25" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" condition="-2" interval="0.1" disabledeltatime="true">
+        <StatusEffect type="OnSecondaryUse" target="This" condition="-0.75" interval="0.1" disabledeltatime="true" comparison="And">
           <Conditional HasStatusTag="neq usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
         </StatusEffect>
@@ -640,7 +640,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" origin="0.5,0.5" maxcondition="20" fadein="true" />
       <Body width="52" height="2" density="25" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" condition="-2" interval="0.1" disabledeltatime="true">
+        <StatusEffect type="OnSecondaryUse" target="This" condition="-0.75" interval="0.1" disabledeltatime="true" comparison="And">
           <Conditional HasStatusTag="neq usingspoon" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyspoon" targetcontainer="true" />
         </StatusEffect>
