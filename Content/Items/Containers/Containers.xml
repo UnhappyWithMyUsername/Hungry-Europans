@@ -330,6 +330,7 @@
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.796" origin="0.049,-0.022">
         <Conditional HasStatusTag="opened" />
       </DecorativeSprite>
+      <!-- TODO: Offload the "Always" SEs to a separate item that gets spawned in by the kitchen counter. The spawned in item then does these always checks once and then deletes itself so the SEs are not constantly rechecked if they didn't succeed -->
       <!-- ItemComponent is used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
         <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
@@ -339,104 +340,9 @@
         </StatusEffect>
 
         <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
-        <!-- OVEN | check if there is a pre-placed oven -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_oven" duration="0.5" oneshot="true">
-          <Conditional HasTag="oven_installed" />
-        </StatusEffect>
-        <!-- spawn the oven installation item inside of the kitchen counter, if a pre-placed oven was found -->
         <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_oven" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-oven_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+          <SpawnItem identifier="he-kitchencountercheckitem" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
         </StatusEffect>
-
-        <!-- STOVE | check if there is a pre-placed stove -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_stove" duration="0.5" oneshot="true">
-          <Conditional HasTag="stove_installed" />
-        </StatusEffect>
-        <!-- spawn the stove installation item inside of the kitchen counter, if a pre-placed stove was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_stove" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-stove_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-        
-        <!-- ELECTRIC GRILL | check if there is a pre-placed electric grill -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_electricgrill" duration="0.5" oneshot="true">
-          <Conditional HasTag="electricgrill_installed" />
-        </StatusEffect>
-        <!-- spawn the electric grill installation item inside of the kitchen counter, if a pre-placed electric grill was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_electricgrill" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-electricgrill_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- SINK | check if there is a pre-placed sink -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_sink" duration="0.5" oneshot="true">
-          <Conditional HasTag="sink_installed" />
-        </StatusEffect>
-        <!-- spawn the sink installation item inside of the kitchen counter, if a pre-placed sink was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_sink" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="sink_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- CUTTING BOARD | check if there is a pre-placed cutting board -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_cuttingboard" duration="0.5" oneshot="true">
-          <Conditional HasTag="cuttingboard_installed" />
-        </StatusEffect>
-        <!-- spawn the cutting board installation item inside of the kitchen counter, if a pre-placed cutting board was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_cuttingboard" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-cuttingboard_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- FRYER | check if there is a pre-placed fryer -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_fryer" duration="0.5" oneshot="true">
-          <Conditional HasTag="fryer_installed" />
-        </StatusEffect>
-        <!-- spawn the fryer installation item inside of the kitchen counter, if a pre-placed fryer was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_fryer" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-fryer_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- COFFEE MACHINE | check if there is a pre-placed coffee machine -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_coffeemachine" duration="0.5" oneshot="true">
-          <Conditional HasTag="coffeemachine_installed" />
-        </StatusEffect>
-        <!-- spawn the coffee machine installation item inside of the kitchen counter, if a pre-placed coffee machine was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_coffeemachine" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="coffeemachine_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- BLENDER | check if there is a pre-placed blender -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_blender" duration="0.5" oneshot="true">
-          <Conditional HasTag="blender_installed" />
-        </StatusEffect>
-        <!-- spawn the blender installation item inside of the kitchen counter, if a pre-placed blender was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_blender" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-blender_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- CHECK COMPLETED | apply the "check_completed" tag to the container after running the above StatusEffects to prevent a rare item duplication from StatusEffects triggering when they shouldn't -->
-        <StatusEffect type="Always" target="This" SetTags="check_completed" setvalue="true" oneshot="true" />
       </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
@@ -993,7 +899,7 @@
         <output name="power_out" displayname="connection.powerout" />
       </ConnectionPanel>
     </Item>
-    
+
     <Item name="Kitchen Pantry" identifier="he-kitchencounter2" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="true" isshootable="true" scale="0.5" GrabWhenSelected="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,301,405,204" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.795" origin="0.21,0.275">
@@ -1011,80 +917,9 @@
         </StatusEffect>
 
         <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
-        <!-- STOVE | check if there is a pre-placed stove -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_stove" duration="0.5" oneshot="true">
-          <Conditional HasTag="stove_installed" />
-        </StatusEffect>
-        <!-- spawn the stove installation item inside of the kitchen counter, if a pre-placed stove was found -->
         <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_stove" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-stove_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+          <SpawnItem identifier="he-kitchencountercheckitem" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
         </StatusEffect>
-        
-        <!-- ELECTRIC GRILL | check if there is a pre-placed electric grill -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_electricgrill" duration="0.5" oneshot="true">
-          <Conditional HasTag="electricgrill_installed" />
-        </StatusEffect>
-        <!-- spawn the electric grill installation item inside of the kitchen counter, if a pre-placed electric grill was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_electricgrill" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-electricgrill_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- CUTTING BOARD | check if there is a pre-placed cutting board -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_cuttingboard" duration="0.5" oneshot="true">
-          <Conditional HasTag="cuttingboard_installed" />
-        </StatusEffect>
-        <!-- spawn the cutting board installation item inside of the kitchen counter, if a pre-placed cutting board was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_cuttingboard" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-cuttingboard_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- FRYER | check if there is a pre-placed fryer -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_fryer" duration="0.5" oneshot="true">
-          <Conditional HasTag="fryer_installed" />
-        </StatusEffect>
-        <!-- spawn the fryer installation item inside of the kitchen counter, if a pre-placed fryer was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_fryer" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-fryer_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- COFFEE MACHINE | check if there is a pre-placed coffee machine -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_coffeemachine" duration="0.5" oneshot="true">
-          <Conditional HasTag="coffeemachine_installed" />
-        </StatusEffect>
-        <!-- spawn the coffee machine installation item inside of the kitchen counter, if a pre-placed coffee machine was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_coffeemachine" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="coffeemachine_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- BLENDER | check if there is a pre-placed blender -->
-        <StatusEffect type="Always" target="This,NearbyItems" range="140" StatusEffectTags="has_blender" duration="0.5" oneshot="true">
-          <Conditional HasTag="blender_installed" />
-        </StatusEffect>
-        <!-- spawn the blender installation item inside of the kitchen counter, if a pre-placed blender was found -->
-        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
-          <Conditional HasStatusTag="has_blender" />
-          <Conditional HasTag="neq check_completed" />
-          <Conditional attached="true" />
-          <SpawnItem identifier="he-blender_installation" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-        </StatusEffect>
-
-        <!-- CHECK COMPLETED | apply the "check_completed" tag to the container after running the above StatusEffects to prevent a rare item duplication from StatusEffects triggering when they shouldn't -->
-        <StatusEffect type="Always" target="This" SetTags="check_completed" setvalue="true" oneshot="true" />
       </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
@@ -1965,46 +1800,160 @@
     </Item>
     
   
-  <!-- //// SWAPPABLES  //// -->
-  <!-- //// SWAPPABLES  //// -->
-  <!-- //// SWAPPABLES  //// -->
-  
-  <!-- OVERRIDE to Make ULD swappable -->
-  <Item name="" identifier="unitloaddevice" tags="cargocontainer,utilitypoint" linkable="true" pickdistance="150" scale="0.5" waterproof="true" allowedupgrades="utilitypoint" >
-    <Sprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.8" sourcerect="0,0,567,446" origin="0.5,0.5" />
-    <DecorativeSprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.85" sourcerect="0,457,567,446" origin="0.5,0.5" />
-    <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
-    <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" slotsperrow="4" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
-      <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
-      <Containable items="crate" excludeditems="kitchenupgrade" />
-    </ItemContainer>
-    <SwappableItem price="3000" replacementonuninstall="emptylargedevice" origin="200,150" swapidentifier="largedevice">
-      <SchematicSprite texture="Content/Items/Containers/UnitLoadDevice.png" sourcerect="0,0,567,446" />
-    </SwappableItem>
-  </Item>
+    <!-- //// SWAPPABLES  //// -->
+    <!-- //// SWAPPABLES  //// -->
+    <!-- //// SWAPPABLES  //// -->
+    
+    <!-- OVERRIDE to Make ULD swappable -->
+    <Item name="" identifier="unitloaddevice" tags="cargocontainer,utilitypoint" linkable="true" pickdistance="150" scale="0.5" waterproof="true" allowedupgrades="utilitypoint" >
+      <Sprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.8" sourcerect="0,0,567,446" origin="0.5,0.5" />
+      <DecorativeSprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.85" sourcerect="0,457,567,446" origin="0.5,0.5" />
+      <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
+      <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" slotsperrow="4" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
+        <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
+        <Containable items="crate" excludeditems="kitchenupgrade" />
+      </ItemContainer>
+      <SwappableItem price="3000" replacementonuninstall="emptylargedevice" origin="200,150" swapidentifier="largedevice">
+        <SchematicSprite texture="Content/Items/Containers/UnitLoadDevice.png" sourcerect="0,0,567,446" />
+      </SwappableItem>
+    </Item>
 
-  <!-- Swappable Junction Box to power your items -->
-  <Item name="" identifier="junctionboxswappable" nameidentifier="junctionbox" descriptionidentifier="junctionbox" tags="junctionbox,utilitypoint" category="Electrical,Machine" variantof="junctionbox" hideinmenus="true" >
-    <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
-    <SwappableItem price="1600" replacementonuninstall="emptylargedevice" origin="0,0" swapidentifier="largedevice">
-      <SchematicSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="264,1,110,176" scale="0.25" />
-    </SwappableItem>  
-  </Item> 
-  
-  <!-- Empty hardpoint for ULD/JB -->
-  <Item name="" identifier="emptylargedevice" nameidentifier="loosepanel" descriptionidentifier="loosepanel" tags="hidden,utilitypoint" scale="0.7" allowedupgrades="utilitypoint" >
-    <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.8" origin="0.5,0.5" canflipx="false"/>
-    <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
-    <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
-    <trigger x="25" y="-25" width="60" height="60" />
-    <ItemContainer capacity="3" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-      <GuiFrame relativesize="0.27,0.2" anchor="Center" style="ItemUI" />
-      <Containable items="smallitem,mediumitem" />
-    </ItemContainer>
-    <SwappableItem canbebought="false" origin="0,0" swapidentifier="largedevice">
-      <SchematicSprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" scale="0.25" />
-    </SwappableItem>
-  </Item>
+    <!-- Swappable Junction Box to power your items -->
+    <Item name="" identifier="junctionboxswappable" nameidentifier="junctionbox" descriptionidentifier="junctionbox" tags="junctionbox,utilitypoint" category="Electrical,Machine" variantof="junctionbox" hideinmenus="true" >
+      <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
+      <SwappableItem price="1600" replacementonuninstall="emptylargedevice" origin="0,0" swapidentifier="largedevice">
+        <SchematicSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="264,1,110,176" scale="0.25" />
+      </SwappableItem>  
+    </Item> 
+    
+    <!-- Empty hardpoint for ULD/JB -->
+    <Item name="" identifier="emptylargedevice" nameidentifier="loosepanel" descriptionidentifier="loosepanel" tags="hidden,utilitypoint" scale="0.7" allowedupgrades="utilitypoint" >
+      <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.8" origin="0.5,0.5" canflipx="false"/>
+      <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
+      <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
+      <trigger x="25" y="-25" width="60" height="60" />
+      <ItemContainer capacity="3" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.27,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="smallitem,mediumitem" />
+      </ItemContainer>
+      <SwappableItem canbebought="false" origin="0,0" swapidentifier="largedevice">
+        <SchematicSprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" scale="0.25" />
+      </SwappableItem>
+    </Item>
+
+    <!-- //// CHECK ITEM //// -->
+    <!-- //// CHECK ITEM //// -->
+    <!-- //// CHECK ITEM //// -->
+    <Item name="" identifier="he-kitchencountercheckitem" tags="kitchencounter,smallitem,mobilecontainer" category="Hidden" description="" scale="0.5" hideinmenus="true" SpriteColor="255,0,0,255" InventoryIconColor="0,0,0,0" noninteractable="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.510" sourcerect="0,0,507,299" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,507,299" origin="0.5,0.5" />
+      <Body width="50" height="50" bodytype="static" />
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
+        <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
+        <!-- OVEN | check if there is a pre-placed oven -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,oven" range="140" StatusEffectTags="has_oven" duration="0.5" oneshot="true">
+          <Conditional HasTag="oven_installed" />
+        </StatusEffect>
+        <!-- spawn the oven installation item inside of the kitchen counter, if a pre-placed oven was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_oven" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-oven_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- STOVE | check if there is a pre-placed stove -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,stove" range="140" StatusEffectTags="has_stove" duration="0.5" oneshot="true">
+          <Conditional HasTag="stove_installed" />
+        </StatusEffect>
+        <!-- spawn the stove installation item inside of the kitchen counter, if a pre-placed stove was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_stove" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-stove_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+        
+        <!-- ELECTRIC GRILL | check if there is a pre-placed electric grill -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,electricgrill" range="140" StatusEffectTags="has_electricgrill" duration="0.5" oneshot="true">
+          <Conditional HasTag="electricgrill_installed" />
+        </StatusEffect>
+        <!-- spawn the electric grill installation item inside of the kitchen counter, if a pre-placed electric grill was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_electricgrill" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-electricgrill_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- SINK | check if there is a pre-placed sink -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,sink" range="140" StatusEffectTags="has_sink" duration="0.5" oneshot="true">
+          <Conditional HasTag="sink_installed" />
+        </StatusEffect>
+        <!-- spawn the sink installation item inside of the kitchen counter, if a pre-placed sink was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_sink" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="sink_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- CUTTING BOARD | check if there is a pre-placed cutting board -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,cuttingboard" range="140" StatusEffectTags="has_cuttingboard" duration="0.5" oneshot="true">
+          <Conditional HasTag="cuttingboard_installed" />
+        </StatusEffect>
+        <!-- spawn the cutting board installation item inside of the kitchen counter, if a pre-placed cutting board was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_cuttingboard" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-cuttingboard_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- FRYER | check if there is a pre-placed fryer -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,fryer" range="140" StatusEffectTags="has_fryer" duration="0.5" oneshot="true">
+          <Conditional HasTag="fryer_installed" />
+        </StatusEffect>
+        <!-- spawn the fryer installation item inside of the kitchen counter, if a pre-placed fryer was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_fryer" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-fryer_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- COFFEE MACHINE | check if there is a pre-placed coffee machine -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,coffeemachine" range="140" StatusEffectTags="has_coffeemachine" duration="0.5" oneshot="true">
+          <Conditional HasTag="coffeemachine_installed" />
+        </StatusEffect>
+        <!-- spawn the coffee machine installation item inside of the kitchen counter, if a pre-placed coffee machine was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_coffeemachine" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="coffeemachine_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- BLENDER | check if there is a pre-placed blender -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,blender" range="140" StatusEffectTags="has_blender" duration="0.5" oneshot="true">
+          <Conditional HasTag="blender_installed" />
+        </StatusEffect>
+        <!-- spawn the blender installation item inside of the kitchen counter, if a pre-placed blender was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_blender" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-blender_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
+        <!-- CHECK COMPLETED | apply the "check_completed" tag to the container of this item after running the above StatusEffects to prevent trying to spawn the items again on next round start -->
+        <StatusEffect type="Always" target="Parent" SetTags="check_completed" setvalue="true" oneshot="true" />
+        <!-- Delete this item to stop all of its "Always" StatusEffects that haven't succeeded due to unmet conditions from being processed in the background constantly -->
+        <StatusEffect type="Always" target="This" delay="0.1" disabledeltatime="true" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </ItemComponent>
+    </Item>
     
   </Items>
 </Override>
