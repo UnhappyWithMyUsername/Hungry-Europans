@@ -67,6 +67,7 @@
   <Talents file="%ModDir%/Content/Talents/Chef/TalentsChef.xml" />
   <TalentTrees file="%ModDir%/Content/Talents/TalentTrees.xml" />
   <Text file="%ModDir%/Content/Texts/English/English.xml" />
+  <Text file="%ModDir%/Content/Texts/Russian/Russian.xml" />
   <OutpostModule file="%ModDir%/#Testkitchen.sub" />
   <NPCConversations file="%ModDir%/Content/Texts/English/NpcConversations_English.xml" />
   <Character file="%ModDir%/Content/Afflictions/CannibalHusk.xml" />
