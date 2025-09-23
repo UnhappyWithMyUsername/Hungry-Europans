@@ -967,7 +967,7 @@
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,electricgrill_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
+    <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,electricgrill,electricgrill_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="158" height="53" density="30" bodytype="static" />
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1218,160,23" depth="0.796" origin="0.5,-0.355" />
