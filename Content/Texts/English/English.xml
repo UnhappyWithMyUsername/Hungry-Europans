@@ -257,7 +257,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-beerjovianforce>Jovian Force</entityname.he-beerjovianforce><!--Patch 10-->
 <entitydescription.he-beerjovianforce>A beer most popular amongst the Separatists. |Alcoholic Beverage |Increase Psychosis Resistance</entitydescription.he-beerjovianforce><!--Patch 10-->
 <entityname.he-beerliquidascension>Liquid Ascension</entityname.he-beerliquidascension><!--Patch 10-->
-<entitydescription.he-beerliquidascension>A popular beer amongst members of the church of husk on their way to ascension! |Alcoholic Beverage |Increase Psychosis Resistance |Increase Pressure Immunity |Oxygen Not Included |May contain traces of husk parasites</entitydescription.he-beerliquidascension><!--Patch 10-->
+<entitydescription.he-beerliquidascension>A popular beer amongst members of the church of husk on their way to ascension! |Alcoholic Beverage |Increase Psychosis Resistance |Increase Husk Infection Resistance |May contain traces of husk parasites</entitydescription.he-beerliquidascension><!--Patch 19-->
 <entityname.he-beerclownjuice>Clown Juice</entityname.he-beerclownjuice><!--Patch 10-->
 <entitydescription.he-beerclownjuice>A popular beer amongst pranksters. Praise the honkmother! |Alcoholic Beverage |Increase Psychosis Resistance</entitydescription.he-beerclownjuice><!--Patch 10-->
 <entityname.he-beerreaperstribute>Reaper's Tribute</entityname.he-beerreaperstribute><!--Patch 10-->
