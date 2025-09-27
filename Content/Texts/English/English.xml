@@ -461,6 +461,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-emptycancolazero>An empty aluminium can. Can be deconstructed into aluminium or thrown around.</entitydescription.he-emptycancolazero><!--Patch 13-->
 <entityname.he-couwolaexosuit>Limited Edition Couwola Cola Exosuit</entityname.he-couwolaexosuit><!--Patch 13-->
 <entitydescription.he-couwolaexosuit>A limited edition Exosuit produced by Couwola Cola. It is more fuel efficient and allows the wearer to breath oxygen from their surroundings while only using the oxygen tanks when needed.</entitydescription.he-couwolaexosuit><!--Patch 13-->
+<entityname.he-dishwashertablet>Dishwasher Tablet</entityname.he-dishwashertablet><!--Patch 19-->
+<entitydescription.he-dishwashertablet>A chemical tablet used inside dishwashers to clean even the most persistent stains off of tableware.\n- Not safe for consumption!</entitydescription.he-dishwashertablet><!--Patch 19-->
 
 <!-- Gear -->
 <entityname.he-chefscap1>Chef's Hat</entityname.he-chefscap1>
@@ -506,6 +508,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-oven_installation>Used for baking. Needs power.\n- Needs to be installed inside a kitchen counter.</entitydescription.he-oven_installation><!--Patch 19-->
 <entityname.he-oven>Oven</entityname.he-oven><!--Patch 19-->
 <entitydescription.he-oven>Used for baking. Needs power.</entitydescription.he-oven><!--Patch 19-->
+
+<entityname.he-dishwasher_installation>Dishwasher (Installation)</entityname.he-dishwasher_installation><!--Patch 19-->
+<entitydescription.he-dishwasher_installation>Cleans tableware.\n- Needs to be installed inside a kitchen counter.</entitydescription.he-dishwasher_installation><!--Patch 19-->
+<entityname.he-dishwasher>Dishwasher</entityname.he-dishwasher><!--Patch 19-->
+<entitydescription.he-dishwasher>Cleans tableware. Requires power and dishwasher tablets.</entitydescription.he-dishwasher><!--Patch 19-->
+<entityname.he-dishwashermobile>Mobile Dishwasher</entityname.he-dishwashermobile><!--Patch 19-->
+<entitydescription.he-dishwashermobile>A somewhat smaller dishwasher compared to a regular dishwasher, but it can be placed anywhere. Requires power and dishwasher tablets.</entitydescription.he-dishwashermobile><!--Patch 19-->
 
 <entityname.he-cuttingboard_installation>Cutting Board (Installation)</entityname.he-cuttingboard_installation><!--Patch 19-->
 <entitydescription.he-cuttingboard_installation>Used to prepare ingredients.\n- Needs to be installed inside a kitchen counter or kitchen pantry.</entitydescription.he-cuttingboard_installation><!--Patch 19-->
