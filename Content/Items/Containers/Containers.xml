@@ -379,8 +379,8 @@
       </Fabricate>
       <ItemContainer capacity="20" canbeselected="true" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
-        <!-- Icon - Oven -->
-        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="20" sourcerect="171,938,85,85" origin="0.5,0.5" />
+        <!-- Icon - Oven/Dishwasher -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="20" sourcerect="426,853,85,85" origin="0.5,0.5" />
         <!-- Icon - Stove/Electric Grill -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="21" sourcerect="1,853,85,85" origin="0.5,0.5" />
         <!-- Icon - Sink -->
@@ -392,7 +392,7 @@
         <!--Regular Slots-->
         <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
         <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
-        <!-- oven -->
+        <!-- oven/dishwasher -->
         <SubContainer capacity="1" maxstacksize="1">
           <Containable identifiers="he-oven_installation,installationblocker">
             <!--particles + sound loop-->
@@ -436,6 +436,58 @@
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="oven_installed" range="140" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifiers="he-dishwasher_installation,installationblocker">
+            <!--particles + sound loop-->
+            <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_dishwasher" />
+              <Conditional HasTag="dishwasher" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="77,-27" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_dishwasher" />
+              <Conditional HasTag="dishwasher" targetcontaineditem="true" />
+              <Sound file="Content/Sounds/RepairLoop.ogg" volume="1" range="300" frequencymultiplier="1" selectionmode="Random" />
+              <ParticleEmitter particle="MistSmoke" particlespersecond="100" anglemin="90" anglemax="90" distancemin="0" distancemax="30" velocitymin="-30" velocitymax="-50" scalemin="3" scalemax="5" />
+              <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
+            </StatusEffect>
+            <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
+            <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="false" />
+              <Conditional HasStatusTag="neq has_dishwasher" />
+              <Conditional HasTag="dishwasher" targetcontaineditem="true" />
+              <SpawnItem identifier="he-dishwasher" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="77,-27" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
+              <Conditional flippedx="true" />
+              <Conditional HasStatusTag="neq has_dishwasher" />
+              <Conditional HasTag="dishwasher" targetcontaineditem="true" />
+              <SpawnItem identifier="he-dishwasher" spawnposition="This" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="dishwasher_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
               <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
@@ -1850,6 +1902,18 @@
       <Body width="50" height="50" bodytype="static" />
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
         <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
+        <!-- DISHWASHER | check if there is a pre-placed dishwasher -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,dishwasher" range="140" StatusEffectTags="has_dishwasher" duration="0.5" oneshot="true">
+          <Conditional HasTag="dishwasher_installed" />
+        </StatusEffect>
+        <!-- spawn the oven installation item inside of the kitchen counter, if a pre-placed oven was found -->
+        <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
+          <Conditional HasStatusTag="has_dishwasher" />
+          <Conditional HasTag="neq check_completed" targetcontainer="true" />
+          <Conditional attached="true" targetcontainer="true" />
+          <SpawnItem identifier="he-dishwasher_installation" spawnposition="SameInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
+        </StatusEffect>
+
         <!-- OVEN | check if there is a pre-placed oven -->
         <StatusEffect type="Always" target="This,NearbyItems" targets="kitchencounter,oven" range="140" StatusEffectTags="has_oven" duration="0.5" oneshot="true">
           <Conditional HasTag="oven_installed" />
