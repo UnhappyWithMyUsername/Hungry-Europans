@@ -878,6 +878,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <interaction.refill>Refill</interaction.refill><!--Patch 13-->
 <interaction.open>Open</interaction.open><!--Patch 13-->
 <interaction.disassemble>Disassemble</interaction.disassemble><!--Patch 19-->
+<interaction.start>Start</interaction.start><!--Patch 19-->
+<interaction.cancel>Cancel</interaction.cancel><!--Patch 19-->
 <!-- ROOM NAMES -->
 <roomname.kitchen>Kitchen</roomname.kitchen><!--Patch 10-->
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
