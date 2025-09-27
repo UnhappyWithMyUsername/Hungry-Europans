@@ -477,7 +477,7 @@
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtyplate" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <!--<Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
@@ -499,7 +499,12 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-      </Projectile>
+      </Projectile>-->
+      <Holdable canbepicked="true" characterusable="false" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+      <!-- repair the item when it is used by a dishwasher -->
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+      </ItemComponent>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="2" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
         <Containable items="emptyplate,dirtyplate">
@@ -544,7 +549,7 @@
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtybowl" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <!--<Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
@@ -566,7 +571,12 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-      </Projectile>
+      </Projectile>-->
+      <Holdable canbepicked="true" characterusable="false" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+      <!-- repair the item when it is used by a dishwasher -->
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+      </ItemComponent>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="3" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20"  origin="0.5,0.5" />
         <Containable items="emptybowl,dirtybowl">
@@ -593,7 +603,7 @@
     </Item>    
     
     <!-- TODO: Fork inventoryicon -->
-    <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -620,10 +630,14 @@
           <SpawnItem identifier="he-dirtyfork" spawnposition="SameInventory" Equip="true" Equipped="true" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
+      <!-- repair the item when it is used by a dishwasher -->
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+      </ItemComponent>
     </Item>
 
     <!-- TODO: Spoon inventoryicon -->
-    <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -650,6 +664,10 @@
           <SpawnItem identifier="he-dirtyspoon" spawnposition="SameInventory" Equip="true" Equipped="true" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
+      <!-- repair the item when it is used by a dishwasher -->
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+      </ItemComponent>
     </Item>
 
     <!--////////// DIRTY TABLEWARE \\\\\\\\\\-->
@@ -665,7 +683,7 @@
       <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
         <RequiredItem tag="foodplate" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <!--<Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
@@ -687,7 +705,20 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-      </Projectile>
+      </Projectile>-->
+      <Holdable canbepicked="true" characterusable="false" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 100" />
+          <Remove />
+          <SpawnItem identifier="he-emptyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="2" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
         <Containable items="emptyplate,dirtyplate">
@@ -725,7 +756,7 @@
       <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
         <RequiredItem tag="foodbowl" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <!--<Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
@@ -747,7 +778,20 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-      </Projectile>
+      </Projectile>-->
+      <Holdable canbepicked="true" characterusable="false" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 100" />
+          <Remove />
+          <SpawnItem identifier="he-emptybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="3" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20"  origin="0.5,0.5" />
         <Containable items="emptybowl,dirtybowl">
@@ -774,12 +818,24 @@
     </Item>    
         
     <!-- TODO: Dirty Fork inventoryicon -->
-    <Item name="Dirty Fork" identifier="he-dirtyfork" Tags="smallitem,dirtytableware,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" description="A dirty fork that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Dirty Fork" identifier="he-dirtyfork" Tags="smallitem,dirtytableware,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" description="A dirty fork that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" depth="0.525" origin="0.5,-0.9"  />
       <Body width="52" height="2" density="25" />
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 100" />
+          <Remove />
+          <SpawnItem identifier="he-fork" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="Character" interval="0.1" disabledeltatime="true" AllowWhenBroken="true" comparison="And">
           <Conditional HasStatusTag="neq usingfork" />
@@ -791,12 +847,24 @@
     </Item>
         
     <!-- TODO: Dirty Spoon inventoryicon -->
-    <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" depth="0.525" origin="0.5,-0.9"  />
       <Body width="52" height="2" density="25" />
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 100" />
+          <Remove />
+          <SpawnItem identifier="he-spoon" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="Character" interval="0.1" disabledeltatime="true" AllowWhenBroken="true" comparison="And">
           <Conditional HasStatusTag="neq usingspoon" />
