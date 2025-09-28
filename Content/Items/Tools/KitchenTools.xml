@@ -72,6 +72,10 @@
           <Remove />
         </StatusEffect>
       </Holdable>
+      <!-- repair the item when it is used by a dishwasher -->
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+      </ItemComponent>
     </Item>
     
     <Item name="Pot with Water" identifier="he-potwithwater" category="Equipment" maxstacksize="1" Tags="smallitem,pot,waterpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -86,6 +90,18 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 50" />
+          <Remove />
+          <SpawnItem identifier="he-pot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptypot">
@@ -112,6 +128,18 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 50" />
+          <Remove />
+          <SpawnItem identifier="he-pot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
     </Item>
 
     <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem,cleaver" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
@@ -456,6 +484,77 @@
       <SkillRequirementHint identifier="butchery" level="100"/>
     </Item>
 
+    <!-- DISHWASHER TABLET-->
+    <Item name="Dishwasher Tablet" identifier="he-dishwashertablet" Tags="smallitem,dishwashertablet,distilleringredient" category="Misc" scale="0.5" maxstacksize="50" maxstacksizecharacterinventory="10" cargocontaineridentifier="chemicalcrate" description="" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
+      <PreferredContainer primary="dishwasher_installed" amount="1" spawnprobability="1"/>
+      <PreferredContainer secondary="kitchen,crewcab" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="90,365,48,60" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="227,29,18,11" depth="0.6" origin="0.5,0.5" />
+      <Body width="12" height="5" density="10.5" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,0" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="InWater" target="This" condition="-1">
+          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" frequencymultiplier="2" type="OnActive" range="500.0" loop="true" volume="1.5" />
+          <ParticleEmitter particle="damagebubbles" particlespersecond="4" scalemin="0.1" scalemax="0.3" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+
+    <!-- DISHWASHER TABLET BAG -->
+    <Item name="Bag of Dishwasher Tablets" identifier="he-dishwashertabletbag" health="51" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="123,42,48,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="123,42,48,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="123,42,48,67" depth="0.525" origin="0.5,0.85"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="173,42,48,67" depth="0.6" maxcondition="99.99" />
+      <Price baseprice="175" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="3" maxavailable="6" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="12" />
+      </Price>
+      <Fabricate suitablefabricators="vendingmachine" requiredtime="3" requiredmoney="175" fabricationlimitmin="0" fabricationlimitmax="7" />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="46" height="64" density="9" />
+      <SuitableTreatment type="hunger" suitability="20" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- Unwrap -->
+        <StatusEffect type="OnUse" target="This" Condition="50" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 51" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
+        <!-- Apply "opened" tag after a delay to avoid accidentally taking one tablet instantly after unwrapping -->
+        <StatusEffect type="OnUse" target="This" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional Condition="lt 51" />
+          <Conditional HasTag="opened" />
+          <SpawnItem identifier="he-dishwashertablet" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+        <!-- animation -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,-10" setvalue="true" duration="0.2" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional Condition="lt 51" />
+          <Conditional HasTag="opened" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.2" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional Condition="lt 51" />
+          <Conditional HasTag="opened" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.2" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="0.3" disabledeltatime="true" oneshot="true">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+
     <!--////////// CLEAN TABLEWARE \\\\\\\\\\-->
     <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Ingredients" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
@@ -712,9 +811,9 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <!-- increase the timeframe value each time the item gets used by a dishwasher -->
         <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
-        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-          <Conditional timeframe="gte 100" />
+          <Conditional timeframe="gte 50" />
           <Remove />
           <SpawnItem identifier="he-emptyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
@@ -785,9 +884,9 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <!-- increase the timeframe value each time the item gets used by a dishwasher -->
         <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
-        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-          <Conditional timeframe="gte 100" />
+          <Conditional timeframe="gte 50" />
           <Remove />
           <SpawnItem identifier="he-emptybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
@@ -829,9 +928,9 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <!-- increase the timeframe value each time the item gets used by a dishwasher -->
         <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
-        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-          <Conditional timeframe="gte 100" />
+          <Conditional timeframe="gte 50" />
           <Remove />
           <SpawnItem identifier="he-fork" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
@@ -858,9 +957,9 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <!-- increase the timeframe value each time the item gets used by a dishwasher -->
         <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
-        <!-- when the timeframe value reaches 100 or greater, remove the item and spawn its clean variant in its place -->
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-          <Conditional timeframe="gte 100" />
+          <Conditional timeframe="gte 50" />
           <Remove />
           <SpawnItem identifier="he-spoon" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
