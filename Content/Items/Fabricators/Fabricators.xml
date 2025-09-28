@@ -1359,7 +1359,7 @@
       </Repairable>
       <ItemContainer selectkey="Select" capacity="12" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="4">
         <GuiFrame relativesize="0.25,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
         <Containable items="tableware" />
         <SubContainer capacity="1" maxstacksize="1">
@@ -1383,8 +1383,8 @@
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
       </DecorativeSprite> -->
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1608,225,107,203" origin="0.5,0.5" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1500,225,107,203" origin="0.5,0.5" maxcondition="0" />
       <Body width="101" height="197" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchencounter,refillstation" >
         <RequiredItem items="wrench" type="Equipped" />
@@ -1480,7 +1480,7 @@
       </Repairable>
       <ItemContainer selectkey="Select" capacity="6" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="3">
         <GuiFrame relativesize="0.2,0.4" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="6" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
         <Containable items="tableware" />
         <SubContainer capacity="1" maxstacksize="1">
@@ -1492,72 +1492,6 @@
           </Containable>
         </SubContainer>
       </ItemContainer>
-    </Item>
-    <!-- TODO: Sprite, Body, Holdpos | Also needs a package item you can take one out of instead of buying loose tablets -->
-    <Item name="Dishwasher Tablet" identifier="he-dishwashertablet" Tags="smallitem,dishwashertablet,distilleringredient" category="Misc" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
-      <PreferredContainer primary="dishwasher_installed" amount="1" spawnprobability="1"/>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
-      <PreferredContainer secondary="crewcab" />
-      <Price baseprice="60" minavailable="6" >
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="8" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="10" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" />
-        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="80" fabricationlimitmin="5" fabricationlimitmax="10"/>
-      <Fabricate suitablefabricators="distiller" requiredtime="220" amount="4">
-        <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="sugar" amount="1" />
-        <RequiredItem identifier="yeastshroom" amount="1" MinCondition="0.0" UseCondition="True" />
-      </Fabricate>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
-      <Body width="30" height="55" density="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
-        <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-20.0" disabledeltatime="true" >
-          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="Limb" duration="10">
-          <Conditional infection="gt 0" />
-          <ReduceAffliction identifier="infection" amount="0.4" />
-          <Affliction identifier="burn" amount="0.15" /> 
-        </StatusEffect>        
-        
-        <!-- Unbottle -->
-        <StatusEffect type="OnUse" target="This" Condition="99" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
-          <Conditional condition="gte 100" />
-          <Conditional HasTag="neq opened" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>
-        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
-        <StatusEffect type="OnUse" target="This" aimpos="26,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
-                
-        <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-10.0" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional condition="lt 100" />
-          <Conditional HasTag="opened" />
-          <Affliction identifier="he-internalburn" amount="8" />
-          <Affliction identifier="psychosisresistance" amount="80" />
-          <Affliction identifier="applydrunkfast" amount="6.0" />
-          <ReduceAffliction identifier="psychosis" amount="10.0" />
-          <ReduceAffliction identifier="hallucinating" amount="10.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
-          <Remove />
-        </StatusEffect>
-      </Holdable>
     </Item>
   </Items>
 </Override>
