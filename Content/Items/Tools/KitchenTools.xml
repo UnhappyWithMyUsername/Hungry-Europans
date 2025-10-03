@@ -124,8 +124,8 @@
       <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
         <RequiredItem tag="fullpot" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="235,64,58,47" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="235,64,58,47" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
       <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
