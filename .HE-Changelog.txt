@@ -36,6 +36,13 @@ Low:
 
 [hr]19/09/2025[/hr]
 
+[b]Additions:[/b]
+[List]
+[*] Added "Mobile Dishwasher" which can be used to clean more tableware at once
+[*] Added "Dishwasher Tablet" which is required for dishwashers to function
+[*] Added "Bag of Dishwasher Tablets" which contains 50 dishwasher tablets
+[/List]
+
 [b]Changes:[/b] 
 [List]
 [*] Changed power transfer for kitchen counter and also added it to the kitchen pantry
