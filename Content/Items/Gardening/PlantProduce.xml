@@ -1056,7 +1056,7 @@
         <Remove />
       </StatusEffect>
     </RangedWeapon>  
-    <ItemContainer capacity="5" maxstacksize="1" hideitems="true" drawinventory="false" containedstateindicatorstyle="bullet" spawnwithid="bananammo,bananammo,bananammo,bananammo,bananammo">
+    <ItemContainer capacity="5" maxstacksize="1" hideitems="true" drawinventory="false" containedstateindicatorstyle="bullet" spawnwithid="bananammo,bananammo,bananammo,bananammo,bananammo" removecontaineditemsondeconstruct="true">
       <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
       <Containable items="bananammo" />
     </ItemContainer>
