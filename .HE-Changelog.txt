@@ -57,6 +57,9 @@ All existing wires are automatically connected to power_in so you may need to sh
 [*] Fixed Refrigerators not being compatible with Neurotrauma organs and limbs
 [*] Fixed collision body of glasses being too large
 [*] Fixed Petraptors not consuming human meat
+[*] Fixed ice cream not freezing in refrigerators
+[*] Fixed cannibals being unable to speak
+[*] Fixed projectiles spawning in the deconstructor when deconstructing the bananagun
 [/List]
 
 
