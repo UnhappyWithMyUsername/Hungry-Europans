@@ -6,7 +6,7 @@
   
     <!-- DAIRY PRODUCTS -->
     <!--ICE CREAM - MILKY-->
-    <Item name="Box of Milky Ice Cream Base" identifier="he-icecreambasemilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Milky Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Milky Ice Cream Base" identifier="he-icecreambasemilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Milky Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -22,9 +22,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -32,9 +33,9 @@
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" interval="1" stackable="false">
           <Conditional condition="eq 100" />
@@ -49,7 +50,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Box of Milky Ice Cream" identifier="he-icecreamboxmilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Milky Ice Cream. People say they feel more resilient for a longer period of time after eating it. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Milky Ice Cream" identifier="he-icecreamboxmilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Milky Ice Cream. People say they feel more resilient for a longer period of time after eating it. A full box can yield up to 16 scoops of ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -58,9 +59,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -91,9 +93,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -143,7 +146,7 @@
     </Item>
 
     <!--ICE CREAM - POMEGRENADE-->
-    <Item name="Box of Pomegrenade Ice Cream Base" identifier="he-icecreambasepomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pomegrenade Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Pomegrenade Ice Cream Base" identifier="he-icecreambasepomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pomegrenade Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -159,9 +162,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -169,9 +173,9 @@
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" interval="1" stackable="false">
           <Conditional condition="eq 100" />
@@ -186,7 +190,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Box of Pomegrenade Ice Cream" identifier="he-icecreamboxpomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Pomegrenade Ice Cream. A tasty snack that apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Pomegrenade Ice Cream" identifier="he-icecreamboxpomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Pomegrenade Ice Cream. A tasty snack that apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -195,9 +199,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -228,9 +233,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -279,7 +285,7 @@
     </Item>
 
     <!--ICE CREAM - Pop Nut-->
-    <Item name="Box of Pop Nut Ice Cream Base" identifier="he-icecreambasepopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Pop Nut Ice Cream Base" identifier="he-icecreambasepopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -295,9 +301,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -305,9 +312,9 @@
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" interval="1" stackable="false">
           <Conditional condition="eq 100" />
@@ -322,7 +329,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Box of Pop Nut Ice Cream" identifier="he-icecreamboxpopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Pop Nut Ice Cream" identifier="he-icecreamboxpopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -331,9 +338,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -364,9 +372,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -415,7 +424,7 @@
     </Item>
 
     <!--ICE CREAM - Bubble Berry-->
-    <Item name="Box of Bubble Berry Ice Cream Base" identifier="he-icecreambasebubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Bubble Berry Ice Cream Base" identifier="he-icecreambasebubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -431,9 +440,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -441,9 +451,9 @@
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" interval="1" stackable="false">
           <Conditional condition="eq 100" />
@@ -458,7 +468,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Box of Bubble Berry Ice Cream" identifier="he-icecreamboxbubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
+    <Item name="Box of Bubble Berry Ice Cream" identifier="he-icecreamboxbubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="mediumitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.796" origin="0.5,0.78"  />
@@ -467,9 +477,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
@@ -500,9 +511,10 @@
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+          <Conditional HasTag="eq refrigerated" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
