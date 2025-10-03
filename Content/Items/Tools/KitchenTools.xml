@@ -604,7 +604,7 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
       </ItemComponent>
-      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="2" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
+      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="2" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="false" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
         <Containable items="emptyplate,dirtyplate">
         </Containable>
@@ -676,7 +676,7 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
       </ItemComponent>
-      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="3" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
+      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="3" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="false" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20"  origin="0.5,0.5" />
         <Containable items="emptybowl,dirtybowl">
         </Containable>
@@ -818,7 +818,7 @@
           <SpawnItem identifier="he-emptyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="2" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
+      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="2" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="false" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
         <Containable items="emptyplate,dirtyplate">
         </Containable>
@@ -891,7 +891,7 @@
           <SpawnItem identifier="he-emptybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="3" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
+      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="3" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="false" allowdraganddrop="false" QuickUseMovesItemsInside="false" >
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20"  origin="0.5,0.5" />
         <Containable items="emptybowl,dirtybowl">
         </Containable>
