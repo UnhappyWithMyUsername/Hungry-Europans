@@ -61,8 +61,6 @@ All existing wires are automatically connected to power_in so you may need to sh
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
 [*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
 [*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
-[*] Hygiene affliction washes with clothes on; you are supposed to take clothes off and go in water.
-[*] Kitchen Counter cannot receive power from batteries/relays
 
 
 //////////////////////
@@ -74,7 +72,6 @@ Misc TODOs:
 - Find a way to use lower condition meat since under 50% it can't be used to cook. Maybe throw it out the depth charge tube as decoy? 
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
 - Change drunkness to not apply disoriented while in water and instead slow the character down
-- Skin for Poutine
 - Ethanol gives some radiation resistance
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
 - Fix meat spoiling in fabricators.
