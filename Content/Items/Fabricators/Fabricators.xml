@@ -471,908 +471,8 @@
         <Containable items="bottle" />
       </ItemContainer>
     </Item>
-    
-    <!-- cleans dirty tableware and fills water bottles -->
-    <Item name="Sink (Installation)" identifier="sink_installation" tags="sink,kitchen,kitchenupgrade,crate,ammobox" category="Machines" description="" scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="1,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Price baseprice="250" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
-      </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
-        <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="steel" amount="6" /><!--150-->
-        <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
-        <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
-      </Fabricate>
-      <Deconstruct time="10">
-        <Item identifier="steel" amount="2" />
-      </Deconstruct>
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Sink" identifier="sink" tags="kitchen,sink,sink_installed" category="Machines" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
-      <!-- DecorativeSprite to display the lower half of the sink behind objects -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
-      <Body width="80" height="164" density="15" bodytype="static" />
-      <!--<Price baseprice="250" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
-      </Price>-->
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
-          <Conditional IsActive="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" comparison="And">
-          <RequiredItem items="cleaningagent" type="contained" />
-          <RequiredItem items="dirtytableware" type="contained" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="500" volume="1" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" >
-          <!-- <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="0.0" particlespersecond="30" colormultiplier="50,50,255,255" lifetimemultiplier="0.1" /> -->
-        </StatusEffect>
-      </Fabricator>
-      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" type="OnActive" volume="1.5" range="450" loop="true" />
-        <!-- while the pump is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" tags="stop" duration="0.1" comparison="OR">
-          <Conditional IsActive="false" />
-        </StatusEffect>
-        <!-- while the pump is on, check for the "stop" status tag to play the end sound effect and turn the pump off -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
-          <Conditional HasStatusTag="eq stop" />
-          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkStopping.ogg" loop="false" range="500" volume="2" selectionmode="All" /> -->
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
-        </StatusEffect>
-      </ItemComponent>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-30" handle1="-60,-40" handle2="-20,-60">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="5" maxstacksize="8" hideitems="true" allowuioverlap="true">
-        <Containable items="pot,emptybottle,bottle,tableware,cleaningagent,wateringtool" />
-        <!-- TODO: adjust these icons for filter and hose, disabled for now-->
-        <!-- <SlotIcon slotindex="2" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" /> -->
-        <!-- <SlotIcon slotindex="3" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,320,64,64" origin="0.5,0.5" /> -->
-        <!-- <SubContainer capacity="1">
-          <Containable items="waterfilter" />
-        </SubContainer>
-        <SubContainer capacity="1">
-          <Containable items="hose" />
-        </SubContainer> -->
-      </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
-        <Containable items="pot,emptybottle,bottle,tableware,wateringtool" />
-      </ItemContainer>
-    </Item> 
-    
-    <!-- TODO: inventory icon w knife? -->
-    <!-- chops ingredients as long as you interact with it  -->
-    <Item name="Cutting Board (Installation)" identifier="he-cuttingboard_installation" tags="cuttingboard,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" impactsoundtag="impact_metal_light" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="385,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Price baseprice="99" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="1" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="2" maxavailable="2" />
-      </Price>
-      <Deconstruct time="5">
-        <Item identifier="plastic" amount="1" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="40">
-        <RequiredItem identifier="divingknife" amount="1" />
-        <RequiredItem identifier="plastic" amount="3"/>
-      </Fabricate>
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,cuttingboard_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="true" canflipy="false">
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Body width="123" height="66" density="30" bodytype="static" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.784" origin="0.45,0.44" />
-      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.786" origin="0.5,0.38" comparison="and" >
-        <IsActiveConditional IsActive="False" targetitemcomponent="Fabricator" />
-      </DecorativeSprite>
-      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.786" origin="0.5,0.5" offset="0,-15" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="3" comparison="and" >
-        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
-        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
-      </DecorativeSprite>
-      <Fabricator canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
-      </Fabricator>
-      <Controller allowingameediting="false" UserPos="55,0" direction="Left" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
-        <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
-        <limbposition limb="RightHand" position="100,-40" allowusinglimb="false" />
-      </Controller>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.785"/>
-    </Item>
-    
-    <!-- cooks things in a pot? -->
-    <Item name="Stove (Installation)" identifier="he-stove_installation" tags="stove,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="97,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="steel" amount="2"/>
-        <Item identifier="titaniumaluminiumalloy" amount="2"/>
-        <Item identifier="fpgacircuit" amount="1"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="5"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
-        <RequiredItem identifier="fpgacircuit" amount="2"/>
-        <RequiredItem identifier="plastic" amount="2"/>
-      </Fabricate>
-      <Price baseprice="1199" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Stove" identifier="he-stove" tags="stove,stove_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,84,162,35" depth="0.796" origin="0.47,0.86" />
-      <!-- DecorativeSprite to display the pan when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1753,105,76,10" origin="0.69,0.9" depth="0.793" comparison="And">
-        <IsActiveConditional HasTag="pan" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <!-- DecorativeSprite to display the pot when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,162,50" origin="0.47,0.95" depth="0.795" comparison="And">
-        <IsActiveConditional HasTag="pot" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <!-- DecorativeSprite to display the kettle when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.65,0.99" depth="0.794" comparison="And">
-        <IsActiveConditional HasTag="kettle" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,137,162,35" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,190,162,35" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
-      <Body width="162" height="15" density="30" bodytype="static" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This">
-          <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="This" condition="-0.05">
-          <Conditional Voltage="gt 0.5" />
-        </StatusEffect>
-        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
-        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional voltage="gt 0.1" />
-          <Conditional condition="lt 50" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
-        </StatusEffect>
-      </Fabricator>
-      <LightComponent LightColor="200,120,80,180" LightOffset="0,0" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="1" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And" scale="1.0">
-        <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,81,162,6" origin="0.47,0.85" />
-        <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
-      </LightComponent>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <input name="power_in" displayname="connection.powerin" />
-        <output name="condition_out" displayname="connection.conditionout" />
-      </ConnectionPanel>
-      <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-      </Repairable>
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
-    </Item>
 
-    <!-- cooks things  -->
-    <Item name="Oven (Installation)" identifier="he-oven_installation" tags="oven,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="193,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="steel" amount="4"/>
-        <Item identifier="titaniumaluminiumalloy" amount="2"/>
-        <Item identifier="fpgacircuit" amount="1"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="8"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="3"/>
-        <RequiredItem identifier="fpgacircuit" amount="2"/>
-      </Fabricate>
-      <Price baseprice="1499" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Oven" identifier="he-oven" tags="oven,oven_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.799" sourcerect="1882,429,165,188" origin="0.5,0.5" />
-      <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
-        <IsActiveConditional Condition="gt 0.0" />
-        <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
-      </DecorativeSprite> -->
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
-      <Body width="165" height="188" density="30" bodytype="static" />
-      <Fabricator canbeselected="true" selectkey="Select" powerconsumption="300.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/OvenInteract.ogg" volume="1" range="450" />
-        </StatusEffect>
-        <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
-        <LightComponent range="60.0" lightcolor="190,120,35,180" powerconsumption="1" Flicker="0.4" FlickerSpeed="0.1" IsOn="true" castshadows="false" allowingameediting="false">
-          <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" />
-        </LightComponent>
-        <StatusEffect type="OnActive" targettype="This">
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Oven.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" targettype="This" IsOn="false">
-          <Conditional attached="false" targetitemcomponentname="Holdable"/>
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="This" condition="-0.05">
-          <Conditional Voltage="gt 0.5" />
-        </StatusEffect>
-        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
-        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional voltage="gt 0.1" />
-          <Conditional condition="lt 50" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
-        </StatusEffect>
-      </Fabricator>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <input name="power_in" displayname="connection.powerin" />
-        <output name="condition_out" displayname="connection.conditionout" />
-      </ConnectionPanel>
-      <Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
-        <RequiredSkill identifier="mechanical" level="55" />
-        <RequiredItem items="wrench" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
-        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-          <Affliction identifier="lacerations" strength="5" />
-          <Affliction identifier="stun" strength="4" />
-        </StatusEffect>
-      </Repairable>
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
-    </Item>
-    
-    <!-- fries things using oil, overfrying causes fire, water causes explosion -->
-    <Item name="Fryer (Installation)" identifier="he-fryer_installation" tags="fryer,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="481,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="aluminium" amount="2"/>
-        <Item identifier="fpgacircuit" amount="1"/>
-      </Deconstruct>
-      <Fabricate selectkey="Select" suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="3"/>
-        <RequiredItem identifier="aluminium" amount="4"/>
-        <RequiredItem identifier="fpgacircuit" amount="2"/>
-        <RequiredItem identifier="plastic" amount="2"/>
-      </Fabricate>
-      <Price baseprice="999" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Fryer" identifier="he-fryer" tags="fryer,fryer_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1975,228,72,66" origin="0.5,0.20" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1975,228,72,66" origin="0.5,0.5" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" >
-        <IsActiveConditional Condition="gt 0.0" />
-        <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="LightComponent" />
-      </DecorativeSprite>
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1975,295,72,66" origin="0.5,0.20" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1975,362,72,66" origin="0.5,0.20" maxcondition="0" />
-      <Body width="72" height="66" density="30" bodytype="static" />
-      <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
-        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.1">
-          <Conditional HasStatusTag="activefryer" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="This" tags="activefryer" condition="-0.02" interval="0.1" duration="0.2" comparison="And">
-          <RequiredItem identifier="he-cookingoil" type="Contained" />
-          <RequiredItem tag="allowinfryer" type="Contained" />
-          <Conditional Voltage="gt 0.5" />
-          <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
-        </StatusEffect>
-        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
-        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional voltage="gt 0.1" />
-          <Conditional condition="lt 50" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
-        </StatusEffect>
-        <!-- Explode the fryer when water is inserted into it while it is on-->
-        <StatusEffect type="OnActive" target="This" delay="3" disabledeltatime="true" condition="0.0" setvalue="true" CheckConditionalAlways="false" comparison="And">
-          <Conditional HasStatusTag="activefryer" />
-          <Conditional HasTag="water" targetcontaineditem="true" />
-          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000" volume="1.5" selectionmode="Random" />
-          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="4000" volume="1.5" selectionmode="Random" />
-          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="4000" volume="1.5" selectionmode="Random" />
-          <Explosion range="300.0" stun="3" force="5.0" flames="true" shockwave="true" sparks="true" underwaterbubble="true">
-            <Affliction identifier="internaldamage" amout="10" />
-            <Affliction identifier="burn" amout="20" />
-          </Explosion>
-          <Fire size="2" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" interval="3" duration="3" disabledeltatime="true" condition="0.0" setvalue="true" CheckConditionalAlways="false" comparison="And">
-          <Conditional HasStatusTag="activefryer" />
-          <Conditional HasTag="water" targetcontaineditem="true" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" frequency="1.5" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="Contained" targets="water" delay="0.1" disabledeltatime="true" CheckConditionalAlways="false" comparison="And">
-          <Conditional HasStatusTag="activefryer" targetcontainer="true" />
-          <Remove />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="Contained">
-          <Remove />
-        </StatusEffect>
-      </LightComponent>
-      <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
-        <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
-        <TickBox text="interaction.onoff">
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true" />
-          <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
-        </TickBox>
-      </CustomInterface>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <input name="power_in" displayname="connection.powerin" />
-        <output name="condition_out" displayname="connection.conditionout" />
-      </ConnectionPanel>
-      <Repairable selectkey="Select" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-      </Repairable>
-      <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="4">
-        <GuiFrame relativesize="0.2,0.1" minsize="400,200" maxsize="480,240" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
-        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
-        <Containable items="cookingoil" />
-        <SubContainer capacity="3" maxstacksize="16">
-          <Containable items="allowinfryer" />
-        </SubContainer>
-      </ItemContainer>
-    </Item>
-    
-    <!-- grills things, overgrilling causes fire -->
-    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="289,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="steel" amount="2"/>
-        <Item identifier="aluminium" amount="2"/>
-        <Item identifier="fpgacircuit" amount="1"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="5"/>
-        <RequiredItem identifier="aluminium" amount="4"/>
-        <RequiredItem identifier="fpgacircuit" amount="3"/>
-        <RequiredItem identifier="plastic" amount="2"/>
-      </Fabricate>
-      <Price baseprice="999" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,electricgrill,electricgrill_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
-      <Body width="158" height="53" density="30" bodytype="static" />
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1218,160,23" depth="0.796" origin="0.5,-0.355" />
-      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1275,160,23" depth="0.795" origin="0.5,-0.355" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1332,160,23" depth="0.794" origin="0.5,-0.355" maxcondition="0" fadein="false" />
-      <DecorativeSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,33" depth="0.797" origin="0.5,0.745" />
-      <!-- original full sprites
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,56" depth="0.796" origin="0.5,0.44" />
-      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1242,160,56" depth="0.795" origin="0.5,0.44" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1299,160,56" depth="0.794" origin="0.5,0.44" maxcondition="0" fadein="false" />
-      -->
-      <ItemComponent>
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" targettype="This" StatusEffectTags="activegrill" condition="-0.03" interval="0.1" duration="0.2" comparison="And">
-          <Conditional Voltage="gt 0.5" />
-          <Conditional HasTag="allowongrill" targetcontaineditem="true" />
-          <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
-          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="0.5" frequencymultiplier="0.7" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="Contained">
-          <Conditional Hastag="burnedfood" />
-          <ParticleEmitter particle="darksmoke" particlespersecond="2" scalemin="1" scalemax="2" />
-          <sound file="Content/Items/Tools/Extinguisher.ogg" range="500.0" loop="true" frequencymultiplier="0.35" />
-        </StatusEffect>
-        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
-        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional voltage="gt 0.1" />
-          <Conditional condition="lt 50" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" probability="0.05"/>
-        </StatusEffect>
-      </ItemComponent>
-      <LightComponent range="5.0" lightcolor="50,255,50,50" alphablend="false" powerconsumption="200" IsOn="true" LightOffset="-71.5,-22" scale="0.8" castshadows="false" allowingameediting="false">
-        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1004,464,19,23" alpha="1.0" origin="0.5,0.5" />
-        <IsActive targetitemcomponent="ItemComponent" IsActive="eq True" />
-      </LightComponent>
-      <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
-        <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
-        <TickBox text="On/Off">
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
-          <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" />
-        </TickBox>
-      </CustomInterface>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <input name="power_in" displayname="connection.powerin" />
-        <output name="condition_out" displayname="connection.conditionout" />
-      </ConnectionPanel>
-      <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-      </Repairable>
-      <ItemContainer selectkey="Select" capacity="16" maxstacksize="1" canbeselected="true" hideitems="false" allowuioverlap="false" itempos="-42,-3" iteminterval="30,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.797,0.798,0.799,0.797,0.798,0.799,0.797,0.798,0.799,0.798,0.799,0.799,0.799,0.799,0.799,0.799">
-        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="747,0,85,85" origin="0.5,0.5" />
-        <GuiFrame relativesize="0.22,0.35" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <Containable items="allowongrill" />
-      </ItemContainer>
-    </Item>
-    
-    <!-- brews coffee -->
-    <Item name="Coffee Machine (Installation)" identifier="coffeemachine_installation" tags="container,coffeemachine,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="577,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="aluminium" amount="2" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
-        <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="4" /><!--20x4-->
-        <RequiredItem identifier="plastic" amount="6" /><!--45x3-->
-        <RequiredItem identifier="fpgacircuit" amount="3" /><!--80x2-->
-      </Fabricate>
-      <Price baseprice="899" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine,coffeemachine_installed" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="406,301,85,168" origin="0.5,0.5" />
-      <!-- DecorativeSprite to display the empty cup when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
-        <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <!-- DecorativeSprite to display the coffee cup when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.785" origin="0.6,-1.1" comparison="Or">
-        <IsActiveConditional HasTag="cupofcoffee" targetcontaineditem="true" />
-        <IsActiveConditional HasTag="cupofchocolate" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <!-- DecorativeSprite to display a mug when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.785" origin="0.6,-0.4" scale="0.8">
-        <IsActiveConditional HasTag="mug" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <!-- DecorativeSprite to make display light up 
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5">
-        <IsActiveConditional currpowerconsumption="gte 0.5" />
-      </DecorativeSprite>-->
-      <Body width="80" height="164" density="15" bodytype="static" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <!-- <StatusEffect type="OnActive" target="This">
-          <Conditional voltage="gt 0.1" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" loop="true" range="500" volume="4" />
-        </StatusEffect> -->
-        <StatusEffect type="OnActive" target="This" IsActive="true" targetitemcomponent="ItemComponent" setvalue="true">
-          <RequiredItem items="mix" type="Contained" />
-          <RequiredItem items="tableware" type="Contained" />
-          <Conditional IsActive="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
-        </StatusEffect>
-      </Fabricator>
-      <LightComponent LightColor="255,255,255,150" IsOn="true" powerconsumption="1" range="50" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And">
-        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
-        <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
-        <IsActiveConditional HasTag="coffeemachine" />
-      </LightComponent>
-      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" type="OnActive" loop="true" range="500" volume="4" />
-        <!-- while the ItemComponent is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" StatusEffectTags="stop" duration="0.1" comparison="OR">
-          <Conditional voltage="lt 0.5" />
-          <Conditional IsActive="false" />
-        </StatusEffect>
-        <!-- while the ItemComponent is on, check for the "stop" status tag to play the end sound effect and turn the ItemComponent off -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
-          <Conditional HasStatusTag="eq stop" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
-        </StatusEffect>
-      </ItemComponent>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="10" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="spark" particleamount="5" emitinterval="2" particlespersecond="5" anglemax="360" distancemax="30" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
-        <input name="power_in" displayname="connection.powerin" />
-      </ConnectionPanel>
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="3" maxstacksize="1" hideitems="true" allowuioverlap="true">
-        <Containable items="emptymug,emptycup,mix" />
-      </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
-        <Containable items="mug,cup" />
-      </ItemContainer>
-    </Item>
-    
-    <!-- WIP Blender TODO: reenable fabrication recipe -->
-    <Item name="Blender (Installation)" identifier="he-blender_installation" tags="container,blender,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="673,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="aluminium" amount="2" />
-      </Deconstruct>
-      <!-- TODO: Adjust fabrication recipe | currently just a copy of coffee machine -->
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
-        <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="4" /><!--20x4-->
-        <RequiredItem identifier="plastic" amount="6" /><!--45x3-->
-        <RequiredItem identifier="fpgacircuit" amount="3" /><!--80x2-->
-      </Fabricate>
-      <Price baseprice="899" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
-    <Item name="Blender" identifier="he-blender" tags="container,blender,blender_installed" category="Machines" description="Blends food." scale="0.4" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_light">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5" />
-      <!-- hide main sprite, display decorativesprite when attached, shake when fabricating -->
-      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="0,0,1,1" origin="0.5,0.5" usewhenattached="true" />
-      <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
-        <AnimationConditional IsActive="True" targetitemcomponent="Fabricator" />
-        <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
-      </DecorativeSprite>
-      <!-- DecorativeSprite to display the empty cup when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
-        <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
-      </DecorativeSprite>
-      <Body width="91" height="158" density="15" bodytype="static" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" >
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/blender_loop.ogg" loop="true" range="500" volume="2" />
-        </StatusEffect>
-      </Fabricator>
-      <LightComponent LightColor="0,255,0,200" IsOn="true" powerconsumption="5" range="3" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And" LightOffset="0,-40">
-      </LightComponent>
-      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
-      <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
-        <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
-        <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>-->
-      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="10" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="spark" particleamount="5" emitinterval="2" particlespersecond="5" anglemax="360" distancemax="30" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
-        <input name="power_in" displayname="connection.powerin" />
-      </ConnectionPanel>
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="3" maxstacksize="1" hideitems="true" allowuioverlap="true">
-        <Containable items="plantitem,smallitem" />
-      </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
-        <Containable items="smallitem" />
-      </ItemContainer>
-    </Item>
-
-    <Item name="Installation Blocker" identifier="installationblocker" tags="kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="false" description="" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" noninteractable="true" donttransferbetweensubs="true" impactsoundtag="impact_metal_light" InventoryIconColor="99,70,64,255">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="1,1889,95,78" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="1,768,85,85" />
-      <Body width="90" height="72" density="15" />
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnNotContained" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-    </Item>
-
-    <!-- cleans dishes, requires dishwasher tablets to clean dishes -->
-    <Item name="Dishwasher (Installation)" identifier="he-dishwasher_installation" tags="dishwasher,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="769,1968,95,78" origin="0.5,0.5" />
-      <Body width="90" height="72" density="15" />
-      <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
-      <Deconstruct time="10">
-        <Item identifier="aluminium" amount="2"/>
-        <Item identifier="fpgacircuit" amount="1"/>
-      </Deconstruct>
-      <Fabricate selectkey="Select" suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="3"/>
-        <RequiredItem identifier="aluminium" amount="4"/>
-        <RequiredItem identifier="fpgacircuit" amount="2"/>
-        <RequiredItem identifier="plastic" amount="2"/>
-      </Fabricate>
-      <Price baseprice="999" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
-    </Item>
     <!-- TODO: DecorativeSprite for open state when interacting, opening sound, closing sound, start/stop sounds -->
-    <Item name="Dishwasher" identifier="he-dishwasher" tags="dishwasher,dishwasher_installed,kitchen,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.799" sourcerect="1716,429,165,188" origin="0.5,0.5" />
-      <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
-        <IsActiveConditional Condition="gt 0.0" />
-        <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
-      </DecorativeSprite> -->
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1716,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1716,807,165,188" origin="0.5,0.5" maxcondition="0" />
-      <Body width="165" height="188" density="30" bodytype="static" />
-      <!-- GreaterComponent is only used for its timeframe value to use it as a timer counting each second the item is turned on with enough power supplied -->
-      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
-      <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
-        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1716,996,165,188" alpha="1.0" origin="0.5,0.5" />
-        <!-- while active and enough voltage is supplied, tag the item with "activedishwasher", reduce its condition by 0.02 constantly and play a sound loop -->
-        <StatusEffect type="OnActive" targettype="This" tags="activedishwasher" condition="-0.02" interval="0.1" duration="0.2" comparison="And">
-          <Conditional Voltage="gt 0.5" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/DishwasherLoop.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
-        </StatusEffect>
-        <!-- while active and enough voltage is supplied, increase the timeframe value every second -->
-        <StatusEffect type="OnActive" targettype="This" timeframe="1" interval="1" comparison="And" disabledeltatime="true">
-          <Conditional Voltage="gt 0.5" />
-        </StatusEffect>
-        <!-- while active and enough voltage is supplied, trigger the OnUse StatusEffects of contained items every second -->
-        <StatusEffect type="OnActive" targettype="Contained" targets="tableware" interval="1" comparison="And" disabledeltatime="true">
-          <Conditional Voltage="gt 0.5" targetcontainer="true" />
-          <Use />
-        </StatusEffect>
-        <!-- while active and enough voltage is supplied, reduce the condition of the dishwasher tablet by 1 each second -->
-        <StatusEffect type="OnActive" targettype="Contained" targets="dishwashertablet" condition="-1" interval="1" comparison="And" disabledeltatime="true">
-          <Conditional Voltage="gt 0.5" targetcontainer="true" />
-        </StatusEffect>
-        <!-- while active, enough voltage is supplied and the timeframe value reached 100 or greater, turn the item off, reset the timeframe value back to 0 and unlock the inventory again -->
-        <StatusEffect type="OnActive" targettype="This" IsOn="false" timeframe="0" allowaccess="true" drawinventory="true" allowdraganddrop="true" setvalue="true" interval="1" comparison="And" disabledeltatime="true">
-          <Conditional Voltage="gt 0.5" />
-          <Conditional timeframe="gte 100" />
-        </StatusEffect>
-        <!-- when the item breaks, drop all contained items -->
-        <StatusEffect type="OnBroken" target="This">
-          <DropContainedItems />
-        </StatusEffect>
-      </LightComponent>
-      <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
-        <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.1" allowuioverlap="false" />
-        <!-- button to start the dishwasher -->
-        <Button text="interaction.start">
-          <!-- on button pressed, turn on the LightComponent if a dishwashertablet is contained -->
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true">
-            <RequiredItem items="dishwashertablet" type="Contained" />
-          </StatusEffect>
-          <!-- on button pressed, disable access to the item's inventory if a dishwashertablet is contained -->
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer" allowaccess="false" drawinventory="false" allowdraganddrop="false" setvalue="true">
-            <RequiredItem items="dishwashertablet" type="Contained" />
-          </StatusEffect>
-        </Button>
-        <!-- button to cancel the dishwasher program early -->
-        <Button text="interaction.cancel">
-          <!-- on button pressed, turn off the LightComponent -->
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
-          <!-- on button pressed, enable access to the item's inventory -->
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer" allowaccess="true" drawinventory="true" allowdraganddrop="true" setvalue="true" />
-        </Button>
-      </CustomInterface>
-      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <input name="power_in" displayname="connection.powerin" />
-        <output name="condition_out" displayname="connection.conditionout" />
-      </ConnectionPanel>
-      <Repairable selectkey="Select" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
-        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-      </Repairable>
-      <ItemContainer selectkey="Select" capacity="12" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="4">
-        <GuiFrame relativesize="0.25,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
-        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
-        <Containable items="tableware" />
-        <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="dishwashertablet">
-            <!-- when dishwasher tablet is inserted, tag the item with "hastablet" -->
-            <StatusEffect type="OnInserted" target="This" settags="hastablet" setvalue="true" />
-            <!-- when dishwasher tablet has been removed (used up), replace the "hastablet" tag with "missingtablet", turn the LightComponent off, enable access to the item's inventory and reset the timeframe value to 0 -->
-            <StatusEffect type="OnRemoved" target="This" settags="missingtablet" IsOn="false" allowaccess="true" drawinventory="true" allowdraganddrop="true" timeframe="0" setvalue="true" />
-          </Containable>
-        </SubContainer>
-      </ItemContainer>
-    </Item>
-    <!-- TODO: Holdpos, BrokenSprite, DecorativeSprite for open state when interacting, opening sound, closing sound, start/stop sounds -->
     <Item name="Mobile Dishwasher" identifier="he-dishwashermobile" tags="dishwasher,dishwasher_mobile,kitchen,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -1491,6 +591,729 @@
             <StatusEffect type="OnRemoved" target="This" settags="missingtablet" IsOn="false" allowaccess="true" drawinventory="true" allowdraganddrop="true" timeframe="0" setvalue="true" />
           </Containable>
         </SubContainer>
+      </ItemContainer>
+    </Item>
+
+
+    <!-- cleans dirty tableware and fills water bottles -->
+    <Item name="Sink" identifier="sink" tags="kitchen,sink" category="Machines" description="" scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
+      <!-- DecorativeSprite to display the lower half of the sink behind objects -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
+      <Body width="80" height="164" density="15" />
+      <Price baseprice="250" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
+      </Price>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="steel" amount="6" /><!--150-->
+        <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
+        <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
+      </Fabricate>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2" />
+      </Deconstruct>
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
+          <Conditional IsActive="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" comparison="And">
+          <RequiredItem items="cleaningagent" type="contained" />
+          <RequiredItem items="dirtytableware" type="contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="500" volume="1" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" >
+          <!-- <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="0.0" particlespersecond="30" colormultiplier="50,50,255,255" lifetimemultiplier="0.1" /> -->
+        </StatusEffect>
+      </Fabricator>
+      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" type="OnActive" volume="1.5" range="450" loop="true" />
+        <!-- while the pump is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" tags="stop" duration="0.1" comparison="OR">
+          <Conditional IsActive="false" />
+        </StatusEffect>
+        <!-- while the pump is on, check for the "stop" status tag to play the end sound effect and turn the pump off -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
+          <Conditional HasStatusTag="eq stop" />
+          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkStopping.ogg" loop="false" range="500" volume="2" selectionmode="All" /> -->
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
+        </StatusEffect>
+      </ItemComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-30" handle1="-60,-40" handle2="-20,-60">
+        <RequiredItem items="wrench" type="Equipped" />
+        <!-- slow down the character carrying the device -->
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
+        <!-- drop contained items if the device is detached -->
+        <StatusEffect type="OnContained" target="This">
+          <DropContainedItems />
+        </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.3" />
+        <StatValue stattype="SwimmingSpeed" value="-0.5" />
+      </Holdable>
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="5" maxstacksize="8" hideitems="true" allowuioverlap="true">
+        <Containable items="pot,emptybottle,bottle,tableware,cleaningagent,wateringtool" />
+        <!-- TODO: adjust these icons for filter and hose, disabled for now-->
+        <!-- <SlotIcon slotindex="2" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" /> -->
+        <!-- <SlotIcon slotindex="3" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,320,64,64" origin="0.5,0.5" /> -->
+        <!-- <SubContainer capacity="1">
+          <Containable items="waterfilter" />
+        </SubContainer>
+        <SubContainer capacity="1">
+          <Containable items="hose" />
+        </SubContainer> -->
+      </ItemContainer>
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+        <Containable items="pot,emptybottle,bottle,tableware,wateringtool" />
+      </ItemContainer>
+    </Item> 
+    
+    <!-- TODO: inventory icon w knife? -->
+    <!-- chops ingredients as long as you interact with it  -->
+    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false">
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <Body width="123" height="66" density="30" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.784" origin="0.45,0.44" />
+      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.786" origin="0.5,0.38" comparison="and" >
+        <IsActiveConditional IsActive="False" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.786" origin="0.5,0.5" offset="0,-15" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="3" comparison="and" >
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <Price baseprice="99" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="1" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="2" maxavailable="2" />
+      </Price>
+      <Deconstruct time="5">
+        <Item identifier="plastic" amount="1" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="40">
+        <RequiredItem identifier="divingknife" amount="1" />
+        <RequiredItem identifier="plastic" amount="3"/>
+      </Fabricate>
+      <Fabricator canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
+      </Fabricator>
+      <Controller allowingameediting="false" UserPos="55,0" direction="Left" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
+        <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
+        <limbposition limb="RightHand" position="100,-40" allowusinglimb="false" />
+      </Controller>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.785"/>
+    </Item>
+    
+    <!-- cooks things in a pot? -->
+    <Item name="Stove" identifier="he-stove" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy">
+      <Upgrade gameversion="0.10.4.0">
+        <Repairable Msg="ItemMsgRepairWrench" />
+      </Upgrade>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2"/>
+        <Item identifier="titaniumaluminiumalloy" amount="2"/>
+        <Item identifier="fpgacircuit" amount="1"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="mechanical" level="65" />
+        <RequiredItem identifier="steel" amount="5"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
+        <RequiredItem identifier="fpgacircuit" amount="2"/>
+        <RequiredItem identifier="plastic" amount="2"/>
+      </Fabricate>
+      <Price baseprice="1199" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,84,162,35" depth="0.796" origin="0.47,0.86" />
+      <!-- DecorativeSprite to display the pan when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1753,105,76,10" origin="0.69,0.9" depth="0.793" comparison="And">
+        <IsActiveConditional HasTag="pan" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display the pot when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,162,50" origin="0.47,0.95" depth="0.795" comparison="And">
+        <IsActiveConditional HasTag="pot" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display the kettle when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.65,0.99" depth="0.794" comparison="And">
+        <IsActiveConditional HasTag="kettle" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,137,162,35" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,190,162,35" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
+      <Body width="162" height="15" density="30" />
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="This">
+          <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" condition="-0.05">
+          <Conditional Voltage="gt 0.5" />
+        </StatusEffect>
+        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
+        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional voltage="gt 0.1" />
+          <Conditional condition="lt 50" />
+          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
+        </StatusEffect>
+      </Fabricator>
+      <LightComponent LightColor="200,120,80,180" LightOffset="0,0" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="1" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And" scale="1.0">
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,81,162,6" origin="0.47,0.85" />
+        <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
+      </LightComponent>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <StatusEffect type="OnPicked" target="this">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="condition_out" displayname="connection.conditionout" />
+      </ConnectionPanel>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+      </Holdable>
+      <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+    </Item>
+
+    <!-- cooks things  -->
+    <Item name="Oven" identifier="he-oven" tags="oven,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Upgrade gameversion="0.10.4.0">
+        <Repairable Msg="ItemMsgRepairWrench" />
+      </Upgrade>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="4"/>
+        <Item identifier="titaniumaluminiumalloy" amount="2"/>
+        <Item identifier="fpgacircuit" amount="1"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="mechanical" level="65" />
+        <RequiredItem identifier="steel" amount="8"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="3"/>
+        <RequiredItem identifier="fpgacircuit" amount="2"/>
+      </Fabricate>
+      <Price baseprice="1499" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1882,429,165,188" origin="0.5,0.5" />
+      <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
+        <IsActiveConditional Condition="gt 0.0" />
+        <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
+      </DecorativeSprite> -->
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
+      <Fabricator canbeselected="true" selectkey="Select" powerconsumption="300.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <StatusEffect type="OnPicked" target="this">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/OvenInteract.ogg" volume="1" range="450" />
+        </StatusEffect>
+        <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
+        <LightComponent range="60.0" lightcolor="190,120,35,180" powerconsumption="1" Flicker="0.4" FlickerSpeed="0.1" IsOn="true" castshadows="false" allowingameediting="false">
+          <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" />
+        </LightComponent>
+        <StatusEffect type="OnActive" targettype="This">
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Oven.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <StatusEffect type="OnActive" targettype="This" IsOn="false">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" condition="-0.05">
+          <Conditional Voltage="gt 0.5" />
+        </StatusEffect>
+        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
+        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional voltage="gt 0.1" />
+          <Conditional condition="lt 50" />
+          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
+        </StatusEffect>
+      </Fabricator>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <StatusEffect type="OnPicked" target="this">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="condition_out" displayname="connection.conditionout" />
+      </ConnectionPanel>
+      <Body width="165" height="188" density="30" />
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
+        <requireditem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
+      </Holdable>
+      <Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem items="wrench" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+        <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="stun" strength="4" />
+        </StatusEffect>
+      </Repairable>
+      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+    </Item>
+    
+    <!-- fries things using oil, overfrying causes fire, water causes explosion -->
+    <Item name="Fryer" identifier="he-fryer" tags="fryer,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+      <Upgrade gameversion="0.10.4.0">
+        <Repairable Msg="ItemMsgRepairWrench" />
+      </Upgrade>
+      <Deconstruct time="10">
+        <Item identifier="aluminium" amount="2"/>
+        <Item identifier="fpgacircuit" amount="1"/>
+      </Deconstruct>
+      <Fabricate selectkey="Select" suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="mechanical" level="65" />
+        <RequiredItem identifier="steel" amount="3"/>
+        <RequiredItem identifier="aluminium" amount="4"/>
+        <RequiredItem identifier="fpgacircuit" amount="2"/>
+        <RequiredItem identifier="plastic" amount="2"/>
+      </Fabricate>
+      <Price baseprice="999" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1975,228,72,66" origin="0.5,0.20" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1975,228,72,66" origin="0.5,0.5" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" >
+        <IsActiveConditional Condition="gt 0.0" />
+        <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="LightComponent" />
+      </DecorativeSprite>
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1975,295,72,66" origin="0.5,0.20" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1975,362,72,66" origin="0.5,0.20" maxcondition="0" />
+      <Body width="72" height="66" density="30" />
+      <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="This" comparison="And">
+          <RequiredItem identifier="he-cookingoil" type="Contained" />
+          <RequiredItem tag="allowinfryer" type="Contained" />
+          <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.01">
+          <Conditional HasStatusTag="activefryer" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" tags="activefryer" condition="-0.02" interval="0.1" duration="0.2" comparison="And">
+          <RequiredItem identifier="he-cookingoil" type="Contained" />
+          <RequiredItem tag="allowinfryer" type="Contained" />
+          <Conditional Voltage="gt 0.5" />
+        </StatusEffect>
+        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
+        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional voltage="gt 0.1" />
+          <Conditional condition="lt 50" />
+          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
+        </StatusEffect>
+        <!-- Explode the fryer when water is inserted into it while it is on-->
+        <StatusEffect type="OnActive" target="This" delay="3" disabledeltatime="true" condition="0.0" setvalue="true" CheckConditionalAlways="false" comparison="And">
+          <Conditional HasStatusTag="activefryer" />
+          <Conditional HasTag="water" targetcontaineditem="true" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000" volume="1.5" selectionmode="Random" />
+          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="4000" volume="1.5" selectionmode="Random" />
+          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="4000" volume="1.5" selectionmode="Random" />
+          <Explosion range="300.0" stun="3" force="5.0" flames="true" shockwave="true" sparks="true" underwaterbubble="true">
+            <Affliction identifier="internaldamage" amout="10" />
+            <Affliction identifier="burn" amout="20" />
+          </Explosion>
+          <Fire size="2" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" interval="3" duration="3" disabledeltatime="true" condition="0.0" setvalue="true" CheckConditionalAlways="false" comparison="And">
+          <Conditional HasStatusTag="activefryer" />
+          <Conditional HasTag="water" targetcontaineditem="true" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" frequency="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targets="water" delay="0.1" disabledeltatime="true" CheckConditionalAlways="false" comparison="And">
+          <Conditional HasStatusTag="activefryer" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="Contained">
+          <Remove />
+        </StatusEffect>
+      </LightComponent>
+      <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
+        <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
+        <TickBox text="interaction.onoff">
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
+        </TickBox>
+      </CustomInterface>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <StatusEffect type="OnPicked" target="this">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="condition_out" displayname="connection.conditionout" />
+      </ConnectionPanel>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+        <requireditem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+      </Holdable>
+      <Repairable selectkey="Select" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="4">
+        <GuiFrame relativesize="0.2,0.1" minsize="400,200" maxsize="480,240" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
+        <Containable items="cookingoil" />
+        <SubContainer capacity="3" maxstacksize="16">
+          <Containable items="allowinfryer" />
+        </SubContainer>
+      </ItemContainer>
+    </Item>
+    
+    <!-- grills things, overgrilling causes fire -->
+    <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2"/>
+        <Item identifier="aluminium" amount="2"/>
+        <Item identifier="fpgacircuit" amount="1"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="mechanical" level="65" />
+        <RequiredItem identifier="steel" amount="5"/>
+        <RequiredItem identifier="aluminium" amount="4"/>
+        <RequiredItem identifier="fpgacircuit" amount="3"/>
+        <RequiredItem identifier="plastic" amount="2"/>
+      </Fabricate>
+      <Price baseprice="999" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <Body width="158" height="53" density="30" />
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,56" depth="0.796" origin="0.5,0.44" />
+      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1242,160,56" depth="0.795" origin="0.5,0.44" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1299,160,56" depth="0.794" origin="0.5,0.44" maxcondition="0" fadein="false" />
+      <ItemComponent>
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="This">
+          <Conditional HasTag="allowongrill" targetcontaineditem="true" />
+          <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
+          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="0.5" frequencymultiplier="0.7" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" tags="activegrill" condition="-0.03" interval="0.1" duration="0.2">
+          <Conditional Voltage="gt 0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="Contained">
+          <Conditional Hastag="burnedfood" />
+          <ParticleEmitter particle="darksmoke" particlespersecond="2" scalemin="1" scalemax="2" />
+          <sound file="Content/Items/Tools/Extinguisher.ogg" range="500.0" loop="true" frequencymultiplier="0.35" />
+        </StatusEffect>
+        <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
+        <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional voltage="gt 0.1" />
+          <Conditional condition="lt 50" />
+          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" probability="0.05"/>
+        </StatusEffect>
+      </ItemComponent>
+      <LightComponent range="5.0" lightcolor="50,255,50,50" alphablend="false" powerconsumption="200" IsOn="true" LightOffset="-71.5,-22" scale="0.8" castshadows="false" allowingameediting="false">
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1004,464,19,23" alpha="1.0" origin="0.5,0.5" />
+        <IsActive targetitemcomponent="ItemComponent" IsActive="eq True" />
+      </LightComponent>
+      <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
+        <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
+        <TickBox text="On/Off">
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" />
+        </TickBox>
+      </CustomInterface>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <StatusEffect type="OnPicked" target="this">
+          <Sound file="%ModDir%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="condition_out" displayname="connection.conditionout" />
+      </ConnectionPanel>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+      </Holdable>
+      <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+      </Repairable>
+      <ItemContainer selectkey="Select" capacity="16" maxstacksize="1" canbeselected="true" hideitems="false" allowuioverlap="false" itempos="50,-30" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86">
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="747,0,85,85" origin="0.5,0.5" />
+        <GuiFrame relativesize="0.22,0.35" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
+        <Containable items="allowongrill" />
+      </ItemContainer>
+    </Item>
+    
+    <!-- brews coffee -->
+    <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="406,301,85,168" origin="0.5,0.5" />
+      <!-- DecorativeSprite to display the empty cup when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
+        <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display the coffee cup when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.785" origin="0.6,-1.1" comparison="Or">
+        <IsActiveConditional HasTag="cupofcoffee" targetcontaineditem="true" />
+        <IsActiveConditional HasTag="cupofchocolate" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display a mug when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.785" origin="0.6,-0.4" scale="0.8">
+        <IsActiveConditional HasTag="mug" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to make display light up 
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5">
+        <IsActiveConditional currpowerconsumption="gte 0.5" />
+      </DecorativeSprite>-->
+      <Body width="80" height="164" density="15" />
+      <Deconstruct time="10">
+        <Item identifier="aluminium" amount="2" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="aluminium" amount="4" /><!--20x4-->
+        <RequiredItem identifier="plastic" amount="6" /><!--45x3-->
+        <RequiredItem identifier="fpgacircuit" amount="3" /><!--80x2-->
+      </Fabricate>
+      <Price baseprice="899" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <!-- <StatusEffect type="OnActive" target="This">
+          <Conditional voltage="gt 0.1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" loop="true" range="500" volume="4" />
+        </StatusEffect> -->
+        <StatusEffect type="OnActive" target="This" IsActive="true" targetitemcomponent="ItemComponent" setvalue="true">
+          <RequiredItem items="mix" type="Contained" />
+          <RequiredItem items="tableware" type="Contained" />
+          <Conditional IsActive="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+      </Fabricator>
+      <LightComponent LightColor="255,255,255,150" IsOn="true" powerconsumption="1" range="50" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And">
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
+        <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
+        <IsActiveConditional HasTag="coffeemachine" />
+      </LightComponent>
+      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" type="OnActive" loop="true" range="500" volume="4" />
+        <!-- while the ItemComponent is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" StatusEffectTags="stop" duration="0.1" comparison="OR">
+          <Conditional voltage="lt 0.5" />
+          <Conditional IsActive="false" />
+        </StatusEffect>
+        <!-- while the ItemComponent is on, check for the "stop" status tag to play the end sound effect and turn the ItemComponent off -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
+          <Conditional HasStatusTag="eq stop" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+      </ItemComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+        <RequiredItem items="wrench" type="Equipped" />
+        <!-- drop contained items if the device is detached -->
+        <StatusEffect type="OnContained" target="This">
+          <DropContainedItems />
+        </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
+      </Holdable>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="10" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="spark" particleamount="5" emitinterval="2" particlespersecond="5" anglemax="360" distancemax="30" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="3" maxstacksize="1" hideitems="true" allowuioverlap="true">
+        <Containable items="emptymug,emptycup,mix" />
+      </ItemContainer>
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+        <Containable items="mug,cup" />
+      </ItemContainer>
+    </Item>
+    
+    <!-- WIP Blender TODO: reenable fabrication recipe -->
+    <Item name="Blender" identifier="he-blender" tags="container,blender" category="Machines" description="Blends food." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5" />
+      <!-- hide main sprite, display decorativesprite when attached, shake when fabricating -->
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="0,0,1,1" origin="0.5,0.5" usewhenattached="true" />
+      <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
+        <AnimationConditional IsActive="True" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display the empty cup when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
+        <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <Body width="91" height="158" density="15" />
+      <Deconstruct time="10">
+        <Item identifier="aluminium" amount="2" />
+      </Deconstruct>
+      <!-- <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="aluminium" amount="4" />
+        <RequiredItem identifier="plastic" amount="6" />
+        <RequiredItem identifier="fpgacircuit" amount="3" />
+      </Fabricate> -->
+      <Price baseprice="899" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="This" >
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/blender_loop.ogg" loop="true" range="500" volume="2" />
+        </StatusEffect>
+      </Fabricator>
+      <LightComponent LightColor="0,255,0,200" IsOn="true" powerconsumption="5" range="3" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And" LightOffset="0,-40">
+      </LightComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+        <RequiredItem items="wrench" type="Equipped" />
+        <!-- drop contained items if the device is detached -->
+        <StatusEffect type="OnContained" target="This">
+          <DropContainedItems />
+        </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
+      </Holdable>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="10" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="spark" particleamount="5" emitinterval="2" particlespersecond="5" anglemax="360" distancemax="30" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="3" maxstacksize="1" hideitems="true" allowuioverlap="true">
+        <Containable items="plantitem,smallitem" />
+      </ItemContainer>
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
+        <Containable items="smallitem" />
       </ItemContainer>
     </Item>
   </Items>
