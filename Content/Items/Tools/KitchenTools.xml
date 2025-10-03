@@ -115,7 +115,6 @@
       </CustomInterface>
     </Item>
     
-    <!-- TODO: Dirty Pot sprite -->
     <Item name="Dirty Pot" identifier="he-dirtypot" category="Equipment" maxstacksize="1" Tags="smallitem,pot,dirtypot,dirtytableware,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
