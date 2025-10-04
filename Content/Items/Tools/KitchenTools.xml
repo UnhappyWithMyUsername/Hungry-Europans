@@ -495,13 +495,16 @@
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" frequencymultiplier="2" type="OnActive" range="500.0" loop="true" volume="1.5" />
           <ParticleEmitter particle="damagebubbles" particlespersecond="4" scalemin="0.1" scalemax="0.3" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
         </StatusEffect>
-        <!-- when consumed, give 100% stomache ache, 20% organ damange and heal any worm infection by 50% -->
+        <!-- when consumed, give 100% stomache ache, 20% organ damange -->
         <StatusEffect type="OnUse" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="applystomachache" amount="100" />
           <Affliction identifier="applyorgandamage" amount="20" />
-          <ReduceAffliction identifier="worminfection" amount="50" />
-          <ReduceAffliction identifier="tapeworminfection" amount="50" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="500" loop="false" />
+        </StatusEffect>
+        <!-- when consumed, heal any worm infection by 50% over time (1/s) -->
+        <StatusEffect type="OnUse" target="Character" duration="50" multiplyafflictionsbymaxvitality="true" stackable="false">
+          <ReduceAffliction identifier="worminfection" amount="1" />
+          <ReduceAffliction identifier="tapeworminfection" amount="1" />
         </StatusEffect>
         <!-- when consumed, break the item -->
         <StatusEffect type="OnUse" target="This" condition="0" setvalue="true" />
