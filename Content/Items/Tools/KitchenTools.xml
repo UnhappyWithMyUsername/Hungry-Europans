@@ -490,11 +490,21 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="90,365,48,60" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="227,29,18,11" depth="0.6" origin="0.5,0.5" />
       <Body width="12" height="5" density="10.5" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,0" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="-90" holdpos="25,35" handle1="5,-10" aimpos="18,16" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="InWater" target="This" condition="-2">
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" frequencymultiplier="2" type="OnActive" range="500.0" loop="true" volume="1.5" />
           <ParticleEmitter particle="damagebubbles" particlespersecond="4" scalemin="0.1" scalemax="0.3" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
         </StatusEffect>
+        <!-- when consumed, give 100% stomache ache, 20% organ damange and heal any worm infection by 50% -->
+        <StatusEffect type="OnUse" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Affliction identifier="applystomachache" amount="100" />
+          <Affliction identifier="applyorgandamage" amount="20" />
+          <ReduceAffliction identifier="worminfection" amount="50" />
+          <ReduceAffliction identifier="tapeworminfection" amount="50" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="500" loop="false" />
+        </StatusEffect>
+        <!-- when consumed, break the item -->
+        <StatusEffect type="OnUse" target="This" condition="0" setvalue="true" />
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
