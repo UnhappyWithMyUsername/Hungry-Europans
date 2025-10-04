@@ -1361,7 +1361,13 @@
         <GuiFrame relativesize="0.25,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
         <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
-        <Containable items="tableware" />
+        <Containable items="tableware">
+          <!-- drop items inside items when inserted so the dishwasher doesnt eat up stacks of bowls -->
+          <StatusEffect type="OnInserted" target="Contained" >
+            <RequiredItem tag="tableware" type="Contained" />
+            <DropContainedItems />
+          </StatusEffect>        
+        </Containable>
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="dishwashertablet">
             <!-- when dishwasher tablet is inserted, tag the item with "hastablet" -->
@@ -1372,19 +1378,23 @@
         </SubContainer>
       </ItemContainer>
     </Item>
-    <!-- TODO: Holdpos, BrokenSprite, DecorativeSprite for open state when interacting, opening sound, closing sound, start/stop sounds -->
+    <!-- TODO: DecorativeSprite for open state when interacting, opening sound, closing sound, start/stop sounds -->
     <Item name="Mobile Dishwasher" identifier="he-dishwashermobile" tags="dishwasher,dishwasher_mobile,kitchen,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.775" sourcerect="1716,225,107,203" origin="0.5,0.5" />
+      <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.777" sourcerect="1716,225,107,203" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
+        <AnimationConditional IsActive="True" targetitemcomponent="LightComponent" />
+        <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
+      </DecorativeSprite>
       <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
       </DecorativeSprite> -->
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1608,225,107,203" origin="0.5,0.5" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1500,225,107,203" origin="0.5,0.5" maxcondition="0" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1608,225,107,203" origin="0.5,0.5" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1500,225,107,203" origin="0.5,0.5" maxcondition="0" />
       <Body width="101" height="197" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchencounter,refillstation" >
         <RequiredItem items="wrench" type="Equipped" />
@@ -1442,6 +1452,12 @@
         </Button>
         <!-- button to cancel the dishwasher program early -->
         <Button text="interaction.cancel">
+          <!-- delete tablet on cancel -->
+          <!-- <StatusEffect type="OnUse" target="Contained" targets="dishwashertablet" targetslot="6">
+            <Conditional IsActive="True" targetitemcomponent="LightComponent" targetcontainer="true"  />
+            <Removeitem />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
+          </StatusEffect> -->
           <!-- on button pressed, turn off the LightComponent -->
           <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
           <!-- on button pressed, enable access to the item's inventory -->
@@ -1478,11 +1494,17 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="6" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="3">
-        <GuiFrame relativesize="0.2,0.4" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="6" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
+      <ItemContainer selectkey="Select" capacity="9" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="3" maxstacksize="1">
+        <GuiFrame relativesize="0.2,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
+        <SlotIcon slotindex="9" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
-        <Containable items="tableware" />
+        <Containable items="tableware" >
+          <!-- drop items inside items when inserted so the dishwasher doesnt eat up stacks of bowls -->
+          <StatusEffect type="OnInserted" target="Contained" >
+            <RequiredItem tag="tableware" type="Contained" />
+            <DropContainedItems />
+          </StatusEffect>        
+        </Containable>        
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="dishwashertablet">
             <!-- when dishwasher tablet is inserted, tag the item with "hastablet" -->
