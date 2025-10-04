@@ -546,6 +546,12 @@
         </Button>
         <!-- button to cancel the dishwasher program early -->
         <Button text="interaction.cancel">
+          <!-- delete tablet on cancel -->
+          <!-- <StatusEffect type="OnUse" target="Contained" targets="dishwashertablet" targetslot="6">
+            <Conditional IsActive="True" targetitemcomponent="LightComponent" targetcontainer="true"  />
+            <Removeitem />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
+          </StatusEffect> -->
           <!-- on button pressed, turn off the LightComponent -->
           <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
           <!-- on button pressed, enable access to the item's inventory -->
