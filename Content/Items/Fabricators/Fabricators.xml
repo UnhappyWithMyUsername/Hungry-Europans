@@ -479,7 +479,7 @@
       </Upgrade>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.775" sourcerect="1716,225,107,203" origin="0.5,0.5" />
-      <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1716,225,107,203" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
+      <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.777" sourcerect="1716,225,107,203" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
         <AnimationConditional IsActive="True" targetitemcomponent="LightComponent" />
         <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
       </DecorativeSprite>
@@ -487,8 +487,8 @@
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
       </DecorativeSprite> -->
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1608,225,107,203" origin="0.5,0.5" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1500,225,107,203" origin="0.5,0.5" maxcondition="0" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1608,225,107,203" origin="0.5,0.5" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1500,225,107,203" origin="0.5,0.5" maxcondition="0" />
       <Body width="101" height="197" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchencounter,refillstation" >
         <RequiredItem items="wrench" type="Equipped" />
