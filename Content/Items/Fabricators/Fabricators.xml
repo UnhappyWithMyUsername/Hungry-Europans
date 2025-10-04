@@ -479,6 +479,10 @@
       </Upgrade>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.775" sourcerect="1716,225,107,203" origin="0.5,0.5" />
+      <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1716,225,107,203" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
+        <AnimationConditional IsActive="True" targetitemcomponent="LightComponent" />
+        <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
+      </DecorativeSprite>
       <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
