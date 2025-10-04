@@ -51,6 +51,7 @@ Low:
 [*] Resting in a bed (not sleeping) only reduces Nausea/Concussion/Drunk, but much faster than before
 [*] Sleeping in a bed heals damage slowly, but also addictions and withdrawal faster than before
 [*] Changed sleep overlay so you can see around your character a little
+[*] Changed worm and tapeworm infection to be detectable instantly via health scanner (previously only showed starting at 10%)
 [/List]
 
 [b]Fixes:[/b] 
