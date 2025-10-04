@@ -484,7 +484,7 @@
     </Item>
 
     <!-- DISHWASHER TABLET-->
-    <Item name="Dishwasher Tablet" identifier="he-dishwashertablet" Tags="smallitem,dishwashertablet,distilleringredient" category="Misc" scale="0.5" maxstacksize="50" maxstacksizecharacterinventory="10" cargocontaineridentifier="chemicalcrate" description="" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
+    <Item name="Dishwasher Tablet" identifier="he-dishwashertablet" Tags="smallitem,dishwashertablet" category="Misc" scale="0.5" maxstacksize="50" maxstacksizecharacterinventory="10" cargocontaineridentifier="chemicalcrate" description="" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
       <PreferredContainer primary="dishwasher_installed" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="kitchen,crewcab" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="90,365,48,60" origin="0.5,0.5" />
