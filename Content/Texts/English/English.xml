@@ -463,8 +463,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-couwolaexosuit>A limited edition Exosuit produced by Couwola Cola. It is more fuel efficient and allows the wearer to breath oxygen from their surroundings while only using the oxygen tanks when needed.</entitydescription.he-couwolaexosuit><!--Patch 13-->
 <entityname.he-dishwashertablet>Dishwasher Tablet</entityname.he-dishwashertablet><!--Patch 19-->
 <entitydescription.he-dishwashertablet>A chemical tablet used inside dishwashers to clean even the most persistent stains off of tableware.\n- Not safe for consumption\n- Only store in dry areas</entitydescription.he-dishwashertablet><!--Patch 19-->
-<entityname.he-dishwashertablet>Bag of Dishwasher Tablet</entityname.he-dishwashertablet><!--Patch 19-->
-<entitydescription.he-dishwashertablet>A bag containing 50 chemical tablets used inside dishwashers to clean even the most persistent stains off of tableware.\n- Not safe for consumption</entitydescription.he-dishwashertablet><!--Patch 19-->
+<entityname.he-dishwashertabletbag>Bag of Dishwasher Tablet</entityname.he-dishwashertabletbag><!--Patch 19-->
+<entitydescription.he-dishwashertabletbag>A bag containing 50 chemical tablets used inside dishwashers to clean even the most persistent stains off of tableware.\n- Not safe for consumption</entitydescription.he-dishwashertabletbag><!--Patch 19-->
 
 <!-- Gear -->
 <entityname.he-chefscap1>Chef's Hat</entityname.he-chefscap1>
