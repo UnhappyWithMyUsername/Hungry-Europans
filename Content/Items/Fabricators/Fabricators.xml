@@ -588,9 +588,9 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="6" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="3">
-        <GuiFrame relativesize="0.2,0.4" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="6" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
+      <ItemContainer selectkey="Select" capacity="9" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="3" maxstacksize="1">
+        <GuiFrame relativesize="0.2,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
+        <SlotIcon slotindex="9" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
         <Containable items="tableware" />
         <SubContainer capacity="1" maxstacksize="1">

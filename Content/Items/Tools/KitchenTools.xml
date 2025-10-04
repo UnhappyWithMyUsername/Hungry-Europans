@@ -502,7 +502,7 @@
     </Item>
 
     <!-- DISHWASHER TABLET BAG -->
-    <Item name="Bag of Dishwasher Tablets" identifier="he-dishwashertabletbag" health="21" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Bag of Dishwasher Tablets" identifier="he-dishwashertabletbag" health="11" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="123,42,48,67" depth="0.6" origin="0.5,0.5" />
@@ -519,8 +519,8 @@
       <SuitableTreatment type="hunger" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- Unwrap -->
-        <StatusEffect type="OnUse" target="This" Condition="20" setvalue="true" oneshot="true" comparison="And">
-          <Conditional condition="gte 21" />
+        <StatusEffect type="OnUse" target="This" Condition="10" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
           <Conditional HasTag="neq opened" />
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
@@ -528,19 +528,19 @@
         <StatusEffect type="OnUse" target="This" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
         <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
           <Conditional HasStatusTag="neq emptyhand" />
-          <Conditional Condition="lt 21" />
+          <Conditional Condition="lt 11" />
           <Conditional HasTag="opened" />
           <SpawnItem identifier="he-dishwashertablet" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!-- animation -->
         <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,-10" setvalue="true" duration="0.2" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
-          <Conditional Condition="lt 21" />
+          <Conditional Condition="lt 11" />
           <Conditional HasTag="opened" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.2" duration="0.1" setvalue="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="eq emptyhand" />
-          <Conditional Condition="lt 21" />
+          <Conditional Condition="lt 11" />
           <Conditional HasTag="opened" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
