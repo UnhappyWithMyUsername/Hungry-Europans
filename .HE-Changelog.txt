@@ -40,14 +40,12 @@ Low:
 [List]
 [*] Added "Mobile Dishwasher" which can be used to clean more tableware at once
 [*] Added "Dishwasher Tablet" which is required for dishwashers to function
-[*] Added "Bag of Dishwasher Tablets" which contains 50 dishwasher tablets
+[*] Added "Bag of Dishwasher Tablets" which contains 20 dishwasher tablets
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Changed power transfer for kitchen counter and also added it to the kitchen pantry
-They now feature a power_in and power_out
-All existing wires are automatically connected to power_in so you may need to shift some wires from power_in to power_out to fix your equipment not receiving power
+[*] Changed/Fixed power transfer for kitchen counter and kitchen pantry. Features a power_in and power_out (like relays). MAKE SURE TO REWIRE YOUR KITCHEN
 [*] Changed how alcohol is applied by drinks. Stronger drinks will now make you drunk quicker
 [*] Changed sleeping to be a visible affliction with a short description
 [/List]
