@@ -47,7 +47,10 @@ Low:
 [List]
 [*] Changed/Fixed power transfer for kitchen counter and kitchen pantry. Features a power_in and power_out (like relays). MAKE SURE TO REWIRE YOUR KITCHEN
 [*] Changed how alcohol is applied by drinks. Stronger drinks will now make you drunk quicker
-[*] Changed sleeping to be a visible affliction with a short description
+[*] Changed Beds and Sleeping:
+[*] Resting in a bed (not sleeping) only reduces Nausea/Concussion/Drunk, but much faster than before
+[*] Sleeping in a bed heals damage slowly, but also addictions and withdrawal faster than before
+[*] Changed sleep overlay so you can see around your character a little
 [/List]
 
 [b]Fixes:[/b] 
