@@ -40,7 +40,7 @@ Low:
 [List]
 [*] Added "Mobile Dishwasher" which can be used to clean more tableware at once
 [*] Added "Dishwasher Tablet" which is required for dishwashers to function
-[*] Added "Bag of Dishwasher Tablets" which contains 20 dishwasher tablets
+[*] Added "Bag of Dishwasher Tablets" which contains 10 dishwasher tablets
 [/List]
 
 [b]Changes:[/b] 
