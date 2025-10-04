@@ -592,7 +592,13 @@
         <GuiFrame relativesize="0.2,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
         <SlotIcon slotindex="9" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
-        <Containable items="tableware" />
+        <Containable items="tableware" >
+          <!-- drop items inside items when inserted so the dishwasher doesnt eat up stacks of bowls -->
+          <StatusEffect type="OnInserted" target="Contained" >
+            <RequiredItem tag="tableware" type="Contained" />
+            <DropContainedItems />
+          </StatusEffect>        
+        </Containable>        
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="dishwashertablet">
             <!-- when dishwasher tablet is inserted, tag the item with "hastablet" -->
