@@ -184,17 +184,33 @@
           <Conditional he-butchered="lt 100"/>
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.8" shockwave="false" underwaterbubble="false" />
         </StatusEffect>
-        <!-- INCREASE BUTCHERY SKILL -->
-        <StatusEffect type="OnSuccess" target="Character" comparison="And">
-          <Conditional IsDead="true" />
-          <Conditional IsMachine="false" />
-          <GiveSkill skillidentifier="butchery" amount="0.05" triggertalents="false" />
+        
+        <!-- INCREASE BUTCHERY SKILL 
+        BUGGED so I have to use jank; SEs cannot handle two targets with a conditional, as the effect is only applied to the target which validates the conditional -->
+        
+        <!-- <StatusEffect type="OnSuccess" target="Character,UseTarget" comparison="or">
+          <Conditional he-butchered="gt 0" />
+          <GiveSkill skillidentifier="butchery" amount="1.05" triggertalents="false" />
+          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="2" volume="2" />
         </StatusEffect>  
-        <StatusEffect type="OnFailure" target="Character" comparison="And">
-          <Conditional IsDead="true" />
-          <Conditional IsMachine="false" />
-          <GiveSkill skillidentifier="butchery" amount="0.05" triggertalents="false" />
-        </StatusEffect> 
+        <StatusEffect type="OnFailure" target="Character,UseTarget" comparison="or">
+          <Conditional he-butchered="gt 0" />
+          <GiveSkill skillidentifier="butchery" amount="1.05" triggertalents="false" />
+          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="2" volume="2" />
+        </StatusEffect>   -->
+        <StatusEffect type="OnFailure" target="This,UseTarget" StatusEffecttags="butcherskillgain" duration="1" setvalue="true">
+          <Conditional he-butchered="gt 0" />
+          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" StatusEffecttags="butcherskillgain" duration="1" setvalue="true">
+          <Conditional he-butchered="gt 0" />
+          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" StatusEffecttags="removeskillgaintag" setvalue="true" comparison="or">
+          <Conditional HasStatusTag="butcherskillgain" />
+          <GiveSkill skillidentifier="butchery" amount="1.05" triggertalents="false" />
+          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="0.5" volume="3" />
+        </StatusEffect>
         
         <!-- GET MEAT 
         Hit corpses to try and get meat
