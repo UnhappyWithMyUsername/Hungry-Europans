@@ -198,18 +198,15 @@
           <GiveSkill skillidentifier="butchery" amount="1.05" triggertalents="false" />
           <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="2" volume="2" />
         </StatusEffect>   -->
-        <StatusEffect type="OnFailure" target="This,UseTarget" StatusEffecttags="butcherskillgain" duration="1" setvalue="true">
+        <StatusEffect type="OnFailure" target="This,UseTarget" SetTags="butcherskillgain" setvalue="true">
           <Conditional he-butchered="gt 0" />
-          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" StatusEffecttags="butcherskillgain" duration="1" setvalue="true">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" SetTags="butcherskillgain" setvalue="true">
           <Conditional he-butchered="gt 0" />
-          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" StatusEffecttags="removeskillgaintag" setvalue="true" comparison="or">
-          <Conditional HasStatusTag="butcherskillgain" />
-          <GiveSkill skillidentifier="butchery" amount="1.05" triggertalents="false" />
-          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="0.5" volume="3" />
+        <StatusEffect type="OnUse" target="This,Character" SetTags="removeskillgaintag" setvalue="true" comparison="or" disabledeltatime="true" interval="1" stackable="false">
+          <Conditional HasTag="butcherskillgain" />
+          <GiveSkill skillidentifier="butchery" amount="0.15" triggertalents="false" />
         </StatusEffect>
         
         <!-- GET MEAT 
