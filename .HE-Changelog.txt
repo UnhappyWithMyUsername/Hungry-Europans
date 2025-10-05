@@ -34,7 +34,7 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]19/09/2025[/hr]
+[hr]05/10/2025[/hr]
 
 [b]Additions:[/b]
 [List]
@@ -56,12 +56,15 @@ Low:
 
 [b]Fixes:[/b] 
 [List]
+[*] Fixed preferred food not reducing mood (spelling mistake in IDs, might throw error the first time you load)
+[*] Fixed not gaining butchery at all when chopping up corpses. Had to come up with a... hacky solution
 [*] Fixed Refrigerators not being compatible with Neurotrauma organs and limbs
 [*] Fixed collision body of glasses being too large
 [*] Fixed Petraptors not consuming human meat
 [*] Fixed ice cream not freezing in refrigerators
 [*] Fixed cannibals being unable to speak
 [*] Fixed projectiles spawning in the deconstructor when deconstructing the bananagun
+[*] Fixed Kettle teacup duplication
 [/List]
 
 
