@@ -388,8 +388,7 @@
       <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="387,15,53,41" origin="0.5,0.5" />
       <InventoryIcon texture="Content/Characters/Pets/pets.png" sourcerect="387,15,53,41" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="Content/Characters/Pets/pets.png" sourcerect="387,15,53,41" depth="0.525" origin="0.5,0.7"  />
-      <Deconstruct time="10">
-        <Item identifier="carbon" />
+      <Deconstruct time="2">
       </Deconstruct>
       <!-- rectangular body to prevent the poop from rolling -->
       <Body width="53" height="41" density="9" />
@@ -401,7 +400,6 @@
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="0" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="embarrassment" strength="150" />
-          <!--<Affliction identifier="hygiene" strength="100" />-->
           <Affliction identifier="he-hitbypoop" strength="30" />
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
@@ -410,7 +408,6 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" shockwave="false" decal="fruitsplatter_brown" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="10" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="185,122,87,255" />
           <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
-          <Conditional HasTag="neq smallitem" targetcontainer="true" />
           <Remove />
         </StatusEffect>
       </Projectile>
