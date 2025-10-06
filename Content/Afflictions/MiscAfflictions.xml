@@ -1359,6 +1359,10 @@
         maxskillmultiplier="0.1"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.8">
+        <StatusEffect target="Character" >
+          <Conditional mood="gt 0" />
+          <Affliction identifier="mood" amount="0.2" />
+        </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,256,128,128" color="180,180,0,255" origin="0,0" />
     </Affliction>
