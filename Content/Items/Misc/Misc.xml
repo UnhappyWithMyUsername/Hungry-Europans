@@ -384,7 +384,7 @@
       </Repairable>
     </Item>
 
-    <Item name="" identifier="poop" nameidentifier="poop" Tags="smallitem,fertilizeringredient" maxstacksize="32" maxstacksizecharacterinventory="8" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft" impacttolerance="6">
+    <Item name="" identifier="poop" nameidentifier="poop" Tags="smallitem,fertilizeringredient" maxstacksize="32" maxstacksizecharacterinventory="8" hideinmenus="true" health="1" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft" impacttolerance="6">
       <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="387,15,53,41" origin="0.5,0.5" />
       <InventoryIcon texture="Content/Characters/Pets/pets.png" sourcerect="387,15,53,41" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="Content/Characters/Pets/pets.png" sourcerect="387,15,53,41" depth="0.525" origin="0.5,0.7"  />
@@ -393,36 +393,23 @@
       </Deconstruct>
       <!-- rectangular body to prevent the poop from rolling -->
       <Body width="53" height="41" density="9" />
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.05">
           <Use />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <Conditional HasTag="neq smallitem" targetcontainer="true" />
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" shockwave="false" decal="fruitsplatter_brown" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="10" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="185,122,87,255" />
-          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
-          <Remove />
-        </StatusEffect>
       </Throwable>
-      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="0" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="embarrassment" strength="150" />
           <!--<Affliction identifier="hygiene" strength="100" />-->
           <Affliction identifier="he-hitbypoop" strength="30" />
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="10" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="185,122,87,255" />
-          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true"/>
+        <StatusEffect type="OnBroken" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" shockwave="false" decal="fruitsplatter_brown" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="10" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="185,122,87,255" />
           <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
           <Conditional HasTag="neq smallitem" targetcontainer="true" />
           <Remove />
         </StatusEffect>
