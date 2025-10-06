@@ -34,7 +34,10 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]05/10/2025[/hr]
+[hr]06/10/2025[/hr]
+
+Last batch of small changes and bug fixes.
+Next updates will be focused on content
 
 [b]Additions:[/b]
 [List]
@@ -52,6 +55,9 @@ Low:
 [*] Sleeping in a bed heals damage slowly, but also addictions and withdrawal faster than before
 [*] Changed sleep overlay so you can see around your character a little
 [*] Changed worm and tapeworm infection to be detectable instantly via health scanner (previously only showed starting at 10%)
+[*] Hit-by-poop duration reduced, increases Hygiene
+[*] Embarassment increases Stress
+[*] Increased the hunger value of snacks slightly (chips, algae cake and protein bar)
 [/List]
 
 [b]Fixes:[/b] 
