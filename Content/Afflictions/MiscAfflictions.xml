@@ -1330,7 +1330,8 @@
     </Affliction>
     
     <Affliction identifier="he-hitbypoop" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="30" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="30" strengthchange="-1" />
+      <Effect minstrength="0" maxstrength="20" strengthchange="-10" />
+      <Effect minstrength="20" maxstrength="30" strengthchange="-1" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PoopOverlay.png" />
     </Affliction>
     
