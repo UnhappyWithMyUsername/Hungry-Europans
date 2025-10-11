@@ -25,7 +25,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -45,7 +45,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="ate_sweet" amount="1" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="120,80,30,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -81,7 +81,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -102,7 +102,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="20,150,50,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -144,7 +144,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -186,7 +186,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
@@ -235,7 +235,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1" />
           <ReduceAffliction type="burn" amount="0.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -278,7 +278,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="1" />
           <ReduceAffliction type="burn" amount="0.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
