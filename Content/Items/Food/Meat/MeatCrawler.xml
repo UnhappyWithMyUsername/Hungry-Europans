@@ -49,6 +49,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
+    <!-- Crawler Meat Chunk /// What is this meat used for? should it not exist?  -->
     <Item name="Crawler Meat Chunk" identifier="he-crawlermeatchunkspecial" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="A chunk of crawler meat." Tags="smallitem,meat,meatchunk,crawlermeat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
