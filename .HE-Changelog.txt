@@ -6,6 +6,8 @@
 Search "TODO:" in the mod
 PRIORITIES
 
+Creature Loot as ingredients (swim bladder, etc)
+
 High:
 - Testing, testing, testing
 - Plant RE-rework when DLC comes out
