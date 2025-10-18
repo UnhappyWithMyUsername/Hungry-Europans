@@ -36,32 +36,43 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]19/09/2025[/hr]
+[hr]06/10/2025[/hr]
+
+Last batch of small changes and bug fixes.
+Next updates will be focused on content
+
+[b]Additions:[/b]
+[List]
+[*] Added "Mobile Dishwasher" which can be used to clean more tableware at once
+[*] Added "Dishwasher Tablet" which is required for dishwashers to function
+[*] Added "Bag of Dishwasher Tablets" which contains 10 dishwasher tablets
+[/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Changed the way kitchen fabricators are placed. They are now handled as "Installations" you can plug into dedicated slots inside the kitchen counter/pantry
-It is recommended to have the submarine stationary while installing something as its placement may be offset while traveling
-Currently installed kitchen fabricators will not automatically transfer between submarines. You'll need to uninstall them first
-[*] Changed how to detach kitchen counter and kitchen pantry. You now need to interact with the container while holding a wrench which will allow you to click a "Disassemble" button
-Once disassembled, you can pick up the container and move it
-[*] Changed impact tolerance for empty glass containers like bottles, cups, etc
-You'll need to crouch if you want to drop them without breaking them
-[*] Changed power transfer for kitchen counter and also added it to the kitchen pantry
-They now feature a power_in and power_out
-All existing wires are automatically connected to power_in so you may need to shift some wires from power_in to power_out to fix your equipment not receiving power
+[*] Changed/Fixed power transfer for kitchen counter and kitchen pantry. Features a power_in and power_out (like relays). MAKE SURE TO REWIRE YOUR KITCHEN
 [*] Changed how alcohol is applied by drinks. Stronger drinks will now make you drunk quicker
-[*] Changed sleeping to be a visible affliction with a short description
+[*] Changed Beds and Sleeping:
+[*] Resting in a bed (not sleeping) only reduces Nausea/Concussion/Drunk, but much faster than before
+[*] Sleeping in a bed heals damage slowly, but also addictions and withdrawal faster than before
+[*] Changed sleep overlay so you can see around your character a little
+[*] Changed worm and tapeworm infection to be detectable instantly via health scanner (previously only showed starting at 10%)
+[*] Hit-by-poop duration reduced, increases Hygiene
+[*] Embarassment increases Stress
+[*] Increased the hunger value of snacks slightly (chips, algae cake and protein bar)
 [/List]
 
 [b]Fixes:[/b] 
 [List]
+[*] Fixed preferred food not reducing mood (spelling mistake in IDs, might throw error the first time you load)
+[*] Fixed not gaining butchery at all when chopping up corpses. Had to come up with a... hacky solution
 [*] Fixed Refrigerators not being compatible with Neurotrauma organs and limbs
 [*] Fixed collision body of glasses being too large
 [*] Fixed Petraptors not consuming human meat
 [*] Fixed ice cream not freezing in refrigerators
 [*] Fixed cannibals being unable to speak
 [*] Fixed projectiles spawning in the deconstructor when deconstructing the bananagun
+[*] Fixed Kettle teacup duplication
 [/List]
 
 
@@ -69,10 +80,7 @@ All existing wires are automatically connected to power_in so you may need to sh
 [*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
 [*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
-[*] Crafting using stacked bowls/plates will delete any contained bowl/plate, MAKE SURE TO UNSTACK YOUR BOWLS AND PLATES BEFORE CRAFTING
 [*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
-[*] Hygiene affliction washes with clothes on; you are supposed to take clothes off and go in water.
-[*] Kitchen Counter cannot receive power from batteries/relays
 
 
 //////////////////////
@@ -84,7 +92,6 @@ Misc TODOs:
 - Find a way to use lower condition meat since under 50% it can't be used to cook. Maybe throw it out the depth charge tube as decoy? 
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
 - Change drunkness to not apply disoriented while in water and instead slow the character down
-- Skin for Poutine
 - Ethanol gives some radiation resistance
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
 - Fix meat spoiling in fabricators.
