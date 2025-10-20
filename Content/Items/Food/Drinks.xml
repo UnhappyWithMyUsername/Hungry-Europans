@@ -1665,14 +1665,14 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
           <Affliction identifier="he-sugarrich" amount="15.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
+          <Affliction identifier="fillbladder" amount="2.5" />
           <Affliction identifier="ate_sweet" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
@@ -1737,13 +1737,13 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
-          <Affliction identifier="fillbladder" amount="3.0" />
+          <Affliction identifier="fillbladder" amount="2.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -1831,7 +1831,7 @@
           <Conditional thirst="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="4.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -1842,7 +1842,7 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="4.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
@@ -2189,7 +2189,7 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <ReduceAffliction type="thirst" amount="2.0" />
+          <ReduceAffliction type="thirst" amount="3.0" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
           <Affliction identifier="applystomachache" amount="4" />
           <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
@@ -2477,7 +2477,7 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <ReduceAffliction type="thirst" amount="2.0" />
+          <ReduceAffliction type="thirst" amount="3.0" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
           <Affliction identifier="applystomachache" amount="8" />
           <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
@@ -2729,14 +2729,14 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="5.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
           <ReduceAffliction identifier="psychosis" amount="5.0" />
           <ReduceAffliction identifier="hallucinating" amount="5.0" />
           <ReduceAffliction identifier="he-halucinova" amount="5.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
+          <Affliction identifier="fillbladder" amount="2.5" />
           <Affliction identifier="quenched" amount="50" />
           <Affliction identifier="drank_tea" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
@@ -2745,7 +2745,9 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.5" />
+          <Affliction identifier="fillbladder" amount="2.5" />
+          <Affliction identifier="quenched" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
@@ -2829,14 +2831,14 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="5.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
           <ReduceAffliction identifier="psychosis" amount="5.0" />
           <ReduceAffliction identifier="hallucinating" amount="5.0" />
           <ReduceAffliction identifier="he-halucinova" amount="5.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
+          <Affliction identifier="fillbladder" amount="2.5" />
           <Affliction identifier="quenched" amount="50" />
           <Affliction identifier="drank_tea" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
@@ -2845,7 +2847,9 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.5" />
+          <Affliction identifier="fillbladder" amount="2.5" />
+          <Affliction identifier="quenched" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
@@ -2936,8 +2940,8 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.0" />
+          <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="caffeinated" amount="50" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
@@ -2945,7 +2949,9 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.0" />
+          <Affliction identifier="fillbladder" amount="2.0" />
+          <Affliction identifier="caffeinated" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
@@ -3032,8 +3038,8 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.0" />
+          <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="caffeinated" amount="50" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
@@ -3041,7 +3047,9 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction type="thirst" amount="2.0" />
+          <Affliction identifier="fillbladder" amount="2.0" />
+          <Affliction identifier="caffeinated" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
@@ -3144,6 +3152,8 @@
           <Conditional timeframe="gte 180" />
           <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="3.0" />
+          <Affliction identifier="fillbladder" amount="3.0" />
+          <Affliction identifier="caffeinated" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
