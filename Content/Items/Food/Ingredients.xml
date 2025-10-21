@@ -24,6 +24,11 @@
         <RequiredItem identifier="saltbulb" amount="1" />
         <RequiredItem tag="emptyshaker" amount="1" />
       </Fabricate>
+      <Fabricate suitablefabricators="stove" requiredtime="45" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem tag="saline" amount="3" />
+        <RequiredItem tag="emptyshaker" amount="1" />
+      </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="52,104,15,30" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="52,104,15,30" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="52,104,15,30" depth="0.525" origin="0.5,0.7"  />
