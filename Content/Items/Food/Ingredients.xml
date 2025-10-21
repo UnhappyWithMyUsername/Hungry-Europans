@@ -9,7 +9,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="69" sold="false">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="5" sold="true" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="2" maxavailable="8" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
