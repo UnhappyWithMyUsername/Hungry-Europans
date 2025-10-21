@@ -100,19 +100,27 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
+- Mantis meat, basically a lobster/crab, orange boy shares the meat type
 - Sauté with Mushrooms, mushroom recipes
+
+Blender recipes
+- Fruit juices, special juices for mutated fruits
+- Bowl of Fiber Muesli: Fiber plant, seeds, add milk
+- Milkshakes: Banana/Chocolate/Milky ice cream
+- Spam: low quality meat + aluminum = canned spam
+- Mantis surimi
+- Gravy  (water, flour, salt, pepper, broth?)
+
 - Paté/Foie Gras. Made with Offal, can be spread on bread slices
-- Cake + Cake Slice
+- Cake + Slices
 - Pasta + pasta recipes
 - Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
 - Endeavour's cuppa: minor healing properties, slow metabolism cures psychosis and hallucinations, cures husk 
 - Grog! It'd be made of sea water and rum.
 - Homemade kvass from water, bread, yeast and sugar.
-- Gravy (water, flour, salt, pepper, broth?)
 - Cookie jar
 - Radioactive sausage cooked in reactor
 - Burger Double Deluxe (burger with 2x patties and cheese)
-- Box of Fiber Plant cereals, bowl of cereals + milk
 
 
 
