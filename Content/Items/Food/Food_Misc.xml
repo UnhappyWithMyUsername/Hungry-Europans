@@ -664,23 +664,27 @@
         <!--////////// REGULAR EATING \\\\\\\\\\-->
         <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
           <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional drawinventory="false" targetitemcomponent="ItemContainer" />
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="lt 100" />
         </StatusEffect>
         <!-- eating fries "animation" -->
         <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional drawinventory="false" targetitemcomponent="ItemContainer" />
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This" handle2="0,10" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional drawinventory="false" targetitemcomponent="ItemContainer" />
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="lt 100" />
         </StatusEffect>
         <!-- health effects -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional drawinventory="false" targetitemcomponent="ItemContainer" />
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="lt 100" />
           <Affliction identifier="he-stuffed" amount="1" />
