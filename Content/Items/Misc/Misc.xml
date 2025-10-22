@@ -414,7 +414,7 @@
     </Item>
 
 
-    <!-- Monster Doner -->
+    <!-- Monster Doner - can be loaded in depth charge tube and shot as a decoy. Useful to recycle low condition meats. Stinky and gives nausea  -->
     <Item name="" identifier="monsterdoner" tags="depthchargeammo,decoy,petfood1,petfood2,petfood3,monsterfood" category="Misc" sonarsize="5" scale="0.4" impactsoundtag="impact_soft" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" health="20" cargocontaineridentifier="" impacttolerance="6">
       <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="20">
@@ -1213,6 +1213,22 @@
         <TextBox text="Species Name" propertyname="Speciesname" maxtextlength="50" ShouldSetProperty="false" /> 
       </CustomInterface>    
     </Item>    
+        
+    <!-- fake id card that shreds itself in blender -->
+    <Item name="" identifier="idcardshredded" category="Equipment" Tags="smallitem" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,79,57,54" depth="0.6" origin="0.5,0.5" />
+      <Body width="16" height="12" density="10.05" />      
+      <Fabricate suitablefabricators="blender" requiredtime="15" requiresrecipe="false" amount="1">
+        <RequiredItem tag="identitycard" amount="1" />
+      </Fabricate>
+      <Pickable slots="Any" msg="ItemMsgPickUpSelect" >        
+        <StatusEffect type="Always" target="This">
+          <Remove />
+        </StatusEffect>
+      </Pickable>
+    </Item> 
+      
+      
       
       
       
