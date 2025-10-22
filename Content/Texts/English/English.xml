@@ -1398,6 +1398,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.bagpipes>Bagpipes</entityname.bagpipes>
 <entitydescription.bagpipes>An ancient instrument from earth consisting of an inflatable bladder, a mouthpiece and several metal pipes that produce haunting melodies.</entitydescription.bagpipes>
 
+<entityname.monsterdoner>Monster Dôner</entityname.monsterdoner>
+<entitydescription.monsterdoner>A giant pile of less than fresh monster meat, unsafe for consumption but can be thrown out of a depth charge tube as a makeshift decoy.</entitydescription.monsterdoner>
+
+<entityname.monsterdonermeatpiece>Monster Dôner (projectile)</entityname.monsterdonermeatpiece>
+<entitydescription.monsterdonermeatpiece>Piece of a monster doner. SHOULD NOT BE INTERACTABLE</entitydescription.monsterdonermeatpiece>
 
 <itemmsgopenuse>[[Use]] Open</itemmsgopenuse>
 
