@@ -1483,7 +1483,7 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
     
-    <!-- Purge your stomach, increasing defecate if enabled -->
+    <!-- Purge your stomach, reducing worms, stomachache and increasing defecate if enabled (otherwise gives Nausea) -->
     <Affliction identifier="he-purgestomach"
       type="debuff"
       limbspecific="false"
@@ -1499,10 +1499,7 @@
       MedicalSkillGain="0.0"
       healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="10" strengthchange="-1">
-        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
-          <Conditional defecate="gt 0" />
-          <Conditional defecate="lt 98" />
-          <Affliction identifier="defecate" strength="15" />
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction identifier="he-stomachache" strength="5" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="Or">
@@ -1512,6 +1509,11 @@
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="Or">
           <Conditional tapeworminfection="lte 50" />
           <ReduceAffliction identifier="tapeworminfection" strength="3" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
+          <Conditional defecate="gt 0" />
+          <Conditional defecate="lt 98" />
+          <Affliction identifier="defecate" strength="15" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
           <Conditional defecate="lte 0" />
