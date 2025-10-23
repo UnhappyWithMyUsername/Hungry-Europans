@@ -1107,6 +1107,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-pomberryjuiceglass>A glass of fresh Pomegrenade-Bubbleberry juice. Sweet, with no artificial flavors.</entitydescription.he-pomberryjuiceglass>
 <entityname.he-raptorzinejuiceglass>Glass of RaptorZine Solution</entityname.he-raptorzinejuiceglass>
 <entitydescription.he-raptorzinejuiceglass>A strong purgative drink used to ease stomach pains and set your digestive tract straight.</entitydescription.he-raptorzinejuiceglass>
+<entityname.he-bananashakeglass>Glass of Banana-Shake</entityname.he-bananashakeglass>
+<entitydescription.he-bananashakeglass>A creamy Banana milkshake with sprinkles of chocolate on top.</entitydescription.he-bananashakeglass>
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
