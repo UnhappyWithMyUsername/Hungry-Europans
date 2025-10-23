@@ -1411,6 +1411,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-fibermueslibowl>Fiber Muesli</entityname.he-fibermueslibowl>
 <entitydescription.he-fibermueslibowl>Fiber plant and popnuts blended into a health cereal breakfast to start the day.</entitydescription.he-fibermueslibowl>
 
+<entityname.he-spam>Can of "Special Alien Meat"</entityname.he-spam>
+<entitydescription.he-spam>What ration manufacturers label as "Special Alien Meat" is a blended agregate of poor quality cuts and leftover meat, judged not suitable for consumption. The resulting slosh is packed into a can and served only to the most resigned sailors.</entitydescription.he-spam>
 
 <entityname.idcardshredded>Shred ID Card</entityname.idcardshredded>
 <entitydescription.idcardshredded>A good way to get rid of evidence.</entitydescription.idcardshredded>

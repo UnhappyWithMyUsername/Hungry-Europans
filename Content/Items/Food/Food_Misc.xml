@@ -834,5 +834,76 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
+
+    <Item name="Can of Special Alien Meat" identifier="he-spam" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,cannedfood" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11"  canflipx="false">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="96,10,51,21" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="150,0,51,31" depth="0.6" origin="0.5,0.67" maxcondition="99" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="96,10,51,21" depth="0.525" origin="0.5,0.78" />
+      <Body width="51" height="21" density="11" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" minamount="0" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="32" fabricationlimitmin="0" fabricationlimitmax="3" />
+      <Fabricate suitablefabricators="blender" requiredtime="12" requiresrecipe="false" amount="1">
+        <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="aluminium" amount="1" />
+      </Fabricate>
+      <Deconstruct time="2">
+        <Item identifier="aluminium" amount="1" />
+      </Deconstruct>
+      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment identifier="he-stomachache" suitability="-50" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
+        </StatusEffect>
+
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
+        <StatusEffect type="OnActive" target="This" Condition="-1.0" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional condition="lte 10" />
+          <Conditional HasStatusTag="usingfork" targetcontainer="true" />
+          <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork"/>
+          <Conditional InWater="false" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="he-stomachache" amount="1" probability="0.1" />
+          <Affliction identifier="applystomachache" amount="5" probability="0.2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
+          <Conditional HasStatusTag="usingfork" />
+        </StatusEffect>
+        
+        <!-- <StatusEffect type="OnBroken" target="This">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush4.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush5.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush6.ogg" range="350" volume="3" selectionmode="Random" />
+          <Remove />
+          <Spawnitem identifier="he-emptycancola" spawnposition="SameInventory" spawnifinventoryfull="true" />
+        </StatusEffect> -->
+      </Holdable>
+    </Item>
+
   </Items>
 </Override>
