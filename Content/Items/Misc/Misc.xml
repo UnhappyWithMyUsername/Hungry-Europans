@@ -419,7 +419,11 @@
       <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="20">
         <RequiredSkill identifier="butchery" level="40" />
-        <RequiredItem tag="rawmeatpiece" amount="5" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
       </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,152,136,88" depth="0.55" origin="0.5,0.5" />
       <Body width="70" radius="40" density="10.5" />
