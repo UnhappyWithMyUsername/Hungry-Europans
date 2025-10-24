@@ -98,7 +98,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-humanmeatchunk" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
