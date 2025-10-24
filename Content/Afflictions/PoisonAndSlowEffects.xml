@@ -81,6 +81,7 @@
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character">
+          <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.01" />
         </StatusEffect>
       </Effect>
@@ -90,6 +91,7 @@
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character">
+          <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.02" />
         </StatusEffect>
       </Effect>
@@ -99,6 +101,7 @@
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character">
+          <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.04" />
         </StatusEffect>
       </Effect>
@@ -108,6 +111,7 @@
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character">
+          <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.08" />
         </StatusEffect>
       </Effect>
