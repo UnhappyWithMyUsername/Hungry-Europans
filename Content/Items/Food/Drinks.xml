@@ -1774,7 +1774,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <!-- <Fabricate suitablefabricators="blender" requiredtime="5" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="banana" amount="1" />
+        <RequiredItem tag="bananaseed" amount="4" />
         <RequiredItem identifier="he-icecreamballmilky" amount="1" />
         <RequiredItem identifier="he-chocolatemix" amount="1" UseCondition="True" MinCondition="0.20" />
         <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
