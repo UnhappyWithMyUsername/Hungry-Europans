@@ -3,11 +3,11 @@
   <Items>
     <!--human-->
     <Item name="Human Meat" identifier="he-humanmeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="378,344,134,46" depth="0.6" origin="0.5,0.5" />
+      <Body width="134" radius="23" density="15" />
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="378,344,134,46" depth="0.6" origin="0.5,0.5" />
-      <Body width="134" radius="23" density="15" />
       <Deconstruct time="10" requireddeconstructor="deconstructor" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
@@ -22,23 +22,22 @@
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <!-- increase cannibalism, reduce craving for human meat -->
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="2" />
-          <Affliction identifier="he-cannibalism" amount="0.75" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="3" />
-          <Affliction identifier="he-stuffed" amount="4" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <Affliction identifier="he-cannibalism" amount="1.5" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
+          <Affliction identifier="worminfection" amount="1" probability="0.02" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
+        <!-- give psychosis and nausea if you're not an accomplished cannibal -->
         <StatusEffect type="OnUse" target="Character">
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="1" />
+          <Affliction identifier="psychosis" amount="0.5" />
           <Affliction identifier="nausea" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional he-cannibalism="gte 20" />
-          <ReduceAffliction identifier="psychosis" amount="4" />
-          <ReduceAffliction identifier="nausea" amount="4" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -48,16 +47,16 @@
     </Item>
 
     <Item name="Raw Human Meat" identifier="he-rawhumanmeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,477,51,17" depth="0.6" origin="0.5,0.5" />
+      <Body width="51" radius="8" density="15" />
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,477,51,17" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="4">
         <RequiredSkill identifier="butchery" level="60" />
         <RequiredItem identifier="he-humanmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
-      <Body width="51" radius="8" density="15" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -73,21 +72,18 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="he-stuffed" amount="0.5" />
           <Affliction identifier="he-cannibalism" amount="0.5" />
-          <Affliction identifier="he-stuffed" amount="1" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
+          <Affliction identifier="worminfection" amount="1" probability="0.02" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional he-cannibalism="lt 20" />
           <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional he-cannibalism="gte 20" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -123,12 +119,19 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <Affliction identifier="he-cannibalism" amount="0.75" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
+          <Affliction identifier="worminfection" amount="1" probability="0.02" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <Conditional he-cannibalism="lt 20" />
+          <Affliction identifier="psychosis" amount="0.5" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -137,7 +140,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Human Filets" identifier="he-preparedhumanfilets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Prepared Human Filets" identifier="he-preparedhumanfilets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" depth="0.525" origin="0.5,0.65"  />
@@ -161,11 +164,17 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
-          <Affliction identifier="nausea" amount="1" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <Affliction identifier="he-cannibalism" amount="0.75" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <Conditional he-cannibalism="lt 20" />
+          <Affliction identifier="psychosis" amount="0.5" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
