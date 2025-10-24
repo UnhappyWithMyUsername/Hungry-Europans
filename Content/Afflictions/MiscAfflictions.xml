@@ -1523,5 +1523,33 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     
+    <!-- Mutated Salt Bulb drink, gives hyperactivity, reduces fatigue, improves mood and adds 20% extra health until end of round -->
+    <Affliction identifier="he-sparkbulbbuff"
+      type="buff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="10"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+          <Affliction identifier="haste" strength="45" />
+          <Affliction identifier="bedsidemanner" strength="10" />
+          <Affliction identifier="adrenalinerush" strength="2" />
+          <ReduceAffliction identifier="fatigue" strength="5" />
+          <ReduceAffliction identifier="mood" strength="1" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>    
+    
+    
   </Afflictions>
 </Override>
