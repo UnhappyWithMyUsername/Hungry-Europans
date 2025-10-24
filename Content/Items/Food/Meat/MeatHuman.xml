@@ -46,16 +46,17 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
+    <!-- Disabled for now, cannot be used in recipes as we don't want human meat to be used as an ingredient for items that do not give cannibalism -->
     <Item name="Raw Human Meat" identifier="he-rawhumanmeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,477,51,17" depth="0.6" origin="0.5,0.5" />
       <Body width="51" radius="8" density="15" />
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
+      <!-- <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="4">
         <RequiredSkill identifier="butchery" level="60" />
         <RequiredItem identifier="he-humanmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-      </Fabricate>
+      </Fabricate> -->
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
