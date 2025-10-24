@@ -1111,6 +1111,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-bananashakeglass>A creamy Banana milkshake with sprinkles of chocolate on top.</entitydescription.he-bananashakeglass>
 <entityname.he-sparkbulbjuiceglass>Glass of Sparkbulb Extract</entityname.he-sparkbulbjuiceglass>
 <entitydescription.he-sparkbulbjuiceglass>Mutated Salt Bulb extract is uniquely energizing for the body. If not for the added touch of sugar to offset its peculiar volatility, it would explode in your stomach.</entitydescription.he-sparkbulbjuiceglass>
+<entityname.he-bloodytobyjuiceglass>Glass of Bloody Toby</entityname.he-bloodytobyjuiceglass>
+<entitydescription.he-bloodytobyjuiceglass>Mutated Tobacco isn't just hallucigenic, it's also highly dialytic, cleaning the blood stream of any toxins or impurities. Unfortunately, this produce has long been outlawed due to addicts constantly raiding the blood reserves on stations.</entitydescription.he-bloodytobyjuiceglass>
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
