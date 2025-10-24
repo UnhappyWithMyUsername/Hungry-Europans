@@ -39,9 +39,9 @@
         <StatusEffect type="OnActive" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Conditional he-cannibalism="gte 20" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
+          <Conditional he-cannibalism="lt 20" />
+          <Affliction identifier="psychosis" amount="0.5" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -71,9 +71,9 @@
           <Conditional HasStatusTag="usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
           <Conditional InWater="false" />
-          <Conditional he-cannibalism="gte 20" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
+          <Conditional he-cannibalism="lt 20" />
+          <Affliction identifier="psychosis" amount="0.5" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
@@ -123,9 +123,9 @@
         <StatusEffect type="OnActive" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Conditional he-cannibalism="gte 20" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
+          <Conditional he-cannibalism="lt 20" />
+          <Affliction identifier="psychosis" amount="0.5" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -154,9 +154,9 @@
           <Conditional HasStatusTag="usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
           <Conditional InWater="false" />
-          <Conditional he-cannibalism="gte 20" />
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="nausea" amount="1" />
+          <Conditional he-cannibalism="lt 20" />
+          <Affliction identifier="psychosis" amount="0.5" />
+          <Affliction identifier="nausea" amount="0.5" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
