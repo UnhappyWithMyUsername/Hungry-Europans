@@ -579,7 +579,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fiberrich" amount="25.0" />
+          <Affliction identifier="he-fiberrich" amount="45.0" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
@@ -596,7 +596,7 @@
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fiberrich" amount="25.0" />
+          <Affliction identifier="he-fiberrich" amount="45.0" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
