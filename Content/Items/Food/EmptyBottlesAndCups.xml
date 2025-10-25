@@ -23,6 +23,7 @@
         <Item identifier="he-emptyjar" requiredotheritem="he-blueprintjar" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.jar" infotextonotheritemmissing="bottleprinter.missingitem" />
         <Item identifier="he-emptyshaker" amount="2" requiredotheritem="he-blueprintshaker" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.shaker" infotextonotheritemmissing="bottleprinter.missingitem" />
         <Item identifier="he-emptycup" amount="2" requiredotheritem="he-blueprintcup" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.cup" infotextonotheritemmissing="bottleprinter.missingitem" />
+        <Item identifier="he-emptyglass" amount="2" requiredotheritem="he-blueprintglass" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.glass" infotextonotheritemmissing="bottleprinter.missingitem" />
       </Deconstruct>
       <Holdable canbepicked="true" characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="Character" interval="1">

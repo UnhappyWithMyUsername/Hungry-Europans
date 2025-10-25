@@ -318,6 +318,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-blueprintshaker>A blueprint of a Shaker. Can be used in a bottle printer.</entitydescription.he-blueprintshaker><!--Patch 11-->
 <entityname.he-blueprintcup>Cup Blueprint</entityname.he-blueprintcup><!--Patch 13-->
 <entitydescription.he-blueprintcup>A blueprint of a Cup. Can be used in a bottle printer.</entitydescription.he-blueprintcup><!--Patch 13-->
+<entityname.he-blueprintglass>Glass Blueprint</entityname.he-blueprintglass><!--Patch 20-->
+<entitydescription.he-blueprintglass>A blueprint of a Glass. Can be used in a bottle printer.</entitydescription.he-blueprintglass><!--Patch 20-->
 <!-- Ingredients -->
 <entityname.he-emptybottlerum>Empty Rum Bottle</entityname.he-emptybottlerum>
 <entitydescription.he-emptybottlerum>An empty Rum bottle used for some recipes. Can be thrown or used in water to collect sea water.</entitydescription.he-emptybottlerum>
@@ -859,6 +861,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <bottleprinter.infotext.jar>MATERIAL INSERTED\nBLUEPRINT INSERTED\nREADY TO PRINT JARS.</bottleprinter.infotext.jar><!--Patch 10-->
 <bottleprinter.infotext.shaker>MATERIAL INSERTED\nBLUEPRINT INSERTED\nREADY TO PRINT SHAKERS.</bottleprinter.infotext.shaker><!--Patch 10-->
 <bottleprinter.infotext.cup>MATERIAL INSERTED\nBLUEPRINT INSERTED\nREADY TO PRINT CUPS.</bottleprinter.infotext.cup><!--Patch 13-->
+<bottleprinter.infotext.glass>MATERIAL INSERTED\nBLUEPRINT INSERTED\nREADY TO PRINT GLASSES.</bottleprinter.infotext.glass><!--Patch 20-->
 <bottleprinter.print>PRINT</bottleprinter.print><!--Patch 10-->
 <bottleprinter.missingitem.blueprint>MATERIAL INSERTED\nERROR: NO BLUEPRINT FOUND! PLEASE INSERT A BLUEPRINT.</bottleprinter.missingitem.blueprint><!--Patch 10-->
 <bottleprinter.missingitem.glassfragments>BLUEPRINT INSERTED\nERROR: NO GLASS FRAGMENTS FOUND! PLEASE INSERT GLASS FRAGMENTS.</bottleprinter.missingitem.glassfragments><!--Patch 10-->
