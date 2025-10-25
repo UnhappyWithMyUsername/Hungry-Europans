@@ -803,7 +803,6 @@
       </ItemComponent>
     </Item>
 
-    <!-- TODO: make sure to add empty glass to bottle printer list -->
     <Item name="Empty Glass" identifier="he-emptyglass" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptyglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,272,17,34" depth="0.499" origin="0.5,0.5" />
