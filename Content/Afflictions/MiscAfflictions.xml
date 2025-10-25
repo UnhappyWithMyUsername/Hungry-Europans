@@ -1360,9 +1360,9 @@
       <!-- Reduce skills -->
       <Effect minstrength="0" maxstrength="100"
         strengthchange="-1"
-        minskillmultiplier="0.3"
-        maxskillmultiplier="0.1"
-        minspeedmultiplier="0.8"
+        minskillmultiplier="1"
+        maxskillmultiplier="0.5"
+        minspeedmultiplier="0.9"
         maxspeedmultiplier="0.8">
         <StatusEffect target="Character" >
           <Conditional mood="gt 0" />
