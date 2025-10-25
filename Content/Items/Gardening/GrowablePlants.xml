@@ -57,7 +57,7 @@ ProductSpawnChance
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
   
-    <Item name="" identifier="creepingorangevineseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,pomegrenadeseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
+    <Item name="" identifier="creepingorangevineseed" category="Misc" Tags="smallitem,seed,plantitem,pomegrenadeseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
@@ -109,7 +109,7 @@ ProductSpawnChance
       </Upgrade> -->
     </Item>
 
-    <Item name="" identifier="tobaccovineseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,tobaccoseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="48,122,245,255">
+    <Item name="" identifier="tobaccovineseed" category="Misc" Tags="smallitem,seed,plantitem,tobaccoseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="48,122,245,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,636,30,31" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
@@ -161,7 +161,7 @@ ProductSpawnChance
       </Upgrade> -->
     </Item>
 
-    <Item name="" identifier="saltvineseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,saltbulbseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="215,245,77,255">
+    <Item name="" identifier="saltvineseed" category="Misc" Tags="smallitem,seed,plantitem,saltbulbseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="215,245,77,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
@@ -213,7 +213,7 @@ ProductSpawnChance
       </Upgrade> -->
     </Item>
 
-    <Item name="" identifier="raptorbaneseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,raptorbaneseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="238,36,98,255">
+    <Item name="" identifier="raptorbaneseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="238,36,98,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,668,30,33" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
@@ -265,7 +265,7 @@ ProductSpawnChance
       </Upgrade> -->
     </Item>
 
-    <Item name="Bubble Berry Vine Seed" identifier="bubbleberryvineseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,bubbleberryseed" description="Plant it in a planter to grow bubble berries." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <Item name="Bubble Berry Vine Seed" identifier="bubbleberryvineseed" category="Misc" Tags="smallitem,seed,plantitem,bubbleberryseed" description="Plant it in a planter to grow bubble berries." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,164,25,29" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
@@ -315,7 +315,7 @@ ProductSpawnChance
       <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
 
-    <Item name="Pop Nut Vine Seed" identifier="popnutvineseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,popnutseed" description="Plant it in a planter to grow pop nuts." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <Item name="Pop Nut Vine Seed" identifier="popnutvineseed" category="Misc" Tags="smallitem,seed,plantitem,popnutseed" description="Plant it in a planter to grow pop nuts." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="25,164,19,18" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
@@ -430,7 +430,7 @@ ProductSpawnChance
   <!-- Crossbreed seeds can only be acquired by merging fruits in research station -->
     
     <!-- POMACCO SEED (pom x tobacco)-->
-    <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,pomegrenadeseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
+    <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,plantitem,pomegrenadeseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -482,7 +482,7 @@ ProductSpawnChance
     </Item>
     
     <!-- SALTGRENADE SEED (saltvine x pom) -->
-    <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,saltbulbseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
+    <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,plantitem,saltbulbseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -534,7 +534,7 @@ ProductSpawnChance
     </Item>
     
     <!-- RAPTOR BERRY SEED (pom x raptorbane) -->
-    <Item name="raptorpomseed" identifier="raptorpomseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,raptorbaneseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
+    <Item name="raptorpomseed" identifier="raptorpomseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -586,7 +586,7 @@ ProductSpawnChance
     </Item>
       
     <!-- RAPTOR'S NIP SEED (tobacco x raptorbane) -->
-    <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,raptorbaneseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
+    <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -750,7 +750,7 @@ ProductSpawnChance
     <!-- TEST ITEMS FOR GARDENING  -->
     <!-- TEST ITEMS FOR GARDENING  -->
     
-    <!-- <Item name="TESTSEED" identifier="TESTSEED" description="seed for testing with accelerated growth. REPORT IF YOU SEE THIS" category="Misc" Tags="smallitem,seed,seedingredient,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="1" impactsoundtag="impact_soft" spritecolor="255,100,255,255" isshootable="true" requireaimtouse="true">
+    <!-- <Item name="TESTSEED" identifier="TESTSEED" description="seed for testing with accelerated growth. REPORT IF YOU SEE THIS" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="1" impactsoundtag="impact_soft" spritecolor="255,100,255,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.2" sourcerect="1975,295,72,66" origin="0.5,0.20" maxcondition="99" fadein="true" />
       <Deconstruct time="2" requireddeconstructor="deconstructor"/> 

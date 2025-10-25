@@ -328,7 +328,7 @@
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem tag="seedingredient" amount="12" />
+        <RequiredItem tag="seed" amount="12" />
         <RequiredItem tag="emptybottle" amount="1" />
       </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="22,74,14,60" depth="0.6" origin="0.5,0.5" />
@@ -389,7 +389,7 @@
       </Price>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="28" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem tag="seedingredient" amount="20" />
+        <RequiredItem tag="seed" amount="20" />
         <RequiredItem identifier="sulphuricacid" amount="1" />
         <RequiredItem identifier="he-emptybowl" amount="1" MinCondition="0" usecondition="true" />
       </Fabricate>
