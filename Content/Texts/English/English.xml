@@ -769,7 +769,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <advancedafflictiondescription.self.he-cannibalism>Uh oh! Seems like you like the taste of your fellow crewmates.</advancedafflictiondescription.self.he-cannibalism><!--Patch 8-->
 <advancedafflictiondescription.others.he-cannibalism>The patient certainly likes a special type of meat.</advancedafflictiondescription.others.he-cannibalism><!--Patch 8-->
 
-<afflictionname.he-hungryforhumanmeat>Hungry for Human Meat</afflictionname.he-hungryforhumanmeat><!--Patch 8-->
+<afflictionname.he-hungryforhumanmeat>Craving Human Meat</afflictionname.he-hungryforhumanmeat><!--Patch 20-->
 <afflictiondescription.he-hungryforhumanmeat>Agitation and a tremor are obvious, the eyes stare empty.</afflictiondescription.he-hungryforhumanmeat><!--Patch 8-->
 <afflictioncauseofdeath.he-hungryforhumanmeat>Lost their mind over human meat.</afflictioncauseofdeath.he-hungryforhumanmeat><!--Patch 8-->
 <afflictioncauseofdeathself.he-hungryforhumanmeat>You lost your mind over human meat.</afflictioncauseofdeathself.he-hungryforhumanmeat><!--Patch 8-->
