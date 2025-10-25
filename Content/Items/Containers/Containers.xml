@@ -5,8 +5,8 @@
     <!-- CONTAINERS -->
     <Item name="Tool Belt with Lunch Box" identifier="he-toolbeltlunch" category="Equipment" subcategory="Container" tags="mediumitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="A Tool Belt with a Lunch Box attached to it to always carry your food with you." impactsoundtag="impact_soft" canflipx="false">
       <PreferredContainer primary="engcab" />
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
-      <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
       <Deconstruct time="10">
         <Item identifier="toolbelt" />
         <Item identifier="he-lunchbox" amount="1" />

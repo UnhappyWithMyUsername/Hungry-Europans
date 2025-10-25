@@ -59,7 +59,7 @@ ProductSpawnChance
   
     <Item name="" identifier="creepingorangevineseed" category="Misc" Tags="smallitem,seed,plantitem,pomegrenadeseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
       <Price baseprice="33" >
         <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
@@ -111,7 +111,7 @@ ProductSpawnChance
 
     <Item name="" identifier="tobaccovineseed" category="Misc" Tags="smallitem,seed,plantitem,tobaccoseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="48,122,245,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,636,30,31" origin="0.5,0.5" />
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
       <Price baseprice="33" >
         <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
@@ -163,7 +163,7 @@ ProductSpawnChance
 
     <Item name="" identifier="saltvineseed" category="Misc" Tags="smallitem,seed,plantitem,saltbulbseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="215,245,77,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
       <Price baseprice="33" >
         <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
@@ -215,7 +215,7 @@ ProductSpawnChance
 
     <Item name="" identifier="raptorbaneseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="238,36,98,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,668,30,33" origin="0.5,0.5" />
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
       <Price baseprice="33" >
         <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
@@ -268,7 +268,7 @@ ProductSpawnChance
     <Item name="Bubble Berry Vine Seed" identifier="bubbleberryvineseed" category="Misc" Tags="smallitem,seed,plantitem,bubbleberryseed" description="Plant it in a planter to grow bubble berries." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,164,25,29" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
-      <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
       <Price baseprice="33" >
         <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
         <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
@@ -318,7 +318,7 @@ ProductSpawnChance
     <Item name="Pop Nut Vine Seed" identifier="popnutvineseed" category="Misc" Tags="smallitem,seed,plantitem,popnutseed" description="Plant it in a planter to grow pop nuts." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="25,164,19,18" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
-      <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
       <Price baseprice="33" >
         <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
         <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
