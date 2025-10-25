@@ -1571,7 +1571,7 @@
           <ReduceAffliction identifier="bloodloss" strength="4" />
           <ReduceAffliction identifier="drunk" strength="8" />
           <ReduceAffliction identifier="applydrunk" strength="8" />
-          <ReduceAffliction identifier="alcoholwithdrawal" strength="3" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="3" />
           <ReduceAffliction identifier="chemaddiction" strength="3" />
           <ReduceAffliction identifier="chemwithdrawal" strength="3" />
           <ReduceAffliction identifier="he-tobaccoaddiction" strength="3" />
