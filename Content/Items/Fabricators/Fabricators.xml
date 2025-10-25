@@ -350,7 +350,7 @@
           <Containable items="glassfragments" />
         </SubContainer>
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="bottleblueprint,jarblueprint,shakerblueprint,cupblueprint" />
+          <Containable items="bottleprinterblueprint" />
         </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="112,-194" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
