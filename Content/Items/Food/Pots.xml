@@ -563,6 +563,7 @@
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="fiberplant" UseCondition="True" />
         <RequiredItem identifier="popnut" amount="1" />
+        <RequiredItem tag="seed" amount="4" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
