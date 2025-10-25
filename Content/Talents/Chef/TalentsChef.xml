@@ -498,12 +498,7 @@
   <!--Buff allies for the duration of your bagpipe playing-->
     <Talent identifier="he-piper">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,2" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.he-piper">
-        <Replace tag="[duration]" value="10" color="gui.green"/>
-        <Replace tag="[buffamount]" value="100" color="gui.green"/>
-        <Replace tag="[buffname]" value="afflictionname.psychosisresistance" color="gui.orange"/>
-        <Replace tag="[buffduration]" value="60" color="gui.green"/>
-      </Description>
+      <Description tag="talentdescription.he-piper" />
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
