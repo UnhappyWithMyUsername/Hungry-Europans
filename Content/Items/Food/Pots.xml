@@ -136,7 +136,7 @@
         <RequiredItem identifier="he-potwithwater" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-nori" amount="8" />
-        <RequiredItem tag="seed" amount="10" />
+        <RequiredItem tag="seedingredient" amount="10" />
       </Fabricate>
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" offset="0,15">
@@ -563,7 +563,7 @@
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="fiberplant" UseCondition="True" />
         <RequiredItem identifier="popnut" amount="1" />
-        <RequiredItem tag="seed" amount="4" />
+        <RequiredItem tag="seedingredient" amount="4" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
