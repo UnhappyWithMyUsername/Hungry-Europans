@@ -3,7 +3,7 @@
   <Items>
   
     <!-- CONDIMENTS -->
-    <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
+    <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient,condiment,fullshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -74,7 +74,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Synthetic Pepper" identifier="he-pepper" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Pepper be prepared!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
+    <Item name="Synthetic Pepper" identifier="he-pepper" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Pepper be prepared!" Tags="smallitem,ingredient,condiment,fullshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" notcampaign="true"/>
@@ -182,7 +182,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Ketchup" identifier="he-ketchup" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Ketchup" identifier="he-ketchup" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -246,7 +246,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Vinegar" identifier="he-vinegar" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Vinegar" identifier="he-vinegar" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -310,7 +310,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -459,7 +459,7 @@
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="bubbleberryleaf" amount="5" />
       </Fabricate>
-      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect" />
+      <!-- <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect" /> -->
       <Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
