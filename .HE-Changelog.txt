@@ -65,6 +65,7 @@ Low:
 [*] Fixed dying of thirst taking an exceedingly long time
 [*] Fixed some drinks not filling your bladder
 [*] Fixed eating MRE with an empty bottle inside
+[*] Fixed Tea Mix not deleting itself
 [/List]
 
 
@@ -97,14 +98,8 @@ LIST OF FOODS IDEAS:
 - Mantis meat, basically a lobster/crab, orange boy shares the meat type
 - Sauté with Mushrooms, mushroom recipes
 - Thresher Fugu, thresher + buffotoxin
-
-
-Blender recipes
-- Fruit juices, special juices for mutated fruits
-- Bowl of Fiber Muesli: Fiber plant, seeds, add milk
-- Milkshakes: Banana/Chocolate/Milky ice cream
-- Spam: low quality meat + aluminum = canned spam
-- Mantis surimi
+- More Blender recipes
+- Mantis Meat, Mantis surimi
 
 - Paté/Foie Gras. Made with Offal, can be spread on bread slices
 - Cake + Slices
