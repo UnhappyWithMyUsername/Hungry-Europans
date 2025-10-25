@@ -460,15 +460,15 @@
         <RequiredItem identifier="bubbleberryleaf" amount="5" />
       </Fabricate>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect" />
-      <!--<Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
+      <Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
-      </Throwable>-->
-      <!--<Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="blunttrauma" strength="2" />
           <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
@@ -479,7 +479,7 @@
           <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
           <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
         </StatusEffect>
-      </Projectile>-->
+      </Projectile>
     </Item>
 
     <Item name="Popnut Tea Mix" identifier="he-teamixpopnut" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" tags="smallitem,mix,teamix,cupmix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
