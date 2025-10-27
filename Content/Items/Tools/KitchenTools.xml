@@ -157,7 +157,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
       <Body width="65" height="15" density="25" />
-      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false">
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false" DualWieldReloadTimePenaltyMultiplier="1.75">
         <RequiredSkill identifier="butchery" level="100" />
         <Attack targetimpulse="2" severlimbsprobability="0.8" itemdamage="10" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="lacerations" strength="10" />
