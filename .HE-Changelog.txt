@@ -48,6 +48,7 @@ Low:
 [*] Human meat can no longer be used for generic food (burgers, hotdogs...). Consuming human meat should always result in gaining "Cannibalism" for balance purposes
 [*] Disabled rawhumanmeat as it is no longer used
 [*] Renamed "Hungry for Human Meat" into "Craving Human Meat" for clarity
+[*] You can no longer get tapeworm when you have worms and vice-versa
 [*] Rebalanced Cannibalism/Craving a bit (along with fixes)
 [*] Increased thirst values of water so you don't have to drink as many bottles
 [*] Added alternative Salt recipe so it's harder to run out of salt completely
@@ -61,6 +62,7 @@ Low:
 [*] Fixed preplaced submarine kitchen items falling on the floor
 [*] Fixed unwired pumps in Abyss Scout submarine
 [*] Fixed Tapeworm and Craving Human Meat both giving hunger without Hungry Europan enabled
+[*] Fixed Worm/Tapeworm infection chance being way too high by default
 [*] Fixed some human foods increasing Craving instead of reducing it
 [*] Fixed dying of thirst taking an exceedingly long time
 [*] Fixed some drinks not filling your bladder
@@ -96,7 +98,7 @@ Misc TODOs:
 LIST OF FOODS IDEAS:
 
 - Mantis meat, basically a lobster/crab, orange boy shares the meat type
-- Sauté with Mushrooms, mushroom recipes
+- Raptor Sauté with Mushrooms, mushroom recipes
 - Thresher Fugu, thresher + buffotoxin
 - More Blender recipes
 - Mantis Meat, Mantis surimi
