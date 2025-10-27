@@ -17,11 +17,11 @@
       maxstrength="100"
       affectmachines="false"
       MedicalSkillGain="0.0"
-      healableinmedicalclinic="false"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.05" 
       resistancefor="tapeworminfection"
       minresistance="1"
       maxresistance="1">
-      <Effect minstrength="0" maxstrength="100" strengthchange="0.05" >
         <!-- Self remove if ABX buff is applied recently. For reference, ABX gives 300 on failure -->
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
@@ -77,11 +77,11 @@
       maxstrength="100"
       affectmachines="false"
       MedicalSkillGain="0.0"
-      healableinmedicalclinic="false"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="25" strengthchange="0.05"
       resistancefor="worminfection"
       minresistance="1"
       maxresistance="1">
-      <Effect minstrength="0" maxstrength="25" strengthchange="0.05">
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
@@ -91,7 +91,10 @@
           <Affliction identifier="hunger" strength="0.01" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="25" maxstrength="50" strengthchange="0.05">
+      <Effect minstrength="25" maxstrength="50" strengthchange="0.05"
+      resistancefor="worminfection"
+      minresistance="1"
+      maxresistance="1">
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
@@ -101,7 +104,10 @@
           <Affliction identifier="hunger" strength="0.02" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="50" maxstrength="75" strengthchange="0.05">
+      <Effect minstrength="50" maxstrength="75" strengthchange="0.05"
+      resistancefor="worminfection"
+      minresistance="1"
+      maxresistance="1">
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
@@ -111,7 +117,10 @@
           <Affliction identifier="hunger" strength="0.04" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="75" maxstrength="100" strengthchange="0.05">
+      <Effect minstrength="75" maxstrength="100" strengthchange="0.05"
+      resistancefor="worminfection"
+      minresistance="1"
+      maxresistance="1">
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
           <ReduceAffliction identifier="tapeworminfection" strength="4" />
