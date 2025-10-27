@@ -17,7 +17,10 @@
       maxstrength="100"
       affectmachines="false"
       MedicalSkillGain="0.0"
-      healableinmedicalclinic="false">
+      healableinmedicalclinic="false"
+      resistancefor="tapeworminfection"
+      minresistance="1"
+      maxresistance="1">
       <Effect minstrength="0" maxstrength="100" strengthchange="0.05" >
         <!-- Self remove if ABX buff is applied recently. For reference, ABX gives 300 on failure -->
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
@@ -74,7 +77,10 @@
       maxstrength="100"
       affectmachines="false"
       MedicalSkillGain="0.0"
-      healableinmedicalclinic="false">
+      healableinmedicalclinic="false"
+      resistancefor="worminfection"
+      minresistance="1"
+      maxresistance="1">
       <Effect minstrength="0" maxstrength="25" strengthchange="0.05">
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
