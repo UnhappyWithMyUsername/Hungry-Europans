@@ -63,8 +63,8 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0002" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0002" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -235,8 +235,8 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0002" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0002" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -396,8 +396,8 @@
           <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="6" probability="0.5" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0002" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0002" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -456,8 +456,8 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="nausea" amount="6" probability="0.5" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0005" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0005" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00055" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00055" />
           <Affliction identifier="spill" amount="1000" probability="0.005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>

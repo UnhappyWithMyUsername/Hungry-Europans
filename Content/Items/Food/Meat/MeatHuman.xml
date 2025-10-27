@@ -28,8 +28,8 @@
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="he-cannibalism" amount="1.5" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0002" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0002" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -76,8 +76,8 @@
           <Affliction identifier="he-stuffed" amount="0.5" />
           <Affliction identifier="he-cannibalism" amount="0.5" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0002" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0002" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -124,8 +124,8 @@
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="he-cannibalism" amount="0.75" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
-          <Affliction identifier="worminfection" amount="1" probability="0.0002" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.0002" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
