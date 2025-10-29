@@ -183,10 +183,10 @@
                 <Conditional defecate="lt 0.1" />
                 <Affliction identifier="defecate" strength="0.01"/>
               </StatusEffect>
-              <!--<StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
                 <Affliction identifier="hygiene" strength="0.005"/>
-              </StatusEffect>-->
+              </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
