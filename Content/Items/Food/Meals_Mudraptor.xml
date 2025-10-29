@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <!-- MEAT -->
-    <!--Mudraptor-->
-    <Item HideInMenus="false" name="Roast" identifier="he-cookedmudraptorroast" variantof="he-poisoneffectpreset_fork" health="15" category="Misc" subcategory="Food - Mudraptor" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,roast,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+  
+    <!--Cold Raptor Roast -->
+    <Item HideInMenus="false" name="" identifier="he-cookedmudraptorroast" variantof="he-poisoneffectpreset_fork" health="15" category="Misc" subcategory="Food - Mudraptor" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,roast,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -76,5 +76,78 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
+    <!-- TODO: NEXTUPDATE sprite + enable -->
+    <!-- MushRaptor Sauté - makes you a little drunk -->
+    <Item HideInMenus="false" name="" identifier="he-mudraptorandshrooms" variantof="he-poisoneffectpreset_fork" health="15" category="Misc" subcategory="Food - Mudraptor" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,roast,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,0,68,29" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,0,68,29" depth="0.525" origin="0.5,0.65" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,0,68,29" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="stove" requiredtime="22" requiresrecipe="false" amount="1" >
+        <RequiredSkill identifier="cooking" level="35" />
+        <RequiredItem identifier="he-rawmudraptormeat" amount="1" UseCondition="false" />
+        <RequiredItem identifier="yeastshroom" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
+      </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="105" fabricationlimitmin="0" fabricationlimitmax="7" displayname="mudraptorfooditem" />
+      <Body width="60" radius="10" density="11" />
+      <SuitableTreatment type="hunger" suitability="90" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional hunger="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-proteinrich" amount="45.0" />
+          <Affliction identifier="applydrunk" amount="2.0" />
+          <Affliction identifier="ate_filet" amount="1" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
+        <StatusEffect type="OnActive" target="This" Condition="-1.0" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" targetcontainer="true" />
+          <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork"/>
+          <Conditional InWater="false" />
+          <Affliction identifier="he-proteinrich" amount="45.0" />
+          <Affliction identifier="applydrunk" amount="2.0" />
+          <Affliction identifier="ate_filet" amount="1" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
+          <Conditional HasStatusTag="usingfork" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
+          <Remove />
+          <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
   </Items>
 </Override>
