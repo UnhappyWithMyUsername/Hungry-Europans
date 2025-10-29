@@ -1358,11 +1358,26 @@
         textidentifier="afflictiondescription.embarrassment.other"
         target="OtherCharacter" />
       <!-- Reduce skills -->
-      <Effect minstrength="0" maxstrength="1800"
+      <Effect minstrength="0" maxstrength="100"
         strengthchange="-1"
         minskillmultiplier="1"
         maxskillmultiplier="0.5"
+        minskillgainmultiplier="1.0"
+        maxskillgainmultiplier="0.5" 
         minspeedmultiplier="0.9"
+        maxspeedmultiplier="0.8">
+        <StatusEffect target="Character" >
+          <Conditional mood="gt 0" />
+          <Affliction identifier="mood" amount="0.2" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="100" maxstrength="1800"
+        strengthchange="-1"
+        minskillmultiplier="0.5"
+        maxskillmultiplier="0.5"
+        minskillgainmultiplier="0.5"
+        maxskillgainmultiplier="0.5" 
+        minspeedmultiplier="0.8"
         maxspeedmultiplier="0.8">
         <StatusEffect target="Character" >
           <Conditional mood="gt 0" />
