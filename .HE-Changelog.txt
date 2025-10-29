@@ -41,6 +41,7 @@ Low:
 [List]
 [*] Added Blender and several blender recipes
 [*] Added "Monster Doner" and "SPAM" to repurpose low-condition meats that cannot be used for cooking
+[*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
 [/List]
 
 [b]Changes:[/b] 
@@ -68,6 +69,7 @@ Low:
 [*] Fixed some drinks not filling your bladder
 [*] Fixed eating MRE with an empty bottle inside
 [*] Fixed Tea Mix not deleting itself
+[*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [/List]
 
 
@@ -102,6 +104,7 @@ LIST OF FOODS IDEAS:
 - Thresher Fugu, thresher + buffotoxin
 - More Blender recipes
 - Mantis Meat, Mantis surimi
+- RadWurst, irradiated sausage cooked in reactor
 
 - Paté/Foie Gras. Made with Offal, can be spread on bread slices
 - Cake + Slices
@@ -111,7 +114,6 @@ LIST OF FOODS IDEAS:
 - Grog! It'd be made of sea water and rum.
 - Homemade kvass from water, bread, yeast and sugar.
 - Cookie jar
-- Radioactive sausage cooked in reactor
 - Burger Double Deluxe (burger with 2x patties and cheese)
 
 
