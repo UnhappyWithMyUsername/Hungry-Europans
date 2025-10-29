@@ -1244,7 +1244,7 @@
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
-          <ReduceAffliction identifier="embarrassment" strength="1.5" />
+          <ReduceAffliction identifier="embarrassment" strength="3" />
           <ReduceAffliction type="damage" strength="0.1" />
           <ReduceAffliction identifier="bloodloss" strength="0.05" />
           <ReduceAffliction identifier="bleeding" strength="0.05" />
