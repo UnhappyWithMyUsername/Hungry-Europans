@@ -1230,22 +1230,14 @@
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect mininterval="30" maxinterval="120" minstrength="99" maxstrength="100">
-        <StatusEffect type="OnActive" target="Character" duration="26" offset="-15,0" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsPlayer="true" />
+        <StatusEffect type="OnActive" target="Character" duration="2" offset="-15,-30" multiplyafflictionsbymaxvitality="true" >
           <Affliction identifier="embarrassment" strength="900" />
-          <ReduceAffliction identifier="defecate" strength="100" />
+          <Affliction identifier="hygiene" strength="50" />
+          <ReduceAffliction identifier="defecate" strength="1000" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" selectionmode="random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" selectionmode="random" />
-          <Spawnitem identifier="poop" spawnposition="This" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="And">
-          <Conditional IsPlayer="true" />
-          <Conditional hygiene="gt 0" />
-          <Affliction identifier="hygiene" strength="100" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <ReduceAffliction identifier="defecate" amount="1000" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="55,35,10,255" anglemin="260" anglemax="280" particlespersecond="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" lifetimemultiplier="0.5" />
+          <Spawnitem identifier="poop" spawnposition="ThisInventory" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,256,128,128" origin="0,0" />
