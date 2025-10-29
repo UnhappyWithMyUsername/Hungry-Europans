@@ -2043,7 +2043,6 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="5" fabricationlimitmax="10" />
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
-        <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterregular" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
@@ -2166,7 +2165,6 @@
       <Price sold="false"/> 
       <Fabricate />
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
-        <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterrum" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
@@ -2223,7 +2221,6 @@
       <Price sold="false"/> 
       <Fabricate />
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
-        <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterwhiskey" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
@@ -2280,7 +2277,6 @@
       <Price sold="false"/> 
       <Fabricate />
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
-        <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterhalucinova" amount="1" mincondition="100"/>
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
@@ -2337,7 +2333,6 @@
       <Price sold="false"/> 
       <Fabricate />
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
-        <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterbeer" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
