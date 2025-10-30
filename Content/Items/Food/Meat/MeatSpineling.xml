@@ -181,15 +181,6 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.525" origin="0.5,0.65"  />
       <Body width="35" radius="12" density="12" />
-      <Price baseprice="164" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
-      </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <!-- ItemComponent hosts the effects for grilling the item -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
