@@ -219,7 +219,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="false" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="1">

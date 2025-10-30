@@ -27,7 +27,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="false" />
       </Price>
       <!-- ItemComponent hosts the effects for grilling the item -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
@@ -195,7 +195,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="false" />
       </Price>
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
