@@ -250,7 +250,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
     
-    <!-- invisible affliction that makes food buffs less effective at higher hunger levels -->
+    <!-- UNUSED invisible affliction that makes food buffs less effective at higher hunger levels -->
     <!-- used to avoid starving to death to max out on buffs -->
     <Affliction
       identifier="hungerfoodbuffresistance"
