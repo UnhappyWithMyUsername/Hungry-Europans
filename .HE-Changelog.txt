@@ -41,6 +41,8 @@ Low:
 [List]
 [*] Added Blender and several blender recipes
 [*] Added "Monster Doner" and "SPAM" to repurpose low-condition meats that cannot be used for cooking
+[*] Added "MushRaptor Sauté" 
+[*] Added "Thresher and Bufo Purée" 
 [*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
 [/List]
 
@@ -55,6 +57,7 @@ Low:
 [*] Added alternative Salt recipe so it's harder to run out of salt completely
 [*] Increased MRE eating speed
 [*] Added inventory icons for forks/spoons
+[*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
 
 [/List]
 
@@ -99,21 +102,18 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
-- Mantis meat, basically a lobster/crab, orange boy shares the meat type
-- Raptor Sauté with Mushrooms, mushroom recipes
-- Thresher Fugu, thresher + buffotoxin
+- Mantis/Orange boy meat, basically a lobster/crab, Mantis surimi
+- Mushroom recipes
 - More Blender recipes
-- Mantis Meat, Mantis surimi
 - RadWurst, irradiated sausage cooked in reactor
-
-- Paté/Foie Gras. Made with Offal, can be spread on bread slices
+- More Offal recipes
+- Cookie jar
 - Cake + Slices
 - Pasta + pasta recipes
-- Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
+- Chewing gum. Made from elastin. Slows down hunger but accelerates need to defecate if too high?
 - Endeavour's cuppa: minor healing properties, slow metabolism cures psychosis and hallucinations, cures husk 
 - Grog! It'd be made of sea water and rum.
 - Homemade kvass from water, bread, yeast and sugar.
-- Cookie jar
 - Burger Double Deluxe (burger with 2x patties and cheese)
 
 
