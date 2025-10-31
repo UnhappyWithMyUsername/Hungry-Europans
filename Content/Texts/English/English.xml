@@ -1018,6 +1018,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictionname.caffeinated>Caffeinated</afflictionname.caffeinated>
 <afflictiondescription.caffeinated>You feel less tired, and a bit faster.</afflictiondescription.caffeinated>
 
+<afflictionname.he-chewinggumbuff>Full of Gum</afflictionname.he-chewinggumbuff>
+<afflictiondescription.he-chewinggumbuff>Hunger is less of a concern, but you can feel your bowels twisting.</afflictiondescription.he-chewinggumbuff>
+
 <afflictionname.worminfection>Parasitic Worms</afflictionname.worminfection>
 <afflictiondescription.worminfection>You ate some bad food and can now feel worms wriggling in your stomach. Treat with antibiotics.</afflictiondescription.worminfection>
 <afflictionname.tapeworminfection>Tapeworm Infection</afflictionname.tapeworminfection>

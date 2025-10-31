@@ -313,6 +313,36 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
+
+    <!-- Chewing-gum, gives some hunger resistance but causes pooping after a delay -->
+    <Affliction name=""
+      identifier="he-chewinggumbuff"
+      description=""
+      type="foodbuff"
+      isbuff="true"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      maxstrength="1800"
+      MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="1800"
+        strengthchange="-1"
+        resistancefor="hunger"
+        minresistance="0.25"
+        maxresistance="0.25">
+      </Effect>
+      <!-- If affected by the buff for too long, might cause a sudden urge to poop -->
+      <PeriodicEffect minstrength="100" maxstrength="1800" mininterval="750" maxinterval="1500" >
+        <StatusEffect target="Character" duration="33" comparison="And" checkconditionalalways="true" >
+          <Conditional defecate="gt 1" />
+          <Affliction identifier="defecate" strength="3" />
+          <Affliction identifier="he-stomachache" strength="0.5" />
+          <ReduceAffliction identifier="he-chewinggumbuff" strength="33" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="300" volume="1" frequencymultiplier="0.35" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
+    </Affliction>
+    
     <!-- 
     //// BEVERAGES ////
     //// BEVERAGES ////
