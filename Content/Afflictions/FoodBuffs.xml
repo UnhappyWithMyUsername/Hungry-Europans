@@ -176,11 +176,11 @@
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1"
-        resistancefor="defecate,stomachache"
+        resistancefor="defecate,he-stomachache"
         minresistance="0.0"
         maxresistance="0.5" />
       <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
-        resistancefor="defecate,stomachache"
+        resistancefor="defecate,he-stomachache"
         minresistance="0.5"
         maxresistance="0.5"/>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
