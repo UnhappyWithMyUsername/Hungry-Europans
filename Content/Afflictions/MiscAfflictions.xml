@@ -1532,7 +1532,7 @@
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
           <Conditional defecate="lte 0" />
-          <Affliction identifier="nausea" strength="3" />
+          <Affliction identifier="nausea" strength="4" />
         </StatusEffect>
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
