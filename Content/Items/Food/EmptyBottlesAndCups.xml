@@ -819,7 +819,7 @@
       <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
         <RequiredItem tag="fullglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <!--<Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
@@ -852,8 +852,7 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-      </Projectile>-->
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" aimable="false" holdpos="30,-15" holdangle="0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+      </Projectile>
       <!-- repair the item when it is used by a dishwasher -->
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
