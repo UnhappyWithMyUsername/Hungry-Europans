@@ -1556,12 +1556,17 @@
       <Effect minstrength="0" maxstrength="10" strengthchange="-1">
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="haste" strength="45" />
-          <Affliction identifier="bedsidemanner" strength="10" />
           <Affliction identifier="adrenalinerush" strength="2" />
           <ReduceAffliction identifier="fatigue" strength="5" />
           <ReduceAffliction identifier="mood" strength="1" />
         </StatusEffect>
       </Effect>
+      <!-- only apply buff if whole drink is chugged to prevent multiple players from taking sips -->
+      <PeriodicEffect minstrength="9" maxstrength="10" mininterval="1" maxinterval="1">
+        <StatusEffect target="Character" setvalue="true">
+          <Affliction identifier="bedsidemanner" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
         
