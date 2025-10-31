@@ -1234,8 +1234,8 @@
           <Affliction identifier="embarrassment" strength="900" />
           <Affliction identifier="hygiene" strength="50" />
           <ReduceAffliction identifier="defecate" strength="1000" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" volume="2" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" volume="2" selectionmode="random" />
           <ParticleEmitter particle="whitegoosplash" colormultiplier="55,35,10,255" anglemin="260" anglemax="280" particlespersecond="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" lifetimemultiplier="0.5" />
           <Spawnitem identifier="poop" spawnposition="ThisInventory" />
         </StatusEffect>
