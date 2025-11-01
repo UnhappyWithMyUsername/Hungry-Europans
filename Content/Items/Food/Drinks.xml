@@ -329,6 +329,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofrum" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -579,6 +580,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofpiraterum" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -750,6 +752,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofwhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -925,6 +928,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofhalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -1092,6 +1096,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofcoalitionpremiumbeer" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -1255,6 +1260,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofjovianforcebeer" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -1423,6 +1429,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofliquidascensionbeer" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -1592,6 +1599,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofclownjuicebeer" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -1757,6 +1765,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofreaperstributebeer" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -1941,6 +1950,7 @@
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="22,23" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-4" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofcouwolacola" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -2007,6 +2017,7 @@
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="22,23" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-4" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofcouwolacolazero" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -2108,6 +2119,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofcouwolacola" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -2267,6 +2279,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofcouwolacolazero" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -2435,6 +2448,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofcouwolacolaradiant" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -3041,6 +3055,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-waterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -3103,6 +3118,18 @@
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-waterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
    
     <Item name="" identifier="he-waterwhiskey" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_whiskey,water,bottle,allowinfryer">
@@ -3158,7 +3185,19 @@
           <RemoveItem identifier="he-emptybottlewhiskey" />
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent> 
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-waterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>      
     </Item>
 
     <Item name="" identifier="he-waterhalucinova" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_halucinova,water,bottle,allowinfryer">
@@ -3214,7 +3253,19 @@
           <RemoveItem identifier="he-emptybottlehalucinova" />
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-waterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
     
     <Item name="" identifier="he-waterbeer" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_beer,water,bottle,allowinfryer">
@@ -3270,7 +3321,19 @@
           <RemoveItem identifier="he-emptybottlebeer" />
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-waterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer> 
     </Item>
 
     <!-- SALT WATER -->
@@ -3453,6 +3516,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-seawaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -3504,6 +3568,18 @@
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-seawaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>   
    
     <Item name="" identifier="he-seawaterwhiskey" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterwhiskey,seawater,water,bottle,seawaterrefill_whiskey,allowinfryer">
@@ -3549,6 +3625,18 @@
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-seawaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
 
     <Item name="" identifier="he-seawaterhalucinova" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterhalucinova,seawater,water,bottle,seawaterrefill_halucinova,allowinfryer">
@@ -3593,7 +3681,19 @@
           <RemoveItem identifier="he-emptybottlehalucinova" />
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-seawaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
        
     <Item name="" identifier="he-seawaterbeer" variantof="he-seawater" Tags="smallitem,drinkitem,dirtywaterbeer,seawater,water,bottle,seawaterrefill_beer,allowinfryer">
@@ -3638,7 +3738,19 @@
           <RemoveItem identifier="he-emptybottlebeer" />
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,27" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-seawaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
     
     <!-- TOILET WATER -->
@@ -3812,6 +3924,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-toiletwaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -3859,6 +3972,18 @@
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-toiletwaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>   
    
     <Item name="" identifier="he-toiletwaterwhiskey" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterwhiskey,toiletwater,water,bottle,allowinfryer">
@@ -3900,6 +4025,18 @@
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-toiletwaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
 
     <Item name="" identifier="he-toiletwaterhalucinova" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterhalucinova,toiletwater,water,bottle,allowinfryer">
@@ -3940,7 +4077,19 @@
           <RemoveItem identifier="he-emptybottlehalucinova" />
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-toiletwaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
        
     <Item name="" identifier="he-toiletwaterbeer" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterbeer,toiletwater,water,bottle,allowinfryer">
@@ -3981,7 +4130,19 @@
           <RemoveItem identifier="he-emptybottlebeer" />
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
-      </ItemComponent>       
+      </ItemComponent>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptyglass">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,27" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-toiletwaterglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
       
     
@@ -4816,6 +4977,7 @@
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-glassofmilk" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
