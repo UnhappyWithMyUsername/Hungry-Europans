@@ -11,6 +11,7 @@
       <Deconstruct time="5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="129,80,58,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.525" origin="0.5,0.8"  />
       <Body width="58" height="46" density="13.0" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="25" />
@@ -35,34 +36,17 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
-      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true"> -->
-        <!-- <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/> -->
-        <!-- <Button text="interaction.refill"> -->
-          <!-- <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true"> -->
-            <!-- <Conditional InWater="false" /> -->
-            <!-- <RequiredItem items="emptybowl" type="contained" /> -->
-            <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" /> -->
-            <!-- <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" /> -->
-          <!-- </StatusEffect> -->
-          <!-- <StatusEffect type="OnUse" target="Contained" disabledeltatime="true"> -->
-            <!-- <Conditional InWater="false" targetcontainer="true" /> -->
-            <!-- <Remove /> -->
-          <!-- </StatusEffect> -->
-        <!-- </Button> -->
-        <!-- <Button text="interaction.emptypot"> -->
-          <!-- <StatusEffect type="OnUse" target="This"> -->
-            <!-- <Conditional InWater="false" /> -->
-            <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" /> -->
-            <!-- <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" /> -->
-            <!-- <Remove /> -->
-          <!-- </StatusEffect> -->
-        <!-- </Button> -->
-      <!-- </CustomInterface> -->
-      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
-      <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
-        <Containable items="emptybowl" />
-      </ItemContainer> -->
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptybowl">
+          <StatusEffect type="OnInserted" target="Contained">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
 
     <Item name="Pot of Bone Broth" identifier="he-potbonebroth" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -95,33 +79,17 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
-      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.refill">
-          <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
-            <Conditional InWater="false" />
-            <RequiredItem items="emptybowl" type="contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-bonebroth" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
-            <Conditional InWater="false" targetcontainer="true" />
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptybowl">
+          <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
-        </Button>
-        <Button text="interaction.emptypot">
-          <StatusEffect type="OnUse" target="This">
-            <Conditional InWater="false" />
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-            <Remove />
+            <SpawnItem identifier="he-bonebroth" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
-        </Button>
-      </CustomInterface> -->
-      <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
-        <Containable items="emptybowl" />
-      </ItemContainer> -->
+        </Containable>
+      </ItemContainer>
     </Item>    
     
     <Item name="Pot of Seaweed Soup" identifier="he-potseaweedsoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
@@ -154,33 +122,17 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
-      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.refill">
-          <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
-            <Conditional InWater="false" />
-            <RequiredItem items="emptybowl" type="contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-seaweedsoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
-            <Conditional InWater="false" targetcontainer="true" />
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptybowl">
+          <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
-        </Button>
-        <Button text="interaction.emptypot">
-          <StatusEffect type="OnUse" target="This">
-            <Conditional InWater="false" />
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-            <Remove />
+            <SpawnItem identifier="he-seaweedsoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
-        </Button>
-      </CustomInterface> -->
-      <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
-        <Containable items="emptybowl" />
-      </ItemContainer> -->
+        </Containable>
+      </ItemContainer>
     </Item>
 
     <Item name="Pot of Fondue" identifier="he-potfondue" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -213,33 +165,17 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
-      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.refill">
-          <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
-            <Conditional InWater="false" />
-            <RequiredItem items="emptybowl" type="contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-fondue" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
-            <Conditional InWater="false" targetcontainer="true" />
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptybowl">
+          <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
-        </Button>
-        <Button text="interaction.emptypot">
-          <StatusEffect type="OnUse" target="This">
-            <Conditional InWater="false" />
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-            <Remove />
+            <SpawnItem identifier="he-fondue" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
-        </Button>
-      </CustomInterface> -->
-      <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
-        <Containable items="emptybowl" />
-      </ItemContainer> -->
+        </Containable>
+      </ItemContainer>
     </Item>
 
 
@@ -252,11 +188,11 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="0,0,72,72" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
+      <!--<Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potcrawyum" UseCondition="True" MinCondition="0.20"/>
-      </Fabricate>
+      </Fabricate>-->
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
@@ -328,11 +264,11 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="72,0,72,72" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
+      <!--<Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potbonebroth" UseCondition="True" MinCondition="0.20"/>
-      </Fabricate>
+      </Fabricate>-->
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hunger" suitability="80" />
@@ -407,11 +343,11 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="144,0,72,72" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
+      <!--<Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potseaweedsoup" UseCondition="True" MinCondition="0.20"/>
-      </Fabricate>
+      </Fabricate>-->
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
@@ -483,11 +419,11 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="216,0,72,72" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
+      <!--<Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potfondue" UseCondition="True" MinCondition="0.20"/>
-      </Fabricate>
+      </Fabricate>-->
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hunger" suitability="80" />
