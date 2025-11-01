@@ -832,7 +832,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="2" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
 
     <!-- cooks things  -->
@@ -930,7 +930,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="2" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
     
     <!-- fries things using oil, overfrying causes fire, water causes explosion -->
