@@ -23,6 +23,7 @@
         <Item identifier="he-emptyjar" requiredotheritem="he-blueprintjar" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.jar" infotextonotheritemmissing="bottleprinter.missingitem" />
         <Item identifier="he-emptyshaker" amount="2" requiredotheritem="he-blueprintshaker" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.shaker" infotextonotheritemmissing="bottleprinter.missingitem" />
         <Item identifier="he-emptycup" amount="2" requiredotheritem="he-blueprintcup" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.cup" infotextonotheritemmissing="bottleprinter.missingitem" />
+        <Item identifier="he-emptyglass" amount="2" requiredotheritem="he-blueprintglass" outcondition="1.0" activatebuttontext="bottleprinter.print" infotext="bottleprinter.infotext.glass" infotextonotheritemmissing="bottleprinter.missingitem" />
       </Deconstruct>
       <Holdable canbepicked="true" characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="Character" interval="1">
@@ -802,7 +803,6 @@
       </ItemComponent>
     </Item>
 
-    <!-- TODO: make sure to add empty glass to bottle printer list -->
     <Item name="Empty Glass" identifier="he-emptyglass" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptyglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,272,17,34" depth="0.499" origin="0.5,0.5" />
@@ -819,7 +819,7 @@
       <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
         <RequiredItem tag="fullglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <!--<Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
@@ -852,8 +852,7 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-      </Projectile>-->
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" aimable="false" holdpos="30,-15" holdangle="0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+      </Projectile>
       <!-- repair the item when it is used by a dishwasher -->
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />

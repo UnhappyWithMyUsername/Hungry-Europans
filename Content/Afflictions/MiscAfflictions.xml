@@ -1244,7 +1244,7 @@
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
-          <ReduceAffliction identifier="embarrassment" strength="1.5" />
+          <ReduceAffliction identifier="embarrassment" strength="3" />
           <ReduceAffliction type="damage" strength="0.1" />
           <ReduceAffliction identifier="bloodloss" strength="0.05" />
           <ReduceAffliction identifier="bleeding" strength="0.05" />
@@ -1360,8 +1360,23 @@
       <!-- Reduce skills -->
       <Effect minstrength="0" maxstrength="100"
         strengthchange="-1"
-        minskillmultiplier="0.3"
-        maxskillmultiplier="0.1"
+        minskillmultiplier="1"
+        maxskillmultiplier="0.5"
+        minskillgainmultiplier="1.0"
+        maxskillgainmultiplier="0.5" 
+        minspeedmultiplier="0.9"
+        maxspeedmultiplier="0.8">
+        <StatusEffect target="Character" >
+          <Conditional mood="gt 0" />
+          <Affliction identifier="mood" amount="0.2" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="100" maxstrength="1800"
+        strengthchange="-1"
+        minskillmultiplier="0.5"
+        maxskillmultiplier="0.5"
+        minskillgainmultiplier="0.5"
+        maxskillgainmultiplier="0.5" 
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.8">
         <StatusEffect target="Character" >
@@ -1483,6 +1498,108 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
     
+    <!-- Purge your stomach, reducing worms, stomachache and increasing defecate if enabled (otherwise gives Nausea) -->
+    <Affliction identifier="he-purgestomach"
+      type="debuff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="10"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+          <ReduceAffliction identifier="he-stomachache" strength="5" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="Or">
+          <Conditional worminfection="lte 50" />
+          <ReduceAffliction identifier="worminfection" strength="3" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="Or">
+          <Conditional tapeworminfection="lte 50" />
+          <ReduceAffliction identifier="tapeworminfection" strength="3" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
+          <Conditional defecate="gt 0" />
+          <Conditional defecate="lt 98" />
+          <Affliction identifier="defecate" strength="15" />
+        </StatusEffect>
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
+          <Conditional defecate="lte 0" />
+          <Affliction identifier="nausea" strength="4" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
+    
+    <!-- Mutated Salt Bulb drink, gives hyperactivity, reduces fatigue, improves mood and adds 20% extra health until end of round -->
+    <Affliction identifier="he-sparkbulbbuff"
+      type="buff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="10"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+          <Affliction identifier="haste" strength="45" />
+          <Affliction identifier="adrenalinerush" strength="2" />
+          <ReduceAffliction identifier="fatigue" strength="5" />
+          <ReduceAffliction identifier="mood" strength="1" />
+        </StatusEffect>
+      </Effect>
+      <!-- only apply buff if whole drink is chugged to prevent multiple players from taking sips -->
+      <PeriodicEffect minstrength="9" maxstrength="10" mininterval="1" maxinterval="1">
+        <StatusEffect target="Character" setvalue="true">
+          <Affliction identifier="bedsidemanner" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
+        
+    <!-- Mutated tobacco drink, renews blood and flushes out addictions, makes you hallucinate -->
+    <Affliction identifier="he-bloodytobybuff"
+      type="buff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="10"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+          <Affliction identifier="hallucinating" strength="8" />
+          <ReduceAffliction identifier="bloodloss" strength="4" />
+          <ReduceAffliction identifier="drunk" strength="8" />
+          <ReduceAffliction identifier="applydrunk" strength="8" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="3" />
+          <ReduceAffliction identifier="chemaddiction" strength="3" />
+          <ReduceAffliction identifier="chemwithdrawal" strength="3" />
+          <ReduceAffliction identifier="he-tobaccoaddiction" strength="3" />
+          <ReduceAffliction identifier="infection" strength="1" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
     
   </Afflictions>
 </Override>

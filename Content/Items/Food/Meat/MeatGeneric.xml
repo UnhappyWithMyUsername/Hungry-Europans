@@ -27,7 +27,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="false" />
       </Price>
       <!-- ItemComponent hosts the effects for grilling the item -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
@@ -63,8 +63,8 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
-          <Affliction identifier="worminfection" amount="1" probability="0.02" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -136,15 +136,6 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="31" height="5" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
-      </Price>
       <!-- ItemComponent hosts the effects for grilling the item -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
@@ -204,7 +195,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="false" />
       </Price>
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
@@ -235,8 +226,8 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
-          <Affliction identifier="worminfection" amount="1" probability="0.02" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -396,8 +387,8 @@
           <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="6" probability="0.5" />
-          <Affliction identifier="worminfection" amount="1" probability="0.02" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -456,8 +447,8 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="nausea" amount="6" probability="0.5" />
-          <Affliction identifier="worminfection" amount="1" probability="0.05" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.05" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00055" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00055" />
           <Affliction identifier="spill" amount="1000" probability="0.005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>

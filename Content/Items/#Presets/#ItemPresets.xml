@@ -27,13 +27,13 @@
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="worminfection" amount="1" probability="0.005" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <!--////////// POISON EFFECTS FOR REGULAR EATING \\\\\\\\\\-->
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -179,13 +179,13 @@
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="worminfection" amount="1" probability="0.005" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <!--////////// POISON EFFECTS FOR REGULAR EATING \\\\\\\\\\-->
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
@@ -357,13 +357,13 @@
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="worminfection" amount="1" probability="0.005" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <!--////////// POISON EFFECTS FOR REGULAR EATING \\\\\\\\\\-->
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
@@ -535,13 +535,13 @@
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="worminfection" amount="1" probability="0.005" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
           <Conditional huskinfection="lt 50" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00005" />
         </StatusEffect>
         <!--////////// POISON EFFECTS FOR REGULAR EATING \\\\\\\\\\-->
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">

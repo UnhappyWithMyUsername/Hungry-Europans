@@ -296,7 +296,7 @@
       <!-- Blueprint selector -->
       <CustomInterface canbeselected="true" > <!-- ElementStates="true,1,50" -->
         <GuiFrame relativesize="0.2,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
-        <IntegerInput text="bottleprinter.blueprintselection" propertyname="exponent" targetitemcomponent="ExponentiationComponent" min="0" max="7"/>
+        <IntegerInput text="bottleprinter.blueprintselection" propertyname="exponent" targetitemcomponent="ExponentiationComponent" min="0" max="8"/>
         <Button text="bottleprinter.pickblueprint" >
           <!-- Remove existing blueprint, figure out a way to not spam this-->
           <StatusEffect type="OnUse" target="Contained" targetslot="1" targets="blueprint" >
@@ -337,6 +337,10 @@
             <Conditional exponent="7" targetitemcomponent="ExponentiationComponent" />
             <SpawnItem identifier="he-blueprintcup" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
           </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="8" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintglass" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
         </Button>
       </CustomInterface>
       <ItemContainer selectkey="Select" capacity="0" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" allowuioverlap="true">
@@ -346,7 +350,7 @@
           <Containable items="glassfragments" />
         </SubContainer>
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="bottleblueprint,jarblueprint,shakerblueprint,cupblueprint" />
+          <Containable items="bottleprinterblueprint" />
         </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="112,-194" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
@@ -703,7 +707,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
 
     <!-- cooks things  -->
@@ -804,7 +808,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
     
     <!-- fries things using oil, overfrying causes fire, water causes explosion -->
@@ -1189,7 +1193,7 @@
       </DecorativeSprite>
       <Body width="91" height="158" density="15" bodytype="static" />
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <GuiFrame relativesize="0.4,0.47" style="ItemUI" anchor="Center" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" target="This" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/blender_loop.ogg" loop="true" range="500" volume="2" />
@@ -1218,7 +1222,7 @@
         <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
         <input name="power_in" displayname="connection.powerin" />
       </ConnectionPanel>
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="3" maxstacksize="1" hideitems="true" allowuioverlap="true">
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="4" maxstacksize="1" hideitems="true" allowuioverlap="true">
         <Containable items="plantitem,smallitem" />
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">

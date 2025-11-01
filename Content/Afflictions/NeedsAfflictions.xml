@@ -250,7 +250,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
     
-    <!-- invisible affliction that makes food buffs less effective at higher hunger levels -->
+    <!-- UNUSED invisible affliction that makes food buffs less effective at higher hunger levels -->
     <!-- used to avoid starving to death to max out on buffs -->
     <Affliction
       identifier="hungerfoodbuffresistance"
@@ -354,7 +354,7 @@
         maxspeedmultiplier="0.5">
         <StatusEffect target="Character" >
           <Conditional thirst="gte 100" />
-          <Affliction identifier="he-dieofthirst" strength="0.1" />
+          <Affliction identifier="he-dieofthirst" strength="0.5" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
@@ -789,7 +789,7 @@
       <Description
         textidentifier="advancedafflictiondescription.others.he-cannibalism"
         target="OtherCharacter" />
-      <Effect minstrength="0" maxstrength="19.999" strengthchange="-0.002" />
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.002" />
       <Effect minstrength="20" maxstrength="100" strengthchange="0.0">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Affliction identifier="he-hungryforhumanmeat" strength="0.01" />
@@ -856,9 +856,10 @@
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
         </StatusEffect>
       </Effect>
+      <!-- lose some health, gain some damage/stun resistance, slow, increased melee damage, visual effects appear -->
       <Effect minstrength="20" maxstrength="40"
         minvitalitydecrease="0"
-        maxvitalitydecrease="20"
+        maxvitalitydecrease="10"
         strengthchange="0.00"
         minchromaticaberration="0.0"
         maxchromaticaberration="1.0"
@@ -872,18 +873,21 @@
         maxresistance="0.2"
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.1">
+        <!-- very slowly decrease cannibalism over time -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <ReduceAffliction identifier="he-cannibalism" strength="0.005" probability="1.0" />
         </StatusEffect>
+        <!-- when cannibalism is entirely gone, decrease craving -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
         </StatusEffect>
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.2" maxvalue="0.3" />
       </Effect>
+      <!-- same effects as before but stronger, learn skills slower -->
       <Effect minstrength="40" maxstrength="90"
-        minvitalitydecrease="20"
-        maxvitalitydecrease="50"
+        minvitalitydecrease="10"
+        maxvitalitydecrease="15"
         strengthchange="0.0"
         minchromaticaberration="1.0"
         maxchromaticaberration="5.0"
@@ -899,19 +903,21 @@
         maxskillmultiplier="0.8"
         MinAfflictionOverlayAlphaMultiplier="0.1"
         MaxAfflictionOverlayAlphaMultiplier="0.1">
+        <!-- very slowly decrease cannibalism over time -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <ReduceAffliction identifier="he-cannibalism" strength="0.005" probability="1.0" />
-          <ReduceAffliction identifier="bleeding" strength="2" />
         </StatusEffect>
+        <!-- when cannibalism is entirely gone, decrease craving -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
         </StatusEffect>
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.3" maxvalue="0.5" />
       </Effect>
+      <!-- extreme cannibal state that keeps increasing, increase hunger, "mouth" limb appears, need to bite crewmates to reduce craving -->
       <Effect minstrength="90" maxstrength="100"
-        minvitalitydecrease="25"
-        maxvitalitydecrease="25"
+        minvitalitydecrease="15"
+        maxvitalitydecrease="20"
         minscreendistort="0.0"
         maxscreendistort="3.0"
         strengthchange="0.05"
@@ -931,16 +937,18 @@
         maxskillmultiplier="0.5"
         MinAfflictionOverlayAlphaMultiplier="1.0"
         MaxAfflictionOverlayAlphaMultiplier="1.0">
+        <!-- increase hunger (if hunger enabled) -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <ReduceAffliction identifier="he-cannibalism" strength="0.01" probability="1.0" />
-          <ReduceAffliction identifier="bleeding" strength="5" />
+          <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.2" />
         </StatusEffect>
+        <!-- apply cannibal mouth limb to bite crewmates -->
         <StatusEffect target="Character" setvalue="true" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="he-cannibalmouth" amount="1" />
         </StatusEffect>
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.5" maxvalue="1.0" />
       </Effect>
+      <!-- Periodic visual effects based on affliction amount -->
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
           <Conditional he-hungryforhumanmeat="gte 20" />
@@ -1222,22 +1230,14 @@
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect mininterval="30" maxinterval="120" minstrength="99" maxstrength="100">
-        <StatusEffect type="OnActive" target="Character" duration="26" offset="-15,0" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsPlayer="true" />
+        <StatusEffect type="OnActive" target="Character" duration="2" offset="-15,-30" multiplyafflictionsbymaxvitality="true" >
           <Affliction identifier="embarrassment" strength="900" />
-          <ReduceAffliction identifier="defecate" strength="100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" selectionmode="random" />
-          <Spawnitem identifier="poop" spawnposition="This" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="And">
-          <Conditional IsPlayer="true" />
-          <Conditional hygiene="gt 0" />
-          <Affliction identifier="hygiene" strength="100" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <ReduceAffliction identifier="defecate" amount="1000" />
+          <Affliction identifier="hygiene" strength="50" />
+          <ReduceAffliction identifier="defecate" strength="1000" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" volume="2" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" volume="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="55,35,10,255" anglemin="260" anglemax="280" particlespersecond="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" lifetimemultiplier="0.5" />
+          <Spawnitem identifier="poop" spawnposition="ThisInventory" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,256,128,128" origin="0,0" />

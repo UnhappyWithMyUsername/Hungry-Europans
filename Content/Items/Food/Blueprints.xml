@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <!--////////// BLUEPRINTS \\\\\\\\\\-->
-    <Item name="Bottle Blueprint" description="A blueprint of a regular bottle. Can be used in a bottle printer." identifier="he-blueprintbottle" tags="smallitem,blueprint,bottleblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bottle Blueprint" description="A blueprint of a regular bottle. Can be used in a bottle printer." identifier="he-blueprintbottle" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="558,467,278,278" origin="0.5,0.5" />
@@ -16,7 +16,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Beer Bottle Blueprint" description="A blueprint of a beer bottle. Can be used in a bottle printer." identifier="he-blueprintbottlebeer" tags="smallitem,blueprint,bottleblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Beer Bottle Blueprint" description="A blueprint of a beer bottle. Can be used in a bottle printer." identifier="he-blueprintbottlebeer" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="558,746,278,278" origin="0.5,0.5" />
@@ -30,7 +30,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Rum Bottle Blueprint" description="A blueprint of a rum bottle. Can be used in a bottle printer." identifier="he-blueprintbottlerum" tags="smallitem,blueprint,bottleblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Rum Bottle Blueprint" description="A blueprint of a rum bottle. Can be used in a bottle printer." identifier="he-blueprintbottlerum" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,746,278,278" origin="0.5,0.5" />
@@ -44,7 +44,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Whiskey Bottle Blueprint" description="A blueprint of a whiskey bottle. Can be used in a bottle printer." identifier="he-blueprintbottlewhiskey" tags="smallitem,blueprint,bottleblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Whiskey Bottle Blueprint" description="A blueprint of a whiskey bottle. Can be used in a bottle printer." identifier="he-blueprintbottlewhiskey" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="279,746,278,278" origin="0.5,0.5" />
@@ -58,7 +58,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Halucinova Bottle Blueprint" description="A blueprint of a halucinova bottle. Can be used in a bottle printer." identifier="he-blueprintbottlehalucinova" tags="smallitem,blueprint,bottleblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Halucinova Bottle Blueprint" description="A blueprint of a halucinova bottle. Can be used in a bottle printer." identifier="he-blueprintbottlehalucinova" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="279,467,278,278" origin="0.5,0.5" />
@@ -72,7 +72,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Jar Blueprint" description="A blueprint of a jar. Can be used in a bottle printer." identifier="he-blueprintjar" tags="smallitem,blueprint,jarblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Jar Blueprint" description="A blueprint of a jar. Can be used in a bottle printer." identifier="he-blueprintjar" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,467,278,278" origin="0.5,0.5" />
@@ -100,7 +100,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Cup Blueprint" description="A blueprint of a cup. Can be used in a bottle printer." identifier="he-blueprintcup" tags="smallitem,blueprint,cupblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Cup Blueprint" description="A blueprint of a cup. Can be used in a bottle printer." identifier="he-blueprintcup" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="279,188,278,278" origin="0.5,0.5" />
@@ -114,5 +114,20 @@
       </Holdable>
     </Item>
 
+    <!-- TODO: NEXTUPDATE sprite -->
+    <Item name="Glass Blueprint" description="A blueprint of a glass. Can be used in a bottle printer." identifier="he-blueprintglass" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <Body width="35" height="15" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="279,188,278,278" origin="0.5,0.5" />
+      <Deconstruct time="0.1" requireddeconstructor="deconstructor"/>
+      <!-- <Fabricate suitablefabricators="fabricator" requiredtime="0.1" requiresrecipe="false" amount="1"/> -->
+      <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="This" interval="0.1" >
+          <Conditional hastag="neq bottleprinter" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    
   </Items>
 </Override>

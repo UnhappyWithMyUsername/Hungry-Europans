@@ -413,6 +413,80 @@
       </Projectile>
     </Item>
 
+
+    <!-- Monster Doner - can be loaded in depth charge tube and shot as a decoy. Useful to recycle low condition meats. Stinky and gives nausea  -->
+    <Item name="" identifier="monsterdoner" tags="depthchargeammo,decoy,petfood1,petfood2,petfood3,monsterfood" category="Misc" sonarsize="5" scale="0.4" impactsoundtag="impact_soft" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" health="20" cargocontaineridentifier="" impacttolerance="6">
+      <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="20">
+        <RequiredSkill identifier="butchery" level="40" />
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+        <RequiredItem tag="meatchunk" amount="1" MinCondition="0.0" MaxCondition="0.5" UseCondition="False"/>
+      </Fabricate>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,152,136,88" depth="0.55" origin="0.5,0.5" />
+      <Body width="70" radius="40" density="10.5" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" >
+        <StatValue stattype="MovementSpeed" value="-0.2" />    
+        <!-- Effects when taking damage-->
+        <StatusEffect type="OnDamaged" target="This" disabledeltatime="true" setvalue="true">
+          <particleemitter particle="shrapnel" drawontop="true" particleamount="5" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.2" scalemax="0.35" />
+          <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
+        </StatusEffect>    
+      </Holdable>
+      <ItemContainer hideitems="true" capacity="5" drawinventory="false" canbeselected="false" canbecombined="true" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false" spawnwithid="monsterdonermeatpiece,monsterdonermeatpiece,monsterdonermeatpiece,monsterdonermeatpiece,monsterdonermeatpiece">
+        <Containable items="monsterdonermeatpiece" />
+        <StatusEffect type="OnUse" target="This" condition="-100" disabledeltatime="true" />
+        <StatusEffect type="OnBroken" target="This" delay="0.01">
+          <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="800" />
+          <ParticleEmitter particle="blood" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="2.5" colormultiplier="200,180,180,255" />
+          <ParticleEmitter particle="organeruption" particleamount="20" scalemin="0.35" scalemax="0.5" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,100,70,255" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" >
+          <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" distancemin="0" distancemax="15"  velocitymin="0" velocitymax="20" scalemin="0.25" scalemax="0.5" scalemultiplier="1,1" lifetimemultiplier="0.2" colormultiplier="255,255,255,255"/>
+          <ParticleEmitter particle="waterdrop" scalemin="0.75" scalemax="1.5" velocitymin="0.0" velocitymax="5.0" anglemin="0" anglemax="0" distancemin="-30" distancemax="30" particlespersecond="5" colormultiplier="255,50,20,255" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This,NearbyCharacters" range="150" disabledeltatime="true" interval="1" >
+          <Affliction identifier="nausea" strength="1.5" />
+        </StatusEffect>
+      </ItemContainer>
+      <AiTarget maxsoundrange="300" maxsightrange="3000" static="true" />
+    </Item>
+      
+    <Item name="" identifier="monsterdonermeatpiece" tags="decoy,petfood1,petfood2,petfood3,monsterfood"  category="Weapon" scale="0.5" sonarsize="1" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="false" damagedbymeleeweapons="true" health="5" hideinmenus="true" noninteractable="true" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,0,4,4" depth="0.55" origin="0.5,0.5" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="311,446,200,66" depth="0.54" randomrotation="0,360" randomscale="0.5,1" origin="0.5,0.5" randomgroupid="1" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="367,234,145,74" depth="0.54" randomrotation="0,360" randomscale="0.5,1" origin="0.5,0.5" randomgroupid="1" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,206,74,59" depth="0.54" randomrotation="0,360" randomscale="0.5,1" origin="0.5,0.5" randomgroupid="1" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="354,151,158,82" depth="0.54" randomrotation="0,360" randomscale="0.5,1" origin="0.5,0.5" randomgroupid="1" />
+      <Body radius="20" density="10.5" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+      <Projectile characterusable="false" launchimpulse="3.5" impulsespread="0.3" spread="30" itemdamage="0" structuredamage="0" >
+        <StatusEffect type="OnActive" target="This" lifetime="2">
+          <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.33" scalemax="1" />
+        </StatusEffect>
+        <!-- a 5 second lifetime after being fired -->
+        <StatusEffect type="OnNotContained" target="This" stackable="false" delay="15" condition="-100" setvalue="true" />
+        <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" />
+        <StatusEffect type="Always" target="This" >
+          <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" distancemin="0" distancemax="15" particlespersecond="5" velocitymin="0" velocitymax="20" scalemin="0.25" scalemax="0.35" scalemultiplier="1,1" lifetimemultiplier="0.2" colormultiplier="255,255,255,255"/>
+          <ParticleEmitter particle="waterblood" anglemin="80" anglemax="100" distancemin="10" distancemax="25" particlespersecond="10" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1.0" scalemultiplier="1,1" lifetimemultiplier="0.5" colormultiplier="255,255,255,120" />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="800" />
+          <ParticleEmitter particle="blood" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="0.5" scalemax="1.0" distancemin="0" distancemax="25" colormultiplier="200,180,180,255" />
+          <ParticleEmitter particle="waterblood" anglemin="0" anglemax="360" particleamount="1" scalemin="5" scalemax="5" colormultiplier="200,180,180,255" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This" delay="0.01">
+          <ParticleEmitter particle="organeruption" particleamount="20" scalemin="0.35" scalemax="0.5" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,100,70,255" />
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <AiTarget maxsoundrange="300" maxsightrange="4500" static="true" />
+    </Item>
+
     <!-- EMPTY CANS -->
     <Item hideinmenus="true" DontCleanUp="true" name="Empty Can" identifier="trashcan_emptycanspawner" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Hidden" Tags="smallitem" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer primary="outposttrashcan" amount="1" spawnprobability="0.75" />
@@ -645,6 +719,7 @@
       </Projectile>
     </Item>
 
+
     <!-- TOYS -->
     <!-- Punch Gun made by UberPendragon (https://steamcommunity.com/profiles/76561197995266558) -->
     <Item name="Punch-Gun" identifier="punchgun" description="Literally throwing punches!" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
@@ -732,6 +807,7 @@
         </StatusEffect>
       </MotionSensor>
     </Item>
+
 
     <!-- Paint -->
     <redpaint name="" identifier="redpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,0,0,255" InventoryIconColor="255,0,0,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
@@ -993,36 +1069,7 @@
         </StatusEffect>
       </Holdable>
     </whitepaint>
-    
-    <!-- use tobaccoingredient instead of just tobaccobud? -->
-    <!-- <Item name="" identifier="pipetobacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,pipetobacco" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
-      <PreferredContainer primary="captainspipe" spawnprobability="1"/>
-      <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true"/>
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab,piratecrewcab" spawnprobability="0.1"/>  
-      <Price baseprice="120">
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="1"/>
-        <Price storeidentifier="merchantcity" multiplier="0.9"  minavailable="2"/>
-        <Price storeidentifier="merchantresearch" sold="false" />
-        <Price storeidentifier="merchantmilitary" sold="false" />
-        <Price storeidentifier="merchantmine" sold="false" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="190" fabricationlimitmin="0" fabricationlimitmax="10"/>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20">
-        <RequiredSkill identifier="helm" level="30" />
-        <RequiredItem tag="tobaccoingredient" amount="3" description="fabricationdescription.tobaccoingredient" />
-      </Fabricate>
-      <Deconstruct time="2">
-      </Deconstruct>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="192,320,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="848,774,44,58" depth="0.55" origin="0.5,0.5" />
-      <Body width="40" height="50" density="10.5"/>
-      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" >
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-    </Item> -->
-      
+     
     
     <!-- EVENT ITEMS -->
     <Item name="5mk" identifier="money_5mk" description="Adds 5mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
@@ -1170,6 +1217,22 @@
         <TextBox text="Species Name" propertyname="Speciesname" maxtextlength="50" ShouldSetProperty="false" /> 
       </CustomInterface>    
     </Item>    
+        
+    <!-- fake id card that shreds itself in blender -->
+    <Item name="" identifier="idcardshredded" category="Equipment" Tags="smallitem" maxstacksize="4">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,79,57,54" depth="0.6" origin="0.5,0.5" />
+      <Body width="16" height="12" density="10.05" />      
+      <Fabricate suitablefabricators="blender" requiredtime="15" requiresrecipe="false" amount="1">
+        <RequiredItem tag="identitycard" amount="1" />
+      </Fabricate>
+      <Pickable slots="Any" msg="ItemMsgPickUpSelect" >        
+        <StatusEffect type="Always" target="This">
+          <Remove />
+        </StatusEffect>
+      </Pickable>
+    </Item> 
+      
+      
       
       
       
@@ -1259,7 +1322,36 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    
+        
+    <!-- use tobaccoingredient instead of just tobaccobud? -->
+    <!-- <Item name="" identifier="pipetobacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,pipetobacco" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
+      <PreferredContainer primary="captainspipe" spawnprobability="1"/>
+      <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true"/>
+      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab,piratecrewcab" spawnprobability="0.1"/>  
+      <Price baseprice="120">
+        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="1"/>
+        <Price storeidentifier="merchantcity" multiplier="0.9"  minavailable="2"/>
+        <Price storeidentifier="merchantresearch" sold="false" />
+        <Price storeidentifier="merchantmilitary" sold="false" />
+        <Price storeidentifier="merchantmine" sold="false" />
+      </Price>
+      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="190" fabricationlimitmin="0" fabricationlimitmax="10"/>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="helm" level="30" />
+        <RequiredItem tag="tobaccoingredient" amount="3" description="fabricationdescription.tobaccoingredient" />
+      </Fabricate>
+      <Deconstruct time="2">
+      </Deconstruct>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="192,320,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="848,774,44,58" depth="0.55" origin="0.5,0.5" />
+      <Body width="40" height="50" density="10.5"/>
+      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" >
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item> -->
+ 
     
     
     
