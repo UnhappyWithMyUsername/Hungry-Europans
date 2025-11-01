@@ -324,11 +324,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -575,11 +577,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -747,11 +751,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -923,11 +929,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -1091,11 +1099,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -1255,11 +1265,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -1424,11 +1436,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -1594,11 +1608,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -1760,11 +1776,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -2114,11 +2132,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -2274,11 +2294,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -2443,11 +2465,13 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3050,11 +3074,13 @@
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3118,11 +3144,13 @@
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3186,11 +3214,13 @@
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent> 
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3254,11 +3284,13 @@
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3322,11 +3354,13 @@
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3511,11 +3545,13 @@
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3568,11 +3604,13 @@
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3625,11 +3663,13 @@
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3682,11 +3722,13 @@
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3739,11 +3781,13 @@
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,27" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3919,11 +3963,13 @@
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -3972,11 +4018,13 @@
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="26,26" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -4025,11 +4073,13 @@
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -4078,11 +4128,13 @@
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,25" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -4131,11 +4183,13 @@
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,27" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
@@ -4976,11 +5030,13 @@
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
+      <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
           <StatusEffect type="OnInserted" target="Contained">
             <Remove />
           </StatusEffect>
+          <!-- "open" the bottle when inserting a glass -->
           <StatusEffect type="OnInserted" target="This" holdpos="30,-15" holdangle="0" aimpos="25,24" aimangle="120" settags="opened" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
           <StatusEffect type="OnInserted" target="This" condition="-3.67" disabledeltatime="true">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
