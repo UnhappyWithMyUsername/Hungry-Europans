@@ -832,7 +832,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="2" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
     </Item>
 
     <!-- cooks things  -->
