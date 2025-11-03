@@ -1205,7 +1205,7 @@
       </Price>
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <!-- <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" /> -->
         <!-- <StatusEffect type="OnActive" target="This">
           <Conditional voltage="gt 0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" loop="true" range="500" volume="4" />
@@ -1297,7 +1297,7 @@
       </Price>
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.47" style="ItemUI" anchor="Center" />
-        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
+        <!-- <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" /> -->
         <StatusEffect type="OnActive" target="This" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/blender_loop.ogg" loop="true" range="500" volume="2" />
         </StatusEffect>
