@@ -2962,10 +2962,10 @@
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="5" fabricationlimitmax="10" />
-      <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
+      <!-- <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
         <RequiredItem tag="dirtywaterregular" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
+      </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlecommon" Amount="1"/>
@@ -3098,10 +3098,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
       <Price sold="false"/> 
       <Fabricate />
-      <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
+      <!-- <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
         <RequiredItem tag="dirtywaterrum" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
+      </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
@@ -3168,10 +3168,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  />
       <Price sold="false"/> 
       <Fabricate />
-      <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
+      <!-- <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
         <RequiredItem tag="dirtywaterwhiskey" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
+      </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlewhiskey" Amount="1"/>
@@ -3238,10 +3238,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
       <Price sold="false"/> 
       <Fabricate />
-      <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
+      <!-- <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
         <RequiredItem tag="dirtywaterhalucinova" amount="1" mincondition="100"/>
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
+      </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlehalucinova" Amount="1"/>
@@ -3308,10 +3308,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
       <Price sold="false"/> 
       <Fabricate />
-      <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
+      <!-- <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="boil">
         <RequiredItem tag="dirtywaterbeer" amount="1" mincondition="100" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
+      </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
