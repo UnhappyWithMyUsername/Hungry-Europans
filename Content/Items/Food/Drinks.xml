@@ -2682,12 +2682,12 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="38,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <!-- <Fabricate suitablefabricators="blender" requiredtime="5" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="blender" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem tag="bananaseed" amount="4" />
         <RequiredItem identifier="he-icecreamballmilky" amount="1" />
         <RequiredItem identifier="he-chocolatemix" amount="1" UseCondition="True" MinCondition="0.20" />
         <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate> -->
+      </Fabricate>
       <SuitableTreatment type="hunger" suitability="10" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
