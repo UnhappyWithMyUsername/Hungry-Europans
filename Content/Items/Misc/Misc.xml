@@ -1380,7 +1380,21 @@
     </Item>
     
     
-    
+  
+    <!-- Copy-pasted from DE - An invisible holder that deletes itself after taking an item from it -->
+    <Item name="Take Item" identifier="invisibleholder" description="An invisible item holder that deletes itself when interacted with. Good for making items hold in place without using platforms" SpriteColor="195,136,60,100" IntentoryIconColor="255,255,255,255" category="misc" tags="holder" canflipx="true" canflipy="true" scale="0.5" noninteractable="False">
+      <InventoryIcon texture="%ModDir:2532991202%/Items/DE-ItemsAtlas.png" sourcerect="716,951,70,70" />
+      <Sprite texture="Content/UI/Focusindicator.png" sourcerect="228,124,105,89" depth="0.85" origin="0.5,0.5" />
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="40,-40" containedspritedepth="0.831" canbeselected="True" autointeractwithcontained="true" allowdraganddrop="false" QuickUseMovesItemsInside="false" msg="">
+        <Containable items="smallitem,mediumitem,bigitem,crate" >
+          <Statuseffect type="OnRemoved" target="This">
+            <Remove />
+          </Statuseffect>        
+        </Containable>        
+        <!-- makes itself invisible + you can't see inside inventory on startup. Needed to make this useable in subeditor -->
+        <Statuseffect type="Always" target="This" oneshot="true" spritecolor="0,0,0,0" drawinventory="false" setvalue="True" />
+      </ItemContainer>
+    </Item>
   
   </Items>
 </Override>
