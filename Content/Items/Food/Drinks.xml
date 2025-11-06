@@ -348,7 +348,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -601,7 +601,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -775,7 +775,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -953,7 +953,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1123,7 +1123,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1289,7 +1289,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1460,7 +1460,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1632,7 +1632,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1800,7 +1800,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2156,7 +2156,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2318,7 +2318,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2490,7 +2490,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
       <LightComponent range="50.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2901,7 +2901,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -3385,7 +3385,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -3812,7 +3812,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -5051,7 +5051,7 @@
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <SuitableTreatment type="thirst" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
