@@ -900,12 +900,14 @@
         <StatusEffect type="OnBroken" target="this" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
       </Holdable>
       <!-- TODO: Make it so particles and water drops only occur when actively filling a cup | currently they always play, even when condition of teamix isn't reducing -->
-      <RangedWeapon reload="0" barrelpos="43,4" targetstructures="false" hititems="false">
+      <RepairTool reload="0" barrelpos="43,4" targetstructures="false" hititems="false">
         <!-- require a tea mix to be contained for the RepairTool component to work -->
         <RequiredItem items="teamix" type="Contained" />
-        <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="5.0" particlespersecond="1" />
         <!-- apply status tag "pouring" to the kettle when using it -->
         <StatusEffect type="OnUse" target="This" StatusEffectTags="pouring" duration="0.1">
+          <Conditional HasStatusTag="cupnearby" />
+          <!-- particles disabled due to spawning from the center of the item (if only SE offset would flip with the item...) | it would need to be defined directly in RepairTool to spawn from barrelpos, but then it will always spawn particles on use, even if no cup is being filled -->
+          <!--<ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="5.0" particlespersecond="1" />-->
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
         </StatusEffect>
 
@@ -926,7 +928,10 @@
         <StatusEffect type="OnUse" target="Character" StatusEffectTags="pouringpopnuttea" duration="0.1">
           <RequiredItem identifier="he-teamixpopnut" type="Contained" />
         </StatusEffect>
-      </RangedWeapon>
+
+        <!-- TODO: Add chocolate mix and coffee mix + allow refilling mugs -->
+         
+      </RepairTool>
       <!--Container-->
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true" msg="ItemMsgInteractSelect" >
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
