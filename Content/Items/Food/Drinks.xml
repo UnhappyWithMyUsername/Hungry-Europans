@@ -5107,10 +5107,7 @@
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
     <Item name="Cup of Test Tea" identifier="he-teaTEST" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="8" hideinmenus="true" >
-      <!--<PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>-->
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
       </Deconstruct>
@@ -5121,15 +5118,15 @@
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- if nearby kettle is pouring, reduce condition of its contained bubblebery tea mix -->
-        <StatusEffect type="OnActive" target="NearbyItems" targets="activebubbleberryteamix" range="50" condition="-2">
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activebubbleberryteamix" range="50" condition="-2">
           <Conditional HasStatusTag="pouring" targetcontainer="true" />
         </StatusEffect>
         <!-- if nearby kettle is pouring, increase tea cup condition -->
-        <StatusEffect type="OnActive" target="This" condition="2">
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2">
           <Conditional HasStatusTag="pouringbubbleberrytea" />
         </StatusEffect>
         <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
-        <StatusEffect type="OnActive" target="This" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
           <Conditional HasStatusTag="pouringbubbleberrytea" />
           <Conditional conditionpercentage="eq 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
@@ -5169,12 +5166,9 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
-        
-        
-        <!-- TODO: Rework the rest below. Drinking needs to be blocked and aimpos adjusted when holding a kettle in the other hand to allow self refill -->
 
         <!-- Regular drinking -->
-        <!--Increase time to simulate tea cooling off-->
+        <!--Increase timeframe to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
         </StatusEffect>
@@ -5190,6 +5184,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <Conditional HasStatusTag="neq pouringbubbleberrytea" />
           <Affliction identifier="burn" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -5229,6 +5224,44 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
+    </Item>
+
+    <Item name="Empty Test Cup" identifier="he-emptycupTEST" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.499" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.525" origin="0.5,0.5"  />
+      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
+      <Body width="31" height="21" density="12" />
+      <Deconstruct time="2">
+        <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="2">
+        <RequiredSkill identifier="mechanical" level="35" />
+        <RequiredItem identifier="he-glassfragments" amount="1" UseCondition="True" MinCondition="1.0"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+        <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
+        <RequiredItem identifier="he-dirtycup" amount="1" UseCondition="False" MinCondition="0.0" />
+      </Fabricate>
+      <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" aimable="false" holdpos="30,-15" holdangle="0" handle1="-12,-3" aimpos="50,-15" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
+          <Conditional HasStatusTag="pouringbubbleberrytea" />
+          <Remove />
+          <SpawnItem identifier="he-teaTEST" spawnposition="SameInventory" Equip="true" condition="0.01" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
+          <Conditional HasStatusTag="pouringbubbleberrytea" />
+          <Remove />
+          <SpawnItem identifier="he-teaTEST" spawnposition="SameInventory" Equip="true" condition="0.01" />
+        </StatusEffect>
+      </Holdable>
+      <!-- repair the item when it is used by a dishwasher -->
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+      </ItemComponent>
     </Item>
     
     
