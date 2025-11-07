@@ -141,6 +141,7 @@
       </ItemComponent>
     </Item>
 
+    <!-- TODO: ADD MANTIS MEAT, INCLUDES ORANGE BOY -->
     <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem,cleaver" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
