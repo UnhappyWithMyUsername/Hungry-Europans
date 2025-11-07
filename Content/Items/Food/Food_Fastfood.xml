@@ -293,7 +293,6 @@
         <RequiredItem identifier="he-molochcheeseslice" amount="2"/>
         <RequiredItem identifier="he-fries" />
         <RequiredItem identifier="he-seaweedstrip" MinCondition="0" MaxCondition="0.99" usecondition="false"/>
-        <!-- TODO: replace ketchup with gravy once it's added -->
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.2"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>

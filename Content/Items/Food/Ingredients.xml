@@ -775,7 +775,7 @@
 
 
     <!-- EARTH INGREDIENTS | High value ingredients for delicacies only found in wrecks -->
-    <!-- TODO: Disabled for now. Find something to do with canned foods... -->
+    <!-- TODO: Disabled for now. Canned ingredients mean adding a lot of recipes that can use canneed foods, and the priority is adding recipes that use existing ingredients and meats -->
     
     <Item name="Canned Tomatoes" identifier="he-cannedtomatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.0" />
