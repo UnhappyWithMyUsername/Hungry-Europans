@@ -1268,7 +1268,6 @@
       </ItemContainer>
     </Item>
     
-    <!-- WIP Blender TODO: reenable fabrication recipe -->
     <Item name="Blender" identifier="he-blender" tags="container,blender" category="Machines" description="Blends food." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5" />
       <!-- hide main sprite, display decorativesprite when attached, shake when fabricating -->
@@ -1285,12 +1284,12 @@
       <Deconstruct time="10">
         <Item identifier="aluminium" amount="2" />
       </Deconstruct>
-      <!-- <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
         <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="4" />
-        <RequiredItem identifier="plastic" amount="6" />
-        <RequiredItem identifier="fpgacircuit" amount="3" />
-      </Fabricate> -->
+        <RequiredItem identifier="aluminium" amount="3" />
+        <RequiredItem identifier="plastic" amount="5" />
+        <RequiredItem identifier="fpgacircuit" amount="2" />
+      </Fabricate>
       <Price baseprice="899" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
