@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Hungry Europans" modversion="2.0.12" corepackage="False" steamworkshopid="2954998725" gameversion="1.10.7.2">
-  <Afflictions file="%ModDir%/Content/Afflictions/BackwardsCompatibility.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/FoodBuffs.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/MiscAfflictions.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/NeedsAfflictions.xml" />
