@@ -712,150 +712,18 @@
       </ConnectionPanel>
     </Item>
 
-    <Item name="Kettle" identifier="he-teakettle" Tags="smallitem,kettle" category="Misc" subcategory="Container" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Let's you brew tea or coffee by inserting a mix and putting it on an active stove until it whistles. Once the brewing is done, insert an empty cup to fill." showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="True" requireaimtouse="True">
+    <Item name="Kettle" identifier="he-teakettle" Tags="smallitem,kettle" category="Misc" subcategory="Container" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Let's you brew tea or coffee by inserting a mix and putting it on an active stove until it whistles. Once the brewing is done, insert an empty cup to fill." showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="True" requireaimtouse="True" hideinmenus="false" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
+      <Body width="81" height="85" density="12" />
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="aluminium" amount="1"/>
         <RequiredItem identifier="plastic" amount="1"/>
       </Fabricate>
-      <Deconstruct time="1" />
-      <Body width="81" height="85" density="12" />
-      <!--Light component used to determine if tea was brewed or not-->
-      <LightComponent range="0" lightcolor="47,146,209,255" flicker="0.0" powerconsumption="0" IsOn="false" castshadows="false" >
-        <!-- TODO: reenable particles if devs fix https://github.com/FakeFishGames/Barotrauma/discussions/16184 -->
-        <!-- <StatusEffect type="OnActive" target="This" offset="20,7">
-          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
-        </StatusEffect> -->
-        <!-- cool down after 100 seconds -->
-        <StatusEffect type="OnActive" target="This" delay="100" duration="100" condition="-1" stackable="false" checkconditionalalways="true" >
-          <Conditional IsActive="False" targetcontainer="true" targetitemcomponent="Fabricator" />
-        </StatusEffect>
-      </LightComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="0,0" aimangle="0" holdangle="0" handle1="-26,30" holdpos="36,-40" aimable="false" msg="ItemMsgPickUpSelect">
-        <!--Increase condition within a stove to simulate brewing, if tea is contained-->
-        <StatusEffect type="OnContained" target="This" condition="1.5" comparison="And">
-          <Conditional condition="lt 100" />
-          <Conditional HasTag="stove" targetcontainer="true" />
-          <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
-          <Conditional Voltage="gt 0.5" targetcontainer="true" />
-          <RequiredItem tag="mix" type="contained" />
-        </StatusEffect>
-        <StatusEffect type="OnContained" target="This" duration="1" stackable="false" comparison="And" disabledeltatime="true">
-          <Conditional IsOn="true" targetitemcomponent="LightComponent" />
-          <Conditional Condition="gte 100" />
-          <Conditional HasTag="stove" targetcontainer="true" />
-          <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
-          <Conditional Voltage="gt 0.5" targetcontainer="true" />
-          <RequiredItem tag="mix" type="contained" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="500.0" loop="true" volume="1.0" />
-        </StatusEffect>
-        <!--Set Light component to active if tea was brewed in the stove to allow refilling of cups-->
-        <StatusEffect type="Always" target="this" targetitemcomponent="LightComponent" IsOn="true" setvalue="true">
-          <Conditional condition="eq 100" />
-        </StatusEffect>
-        <!--Set Light component to inactive if tea kettle was emptied to block refilling of cups-->
-        <StatusEffect type="OnBroken" target="this" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
-      </Holdable>
-      <!--Container-->
-      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true" msg="ItemMsgInteractSelect" >
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" origin="0.5,0.5" />
-        <Containable items="mix" >    
-        </Containable>
-        <Subcontainer capacity="1" maxstacksize="1" slot="1">
-          <Containable items="emptycup,emptymug" />
-        </Subcontainer>    
-        <StatusEffect type="Always" target="This" targetitemcomponent="LightComponent" IsOn="false" condition="0" setvalue="true" >
-          <Conditioal condition="gt 0" />
-          <RequiredItem items="mix" type="Contained" RequireEmpty="true" targetslot="0" />
-        </StatusEffect>   
-      </ItemContainer>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.refillcup">
-          <!--Remove empty cup from tea kettle-->
-          <StatusEffect type="OnUse" target="Contained" targetcontainer="this" targettag="emptycup" targetslot="1" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent" targetcontainer="true"/>
-            <RequiredItem items="cupmix" targetslot="0" type="Contained" />
-            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Remove />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="Contained" targetcontainer="this" targettag="emptymug" targetslot="1" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent" targetcontainer="true"/>
-            <RequiredItem items="mugmix" targetslot="0" type="Contained" />
-            <RequiredItem items="emptymug" targetslot="1" type="Contained" />
-            <Remove />
-          </StatusEffect>
-          <!--Refill with bubbleberry tea-->
-          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
-            <RequiredItem identifier="he-teamixbubbleberry" targetslot="0" type="Contained" />
-            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
-            <SpawnItem identifier="he-cupbubbleberrytea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <!--Refill with popnut tea-->
-          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
-            <RequiredItem identifier="he-teamixpopnut" targetslot="0" type="Contained" />
-            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
-            <SpawnItem identifier="he-cuppopnuttea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <!--Refill with coffee (cup)-->
-          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
-            <RequiredItem identifier="he-coffeemix" targetslot="0" type="Contained" />
-            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
-            <SpawnItem identifier="he-cupcoffee" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <!--Refill with chocolate (cup)-->
-          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
-            <RequiredItem identifier="he-chocolatemix" targetslot="0" type="Contained" />
-            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
-            <SpawnItem identifier="he-cuphotchocolate" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <!--Refill with coffee (mug)-->
-          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-20" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
-            <RequiredItem identifier="he-coffeemix" targetslot="0" type="Contained" />
-            <RequiredItem items="emptymug" targetslot="1" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
-            <SpawnItem identifier="he-mugcoffee" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <!--Refill with chocolate (mug)-->
-          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-20" disabledeltatime="true" AllowWhenBroken="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
-            <RequiredItem identifier="he-chocolatemix" targetslot="0" type="Contained" />
-            <RequiredItem items="emptymug" targetslot="1" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
-            <SpawnItem identifier="he-mughotchocolate" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
-
-    <!-- NEW KETTLE TEST, DISABLED AND HIDDEN FOR NOW -->
-    <Item name="Test Kettle" identifier="he-teakettleTEST" Tags="smallitem,kettle" category="Misc" subcategory="Container" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="True" requireaimtouse="True" hideinmenus="true" >
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
-      <Body width="81" height="85" density="12" />
-      <!-- <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false" amount="1" outcondition="0.0">
-        <RequiredSkill identifier="mechanical" level="20" />
-        <RequiredItem identifier="aluminium" amount="1"/>
-        <RequiredItem identifier="plastic" amount="1"/>
-      </Fabricate> -->
       <Deconstruct time="1" />
       <!--Light component used to determine if tea was brewed or not-->
       <LightComponent range="0" lightcolor="47,146,209,255" flicker="0.0" powerconsumption="0" IsOn="false" castshadows="false" >
@@ -875,7 +743,7 @@
           <RequiredItem items="mix" type="Contained" RequireEmpty="true" targetslot="0" />
         </StatusEffect>  
         <!-- increase condition within a stove to simulate brewing, if a tea mix is contained-->
-        <StatusEffect type="OnContained" target="This" condition="1.5" comparison="And">
+        <StatusEffect type="OnContained" target="This" condition="100.5" comparison="And">
           <Conditional condition="lt 100" />
           <Conditional HasTag="stove" targetcontainer="true" />
           <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
@@ -899,51 +767,91 @@
         <!--Set Light component to inactive if tea kettle was emptied to block refilling of cups-->
         <StatusEffect type="OnBroken" target="this" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
       </Holdable>
-      <!-- TODO: Make it so particles and water drops only occur when actively filling a cup | currently they always play, even when condition of teamix isn't reducing -->
       <RepairTool reload="0" barrelpos="43,4" targetstructures="false" hititems="false">
         <!-- require a tea mix to be contained for the RepairTool component to work -->
         <RequiredItem items="teamix" type="Contained" />
         <!-- apply status tag "pouring" to the kettle when using it -->
-        <StatusEffect type="OnUse" target="This" StatusEffectTags="pouring" duration="0.1">
-          <Conditional HasStatusTag="cupnearby" />
-          <!-- particles disabled due to spawning from the center of the item (if only SE offset would flip with the item...) | it would need to be defined directly in RepairTool to spawn from barrelpos, but then it will always spawn particles on use, even if no cup is being filled -->
-          <!--<ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="5.0" particlespersecond="1" />-->
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
-        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" StatusEffectTags="pouring" duration="0.1" />
 
         <!-- apply status tag "pouringbubbleberrytea" to nearby tea cups when using the kettle and bubbleberry tea mix is contained -->
-        <StatusEffect type="OnUse" target="NearbyItems" targets="teacup" range="50" StatusEffectTags="pouringbubbleberrytea" duration="0.1">
+        <StatusEffect type="OnUse" target="NearbyItems" targets="coffeecup,teacup" range="50" StatusEffectTags="pouringbubbleberrytea" duration="0.1">
           <RequiredItem identifier="he-teamixbubbleberry" type="Contained" />
         </StatusEffect>
-        <!-- also apply the status tag "pouringbubbleberrytea" to the character using the kettle -->
+        <!-- apply the status tag "pouringbubbleberrytea" to the character using the kettle -->
         <StatusEffect type="OnUse" target="Character" StatusEffectTags="pouringbubbleberrytea" duration="0.1">
           <RequiredItem identifier="he-teamixbubbleberry" type="Contained" />
         </StatusEffect>
 
-        <!-- apply status tag "pouringpopnuttea" to nearby tea cups when using the kettle and bubbleberry tea mix is contained -->
-        <StatusEffect type="OnUse" target="NearbyItems" targets="teacup" range="50" StatusEffectTags="pouringpopnuttea" duration="0.1">
+        <!-- apply status tag "pouringpopnuttea" to nearby tea cups when using the kettle and popnut tea mix is contained -->
+        <StatusEffect type="OnUse" target="NearbyItems" targets="coffeecup,teacup" range="50" StatusEffectTags="pouringpopnuttea" duration="0.1">
           <RequiredItem identifier="he-teamixpopnut" type="Contained" />
         </StatusEffect>
-        <!-- also apply the status tag "pouringbubbleberrytea" to the character using the kettle -->
+        <!-- apply the status tag "pouringpopnuttea" to the character using the kettle -->
         <StatusEffect type="OnUse" target="Character" StatusEffectTags="pouringpopnuttea" duration="0.1">
           <RequiredItem identifier="he-teamixpopnut" type="Contained" />
         </StatusEffect>
 
-        <!-- TODO: Add chocolate mix and coffee mix + allow refilling mugs -->
-         
+        <!-- apply status tag "pouringcoffee" to nearby tea cups when using the kettle and coffee mix is contained -->
+        <StatusEffect type="OnUse" target="NearbyItems" targets="coffeecup,teacup" range="50" StatusEffectTags="pouringcoffee" duration="0.1">
+          <RequiredItem identifier="he-coffeemix" type="Contained" />
+        </StatusEffect>
+        <!-- apply the status tag "pouringcoffee" to the character using the kettle -->
+        <StatusEffect type="OnUse" target="Character" StatusEffectTags="pouringcoffee" duration="0.1">
+          <RequiredItem identifier="he-coffeemix" type="Contained" />
+        </StatusEffect>
+
+        <!-- apply status tag "pouringchocolate" to nearby tea cups when using the kettle and chocolate mix is contained -->
+        <StatusEffect type="OnUse" target="NearbyItems" targets="coffeecup,teacup" range="50" StatusEffectTags="pouringchocolate" duration="0.1">
+          <RequiredItem identifier="he-chocolatemix" type="Contained" />
+        </StatusEffect>
+        <!-- apply the status tag "pouringchocolate" to the character using the kettle -->
+        <StatusEffect type="OnUse" target="Character" StatusEffectTags="pouringchocolate" duration="0.1">
+          <RequiredItem identifier="he-chocolatemix" type="Contained" />
+        </StatusEffect>
       </RepairTool>
       <!--Container-->
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true" msg="ItemMsgInteractSelect" >
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
         <Containable items="he-teamixbubbleberry" >
-          <!-- tag the inserted tea and set it to be non-interactable to prevent taking it back out -->
+          <!-- tag the inserted mix and set it to be non-interactable to prevent taking it back out -->
           <StatusEffect type="OnInserted" target="Contained" SetTags="activebubbleberryteamix" noninteractable="true" setvalue="true">
             <RequiredItem identifier="he-teamixbubbleberry" type="Contained" />
           </StatusEffect>
+          <!-- disable drag & drop to the kettle inventory when something was placed in it to prevent potentially glitching out the contained non-interactable mix -->
+          <StatusEffect type="OnInserted" target="This" allowdraganddrop="false" setvalue="true" />
+          <!-- enable drag & drop to the kettle inventory once the contained mix has been removed from the inventory -->
+          <StatusEffect type="OnRemoved" target="This" allowdraganddrop="true" setvalue="true" />
+        </Containable>
+        <Containable items="he-teamixpopnut">
+          <!-- tag the inserted mix and set it to be non-interactable to prevent taking it back out -->
           <StatusEffect type="OnInserted" target="Contained" SetTags="activepopnutteamix" noninteractable="true" setvalue="true">
             <RequiredItem identifier="he-teamixpopnut" type="Contained" />
           </StatusEffect>
-        </Containable> 
+          <!-- disable drag & drop to the kettle inventory when something was placed in it to prevent potentially glitching out the contained non-interactable mix -->
+          <StatusEffect type="OnInserted" target="This" allowdraganddrop="false" setvalue="true" />
+          <!-- enable drag & drop to the kettle inventory once the contained mix has been removed from the inventory -->
+          <StatusEffect type="OnRemoved" target="This" allowdraganddrop="true" setvalue="true" />
+        </Containable>
+        <Containable items="he-coffeemix">
+          <!-- tag the inserted mix and set it to be non-interactable to prevent taking it back out -->
+          <StatusEffect type="OnInserted" target="Contained" SetTags="activecoffeemix" noninteractable="true" setvalue="true">
+            <RequiredItem identifier="he-coffeemix" type="Contained" />
+          </StatusEffect>
+          <!-- disable drag & drop to the kettle inventory when something was placed in it to prevent potentially glitching out the contained non-interactable mix -->
+          <StatusEffect type="OnInserted" target="This" allowdraganddrop="false" setvalue="true" />
+          <!-- enable drag & drop to the kettle inventory once the contained mix has been removed from the inventory -->
+          <StatusEffect type="OnRemoved" target="This" allowdraganddrop="true" setvalue="true" />
+        </Containable>
+        <Containable items="he-chocolatemix">
+          <!-- tag the inserted mix and set it to be non-interactable to prevent taking it back out -->
+          <StatusEffect type="OnInserted" target="Contained" SetTags="activechocolatemix" noninteractable="true" setvalue="true">
+            <RequiredItem identifier="he-chocolatemix" type="Contained" />
+          </StatusEffect>
+          <!-- disable drag & drop to the kettle inventory when something was placed in it to prevent potentially glitching out the contained non-interactable mix -->
+          <StatusEffect type="OnInserted" target="This" allowdraganddrop="false" setvalue="true" />
+          <!-- enable drag & drop to the kettle inventory once the contained mix has been removed from the inventory -->
+          <StatusEffect type="OnRemoved" target="This" allowdraganddrop="true" setvalue="true" />
+        </Containable>
       </ItemContainer>
     </Item>
     
