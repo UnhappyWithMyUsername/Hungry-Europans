@@ -4203,7 +4203,7 @@
     <!-- TEA -->
     <!-- TEA -->
         
-    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="false" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4216,13 +4216,66 @@
       <Body width="31" height="21" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        
+      <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
+      <ItemComponent characterusable="true">
+        <!-- when the item is spawned in, pre-set it to refill mode by setting MaxOutputLength to "2" and spawning the "effect_refillmode" item into its inventory -->
+        <StatusEffect type="OnSpawn" target="This" MaxOutputLength="3" setvalue="true">
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <!-- when left-clicked, increase MaxOutputLength value by 1 to enable or disable refilling the cup | value 1 = drinking mode | value 2 = refill mode -->
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" disabledeltatime="true" delay="0.1" stackable="false" />
+        <!-- when left-clicked, reset MaxOutputLength value to 1 when it reached a value equal to or greather than 3 -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" setvalue="true" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 1, apply "drinkingmode" tag and adjust aimpos and aimangle values for drinking -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 1" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 2, apply "refillmode" tag and adjust aimpos and aimangle values for refilling -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 2" />
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+        <Containable items="effect">
+          <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
+          <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
+          <StatusEffect type="OnRemoved" target="This" aimpos="23,8" aimangle="30" setvalue="true" disabledeltatime="true" />
+        </Containable>
+      </ItemContainer>
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimpos="50,-15" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- if nearby kettle is pouring and "effect_refillmode" item is contained in this item, reduce condition of the kettle's contained mix -->
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activebubbleberryteamix" range="50" condition="-2">
+          <Conditional HasStatusTag="pouring" targetcontainer="true" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring, increase tea cup condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2" offset="0,10">
+          <Conditional HasStatusTag="pouringbubbleberrytea" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="0.0" particlespersecond="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
+          <Conditional HasStatusTag="pouringbubbleberrytea" />
+          <Conditional conditionpercentage="eq 100" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="5.0" />
@@ -4239,13 +4292,12 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.5" />
           <Affliction identifier="fillbladder" amount="2.5" />
           <Affliction identifier="quenched" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
-
-        <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
@@ -4262,6 +4314,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -4285,7 +4338,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4305,7 +4358,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="false" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4318,13 +4371,66 @@
       <Body width="31" height="21" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
+      <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
+      <ItemComponent characterusable="true">
+        <!-- when the item is spawned in, pre-set it to refill mode by setting MaxOutputLength to "2" and spawning the "effect_refillmode" item into its inventory -->
+        <StatusEffect type="OnSpawn" target="This" MaxOutputLength="3" setvalue="true">
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <!-- when left-clicked, increase MaxOutputLength value by 1 to enable or disable refilling the cup | value 1 = drinking mode | value 2 = refill mode -->
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" disabledeltatime="true" delay="0.1" stackable="false" />
+        <!-- when left-clicked, reset MaxOutputLength value to 1 when it reached a value equal to or greather than 3 -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" setvalue="true" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 1, apply "drinkingmode" tag and adjust aimpos and aimangle values for drinking -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 1" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 2, apply "refillmode" tag and adjust aimpos and aimangle values for refilling -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 2" />
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+        <Containable items="effect">
+          <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
+          <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
+          <StatusEffect type="OnRemoved" target="This" aimpos="23,8" aimangle="30" setvalue="true" disabledeltatime="true" />
+        </Containable>
+      </ItemContainer>
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimpos="50,-15" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- if nearby kettle is pouring and "effect_refillmode" item is contained in this item, reduce condition of the kettle's contained mix -->
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activepopnutteamix" range="50" condition="-2">
+          <Conditional HasStatusTag="pouring" targetcontainer="true" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring, increase tea cup condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2" offset="0,10">
+          <Conditional HasStatusTag="pouringpopnuttea" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="0.0" particlespersecond="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
+          <Conditional HasStatusTag="pouringpopnuttea" />
+          <Conditional conditionpercentage="eq 100" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.5" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="5.0" />
@@ -4341,13 +4447,13 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.5" />
           <Affliction identifier="fillbladder" amount="2.5" />
           <Affliction identifier="quenched" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
-        <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
@@ -4364,6 +4470,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -4387,7 +4494,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4410,7 +4517,7 @@
     <!-- COFFEE -->
     <!-- COFFEE -->
     <!-- COFFEE -->
-    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="false" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4427,13 +4534,66 @@
       <Body width="31" height="21" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
+      <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
+      <ItemComponent characterusable="true">
+        <!-- when the item is spawned in, pre-set it to refill mode by setting MaxOutputLength to "2" and spawning the "effect_refillmode" item into its inventory -->
+        <StatusEffect type="OnSpawn" target="This" MaxOutputLength="3" setvalue="true">
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <!-- when left-clicked, increase MaxOutputLength value by 1 to enable or disable refilling the cup | value 1 = drinking mode | value 2 = refill mode -->
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" disabledeltatime="true" delay="0.1" stackable="false" />
+        <!-- when left-clicked, reset MaxOutputLength value to 1 when it reached a value equal to or greather than 3 -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" setvalue="true" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 1, apply "drinkingmode" tag and adjust aimpos and aimangle values for drinking -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 1" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 2, apply "refillmode" tag and adjust aimpos and aimangle values for refilling -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 2" />
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+        <Containable items="effect">
+          <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
+          <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
+          <StatusEffect type="OnRemoved" target="This" aimpos="23,8" aimangle="30" setvalue="true" disabledeltatime="true" />
+        </Containable>
+      </ItemContainer>
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimpos="50,-15" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- if nearby kettle is pouring and "effect_refillmode" item is contained in this item, reduce condition of the kettle's contained mix -->
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activecoffeemix" range="50" condition="-2">
+          <Conditional HasStatusTag="pouring" targetcontainer="true" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring, increase tea cup condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2" offset="0,10">
+          <Conditional HasStatusTag="pouringcoffee" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="0.0" particlespersecond="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
+          <Conditional HasStatusTag="pouringcoffee" />
+          <Conditional conditionpercentage="eq 100" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="caffeinated" amount="50" />
@@ -4443,13 +4603,13 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="caffeinated" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
-        <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
@@ -4466,6 +4626,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -4489,7 +4650,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4510,7 +4671,7 @@
     </Item>
         
     <!-- TODO: Coffee Mug inventory icon -->
-    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="false" isshootable="false" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4525,13 +4686,66 @@
       <Body width="31" height="34" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
+      <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
+      <ItemComponent characterusable="true">
+        <!-- when the item is spawned in, pre-set it to refill mode by setting MaxOutputLength to "2" and spawning the "effect_refillmode" item into its inventory -->
+        <StatusEffect type="OnSpawn" target="This" MaxOutputLength="3" setvalue="true">
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <!-- when left-clicked, increase MaxOutputLength value by 1 to enable or disable refilling the cup | value 1 = drinking mode | value 2 = refill mode -->
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" disabledeltatime="true" delay="0.1" stackable="false" />
+        <!-- when left-clicked, reset MaxOutputLength value to 1 when it reached a value equal to or greather than 3 -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" setvalue="true" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 1, apply "drinkingmode" tag and adjust aimpos and aimangle values for drinking -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 1" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 2, apply "refillmode" tag and adjust aimpos and aimangle values for refilling -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 2" />
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+        <Containable items="effect">
+          <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
+          <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
+          <StatusEffect type="OnRemoved" target="This" aimpos="23,8" aimangle="30" setvalue="true" disabledeltatime="true" />
+        </Containable>
+      </ItemContainer>
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimpos="50,-15" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- if nearby kettle is pouring and "effect_refillmode" item is contained in this item, reduce condition of the kettle's contained mix -->
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activecoffeemix" range="50" condition="-2">
+          <Conditional HasStatusTag="pouring" targetcontainer="true" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring, increase tea cup condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2" offset="0,10">
+          <Conditional HasStatusTag="pouringcoffee" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="0.0" particlespersecond="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
+          <Conditional HasStatusTag="pouringcoffee" />
+          <Conditional conditionpercentage="eq 100" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="caffeinated" amount="50" />
@@ -4541,6 +4755,7 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="caffeinated" amount="20" />
@@ -4564,6 +4779,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -4716,7 +4932,7 @@
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
-    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="false" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4733,13 +4949,66 @@
       <Body width="31" height="21" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-
+      <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
+      <ItemComponent characterusable="true">
+        <!-- when the item is spawned in, pre-set it to refill mode by setting MaxOutputLength to "2" and spawning the "effect_refillmode" item into its inventory -->
+        <StatusEffect type="OnSpawn" target="This" MaxOutputLength="3" setvalue="true">
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <!-- when left-clicked, increase MaxOutputLength value by 1 to enable or disable refilling the cup | value 1 = drinking mode | value 2 = refill mode -->
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" disabledeltatime="true" delay="0.1" stackable="false" />
+        <!-- when left-clicked, reset MaxOutputLength value to 1 when it reached a value equal to or greather than 3 -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" setvalue="true" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 1, apply "drinkingmode" tag and adjust aimpos and aimangle values for drinking -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 1" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 2, apply "refillmode" tag and adjust aimpos and aimangle values for refilling -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 2" />
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+        <Containable items="effect">
+          <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
+          <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
+          <StatusEffect type="OnRemoved" target="This" aimpos="23,8" aimangle="30" setvalue="true" disabledeltatime="true" />
+        </Containable>
+      </ItemContainer>
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimpos="50,-15" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- if nearby kettle is pouring and "effect_refillmode" item is contained in this item, reduce condition of the kettle's contained mix -->
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activechocolatemix" range="50" condition="-2">
+          <Conditional HasStatusTag="pouring" targetcontainer="true" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring, increase tea cup condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2" offset="0,10">
+          <Conditional HasStatusTag="pouringchocolate" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="0.0" particlespersecond="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
+          <Conditional HasStatusTag="pouringchocolate" />
+          <Conditional conditionpercentage="eq 100" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="5.0" />
@@ -4774,6 +5043,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -4797,7 +5067,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4818,7 +5088,7 @@
     </Item>
     
     <!-- TODO: Chocolate Mug inventory icon -->
-    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="false" isshootable="false" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4833,13 +5103,64 @@
       <Body width="31" height="34" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
+      <ItemComponent characterusable="true">
+        <!-- when the item is spawned in, pre-set it to refill mode by setting MaxOutputLength to "2" and spawning the "effect_refillmode" item into its inventory -->
+        <StatusEffect type="OnSpawn" target="This" MaxOutputLength="3" setvalue="true">
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <!-- when left-clicked, increase MaxOutputLength value by 1 to enable or disable refilling the cup | value 1 = drinking mode | value 2 = refill mode -->
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" disabledeltatime="true" delay="0.1" stackable="false" />
+        <!-- when left-clicked, reset MaxOutputLength value to 1 when it reached a value equal to or greather than 3 -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" MaxOutputLength="1" setvalue="true" disabledeltatime="true">
+          <Conditional MaxOutputLength="gte 3" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 1, apply "drinkingmode" tag and adjust aimpos and aimangle values for drinking -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 1" />
+        </StatusEffect>
+        <!-- when left-clicked and MaxOutputLength is 2, apply "refillmode" tag and adjust aimpos and aimangle values for refilling -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional MaxOutputLength="eq 2" />
+          <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+        <Containable items="effect">
+          <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
+          <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
+          <StatusEffect type="OnRemoved" target="This" aimpos="23,8" aimangle="30" setvalue="true" disabledeltatime="true" />
+        </Containable>
+      </ItemContainer>
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimpos="50,-15" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- if nearby kettle is pouring, reduce condition of its contained chocolate mix -->
+        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activechocolatemix" range="50" condition="-2">
+          <Conditional HasStatusTag="pouring" targetcontainer="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring, increase mug condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="2" offset="0,10">
+          <Conditional HasStatusTag="pouringchocolate" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" />
+          <ParticleEmitter particle="waterdropshort" velocitymin="0.0" velocitymax="0.0" particlespersecond="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" frequencymultiplier="3" loop="true" />
+        </StatusEffect>
+        <!-- if nearby kettle is pouring and mug condition is at maximum, spawn water drop particles and play draining sound -->
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
+          <Conditional HasStatusTag="pouringchocolate" />
+          <Conditional conditionpercentage="eq 100" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="5.0" />
@@ -4853,11 +5174,11 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
+          <Conditional HasTag="drinkingmode" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
-        <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
@@ -4874,6 +5195,7 @@
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <RequiredItem identifier="effect_refillmode" type="Contained" RequireEmpty="true" MatchOnEmpty="true" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" stackable="false">
@@ -5103,166 +5425,6 @@
       </ItemComponent>
     </Item>
 
-    <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
-    <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
-    <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
-    <Item name="Cup of Test Tea" identifier="he-teaTEST" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="8" hideinmenus="true" >
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Deconstruct time="2">
-        <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
-      </Deconstruct>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,468,31,21" depth="0.6" origin="0.5,0.5" />
-      <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
-      <!--GreaterComponent used to measure time passed since the item was created-->
-      <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!-- if nearby kettle is pouring, reduce condition of its contained bubblebery tea mix -->
-        <StatusEffect type="OnSecondaryUse" target="NearbyItems" targets="activebubbleberryteamix" range="50" condition="-2">
-          <Conditional HasStatusTag="pouring" targetcontainer="true" />
-        </StatusEffect>
-        <!-- if nearby kettle is pouring, increase tea cup condition -->
-        <StatusEffect type="OnSecondaryUse" target="This" condition="2">
-          <Conditional HasStatusTag="pouringbubbleberrytea" />
-        </StatusEffect>
-        <!-- if nearby kettle is pouring and tea cup condition is at maximum, spawn water drop particles and play draining sound -->
-        <StatusEffect type="OnSecondaryUse" target="This" comparison="And">
-          <Conditional HasStatusTag="pouringbubbleberrytea" />
-          <Conditional conditionpercentage="eq 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
-          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
-        </StatusEffect>
-        
-        <!-- Regular drinking - RMB -->
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,-15" setvalue="true" interval="0.5">
-          <Conditional HasStatusTag="pouringbubbleberrytea" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="23,8" setvalue="true" interval="0.5">
-          <Conditional HasStatusTag="neq pouringbubbleberrytea" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional HasStatusTag="neq pouringbubbleberrytea" />
-          <Conditional timeframe="lt 180" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <ReduceAffliction identifier="he-stuffed" amount="0.25" />
-          <ReduceAffliction identifier="drunk" amount="5.0" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
-          <ReduceAffliction identifier="psychosis" amount="5.0" />
-          <ReduceAffliction identifier="hallucinating" amount="5.0" />
-          <ReduceAffliction identifier="he-halucinova" amount="5.0" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-          <Affliction identifier="quenched" amount="50" />
-          <Affliction identifier="drank_tea" amount="1" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
-        </StatusEffect>
-        
-        <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-          <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
-        </StatusEffect>
-
-        <!-- Regular drinking -->
-        <!--Increase timeframe to simulate tea cooling off-->
-        <StatusEffect type="Always" target="This" timeframe="1">
-          <Conditional timeframe="lte 180" />
-        </StatusEffect>
-        <!--Particles while tea is hot-->
-        <StatusEffect type="OnNotContained" target="This" stackable="false">
-          <Conditional timeframe="lt 180" />
-          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" stackable="false">
-          <Conditional timeframe="lt 180" />
-          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
-        </StatusEffect>
-        <!--Double the steam particles and apply burn when drinking tea too early-->
-        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
-          <Conditional timeframe="lte 40" />
-          <Conditional HasStatusTag="neq pouringbubbleberrytea" />
-          <Affliction identifier="burn" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnNotContained" target="This" stackable="false">
-          <Conditional timeframe="lte 40" />
-          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" stackable="false">
-          <Conditional timeframe="lte 40" />
-          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-          <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-      </Holdable>
-      <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
-          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" holdpos="-30,15" holdangle="180" aimpos="0,0" aimangle="180" setvalue="true" disabledeltatime="true" />
-      </Powered>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.emptycup">
-          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
-            <Conditional IsActive="false" targetitemcomponent="Powered" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
-
-    <Item name="Empty Test Cup" identifier="he-emptycupTEST" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="31" height="21" density="12" />
-      <Deconstruct time="2">
-        <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="2">
-        <RequiredSkill identifier="mechanical" level="35" />
-        <RequiredItem identifier="he-glassfragments" amount="1" UseCondition="True" MinCondition="1.0"/>
-      </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
-        <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
-        <RequiredItem identifier="he-dirtycup" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate>
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" aimable="false" holdpos="30,-15" holdangle="0" handle1="-12,-3" aimpos="50,-15" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
-          <Conditional HasStatusTag="pouringbubbleberrytea" />
-          <Remove />
-          <SpawnItem identifier="he-teaTEST" spawnposition="SameInventory" Equip="true" condition="0.01" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
-          <Conditional HasStatusTag="pouringbubbleberrytea" />
-          <Remove />
-          <SpawnItem identifier="he-teaTEST" spawnposition="SameInventory" Equip="true" condition="0.01" />
-        </StatusEffect>
-      </Holdable>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
-      </ItemComponent>
-    </Item>
     
     
     
