@@ -1378,6 +1378,26 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    <Item name="" identifier="effect_refillmode" Category="Hidden" Tags="effect" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
+      <PreferredContainer primary="coffeecup" />
+      <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="0,0,1,1" />
+      <Body radius="1" density="10" />
+      <Holdable handle1="0,0" slots="Any" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnNotContained" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <Item name="" identifier="effect_makedirty" Category="Hidden" Tags="effect" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
+      <PreferredContainer primary="coffeecup" />
+      <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="0,0,1,1" />
+      <Body radius="1" density="10" />
+      <Holdable handle1="0,0" slots="Any" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnNotContained" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
     
     
   
