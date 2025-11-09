@@ -743,7 +743,7 @@
           <RequiredItem items="mix" type="Contained" RequireEmpty="true" targetslot="0" />
         </StatusEffect>  
         <!-- increase condition within a stove to simulate brewing, if a tea mix is contained-->
-        <StatusEffect type="OnContained" target="This" condition="100.5" comparison="And">
+        <StatusEffect type="OnContained" target="This" condition="1.5" comparison="And">
           <Conditional condition="lt 100" />
           <Conditional HasTag="stove" targetcontainer="true" />
           <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
@@ -769,7 +769,7 @@
       </Holdable>
       <RepairTool reload="0" barrelpos="43,4" targetstructures="false" hititems="false">
         <!-- require a tea mix to be contained for the RepairTool component to work -->
-        <RequiredItem items="teamix" type="Contained" />
+        <RequiredItem items="mix" type="Contained" />
         <!-- apply status tag "pouring" to the kettle when using it -->
         <StatusEffect type="OnUse" target="This" StatusEffectTags="pouring" duration="0.1" />
 
