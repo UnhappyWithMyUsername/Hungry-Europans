@@ -557,7 +557,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
+          <Affliction identifier="he-stuffed" amount="1.2" />
           <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="thirst" amount="0.02"/>
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -575,7 +575,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
+          <Affliction identifier="he-stuffed" amount="1.2" />
           <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="4.0" />
