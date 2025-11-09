@@ -4242,7 +4242,7 @@
           <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="false" allowdraganddrop="false">
         <Containable items="effect">
           <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
           <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
@@ -4397,7 +4397,7 @@
           <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="false" allowdraganddrop="false">
         <Containable items="effect">
           <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
           <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
@@ -4560,7 +4560,7 @@
           <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="false" allowdraganddrop="false">
         <Containable items="effect">
           <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
           <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
@@ -4712,7 +4712,7 @@
           <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="false" allowdraganddrop="false">
         <Containable items="effect">
           <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
           <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
@@ -4975,7 +4975,7 @@
           <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="false" allowdraganddrop="false">
         <Containable items="effect">
           <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
           <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
@@ -5129,7 +5129,7 @@
           <SpawnItem identifier="effect_refillmode" spawnposition="ThisInventory" spawnifcantbecontained="false" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemComponent>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="true" allowdraganddrop="false">
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="true" drawinventory="false" allowdraganddrop="false">
         <Containable items="effect">
           <!-- when effect item is contained, adjust aimpos and aimangle values for refilling -->
           <StatusEffect type="OnInserted" target="This" aimpos="50,-15" aimangle="0" setvalue="true" disabledeltatime="true" />
