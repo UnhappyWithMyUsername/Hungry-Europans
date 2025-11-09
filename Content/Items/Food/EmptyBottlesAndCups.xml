@@ -652,13 +652,13 @@
           <Remove />
           <SpawnItem identifier="he-cuppopnuttea" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- DOESN'T WORK FOR UNKNOWN REASONS | spawn in coffee cup variant when the item is being aimed and a kettle in range is pouring coffee -->
+        <!-- Dspawn in coffee cup variant when the item is being aimed and a kettle in range is pouring coffee -->
         <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
           <Conditional HasStatusTag="pouringcoffee" />
           <Remove />
           <SpawnItem identifier="he-cupcoffee" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- DOESN'T WORK FOR UNKNOWN REASONS | spawn in chocolate cup variant when the item is being aimed and a kettle in range is pouring chocolate -->
+        <!-- spawn in chocolate cup variant when the item is being aimed and a kettle in range is pouring chocolate -->
         <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
           <Conditional HasStatusTag="pouringchocolate" />
           <Remove />
@@ -751,13 +751,13 @@
           <Remove />
           <SpawnItem identifier="he-mugcoffee" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- DOESN'T WORK FOR UNKNOWN REASONS | spawn in chocolate mug variant when the item is being aimed and a kettle in range is pouring chocolate -->
+        <!-- spawn in chocolate mug variant when the item is being aimed and a kettle in range is pouring chocolate -->
         <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" stackable="false" interval="0.1">
           <Conditional HasStatusTag="pouringchocolate" />
           <Remove />
           <SpawnItem identifier="he-mughotchocolate" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- DOESN'T WORK FOR UNKNOWN REASONS | when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
+        <!-- when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
         <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
           <Conditional condition="lt 100" />
           <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
@@ -791,15 +791,6 @@
         <!-- remove contined "effect_makedirty" to prevent the mug from getting dirty over time -->
         <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
           <Remove />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-          <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
       </ItemComponent>
     </Item>
