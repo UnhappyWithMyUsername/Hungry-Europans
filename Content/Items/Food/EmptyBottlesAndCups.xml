@@ -510,7 +510,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Empty Jar" identifier="he-emptyjar" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty jar used for some recipes. Can be thrown." Tags="smallitem,ingredient,emptyjar" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true">
+    <Item name="Empty Jar" identifier="he-emptyjar" category="Equipment" subcategory="Tableware" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty jar used for some recipes. Can be thrown." Tags="smallitem,ingredient,emptyjar" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -564,7 +564,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Empty Shaker" identifier="he-emptyshaker" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty shaker ready to be filled with salt! Can be thrown" Tags="smallitem,ingredient,emptyshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5">
+    <Item name="Empty Shaker" identifier="he-emptyshaker" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty shaker ready to be filled with salt! Can be thrown" Tags="smallitem,ingredient,emptyshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -618,7 +618,7 @@
     </Item>
 
     
-    <Item name="Empty Cup" identifier="he-emptycup" health="100" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
+    <Item name="Empty Cup" identifier="he-emptycup" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -711,7 +711,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="Empty Mug" identifier="he-emptymug" health="100" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty mug for drinks. Can be thrown or filled with coffee." Tags="smallitem,ingredient,emptymug,mug,coffeecup,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
+    <Item name="Empty Mug" identifier="he-emptymug" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty mug for drinks. Can be thrown or filled with coffee." Tags="smallitem,ingredient,emptymug,mug,coffeecup,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -795,7 +795,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="Empty Cocktail Glass" identifier="he-emptycocktailglass" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycocktailglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <Item name="Empty Cocktail Glass" identifier="he-emptycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycocktailglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -856,7 +856,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="Empty Glass" identifier="he-emptyglass" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptyglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <Item name="Empty Glass" identifier="he-emptyglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptyglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,272,17,34" depth="0.499" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,272,17,34" origin="0.5,0.5" />
@@ -916,7 +916,7 @@
 
 
     <!--////////// EMPTY CUPS - DIRTY \\\\\\\\\\-->
-    <Item name="Dirty Cup" identifier="he-dirtycup" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycup,cup,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <Item name="Dirty Cup" identifier="he-dirtycup" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycup,cup,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -977,7 +977,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="Dirty Mug" identifier="he-dirtymug" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,dirtymug,mug,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <Item name="Dirty Mug" identifier="he-dirtymug" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,dirtymug,mug,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -1027,7 +1027,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="Dirty Cocktail Glass" identifier="he-dirtycocktailglass" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycglass,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <Item name="Dirty Cocktail Glass" identifier="he-dirtycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycglass,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>

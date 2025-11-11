@@ -712,7 +712,7 @@
       </ConnectionPanel>
     </Item>
 
-    <Item name="Kettle" identifier="he-teakettle" Tags="smallitem,kettle" category="Misc" subcategory="Container" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Let's you brew tea or coffee by inserting a mix and putting it on an active stove until it whistles. Once the brewing is done, insert an empty cup to fill." showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="True" requireaimtouse="True" hideinmenus="false" >
+    <Item name="Kettle" identifier="he-teakettle" Tags="smallitem,kettle" category="Equipment" subcategory="Tableware" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Let's you brew tea or coffee by inserting a mix and putting it on an active stove until it whistles. Once the brewing is done, insert an empty cup to fill." showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="True" requireaimtouse="True" hideinmenus="false" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
       <Body width="81" height="85" density="12" />
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
