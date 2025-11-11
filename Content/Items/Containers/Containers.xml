@@ -887,7 +887,7 @@
     
     <!-- Empty hardpoint for ULD/JB -->
     <Item name="" identifier="emptylargedevice" nameidentifier="loosepanel" descriptionidentifier="loosepanel" tags="hidden,utilitypoint" scale="0.7" allowedupgrades="utilitypoint" >
-      <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.8" origin="0.5,0.5" canflipx="false"/>
+      <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.84" origin="0.5,0.5" canflipx="false"/>
       <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
       <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
       <trigger x="25" y="-25" width="60" height="60" />
