@@ -59,7 +59,7 @@ Low:
 [*] Increased MRE eating speed
 [*] Added inventory icons for forks/spoons
 [*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
-[*] Soups are served by dragging them inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
+[*] Soups are served by dragging a bowl inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
 [*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
 [*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
 [*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
@@ -79,6 +79,7 @@ Low:
 [*] Fixed Tea Mix not deleting itself
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
+[*] Fixed Soups reducing "Stuffed" affliction
 [/List]
 
 
