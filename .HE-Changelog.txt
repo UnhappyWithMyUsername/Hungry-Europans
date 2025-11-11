@@ -44,6 +44,7 @@ Low:
 [*] Added "MushRaptor Sauté" 
 [*] Added "Thresher and Bufo Purée" 
 [*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
+[*] You can now drag & drop an empty glass onto a bottle to fill it with the bottle's content 
 [/List]
 
 [b]Changes:[/b] 
@@ -60,6 +61,8 @@ Low:
 [*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
 [*] Soups are served by dragging them inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
 [*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
+[*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
+[*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
 
 [/List]
 
