@@ -189,7 +189,7 @@
   <!-- SEPARATED BANANA AND SEED INTO TWO ITEMS
   bananas used to be both a fruit AND a seed
   Added "bananaseed" as a seed, needed for crossbreeding -->
-  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,plantitem,bananaseed,fooditem,sugary,ingredient,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" impacttolerance="8" health="10">
+  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,plantitem,fooditem,sugary,ingredient,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" impacttolerance="8" health="10">
     <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
     <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.04" />
     <PreferredContainer primary="seedbag" amount="1" spawnposition="0.03" />
