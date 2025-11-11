@@ -63,6 +63,7 @@ Low:
 [*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
 [*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
 [*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
+[*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
 
 [/List]
 
