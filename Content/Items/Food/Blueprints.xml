@@ -118,7 +118,7 @@
     <Item name="Glass Blueprint" description="A blueprint of a glass. Can be used in a bottle printer." identifier="he-blueprintglass" tags="smallitem,blueprint,bottleprinterblueprint" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <Body width="35" height="15" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="0,0,35,15" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="279,188,278,278" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="558,188,278,278" origin="0.5,0.5" />
       <Deconstruct time="0.1" requireddeconstructor="deconstructor"/>
       <!-- <Fabricate suitablefabricators="fabricator" requiredtime="0.1" requiresrecipe="false" amount="1"/> -->
       <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
