@@ -58,6 +58,8 @@ Low:
 [*] Increased MRE eating speed
 [*] Added inventory icons for forks/spoons
 [*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
+[*] Soups are served by dragging them inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
+[*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
 
 [/List]
 
@@ -73,6 +75,7 @@ Low:
 [*] Fixed eating MRE with an empty bottle inside
 [*] Fixed Tea Mix not deleting itself
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
+[*] Fixed Blender and Coffee Machine taking damage in water
 [/List]
 
 
@@ -89,13 +92,11 @@ Low:
 
 Misc TODOs:
 
-- Find a way to use lower condition meat since under 50% it can't be used to cook. Maybe throw it out the depth charge tube as decoy? 
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
 - Change drunkness to not apply disoriented while in water and instead slow the character down
 - Ethanol gives some radiation resistance
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
 - Fix meat spoiling in fabricators.
-- Endworm and Watcher products giving "concealed" affliction to passivy creatures.
 - Make tea kettle storable in cafeteria cart
 
 
