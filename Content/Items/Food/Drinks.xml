@@ -2613,9 +2613,9 @@
     
     <!-- glass of raptorzine juice - purgative drink that reduces worms and stomachache but increases need to poop -->
     <Item name="" description="" identifier="he-raptorzinejuiceglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="4" >
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="74,272,17,34" depth="0.499" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="74,272,17,34" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="74,272,17,34" depth="0.525" origin="0.5,0.7"  />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="92,272,17,34" depth="0.499" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="92,272,17,34" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="92,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="blender" requiredtime="8" requiresrecipe="false" amount="1">
