@@ -674,7 +674,7 @@
         <StatValue stattype="SwimmingSpeed" value="-0.5" />
       </Holdable>
       <ItemContainer canbeselected="true" selectkey="Select" capacity="5" maxstacksize="8" hideitems="true" allowuioverlap="true">
-        <Containable items="pot,emptybottle,bottle,tableware,cleaningagent,wateringtool" />
+        <Containable items="pot,emptybottle,bottle,tableware,cleaningagent,wateringtool,kettle" />
         <!-- TODO: adjust these icons for filter and hose, disabled for now-->
         <!-- <SlotIcon slotindex="2" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" /> -->
         <!-- <SlotIcon slotindex="3" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,320,64,64" origin="0.5,0.5" /> -->
@@ -686,7 +686,7 @@
         </SubContainer> -->
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
-        <Containable items="pot,emptybottle,bottle,tableware,wateringtool" />
+        <Containable items="pot,emptybottle,bottle,tableware,wateringtool,kettle" />
       </ItemContainer>
     </Item> 
     
