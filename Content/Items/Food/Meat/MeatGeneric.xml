@@ -209,7 +209,7 @@
           <SpawnItem identifier="he-sausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!-- spawn radwurst when in reactor -->
-        <StatusEffect type="OnContained" target="This" delay="6.0" checkconditionalalways="true">
+        <StatusEffect type="OnContained" target="This" delay="45" checkconditionalalways="true">
           <Remove />
           <SpawnItem identifier="he-radsausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           <Conditional fissionrate="gt 10" targetcontainer="true" />
@@ -334,7 +334,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <!-- TODO: Sprite and polish -->
+    <!-- TODO: NEXTUPDATE Sprite and polish -->
     <Item name="Radwurst" identifier="he-radsausage" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,fingerfood,reactoritem" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,0,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255" health="12">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
