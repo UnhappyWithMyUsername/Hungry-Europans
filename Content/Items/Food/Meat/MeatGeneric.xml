@@ -358,6 +358,9 @@
         <StatusEffect type="OnActive" target="Character" >
           <Affliction identifier="radiationsickness" strength="0.6" />
         </StatusEffect>
+        <StatusEffect type="OnActive" target="This" >
+          <ParticleEmitter particle="steamspray" particlespersecond="3" velocitymin="15" velocitymax="30" distancemin="0" distancemax="10" anglemin="40" anglemax="130" scalemin="0.2" scalemax="0.35" colormultiplier="255,255,255,160" lifetimemultiplier="0.5" />
+        </StatusEffect>
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="1" />
