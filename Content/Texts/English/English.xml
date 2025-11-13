@@ -1275,13 +1275,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-chocolatemix>Add lots of milk and sugar to forget the fact that Europa ran out of real cocoa half a century ago.</entitydescription.he-chocolatemix>
 
 <entityname.he-cupcoffee>Cup of Coffee</entityname.he-cupcoffee>
-<entitydescription.he-cupcoffee>To the bitter end. Prevents thirst.</entitydescription.he-cupcoffee>
+<entitydescription.he-cupcoffee>Drink it to the bitter end. Prevents thirst and sleep.</entitydescription.he-cupcoffee>
 
 <entityname.he-mugcoffee>Mug of Coffee</entityname.he-mugcoffee>
-<entitydescription.he-mugcoffee>To the bitter end. Prevents thirst.</entitydescription.he-mugcoffee>
+<entitydescription.he-mugcoffee>Drink it to the bitter end. Prevents thirst and sleep.</entitydescription.he-mugcoffee>
 
 <entityname.he-coffeetogo>Coffee-to-go</entityname.he-coffeetogo>
-<entitydescription.he-coffeetogo>To the bitter end. Prevents thirst.</entitydescription.he-coffeetogo>
+<entitydescription.he-coffeetogo>Drink it to the bitter end. Prevents thirst and sleep.</entitydescription.he-coffeetogo>
 
 <entityname.he-cuphotchocolate>Cup of Hot Chocolate</entityname.he-cuphotchocolate>
 <entitydescription.he-cuphotchocolate>Warms up the coldest of sailors. Prevents thirst.</entitydescription.he-cuphotchocolate>
@@ -1466,11 +1466,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.idcardshredded>A good way to get rid of evidence.</entitydescription.idcardshredded>
 
 <entityname.he-thresherbufopuree>Thresher and Bufo Purée</entityname.he-thresherbufopuree>
-<entitydescription.he-thresherbufopuree>Thresher steak with Mashed Bufotoxin. The use of Bufotoxin as an ingredient has sparked debate among culinary experts: sought for its spice, and reviled for the mental episodes that ensue.</entitydescription.he-thresherbufopuree>
+<entitydescription.he-thresherbufopuree>Thresher steak with Mashed Bufotoxin. The use of Bufotoxin as an ingredient has sparked debate among culinary experts: sought for its spiciness, and reviled for the mental episodes that ensue.</entitydescription.he-thresherbufopuree>
 
 <entityname.he-mudraptorandshrooms>MushRaptor Sauté</entityname.he-mudraptorandshrooms>
-<entitydescription.he-mudraptorandshrooms>Mudraptor and Mushroom sauté in a Vinegar sauce. The cooking process evaporates most of the mushrooms ethanolic content; enough to get pleasantly tipsy without falling into a drunken stupor.</entitydescription.he-mudraptorandshrooms>
-
+<entitydescription.he-mudraptorandshrooms>Mudraptor and Mushroom sauté in a Vinegar sauce. Most of the ethanol inside the mushrooms is evaporated, enhancing the taste of the dish.</entitydescription.he-mudraptorandshrooms>
 
 <entityname.he-radsausage>RadWurst</entityname.he-radsausage>
 <entitydescription.he-radsausage>Imbued with gamma radiation, this sausage has swollen to an impressive girth. You can only hope that this won't give funny ideas to the engineer...</entitydescription.he-radsausage>
