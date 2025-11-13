@@ -334,13 +334,13 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <!-- TODO: NEXTUPDATE Sprite and polish -->
+    <!-- TODO: NEXTUPDATE polish -->
     <Item name="Radwurst" identifier="he-radsausage" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,fingerfood,reactoritem" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,0,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255" health="12">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
-      <Body width="67" radius="7" density="9" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="211,205,67,27" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="211,205,67,27" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="211,205,67,27" depth="0.525" origin="0.5,0.3"  />
+      <Body width="50" radius="10" density="9" />
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
         <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
