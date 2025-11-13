@@ -235,6 +235,7 @@
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,100,70,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -283,6 +284,7 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -318,6 +320,7 @@
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="90,65,50,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
@@ -331,7 +334,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-
+    <!-- TODO: Sprite and polish -->
     <Item name="Radwurst" identifier="he-radsausage" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,fingerfood,reactoritem" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,0,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255" health="12">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
