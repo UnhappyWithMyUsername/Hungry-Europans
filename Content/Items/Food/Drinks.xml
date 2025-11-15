@@ -395,8 +395,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -649,8 +649,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -823,8 +823,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -998,8 +998,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1167,8 +1167,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1333,8 +1333,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1506,8 +1506,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1677,8 +1677,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1845,8 +1845,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2200,8 +2200,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2362,8 +2362,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2536,8 +2536,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2605,8 +2605,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2668,8 +2668,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2732,8 +2732,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>    
@@ -2809,8 +2809,8 @@
       </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item> 
@@ -2877,8 +2877,8 @@
           <Conditional InWater="True" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item> 
@@ -2942,8 +2942,8 @@
       </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -3424,8 +3424,8 @@
       </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -3833,6 +3833,10 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+        </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
         <StatusEffect type="OnActive" target="This" condition="-2" disabledeltatime="false" offset="0,-15" >
@@ -3851,8 +3855,8 @@
       </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
-          <RemoveItem />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
