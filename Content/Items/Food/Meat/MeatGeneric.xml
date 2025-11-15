@@ -365,7 +365,7 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Affliction identifier="radiationsickness" strength="2" penetration="1" />
+          <Affliction identifier="applyradiationsickness" strength="2" penetration="1.0" />
           <Affliction identifier="haste" strength="25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
