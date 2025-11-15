@@ -856,7 +856,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="Empty Glass" identifier="he-emptyglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptyglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <Item name="Empty Glass" identifier="he-emptyglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptyglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" hideconditionbar="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,272,17,34" depth="0.499" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,272,17,34" origin="0.5,0.5" />
@@ -869,46 +869,55 @@
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="he-glassfragments" amount="1" />
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
+      <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="fullglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
+      <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+        <!-- when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
+        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
+          <Conditional condition="lt 100" />
+          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
         </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
+        <StatusEffect type="OnContained" target="This" comparison="And">
+          <Conditional condition="gte 0.1" />
+          <Conditional condition="lte 1.0" />
+          <Remove />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
+        <StatusEffect type="OnNotContained" target="This" comparison="And">
+          <Conditional condition="gte 0.1" />
+          <Conditional condition="lte 1.0" />
+          <Remove />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
+        <StatusEffect type="OnBroken" target="This">
           <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="7" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,180"/>
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-      </Projectile>
+      </Holdable>
+      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
+        <Containable items="effect">
+          <!-- reduce the empty mug condition by 1 each second to make it "dirty" over time -->
+          <StatusEffect type="OnContaining" target="This" condition="-1">
+            <Conditional condition="gt 1" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
       <!-- repair the item when it is used by a dishwasher -->
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
+        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
+        <!-- remove contined "effect_makedirty" to prevent the mug from getting dirty over time -->
+        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
+          <Remove />
+        </StatusEffect>
       </ItemComponent>
     </Item>
 
@@ -1083,6 +1092,63 @@
           <Conditional timeframe="gte 50" />
           <Remove />
           <SpawnItem identifier="he-emptycocktailglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </ItemComponent>
+    </Item>
+
+    <Item name="Dirty Glass" identifier="he-dirtyglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A dirty glass. Needs to be cleaned in a sink or dishwasher." Tags="smallitem,ingredient,emptyglass,fullglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="221,477,17,34" depth="0.499" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="221,477,17,34" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="221,477,17,34" depth="0.525" origin="0.5,0.7" />
+      <Body width="11" height="28" density="15" />
+      <Deconstruct time="2">
+        <Item identifier="he-glassfragments" amount="1" />
+      </Deconstruct>
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+          <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="7" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,180"/>
+          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
+        </StatusEffect>
+      </Projectile>
+      <!-- GreaterComponent used for its timeframe value to track cleaning progress -->
+      <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
+      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
+        <!-- increase the timeframe value each time the item gets used by a dishwasher -->
+        <StatusEffect type="OnUse" target="This" timeframe="1" disabledeltatime="true" />
+        <!-- when the timeframe value reaches 50 or greater, remove the item and spawn its clean variant in its place -->
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+          <Conditional timeframe="gte 50" />
+          <Remove />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
