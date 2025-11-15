@@ -233,7 +233,7 @@
       <Effect minstrength="0" maxstrength="200" strengthchange="0.0">
         <StatusEffect target="Character" delay="20" duration="20" stackable="false" disabledeltatime="false" checkconditionalalways="true" multiplyafflictionsbymaxvitality="true">
           <Conditional applyradiationsickness="gt 0" />
-          <Affliction identifier="radiationsickness" strength="1.07" />
+          <Affliction identifier="radiationsickness" strength="1.07" penetration="1.0" />
           <ReduceAffliction identifier="applyradiationsickness" strength="1.07" />
         </StatusEffect>
       </Effect>
@@ -422,31 +422,31 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <!-- APPLY HALLUCINATING OVER TIME -->
-      <Affliction
-        identifier="applyhallucinating"
-        description="Converts into normal hallucinating affliction over time to prevent someone eating poisoned food noticing the poison directly"
-        type="debuff"
-        limbspecific="false"
-        indicatorlimb="Torso"
-        activationthreshold="0"
-        showiconthreshold="1000"
-        showicontoothersthreshold="1000"
-        hideiconafterdelay="true"
-        showinhealthscannerthreshold="1000"
-        treatmentthreshold="1000"
-        maxstrength="100"
-        affectmachines="false"
-        MedicalSkillGain="0.0"
-        healableinmedicalclinic="false">
-        <Effect minstrength="0" maxstrength="100" strengthchange="0.0">
-          <StatusEffect target="Character" delay="20" duration="20" stackable="false" disabledeltatime="false" checkconditionalalways="true" multiplyafflictionsbymaxvitality="true">
-            <Conditional applyhallucinating="gt 0" />
-            <Affliction identifier="hallucinating" strength="2" />
-            <ReduceAffliction identifier="applyhallucinating" strength="2" />
-          </StatusEffect>
-        </Effect>
-        <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
-      </Affliction>
+    <Affliction
+      identifier="applyhallucinating"
+      description="Converts into normal hallucinating affliction over time to prevent someone eating poisoned food noticing the poison directly"
+      type="debuff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="100"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.0">
+        <StatusEffect target="Character" delay="20" duration="20" stackable="false" disabledeltatime="false" checkconditionalalways="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional applyhallucinating="gt 0" />
+          <Affliction identifier="hallucinating" strength="2" />
+          <ReduceAffliction identifier="applyhallucinating" strength="2" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
     <!-- APPLY HUSK INFECTION OVER TIME -->
     <Affliction
       identifier="applyhuskinfection"

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <Item name="Pan" identifier="he-pan" category="Equipment" maxstacksize="1" Tags="smallitem,pan" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pan" identifier="he-pan" category="Equipment" subcategory="Tableware" maxstacksize="1" Tags="smallitem,pan" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <PreferredContainer primary="wreckcrewcab,abandonedcrewcab,abandonedstoragecab,outpostcrewcab" amount="1" spawnprobability="0.02" />
@@ -41,7 +41,7 @@
       </ItemContainer> -->
     </Item>
 
-    <Item name="Pot" identifier="he-pot" category="Equipment" maxstacksize="1" Tags="smallitem,pot,emptypot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot" identifier="he-pot" category="Equipment" subcategory="Tableware" maxstacksize="1" Tags="smallitem,pot,emptypot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <PreferredContainer primary="wreckcrewcab,abandonedcrewcab,outpostcrewcab,beaconcrewcab" amount="1" spawnprobability="0.02" />
@@ -78,7 +78,7 @@
       </ItemComponent>
     </Item>
     
-    <Item name="Pot with Water" identifier="he-potwithwater" category="Equipment" maxstacksize="1" Tags="smallitem,pot,waterpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot with Water" identifier="he-potwithwater" category="Equipment" subcategory="Tableware" maxstacksize="1" Tags="smallitem,pot,waterpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="fill">
@@ -115,7 +115,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Dirty Pot" identifier="he-dirtypot" category="Equipment" maxstacksize="1" Tags="smallitem,pot,dirtypot,dirtytableware,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Dirty Pot" identifier="he-dirtypot" category="Equipment" subcategory="Tableware" maxstacksize="1" Tags="smallitem,pot,dirtypot,dirtytableware,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <PreferredContainer primary="wreckcrewcab,abandonedcrewcab,outpostcrewcab,beaconcrewcab" amount="1" spawnprobability="0.02" />
@@ -141,6 +141,7 @@
       </ItemComponent>
     </Item>
 
+    <!-- TODO: ADD MANTIS MEAT, INCLUDES ORANGE BOY -->
     <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem,cleaver" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
@@ -455,7 +456,7 @@
         
     
     <!-- TODO: Disabled. Needs a sprite. Reenable when we actually do something with cans -->
-    <Item name="Can Opener" identifier="he-canopener" category="Equipment" Tags="smallitem,mountableweapon,sharptool,canopener" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="Can Opener" identifier="he-canopener" category="Equipment" subcategory="Tableware" Tags="smallitem,mountableweapon,sharptool,canopener" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <!-- <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.25"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.05"/>
@@ -579,7 +580,7 @@
     </Item>
 
     <!--////////// CLEAN TABLEWARE \\\\\\\\\\-->
-    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Ingredients" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
@@ -652,7 +653,7 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Empty Bowl" identifier="he-emptybowl" Tags="smallitem,tableware,emptybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Ingredients"  cargocontaineridentifier="metalcrate" description="An empty bowl to put food in. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Empty Bowl" identifier="he-emptybowl" Tags="smallitem,tableware,emptybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Tableware"  cargocontaineridentifier="metalcrate" description="An empty bowl to put food in. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.499" origin="0.5,0.5" />
@@ -724,8 +725,7 @@
       </ItemContainer>
     </Item>    
     
-    <!-- TODO: Fork inventoryicon -->
-    <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -758,8 +758,7 @@
       </ItemComponent>
     </Item>
 
-    <!-- TODO: Spoon inventoryicon -->
-    <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -793,7 +792,7 @@
     </Item>
 
     <!--////////// DIRTY TABLEWARE \\\\\\\\\\-->
-    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Ingredients" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.499" origin="0.5,0.5" />
@@ -866,7 +865,7 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Dirty Bowl" identifier="he-dirtybowl" Tags="smallitem,dirtytableware,tableware,dirtybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Ingredients" cargocontaineridentifier="metalcrate" description="A dirty bowl that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Dirty Bowl" identifier="he-dirtybowl" Tags="smallitem,dirtytableware,tableware,dirtybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty bowl that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.499" origin="0.5,0.5" />
@@ -939,8 +938,7 @@
       </ItemContainer>
     </Item>    
         
-    <!-- TODO: Dirty Fork inventoryicon -->
-    <Item name="Dirty Fork" identifier="he-dirtyfork" Tags="smallitem,dirtytableware,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" description="A dirty fork that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Dirty Fork" identifier="he-dirtyfork" Tags="smallitem,dirtytableware,tableware,fork,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty fork that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="318,61,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" depth="0.55" origin="0.5,0.5" />
@@ -968,8 +966,7 @@
       </Holdable>
     </Item>
         
-    <!-- TODO: Dirty Spoon inventoryicon -->
-    <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+    <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="383,61,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" depth="0.55" origin="0.5,0.5" />

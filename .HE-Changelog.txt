@@ -46,6 +46,8 @@ Low:
 [*] Added "MushRaptor Sauté" 
 [*] Added "Thresher and Bufo Purée" 
 [*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
+[*] Empty Glasses can now be crafted at both Fabricator and Bottle Printer
+[*] You can now drag & drop an empty glass onto a bottle to fill it with the bottle's content 
 [/List]
 
 [b]Changes:[/b] 
@@ -60,6 +62,12 @@ Low:
 [*] Increased MRE eating speed
 [*] Added inventory icons for forks/spoons
 [*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
+[*] Soups are served by dragging a bowl inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
+[*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
+[*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
+[*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
+[*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
+[*] More glass containers can go inside Liquor crates
 
 [/List]
 
@@ -75,6 +83,8 @@ Low:
 [*] Fixed eating MRE with an empty bottle inside
 [*] Fixed Tea Mix not deleting itself
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
+[*] Fixed Blender and Coffee Machine taking damage in water
+[*] Fixed Soups reducing "Stuffed" affliction
 [/List]
 
 
@@ -91,13 +101,11 @@ Low:
 
 Misc TODOs:
 
-- Find a way to use lower condition meat since under 50% it can't be used to cook. Maybe throw it out the depth charge tube as decoy? 
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
 - Change drunkness to not apply disoriented while in water and instead slow the character down
 - Ethanol gives some radiation resistance
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
 - Fix meat spoiling in fabricators.
-- Endworm and Watcher products giving "concealed" affliction to passivy creatures.
 - Make tea kettle storable in cafeteria cart
 
 

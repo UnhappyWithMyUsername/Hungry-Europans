@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <!--TODO: change the priority to 2.5 when the bots can switch the batteries-->
     <Item name="Limited Edition Couwola Cola Exosuit" identifier="he-couwolaexosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,cuttingequipment,provocative,containradiation" scale="0.605" fireproof="true" description="A limited edition Exosuit produced by Couwola Cola. It is more fuel efficient and allows the wearer to breath oxygen from their surroundings while only using the oxygen tanks when needed." isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01">
       <Price baseprice="80" canbespecial="false" sold="false" />
       <Deconstruct time="30">
