@@ -174,8 +174,8 @@
         </StatusEffect>
       </Controller>
       <Body width="182" height="135" density="16" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Aim" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" AttachesToFloor="true" aimable="true">
-        <RequiredItem items="wrench" type="Equipped" />
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachCrowbar" PickingTime="5.0" aimpos="65,-10" attachable="true" AttachesToFloor="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
         <StatusEffect target="This" type="Always">
           <Conditional attached="false" targetitemcomponentname="Holdable" />
           <DropContainedItems />
@@ -184,6 +184,7 @@
         <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <ItemContainer selectkey="Action" capacity="0" itemsperrow="0" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <RequiredItem items="wrench,crowbar" type="Equipped" requireempty="true" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
         <GuiFrame relativesize="0.25,0.15" absoluteoffset="0,0.15" anchor="BottomCenter" style="ItemUI" />
         <Containable items="none" />
         <SubContainer capacity="5" itemsperrow="5">
@@ -191,12 +192,14 @@
         </SubContainer>
       </ItemContainer>
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
+        <RequiredItem items="wrench,crowbar" type="Equipped" requireempty="true" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
         <Containable items="toiletflooditem" />
         <StatusEffect type="OnBroken" target="This">
           <SpawnItem identifier="toiletflooditem" spawnposition="ThisInventory" count="1" spawnifinventoryfull="false" />
         </StatusEffect>
       </ItemContainer>
       <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="true">
+        <RequiredItem items="wrench,crowbar" type="Equipped" requireempty="true" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.flushtoilet">
           <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" comparison="And">
