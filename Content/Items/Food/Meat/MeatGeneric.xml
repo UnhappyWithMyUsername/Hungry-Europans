@@ -341,19 +341,6 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="211,205,67,27" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="211,205,67,27" depth="0.525" origin="0.5,0.3"  />
       <Body width="50" radius="10" density="9" />
-      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
-          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
-          <Conditional MaxValueLength="gte 20" />
-          <Remove />
-          <SpawnItem identifier="he-burnedsausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-      </ItemComponent>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2">
         <StatusEffect type="OnActive" target="Character" >
           <Affliction identifier="radiationsickness" strength="0.6" />
