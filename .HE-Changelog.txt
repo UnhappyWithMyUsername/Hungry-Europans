@@ -112,11 +112,11 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
-- Mantis/Orange boy meat, basically a lobster/crab, Mantis surimi
-- Mushroom recipes
+- Mantis/Orange boy meat and meals, basically a lobster/crab
+Mantis Surimi, Tempura (fried food)... 
 - More Blender recipes
-- RadWurst, irradiated sausage cooked in reactor
 - More Offal recipes
+- More Mushroom recipes?
 - Cookie jar
 - Cake + Slices
 - Pasta + pasta recipes
