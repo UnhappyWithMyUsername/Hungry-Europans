@@ -104,7 +104,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Toilet" identifier="he-toilet" tags="toilet" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
+    <Item name="Toilet" identifier="he-toilet" tags="toilet,pipeweakpoint" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="true" GrabWhenSelected="false" allowedlinks="valve">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.5" />
       <Price baseprice="580" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
@@ -191,13 +191,13 @@
           <Containable items="smallitem,mediumitem" />
         </SubContainer>
       </ItemContainer>
-      <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
-        <RequiredItem items="crowbar" type="Equipped" requireempty="true" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
-        <Containable items="toiletflooditem" />
-        <StatusEffect type="OnBroken" target="This">
-          <SpawnItem identifier="toiletflooditem" spawnposition="ThisInventory" count="1" spawnifinventoryfull="false" />
-        </StatusEffect>
-      </ItemContainer>
+      <Pump updatewhenbroken="true" canbeselected="false" maxflow="60" flowpercentage="100" cancauselethalpressure="false" VulnerableToEMP="false">
+        <IsActiveConditional condition="lt 25"/>
+        <IsActiveConditional targetitemcomponent="Pump" IsHullFull="false"/>
+        <Sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600" loop="true" />
+        <PumpInEmitter particle="damagebubbles" particlespersecond="15" scalemin="0.5" scalemax="0.75" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="150" velocitymax="250"/>
+        <PumpInEmitter position="90,-75" particle="toiletwaterleak" anglemin="135" anglemax="135" distancemin="0" distancemax="0" velocitymin="375" velocitymax="450" particlespersecond="15" />
+      </Pump>
       <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.flushtoilet">
