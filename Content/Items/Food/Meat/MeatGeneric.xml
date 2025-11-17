@@ -210,9 +210,9 @@
         </StatusEffect>
         <!-- spawn radwurst when in reactor -->
         <StatusEffect type="OnContained" target="This" delay="45" checkconditionalalways="true">
+          <Conditional fissionrate="gt 10" targetcontainer="true" />
           <Remove />
           <SpawnItem identifier="he-radsausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          <Conditional fissionrate="gt 10" targetcontainer="true" />
         </StatusEffect>
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
@@ -342,6 +342,13 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="211,205,67,27" depth="0.525" origin="0.5,0.3"  />
       <Body width="50" radius="10" density="9" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2">
+        <!-- if left in reactor for too long, increases temperature over time -->
+        <StatusEffect type="OnContained" target="This,Parent" interval="1" duration="30" Temperature="1" checkconditionalalways="true">
+          <Conditional fissionrate="gt 0" targetcontainer="true" />
+          <ParticleEmitter particle="steamspray" particlespersecond="3" velocitymin="15" velocitymax="30" distancemin="30" distancemax="50" anglemin="0" anglemax="360" scalemin="0.5" scalemax="0.7" colormultiplier="255,255,255,160" lifetimemultiplier="0.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="400.0" loop="true" volume="0.8" frequencymultiplier="0.45" />
+        </StatusEffect>
+        <!-- give rad when held -->
         <StatusEffect type="OnActive" target="Character" >
           <Affliction identifier="radiationsickness" strength="0.6" />
         </StatusEffect>
