@@ -223,8 +223,8 @@
         <!-- TODO: balance the amount of meat from meat cleaver -->
 
         <!--Skillissue
-        If you fail the skill check, adds extra butchered to the corpse, meaning less meat harvested before reaching 100 butchered total-->
-        <StatusEffect type="OnFailure" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
+        If you fail the skill check, adds a flat % of butchered to the corpse, meaning less meat harvested before reaching 100 butchered total-->
+        <StatusEffect type="OnFailure" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="5" />
