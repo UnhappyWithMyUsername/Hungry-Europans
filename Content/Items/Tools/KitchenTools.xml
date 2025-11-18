@@ -414,7 +414,7 @@
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
           <!-- <RequiredItem items="nomeatleft" type="Equipped" msg="itemmsgnomeatleft" /> -->
           <Conditional isdead="true"/>
-          <Conditional he-butchered="eq 100"/>
+          <Conditional he-butchered="gte 100"/>
           <Conditional mass="lt 1000"/>
           <DropContainedItems />
           <RemoveCharacter />
