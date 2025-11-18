@@ -218,7 +218,7 @@
         Hit corpses to try and get meat
         Passing the skill check spawns meat and adds some "butchered" affliction to the corpse
         Reaching 100 butchered means no more meat can be extracted
-        Butchered amount is proportional to health; more health = more meat. BIG MONSTERS NEED A BIGGER NUMBER
+        Butchered amount is proportional to health; more health = less butchered inflicted = more meat. BIG MONSTERS NEED A BIGGER NUMBER
         "Extra" meat rolls a separate probability and does not add butchered -->
         <!-- TODO: balance the amount of meat from meat cleaver -->
 
