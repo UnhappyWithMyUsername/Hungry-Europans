@@ -828,7 +828,15 @@
       MedicalSkillGain="0.0" 
       showiconthreshold="1000"
       showinhealthscannerthreshold="1000">
-      <Effect minstrength="0" maxstrength="100" strengthchange="0" />
+      <Effect minstrength="0" maxstrength="100" strengthchange="0" >
+        <!-- Added this SE for debugging to know when a creature hits 100 butchery but it doesnt trigger on dead characters... -->
+        <!-- <StatusEffect target="Character" setvalue="true" interval="1">
+          <Conditional he-butchered="gte 100" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" particlespersecond="10" ScaleMin="1" ScaleMax="1" />
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" volume="2" loop="true" />
+          <SpawnItem identifiers="fulguriumfuelrodvolatile" spawnposition="This" />
+        </StatusEffect>  -->
+      </Effect>
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
     
