@@ -160,9 +160,9 @@
       <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false" DualWieldReloadTimePenaltyMultiplier="1.75">
         <RequiredSkill identifier="butchery" level="100" />
-        <Attack targetimpulse="2" severlimbsprobability="0.8" itemdamage="10" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="10" />
-          <Affliction identifier="bleeding" strength="20" />
+        <Attack targetimpulse="2" severlimbsprobability="0.6" itemdamage="10" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="8" />
+          <Affliction identifier="bleeding" strength="16" />
           <Affliction identifier="stun" strength="0.2" />
           <StatusEffect type="OnUse" target="UseTarget">
             <Conditional entitytype="eq Character"/>
