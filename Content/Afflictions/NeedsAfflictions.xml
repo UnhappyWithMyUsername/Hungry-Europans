@@ -797,6 +797,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
     
+    <!-- why is this of space herpes type  -->
     <Affliction name="Craving Human Meat"
       identifier="he-hungryforhumanmeat"
       description="Agitation and a tremor are obvious, the eyes stare empty."
@@ -885,7 +886,7 @@
       <!-- same effects as before but stronger, learn skills slower -->
       <Effect minstrength="40" maxstrength="90"
         minvitalitydecrease="10"
-        maxvitalitydecrease="15"
+        maxvitalitydecrease="20"
         strengthchange="0.0"
         minchromaticaberration="1.0"
         maxchromaticaberration="5.0"
@@ -914,8 +915,8 @@
       </Effect>
       <!-- extreme cannibal state that keeps increasing, increase hunger, "mouth" limb appears, need to bite crewmates to reduce craving -->
       <Effect minstrength="90" maxstrength="100"
-        minvitalitydecrease="15"
-        maxvitalitydecrease="20"
+        minvitalitydecrease="20"
+        maxvitalitydecrease="25"
         minscreendistort="0.0"
         maxscreendistort="3.0"
         strengthchange="0.05"
