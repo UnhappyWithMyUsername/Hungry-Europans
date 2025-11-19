@@ -9,19 +9,14 @@
         <TalentOption identifier="he-poacher"/>
         <TalentOption identifier="he-anatomystudy"/>
         <TalentOption identifier="he-thirstforknowledge"/>
-        <!--<TalentOption identifier="selfcare"/>
-        <TalentOption identifier="stayinalive"/>-->
       </TalentOptions>
-      <TalentOptions requiredtalents="2" maxchosentalents="5">
+      <TalentOptions requiredtalents="2" maxchosentalents="6">
         <TalentOption identifier="he-steadyhands"/>
         <TalentOption identifier="he-foodtrucking"/>
         <TalentOption identifier="he-smellslikeabrewery"/>		
         <TalentOption identifier="he-lazygardener"/>
-        <TalentOption identifier="he-culinaryschool"/>		
-        <!--
-        <TalentOption identifier="dontdieonme"/>
-        <TalentOption identifier="nopressure"/>
-        <TalentOption identifier="blooddonor"/>-->
+        <TalentOption identifier="he-culinaryschool"/>	
+        <TalentOption identifier="he-psycookinesis"/>
       </TalentOptions>
     </SubTree>
     <SubTree identifier="butcher" type="specialization" requires="chef_primary" blocks="entertainer,chef">
@@ -83,15 +78,7 @@
           <TalentOption identifier="he-spinelingpreference"/>
           <TalentOption identifier="he-huskpreference"/>
         </ShowCaseTalent>
-      </TalentOptions>	  
-      <!--
-      <TalentOptions>
-        <TalentOption identifier="supersoldiers"/>
-        <TalentOption identifier="whatastench"/>
       </TalentOptions>
-      <TalentOptions>
-        <TalentOption identifier="macrodosing"/>
-      </TalentOptions>-->
     </SubTree>
   </TalentTree> 
 </TalentTrees>

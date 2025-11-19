@@ -1307,6 +1307,25 @@
     </Talent>
 
 
+    <!-- TODO: psycookinesis talent icon -->
+    <Talent identifier="he-psycookinesis">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-psycookinesis" />
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional psychosis="gte 80" />
+                <Conditional hallucinating="gte 50" />
+                <Conditional he-halucinova="gte 50" />
+                <Affliction identifier="he-psycookinesisbuff" strength="2"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
 
 
 

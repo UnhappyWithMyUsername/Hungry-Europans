@@ -116,5 +116,23 @@
     <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
   
+  <Affliction identifier="he-psycookinesisbuff" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="2" treatmentthreshold="1000" iconcolors="70,40,90;100,40,120;130,40,150;155,40,175">
+    <Effect
+      minstrength="0"
+      maxstrength="2"
+      strengthchange="-1">
+      <StatusEffect target="NearbyItems,Character" range="160" targets="he-cuttingboard" statuseffecttags="controlledbypsycookinesis" duration="1" voltage="1" setvalue="true" />
+    </Effect>
+    <!-- Somehow makes you sleepy if around knives for too long? -->
+    <!-- <PeriodicEffect mininterval="30" maxinterval="60">
+      <StatusEffect target="Character,NearbyItems" duration="10" range="160" >
+        <Conditional hastag="controlledbypsycookinesis" />    
+        <Affliction identifier="he-exhaustedsleep" amount="1.2" />
+      </StatusEffect>
+    </PeriodicEffect> -->
+    <!-- TODO: psycookinesisbuff icon -->
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,6" sheetelementsize="128,128" color="155,40,175,255" origin="0,0" />
+  </Affliction>
+  
 </Override>
 </Afflictions>

@@ -671,6 +671,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-shortorderchef>Cooking ‖color:gui.orange‖Fast-Food‖end‖ has a [chance]% chance to cook a second one for free.\nAfter cooking fast-food, you gain [amount]% physical damage resistance and cannot be ‖color:gui.orange‖unconscious‖end‖ for 10 seconds.</talentdescription.he-shortorderchef>
 <afflictionname.he-shortorderflow>Short Order</afflictionname.he-shortorderflow>
 <afflictiondescription.he-shortorderflow>Must. Keep. Cooking.</afflictiondescription.he-shortorderflow>
+<talentname.he-psycookinesis>Psycookinesis</talentname.he-psycookinesis><!--Patch 20-->
+<talentdescription.he-psycookinesis>Being ‖color:gui.orange‖delirious‖end‖ allows you to use the ‖color:gui.orange‖Cutting Board‖end‖... with the power of your mind!</talentdescription.he-psycookinesis><!--Patch 20-->
+<afflictionname.he-psycookinesisbuff>Psycookinesis</afflictionname.he-psycookinesisbuff>
+<afflictiondescription.he-psycookinesisbuff>Control the knife with your thoughts!</afflictiondescription.he-psycookinesisbuff>
 <!-- Afflictions -->
 <afflictionname.hunger>Hunger</afflictionname.hunger><!--Patch 10-->
 <afflictionname.he-hunger>Hunger</afflictionname.he-hunger>
