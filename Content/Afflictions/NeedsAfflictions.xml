@@ -787,6 +787,7 @@
       <Description
         textidentifier="advancedafflictiondescription.others.he-cannibalism"
         target="OtherCharacter" />
+      <!-- no effect until 20, but still takes a while to disappear -->
       <Effect minstrength="0" maxstrength="20" strengthchange="-0.02" />
       <!-- slowly gain craving, 1 point of cannibalism above 20 gives 2 points of craving total -->
       <Effect minstrength="20" maxstrength="100" strengthchange="-0.01">
@@ -855,7 +856,7 @@
         <!-- when cannibalism is entirely gone, decrease craving -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="1" />
         </StatusEffect>
       </Effect>
       <!-- lose some health, gain some damage/stun resistance, slow, increased melee damage, visual effects appear -->
@@ -878,7 +879,7 @@
         <!-- when cannibalism is entirely gone, decrease craving -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="1" />
         </StatusEffect>
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.2" maxvalue="0.3" />
       </Effect>
@@ -904,7 +905,7 @@
         <!-- when cannibalism is entirely gone, decrease craving -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="1" />
         </StatusEffect>
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.3" maxvalue="0.5" />
       </Effect>
