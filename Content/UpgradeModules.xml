@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<Override>
 <UpgradeModules>
   <!--
   NB. DecorativeSprites are not used in vanilla (currently) but they are available for modders.
@@ -58,3 +59,4 @@
   </UpgradeModule> -->
   
 </UpgradeModules>
+</Override>
