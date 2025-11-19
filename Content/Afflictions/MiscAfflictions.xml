@@ -1225,12 +1225,13 @@
         maxstrength="1" />
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="he-exhaustedsleep" minresistance="1.0" maxresistance="1.0" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1">
         <!-- beds already reduce minor afflictions when laying down (nauseau, drunk, concussion, fatigue)
-        sleep reduces more serious afflictions on top of that -->
+        sleep reduces more serious afflictions on top of that and slows down hunger/thirst by 50% -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction identifier="fatigue" strength="0.75" />
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
+          <ReduceAffliction identifier="he-cannibalism" strength="0.025" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.025" />
           <ReduceAffliction identifier="embarrassment" strength="3" />
           <ReduceAffliction type="damage" strength="0.1" />
           <ReduceAffliction identifier="bloodloss" strength="0.05" />
