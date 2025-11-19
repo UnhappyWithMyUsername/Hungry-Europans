@@ -172,6 +172,11 @@
           <Conditional ontoilet="gt 0" />
           <Affliction identifier="defecating" amount="6" />
         </StatusEffect>
+        <!-- BROKEN hide the inventory when someone is sitting on the toilet but it doesnt seem to revert -->
+        <!-- <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemContainer" canbeselected="false" />
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemContainer" canbeselected="true" delay="0.1" stackable="false" >
+          <Conditional targetitemcomponent="Controller" IsActive="false" />
+        </StatusEffect> -->
       </Controller>
       <Body width="182" height="135" density="16" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachCrowbar" PickingTime="5.0" aimpos="65,-10" attachable="true" AttachesToFloor="true" aimable="true">
