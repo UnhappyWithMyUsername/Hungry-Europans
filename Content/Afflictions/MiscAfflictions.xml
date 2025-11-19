@@ -1224,7 +1224,8 @@
         minstrength="0"
         maxstrength="1" />
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="he-exhaustedsleep" minresistance="1.0" maxresistance="1.0" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1">
-        <!-- beds already reduce some afflictions when laying down, sleep reduces afflictions on top of that -->
+        <!-- beds already reduce minor afflictions when laying down (nauseau, drunk, concussion, fatigue)
+        sleep reduces more serious afflictions on top of that -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction identifier="fatigue" strength="0.75" />
           <ReduceAffliction type="hunger" strength="0.005" />
