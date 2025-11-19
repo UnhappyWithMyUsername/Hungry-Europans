@@ -55,7 +55,7 @@ Low:
 [*] Disabled rawhumanmeat as it is no longer used
 [*] Renamed "Hungry for Human Meat" into "Craving Human Meat" for clarity
 [*] You can no longer get tapeworm when you have worms and vice-versa
-[*] Rebalanced Cannibalism/Craving a bit (along with fixes)
+[*] Rebalanced Cannibalism/Craving. Meals give more cannibalism. Cannibalim goes away faster at lower values. Craving is removed much faster once Cannibalism is gone. Sleeping helps with curing cannibalism a bit.  
 [*] Increased thirst values of water so you don't have to drink as many bottles
 [*] Added alternative Salt recipe so it's harder to run out of salt completely
 [*] Increased MRE eating speed
@@ -68,6 +68,8 @@ Low:
 [*] Cups and glasses will now become dirty over time if you drank from them previously and didn't refill for a while
 [*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
 [*] More glass containers can go inside Liquor crates
+[*] Nerfed Cleaver damage and limb severing chance by about 20%
+[*] Fixed infinite Butchering gain on abyssals
 
 [/List]
 
@@ -85,6 +87,7 @@ Low:
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
 [*] Fixed Soups reducing "Stuffed" affliction
+[*] Fixed Toilets being complicated to detach - they now detach with crowbar using E
 [/List]
 
 
