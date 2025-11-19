@@ -672,9 +672,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictionname.he-shortorderflow>Short Order</afflictionname.he-shortorderflow>
 <afflictiondescription.he-shortorderflow>Must. Keep. Cooking.</afflictiondescription.he-shortorderflow>
 <talentname.he-psycookinesis>Psycookinesis</talentname.he-psycookinesis><!--Patch 20-->
-<talentdescription.he-psycookinesis>Being ‖color:gui.orange‖delirious‖end‖ allows you to use the ‖color:gui.orange‖Cutting Board‖end‖... with the power of your mind!</talentdescription.he-psycookinesis><!--Patch 20-->
-<afflictionname.he-psycookinesisbuff>Psycookinesis</afflictionname.he-psycookinesisbuff>
-<afflictiondescription.he-psycookinesisbuff>Control the knife with your thoughts!</afflictiondescription.he-psycookinesisbuff>
+<talentdescription.he-psycookinesis>Being ‖color:gui.orange‖delirious‖end‖ allows you to use a nearby ‖color:gui.orange‖Cutting Board‖end‖... with the power of your mind!</talentdescription.he-psycookinesis><!--Patch 20-->
+<afflictionname.he-psycookinesisbuff>Psycookinesis</afflictionname.he-psycookinesisbuff><!--Patch 20-->
+<afflictiondescription.he-psycookinesisbuff>Control the knife with your thoughts!</afflictiondescription.he-psycookinesisbuff><!--Patch 20-->
 <!-- Afflictions -->
 <afflictionname.hunger>Hunger</afflictionname.hunger><!--Patch 10-->
 <afflictionname.he-hunger>Hunger</afflictionname.he-hunger>
