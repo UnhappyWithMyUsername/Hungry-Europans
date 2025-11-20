@@ -43,6 +43,7 @@ Low:
 [*] Added "Monster Doner" and "SPAM" to repurpose low-condition meats that cannot be used for cooking
 [*] Added "MushRaptor Sauté"
 [*] Added "Thresher and Bufo Purée"
+[*] Added a new talent for the Chef: Psycookinesis
 [*] Added "Radwurst" which is obtained by cooking a sausage inside the reactor
 [*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
 [*] Empty Glasses can now be crafted at both Fabricator and Bottle Printer
@@ -83,7 +84,7 @@ Low:
 [*] Fixed dying of thirst taking an exceedingly long time
 [*] Fixed some drinks not filling your bladder
 [*] Fixed eating MRE with an empty bottle inside
-[*] Fixed Tea Mix not deleting itself
+[*] Fixed Tea Mix not deleting itself at 0%
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
 [*] Fixed Soups reducing "Stuffed" affliction
