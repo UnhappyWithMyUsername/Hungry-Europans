@@ -88,7 +88,7 @@ Low:
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
 [*] Fixed Soups reducing "Stuffed" affliction
-[*] Fixed Toilets being complicated to detach - they now detach with crowbar using E. PREVIOUSLY PLACED TOILETS NEED TO BE UPDATED MANUALLY; OPEN CONSOLE
+[*] Fixed Toilets being complicated to detach - they now detach with crowbar using E. PREVIOUSLY PLACED TOILETS NEED TO BE UPDATED MANUALLY; OPEN CONSOLE AND TYPE 'triggerevent refreshtoilet'
 [/List]
 
 
