@@ -86,24 +86,6 @@
       </Holdable>
     </Item>
 
-    <Item hideinmenus="true" name="Toilet Flood" identifier="toiletflooditem" category="Hidden" Tags="flood" scale="0.5" impactsoundtag="impact_metal_heavy" hideconditionbar="true">
-      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,1,1" depth="0.556" premultiplyalpha="false" origin="0.5,0.5" />
-      <Body radius="45" density="40" friction="0.95" />
-      <Pump maxflow="60" IsOn="true" flowpercentage="100" currpowerconsumption="0" powerconsumption="0">
-        <Sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600" loop="true" />
-      </Pump>
-      <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnContained" target="This">
-          <Conditional condition="gte 25" targetcontainer="true" />
-          <Remove />
-        </StatusEffect>
-        <StatusEffect type="OnContained" target="Parent">
-          <ParticleEmitter particle="damagebubbles" particlespersecond="15" scalemin="0.5" scalemax="0.75" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="150" velocitymax="250" />
-          <ParticleEmitter particle="toiletwaterleak" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="375" velocitymax="450" particlespersecond="15" copyentityangle="true" />
-        </StatusEffect>
-      </Holdable>
-    </Item>
-
     <Item name="Toilet" identifier="he-toilet" tags="toilet,pipeweakpoint" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false" allowedlinks="valve">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.5" />
       <Price baseprice="580" sold="true">
