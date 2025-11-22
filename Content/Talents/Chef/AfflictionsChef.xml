@@ -130,7 +130,7 @@
         <Affliction identifier="he-exhaustedsleep" amount="1.2" />
       </StatusEffect>
     </PeriodicEffect> -->
-    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,8" sheetelementsize="128,128" color="155,40,175,255" origin="0,0" />
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,7" sheetelementsize="128,128" color="155,40,175,255" origin="0,0" />
   </Affliction>
   
 </Override>

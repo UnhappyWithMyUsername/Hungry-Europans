@@ -1308,7 +1308,7 @@
 
 
     <Talent identifier="he-psycookinesis">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sheetindex="7,4" sheetelementsize="128,128"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-psycookinesis" />
       <AbilityGroupInterval interval="1.0">
         <Abilities>
