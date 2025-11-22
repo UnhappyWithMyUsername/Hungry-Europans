@@ -827,7 +827,8 @@
       maxstrength="100"
       MedicalSkillGain="0.0" 
       showiconthreshold="1000"
-      showinhealthscannerthreshold="1000">
+      showinhealthscannerthreshold="1000"
+      AffectedByAttackMultipliers="False" >
       <Effect minstrength="0" maxstrength="100" strengthchange="0" >
         <!-- Added this SE for debugging to know when a creature hits 100 butchery but it doesnt trigger on dead characters... -->
         <!-- <StatusEffect target="Character" setvalue="true" interval="1">
