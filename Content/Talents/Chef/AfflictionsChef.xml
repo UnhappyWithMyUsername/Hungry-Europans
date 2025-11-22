@@ -72,7 +72,7 @@
       <StatValue stattype="WalkingSpeed" minvalue="0.2" maxvalue="0.2" />
       <StatValue stattype="MeleeAttackMultiplier" minvalue="0.25" maxvalue="0.25" />
     </Effect>
-    <Icon texture="Content/UI/HE-TalentsIcons.png" sheetindex="3,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>    
 
   <Affliction
