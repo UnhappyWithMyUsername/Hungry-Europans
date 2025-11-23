@@ -160,9 +160,9 @@
       <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false" DualWieldReloadTimePenaltyMultiplier="1.75">
         <RequiredSkill identifier="butchery" level="100" />
-        <Attack targetimpulse="2" severlimbsprobability="0.8" itemdamage="10" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="10" />
-          <Affliction identifier="bleeding" strength="20" />
+        <Attack targetimpulse="2" severlimbsprobability="0.6" itemdamage="10" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="8" />
+          <Affliction identifier="bleeding" strength="16" />
           <Affliction identifier="stun" strength="0.2" />
           <StatusEffect type="OnUse" target="UseTarget">
             <Conditional entitytype="eq Character"/>
@@ -199,11 +199,15 @@
           <GiveSkill skillidentifier="butchery" amount="1.05" triggertalents="false" />
           <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="2" volume="2" />
         </StatusEffect>   -->
-        <StatusEffect type="OnFailure" target="This,UseTarget" SetTags="butcherskillgain" setvalue="true">
+        <StatusEffect type="OnFailure" target="This,UseTarget" SetTags="butcherskillgain" setvalue="true" comparison="and">
           <Conditional he-butchered="gt 0" />
+          <Conditional he-butchered="lt 100" />
+          <!-- <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="2" volume="2" /> -->
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" SetTags="butcherskillgain" setvalue="true">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" SetTags="butcherskillgain" setvalue="true" comparison="and">
           <Conditional he-butchered="gt 0" />
+          <Conditional he-butchered="lt 100" />
+          <!-- <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="0.7" volume="2" /> -->
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" SetTags="removeskillgaintag" setvalue="true" comparison="or" disabledeltatime="true" interval="1" stackable="false">
           <Conditional HasTag="butcherskillgain" />
@@ -214,13 +218,13 @@
         Hit corpses to try and get meat
         Passing the skill check spawns meat and adds some "butchered" affliction to the corpse
         Reaching 100 butchered means no more meat can be extracted
-        Butchered amount is proportional to health; more health = more meat. BIG MONSTERS NEED A BIGGER NUMBER
+        Butchered amount is proportional to health; more health = less butchered inflicted = more meat. BIG MONSTERS NEED A BIGGER NUMBER
         "Extra" meat rolls a separate probability and does not add butchered -->
         <!-- TODO: balance the amount of meat from meat cleaver -->
 
         <!--Skillissue
-        If you fail the skill check, adds extra butchered to the corpse, meaning less meat harvested before reaching 100 butchered total-->
-        <StatusEffect type="OnFailure" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
+        If you fail the skill check, adds a flat % of butchered to the corpse, meaning less meat harvested before reaching 100 butchered total-->
+        <StatusEffect type="OnFailure" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="5" />
@@ -410,7 +414,7 @@
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
           <!-- <RequiredItem items="nomeatleft" type="Equipped" msg="itemmsgnomeatleft" /> -->
           <Conditional isdead="true"/>
-          <Conditional he-butchered="eq 100"/>
+          <Conditional he-butchered="gte 100"/>
           <Conditional mass="lt 1000"/>
           <DropContainedItems />
           <RemoveCharacter />

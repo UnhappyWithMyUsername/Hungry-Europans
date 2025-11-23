@@ -29,8 +29,8 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-cannibalism" amount="0.2" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="1.5" />
+          <Affliction identifier="he-cannibalism" amount="2" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="2" />
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.2" />
           <ReduceAffliction type="hunger" amount="2.2" />
@@ -55,8 +55,8 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-cannibalism" amount="0.2" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="1.5" />
+          <Affliction identifier="he-cannibalism" amount="2" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="2" />
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.2" />
           <ReduceAffliction type="hunger" amount="2.2" />
@@ -97,7 +97,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-humanmeatchunk" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-humanmeatchunk" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
@@ -114,7 +114,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-cannibalism" amount="0.2" />
+          <Affliction identifier="he-cannibalism" amount="2" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="2" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
@@ -139,7 +139,7 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-cannibalism" amount="0.2" />
+          <Affliction identifier="he-cannibalism" amount="2" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="2" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />

@@ -43,11 +43,13 @@ Low:
 [List]
 [*] Added Blender and several blender recipes
 [*] Added "Monster Doner" and "SPAM" to repurpose low-condition meats that cannot be used for cooking
-[*] Added "MushRaptor Sauté" 
-[*] Added "Thresher and Bufo Purée" 
+[*] Added "MushRaptor Sauté"
+[*] Added "Thresher and Bufo Purée"
+[*] Added a new talent for the Chef: Psycookinesis
+[*] Added "Radwurst" which is obtained by cooking a sausage inside the reactor
 [*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
 [*] Empty Glasses can now be crafted at both Fabricator and Bottle Printer
-[*] You can now drag & drop an empty glass onto a bottle to fill it with the bottle's content 
+[*] You can now drag & drop an empty glass onto a bottle to fill it with the bottle's content
 [/List]
 
 [b]Changes:[/b] 
@@ -56,7 +58,7 @@ Low:
 [*] Disabled rawhumanmeat as it is no longer used
 [*] Renamed "Hungry for Human Meat" into "Craving Human Meat" for clarity
 [*] You can no longer get tapeworm when you have worms and vice-versa
-[*] Rebalanced Cannibalism/Craving a bit (along with fixes)
+[*] Rebalanced Cannibalism/Craving. Meals give more cannibalism. Cannibalim goes away faster at lower values. Craving is removed much faster once Cannibalism is gone. Sleeping helps with curing cannibalism a bit.  
 [*] Increased thirst values of water so you don't have to drink as many bottles
 [*] Added alternative Salt recipe so it's harder to run out of salt completely
 [*] Increased MRE eating speed
@@ -66,8 +68,11 @@ Low:
 [*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
 [*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
 [*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
+[*] Cups and glasses will now become dirty over time if you drank from them previously and didn't refill for a while
 [*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
 [*] More glass containers can go inside Liquor crates
+[*] Nerfed Cleaver damage and limb severing chance by about 20%
+[*] Fixed infinite Butchering gain on abyssals
 
 [/List]
 
@@ -81,10 +86,11 @@ Low:
 [*] Fixed dying of thirst taking an exceedingly long time
 [*] Fixed some drinks not filling your bladder
 [*] Fixed eating MRE with an empty bottle inside
-[*] Fixed Tea Mix not deleting itself
+[*] Fixed Tea Mix not deleting itself at 0%
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
 [*] Fixed Soups reducing "Stuffed" affliction
+[*] Fixed Toilets being complicated to detach - they now detach with crowbar using E. PREVIOUSLY PLACED TOILETS NEED TO BE UPDATED MANUALLY; OPEN CONSOLE AND TYPE 'triggerevent refreshtoilet'
 [/List]
 
 
@@ -112,11 +118,11 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
-- Mantis/Orange boy meat, basically a lobster/crab, Mantis surimi
-- Mushroom recipes
+- Mantis/Orange boy meat and meals, basically a lobster/crab
+Mantis Surimi, Tempura (fried food)... 
 - More Blender recipes
-- RadWurst, irradiated sausage cooked in reactor
 - More Offal recipes
+- More Mushroom recipes?
 - Cookie jar
 - Cake + Slices
 - Pasta + pasta recipes

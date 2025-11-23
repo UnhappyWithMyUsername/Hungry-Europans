@@ -86,25 +86,7 @@
       </Holdable>
     </Item>
 
-    <Item hideinmenus="true" name="Toilet Flood" identifier="toiletflooditem" category="Hidden" Tags="flood" scale="0.5" impactsoundtag="impact_metal_heavy" hideconditionbar="true">
-      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,1,1" depth="0.556" premultiplyalpha="false" origin="0.5,0.5" />
-      <Body radius="45" density="40" friction="0.95" />
-      <Pump maxflow="60" IsOn="true" flowpercentage="100" currpowerconsumption="0" powerconsumption="0">
-        <Sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600" loop="true" />
-      </Pump>
-      <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnContained" target="This">
-          <Conditional condition="gte 25" targetcontainer="true" />
-          <Remove />
-        </StatusEffect>
-        <StatusEffect type="OnContained" target="Parent">
-          <ParticleEmitter particle="damagebubbles" particlespersecond="15" scalemin="0.5" scalemax="0.75" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="150" velocitymax="250" />
-          <ParticleEmitter particle="toiletwaterleak" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="375" velocitymax="450" particlespersecond="15" copyentityangle="true" />
-        </StatusEffect>
-      </Holdable>
-    </Item>
-
-    <Item name="Toilet" identifier="he-toilet" tags="toilet" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
+    <Item name="Toilet" identifier="he-toilet" tags="toilet,pipeweakpoint" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false" allowedlinks="valve">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.5" />
       <Price baseprice="580" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
@@ -172,10 +154,15 @@
           <Conditional ontoilet="gt 0" />
           <Affliction identifier="defecating" amount="6" />
         </StatusEffect>
+        <!-- BROKEN hide the inventory when someone is sitting on the toilet but it doesnt seem to revert -->
+        <!-- <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemContainer" canbeselected="false" />
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemContainer" canbeselected="true" delay="0.1" stackable="false" >
+          <Conditional targetitemcomponent="Controller" IsActive="false" />
+        </StatusEffect> -->
       </Controller>
       <Body width="182" height="135" density="16" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Aim" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" AttachesToFloor="true" aimable="true">
-        <RequiredItem items="wrench" type="Equipped" />
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachCrowbar" PickingTime="5.0" aimpos="65,-10" attachable="true" AttachesToFloor="true" aimable="true">
+        <RequiredItem items="crowbar" type="Equipped" />
         <StatusEffect target="This" type="Always">
           <Conditional attached="false" targetitemcomponentname="Holdable" />
           <DropContainedItems />
@@ -184,18 +171,21 @@
         <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <ItemContainer selectkey="Action" capacity="0" itemsperrow="0" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <RequiredItem items="crowbar" type="Equipped" requireempty="true" ignoreineditor="true" />
         <GuiFrame relativesize="0.25,0.15" absoluteoffset="0,0.15" anchor="BottomCenter" style="ItemUI" />
         <Containable items="none" />
         <SubContainer capacity="5" itemsperrow="5">
           <Containable items="smallitem,mediumitem" />
         </SubContainer>
       </ItemContainer>
-      <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
-        <Containable items="toiletflooditem" />
-        <StatusEffect type="OnBroken" target="This">
-          <SpawnItem identifier="toiletflooditem" spawnposition="ThisInventory" count="1" spawnifinventoryfull="false" />
-        </StatusEffect>
-      </ItemContainer>
+      <Pump updatewhenbroken="true" canbeselected="false" maxflow="60" flowpercentage="100" cancauselethalpressure="false" VulnerableToEMP="false">
+        <IsActiveConditional condition="lt 25"/>
+        <IsActiveConditional targetitemcomponent="Pump" IsHullFull="false"/>
+        <Sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600" loop="true" />
+        <PumpInEmitter particle="damagebubbles" particlespersecond="15" scalemin="0.5" scalemax="0.75" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="150" velocitymax="250"/>
+        <!-- TODO: use a proper angle for toilet leak instead of 180 when barodevs fix the flipping issue https://github.com/FakeFishGames/Barotrauma/discussions/16706 -->
+        <PumpInEmitter position="90,-40" particle="toiletwaterleak" anglemin="180" anglemax="180" velocitymin="375" velocitymax="450" particlespersecond="15" />  
+      </Pump>
       <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.flushtoilet">
@@ -258,7 +248,7 @@
       </Repairable>
     </Item>
 
-    <Item name="Toilet" nameidentifier="he-toilet" descriptionidentifier="he-outposttoilet" identifier="he-outposttoilet" tags="toilet" description="Variant of the toilet to be used on outpost modules that can't be picked up and moved by the player." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
+    <Item name="Toilet" identifier="he-outposttoilet"  nameidentifier="he-toilet" descriptionidentifier="he-outposttoilet" tags="toilet,pipeweakpoint" description="Variant of the toilet to be used on outpost modules that can't be picked up and moved by the player." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/ToiletOutpost.png" sourcerect="0,12,183,154" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
       <Controller UserPos="-20,0" direction="Left" hidehud="false" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="false" canbeselected="true" selectkey="Select" drawuserbehind="false">
@@ -322,12 +312,14 @@
           <Containable items="smallitem,mediumitem" />
         </SubContainer>
       </ItemContainer>
-      <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
-        <Containable items="toiletflooditem" />
-        <StatusEffect type="OnBroken" target="This">
-          <SpawnItem identifier="toiletflooditem" spawnposition="ThisInventory" count="1" spawnifinventoryfull="false" />
-        </StatusEffect>
-      </ItemContainer>
+      <Pump updatewhenbroken="true" canbeselected="false" maxflow="60" flowpercentage="100" cancauselethalpressure="false" VulnerableToEMP="false">
+        <IsActiveConditional condition="lt 25"/>
+        <IsActiveConditional targetitemcomponent="Pump" IsHullFull="false"/>
+        <Sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600" loop="true" />
+        <PumpInEmitter particle="damagebubbles" particlespersecond="15" scalemin="0.5" scalemax="0.75" anglemin="60" anglemax="75" distancemin="20" distancemax="20" velocitymin="150" velocitymax="250"/>
+        <!-- TODO: use a proper angle for toilet leak instead of 180 when barodevs fix the flipping issue https://github.com/FakeFishGames/Barotrauma/discussions/16706 -->
+        <PumpInEmitter position="90,-40" particle="toiletwaterleak" anglemin="180" anglemax="180" velocitymin="375" velocitymax="450" particlespersecond="15" />  
+      </Pump>
       <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.flushtoilet">

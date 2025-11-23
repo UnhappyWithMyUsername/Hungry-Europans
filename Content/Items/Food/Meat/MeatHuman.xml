@@ -21,12 +21,12 @@
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-5.0"/>
         <!-- increase cannibalism, reduce craving for human meat -->
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Affliction identifier="he-cannibalism" amount="1.5" />
+          <Affliction identifier="he-cannibalism" amount="1.2" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
@@ -46,7 +46,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <!-- Disabled for now, cannot be used in recipes as we don't want human meat to be used as an ingredient for items that do not give cannibalism -->
+    <!-- DISABLED for now, cannot be used in recipes as we don't want human meat to be used as an ingredient for items that do not give cannibalism -->
     <Item name="Raw Human Meat" identifier="he-rawhumanmeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,477,51,17" depth="0.6" origin="0.5,0.5" />
       <Body width="51" radius="8" density="15" />
@@ -70,11 +70,11 @@
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
-          <Affliction identifier="he-stuffed" amount="0.5" />
-          <Affliction identifier="he-cannibalism" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <Affliction identifier="he-cannibalism" amount="1" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />

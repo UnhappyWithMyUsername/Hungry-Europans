@@ -22,5 +22,17 @@
     <MoneyAction targettag="moneyrecipient" amount="100" />
     <ClearTagAction tag="moneyrecipient" />
   </ScriptedEvent>
+  
+  <ScriptedEvent identifier="refreshtoilet">
+      <TagAction criteria="itemidentifier:he-toilet" tag="targettoilet" submarinetype="player" />
+    <StatusEffectAction targettag="targettoilet">
+      <StatusEffect target="This" disabledeltatime="true">
+        <SpawnItem identifier="he-toilet" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+      </StatusEffect>
+      <StatusEffect target="This" delay="0.1">
+        <Remove />
+      </StatusEffect>
+    </StatusEffectAction>
+  </ScriptedEvent>
   </EventPrefabs>
 </Randomevents>
