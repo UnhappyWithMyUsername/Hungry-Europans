@@ -34,7 +34,7 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]25/10/2025[/hr]
+[hr]23/11/2025[/hr]
 
 
 [b]Additions:[/b]
@@ -85,7 +85,7 @@ Low:
 [*] Fixed some drinks not filling your bladder
 [*] Fixed eating MRE with an empty bottle inside
 [*] Fixed Tea Mix not deleting itself at 0%
-[*] Fixed/Rebalanced Embarrassment to work properly above 100 
+[*] Fixed/Rebalanced Embarrassment effects to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
 [*] Fixed Soups reducing "Stuffed" affliction
 [*] Fixed infinite Butchering gain on abyssals
