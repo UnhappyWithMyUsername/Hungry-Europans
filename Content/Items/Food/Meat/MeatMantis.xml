@@ -17,7 +17,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="9" sold="true" />
       </Price>
       <Deconstruct time="10" requireddeconstructor="deconstructor">
         <!-- <Item identifier="alienblood" amount="0" /> -->
@@ -52,13 +52,18 @@
     </Item>
 
 
-    <Item name="mantis Meat Chunk" identifier="he-boiledmantismeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Boiled Mantis Meat" identifier="he-boiledmantismeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="334,392,178,53" depth="0.6" origin="0.5,0.5" />
       <Body width="178" radius="26" density="15" />
+      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="true" hideifnorecipe="true" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem identifier="he-mantismeatchunk" amount="1" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.1"/>
+      </Fabricate>
       <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="true" hideifnorecipe="true" amount="3">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />

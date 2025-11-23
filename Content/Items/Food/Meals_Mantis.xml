@@ -5,6 +5,7 @@
     <!--Mantis-->
     
     
+    <!-- Mantis Tempura (raw)  -->
     <Item name="Raw Mantis Tempura" identifier="he-he-mantistempuraraw" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
@@ -86,7 +87,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <!-- Thresher and Bufo Purée - reduce psychosis and paralysis, gives hallucinating -->
+    <!-- Mantis Thermidor -->
     <Item HideInMenus="false" name="" identifier="he-mantisthermidor" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -117,8 +118,8 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="he-calciumrich" amount="30.0" />
-          <Affliction identifier="he-stuffed" amount="2.5" />
-          <ReduceAffliction type="hunger" amount="2.5" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
