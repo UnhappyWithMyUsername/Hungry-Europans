@@ -334,8 +334,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Conditional speciesname="neq bonethresher" />
-          <Affliction identifier="he-butchered" strength="75" />
+          <Affliction identifier="he-butchered" strength="110" />
           <SpawnItem identifier="he-threshermeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--watcher
