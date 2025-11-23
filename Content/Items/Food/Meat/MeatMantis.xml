@@ -62,12 +62,12 @@
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="334,392,178,53" depth="0.6" origin="0.5,0.5" />
       <Body width="178" radius="26" density="15" />
-      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="true" hideifnorecipe="true" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="80" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-mantismeatchunk" amount="1" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="true" hideifnorecipe="true" amount="3">
+      <Fabricate suitablefabricators="stove" requiredtime="100" amount="3">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.3"/>

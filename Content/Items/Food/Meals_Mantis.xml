@@ -14,7 +14,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,71,37,20" depth="0.525" origin="0.5,0.05"  />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-flour" mincondition="0.3" UseCondition="true" />
         <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" />
       </Fabricate>
