@@ -499,7 +499,7 @@
     <Item name="Sink" identifier="sink" tags="kitchen,sink,sink_installed" category="Machines" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the lower half of the sink behind objects -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.798" origin="0.5,-0.45" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
       <Body width="80" height="164" density="15" bodytype="static" />
       <!--<Price baseprice="250" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />

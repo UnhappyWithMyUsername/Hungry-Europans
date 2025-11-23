@@ -325,8 +325,8 @@
     </Item>
     
     <Item name="Kitchen Counter" identifier="he-kitchencounter" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" GrabWhenSelected="true" waterproof="false" isshootable="true" scale="0.5">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.797" sourcerect="0,0,507,299" origin="0.5,0.5" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="390,687,493,185" depth="0.799" scale="1" offset="0,-45" origin="0.5,0.5"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,299" origin="0.5,0.5" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="390,687,493,185" depth="0.81" scale="1" offset="0,-45" origin="0.5,0.5"/>
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.796" origin="0.049,-0.022">
         <Conditional HasStatusTag="opened" />
       </DecorativeSprite>
@@ -1796,14 +1796,10 @@
     
     <!-- Empty hardpoint for ULD/JB -->
     <Item name="" identifier="emptylargedevice" nameidentifier="loosepanel" descriptionidentifier="loosepanel" tags="hidden,utilitypoint" scale="0.7" allowedupgrades="utilitypoint" >
-      <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.84" origin="0.5,0.5" canflipx="false"/>
-      <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Containers/containers.png" sourcerect="0,0,1,1" depth="0.84" origin="0.5,0.5" canflipx="false"/>
+      <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.35" />
       <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
       <trigger x="25" y="-25" width="60" height="60" />
-      <ItemContainer capacity="3" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.27,0.2" anchor="Center" style="ItemUI" />
-        <Containable items="smallitem,mediumitem" />
-      </ItemContainer>
       <SwappableItem canbebought="false" origin="0,0" swapidentifier="largedevice">
         <SchematicSprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" scale="0.25" />
       </SwappableItem>
