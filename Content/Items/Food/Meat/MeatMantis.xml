@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+  
+    <!--mantis-->
+    <Item name="mantis Meat Chunk" identifier="he-mantismeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="334,392,178,53" depth="0.6" origin="0.5,0.5" />
+      <Body width="178" radius="26" density="15" />
+      <Price baseprice="280" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+        <Price storeidentifier="merchantoutpost"/>
+        <Price storeidentifier="merchantcity"/>
+        <Price storeidentifier="merchantresearch"/>
+        <Price storeidentifier="merchantmilitary"/>
+        <Price storeidentifier="merchantmine"/>
+        <Price storeidentifier="merchantmedical"/>
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
+      </Price>
+      <Deconstruct time="10" requireddeconstructor="deconstructor">
+        <!-- <Item identifier="alienblood" amount="0" /> -->
+      </Deconstruct>
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
+        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
+          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
+          <Conditional timeframe="gte 50" />
+        </StatusEffect>
+      </GreaterComponent>
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="2" />
+          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
+          <Affliction identifier="nausea" amount="4" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00053" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00053" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="True" />
+    </Item>
+
+
+    <Item name="mantis Meat Chunk" identifier="he-boiledmantismeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="334,392,178,53" depth="0.6" origin="0.5,0.5" />
+      <Body width="178" radius="26" density="15" />
+      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="true" hideifnorecipe="true" amount="3">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem identifier="he-mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.3"/>
+      </Fabricate>
+      <Deconstruct time="10" requireddeconstructor="deconstructor">
+        <!-- <Item identifier="alienblood" amount="0" /> -->
+      </Deconstruct>
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="2" />
+          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
+          <Affliction identifier="nausea" amount="4" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00053" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00053" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="True" />
+    </Item>
+
+  </Items>
+</Override>
