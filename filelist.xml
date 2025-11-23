@@ -40,6 +40,8 @@
   <Item file="%ModDir%/Content/Items/Food/Meat/MeatSpineling.xml" />
   <Item file="%ModDir%/Content/Items/Food/Meat/MeatThresher.xml" />
   <Item file="%ModDir%/Content/Items/Food/Meat/MeatWatcher.xml" />
+  <Item file="%ModDir%/Content/Items/Food/Meat/MeatMantis.xml" />
+  <Item file="%ModDir%/Content/Items/Food/Meals_Mantis.xml" />
   <Item file="%ModDir%/Content/Items/Gardening/GardeningTools.xml" />
   <Item file="%ModDir%/Content/Items/Gardening/GrowablePlants.xml" />
   <Item file="%ModDir%/Content/Items/Gardening/PlantProduce.xml" />
