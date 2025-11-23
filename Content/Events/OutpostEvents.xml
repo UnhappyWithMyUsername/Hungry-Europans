@@ -94,6 +94,17 @@
       <!--end the event-->
       <Label name="end" />
     </ScriptedEvent>    
+    
+    
+
+    <ScriptedEvent identifier="disableabandonedcafeterias">
+      <WaitAction time="5" />
+      <TagAction criteria="itemidentifier:op_cafeteriawindow" tag="disablecafeteria" submarinetype="Outpost" />
+      <StatusEffectAction targettag="disablecafeteria" >
+        <StatusEffect target="Character" noninteractable="true" setvalue="true" />
+      </StatusEffectAction>
+    </ScriptedEvent>   
+    
         
     <ScriptedEvent identifier="manualenforceinfo">
       <TagAction criteria="player" tag="player" />
@@ -164,6 +175,11 @@
   <!--<EventSet identifier="he-loadalways" leveltype="Any" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="he-config" commonness="100" probability="1.0"/>
   </EventSet>-->
+    <EventSet identifier="abandonedoutpost" leveltype="outpost" locationtype="abandonedoutpost" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" selectalways="true">
+      <ScriptedEvent identifier="disableabandonedcafeterias" commonness="100" />
+    </EventSet>
+  
+  
   <!--All DE Locations:
       locationtype="outpost,city,research,military,mine,colony,settlement,construction,camp,base,blockade,survey,study,lab,clinic,hospital,hydroponics,factory,shipyard,huskchurch,sinkingcircus,PirateOutpost"
       
