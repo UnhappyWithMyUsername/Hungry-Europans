@@ -69,8 +69,8 @@ Low:
 [*] Cups and glasses will now become dirty over time if you drank from them previously and didn't refill for a while
 [*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
 [*] More glass containers can go inside Liquor crates
-[*] Nerfed Cleaver damage and limb severing chance by about 20%
-[*] Fixed infinite Butchering gain on abyssals
+[*] Nerfed Cleaver damage and limb severing chance by about 20% (it was too strong)
+[*] Replacement panel for ULD is now hidden to avoid sprite depth conflicts
 
 [/List]
 
@@ -88,6 +88,7 @@ Low:
 [*] Fixed/Rebalanced Embarrassment to work properly above 100 
 [*] Fixed Blender and Coffee Machine taking damage in water
 [*] Fixed Soups reducing "Stuffed" affliction
+[*] Fixed infinite Butchering gain on abyssals
 [*] Fixed Toilets being complicated to detach - they now detach with crowbar using E. PREVIOUSLY PLACED TOILETS NEED TO BE UPDATED MANUALLY; OPEN CONSOLE AND TYPE 'triggerevent refreshtoilet'
 [/List]
 
