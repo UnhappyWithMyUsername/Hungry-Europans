@@ -244,7 +244,7 @@
         <StatValue stattype="DebuffDurationMultiplier" minvalue="0" maxvalue="0.25" />
         <StatusEffect target="Character" >
           <Conditional hunger="gte 100" />
-          <Affliction identifier="he-starvation" strength="0.5" />
+          <Affliction identifier="he-starvation" strength="2" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
@@ -358,7 +358,7 @@
         maxspeedmultiplier="0.5">
         <StatusEffect target="Character" >
           <Conditional thirst="gte 100" />
-          <Affliction identifier="he-dieofthirst" strength="0.5" />
+          <Affliction identifier="he-dieofthirst" strength="2" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
