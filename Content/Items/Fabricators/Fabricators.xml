@@ -485,6 +485,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.775" sourcerect="1716,225,107,203" origin="0.5,0.5" />
       <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.777" sourcerect="1716,225,107,203" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
         <AnimationConditional IsActive="True" targetitemcomponent="LightComponent" />
+        <AnimationConditional Voltage="gt 0" targetitemcomponent="LightComponent" />
         <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
       </DecorativeSprite>
       <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
@@ -508,7 +509,7 @@
         <RequiredItem identifier="fpgacircuit" amount="3"/>
         <RequiredItem identifier="plastic" amount="6"/>
       </Fabricate>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchencounter,refillstation" >
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-40,35" handle2="50,35" holdangle="45" aimangle="20" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchencounter,refillstation" >
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
