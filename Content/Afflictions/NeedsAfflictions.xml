@@ -155,7 +155,8 @@
       showinhealthscannerthreshold="0"
       maxstrength="100"
       healableinmedicalclinic="false"
-      MedicalSkillGain="0.0">
+      MedicalSkillGain="0.0"
+      VitalityLossRequiredForTreatment="False" >
       <Description
         textidentifier="afflictiondescription.he-hunger.self"
         target="Self"
@@ -201,7 +202,7 @@
       <Effect minstrength="60" maxstrength="80" minresistance="1.0" maxresistance="1.0" resistancefor="he-stuffed"
         dialogflag="hungrymedium"
         minvitalitydecrease="0"
-        maxvitalitydecrease="25"
+        maxvitalitydecrease="0"
         minskillmultiplier="0.8"
         maxskillmultiplier="0.6"
         minscreendistort="0"
@@ -220,8 +221,8 @@
       <!-- Hunger starts to get lethal -->
       <Effect minstrength="80" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="he-stuffed"
         dialogflag="hungryheavy"
-        minvitalitydecrease="25"
-        maxvitalitydecrease="25"
+        minvitalitydecrease="0"
+        maxvitalitydecrease="0"
         minskillmultiplier="0.6"
         maxskillmultiplier="0.2"
         minscreendistort="0"
@@ -287,7 +288,8 @@
       treatmentthreshold="20"
       maxstrength="100"
       healableinmedicalclinic="false"
-      MedicalSkillGain="0.0">
+      MedicalSkillGain="0.0"
+      VitalityLossRequiredForTreatment="False">
       <Description
         textidentifier="afflictiondescription.he-thirst.self"
         target="Self"
@@ -322,13 +324,13 @@
       <!-- Thirst decreases vitality and speed slightly -->
       <Effect minstrength="50" maxstrength="65" strengthchange="0" 
         minvitalitydecrease="0"
-        maxvitalitydecrease="15"
+        maxvitalitydecrease="0"
         minskillmultiplier="1.0"
         maxskillmultiplier="0.8" />
       <Effect minstrength="65" maxstrength="80"
         dialogflag="thirstymedium"
-        minvitalitydecrease="15"
-        maxvitalitydecrease="25"
+        minvitalitydecrease="0"
+        maxvitalitydecrease="0"
         minskillmultiplier="0.8"
         maxskillmultiplier="0.6"
         minscreendistort="0"
@@ -341,8 +343,8 @@
       <!-- Thirst starts to get lethal -->
       <Effect minstrength="80" maxstrength="100"
         dialogflag="thirstyheavy"
-        minvitalitydecrease="25"
-        maxvitalitydecrease="25"
+        minvitalitydecrease="0"
+        maxvitalitydecrease="0"
         minskillmultiplier="0.6"
         maxskillmultiplier="0.2"
         minscreendistort="0"
