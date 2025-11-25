@@ -39,57 +39,22 @@ Low:
 
 [b]Additions:[/b]
 [List]
-[*] Added Blender and several blender recipes
-[*] Added "Monster Doner" and "SPAM" to repurpose low-condition meats that cannot be used for cooking
-[*] Added "MushRaptor Sauté"
-[*] Added "Thresher and Bufo Purée"
-[*] Added a new talent for the Chef: Psycookinesis
-[*] Added "Radwurst" which is obtained by cooking a sausage inside the reactor (does not work in vanilla yet)
-[*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
-[*] Empty Glasses can now be crafted at both Fabricator and Bottle Printer
-[*] You can now drag & drop an empty glass onto a bottle to fill it with the bottle's content
+[*] Nothing :(
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Human meat can no longer be used for generic food (burgers, hotdogs...). Consuming human meat should always result in gaining "Cannibalism" for balance purposes
-[*] Disabled rawhumanmeat as it is no longer used
-[*] Renamed "Hungry for Human Meat" into "Craving Human Meat" for clarity
-[*] Rebalanced Cannibalism/Craving. Meals give more cannibalism. Cannibalim goes away faster at lower values. Craving is removed much faster once Cannibalism is gone. Sleeping helps with curing cannibalism a bit.  
-[*] You can no longer get tapeworm when you have worms and vice-versa
-[*] Increased thirst values of water so you don't have to drink as many bottles
-[*] Added alternative Salt recipe so it's harder to run out of salt completely
-[*] Increased MRE eating speed
-[*] Added inventory icons for forks/spoons
-[*] Soups are served by dragging a bowl inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
-[*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
-[*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
-[*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
-[*] Cups and glasses will now become dirty over time if you drank from them previously and didn't refill for a while
-[*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
-[*] More glass containers can go inside Liquor crates
-[*] Nerfed Cleaver damage and limb severing chance by about 20% (it was too strong)
-[*] Replacement panel for ULD is now hidden to avoid sprite depth conflicts
-[*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
+[*] Cafeterias are disabled in abandoned outposts
+[*] Hunger and Thirst no longer cause vitality loss to prevent medical skill gain.
+[*] Starvation and Dying of thirst builds up much faster
+[*] Increased the speed of eating some foods (burgers, hotdogs, fries, poutine...)
 
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed preplaced submarine kitchen items falling on the floor
-[*] Fixed unwired pumps in Abyss Scout submarine
-[*] Fixed Tapeworm and Craving Human Meat both giving hunger without Hungry Europan enabled
-[*] Fixed Worm/Tapeworm infection chance being way too high by default
-[*] Fixed some human foods increasing Craving instead of reducing it
-[*] Fixed dying of thirst taking an exceedingly long time
-[*] Fixed some drinks not filling your bladder
-[*] Fixed eating MRE with an empty bottle inside
-[*] Fixed Tea Mix not deleting itself at 0%
-[*] Fixed/Rebalanced Embarrassment effects to work properly above 100 
-[*] Fixed Blender and Coffee Machine taking damage in water
-[*] Fixed Soups reducing "Stuffed" affliction
-[*] Fixed infinite Butchering gain on abyssals
-[*] Fixed Toilets being complicated to detach - they now detach with crowbar using E. PREVIOUSLY PLACED TOILETS NEED TO BE UPDATED MANUALLY; OPEN CONSOLE AND TYPE 'triggerevent refreshtoilet'
+[*] Fixed Dishwasher not appearing in shops and fabricator
+[*] Fixed Meat Cleaver not working on Bone threshers
 [/List]
 
 
