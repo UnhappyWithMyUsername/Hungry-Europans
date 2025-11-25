@@ -494,6 +494,20 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1608,225,107,203" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.776" sourcerect="1500,225,107,203" origin="0.5,0.5" maxcondition="0" />
       <Body width="101" height="197" density="30" />
+      <Price baseprice="850" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.25" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="1"/>
+        <Item identifier="plastic" amount="1"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem identifier="steel" amount="4"/>
+        <RequiredItem identifier="fpgacircuit" amount="3"/>
+        <RequiredItem identifier="plastic" amount="6"/>
+      </Fabricate>
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchencounter,refillstation" >
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
