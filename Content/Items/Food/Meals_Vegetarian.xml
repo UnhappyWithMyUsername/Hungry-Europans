@@ -190,7 +190,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
-        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0.01" />
+        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.01"/>
       </Fabricate>
