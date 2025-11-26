@@ -12,7 +12,7 @@
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
                 <Affliction identifier="hunger" strength="0.01"/>
-                <Affliction identifier="hungerfoodbuffresistance" strength="0.01"/>
+                <!-- <Affliction identifier="hungerfoodbuffresistance" strength="0.01"/> -->
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
