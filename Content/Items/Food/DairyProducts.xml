@@ -916,5 +916,90 @@
       </ItemContainer>
     </Item>
 
+
+    <!-- Cookie Jar prototype - should it be eaten from the jar, or spawn cookies? -->
+    <!-- TODO: sprites -->
+    <Item hideinmenus="false" name="Cookie Jar" identifier="he-cookiejar" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Jars.png" sourcerect="141,0,42,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Jars.png" sourcerect="141,0,42,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/Jars.png" sourcerect="141,0,42,67" depth="0.525" origin="0.5,0.84"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/Jars.png" sourcerect="141,67,42,67" depth="0.6" maxcondition="99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="173,67,42,67" depth="0.599" maxcondition="0" />
+      <!-- <Fabricate suitablefabricators="oven" requiredtime="180" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="35" />
+        <RequiredItem identifier="he-dough" amount="1" />
+        <RequiredItem identifier="he-chocolatemix" amount="1" UseCondition="True" MinCondition="0.40" />
+        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
+        <RequiredItem identifier="he-emptyjar" amount="1"/>
+      </Fabricate> -->
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="42" height="67" density="12" />
+      <SuitableTreatment type="hunger" suitability="20" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional hunger="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-sugarrich" amount="35.0" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
+          <Affliction identifier="ate_sweet" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held -->
+        <!-- -Condition -->
+        
+        <!-- Pop open the Jar, make sure condition conditionals work -->
+        <StatusEffect type="OnUse" target="This" Condition="-0.1" disabledeltatime="true" oneshot="true" offset="0,20">
+          <Conditional Condition="gte 10" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" frequencymultiplier="0.5"/>
+          <ParticleEmitter particle="jarlid" particleamount="1" scalemin="0.5" scalemax="0.5" distancemin="0" distancemax="0" anglemin="90" anglemax="90" velocitymin="20" velocitymax="50" copyentityangle="true" colormultiplier="255,255,255,255" />
+        </StatusEffect>        
+        
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 10" />
+        </StatusEffect>
+        <!-- eating fries "animation" -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 10" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 10" />
+        </StatusEffect>
+        <!-- health effects -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 10" />
+          <Affliction identifier="he-sugarrich" amount="35.0" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
+          <Affliction identifier="ate_sweet" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="0.3" disabledeltatime="true" oneshot="true">
+          <Remove />
+          <SpawnItem identifier="he-emptyjar" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
   </Items>
 </Override>
