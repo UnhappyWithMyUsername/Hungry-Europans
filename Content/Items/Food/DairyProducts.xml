@@ -770,7 +770,7 @@
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.2"/>
-        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" />
+        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0.01" />
       </Fabricate>
       <Deconstruct time="1" />
       <Body radius="12" height="55" density="7" />
