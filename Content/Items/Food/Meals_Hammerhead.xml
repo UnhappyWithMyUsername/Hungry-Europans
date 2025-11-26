@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <!-- MEAT -->
     <!--Hammerhead-->
+    
+    <!-- Hammer and omelette -->
     <Item hideinmenus="false" name="Roast" identifier="he-cookedhammerheadroast" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,roast,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -12,7 +13,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
