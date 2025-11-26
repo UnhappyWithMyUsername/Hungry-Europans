@@ -730,8 +730,8 @@
     <Item name="Sea Weed Strip" identifier="he-seaweedstrip" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Sea weed pressed and sliced. Let it dry into Nori." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,207,47,13" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="1" outcondition="0.0">
-        <RequiredSkill identifier="cooking" level="40" />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" outcondition="0.0">
+        <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-seaweed" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
