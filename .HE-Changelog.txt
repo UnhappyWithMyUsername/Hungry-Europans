@@ -48,6 +48,8 @@ Low:
 [*] Hunger and Thirst no longer cause vitality loss to prevent medical skill gain.
 [*] Starvation and Dying of thirst builds up much faster
 [*] Increased the speed of eating some foods (burgers, hotdogs, fries, poutine...)
+[*] Make egg recipes accept partially damaged eggs
+[*] Give better tags to tableware so bots can pick it up and store it
 
 [/List]
 
@@ -55,6 +57,8 @@ Low:
 [List]
 [*] Fixed Dishwasher not appearing in shops and fabricator
 [*] Fixed Meat Cleaver not working on Bone threshers
+[*] Fixed bowls/plates breaking too easily (especially in cafeteria cart)
+[*] Fixed getting less food buffs than you should if you are hungry
 [/List]
 
 
