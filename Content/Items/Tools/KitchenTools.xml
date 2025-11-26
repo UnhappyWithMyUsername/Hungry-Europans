@@ -341,7 +341,7 @@
         <!--Mantis
         regular meat on all mantises above 10 mass-->
         <!-- <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
-          <Conditional group="mantis" />
+          <Conditional group="mantisoid" />
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
@@ -413,7 +413,7 @@
           <Conditional group="neq watcher" />
           <Conditional group="neq moloch" />
           <Conditional group="neq abyss" />
-          <Conditional group="neq mantis" />
+          <Conditional group="neq mantisoid" />
           <Affliction identifier="he-butchered" strength="200" />
           <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
