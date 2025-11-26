@@ -296,8 +296,8 @@
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
           <Conditional speciesname="eq hammerheadspawn" />
           <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="100" />
+          <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
+          <RemoveCharacter />
           <SpawnItem identifier="he-hammerheadspawnmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--human
