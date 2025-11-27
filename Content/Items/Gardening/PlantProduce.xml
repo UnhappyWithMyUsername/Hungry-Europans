@@ -300,7 +300,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3,monsterfood" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
+  <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3,monsterfood" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Price baseprice="47" >
@@ -312,7 +312,7 @@
     </Deconstruct>
     <Throwable characterusable="True" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" aimable="false" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnNotContained" target="this" tags="notcontained" duration="0.1" CheckConditionalAlways="true" />
-      <StatusEffect type="InWater" target="This" Scale="0.05">
+      <StatusEffect type="InWater" target="This" Scale="0.03">
         <Conditional HasStatusTag="eq notcontained" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
@@ -645,7 +645,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,waterreactivesize,petfood1,petfood2,petfood3,monsterfood" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,waterreactivesize,petfood1,petfood2,petfood3,monsterfood" cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="92,0,45,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Deconstruct time="7">
@@ -653,7 +653,7 @@
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnNotContained" target="this" tags="notcontained" duration="0.1" CheckConditionalAlways="true" />
-      <StatusEffect type="InWater" target="This" Scale="0.05">
+      <StatusEffect type="InWater" target="This" Scale="0.03">
         <Conditional HasStatusTag="eq notcontained" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
