@@ -79,7 +79,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="vegetarian">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem identifier="he-breadslices" amount="1"/>
         <RequiredItem identifier="he-jambubbleberry" UseCondition="True" MinCondition="0.1"/>
@@ -133,7 +133,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="vegetarian">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem identifier="he-breadslices" amount="1"/>
         <RequiredItem identifier="he-jampomegrenade" UseCondition="True" MinCondition="0.1"/>
