@@ -905,7 +905,7 @@
         minskillmultiplier="1"
         maxskillmultiplier="0.8"
         MinAfflictionOverlayAlphaMultiplier="0.1"
-        MaxAfflictionOverlayAlphaMultiplier="0.1">
+        MaxAfflictionOverlayAlphaMultiplier="0.2">
         <!-- when cannibalism is entirely gone, decrease craving -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
@@ -917,13 +917,11 @@
       <Effect minstrength="90" maxstrength="100"
         minvitalitydecrease="20"
         maxvitalitydecrease="25"
-        minscreendistort="0.0"
-        maxscreendistort="3.0"
         strengthchange="0.05"
         minchromaticaberration="5.0"
         maxchromaticaberration="10.0"
-        minradialdistort="2.0"
-        maxradialdistort="5.0"
+        minradialdistort="0.5"
+        maxradialdistort="0.5"
         dialogflag="HungryForHumanMeatHigh"
         minfacetint="255,255,255,100"
         maxfacetint="255,255,255,150"
@@ -934,8 +932,8 @@
         maxresistance="0.3"
         minskillmultiplier="0.8"
         maxskillmultiplier="0.5"
-        MinAfflictionOverlayAlphaMultiplier="1.0"
-        MaxAfflictionOverlayAlphaMultiplier="1.0">
+        MinAfflictionOverlayAlphaMultiplier="0.2"
+        MaxAfflictionOverlayAlphaMultiplier="0.5">
         <!-- increase hunger (if hunger enabled) -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional hunger="gt 0" />
