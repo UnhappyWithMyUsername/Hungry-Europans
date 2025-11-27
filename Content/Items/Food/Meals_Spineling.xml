@@ -67,13 +67,13 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" depth="0.525" origin="0.5,0.65" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" amount="1" >
+      <!-- <Fabricate suitablefabricators="cuttingboard" requiredtime="16" amount="1" >
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-spinelingslices" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
-      </Fabricate>
+      </Fabricate> -->
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="35" />
