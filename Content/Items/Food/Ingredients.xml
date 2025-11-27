@@ -730,7 +730,7 @@
     <Item name="Sea Weed Strip" identifier="he-seaweedstrip" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Sea weed pressed and sliced. Let it dry into Nori." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,207,47,13" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="2" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-seaweed" />
       </Fabricate>
@@ -748,7 +748,7 @@
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" interval="1">
           <Conditional condition="eq 100" />
-          <SpawnItem identifier="he-nori" spawnposition="This" count="8" />
+          <SpawnItem identifier="he-nori" spawnposition="This" count="4" />
           <Remove />
         </StatusEffect>
       </Holdable>
@@ -757,9 +757,9 @@
     <Item name="Nori" identifier="he-nori" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Dried and prepared sea weed used for sushi." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,221,47,13" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="oven" requiredtime="180" requiresrecipe="false" amount="32" >
+      <Fabricate suitablefabricators="oven" requiredtime="60" requiresrecipe="false" amount="20" >
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="he-seaweedstrip" amount="4" MinCondition="0" UseCondition="false"/>
+        <RequiredItem identifier="he-seaweedstrip" amount="5" MinCondition="0" UseCondition="false"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="40" radius="6" density="10.2" />
