@@ -65,6 +65,7 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
         <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
           <Remove />
+          <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
