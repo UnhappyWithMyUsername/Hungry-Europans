@@ -237,7 +237,8 @@
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -251,7 +252,8 @@
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
