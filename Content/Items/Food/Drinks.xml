@@ -2894,7 +2894,7 @@
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="2" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem identifier="he-emptyglass" UseCondition="False" MinCondition="0.0" MaxCondition="1.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -3377,9 +3377,6 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="2" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
@@ -3804,9 +3801,6 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="2" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
