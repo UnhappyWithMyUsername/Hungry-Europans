@@ -3,32 +3,20 @@
 //////////////////////
 //////////////////////
 
-Search "TODO:" in the mod
-PRIORITIES
+Search "TODO:" in the mod for things that need updating
 
-High:
+Next Update Plans:
+- Mantis meat and meals
+- Spineling dip
+- Cookies
+
+
+Always:
 - Testing, testing, testing
 - Plant RE-rework when DLC comes out
-- Missing text
-- Missing item sprites
-- Make ingredients visible in the cooked items sprite
+- Ensure Neurotrauma compatibility
 
-Medium:
-- Optimize all the statuseffects
-- Declutter fabricator windows by removing dupe recipes
-- Add canned ingredients (how?)
-- Align Contained Sprites for table/grill (avoid floating items)
-- Containable icon sprites
-- Balance food values / food buffs
-- Use more varied ingredients in new recipes
 
-Low: 
-- Adding new food types
-- Sell prices, shop
-- DE Hydroponics compatibility
-- More fryable food
-- More grillable food
-- Neurotrauma compatibility
 
 //////////////////////
 //////////////////////
@@ -45,11 +33,15 @@ Low:
 [b]Changes:[/b] 
 [List]
 [*] Cafeterias are disabled in abandoned outposts
-[*] Hunger and Thirst no longer cause vitality loss to prevent medical skill gain.
+[*] Hunger and Thirst no longer cause vitality loss to prevent medical skill gain. Will mess with bot support until the next baro update drops
 [*] Starvation and Dying of thirst builds up much faster
-[*] Increased the speed of eating some foods (burgers, hotdogs, fries, poutine...)
-[*] Make egg recipes accept partially damaged eggs
+[*] Sea Weed gives 2 strips instead of 1, Strips give 4 nori instead of 8, drying Nori in oven is faster
+[*] Fryer will smoke if turned on without oil
+[*] Fryer uses oil faster
+[*] Make egg recipes accept damaged eggs
 [*] Give better tags to tableware so bots can pick it up and store it
+[*] Increased the speed of eating some foods (burgers, hotdogs, fries, poutine...)
+[*] Reduced craving human meat visual effects
 
 [/List]
 
@@ -57,15 +49,19 @@ Low:
 [List]
 [*] Fixed Dishwasher not appearing in shops and fabricator
 [*] Fixed Meat Cleaver not working on Bone threshers
+[*] Fixed Meat Cleaver not working on Hammerhead Spawns / Hammerhead Spawn meals should finally be craftable
 [*] Fixed bowls/plates breaking too easily (especially in cafeteria cart)
 [*] Fixed getting less food buffs than you should if you are hungry
+[*] Fixed Moloch Sushi not giving a plate back
+[*] Fixed Refrigerator not accepting all eggs
 [/List]
 
 
 [b]KNOWN BUGS/ISSUES:[/b]
 [*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
-[*] Damage multipliers (like steroids) result in less meat being harvested on corpses
+[*] Damage multipliers (like steroids) result in less meat being harvested on corpses (FIXED NEXT BARO UPDATE)
 [*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
+[*] Poisons are not working for fork/spoon/fingerfood meals
 [*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
 
 
