@@ -3,8 +3,6 @@
   <Items>
     <!-- Patty -->
     <Item name="Raw Meat Patty" identifier="he-rawmeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" health="12">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
@@ -175,8 +173,6 @@
 
     <!-- Sausage -->
     <Item name="Raw Sausage" identifier="he-rawsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3,monsterfood,reactoritem" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,150,150,255" inventoryiconcolor="255,150,150,255" containercolor="255,150,150,255" health="12">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
@@ -377,8 +373,6 @@
 
     <!-- Nuggets -->
     <Item name="Pile of Raw Nuggets" identifier="he-rawnuggets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowinfryer,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.0" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.0" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="176,437,48,29" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="109,0,81,54" origin="0.5,0.5" />
@@ -453,7 +447,6 @@
     <!-- Offal -->
     <Item name="Raw Offal" identifier="he-rawoffal" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="200,166,100,38" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="200,166,100,38" origin="0.5,0.5" />

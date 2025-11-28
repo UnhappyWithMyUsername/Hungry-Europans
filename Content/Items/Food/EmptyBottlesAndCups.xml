@@ -3,7 +3,6 @@
   <Items>
     <!--////////// GLASS FRAGMENTS \\\\\\\\\\-->
     <Item name="Glass Fragments" identifier="he-glassfragments" category="Misc" subcategory="Ingredients" maxstacksize="20" cargocontaineridentifier="metalcrate" description="Shattered glass. Can be obtained through smashing bottles or crafting them from quartz at a fabricator. Used for crafting at a fabricator or bottle printer." Tags="smallitem,ingredient,glassfragments" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_glassfragments" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="bottleprinter" secondary="kitchen,locker"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="291,1,62,14" depth="0.6" origin="0.5,0.5" />
@@ -45,7 +44,6 @@
     <!--////////// EMPTY BOTTLES AND CUPS - CLEAN \\\\\\\\\\-->
 
     <Item name="Empty Bottle" identifier="he-emptybottle" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlecommon,seawaterrefill_common,cleanwaterrefill_common" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -138,7 +136,6 @@
     </Item>
     
     <Item name="Empty Rum Bottle" identifier="he-emptybottlerum" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty rum bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlerum,seawaterrefill_rum,cleanwaterrefill_rum" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -232,7 +229,6 @@
     </Item>
     
     <Item name="Empty Whiskey Bottle" identifier="he-emptybottlewhiskey" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Whiskey bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlewhiskey,seawaterrefill_whiskey,cleanwaterrefill_whiskey" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -325,7 +321,6 @@
     </Item>
 
     <Item name="Empty Halucinova Bottle" identifier="he-emptybottlehalucinova" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Halucinova bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlehalucinova,seawaterrefill_halucinova,cleanwaterrefill_halucinova" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -418,7 +413,6 @@
     </Item>
 
     <Item name="Empty Beer Bottle" identifier="he-emptybottlebeer" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty beer bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlebeer,seawaterrefill_beer,cleanwaterrefill_beer" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -511,7 +505,6 @@
     </Item>
 
     <Item name="Empty Jar" identifier="he-emptyjar" category="Equipment" subcategory="Tableware" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty jar used for some recipes. Can be thrown." Tags="smallitem,ingredient,emptyjar" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -565,7 +558,6 @@
     </Item>
 
     <Item name="Empty Shaker" identifier="he-emptyshaker" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty shaker ready to be filled with salt! Can be thrown" Tags="smallitem,ingredient,emptyshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -619,7 +611,6 @@
 
     
     <Item name="Empty Cup" identifier="he-emptycup" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -712,7 +703,6 @@
     </Item>
 
     <Item name="Empty Mug" identifier="he-emptymug" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty mug for drinks. Can be thrown or filled with coffee." Tags="smallitem,ingredient,emptymug,mug,coffeecup,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -796,7 +786,6 @@
     </Item>
 
     <Item name="Empty Cocktail Glass" identifier="he-emptycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycocktailglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="456,199,19,65" depth="0.499" origin="0.5,0.5" />
@@ -926,7 +915,6 @@
 
     <!--////////// EMPTY CUPS - DIRTY \\\\\\\\\\-->
     <Item name="Dirty Cup" identifier="he-dirtycup" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycup,cup,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -987,7 +975,6 @@
     </Item>
 
     <Item name="Dirty Mug" identifier="he-dirtymug" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,dirtymug,mug,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1037,7 +1024,6 @@
     </Item>
 
     <Item name="Dirty Cocktail Glass" identifier="he-dirtycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycglass,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="456,199,19,65" depth="0.499" origin="0.5,0.5" />

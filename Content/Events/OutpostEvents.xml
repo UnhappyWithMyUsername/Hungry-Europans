@@ -3,10 +3,8 @@
   <!-- SCRIPTED EVENTS -->
   <EventPrefabs>
     <ScriptedEvent identifier="enablecafeteria">
-      <TagAction criteria="player" tag="player" />
+      <WaitAction time="3" />
       <TagAction criteria="itemidentifier:op_cafeteriawindow" tag="cafeteria" SubmarineType="Outpost" />
-      <!--<TagAction criteria="itemidentifier:op_cafeteriachair" tag="cafeteria" sub="Outpost" />-->
-      <TriggerAction target1tag="player" target2tag="cafeteria" radius="1000" disableincombat="false" disableiftargetincapacitated="false" waitforinteraction="false" allowmultipletargets="true" />
       <StatusEffectAction targettag="cafeteria">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
@@ -94,6 +92,17 @@
       <!--end the event-->
       <Label name="end" />
     </ScriptedEvent>    
+    
+    
+
+    <ScriptedEvent identifier="disableabandonedcafeterias">
+      <WaitAction time="5" />
+      <TagAction criteria="itemidentifier:op_cafeteriawindow" tag="disablecafeteria" submarinetype="Outpost" />
+      <StatusEffectAction targettag="disablecafeteria" >
+        <StatusEffect target="This" noninteractable="true" setvalue="true" />
+      </StatusEffectAction>
+    </ScriptedEvent>   
+    
         
     <ScriptedEvent identifier="manualenforceinfo">
       <TagAction criteria="player" tag="player" />
@@ -161,9 +170,14 @@
   <EventSet identifier="he-outpostevent.cafeteria" leveltype="outpost" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="enablecafeteria" commonness="100" probability="1.0"/>
   </EventSet>
+  <EventSet identifier="he-disableabandonedcafeterias" leveltype="outpost" locationtype="Abandoned" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" selectalways="true">
+    <ScriptedEvent identifier="disableabandonedcafeterias" commonness="100" />
+  </EventSet>
   <!--<EventSet identifier="he-loadalways" leveltype="Any" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="he-config" commonness="100" probability="1.0"/>
   </EventSet>-->
+  
+  
   <!--All DE Locations:
       locationtype="outpost,city,research,military,mine,colony,settlement,construction,camp,base,blockade,survey,study,lab,clinic,hospital,hydroponics,factory,shipyard,huskchurch,sinkingcircus,PirateOutpost"
       

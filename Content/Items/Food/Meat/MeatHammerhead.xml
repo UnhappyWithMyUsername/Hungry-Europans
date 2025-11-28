@@ -2,9 +2,7 @@
 <Override>
   <Items>
     <!--hammerhead-->
-    <Item name="Hammerhead Spawn" identifier="he-hammerheadspawnmeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowinfryer,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+    <Item name="Hammerhead Spawn" identifier="he-hammerheadspawnmeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowinfryer,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="431,309,81,34" depth="0.6" origin="0.5,0.5" />
       <Body width="81" radius="17" density="12" />
@@ -70,7 +68,6 @@
 
     <Item name="Hammerhead Meat Chunk" identifier="he-hammerheadmeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="354,151,158,82" depth="0.6" origin="0.5,0.5" />
       <Body width="158" radius="41" density="12" />

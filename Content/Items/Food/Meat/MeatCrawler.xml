@@ -3,7 +3,6 @@
   <Items>
     <!--crawler-->
     <Item name="Crawler Half" identifier="he-crawlermeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,crawlermeat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="311,446,200,66" depth="0.6" origin="0.5,0.5" />
@@ -51,8 +50,6 @@
 
     <!-- Crawler Meat Chunk /// What is this meat used for? should it not exist?  -->
     <Item name="Crawler Meat Chunk" identifier="he-crawlermeatchunkspecial" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="A chunk of crawler meat." Tags="smallitem,meat,meatchunk,crawlermeat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="311,446,200,66" depth="0.6" origin="0.5,0.5" />
       <Body width="200" radius="33" density="12" />
@@ -98,8 +95,6 @@
     </Item>
 
     <Item name="Raw Crawler Meat" identifier="he-rawcrawlermeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,477,51,17" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="4">

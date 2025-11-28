@@ -6,7 +6,6 @@
     
     <!-- Thresher filet and Fries -->
     <Item HideInMenus="false" name="Thresher Filet with Fries and Seaweed" identifier="he-cookedthresherfilet" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -76,7 +75,6 @@
 
     <!-- Thresher and Bufo Purée - reduce psychosis and paralysis, gives hallucinating -->
     <Item HideInMenus="false" name="" identifier="he-thresherbufopuree" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <!-- MEAT -->
     <!--Hammerhead-->
+    
+    <!-- Hammer and omelette -->
     <Item hideinmenus="false" name="Roast" identifier="he-cookedhammerheadroast" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,roast,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -13,7 +13,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
@@ -77,7 +77,6 @@
     </Item>
 
     <Item hideinmenus="false" name="Spareribs" identifier="he-cookedhammerheadspareribs" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -135,7 +134,6 @@
     </Item>
 
     <Item hideinmenus="false" name="Pickled Hammerhead Spawn" identifier="he-cookedhammerheadspawnpickled" variantof="he-poisoneffectpreset_regular" health="3" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -218,8 +216,6 @@
     </Item>
 
     <Item hideinmenus="false" name="Fried Hammerhead Spawn" identifier="he-cookedhammerheadspawnfried" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" origin="0.5,0.5" />
@@ -241,7 +237,8 @@
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -255,7 +252,8 @@
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

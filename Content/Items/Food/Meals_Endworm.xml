@@ -4,7 +4,6 @@
     <!-- MEAT -->
     <!--Endworm-->
     <Item hideinmenus="false" name="Hotdog" identifier="he-endwormhotdog" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food - Endworm" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>

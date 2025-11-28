@@ -1515,7 +1515,7 @@
       <ItemContainer capacity="40" slotsperrow="8" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
-        <Containable items="fooditem,drinkitem,meat,plantitem,organ,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
+        <Containable items="fooditem,drinkitem,meat,plantitem,organ,canspoil,canexpire,emptybottle,emptyjar,egg" />
       </ItemContainer>
       <Body width="273" height="380" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="85,-35" handle1="-100,30" handle2="10,-20" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="refrigerator">

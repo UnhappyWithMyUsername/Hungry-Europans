@@ -154,6 +154,7 @@
         <QualityStat stattype="Condition" value="0.0"/>
       </Quality>
     </Item>
+    <!-- TODO: Once BaroDevs fixed OnSecondaryUse no longer working in ItemComponent, fix StatusEffects for worms probably not working here since OnUse isn't really triggered for fingerfood/fork/spoon-based food | Also potentially adjust poison StatusEffects as they may need DisableDeltaTime="true" or higher values if effects are not noticeable -->
     <Item name="#Hungry Europans: Poison Effect Preset Item (Fork Food)" identifier="he-poisoneffectpreset_fork" maxstacksize="1" hideinmenus="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,10,10" depth="0.6" origin="0.5,0.5" />
       <ItemComponent canbepicked="false" canbeselected="false" characterusable="true">
@@ -332,6 +333,7 @@
         <QualityStat stattype="Condition" value="0.0"/>
       </Quality>
     </Item>
+    <!-- TODO: Once BaroDevs fixed OnSecondaryUse no longer working in ItemComponent, fix StatusEffects for worms probably not working here since OnUse isn't really triggered for fingerfood/fork/spoon-based food | Also potentially adjust poison StatusEffects as they may need DisableDeltaTime="true" or higher values if effects are not noticeable -->
     <Item name="#Hungry Europans: Poison Effect Preset Item (Spoon Food)" identifier="he-poisoneffectpreset_spoon" maxstacksize="1" hideinmenus="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <ItemComponent canbepicked="false" canbeselected="false" characterusable="true">
@@ -510,6 +512,7 @@
         <QualityStat stattype="Condition" value="0.0"/>
       </Quality>
     </Item>
+    <!-- TODO: Once BaroDevs fixed OnSecondaryUse no longer working in ItemComponent, fix StatusEffects for worms probably not working here since OnUse isn't really triggered for fingerfood/fork/spoon-based food | Also potentially adjust poison StatusEffects as they may need DisableDeltaTime="true" or higher values if effects are not noticeable -->
     <Item name="#Hungry Europans: Poison Effect Preset Item (Finger Food)" identifier="he-poisoneffectpreset_fingerfood" maxstacksize="1" hideinmenus="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,10,10" depth="0.6" origin="0.5,0.5" />
       <ItemComponent canbepicked="false" canbeselected="false" characterusable="true">

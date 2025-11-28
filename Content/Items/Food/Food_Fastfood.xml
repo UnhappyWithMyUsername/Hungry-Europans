@@ -4,7 +4,6 @@
   
     <!-- Nuggets can't be poisoned -->
     <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="3" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
@@ -49,8 +48,7 @@
       </Holdable>
     </Item>
 
-    <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="26" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
+    <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="16" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -79,14 +77,14 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_burger" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="hunger" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
         <!-- Unwrap -->
-        <StatusEffect type="OnUse" target="This" Condition="25" setvalue="true" oneshot="true" comparison="And">
+        <StatusEffect type="OnUse" target="This" Condition="15" setvalue="true" oneshot="true" comparison="And">
           <Conditional ConditionPercentage="gte 100" />
           <Conditional HasTag="neq opened" />
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
@@ -115,8 +113,8 @@
           <Conditional InWater="false" />
           <Conditional HasTag="opened" />
           <Affliction identifier="ate_burger" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="hunger" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -128,8 +126,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
+    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -154,8 +151,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_hotdog" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="hunger" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="1.6" />
+          <ReduceAffliction type="hunger" amount="1.6" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -167,8 +164,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_hotdog" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="hunger" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="1.6" />
+          <ReduceAffliction type="hunger" amount="1.6" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -181,8 +178,6 @@
     </Item>
     
     <Item name="Raw Fries" identifier="he-rawfries" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,71,37,20" depth="0.6" origin="0.5,0.5" />
@@ -216,8 +211,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="90" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     
-    <Item name="Fries" identifier="he-fries" health="25" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
+    <Item name="Fries" identifier="he-fries" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
@@ -238,8 +232,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_friedfood" amount="1" />
-          <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <Affliction identifier="he-stuffed" amount="0.9" />
+          <ReduceAffliction type="hunger" amount="0.9" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -264,8 +258,8 @@
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
           <Affliction identifier="ate_friedfood" amount="1" />
-          <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="hunger" amount="0.75" />
+          <Affliction identifier="he-stuffed" amount="0.9" />
+          <ReduceAffliction type="hunger" amount="0.9" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
@@ -281,8 +275,7 @@
       </ItemContainer>
     </Item>
     
-    <Item hideinmenus="false" name="Poutine" identifier="he-poutine" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,foodplate,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
+    <Item hideinmenus="false" name="Poutine" identifier="he-poutine" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,foodplate,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="927,30,68,29" depth="0.6" origin="0.5,0.5" />
@@ -312,8 +305,8 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-fatrich" amount="15.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1.25" />
+          <ReduceAffliction type="hunger" amount="1.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -330,8 +323,8 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-fatrich" amount="15.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1.25" />
+          <ReduceAffliction type="hunger" amount="1.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />

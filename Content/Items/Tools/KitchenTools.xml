@@ -218,7 +218,8 @@
         Hit corpses to try and get meat
         Passing the skill check spawns meat and adds some "butchered" affliction to the corpse
         Reaching 100 butchered means no more meat can be extracted
-        Butchered amount is proportional to health; more health = less butchered inflicted = more meat. BIG MONSTERS NEED A BIGGER NUMBER
+        Butchered amount is proportional to health; more health = less butchered inflicted = more meat. 
+        100 health = 1x butchered multiplier    200 health = 0.5x butchered multiplier
         "Extra" meat rolls a separate probability and does not add butchered -->
         <!-- TODO: balance the amount of meat from meat cleaver -->
 
@@ -296,7 +297,8 @@
           <Conditional speciesname="eq hammerheadspawn" />
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="100" />
+          <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
+          <RemoveCharacter />
           <SpawnItem identifier="he-hammerheadspawnmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--human
@@ -334,10 +336,19 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Conditional speciesname="neq bonethresher" />
-          <Affliction identifier="he-butchered" strength="75" />
+          <Affliction identifier="he-butchered" strength="110" />
           <SpawnItem identifier="he-threshermeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
+        <!--Mantis
+        regular meat on all mantises above 10 mass-->
+        <!-- <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
+          <Conditional group="mantis" />
+          <Conditional isdead="true"/>
+          <Conditional mass="gt 10" />
+          <Conditional he-butchered="lt 100"/>
+          <Affliction identifier="he-butchered" strength="130" />
+          <SpawnItem identifier="he-mantismeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+        </StatusEffect> -->
         <!--watcher
         regular meat on all watchers above 10 mass-->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
@@ -584,7 +595,7 @@
     </Item>
 
     <!--////////// CLEAN TABLEWARE \\\\\\\\\\-->
-    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2.5" hideconditionbar="false" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
@@ -640,10 +651,9 @@
           <RequiredItem tag="plateitem" type="Contained" />
           <DropContainedItems />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This,Contained" condition="-25" disabledeltatime="true">
-          <Dropitem />
+        <StatusEffect type="OnImpact" target="This" condition="-15" disabledeltatime="true">
           <DropContainedItems />
-        </StatusEffect>  
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This" >
           <DropContainedItems />
             <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="3" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,255"/>
@@ -657,7 +667,7 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Empty Bowl" identifier="he-emptybowl" Tags="smallitem,tableware,emptybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Tableware"  cargocontaineridentifier="metalcrate" description="An empty bowl to put food in. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Empty Bowl" identifier="he-emptybowl" Tags="smallitem,tableware,emptybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Tableware"  cargocontaineridentifier="metalcrate" description="An empty bowl to put food in. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.499" origin="0.5,0.5" />
@@ -712,10 +722,9 @@
           <RequiredItem tag="bowlitem" type="Contained" />
           <DropContainedItems />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This,Contained" condition="-15" disabledeltatime="true">
-          <Dropitem />
+        <StatusEffect type="OnImpact" target="This" condition="-15" disabledeltatime="true">
           <DropContainedItems />
-        </StatusEffect>  
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This" >
           <DropContainedItems />
             <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="3" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,255"/>
@@ -730,6 +739,7 @@
     </Item>    
     
     <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+      <PreferredContainer primary="kitchen,table" secondary="crewcab"/>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -763,6 +773,7 @@
     </Item>
 
     <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+      <PreferredContainer primary="kitchen,table" secondary="crewcab"/>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -796,9 +807,9 @@
     </Item>
 
     <!--////////// DIRTY TABLEWARE \\\\\\\\\\-->
-    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,plateitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <PreferredContainer primary="dishwasher" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.499" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.525" origin="0.5,-0.3"  />
       <Body width="64" height="4" density="11" />
@@ -852,10 +863,9 @@
           <RequiredItem tag="plateitem" type="Contained" />
           <DropContainedItems />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This,Contained" condition="-25" disabledeltatime="true">
-          <Dropitem />
+        <StatusEffect type="OnImpact" target="This" condition="-15" disabledeltatime="true">
           <DropContainedItems />
-        </StatusEffect>  
+        </StatusEffect> 
         <StatusEffect type="OnBroken" target="This" >
           <DropContainedItems />
             <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="3" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,255"/>
@@ -869,9 +879,9 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Dirty Bowl" identifier="he-dirtybowl" Tags="smallitem,dirtytableware,tableware,dirtybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty bowl that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="1.5" hideconditionbar="true" maxstacksize="1" >
+    <Item name="Dirty Bowl" identifier="he-dirtybowl" Tags="smallitem,dirtytableware,tableware,dirtybowl,bowlitem,platebowlreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty bowl that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2.5" hideconditionbar="true" maxstacksize="1" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <PreferredContainer primary="dishwasher" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.499" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.525" origin="0.5,0.5"  />
       <Body width="42" height="14" density="11.5" />
@@ -925,10 +935,9 @@
           <RequiredItem tag="bowlitem" type="Contained" />
           <DropContainedItems />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This,Contained" condition="-15" disabledeltatime="true">
-          <Dropitem />
+        <StatusEffect type="OnImpact" target="This" condition="-15" disabledeltatime="true">
           <DropContainedItems />
-        </StatusEffect>  
+        </StatusEffect> 
         <StatusEffect type="OnBroken" target="This" >
           <DropContainedItems />
             <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="3" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,255"/>
@@ -943,6 +952,7 @@
     </Item>    
         
     <Item name="Dirty Fork" identifier="he-dirtyfork" Tags="smallitem,dirtytableware,tableware,fork,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty fork that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+      <PreferredContainer primary="dishwasher" secondary="kitchen,crewcab"/>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="318,61,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" depth="0.55" origin="0.5,0.5" />
@@ -971,6 +981,7 @@
     </Item>
         
     <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
+      <PreferredContainer primary="dishwasher" secondary="kitchen,crewcab"/>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="383,61,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" depth="0.55" origin="0.5,0.5" />
