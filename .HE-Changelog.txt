@@ -24,15 +24,18 @@ Always:
 //////////////////////
 
 [hr]23/11/2025[/hr]
-
+[h3]Kitchen Rework Update[/h3]
 
 [b]Additions:[/b]
 [List]
-[*] Nothing :(
+[*] Kitchen installation items
+[*] Installation blockers (for submarine builders to block specific installation slots of kitchen counters/pantries)
 [/List]
 
 [b]Changes:[/b] 
 [List]
+[*] Kitchen fabricators like sink, cutting board, etc. are now placed inside kitchen counters/pantries to install them (It's recommended to do installs while the submarine is stationary/docked)
+[*] Kitchen counters/pantries are now disassembled via a UI button while holding a wrench when interacting with them
 [*] Cafeterias are disabled in abandoned outposts
 [*] Hunger and Thirst no longer cause vitality loss to prevent medical skill gain. Will mess with bot support until the next baro update drops
 [*] Starvation and Dying of thirst builds up much faster
