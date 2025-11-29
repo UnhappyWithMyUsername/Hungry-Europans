@@ -327,7 +327,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -580,7 +580,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -754,7 +754,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -932,7 +932,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1102,7 +1102,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1268,7 +1268,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1439,7 +1439,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1611,7 +1611,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1779,7 +1779,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1964,7 +1964,7 @@
       </Holdable>
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
             <Remove />
           </StatusEffect>
@@ -2031,7 +2031,7 @@
       </Holdable>
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
             <Remove />
           </StatusEffect>
@@ -2135,7 +2135,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -2297,7 +2297,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -2468,7 +2468,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3074,7 +3074,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3144,7 +3144,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3214,7 +3214,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3284,7 +3284,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3354,7 +3354,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3542,7 +3542,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3601,7 +3601,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3660,7 +3660,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3719,7 +3719,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3778,7 +3778,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3961,7 +3961,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4016,7 +4016,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4071,7 +4071,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4126,7 +4126,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4181,7 +4181,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -5350,7 +5350,7 @@
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
