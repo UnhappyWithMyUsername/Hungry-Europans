@@ -349,7 +349,7 @@
         <RequiredItem identifier="ethanol" amount="5" />
         <RequiredItem identifier="badtobaccobud" amount="1" />
         <RequiredItem identifier="bubbleberries" amount="3" />
-        <RequiredItem identifier="popnut" amount="1" />
+        <RequiredItem identifier="popnutpopped" amount="1" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
@@ -538,7 +538,7 @@
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="7" />
         <RequiredItem identifier="badbubbleberries" amount="1" />
-        <RequiredItem identifier="badpopnut" amount="1" />
+        <RequiredItem identifier="badpopnutpopped" amount="1" />
         <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">

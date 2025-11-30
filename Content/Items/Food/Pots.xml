@@ -541,7 +541,7 @@
       <Fabricate suitablefabricators="blender" requiredtime="15" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="fiberplant" UseCondition="True" />
-        <RequiredItem identifier="popnut" amount="1" />
+        <RequiredItem identifier="popnutpopped" amount="1" />
         <RequiredItem tag="seedingredient" amount="4" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
