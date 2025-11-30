@@ -59,6 +59,7 @@ Always:
 [*] Fixed getting less food buffs than you should if you are hungry
 [*] Fixed Moloch Sushi not giving a plate back
 [*] Fixed Refrigerator not accepting all eggs
+[*] Fixed recipes using UNPOPPED popnuts instead of popped
 [/List]
 
 
