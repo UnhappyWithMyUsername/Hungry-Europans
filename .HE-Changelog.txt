@@ -51,6 +51,7 @@ Always:
 
 [b]Fixes:[/b] 
 [List]
+[*] Hopefully fixed refilling glasses from bottles desyncing in multiplayer
 [*] Fixed Dishwasher not appearing in shops and fabricator
 [*] Fixed Meat Cleaver not working on Bone threshers
 [*] Fixed Meat Cleaver not working on Hammerhead Spawns / Hammerhead Spawn meals should finally be craftable
