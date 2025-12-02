@@ -454,6 +454,7 @@
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="bubbleberryleaf" amount="5" />
       </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <!-- <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect" /> -->
       <Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
@@ -486,6 +487,7 @@
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="popnutleaf" amount="5" />
       </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -517,6 +519,7 @@
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="tobaccobud" amount="4" />
       </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -551,6 +554,7 @@
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Throwable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
