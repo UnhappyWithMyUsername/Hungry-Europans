@@ -998,6 +998,34 @@
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
+    </Item>    
+
+    <!-- Cookie prototype, if we instead want to spawn cookies individually from the jar -->
+    <Item name="Cookie" identifier="he-cookie" Tags="smallitem,fooditem,cookie" category="Misc" scale="0.5" maxstacksize="8" maxstacksizecharacterinventory="10" cargocontaineridentifier="chemicalcrate" description="" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="90,365,48,60" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="227,29,18,11" depth="0.6" origin="0.5,0.5" />
+      <Body width="12" height="5" density="10.5" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="-90" holdpos="25,35" handle1="5,-10" aimpos="18,16" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="InWater" target="This" condition="-2">
+          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" frequencymultiplier="2" type="OnActive" range="500.0" loop="true" volume="1.5" />
+          <ParticleEmitter particle="damagebubbles" particlespersecond="4" scalemin="0.1" scalemax="0.3" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
+        </StatusEffect>
+        <!-- when consumed, give 100% stomache ache, 20% organ damange -->
+        <StatusEffect type="OnUse" target="Character" duration="1" >
+          <Affliction identifier="he-sugarrich" amount="35.0" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
+          <Affliction identifier="ate_sweet" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+          <Remove />
+        </StatusEffect>
+      </Holdable>
     </Item>
+    
+    
+    
   </Items>
 </Override>
