@@ -5,15 +5,24 @@
 
 Search "TODO:" in the mod for things that need updating
 
-Next Update Plans:
+SHORT TERM TODO / NEXT UPDATE:
+
+Mantis
 - Mantis meat and meals
-- Spineling dip
-- Cookies
+
+Have multiple recipes for each meat (at least 2)
+- Add Spineling dip (2 spineling recipes)
+- Add watcher recipe (only 1 watcher meal)
+
+Include underused ingredients
+- Plants and mutated plants
 - Creature Loot as ingredients (swim bladder, etc)
+- Exotic nonsense like husk stingers
 
 
-Always:
-- Testing, testing, testing
+
+Important stuff:
+- TEST NEw FEATURES
 - Plant RE-rework when DLC comes out
 - Ensure Neurotrauma compatibility
 
