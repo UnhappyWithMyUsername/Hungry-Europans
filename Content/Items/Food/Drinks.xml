@@ -404,58 +404,19 @@
       </ItemComponent>
     </Item>
     
-    <!--DISABLE VANILLA ITEM -->
+    <!--REPLACE VANILLA ITEM WITH MODDED BEER -->
     <Item name="" nameidentifier="beerbottle" identifier="beerbottle1" category="Medical,Misc" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" amount="1" spawnprobability="0.00" />
-      <PreferredContainer secondary="abandonedcrewcab,piratecrewcab" minamount="1" maxamount="1" spawnprobability="0.00" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.00" notcampaign="true" notpvp="true"/>
-      <PreferredContainer primary="medfabcab" secondary="medcab"/>
-      <Price baseprice="60" sold="false">
-        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="false">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantnightclub" minavailable="20" sold="false" />
-      </Price>
-      <!-- <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="60" fabricationlimitmin="2" fabricationlimitmax="6"/> -->
       <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="835,0,20,63" depth="0.6" origin="0.5,0.5" />
-      <SuitableTreatment type="psychosis" suitability="12" />
       <Body width="20" height="63" density="20" />
-      <!-- characterusable="false" because the "Use" action is triggered via a status effect when the bottle is empty, can't be done just by hitting E -->
       <Holdable canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" characterusable="false" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0"/>
-        <StatusEffect type="OnSecondaryUse" target="This">
-          <Conditional Condition="gte 99" />
-          <Sound file="Content/Items/Medical/ITEM_bottleOpen.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This">
-          <Conditional Condition="lt 95" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
-          <Conditional Condition="gt 1" />
-          <Sound file="Content/Items/Medical/ITEM_drinkingQuick.ogg" range="250" />
-        </StatusEffect>
-        <!-- When beer is drunk -->
-        <StatusEffect type="OnSecondaryUse" target="This,UseTarget" duration="20" disabledeltatime="true">
-          <Conditional Condition="lte 1" />
-          <Use/>
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This">
-          <ParticleEmitter particle="juicedrop" particlespersecond="10" scalemin="1" scalemax="1.5" distancemin="20" distancemax="25" anglemin="80" anglemax="100" velocitymin="40" velocitymax="60" copyentityangle="true" lifetimemultiplier="0.10" />
-        </StatusEffect>
-        <!-- When beer is used in Health GUI -->
-        <StatusEffect type="OnUse" target="UseTarget" duration="12" stackable="false">
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="hallucinating" amount="1" />
-          <Affliction identifier="drunk" amount="2" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="Always" target="This" oneshot="true" >
           <Remove />
+          <SpawnItem identifier="he-beercoalitionpremium" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Holdable>
     </Item>
     
-    <!--DISABLE VANILLA ITEM -->
+    <!--REPLACE VANILLA ITEM WITH MODDED BEER -->
     <Item name="" nameidentifier="beerbottle" identifier="beerbottle2" variantof="beerbottle1">
       <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="856,0,21,63" depth="0.6" origin="0.5,0.5" />
     </Item>
