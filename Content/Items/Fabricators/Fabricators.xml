@@ -35,6 +35,7 @@
         <GuiFrame relativesize="0.4,0.5" style="ItemUI" anchor="Center" />
         <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Cafeteria.ogg" type="OnActive" range="600.0" loop="true" volume="3.0"/>
         <StatusEffect target="This" type="Always">
+          <Conditional noninteractable="false" />
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CafeteriaAmbient.ogg" type="Always" range="1300" loop="true" volume="2.0"/>
         </StatusEffect>
         <!-- Now handled via EventSets 
