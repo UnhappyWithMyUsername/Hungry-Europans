@@ -655,41 +655,7 @@
           <Remove />
           <SpawnItem identifier="he-cuphotchocolate" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- when the cup gets spawned in, spawn "effect_makedirty" into the cup's inventory if the starting condition was lower than 100 (when an empty cup is spawned in after drinking) | It's to make cups get dirty over time after they were used for drinking and weren't refilled in time -->
-        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
-          <Conditional condition="lt 100" />
-          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty cup and spawn a dirty variant in its place -->
-        <StatusEffect type="OnContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty cup and spawn a dirty variant in its place -->
-        <StatusEffect type="OnNotContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtycup" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
-        <Containable items="effect">
-          <!-- reduce the empty cup condition by 1 each second to make it "dirty" over time -->
-          <StatusEffect type="OnContaining" target="This" condition="-1">
-            <Conditional condition="gt 1" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
         <!-- remove contined "effect_makedirty" to prevent the cup from getting dirty over time -->
-        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
-          <Remove />
-        </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
@@ -699,7 +665,7 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
-      </ItemComponent>
+      </Holdable>
     </Item>
 
     <Item name="Empty Mug" identifier="he-emptymug" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty mug for drinks. Can be thrown or filled with coffee." Tags="smallitem,ingredient,emptymug,mug,coffeecup,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
@@ -747,42 +713,7 @@
           <Remove />
           <SpawnItem identifier="he-mughotchocolate" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
-        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
-          <Conditional condition="lt 100" />
-          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtymug" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnNotContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtymug" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
       </Holdable>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
-        <Containable items="effect">
-          <!-- reduce the empty mug condition by 1 each second to make it "dirty" over time -->
-          <StatusEffect type="OnContaining" target="This" condition="-1">
-            <Conditional condition="gt 1" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
-        <!-- remove contined "effect_makedirty" to prevent the mug from getting dirty over time -->
-        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
-          <Remove />
-        </StatusEffect>
-      </ItemComponent>
     </Item>
 
     <Item name="Empty Cocktail Glass" identifier="he-emptycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycocktailglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
@@ -862,25 +793,6 @@
         <RequiredItem tag="fullglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <!-- when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
-        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
-          <Conditional condition="lt 100" />
-          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnNotContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtyglass" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
         <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
         <StatusEffect type="OnBroken" target="This">
           <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="7" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,180"/>
@@ -892,24 +804,7 @@
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
       </Holdable>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
-        <Containable items="effect">
-          <!-- reduce the empty mug condition by 1 each second to make it "dirty" over time -->
-          <StatusEffect type="OnContaining" target="This" condition="-1">
-            <Conditional condition="gt 1" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
-        <!-- remove contined "effect_makedirty" to prevent the mug from getting dirty over time -->
-        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
-          <Remove />
-        </StatusEffect>
-      </ItemComponent>
     </Item>
-
 
 
 
