@@ -759,7 +759,7 @@
 
     <!--WAFFLES-->
     <!-- TODO: simplify eating ice cream a bit, merge some statuseffects somehow -->
-    <Item name="Waffle Cone" identifier="he-wafflecone" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container." Tags="smallitem,fooditem,wafflecone,petfood1,petfood2,petfood3,monsterfood" showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Waffle Cone" identifier="he-wafflecone" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container." Tags="smallitem,fooditem,wafflecone,petfood1,petfood2,petfood3,monsterfood" showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True" health="5">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -804,9 +804,9 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItems items="icecreamball" type="Contained" requireempty="true" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <ReduceAffliction type="hunger" amount="0.4" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" condition="-20" comparison="And">
+        <StatusEffect type="OnUse" target="This" condition="-1" comparison="And">
           <Conditional InWater="false" />
           <RequiredItems items="icecreamball" type="Contained" requireempty="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="4.5" />
