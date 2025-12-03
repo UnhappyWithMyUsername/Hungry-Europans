@@ -56,6 +56,8 @@ Important stuff:
 [*] Increased the speed of eating some foods (burgers, hotdogs, fries, poutine...)
 [*] Reduced craving human meat visual effects
 [*] Changed Meat Cleaver to harvest Watcher meat from "Watcheroid" group (used by vanilla, update your mods)
+[*] Reduced Ice cream melt speed
+[*] Drinking a glass/cup entirely will now randomly spawn a dirty glass/cup that needs cleaning
 
 [/List]
 
