@@ -55,6 +55,7 @@ Important stuff:
 [*] Give better tags to tableware so bots can pick it up and store it
 [*] Increased the speed of eating some foods (burgers, hotdogs, fries, poutine...)
 [*] Reduced craving human meat visual effects
+[*] Changed Meat Cleaver to harvest Watcher meat from "Watcheroid" group (used by vanilla, update your mods)
 
 [/List]
 
