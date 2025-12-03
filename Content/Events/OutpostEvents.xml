@@ -153,7 +153,7 @@
         </StatusEffect>
       </StatusEffectAction>
     </ScriptedEvent>    
-    
+     
   </EventPrefabs>
   
  
@@ -184,4 +184,94 @@
       Technically outposts, but not permanent or without NPCs:
       locationtypes="lair,lairmudraptor,lairthresher,huskgroundsde,militaryforces"
   -->
+  
+  
+  <!-- EVENT OVERRIDES -->
+  <!-- EVENT OVERRIDES -->
+  <!-- EVENT OVERRIDES -->
+  <!-- EVENT OVERRIDES -->
+  <!-- EVENT OVERRIDES -->
+  <!-- EVENT OVERRIDES -->
+  <!-- EVENT OVERRIDES -->
+  
+  <Override>
+  <EventPrefabs>
+  
+    <!-- Replace vanilla Aunt Doris with a HE chef class variant -->
+    <ScriptedEvent identifier="coalitionspecialhire2">
+      <CheckReputationAction targettype="faction" identifier="coalition" condition="gte 80">
+        <Failure>
+          <!-- Do nothing -->
+        </Failure>
+        <Success>
+          <CheckDataAction identifier="coalitionspecialhire2_hired" condition="eq true">
+            <Success>
+              <!--Don't repeat event if already hired-->
+            </Success>
+            <Failure>
+              <TagAction criteria="player" tag="player" />
+              <SpawnAction npcsetidentifier="he-specialNPCs" npcidentifier="he-auntdoris" targettag="auntdoris" allowduplicates="false" spawnlocation="Outpost" />
+              <Label name="beginning" />
+              <TriggerAction target1tag="auntdoris" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
+              <NPCFollowAction npctag="auntdoris" targettag="triggerer_player" follow="true" />
+              <CheckDataAction identifier="coalitionspecialhire2_declinedonce" condition="eq true">
+                <Failure>
+                  <!-- we haven't declined the offer before-->
+                  <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.c1">
+                    <Option text="eventtext.coalitionspecialhire2.o1">
+                      <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.o1.c1">
+                        <Option text="eventtext.coalitionspecialhire2.o1.o1">
+                          <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.o1.o1.c1">
+                            <Option text="eventtext.coalitionspecialhire2.o1.o1.o1">
+                              <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.o1.o1.o1.c1" />
+                              <NPCChangeTeamAction npctag="auntdoris" teamid="Team1" addtocrew="true" />
+                              <SetDataAction identifier="coalitionspecialhire2_hired" value="true" />
+                              <NPCFollowAction npctag="auntdoris" targettag="triggerer_player" follow="false" />
+                            </Option>
+                            <Option text="eventtext.separatistspecialhire2.o1.o1.o2">
+                              <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.o1.o1.o2.c1" />
+                              <SetDataAction identifier="coalitionspecialhire2_declinedonce" value="true" />
+                              <NPCFollowAction npctag="auntdoris" targettag="triggerer_player" follow="false" />
+                              <GoTo name="beginning" />
+                            </Option>
+                          </ConversationAction>
+                        </Option>
+                      </ConversationAction>
+                    </Option>
+                  </ConversationAction>
+                </Failure>
+                <Success>
+                  <!-- we've declined before, show different dialog this time -->
+                  <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.repeat">
+                    <Option text="eventtext.separatistspecialhire2.o1.o1.o1">
+                      <ConversationAction targettag="triggerer_player" text="eventtext.coalitionspecialhire2.o1.o1.o1.c1" />
+                      <NPCChangeTeamAction npctag="auntdoris" teamid="Team1" addtocrew="true" />
+                      <SetDataAction identifier="coalitionspecialhire2_hired" value="true" />
+                      <NPCFollowAction npctag="auntdoris" targettag="triggerer_player" follow="false" />
+                    </Option>
+                    <Option text="eventtext.separatistspecialhire1.o1.o2.repeat" endconversation="true">
+                      <NPCFollowAction npctag="auntdoris" targettag="triggerer_player" follow="false" />
+                      <GoTo name="beginning" />
+                    </Option>
+                  </ConversationAction>
+                </Success>
+              </CheckDataAction>
+            </Failure>
+          </CheckDataAction>
+        </Success>
+      </CheckReputationAction>
+    </ScriptedEvent>
+  
+  
+  </EventPrefabs>  
+  </Override>
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </Randomevents>

@@ -1492,6 +1492,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-cookie>Cookie</entityname.he-cookie>
 <entitydescription.he-cookie>A crunchy chocolate chip cookie baked to perfection. There goes cavities!</entitydescription.he-cookie>
 
+<charactername.he-auntdoris>Aunt Doris</charactername.he-auntdoris>
+
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands
 (only applies to PLAYERS, not bots):
