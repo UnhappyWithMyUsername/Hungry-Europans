@@ -525,10 +525,10 @@
           <ParticleEmitter particle="damagebubbles" particlespersecond="4" scalemin="0.1" scalemax="0.3" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
         </StatusEffect>
         <!-- when consumed, give 100% stomache ache, 20% organ damange -->
-        <StatusEffect type="OnUse" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Affliction identifier="applystomachache" amount="100" />
           <Affliction identifier="applyorgandamage" amount="20" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="500" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="12.0" range="500" loop="false" />
         </StatusEffect>
         <!-- when consumed, heal any worm infection by 50% over time (1/s) -->
         <StatusEffect type="OnUse" target="Character" duration="50" multiplyafflictionsbymaxvitality="true" stackable="false">
@@ -536,8 +536,8 @@
           <ReduceAffliction identifier="tapeworminfection" amount="1" />
         </StatusEffect>
         <!-- when consumed, break the item -->
-        <StatusEffect type="OnUse" target="This" condition="0" setvalue="true" />
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnUse" target="This" condition="0" delay="0.9" stackable="false" setvalue="true" />
+        <StatusEffect type="OnBroken" target="This" >
           <Remove />
         </StatusEffect>
       </Holdable>
