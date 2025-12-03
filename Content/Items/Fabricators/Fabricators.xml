@@ -1369,9 +1369,9 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="12" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="4">
-        <GuiFrame relativesize="0.25,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
-        <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
+      <ItemContainer selectkey="Select" capacity="18" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="6">
+        <GuiFrame relativesize="0.45,0.55" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
+        <SlotIcon slotindex="18" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="818,937,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
         <Containable items="tableware">
           <!-- drop items inside items when inserted so the dishwasher doesnt eat up stacks of bowls -->
