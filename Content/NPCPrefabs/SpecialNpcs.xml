@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <npcsets>
   <Override>
+  
+    <!-- TODO: go back to overriding vanilla NPCs if barodevs allow us to override specific NPCs instead of whole NPCset  -->
     <npcset identifier="he-specialNPCs">
       <!-- Artie Dolittle Override to have him spawn with coalition premium beer instead of ethanol -->
       <npc identifier="he-artiedolittle" job="assistant" moduleflags="none" behavior="Passive">
