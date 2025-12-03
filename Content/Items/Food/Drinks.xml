@@ -113,7 +113,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,389,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,389,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" waterdragcoefficient="1" />
-      <SuitableTreatment type="thirst" suitability="75" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
@@ -165,7 +165,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="55" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -563,7 +563,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="20" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -740,7 +740,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="20" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -827,7 +827,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="361,0,31,66" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="393,0,31,66" depth="0.6" maxcondition="99" />
       <Body width="27" height="66" density="15" />
-      <SuitableTreatment type="thirst" suitability="25" />
+      <SuitableTreatment type="thirst" suitability="15" />
       <SuitableTreatment type="embarrassment" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
@@ -921,7 +921,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="38,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="10" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -1912,7 +1912,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="323,23,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="342,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="100" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
@@ -1979,7 +1979,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,23,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="95" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
@@ -2051,7 +2051,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
-      <SuitableTreatment type="thirst" suitability="100" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -2216,7 +2216,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
-      <SuitableTreatment type="thirst" suitability="95" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -2387,7 +2387,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="424,133,25,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="450,133,25,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
-      <SuitableTreatment type="thirst" suitability="95" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <LightComponent range="70.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
@@ -2911,7 +2911,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="95" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -2989,7 +2989,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
@@ -3392,7 +3392,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="5" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -3819,7 +3819,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="5" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -4232,7 +4232,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,468,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="40" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4390,7 +4390,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,447,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="40" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4556,7 +4556,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4711,7 +4711,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4860,7 +4860,7 @@
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,436,24,37" depth="0.55" origin="0.5,0.42" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,436,24,37" depth="0.525" origin="0.5,0.7"  />
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand,Any" aimpos="30,-15" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -4974,7 +4974,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -5131,7 +5131,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -5286,7 +5286,7 @@
       <ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="222,0,21,66" depth="0.6" maxcondition="99" />
       <Body width="21" height="58" density="15" />
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="70" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
@@ -5402,7 +5402,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="146,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="70" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
