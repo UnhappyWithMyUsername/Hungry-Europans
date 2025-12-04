@@ -911,9 +911,9 @@
     <!-- TODO: COOKIE SPRITE -->
     <Item name="Cookie" identifier="he-cookie" Tags="smallitem,fooditem,cookie" category="Misc" scale="0.5" maxstacksize="8" maxstacksizecharacterinventory="10" cargocontaineridentifier="chemicalcrate" description="" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="90,365,48,60" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="227,29,18,11" depth="0.6" origin="0.5,0.5" />
-      <Body width="12" height="5" density="10.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="140,420,25,9" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="140,420,25,9" origin="0.5,0.5" />
+      <Body width="25" height="9" density="10.5" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="-90" holdpos="25,35" handle1="5,-10" aimpos="18,16" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="InWater" target="This" condition="-2">
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" frequencymultiplier="2" type="OnActive" range="500.0" loop="true" volume="1.5" />
