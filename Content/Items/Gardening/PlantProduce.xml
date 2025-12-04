@@ -745,7 +745,7 @@
   </Item>
  
   <!-- mutated Banana fuel rod, 1/3rd the durability (and output?) of a fuel rod  -->
-  <Item name="bananafuelrod" identifier="bananafuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem,fuelrod" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8" spritecolor="255,255,255,255">
+  <Item name="bananafuelrod" identifier="bananafuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8" spritecolor="255,255,255,255">
     <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,320,64,64" depth="0.52" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="reactorcab"/>
@@ -758,9 +758,7 @@
       <Item identifier="potassium" mincondition="0.95" />
     </Deconstruct>
     <Throwable characterusable="true" slots="Any,RightHand,LeftHand" handle1="-10,-10"  holdpos="0,0" holdangle="-50" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <!-- TODO: reenable this and remove fuelrod tag if devs put the fuel property on the ROD rather than the reactor
-            https://github.com/FakeFishGames/Barotrauma/pull/15827 -->
-      <!-- <StatusEffect type="OnContained" target="Parent" AvailableFuel="20.0" disabledeltatime="true" /> -->
+      <StatusEffect type="OnContained" target="Parent" AvailableFuel="20.0" disabledeltatime="true" />
       <StatusEffect type="OnActive" target="Character" >
         <Affliction identifier="radiationsickness" strength="0.4" />
       </StatusEffect>
