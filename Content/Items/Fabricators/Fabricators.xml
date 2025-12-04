@@ -556,7 +556,6 @@
       </ItemContainer>
     </Item> 
     
-    <!-- TODO: inventory icon w knife? -->
     <!-- chops ingredients as long as you interact with it  -->
     <Item name="Cutting Board (Installation)" identifier="he-cuttingboard_installation" tags="cuttingboard,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" impactsoundtag="impact_metal_light" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="385,1968,95,78" origin="0.5,0.5" />
@@ -1166,7 +1165,6 @@
       </ItemContainer>
     </Item>
     
-    <!-- WIP Blender TODO: reenable fabrication recipe -->
     <Item name="Blender (Installation)" identifier="he-blender_installation" tags="container,blender,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="673,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
@@ -1174,7 +1172,6 @@
       <Deconstruct time="10">
         <Item identifier="aluminium" amount="2" />
       </Deconstruct>
-      <!-- TODO: Adjust fabrication recipe | currently just a copy of coffee machine -->
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="aluminium" amount="4" /><!--20x4-->

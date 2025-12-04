@@ -411,10 +411,10 @@
           <Conditional group="neq hammerhead" />
           <Conditional group="neq spineling" />
           <Conditional group="neq thresher" />
-          <Conditional group="neq watcher" />
+          <Conditional group="neq watcheroid" />
           <Conditional group="neq moloch" />
           <Conditional group="neq abyss" />
-          <Conditional group="neq mantis" />
+          <Conditional group="neq mantisoid" />
           <Affliction identifier="he-butchered" strength="200" />
           <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>

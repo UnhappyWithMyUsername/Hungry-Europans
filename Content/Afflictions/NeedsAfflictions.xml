@@ -137,7 +137,6 @@
     <!-- HUNGER AND THIRST -->
     
     <!-- HUNGER AND THIRST -->
-    <!-- TODO: NEXTUPDATE when barodevs fix the treatment threshold literally not working, remove vitality loss from hunger using VitalityLossRequiredForTreatment="False"  https://github.com/FakeFishGames/Barotrauma/discussions/16221 -->
     <Affliction
       identifier="hunger"
       name="Hunger"
@@ -271,8 +270,6 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
         
-
-    <!-- TODO: NEXTUPDATE when barodevs fix the treatment threshold literally not working, remove vitality loss from hunger using VitalityLossRequiredForTreatment="False"  https://github.com/FakeFishGames/Barotrauma/discussions/16221 -->
     <Affliction name="Thirst"
       identifier="thirst"
       description="You feel refreshed."
