@@ -36,7 +36,7 @@
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false" />
         <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true" />
-        <!-- Cursed channel switching to shift the sprinkler barrel position from left to right TODO: replace this with a better solution when possible, like rotating the barrel instead -->
+        <!-- Cursed channel switching to shift the sprinkler barrel position from left to right  -->
         <!-- <StatusEffect type="OnUse" target="This" barrelrotation="720" /> -->
         <!-- <ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true"/> -->
         <StatusEffect type="OnUse" target="This" interval="1" barrelpos="-70,0" channel="1" setvalue="true" duration="1" stackable="false">
