@@ -9,17 +9,12 @@ SHORT TERM TODO / NEXT UPDATE:
 
 Mantis
 - Mantis meat and meals
-
-Have multiple recipes for each meat (at least 2)
-- Add Spineling dip (2 spineling recipes)
-- Add watcher recipe (only 1 watcher meal)
+- Have multiple recipes for each create meat type (at least 2)
 
 Include underused ingredients
 - Plants and mutated plants
 - Creature Loot as ingredients (swim bladder, etc)
 - Exotic nonsense like husk stingers
-
-
 
 Important stuff:
 - TEST NEw FEATURES
@@ -39,6 +34,8 @@ Important stuff:
 [List]
 [*] Kitchen installation items
 [*] Installation blockers (for submarine builders to block specific installation slots of kitchen counters/pantries)
+[*] Added Spineling Dip meal
+[*] Added Cookie Jar + Cookies
 [/List]
 
 [b]Changes:[/b] 
@@ -58,6 +55,8 @@ Important stuff:
 [*] Changed Meat Cleaver to harvest Watcher meat from "Watcheroid" group (used by vanilla, update your mods)
 [*] Reduced Ice cream melt speed
 [*] Drinking a glass/cup entirely will now randomly spawn a dirty glass/cup that needs cleaning
+[*] Override Aunt Doris event + use custom Aunt Doris instead of overriding all the NPCs from "customnpcs1". This should improve mod compatibility and reduce conflicts
+[*] Optimize ice cream cone and slow down melting of ice cream
 
 [/List]
 
