@@ -58,22 +58,21 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <!-- TODO: NEXTUPDATE spineling dip sprite -->
     <!-- Spineling BBQ dip - spineling slices with dip sauce -->
     <Item hideinmenus="false" name="Spineling BBQ dip" identifier="he-spinelingdip" variantof="he-poisoneffectpreset_fingerfood" health="8" category="Misc" subcategory="Food - Spineling" maxstacksize="1" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,foodplate,gourmetfood,delicacy,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" depth="0.525" origin="0.5,0.65" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" origin="0.5,0.5" />
-      <!-- <Fabricate suitablefabricators="cuttingboard" requiredtime="16" amount="1" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,60,68,29" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,60,68,29" depth="0.525" origin="0.5,0.65" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,60,68,29" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" amount="1" >
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-spinelingslices" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
-      </Fabricate> -->
+      </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="35" />
