@@ -51,6 +51,7 @@
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
                 <Affliction identifier="mood" probability="0.2" amount="0.03" />
+                <Affliction identifier="moodenabled" probability="1.0" amount="1.0" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>

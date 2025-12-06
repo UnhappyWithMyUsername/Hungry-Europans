@@ -82,6 +82,22 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
     
+    <!-- invisible affliction applied by the moodyeuropan talent for things to check against | mainly used by the "Enforced" mod to check if a character has mood enabled while mood may currently be at 0% to prevent applying more favourite food/drink talents -->
+    <Affliction name=""
+      identifier="moodenabled"
+      description=""
+      type="none"
+      limbspecific="false"
+      indicatorlimb="Head"
+      maxstrength="1"
+      showiconthreshold="1000"
+      showinhealthscannerthreshold="1000"
+      healableinmedicalclinic="false"
+      iconcolors="0,100,0,255;100,0,0,255">
+      <Effect minstrength="0" maxstrength="1" strengthchange="0.0" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,256,128,128" origin="0,0" />
+    </Affliction>
+
     <Affliction name="Mood"
       identifier="mood"
       description=""
