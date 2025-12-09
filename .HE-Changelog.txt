@@ -27,7 +27,7 @@ Important stuff:
 //////////////////////
 //////////////////////
 
-[hr]23/11/2025[/hr]
+[hr]09/12/2025[/hr]
 [h3]Kitchen Rework Update[/h3]
 
 [b]Additions:[/b]
@@ -76,7 +76,6 @@ Important stuff:
 
 [b]KNOWN BUGS/ISSUES:[/b]
 [*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
-[*] Damage multipliers (like steroids) result in less meat being harvested on corpses (FIXED NEXT BARO UPDATE)
 [*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
 [*] Poisons are not working for fork/spoon/fingerfood meals
 [*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
