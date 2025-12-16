@@ -33,6 +33,7 @@ Hotfix
 
 [b]Additions:[/b]
 [List]
+[*] Added Mantis meat, fried mantis tempura, mantis themidor meal
 [*] Added Nutberry Brush hybrid plant (only produces popnut and bubbleberry leaves)
 [/List]
 
