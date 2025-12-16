@@ -341,14 +341,14 @@
         </StatusEffect>
         <!--Mantis
         regular meat on all mantises above 10 mass-->
-        <!-- <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
+        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
           <Conditional group="mantisoid" />
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="130" />
           <SpawnItem identifier="he-mantismeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect> -->
+        </StatusEffect>
         <!--watcher
         regular meat on all watchers above 10 mass-->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
