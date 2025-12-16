@@ -40,7 +40,7 @@
     </Item>
     
     <!-- Mantis Tempura (fried)  -->
-    <Item hideinmenus="false" name="Mantis Tempura" identifier="he-mantistempurafried" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" subcategory="Food - Mantis" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Mantis Tempura" identifier="he-mantistempurafried" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Mantis" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True" health="10" >
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,112,29,24" depth="0.6" origin="0.5,0.5" />
@@ -57,7 +57,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-proteinrich" amount="50.0" />
+          <Affliction identifier="he-fatrich" amount="35.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
@@ -71,7 +71,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-proteinrich" amount="50.0" />
+          <Affliction identifier="he-fatrich" amount="35.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
