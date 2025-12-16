@@ -601,11 +601,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item hideinmenus="true" nameidentifier="he-fibermueslibowl" descriptionidentifier="he-fibermueslibowl" identifier="he-fibermueslibowlgood" variantof="he-fibermueslibowl">
-      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
-    </Item>
-
-
     
   </Items>
 </Override>
