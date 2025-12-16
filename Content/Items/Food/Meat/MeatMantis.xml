@@ -8,10 +8,9 @@
     <Item name="mantis Meat Chunk" identifier="he-mantismeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="334,392,178,53" depth="0.6" origin="0.5,0.5" />
-      <Body width="178" radius="26" density="15" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,236,74,30" depth="0.6" origin="0.5,0.5" />
+      <Body width="74" radius="15" density="12" />
       <Price baseprice="280" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
@@ -55,13 +54,10 @@
 
 
     <!-- TODO: sprite -->
-    <Item name="Boiled Mantis Meat" identifier="he-boiledmantismeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+    <Item name="Boiled Mantis Meat" identifier="he-boiledmantismeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="230,90,50,255">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="334,392,178,53" depth="0.6" origin="0.5,0.5" />
-      <Body width="178" radius="26" density="15" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,236,74,30" depth="0.6" origin="0.5,0.5" />
+      <Body width="74" radius="15" density="12" />
       <Fabricate suitablefabricators="stove" requiredtime="80" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-mantismeatchunk" amount="1" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />

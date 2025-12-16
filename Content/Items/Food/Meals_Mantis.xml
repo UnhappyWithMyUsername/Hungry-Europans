@@ -4,22 +4,20 @@
   
     <!--Mantis-->    
     
-    <!-- TODO: sprite -->
     <!-- Mantis Tempura (raw)  -->
-    <Item name="Raw Mantis Tempura" identifier="he-he-mantistempuraraw" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Raw Mantis Tempura" identifier="he-mantistempuraraw" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,71,37,20" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,71,37,20" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,71,37,20" depth="0.525" origin="0.5,0.05"  />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,72,24,29" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,72,24,29" depth="0.525" origin="0.5,0.05"  />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="he-mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-mantismeatchunk" amount="1" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-flour" mincondition="0.3" UseCondition="true" />
         <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="33" height="16" density="9" />
+      <Body width="24" height="29" density="10" />
       <!-- ItemComponent hosts the effects for frying the item -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activefryer" targetcontainer="true" />
@@ -38,20 +36,19 @@
       </ItemComponent>
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="90" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimable="false" handle1="5,-5" msg="ItemMsgPickUpSelect" />
     </Item>
     
-    <!-- TODO: sprite + sfx -->
     <!-- Mantis Tempura (fried)  -->
     <Item hideinmenus="false" name="Mantis Tempura" identifier="he-mantistempurafried" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" subcategory="Food - Mantis" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" maxcondition="99" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,112,29,24" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,112,29,24" depth="0.525" origin="0.5,0.05"  />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="78" radius="15" density="11" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="33,23" holdangle="270" holdpos="36,20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="20,18" holdangle="270" holdpos="36,20" handle1="5,-5" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
 
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -65,7 +62,7 @@
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -79,7 +76,8 @@
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="255,220,50,255" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -90,14 +88,14 @@
 
     <!-- TODO: sprite -->
     <!-- Mantis Thermidor -->
-    <Item HideInMenus="false" name="" identifier="he-mantisthermidor" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+    <Item HideInMenus="false" name="" identifier="he-mantisthermidor" variantof="he-poisoneffectpreset_fork" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True" health="16" >
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,60,68,29" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,60,68,29" depth="0.525" origin="0.5,0.65" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,60,68,29" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,60,68,29" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,60,68,29" depth="0.525" origin="0.5,0.65" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,60,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="80" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-boiledmantismeat" amount="1" UseCondition="false" />
@@ -120,8 +118,8 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="he-calciumrich" amount="30.0" />
-          <Affliction identifier="he-stuffed" amount="2" />
-          <ReduceAffliction type="hunger" amount="2" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
