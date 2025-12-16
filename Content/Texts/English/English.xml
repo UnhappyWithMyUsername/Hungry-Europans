@@ -920,16 +920,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <roomname.restroom>Restroom</roomname.restroom><!--Patch 13-->
 
 
-
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
-<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING
-
- TODO: sort this text in proper places when done  -->
+ <!-- TODO: sort this text in proper places when done  -->
 
 <itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> 
 
@@ -1020,7 +1011,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.he-proteinrich>Bulk up! You swing harder and feel like holding a gun.</afflictiondescription.he-proteinrich>
 
 <afflictionname.he-vitaminrich>Vitamin Rich Diet</afflictionname.he-vitaminrich>
-<afflictiondescription.he-vitaminrich>Stimulates red blood cells. Hold your breath for longer and reduce bleed less.</afflictiondescription.he-vitaminrich>
+<afflictiondescription.he-vitaminrich>Stimulates red blood cells. Hold your breath for longer and slowly cure bleed loss.</afflictiondescription.he-vitaminrich>
 
 <afflictionname.he-sugarrich>Sugar Rich Diet</afflictionname.he-sugarrich>
 <afflictiondescription.he-sugarrich>The sugar rush keeps you focused. Learn faster, improves the mood and fatigue. </afflictiondescription.he-sugarrich>
@@ -1493,6 +1484,33 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.he-radsausage>RadWurst</entityname.he-radsausage>
 <entitydescription.he-radsausage>Imbued with gamma radiation, this sausage has swollen to an impressive girth. You can only hope that this won't give funny ideas to the engineer...</entitydescription.he-radsausage>
+
+
+
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+<!-- NEW ADDITIONS UNDER THIS NEEDS TRANSLATING -->
+
+<entityname.he-spinelingdip>Spineling BBQ Dip</entityname.he-spinelingdip>
+<entitydescription.he-spinelingdip>Seared Spineling slices with a mound of home-made BBQ sauce for dipping. A deceptively simple meal as many Chefs have left spineling meat unattended on the grill and smelled the consequences.</entitydescription.he-spinelingdip>
+
+<entityname.he-cookiejar>Cookie Jar</entityname.he-cookiejar>
+<entitydescription.he-cookiejar>Full of cookies, full of goodies.</entitydescription.he-cookiejar>
+
+<entityname.he-cookie>Cookie</entityname.he-cookie>
+<entitydescription.he-cookie>A crunchy chocolate chip cookie baked to perfection. There goes cavities!</entitydescription.he-cookie>
+
+<charactername.he-auntdoris>Aunt Doris</charactername.he-auntdoris>
+
+
+
+<entityname.nutberrybrushseed>NutBerry Brush Seed</entityname.nutberrybrushseed>
+<entitydescription.nutberrybrushseed>Plant it in a planter. Only grows Popnut and Bubbleberry leaves.</entitydescription.nutberrybrushseed>
+
+
 
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->

@@ -402,16 +402,9 @@
         <Replace tag="[amount]" value="50" color="gui.green"/>
         <Replace tag="[affliction]" value="afflictionname.infection" color="gui.orange"/>
       </Description>
-      <AbilityGroupInterval>
+      <AbilityGroupInterval interval="1.0">
         <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character">
-                <!-- currently 5x bleeding recovery compared to normal -->
-                <ReduceAffliction identifier="bleeding" strength="0.5"/>
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityReduceAffliction afflictionId="bleeding" amount="0.5" />
         </Abilities>
       </AbilityGroupInterval>
       <AbilityGroupEffect abilityeffecttype="None">

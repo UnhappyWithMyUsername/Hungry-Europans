@@ -113,7 +113,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,389,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,389,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" waterdragcoefficient="1" />
-      <SuitableTreatment type="thirst" suitability="75" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
@@ -165,7 +165,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="474,436,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="55" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -326,8 +326,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -394,65 +394,29 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
     
-    <!--DISABLE VANILLA ITEM -->
+    <!--REPLACE VANILLA ITEM WITH MODDED BEER -->
     <Item name="" nameidentifier="beerbottle" identifier="beerbottle1" category="Medical,Misc" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" amount="1" spawnprobability="0.00" />
-      <PreferredContainer secondary="abandonedcrewcab,piratecrewcab" minamount="1" maxamount="1" spawnprobability="0.00" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.00" notcampaign="true" notpvp="true"/>
-      <PreferredContainer primary="medfabcab" secondary="medcab"/>
-      <Price baseprice="60" sold="false">
-        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="false">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantnightclub" minavailable="20" sold="false" />
-      </Price>
-      <!-- <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="60" fabricationlimitmin="2" fabricationlimitmax="6"/> -->
       <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="835,0,20,63" depth="0.6" origin="0.5,0.5" />
-      <SuitableTreatment type="psychosis" suitability="12" />
       <Body width="20" height="63" density="20" />
-      <!-- characterusable="false" because the "Use" action is triggered via a status effect when the bottle is empty, can't be done just by hitting E -->
       <Holdable canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" characterusable="false" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0"/>
-        <StatusEffect type="OnSecondaryUse" target="This">
-          <Conditional Condition="gte 99" />
-          <Sound file="Content/Items/Medical/ITEM_bottleOpen.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This">
-          <Conditional Condition="lt 95" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
-          <Conditional Condition="gt 1" />
-          <Sound file="Content/Items/Medical/ITEM_drinkingQuick.ogg" range="250" />
-        </StatusEffect>
-        <!-- When beer is drunk -->
-        <StatusEffect type="OnSecondaryUse" target="This,UseTarget" duration="20" disabledeltatime="true">
-          <Conditional Condition="lte 1" />
-          <Use/>
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This">
-          <ParticleEmitter particle="juicedrop" particlespersecond="10" scalemin="1" scalemax="1.5" distancemin="20" distancemax="25" anglemin="80" anglemax="100" velocitymin="40" velocitymax="60" copyentityangle="true" lifetimemultiplier="0.10" />
-        </StatusEffect>
-        <!-- When beer is used in Health GUI -->
-        <StatusEffect type="OnUse" target="UseTarget" duration="12" stackable="false">
-          <ReduceAffliction identifier="psychosis" amount="1" />
-          <ReduceAffliction identifier="hallucinating" amount="1" />
-          <Affliction identifier="drunk" amount="2" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="Always" target="This" oneshot="true" >
           <Remove />
+          <SpawnItem identifier="he-beercoalitionpremium" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Holdable>
     </Item>
     
-    <!--DISABLE VANILLA ITEM -->
+    <!--REPLACE VANILLA ITEM WITH MODDED BEER -->
     <Item name="" nameidentifier="beerbottle" identifier="beerbottle2" variantof="beerbottle1">
       <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="856,0,21,63" depth="0.6" origin="0.5,0.5" />
     </Item>
@@ -579,8 +543,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -599,7 +563,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="2,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="20" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -648,9 +612,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -753,8 +720,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -773,7 +740,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="20" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -822,9 +789,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -857,7 +827,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="361,0,31,66" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="393,0,31,66" depth="0.6" maxcondition="99" />
       <Body width="27" height="66" density="15" />
-      <SuitableTreatment type="thirst" suitability="25" />
+      <SuitableTreatment type="thirst" suitability="15" />
       <SuitableTreatment type="embarrassment" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
@@ -931,8 +901,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -951,7 +921,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="38,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="10" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -997,9 +967,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1101,8 +1074,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1166,9 +1139,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1267,8 +1243,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1332,9 +1308,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1438,8 +1417,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1505,9 +1484,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1610,8 +1592,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1676,9 +1658,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1778,8 +1763,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -1844,9 +1829,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -1924,7 +1912,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="323,23,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="342,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="100" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
@@ -1963,8 +1951,8 @@
         </StatusEffect>
       </Holdable>
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
             <Remove />
           </StatusEffect>
@@ -1991,7 +1979,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,23,18,43" depth="0.525" origin="0.5,0.78"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
-      <SuitableTreatment type="thirst" suitability="95" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
@@ -2030,8 +2018,8 @@
         </StatusEffect>
       </Holdable>
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
             <Remove />
           </StatusEffect>
@@ -2063,7 +2051,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
-      <SuitableTreatment type="thirst" suitability="100" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -2134,8 +2122,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -2199,9 +2187,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2225,7 +2216,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
-      <SuitableTreatment type="thirst" suitability="95" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -2296,8 +2287,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -2361,9 +2352,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2393,7 +2387,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="424,133,25,65" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="450,133,25,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
-      <SuitableTreatment type="thirst" suitability="95" />
+      <SuitableTreatment type="thirst" suitability="60" />
       <LightComponent range="70.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
@@ -2467,8 +2461,8 @@
       </CustomInterface>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -2535,9 +2529,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2604,9 +2601,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2667,9 +2667,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2731,9 +2734,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>    
@@ -2808,9 +2814,12 @@
         </Button>
       </CustomInterface>
       <ItemComponent>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item> 
@@ -2876,9 +2885,12 @@
         <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true">
           <Conditional InWater="True" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item> 
@@ -2894,12 +2906,12 @@
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="2" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem identifier="he-emptyglass" UseCondition="False" MinCondition="0.0" MaxCondition="1.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="95" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -2941,9 +2953,9 @@
         </Button>
       </CustomInterface>
       <ItemComponent>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -2977,7 +2989,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
@@ -3073,8 +3085,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3143,8 +3155,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3213,8 +3225,8 @@
       </ItemComponent> 
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3283,8 +3295,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3353,8 +3365,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3377,13 +3389,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="2" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="5" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -3423,9 +3432,12 @@
         </Button>
       </CustomInterface>
       <ItemComponent>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -3544,8 +3556,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3603,8 +3615,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3662,8 +3674,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3721,8 +3733,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3780,8 +3792,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -3804,13 +3816,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="21" height="58" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="2" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="5" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -3833,9 +3842,12 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -3854,9 +3866,12 @@
         </Button>
       </CustomInterface>
       <ItemComponent>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </ItemComponent>
     </Item>
@@ -3966,8 +3981,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4021,8 +4036,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4076,8 +4091,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4131,8 +4146,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4186,8 +4201,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -4217,7 +4232,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,468,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="40" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4339,9 +4354,12 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4372,7 +4390,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,447,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="40" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4495,9 +4513,12 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4535,7 +4556,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4651,9 +4672,12 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -4687,7 +4711,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -4836,7 +4860,7 @@
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,436,24,37" depth="0.55" origin="0.5,0.42" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,436,24,37" depth="0.525" origin="0.5,0.7"  />
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand,Any" aimpos="30,-15" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -4950,7 +4974,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -5068,9 +5092,12 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnBroken" target="This" spawnitemrandomly="true" >
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.99" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -5104,7 +5131,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirst" suitability="70" />
+      <SuitableTreatment type="thirst" suitability="30" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" MaxOutputLength="3" />
       <ItemComponent characterusable="true">
@@ -5259,7 +5286,7 @@
       <ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="222,0,21,66" depth="0.6" maxcondition="99" />
       <Body width="21" height="58" density="15" />
-      <SuitableTreatment type="thirst" suitability="90" />
+      <SuitableTreatment type="thirst" suitability="70" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
@@ -5355,8 +5382,8 @@
       </ItemComponent>
       <!-- Inventory to fill a glass with drag and drop -->
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
-        <Containable items="emptyglass">
-          <StatusEffect type="OnInserted" target="Contained">
+        <Containable items="he-emptyglass">
+          <StatusEffect type="OnInserted" target="Contained" disabledeltatime="true" stackable="false" duration="0.5">
             <Remove />
           </StatusEffect>
           <!-- "open" the bottle when inserting a glass -->
@@ -5375,7 +5402,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="146,237,17,34" depth="0.525" origin="0.5,0.7"  />
       <Body width="11" height="28" density="15" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <SuitableTreatment type="thirst" suitability="50" />
+      <SuitableTreatment type="thirst" suitability="70" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 

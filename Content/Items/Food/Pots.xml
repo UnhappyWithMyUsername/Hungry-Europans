@@ -42,11 +42,20 @@
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="lte 0" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="eq 1" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-crawyumsoupgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
         </Containable>
       </ItemContainer>
+      <Quality MaxQuality="1">
+        <QualityStat stattype="Condition" value="0.0"/>
+      </Quality>
     </Item>
 
     <Item name="Pot of Bone Broth" identifier="he-potbonebroth" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -85,11 +94,20 @@
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="lte 0" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-bonebroth" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="eq 1" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-bonebrothgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
         </Containable>
       </ItemContainer>
+      <Quality MaxQuality="1">
+        <QualityStat stattype="Condition" value="0.0"/>
+      </Quality>
     </Item>    
     
     <Item name="Pot of Seaweed Soup" identifier="he-potseaweedsoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
@@ -128,11 +146,20 @@
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="lte 0" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-seaweedsoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="eq 1" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-seaweedsoupgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
         </Containable>
       </ItemContainer>
+      <Quality MaxQuality="1">
+        <QualityStat stattype="Condition" value="0.0"/>
+      </Quality>
     </Item>
 
     <Item name="Pot of Fondue" identifier="he-potfondue" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -171,18 +198,26 @@
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="lte 0" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-fondue" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
+            <Conditional Quality="eq 1" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-fonduegood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
         </Containable>
       </ItemContainer>
+      <Quality MaxQuality="1">
+        <QualityStat stattype="Condition" value="0.0"/>
+      </Quality>
     </Item>
 
 
 
     <!--SOUP BOWLS-->
     <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -256,9 +291,11 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    <Item hideinmenus="true" nameidentifier="he-crawyumsoup" descriptionidentifier="he-crawyumsoup" identifier="he-crawyumsoupgood" variantof="he-crawyumsoup">
+      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
+    </Item>
     
     <Item hideinmenus="false" name="Bone Broth" identifier="he-bonebroth" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -335,9 +372,11 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    <Item hideinmenus="true" nameidentifier="he-bonebroth" descriptionidentifier="he-bonebroth" identifier="he-bonebrothgood" variantof="he-bonebroth">
+      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
+    </Item>
 
     <Item hideinmenus="false" name="Seaweed Soup" identifier="he-seaweedsoup" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -411,9 +450,11 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    <Item hideinmenus="true" nameidentifier="he-seaweedsoup" descriptionidentifier="he-seaweedsoup" identifier="he-seaweedsoupgood" variantof="he-seaweedsoup">
+      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
+    </Item>
 
     <Item hideinmenus="false" name="Fondue" identifier="he-fondue" variantof="he-poisoneffectpreset_spoon" health="10" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -486,10 +527,12 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    <Item hideinmenus="true" nameidentifier="he-fondue" descriptionidentifier="he-fondue" identifier="he-fonduegood" variantof="he-fondue">
+      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
+    </Item>
 
 
     <Item hideinmenus="false" name="Fiber Muesli" identifier="he-fibermueslibowl" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood" description="" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -498,7 +541,7 @@
       <Fabricate suitablefabricators="blender" requiredtime="15" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="fiberplant" UseCondition="True" />
-        <RequiredItem identifier="popnut" amount="1" />
+        <RequiredItem identifier="popnutpopped" amount="1" />
         <RequiredItem tag="seedingredient" amount="4" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
@@ -557,6 +600,9 @@
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
+    </Item>
+    <Item hideinmenus="true" nameidentifier="he-fibermueslibowl" descriptionidentifier="he-fibermueslibowl" identifier="he-fibermueslibowlgood" variantof="he-fibermueslibowl">
+      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
 
 

@@ -744,6 +744,54 @@ ProductSpawnChance
       </Holdable>
     </Item>
   
+    <!-- NUTBERRY BRUSH SEED (bubbleberry x popnut) only produces leaves-->
+    <Item name="Nutberry Brush Seed" identifier="nutberrybrushseed" category="Misc" Tags="smallitem,seed,seedingredient,plantitem,bubbleberryseed"  maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="135,135,255,255" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="25,164,19,18" origin="0.5,0.5" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
+      <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
+      <Price baseprice="10" sold="false">
+      </Price>
+      <Deconstruct time="5">
+      </Deconstruct>
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
+        <RequiredSkill identifier="cooking" level="10" />
+        <RequiredItem identifier="bubbleberries" Amount="1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="5">
+        <RequiredSkill identifier="cooking" level="15" />
+        <RequiredItem identifier="badbubbleberries" Amount="1"/>
+      </Fabricate>
+      <Growable name="bubbleberryvineseed" GrowthSpeed="0.019" pickingtime="3" maximumvines="3" Maxwater="400" WaterUsedPerSecond="0.31" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.020" flowertint="255,54,0,255" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.7" vinescale="0.25" vinetint="111,160,155,255" GrowthWeights="1,0,0,0">      
+        <ProducedItem identifier="bubbleberryleaf" probability="0.5" />
+        <ProducedItem identifier="popnutleaf" probability="0.5" />
+        <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+          <LeafSprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" sourcerect="64,60,230,226" />
+          <LeafSprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" sourcerect="294,90,218,211" />
+          <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+          <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+          <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+          <VineSprite type="Stem" sourcerect="640,128,128,128" />
+          <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+          <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
+          <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+          <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+          <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+          <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+          <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+          <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+          <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+          <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+          <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+          <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+          <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+          <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+          <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+        </VineSprites>
+      </Growable>
+      <Body radius="15" density="10.1" />
+      <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    </Item>
+
 
 
     <!-- TEST ITEMS FOR GARDENING  -->

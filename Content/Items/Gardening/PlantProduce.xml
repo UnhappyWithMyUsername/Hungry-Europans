@@ -268,6 +268,10 @@
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="nutberrybrushseed" commonness="3" requiredotheritem="popnut" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       
       <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
@@ -300,7 +304,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3,monsterfood" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
+  <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3,monsterfood" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Price baseprice="47" >
@@ -310,9 +314,13 @@
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="nutberrybrushseed" commonness="3" requiredotheritem="bubbleberries" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
     <Throwable characterusable="True" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" aimable="false" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnNotContained" target="this" tags="notcontained" duration="0.1" CheckConditionalAlways="true" />
-      <StatusEffect type="InWater" target="This" Scale="0.05">
+      <StatusEffect type="InWater" target="This" Scale="0.03">
         <Conditional HasStatusTag="eq notcontained" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
@@ -645,7 +653,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,waterreactivesize,petfood1,petfood2,petfood3,monsterfood" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,waterreactivesize,petfood1,petfood2,petfood3,monsterfood" cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="92,0,45,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Deconstruct time="7">
@@ -653,7 +661,7 @@
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnNotContained" target="this" tags="notcontained" duration="0.1" CheckConditionalAlways="true" />
-      <StatusEffect type="InWater" target="This" Scale="0.05">
+      <StatusEffect type="InWater" target="This" Scale="0.03">
         <Conditional HasStatusTag="eq notcontained" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
@@ -745,7 +753,7 @@
   </Item>
  
   <!-- mutated Banana fuel rod, 1/3rd the durability (and output?) of a fuel rod  -->
-  <Item name="bananafuelrod" identifier="bananafuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem,fuelrod" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8" spritecolor="255,255,255,255">
+  <Item name="bananafuelrod" identifier="bananafuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8" spritecolor="255,255,255,255">
     <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,320,64,64" depth="0.52" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="reactorcab"/>
@@ -758,9 +766,7 @@
       <Item identifier="potassium" mincondition="0.95" />
     </Deconstruct>
     <Throwable characterusable="true" slots="Any,RightHand,LeftHand" handle1="-10,-10"  holdpos="0,0" holdangle="-50" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <!-- TODO: reenable this and remove fuelrod tag if devs put the fuel property on the ROD rather than the reactor
-            https://github.com/FakeFishGames/Barotrauma/pull/15827 -->
-      <!-- <StatusEffect type="OnContained" target="Parent" AvailableFuel="20.0" disabledeltatime="true" /> -->
+      <StatusEffect type="OnContained" target="Parent" AvailableFuel="20.0" disabledeltatime="true" />
       <StatusEffect type="OnActive" target="Character" >
         <Affliction identifier="radiationsickness" strength="0.4" />
       </StatusEffect>

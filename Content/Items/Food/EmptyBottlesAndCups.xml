@@ -3,7 +3,6 @@
   <Items>
     <!--////////// GLASS FRAGMENTS \\\\\\\\\\-->
     <Item name="Glass Fragments" identifier="he-glassfragments" category="Misc" subcategory="Ingredients" maxstacksize="20" cargocontaineridentifier="metalcrate" description="Shattered glass. Can be obtained through smashing bottles or crafting them from quartz at a fabricator. Used for crafting at a fabricator or bottle printer." Tags="smallitem,ingredient,glassfragments" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_glassfragments" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="bottleprinter" secondary="kitchen,locker"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="291,1,62,14" depth="0.6" origin="0.5,0.5" />
@@ -45,7 +44,6 @@
     <!--////////// EMPTY BOTTLES AND CUPS - CLEAN \\\\\\\\\\-->
 
     <Item name="Empty Bottle" identifier="he-emptybottle" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlecommon,seawaterrefill_common,cleanwaterrefill_common" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -138,7 +136,6 @@
     </Item>
     
     <Item name="Empty Rum Bottle" identifier="he-emptybottlerum" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty rum bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlerum,seawaterrefill_rum,cleanwaterrefill_rum" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -232,7 +229,6 @@
     </Item>
     
     <Item name="Empty Whiskey Bottle" identifier="he-emptybottlewhiskey" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Whiskey bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlewhiskey,seawaterrefill_whiskey,cleanwaterrefill_whiskey" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -325,7 +321,6 @@
     </Item>
 
     <Item name="Empty Halucinova Bottle" identifier="he-emptybottlehalucinova" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Halucinova bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlehalucinova,seawaterrefill_halucinova,cleanwaterrefill_halucinova" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -418,7 +413,6 @@
     </Item>
 
     <Item name="Empty Beer Bottle" identifier="he-emptybottlebeer" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty beer bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlebeer,seawaterrefill_beer,cleanwaterrefill_beer" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -511,7 +505,6 @@
     </Item>
 
     <Item name="Empty Jar" identifier="he-emptyjar" category="Equipment" subcategory="Tableware" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty jar used for some recipes. Can be thrown." Tags="smallitem,ingredient,emptyjar" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -565,7 +558,6 @@
     </Item>
 
     <Item name="Empty Shaker" identifier="he-emptyshaker" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty shaker ready to be filled with salt! Can be thrown" Tags="smallitem,ingredient,emptyshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -619,7 +611,6 @@
 
     
     <Item name="Empty Cup" identifier="he-emptycup" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -664,41 +655,7 @@
           <Remove />
           <SpawnItem identifier="he-cuphotchocolate" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- when the cup gets spawned in, spawn "effect_makedirty" into the cup's inventory if the starting condition was lower than 100 (when an empty cup is spawned in after drinking) | It's to make cups get dirty over time after they were used for drinking and weren't refilled in time -->
-        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
-          <Conditional condition="lt 100" />
-          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty cup and spawn a dirty variant in its place -->
-        <StatusEffect type="OnContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty cup and spawn a dirty variant in its place -->
-        <StatusEffect type="OnNotContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtycup" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
-        <Containable items="effect">
-          <!-- reduce the empty cup condition by 1 each second to make it "dirty" over time -->
-          <StatusEffect type="OnContaining" target="This" condition="-1">
-            <Conditional condition="gt 1" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
         <!-- remove contined "effect_makedirty" to prevent the cup from getting dirty over time -->
-        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
-          <Remove />
-        </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
@@ -708,11 +665,10 @@
           <Remove />
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
-      </ItemComponent>
+      </Holdable>
     </Item>
 
     <Item name="Empty Mug" identifier="he-emptymug" health="100" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty mug for drinks. Can be thrown or filled with coffee." Tags="smallitem,ingredient,emptymug,mug,coffeecup,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5" isshootable="true" requireaimtouse="true" hideconditionbar="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -757,46 +713,10 @@
           <Remove />
           <SpawnItem identifier="he-mughotchocolate" spawnposition="SameInventory" Equip="true" condition="0.01" />
         </StatusEffect>
-        <!-- when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
-        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
-          <Conditional condition="lt 100" />
-          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtymug" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnNotContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtymug" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
       </Holdable>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
-        <Containable items="effect">
-          <!-- reduce the empty mug condition by 1 each second to make it "dirty" over time -->
-          <StatusEffect type="OnContaining" target="This" condition="-1">
-            <Conditional condition="gt 1" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
-        <!-- remove contined "effect_makedirty" to prevent the mug from getting dirty over time -->
-        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
-          <Remove />
-        </StatusEffect>
-      </ItemComponent>
     </Item>
 
     <Item name="Empty Cocktail Glass" identifier="he-emptycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycocktailglass,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="456,199,19,65" depth="0.499" origin="0.5,0.5" />
@@ -873,25 +793,6 @@
         <RequiredItem tag="fullglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <!-- when the mug gets spawned in, spawn "effect_makedirty" into the mug's inventory if the starting condition was lower than 100 (when an empty mug is spawned in after drinking) | It's to make mugs get dirty over time after they were used for drinking and weren't refilled in time -->
-        <StatusEffect type="OnContained" target="This" disabledeltatime="true" oneshot="true">
-          <Conditional condition="lt 100" />
-          <SpawnItem identifier="effect_makedirty" spawnposition="ThisInventory" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtyglass" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <!-- when condition reaches between 0.1 and 1, remove the empty mug and spawn a dirty variant in its place -->
-        <StatusEffect type="OnNotContained" target="This" comparison="And">
-          <Conditional condition="gte 0.1" />
-          <Conditional condition="lte 1.0" />
-          <Remove />
-          <SpawnItem identifier="he-dirtyglass" spawnposition="This" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-        </StatusEffect>
         <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
         <StatusEffect type="OnBroken" target="This">
           <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="7" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,180"/>
@@ -903,30 +804,12 @@
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
       </Holdable>
-      <ItemContainer capacity="1" maxstacksize="1" allowaccess="false" drawinventory="false" allowdraganddrop="false" showcontainedstateindicator="false">
-        <Containable items="effect">
-          <!-- reduce the empty mug condition by 1 each second to make it "dirty" over time -->
-          <StatusEffect type="OnContaining" target="This" condition="-1">
-            <Conditional condition="gt 1" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <!-- repair the item when it is used by a dishwasher -->
-      <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
-        <StatusEffect type="OnUse" target="This" condition="2" disabledeltatime="true" />
-        <!-- remove contined "effect_makedirty" to prevent the mug from getting dirty over time -->
-        <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" oneshot="true">
-          <Remove />
-        </StatusEffect>
-      </ItemComponent>
     </Item>
-
 
 
 
     <!--////////// EMPTY CUPS - DIRTY \\\\\\\\\\-->
     <Item name="Dirty Cup" identifier="he-dirtycup" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycup,cup,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -987,7 +870,6 @@
     </Item>
 
     <Item name="Dirty Mug" identifier="he-dirtymug" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,dirtymug,mug,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1037,7 +919,6 @@
     </Item>
 
     <Item name="Dirty Cocktail Glass" identifier="he-dirtycocktailglass" category="Equipment" subcategory="Tableware" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,dirtycglass,dirtytableware,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="456,199,19,65" depth="0.499" origin="0.5,0.5" />

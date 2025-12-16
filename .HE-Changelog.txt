@@ -3,100 +3,56 @@
 //////////////////////
 //////////////////////
 
-Search "TODO:" in the mod
-PRIORITIES
+Search "TODO:" in the mod for things that need updating
 
-High:
-- Testing, testing, testing
+SHORT TERM TODO / NEXT UPDATE:
+
+Mantis
+- Mantis meat and meals
+- Have multiple recipes for each create meat type (at least 2)
+
+Include underused ingredients
+- Plants and mutated plants
+- Creature Loot as ingredients (swim bladder, etc)
+- Exotic nonsense like husk stingers
+
+Important stuff:
+- TEST NEw FEATURES
 - Plant RE-rework when DLC comes out
-- Missing text
-- Missing item sprites
-- Make ingredients visible in the cooked items sprite
+- Ensure Neurotrauma compatibility
 
-Medium:
-- Optimize all the statuseffects
-- Declutter fabricator windows by removing dupe recipes
-- Add canned ingredients (how?)
-- Align Contained Sprites for table/grill (avoid floating items)
-- Containable icon sprites
-- Balance food values / food buffs
-- Use more varied ingredients in new recipes
 
-Low: 
-- Adding new food types
-- Sell prices, shop
-- DE Hydroponics compatibility
-- More fryable food
-- More grillable food
-- Neurotrauma compatibility
 
 //////////////////////
 //////////////////////
 //////////////////////
 
-[hr]23/11/2025[/hr]
+[hr]15/12/2025[/hr]
 
+Hotfix
 
 [b]Additions:[/b]
 [List]
-[*] Added Blender and several blender recipes
-[*] Added "Monster Doner" and "SPAM" to repurpose low-condition meats that cannot be used for cooking
-[*] Added "MushRaptor Sauté"
-[*] Added "Thresher and Bufo Purée"
-[*] Added a new talent for the Chef: Psycookinesis
-[*] Added "Radwurst" which is obtained by cooking a sausage inside the reactor (does not work in vanilla yet)
-[*] Enabled Hygiene for Filthy Europan (was accidentally disabled). Wash yourself by removing clothes in a ballast
-[*] Empty Glasses can now be crafted at both Fabricator and Bottle Printer
-[*] You can now drag & drop an empty glass onto a bottle to fill it with the bottle's content
+[*] Added Nutberry Brush hybrid plant (only produces popnut and bubbleberry leaves)
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Human meat can no longer be used for generic food (burgers, hotdogs...). Consuming human meat should always result in gaining "Cannibalism" for balance purposes
-[*] Disabled rawhumanmeat as it is no longer used
-[*] Renamed "Hungry for Human Meat" into "Craving Human Meat" for clarity
-[*] Rebalanced Cannibalism/Craving. Meals give more cannibalism. Cannibalim goes away faster at lower values. Craving is removed much faster once Cannibalism is gone. Sleeping helps with curing cannibalism a bit.  
-[*] You can no longer get tapeworm when you have worms and vice-versa
-[*] Increased thirst values of water so you don't have to drink as many bottles
-[*] Added alternative Salt recipe so it's harder to run out of salt completely
-[*] Increased MRE eating speed
-[*] Added inventory icons for forks/spoons
-[*] Soups are served by dragging a bowl inside the pot instead of using fabrication. This prevents the pots from being "eaten" by the stove
-[*] Added more output slots for kitchen fabricators to prevent items from accidentally falling and making it easier to serve soups
-[*] Kettle content like tea or coffee is now poured (RMB+LMB) directly into cups (cup needs to be aimed by you or a nearby player)
-[*] Cups can now be toggled between refill or drinking mode via your "Use" keybind (default "E")
-[*] Cups and glasses will now become dirty over time if you drank from them previously and didn't refill for a while
-[*] Seeds meant to be used as ingredients (oil, flour...) now use the "seedingredient" tag. Update your custom plants!
-[*] More glass containers can go inside Liquor crates
-[*] Nerfed Cleaver damage and limb severing chance by about 20% (it was too strong)
-[*] Replacement panel for ULD is now hidden to avoid sprite depth conflicts
-[*] Adjusted prices and quantities of meats sold at butcher merchant for clarity
-
+[*] Increase bot threshold for healing hunger/thirst. Bots are still very annoying especially medic bots as they try but cannot heal hunger on other players.
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed preplaced submarine kitchen items falling on the floor
-[*] Fixed unwired pumps in Abyss Scout submarine
-[*] Fixed Tapeworm and Craving Human Meat both giving hunger without Hungry Europan enabled
-[*] Fixed Worm/Tapeworm infection chance being way too high by default
-[*] Fixed some human foods increasing Craving instead of reducing it
-[*] Fixed dying of thirst taking an exceedingly long time
-[*] Fixed some drinks not filling your bladder
-[*] Fixed eating MRE with an empty bottle inside
-[*] Fixed Tea Mix not deleting itself at 0%
-[*] Fixed/Rebalanced Embarrassment effects to work properly above 100 
-[*] Fixed Blender and Coffee Machine taking damage in water
-[*] Fixed Soups reducing "Stuffed" affliction
-[*] Fixed infinite Butchering gain on abyssals
-[*] Fixed Toilets being complicated to detach - they now detach with crowbar using E. PREVIOUSLY PLACED TOILETS NEED TO BE UPDATED MANUALLY; OPEN CONSOLE AND TYPE 'triggerevent refreshtoilet'
+[*] Fix cookies being disabled
+[*] Fix vinegar/ketchup/oil breaking when combined
+[*] Fix shaker blueprint not working in bottle printer
 [/List]
 
 
 [b]KNOWN BUGS/ISSUES:[/b]
-[*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
-[*] Damage multipliers (like steroids) result in less meat being harvested on corpses
+[*] Bad bot support. It is NOT advised giving bots NEEDS.
 [*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
+[*] Poisons are not working for fork/spoon/fingerfood meals
 [*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
 
 
