@@ -47,6 +47,8 @@ Hotfix
 [*] Fix cookies being disabled
 [*] Fix vinegar/ketchup/oil breaking when combined
 [*] Fix shaker blueprint not working in bottle printer
+[*] Fix duplicate Muesli recipe
+[*] Fix coffee crafting time being 2x too long
 [/List]
 
 
