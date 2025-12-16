@@ -4549,7 +4549,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Fabricate suitablefabricators="coffeemachine" requiredtime="25" requiresrecipe="false">
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="16" requiresrecipe="false">
         <RequiredItem tag="coffeemix" UseCondition="true" mincondition="0.1" />
         <RequiredItem tag="emptycup" amount="1" />
       </Fabricate>
@@ -4704,7 +4704,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="2" />
-      <Fabricate suitablefabricators="coffeemachine" requiredtime="30" requiresrecipe="false">
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="16" requiresrecipe="false">
         <RequiredItem tag="coffeemix" UseCondition="true" mincondition="0.125" />
         <RequiredItem tag="emptymug" amount="1" />
       </Fabricate>
@@ -4967,7 +4967,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Fabricate suitablefabricators="coffeemachine" requiredtime="25" requiresrecipe="false">
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="16" requiresrecipe="false">
         <RequiredItem tag="chocolatemix" UseCondition="true" mincondition="0.1" />
         <RequiredItem tag="emptycup" amount="1" />
       </Fabricate>
@@ -5124,7 +5124,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="2" />
-      <Fabricate suitablefabricators="coffeemachine" requiredtime="30" requiresrecipe="false">
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="16" requiresrecipe="false">
         <RequiredItem tag="chocolatemix" UseCondition="true" mincondition="0.1" />
         <RequiredItem tag="emptymug" amount="1" />
       </Fabricate>
