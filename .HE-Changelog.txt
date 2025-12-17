@@ -7,10 +7,6 @@ Search "TODO:" in the mod for things that need updating
 
 SHORT TERM TODO / NEXT UPDATE:
 
-Mantis
-- Mantis meat and meals
-- Have multiple recipes for each create meat type (at least 2)
-
 Include underused ingredients
 - Plants and mutated plants
 - Creature Loot as ingredients (swim bladder, etc)
@@ -20,6 +16,7 @@ Important stuff:
 - TEST NEw FEATURES
 - Plant RE-rework when DLC comes out
 - Ensure Neurotrauma compatibility
+- Have multiple recipes for each create meat type (at least 2)
 
 
 
@@ -27,9 +24,9 @@ Important stuff:
 //////////////////////
 //////////////////////
 
-[hr]15/12/2025[/hr]
+[hr]17/12/2025[/hr]
 
-Hotfix
+Hotfix + Mantis meat
 
 [b]Additions:[/b]
 [List]
@@ -39,16 +36,19 @@ Hotfix
 
 [b]Changes:[/b] 
 [List]
-[*] Increase bot threshold for healing hunger/thirst. Bots are still very annoying especially medic bots as they try but cannot heal hunger on other players.
+[*] Increase bot threshold for healing hunger/thirst. Bots are still very annoying especially Medic bots as they try but cannot heal hunger on other players.
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fix cookies being disabled
+[*] Fix cookies recipe being disabled
 [*] Fix vinegar/ketchup/oil breaking when combined
 [*] Fix shaker blueprint not working in bottle printer
 [*] Fix duplicate Muesli recipe
-[*] Fix coffee crafting time being 2x too long
+[*] Fix coffee crafting times being 2x too long (since winter update)
+[*] Fix sink crafting times being 2x too long (since winter update)
+[*] Fix refill station crafting times being 2x too long (since winter update)
+[*] Fix cola cans not working properly
 [/List]
 
 
