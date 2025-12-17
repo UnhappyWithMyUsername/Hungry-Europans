@@ -212,6 +212,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-energydrink1>Energy Drink</entityname.he-energydrink1>
 <entitydescription.he-energydrink1>A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit.</entitydescription.he-energydrink1>
 
+<!-- TODO: fix the alcohol descriptions to be more readable -->
 <entityname.rum>Rum</entityname.rum>
 <entitydescription.rum>A strong alcoholic beverage. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Heal Damage |Increase Psychosis Resistance</entitydescription.rum>
 
