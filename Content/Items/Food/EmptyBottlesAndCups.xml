@@ -626,7 +626,7 @@
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="he-glassfragments" amount="1" UseCondition="True" MinCondition="1.0"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtycup" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
@@ -684,7 +684,7 @@
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="steel" amount="1" />
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtymug" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
@@ -731,7 +731,7 @@
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="he-glassfragments" amount="1" />
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtycocktailglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate> -->

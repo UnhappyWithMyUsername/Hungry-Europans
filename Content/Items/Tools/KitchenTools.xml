@@ -59,7 +59,7 @@
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtypot" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
@@ -81,7 +81,7 @@
     <Item name="Pot with Water" identifier="he-potwithwater" category="Equipment" subcategory="Tableware" maxstacksize="1" Tags="smallitem,pot,waterpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="fill">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="fill">
         <RequiredItem identifier="he-pot" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="5">
@@ -611,7 +611,7 @@
         <RequiredItem identifier="calcium" amount="1" />
         <RequiredItem identifier="whitepaint" amount="1" usecondition="true" mincondition="0.1" />
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtyplate" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
@@ -682,7 +682,7 @@
         <RequiredItem identifier="calcium" amount="1" />
         <RequiredItem identifier="whitepaint" amount="1" usecondition="true" mincondition="0.1" />
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
         <RequiredItem identifier="he-dirtybowl" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
@@ -745,7 +745,7 @@
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="iron" amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="fork" amount="1" UseCondition="False" MinCondition="0.0" />
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
       </Fabricate>
@@ -779,7 +779,7 @@
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="iron" amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="spoon" amount="1" UseCondition="False" MinCondition="0.0" />
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.05" />
       </Fabricate>

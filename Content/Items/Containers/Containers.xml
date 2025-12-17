@@ -1642,7 +1642,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Fabricate suitablefabricators="sink" requiredtime="8" requiresrecipe="false" amount="1" outcondition="0.0" displayname="empty">
+      <Fabricate suitablefabricators="sink" requiredtime="5" requiresrecipe="false" amount="1" outcondition="0.0" displayname="empty">
         <RequiredItem identifier="he-teakettle" amount="1" mincondition="0.0" maxcondition="1.0" usecondition="false" />
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false" amount="1" outcondition="0.0">

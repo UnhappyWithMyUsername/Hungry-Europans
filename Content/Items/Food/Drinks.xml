@@ -2978,7 +2978,7 @@
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlecommon" Amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_common" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="2">
@@ -3114,7 +3114,7 @@
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_rum" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>
@@ -3184,7 +3184,7 @@
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlewhiskey" Amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_whiskey" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>
@@ -3254,7 +3254,7 @@
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlehalucinova" Amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_halucinova" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>
@@ -3324,7 +3324,7 @@
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
-      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_beer" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>
