@@ -292,6 +292,11 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     <Item hideinmenus="true" nameidentifier="he-crawyumsoup" descriptionidentifier="he-crawyumsoup" identifier="he-crawyumsoupgood" variantof="he-crawyumsoup">
+      <ClearAll>
+        <Fabricate />
+        <Price />
+        <PreferredContainer />
+      </ClearAll>
       <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
     
@@ -373,6 +378,11 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     <Item hideinmenus="true" nameidentifier="he-bonebroth" descriptionidentifier="he-bonebroth" identifier="he-bonebrothgood" variantof="he-bonebroth">
+      <ClearAll>
+        <Fabricate />
+        <Price />
+        <PreferredContainer />
+      </ClearAll>
       <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
 
@@ -451,6 +461,11 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     <Item hideinmenus="true" nameidentifier="he-seaweedsoup" descriptionidentifier="he-seaweedsoup" identifier="he-seaweedsoupgood" variantof="he-seaweedsoup">
+      <ClearAll>
+        <Fabricate />
+        <Price />
+        <PreferredContainer />
+      </ClearAll>
       <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
 
@@ -528,6 +543,11 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     <Item hideinmenus="true" nameidentifier="he-fondue" descriptionidentifier="he-fondue" identifier="he-fonduegood" variantof="he-fondue">
+      <ClearAll>
+        <Fabricate />
+        <Price />
+        <PreferredContainer />
+      </ClearAll>
       <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
 
