@@ -1511,7 +1511,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.nutberrybrushseed>NutBerry Brush Seed</entityname.nutberrybrushseed>
 <entitydescription.nutberrybrushseed>Plant it in a planter. Only grows Popnut and Bubbleberry leaves.</entitydescription.nutberrybrushseed>
 
-
+<entityname.he-fruitybowl>Fruity Bowl</entityname.he-fruitybowl>
+<entitydescription.he-fruitybowl>Bananas and fruits salad. Healthy and rich in vitamins.</entitydescription.he-fruitybowl>
 
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
