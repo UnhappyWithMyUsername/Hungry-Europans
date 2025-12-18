@@ -103,8 +103,8 @@
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.15"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="159" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="159" fabricationlimitmin="0" fabricationlimitmax="7" displayname="thresherfooditem"/>
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="80" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
