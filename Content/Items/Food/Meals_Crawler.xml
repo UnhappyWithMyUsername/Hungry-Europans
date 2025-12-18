@@ -19,7 +19,7 @@
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />
       </Deconstruct>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" displayname="crawlerfooditem"/>
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="80" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
