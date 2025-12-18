@@ -204,7 +204,18 @@
         </StatusEffect>
       </Holdable>
     </Item>
-
+    
+    <!-- TODO: refresh DE integration -->
+    <!-- disable this or we get a dupe with the old outdated DE version which uses he-energydrink1 -->
+    <Item name="Energy Drink" identifier="he-energydrink1" category="Misc" subcategory="Drinks" Tags="smallitem,drinkitem" hideinmenus="true">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="This" oneshot="true">
+          <Remove />
+          <Spawnitem identifier="energydrink" spawnposition="SameInventory" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </Holdable>
+    
+    </Item>
 
     <!--ADJUSTED ITEM TO APPLY EFFECTS WHILE DRINKING, GET DESTROYED ON IMPACT AND SPAWN EMPTY BOTTLE IF EMPTY-->
     <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Heal Damage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
