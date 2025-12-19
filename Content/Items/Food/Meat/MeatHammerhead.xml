@@ -97,7 +97,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="4" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="worminfection" amount="1" probability="0.00054" />
@@ -141,7 +141,7 @@
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-12.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
@@ -187,7 +187,7 @@
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-12.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="2.5" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
