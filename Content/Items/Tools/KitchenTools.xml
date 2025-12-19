@@ -416,16 +416,23 @@
         TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
           <Conditional isdead="true"/>
-          <Conditional he-butchered="gte 100"/>
-          <Conditional mass="lt 1000"/>
-          <DropContainedItems />
-          <RemoveCharacter />
+          <Conditional he-butchered="gte 100" />
+          <Conditional mass="lt 500"/>
+          <!-- <DropContainedItems /> -->
+          <!-- <RemoveCharacter /> -->
           <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
           <ParticleEmitter particle="heavygib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
-          <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" selectionmode="random"/>
+          <!-- <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" selectionmode="random"/>
           <Sound file="Content/Sounds/Damage/Gore2.ogg" range="500" selectionmode="random"/>
-          <Sound file="Content/Sounds/Damage/Gore3.ogg" range="500" selectionmode="random"/>
-        </StatusEffect>        
+          <Sound file="Content/Sounds/Damage/Gore3.ogg" range="500" selectionmode="random"/> -->
+        </StatusEffect>
+        <!-- play a sound for the player if butcher is 100 instead of corpse removal -->
+        <StatusEffect type="OnUse" target="UseTarget,Character" forceplaysounds="true" >
+          <Conditional he-butchered="gte 100" />
+          <Conditional IsLocalPlayer="True"/>
+          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="2" frequencymultiplier="0.75" />
+        </StatusEffect>
+        
       </MeleeWeapon>
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
       <Quality>
