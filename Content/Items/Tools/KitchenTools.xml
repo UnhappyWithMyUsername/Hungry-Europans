@@ -231,6 +231,16 @@
           <Affliction identifier="he-butchered" strength="5" />
         </StatusEffect>
         
+        <!--Big health nerf VITALITY CHECK DOESNT WORK?
+        Guarantees a fixed amount of butchered if the creature has a lot of health to prevent extracting huge amounts of meat -->
+        <!-- <StatusEffect type="OnUse" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional isdead="true"/>
+          <Conditional he-butchered="lt 100"/>
+          <Conditional vitality="gte 300"/>
+          <Affliction identifier="he-butchered" strength="5" />
+          <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" frequencymultiplier="0.7" volume="2" />
+        </StatusEffect> -->
+        
         <!-- TODO: meat cleaver suffers from a NASTY bug, damage multiplier will reduce the amount of total meat harvested 
                   https://github.com/FakeFishGames/Barotrauma/discussions/16309
                   
