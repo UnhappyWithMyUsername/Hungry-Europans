@@ -17,7 +17,7 @@
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-potwithwater" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-rawcrawlermeat" amount="1" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawcrawlermeat" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
