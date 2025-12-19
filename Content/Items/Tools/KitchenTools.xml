@@ -259,16 +259,8 @@
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
           <Conditional mass="gt 10" />
-          <Conditional mass="lt 150" />
-          <Affliction identifier="he-butchered" strength="50" />
+          <Affliction identifier="he-butchered" strength="280" />
           <SpawnItem identifier="he-crawlermeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
-          <Conditional speciesname="eq Crawlerbroodmother" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="100" />
-          <SpawnItem identifier="he-crawlermeatchunkspecial" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--mudraptor
         regular meat on all mudraptors-->
@@ -277,7 +269,7 @@
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
           <Conditional mass="gt 10" />
-          <Affliction identifier="he-butchered" strength="80" />
+          <Affliction identifier="he-butchered" strength="130" />
           <SpawnItem identifier="he-mudraptormeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--hammerhead
@@ -289,7 +281,7 @@
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
           <Conditional speciesname="neq hammerheadspawn" />
-          <Affliction identifier="he-butchered" strength="120" />
+          <Affliction identifier="he-butchered" strength="250" />
           <SpawnItem identifier="he-hammerheadmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
           <SpawnItem identifier="hammerheadribs" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.1" />
         </StatusEffect>
@@ -307,7 +299,7 @@
           <Conditional speciesname="eq human" />
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="50" />
+          <Affliction identifier="he-butchered" strength="80" />
           <SpawnItem identifier="he-humanmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--husk
@@ -317,7 +309,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="100" />
+          <Affliction identifier="he-butchered" strength="170" />
           <SpawnItem identifier="he-huskmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--spineling
@@ -326,7 +318,7 @@
           <Conditional group="spineling" />
           <Conditional isdead="true"/>       
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="25" />
+          <Affliction identifier="he-butchered" strength="40" />
           <SpawnItem identifier="he-spinelingmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--thresher
@@ -336,7 +328,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="110" />
+          <Affliction identifier="he-butchered" strength="130" />
           <SpawnItem identifier="he-threshermeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--Mantis
@@ -346,7 +338,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="130" />
+          <Affliction identifier="he-butchered" strength="150" />
           <SpawnItem identifier="he-mantismeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--watcher
@@ -356,7 +348,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="250" />
+          <Affliction identifier="he-butchered" strength="420" />
           <SpawnItem identifier="he-watchermeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--moloch        
@@ -366,7 +358,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
-          <Affliction identifier="he-butchered" strength="320" />
+          <Affliction identifier="he-butchered" strength="1000" />
           <SpawnItem identifier="he-molochmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--endworm
@@ -383,7 +375,7 @@
         <!--abyss meat
         generic meat for any modded abyss creature TODO: enable abyssal meat chunk        
         I multiply affliction by max health so it doesn't take an eternity to butcher (1 point = 1%)-->
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
+        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional group="eq abyss" />
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
@@ -423,7 +415,6 @@
         removes corpse at 100 butchered, don't remove huge corpses because it looks weird
         TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
-          <!-- <RequiredItem items="nomeatleft" type="Equipped" msg="itemmsgnomeatleft" /> -->
           <Conditional isdead="true"/>
           <Conditional he-butchered="gte 100"/>
           <Conditional mass="lt 1000"/>
