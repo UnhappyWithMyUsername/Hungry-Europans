@@ -6,6 +6,11 @@
     <!-- TODO: IF DEVS ENABLE CONDITIONALS TO CHECK FOR TALENTS, REMOVE THE TRAIT_LIKES_XXXX AFFLICTION AND INSTEAD CHECK TALENT IN THE STATUSEFFECT. ALSO REMOVE THE SE FROM THE TALENTS THEMSELVES -->
 
     <!-- FOOD -->
+    <!-- FOOD -->
+    <!-- FOOD -->
+    <!-- FOOD -->
+    <!-- FOOD -->
+    
     <Affliction name="" identifier="trait_likes_friedfoods" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_friedfood" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesfriedfood"/>
     </Affliction>
@@ -141,7 +146,27 @@
         </StatusEffect> 
       </Effect>
     </Affliction>
+    
+    <Affliction name="" identifier="trait_likes_fruits" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_fruits" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessweet"/>
+    </Affliction>
+    <Affliction name="" identifier="ate_fruit" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_sweet" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional trait_dislikes_fruits="neq 1" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect> 
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional trait_likes_fruits="gt 0" />
+          <ReduceAffliction identifier="mood" amount="1.5" />
+        </StatusEffect> 
+      </Effect>
+    </Affliction>
 
+    <!-- DRINKS -->
+    <!-- DRINKS -->
+    <!-- DRINKS -->
+    <!-- DRINKS -->
     <!-- DRINKS -->
 
     <Affliction name="" identifier="trait_likes_beer" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">

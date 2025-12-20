@@ -582,6 +582,7 @@
           <Affliction identifier="he-fiberrich" amount="45.0" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
+          <Affliction identifier="ate_fruit" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -599,6 +600,7 @@
           <Affliction identifier="he-fiberrich" amount="45.0" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
+          <Affliction identifier="ate_fruit" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
@@ -653,6 +655,7 @@
           <Affliction identifier="he-sugarrich" amount="10.0" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
+          <Affliction identifier="ate_fruit" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -671,6 +674,7 @@
           <Affliction identifier="he-sugarrich" amount="10.0" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
+          <Affliction identifier="ate_fruit" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
