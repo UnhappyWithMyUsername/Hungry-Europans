@@ -137,7 +137,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-rawspinelingslices" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.02"/>
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <!-- ItemComponent hosts the effects for grilling the item -->
