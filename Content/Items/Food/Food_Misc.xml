@@ -483,9 +483,9 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="379,322,51,11" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="44,0,64,60" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="379,322,51,11" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="butchery" level="10" />
-        <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.2" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem tag="rawmeatpiece" amount="3" MinCondition="0.2" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.3"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
@@ -527,7 +527,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
     
-    <Item hideinmenus="false" name="Jerky" identifier="he-cookedjerky" health="10" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Jerky" identifier="he-cookedjerky" health="10" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -535,7 +535,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,0,43,58" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="80" requiresrecipe="false" amount="8">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-rawjerky" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawjerky" amount="8" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="20" fabricationlimitmin="0" fabricationlimitmax="40" />
@@ -551,7 +551,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="1.2" />
           <ReduceAffliction type="hunger" amount="1.2" />
-          <Affliction identifier="thirst" amount="0.02"/>
+          <Affliction identifier="thirst" amount="0.5"/>
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
