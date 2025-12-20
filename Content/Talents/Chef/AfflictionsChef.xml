@@ -95,10 +95,10 @@
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>  
   
-  <Affliction identifier="he-shortorderflow" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="10" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+  <Affliction identifier="he-shortorderflow" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="20" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
     <Effect
       minstrength="0"
-      maxstrength="10"
+      maxstrength="20"
       strengthchange="-1"
       resistancefor="damage,burn,stun"
       minresistance="0.5"

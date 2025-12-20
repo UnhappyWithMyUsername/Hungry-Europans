@@ -1179,27 +1179,18 @@
     <Talent identifier="he-shortorderchef">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-shortorderchef">
-        <Replace tag="[chance]" value="20" color="gui.green"/>
         <Replace tag="[amount]" value="50" color="gui.green"/>
+        <Replace tag="[duration]" value="20" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
         <Conditions>
-          <AbilityConditionItem tags="fingerfood"/>
-          <AbilityConditionServerRandom randomChance="0.20" />
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityModifyValue multiplyvalue="2"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
-        <Conditions>
-          <AbilityConditionItem tags="fingerfood"/>
+          <AbilityConditionItem tags="fooditem"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
-                <Affliction identifier="he-shortorderflow" amount="10" />
+              <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+                <Affliction identifier="he-shortorderflow" amount="20" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>

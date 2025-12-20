@@ -681,7 +681,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-creamery>Creamery</talentname.he-creamery>
 <talentdescription.he-creamery>Recipes that consume [item] have a [chance]% chance to not consume one.\n‖color:gui.orange‖Molochs‖end‖ are less aggressive towards you.</talentdescription.he-creamery>
 <talentname.he-shortorderchef>Short-Order Chef</talentname.he-shortorderchef>
-<talentdescription.he-shortorderchef>Cooking ‖color:gui.orange‖Fast-Food‖end‖ has a [chance]% chance to cook a second one for free.\nAfter cooking fast-food, you gain [amount]% physical damage resistance and cannot be ‖color:gui.orange‖unconscious‖end‖ for 10 seconds.</talentdescription.he-shortorderchef>
+<talentdescription.he-shortorderchef>You cannot stop cooking. After cooking food, you gain [amount]% physical damage resistance and cannot be ‖color:gui.orange‖unconscious‖end‖ for [duration] seconds.</talentdescription.he-shortorderchef>
 <afflictionname.he-shortorderflow>Short Order</afflictionname.he-shortorderflow>
 <afflictiondescription.he-shortorderflow>Must. Keep. Cooking.</afflictiondescription.he-shortorderflow>
 <talentname.he-psycookinesis>Psycookinesis</talentname.he-psycookinesis><!--Patch 20-->
