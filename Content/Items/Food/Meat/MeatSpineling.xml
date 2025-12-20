@@ -134,9 +134,9 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="false" amount="2">
         <RequiredSkill identifier="cooking" level="40" />
-        <RequiredItem identifier="he-rawspinelingslices" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawspinelingslices" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.02"/>
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
