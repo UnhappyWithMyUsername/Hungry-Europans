@@ -68,7 +68,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,60,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" amount="1" >
         <RequiredSkill identifier="cooking" level="40" />
-        <RequiredItem identifier="he-spinelingslices" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-spinelingslices" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
