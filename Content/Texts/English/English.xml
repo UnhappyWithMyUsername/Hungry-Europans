@@ -639,7 +639,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-tastyfood>Your food is known to be amongst the best. If they are not hungry, crewmates gain ‖color:gui.orange‖High Morale‖end‖. If they are stuffed, they gain ‖color:gui.orange‖Excellent Morale‖end‖ instead, doubling the following bonuses:</talentdescription.he-tastyfood><!--Patch 13-->
 <talentname.he-favorite>Everyone's Favorite</talentname.he-favorite><!--Patch 13-->
 <talentname.he-piper>Piper</talentname.he-piper><!--Patch 13-->
-<talentdescription.he-piper>Playing the bagpipes near your crew grants them the following bonuses for the duration you're playing:\n‖color:gui.orange‖20 to Weapons\n20% Increased Walking Speed\n25% Increased Melee Damage\n25% Damage Resistance ‖end‖.</talentdescription.he-piper><!--Patch 13-->
+<talentdescription.he-piper>Playing the ‖color:gui.orange‖Bagpipes‖end‖ near your crew grants them the following bonuses:\n‖color:gui.orange‖20 to Weapons\n20% Increased Walking Speed\n25% Increased Melee Damage\n25% Damage Resistance ‖end‖.</talentdescription.he-piper><!--Patch 13-->
 <talentname.he-lazygardener>Lazy Gardener</talentname.he-lazygardener><!--Patch 14-->
 <talentdescription.he-lazygardener>The time spent watering your plants was just too much for you.</talentdescription.he-lazygardener><!--Patch 14-->
 <talentname.he-farmersmarket>Farmers' Market</talentname.he-farmersmarket><!--Patch 17-->
