@@ -257,6 +257,9 @@
                   If the bug does not get fixed, apply butchered over a 0.1s duration and multiply meat harvested by 10x
                   -->
         
+        <!-- HOW TO BALANCE MEAT QUANTITIES: -->
+        <!-- I took the basic enemy type for a group (example: mudraptor) and made the amount of butchered inflicted on success close to its maxium health. So, if the mudraptor has 150 health, inflict 130 butchered. This mean on two skill successes you have a shot at 2 meat chunks, but if you fail 3 times you only get 1 chunk. -->
+        
         <!--offal 
         % chance of dropped by all non-husk, non alien, non-machine enemies under 10 mass (such as hatchlings) -->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="false" multiplyafflictionsbymaxvitality="false">
