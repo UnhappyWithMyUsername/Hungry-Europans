@@ -1192,24 +1192,24 @@
           <Conditional he-passout="gte 1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="99" maxstrength="100" strengthchange="0" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
+      <Effect minstrength="99" maxstrength="100" strengthchange="-0.99" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect type="Always" target="Character" LowPassMultiplier="0.0" setvalue="true" disabledeltatime="true">
           <Conditional he-passout="gte 1" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" comparison="And" interval="0.1" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" >
-          <Conditional stun="lte 0.5" />
-          <Conditional he-passout="gte 1" />
-          <Affliction identifier="he-passout" strength="-1" />
-        </StatusEffect>          
       </Effect>
-      <PeriodicEffect minstrength="99" maxstrength="100" mininterval="15" maxinterval="25">
-        <StatusEffect target="Character" duration="3">
-          <ReduceAffliction identifier="he-passout" strength="70" />
-        </StatusEffect>
-        <StatusEffect target="Character" duration="5">
-          <ReduceAffliction identifier="he-passout" strength="30" />
+      <!-- gives blackout from time to time to simulate blinking and obscure the screen -->
+      <PeriodicEffect minstrength="99" maxstrength="100" mininterval="2" maxinterval="4">
+        <StatusEffect target="Character" disabledeltatime="true" >
+          <Affliction identifier="he-blackout" strength="100" />
         </StatusEffect>
       </PeriodicEffect>
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay2.png" />
+    </Affliction>
+        
+    <!-- literally just a black screen -->
+    <Affliction identifier="he-blackout" maxstrength="100" showiconthreshold="1000" showinhealthscannerthreshold="1000" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-50" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">      
+      </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
