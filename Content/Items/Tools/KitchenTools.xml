@@ -141,22 +141,23 @@
       </ItemComponent>
     </Item>
 
-    <!-- TODO: ADD MANTIS MEAT, INCLUDES ORANGE BOY -->
+    <!-- MEAT CLEAVER - basic -->
     <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem,cleaver" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.05"/>
-      <PreferredContainer primary="secarmcab" secondary="armcab"/>
+      <PreferredContainer primary="kitchencounter" secondary="kitchen"/>
       <Deconstruct time="10">
         <Item identifier="plastic" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredItem identifier="plastic" amount="1" />
-        <RequiredItem identifier="steel" amount="1"/>
+        <RequiredItem identifier="steel" amount="3"/>
       </Fabricate>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="512,1,75,26" depth="0.55" origin="0.5,0.5" maxcondition="100" fadein="true"/>
       <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false" DualWieldReloadTimePenaltyMultiplier="1.75">
         <RequiredSkill identifier="butchery" level="100" />
@@ -229,6 +230,13 @@
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="5" />
+        </StatusEffect>        
+        
+        <!--Cleaver degradation
+        Lose some condition on success to damage cleaver, needs sharpening -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" condition="-5" disabledeltatime="true">
+          <Conditional isdead="true"/>
+          <Conditional he-butchered="lt 100"/>
         </StatusEffect>
         
         <!--Big health nerf VITALITY CHECK DOESNT WORK?
@@ -445,11 +453,26 @@
         
       </MeleeWeapon>
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
-      <Quality>
-        <QualityStat stattype="StrikingPowerMultiplier" value="0.1"/>
-      </Quality>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <SkillRequirementHint identifier="butchery" level="100"/>
+    </Item>
+
+
+    <!-- MEAT CLEAVER - sharpened -->
+    <Item name="Meat Cleaver" identifier="he-cleaversharpened" nameidentifier="he-cleaver" descriptionidentifier="he-cleaver" variantof="he-cleaver" hideinmenus="true" >
+      <PreferredContainer primary="secarmcab" secondary="armcab"/>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10" displayname="sharpen" >
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredItem />
+        <RequiredItem />
+        <RequiredItem tag="cleaver" amount="1" mincondition="0.0" maxcondition="0.75" usecondition="false"/>
+        <RequiredItem identifier="carbon" amount="1"/>
+        <RequiredItem identifier="silicon" amount="1"/>
+      </Fabricate>
+      <Quality>
+        <QualityStat stattype="StrikingPowerMultiplier" value="0.05"/>
+        <QualityStat stattype="StrikingSpeedMultiplier" value="0.05"/>
+      </Quality>
     </Item>
     
 <!--
