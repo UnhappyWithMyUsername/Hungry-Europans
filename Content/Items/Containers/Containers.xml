@@ -340,10 +340,13 @@
       <!-- ItemComponent is used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
         <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="false" setvalue="true" forceplaysounds="true">
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="false" setvalue="true" forceplaysounds="true" comparison="And">
           <Conditional HasStatusTag="neq opened" />
+          <Conditional condition="eq 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- fully repair the item when placing it down to no longer display the disassembled (broken) sprite | has to be an OnActive in here as OnUse doesn't work in MP when it's triggered by placing the item... -->
+        <StatusEffect type="OnActive" target="This" condition="100" setvalue="true" forceplaysounds="true" interval="1" />
 
         <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
         <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
@@ -359,12 +362,15 @@
           <Conditional HasStatusTag="neq detaching" />
         </StatusEffect>
         <!-- play an opening sound when starting to interact with the container -->
-        <StatusEffect type="OnActive" target="this" forceplaysounds="true">
+        <StatusEffect type="OnActive" target="this" forceplaysounds="true" comparison="And">
           <Conditional HasStatusTag="neq opened" />
+          <Conditional condition="eq 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
-        <StatusEffect type="OnActive" target="This" StatusEffectTags="opened" duration="0.1" />
+        <StatusEffect type="OnActive" target="This" StatusEffectTags="opened" duration="0.1">
+          <Conditional condition="eq 100" />
+        </StatusEffect>
         <!-- turn the ItemComponent component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="true" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
@@ -891,8 +897,6 @@
       <Holdable canbepicked="false" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="30,30" handle1="-20,-140" handle2="10,-120" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="30,30" attachable="true" aimable="false" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
         <Upgrade gameversion="2.0.0.0" canbepicked="false" />
         <RequiredItem items="wrench" type="Equipped" />
-        <!-- fully repair the item when placing it down to no longer display the disassembled (broken) sprite -->
-        <StatusEffect type="OnUse" target="This" condition="100" setvalue="true" />
         <!-- drop all contained items and block inventory access -->
         <StatusEffect target="This" type="OnPicked" setvalue="true" drawinventory="false" allowaccess="false" allowdraganddrop="false">
           <Conditional drawinventory="true" />
@@ -975,10 +979,13 @@
       <!-- ItemComponent used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" IsActive="false">
         <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true" comparison="And">
           <Conditional HasStatusTag="neq opened" />
+          <Conditional condition="eq 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- fully repair the item when placing it down to no longer display the disassembled (broken) sprite | has to be an OnActive in here as OnUse doesn't work in MP when it's triggered by placing the item... -->
+        <StatusEffect type="OnActive" target="This" condition="100" setvalue="true" forceplaysounds="true" interval="1" />
 
         <!-- PRE-PLACED ITEM CHECKS | Only executes once on round start -->
         <StatusEffect type="Always" target="This" disabledeltatime="true" oneshot="true" comparison="And">
@@ -994,12 +1001,15 @@
           <Conditional HasStatusTag="neq detaching" />
         </StatusEffect>
         <!-- play an opening sound when starting to interact with the container -->
-        <StatusEffect type="OnActive" target="this" forceplaysounds="true">
+        <StatusEffect type="OnActive" target="this" forceplaysounds="true" comparison="And">
           <Conditional HasStatusTag="neq opened" />
+          <Conditional condition="eq 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
-        <StatusEffect type="OnActive" target="This" StatusEffectTags="opened" duration="0.1" />
+        <StatusEffect type="OnActive" target="This" StatusEffectTags="opened" duration="0.1">
+          <Conditional condition="eq 100" />
+        </StatusEffect>
         <!-- turn the ItemComponent on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
@@ -1358,8 +1368,6 @@
       <Holdable canbepicked="false" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="50,10" handle1="-20,-95" handle2="10,-70" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="30,10" attachable="true" aimable="false" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
         <Upgrade gameversion="2.0.0.0" canbepicked="false" />
         <RequiredItem items="wrench" type="Equipped" />
-        <!-- fully repair the item when placing it down to no longer display the disassembled (broken) sprite -->
-        <StatusEffect type="OnUse" target="This" condition="100" setvalue="true" />
         <!-- drop all contained items and block inventory access -->
         <StatusEffect target="This" type="OnPicked" setvalue="true" drawinventory="false" allowaccess="false" allowdraganddrop="false">
           <Conditional drawinventory="true" />
