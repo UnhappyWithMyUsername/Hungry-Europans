@@ -1103,11 +1103,24 @@
     <Talent identifier="he-delicacies">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-delicacies">
-        <Replace tag="[itemname1]" value="entityname.he-cookedhammerheadspawnpickled" color="gui.orange"/>
-        <Replace tag="[itemname2]" value="entityname.he-molochsushi" color="gui.orange"/>
+        <Replace tag="[affliction1]" value="afflictionname.strengthen" color="gui.orange"/>
+        <Replace tag="[affliction2]" value="afflictionname.durationincrease" color="gui.orange"/>
+        <Replace tag="[affliction3]" value="afflictionname.stabilozineeffect" color="gui.orange"/>
       </Description>
-      <AddedRecipe itemidentifier="he-cookedhammerheadspawnpickled"/>
-      <AddedRecipe itemidentifier="he-molochsushi"/>
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional ate_fruit="gt 0" />
+                <Affliction identifier="strengthen" strength="10"/>
+                <Affliction identifier="durationincrease" strength="20"/>
+                <Affliction identifier="stabilozineeffect" strength="6"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+        </Abilities>
+      </AbilityGroupInterval>
     </Talent>
 
   <!--Unlock brewing recipes-->
