@@ -6,7 +6,7 @@
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="2">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="8" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="butchery" level="20" />
         <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.025"/>
