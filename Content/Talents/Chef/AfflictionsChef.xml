@@ -131,6 +131,32 @@
       </StatusEffect>
     </PeriodicEffect> -->
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,7" sheetelementsize="128,128" color="155,40,175,255" origin="0,0" />
+  </Affliction>  
+    
+    
+  <Affliction
+    identifier="he-masterbrewerbuff"
+    type="talentbuff"
+    isbuff="true"
+    hideiconafterdelay="true"
+    limbspecific="false"
+    maxstrength="2"
+    duration="1"
+    treatmentthreshold="1000"
+    showiconthreshold="1000"
+    showicontoothersthreshold="1000"
+    showinhealthscannerthreshold="1000">
+    <Effect
+      minstrength="0"
+      maxstrength="2"
+      strengthchange="-1"
+      resistancefor="oxygenlow" minresistance="0.50" maxresistance="0.50" >
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true" CanGiveMedicalSkill="false">
+        <ReduceAffliction type="damage" amount="0.035" />
+        <ReduceAffliction type="bleeding" amount="0.0125" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,7" sheetelementsize="128,128" color="155,40,175,255" origin="0,0" />
   </Affliction>
   
 </Override>

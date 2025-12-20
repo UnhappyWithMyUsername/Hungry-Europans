@@ -634,7 +634,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-huskfood>Husk Food</talentname.he-huskfood><!--Patch 13-->
 <talentdescription.he-huskfood>You can now turn the meat of a [itemname1] into edible food.</talentdescription.he-huskfood><!--Patch 13-->
 <talentname.he-masterbrewer>Master Brewer</talentname.he-masterbrewer><!--Patch 10-->
-<talentdescription.he-masterbrewer>Unlock the following recipes of europan beverages:\n[itemname1]\n[itemname2]\n[itemname3]</talentdescription.he-masterbrewer><!--Patch 10-->
+<talentdescription.he-masterbrewer>Crewmates that are [affliction] slowly regenerate health when [unconscious].</talentdescription.he-masterbrewer><!--Patch 22-->
 <talentname.he-tastyfood>Tasty Food</talentname.he-tastyfood><!--Patch 13-->
 <talentdescription.he-tastyfood>Your food is known to be amongst the best. If they are not hungry, crewmates gain ‖color:gui.orange‖High Morale‖end‖. If they are stuffed, they gain ‖color:gui.orange‖Excellent Morale‖end‖ instead, doubling the following bonuses:</talentdescription.he-tastyfood><!--Patch 13-->
 <talentname.he-favorite>Everyone's Favorite</talentname.he-favorite><!--Patch 13-->

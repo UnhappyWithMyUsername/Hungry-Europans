@@ -1127,13 +1127,44 @@
     <Talent identifier="he-masterbrewer">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-masterbrewer">
-        <Replace tag="[itemname1]" value="entityname.he-kegpiraterum" color="gui.orange"/>
-        <Replace tag="[itemname2]" value="entityname.he-kegwhiskey" color="gui.orange"/>
-        <Replace tag="[itemname3]" value="entityname.he-keghalucinova" color="gui.orange"/>
+        <Replace tag="[affliction]" value="afflictionname.drunk" color="gui.orange"/>
+        <Replace tag="[unconscious]" value="unconscious" color="gui.orange"/>
       </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.he-kegpiraterum" color="gui.orange"/>
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.he-kegwhiskey" color="gui.orange"/>
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.he-keghalucinova" color="gui.orange"/>
+      </Description>
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" >
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
+                <Conditional isunconscious="true" />
+                <Conditional drunk="gt 0" />
+                <Affliction identifier="he-masterbrewerbuff" strength="2"/>
+                <Affliction identifier="drunk" strength="0.015"/>
+              </StatusEffect>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
+                <Conditional isunconscious="true" />
+                <Conditional drunknodebuffs="gt 0" />
+                <Affliction identifier="he-masterbrewerbuff" strength="2"/>
+                <Affliction identifier="drunk" strength="0.015"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+        </Abilities>
+      </AbilityGroupInterval>
+        
       <AddedRecipe itemidentifier="he-kegpiraterum"/>
       <AddedRecipe itemidentifier="he-kegwhiskey"/>
       <AddedRecipe itemidentifier="he-keghalucinova"/>
+      
+      
     </Talent>
 
   <!--Chance not to consume milk when crafting food-->
