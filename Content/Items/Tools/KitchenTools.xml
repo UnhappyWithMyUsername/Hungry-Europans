@@ -234,7 +234,7 @@
         
         <!--Cleaver degradation
         Lose some condition on success to damage cleaver, needs sharpening -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" condition="-5" disabledeltatime="true">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" condition="-6.25" disabledeltatime="true">
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
         </StatusEffect>
