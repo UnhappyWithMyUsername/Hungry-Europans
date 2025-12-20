@@ -83,10 +83,9 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="201,339,61,40" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="90" requiresrecipe="false" amount="3" displayname="hammerheadfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-rawhammerheadspareribs" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawhammerheadspareribs" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="80" fabricationlimitmin="0" fabricationlimitmax="7" displayname="hammerheadfooditem" />
