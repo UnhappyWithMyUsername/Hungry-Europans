@@ -113,7 +113,7 @@
       <StatValue stattype="FlowResistance" value="0.50" />
     </Effect>
     <!-- TODO: shortorder buff icon -->
-    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
   
   <Affliction identifier="he-psycookinesisbuff" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="2" treatmentthreshold="1000" iconcolors="70,40,90;100,40,120;130,40,150;155,40,175">
