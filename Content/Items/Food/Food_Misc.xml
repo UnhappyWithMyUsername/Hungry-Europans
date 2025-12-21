@@ -533,6 +533,10 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="387,312,43,10" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,0,43,58" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="oven" requiredtime="80" requiresrecipe="false" amount="3">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem identifier="he-rawjerky" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+      </Fabricate>
       <Fabricate suitablefabricators="oven" requiredtime="80" requiresrecipe="false" amount="8">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-rawjerky" amount="8" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
