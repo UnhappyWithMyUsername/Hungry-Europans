@@ -433,7 +433,7 @@
         
         <!-- CORPSE REMOVAL 
         For now, corpses aren't removed. A sound is played locally instead to indicate no butchering left
-        TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
+        TODO: BUGGED display requireditem message about having reached maximum butchery. https://github.com/FakeFishGames/Barotrauma/discussions/16161 -->
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
           <Conditional isdead="true"/>
           <Conditional he-butchered="gte 100" />
