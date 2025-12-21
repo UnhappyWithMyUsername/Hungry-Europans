@@ -409,7 +409,7 @@
       </AbilityGroupInterval>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
-          <CharacterAbilityGiveResistance resistanceid="infection" multiplier="1"/>
+          <CharacterAbilityGiveResistance resistanceid="infection" multiplier="0"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
