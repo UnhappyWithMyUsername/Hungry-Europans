@@ -670,7 +670,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-seafoodsamurai>If you are in the open sea, gain an additional [amount]% [stattype].</talentdescription.he-seafoodsamurai><!--Patch 17-->
 <talentname.he-parttimejob>Part-Time Job</talentname.he-parttimejob><!--Patch 17-->
 <talentname.he-dinnertheater>Dinner Theater</talentname.he-dinnertheater><!--Patch 17-->
-<talentdescription.he-dinnertheater>Playing the bagpipes prolongs the duration of food and drink buffs for you and nearby allies.</talentdescription.he-dinnertheater><!--Patch 17-->
+<talentdescription.he-dinnertheater>Playing the ‖color:gui.orange‖Bagpipes‖end‖ prolongs the duration of food and drink buffs for you and nearby allies.</talentdescription.he-dinnertheater><!--Patch 17-->
 <talentname.he-teppanyaki>Teppanyaki</talentname.he-teppanyaki><!--Patch 17-->
 <talentdescription.he-teppanyaki>Whenever you gain a [skillname1] or [skillname2] skill point, your crew gains a point as well.\nDeal [powerincrease]% more damage with ‖color:gui.orange‖Pans‖end‖.</talentdescription.he-teppanyaki><!--Patch 17-->
 <talentname.he-workpromotion>Work Promotion</talentname.he-workpromotion><!--Patch 17-->
