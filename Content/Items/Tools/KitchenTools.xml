@@ -432,7 +432,7 @@
         </StatusEffect>
         
         <!-- CORPSE REMOVAL 
-        removes corpse at 100 butchered, don't remove huge corpses because it looks weird
+        For now, corpses aren't removed. A sound is played locally instead to indicate no butchering left
         TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
           <Conditional isdead="true"/>
@@ -446,11 +446,12 @@
           <Sound file="Content/Sounds/Damage/Gore2.ogg" range="500" selectionmode="random"/>
           <Sound file="Content/Sounds/Damage/Gore3.ogg" range="500" selectionmode="random"/> -->
         </StatusEffect>
+        
         <!-- play a sound for the player if butcher is 100 instead of corpse removal -->
         <StatusEffect type="OnUse" target="UseTarget,Character" forceplaysounds="true" >
           <Conditional he-butchered="gte 100" />
           <Conditional IsLocalPlayer="True"/>
-          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="2" frequencymultiplier="0.75" />
+          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" frequencymultiplier="0.75" />
         </StatusEffect>
         
       </MeleeWeapon>
