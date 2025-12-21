@@ -222,7 +222,6 @@
         Butchered amount is proportional to health; more health = less butchered inflicted = more meat. 
         100 health = 1x butchered multiplier    200 health = 0.5x butchered multiplier
         "Extra" meat rolls a separate probability and does not add butchered -->
-        <!-- TODO: balance the amount of meat from meat cleaver -->
 
         <!--Skillissue
         If you fail the skill check, adds a flat % of butchered to the corpse, meaning less meat harvested before reaching 100 butchered total-->
