@@ -614,7 +614,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-poacher>Poacher</talentname.he-poacher>
 <talentdescription.he-poacher>Gain an additional [xpbonus]% bonus XP and [moneybonus]% bonus marks in [missiontype1] and [missiontype2] missions.</talentdescription.he-poacher>
 <talentname.he-saltybusiness>Salty Business</talentname.he-saltybusiness>
-<talentdescription.he-saltybusiness>The first time you open a container, you have a chance of [probability]% to find some extra salt in it.</talentdescription.he-saltybusiness>
+<talentdescription.he-saltybusiness>The first time you open a container, you have a chance of [probability]% to find some extra ‖color:gui.orange‖Salt‖end‖ in it.</talentdescription.he-saltybusiness>
 <talentname.he-fastfood>Fast Food</talentname.he-fastfood>
 <talentdescription.he-fastfood>Move [value]% faster.\nIncrease the speed of kitchen related fabricators by [amount]%.\nDoes not affect [itemname1] and [itemname2].</talentdescription.he-fastfood><!--Patch 17-->
 <talentname.he-chefattire>Master Chef Attire</talentname.he-chefattire>
