@@ -112,7 +112,6 @@
       <AbilityFlag flagtype="AlwaysStayConscious" />
       <StatValue stattype="FlowResistance" value="0.50" />
     </Effect>
-    <!-- TODO: shortorder buff icon -->
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
   
