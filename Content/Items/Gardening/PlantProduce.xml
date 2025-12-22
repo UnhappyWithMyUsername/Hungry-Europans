@@ -1118,7 +1118,7 @@
   <Item name="Bubbleberry Leaf" identifier="bubbleberryleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,plantleaf,distilleringredient" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="389,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <Price baseprice="20" >
+    <Price baseprice="12" >
       <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="5" multiplier="1" sold="true" />
       <Price storeidentifier="merchantcity" minavailable="5" maxavailable="10" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="10" maxavailable="20" multiplier="1" sold="true" />
@@ -1141,7 +1141,7 @@
   <Item name="Popnut Leaf" identifier="popnutleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,plantleaf,distilleringredient" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="451,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <Price baseprice="20" >
+    <Price baseprice="12" >
       <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="5" multiplier="1" sold="true" />
       <Price storeidentifier="merchantcity" minavailable="5" maxavailable="10" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="10" maxavailable="20" multiplier="1" sold="true" />
