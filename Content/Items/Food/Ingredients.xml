@@ -24,7 +24,7 @@
         <RequiredItem identifier="saltbulb" amount="1" />
         <RequiredItem tag="emptyshaker" amount="1" />
       </Fabricate>
-      <Fabricate suitablefabricators="stove" requiredtime="45" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="45" requiresrecipe="false" amount="1" displayname="alternative">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem identifier="antibloodloss1" amount="3" />
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
