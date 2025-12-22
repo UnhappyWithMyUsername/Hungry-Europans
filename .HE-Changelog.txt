@@ -32,6 +32,7 @@ Trying to reduce the overall meat and meat values from enemies to a more reasona
 [b]Additions:[/b]
 [List]
 [*] Added Fruity Bowl (something to use your 200 bananas on)
+[*] Added Elastin Gum
 [/List]
 
 [b]Changes:[/b] 
@@ -60,6 +61,7 @@ Trying to reduce the overall meat and meat values from enemies to a more reasona
 [*] Fix dough/tea/coffee recipes having weird drinks as valid ingredients
 [*] Fix kitchen counter sprite looking disassembled when attached
 [*] Fix soup pots of excellent/masterwork quality not spawning soup (the quality only affects the chance of getting worm parasites)
+[*] Fix stack of bowls being deleted when inserted inside soup pots
 [/List]
 
 
