@@ -1517,6 +1517,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-fruitybowl>Fruity Bowl</entityname.he-fruitybowl>
 <entitydescription.he-fruitybowl>Bananas and fruits salad. Healthy and rich in vitamins.</entitydescription.he-fruitybowl>
 
+<entityname.he-elastingum>Elastin Gum</entityname.he-elastingum>
+<entitydescription.he-elastingum>A sweet paste made of Elastin that some sailors like to chew to stave off hunger on lengthy journeys. May cause constipation if overused.</entitydescription.he-elastingum>
+
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands

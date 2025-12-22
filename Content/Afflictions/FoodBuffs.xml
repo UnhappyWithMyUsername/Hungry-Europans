@@ -327,13 +327,19 @@
       <Effect minstrength="0" maxstrength="1800"
         strengthchange="-1"
         resistancefor="hunger"
-        minresistance="0.25"
-        maxresistance="0.25">
+        minresistance="0.35"
+        maxresistance="0.35">
+        <!-- reduce buff faster if no defecate enabled -->
+        <StatusEffect target="Character" interval="2" disabledeltatime="true" >
+          <Conditional defecate="lte 0" />
+          <ReduceAffliction identifier="he-chewinggumbuff" strength="4" />
+          <Affliction identifier="he-stomachache" strength="0.5" />
+        </StatusEffect>
       </Effect>
       <!-- If affected by the buff for too long, might cause a sudden urge to poop -->
-      <PeriodicEffect minstrength="100" maxstrength="1800" mininterval="750" maxinterval="1500" >
+      <PeriodicEffect minstrength="100" maxstrength="1800" mininterval="600" maxinterval="1200" >
         <StatusEffect target="Character" duration="33" comparison="And" checkconditionalalways="true" >
-          <Conditional defecate="gt 1" />
+          <Conditional defecate="gt 0" />
           <Affliction identifier="defecate" strength="3" />
           <Affliction identifier="he-stomachache" strength="0.5" />
           <ReduceAffliction identifier="he-chewinggumbuff" strength="33" />

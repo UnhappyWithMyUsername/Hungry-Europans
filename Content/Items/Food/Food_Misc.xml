@@ -901,5 +901,52 @@
       </Holdable>
     </Item>
 
+
+    <Item name="Elastin Gum" identifier="he-elastingum" health="21" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="150,200,31,6" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="150,191,31,6" depth="0.6" maxcondition="99.99" />
+      <Body width="31" height="6" density="9.8" />
+      <Fabricate suitablefabricators="stove" requiredtime="35" requiresrecipe="false" amount="3" >
+        <RequiredSkill identifier="cooking" level="40" />
+        <RequiredItem identifier="elastin" amount="3" />
+        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.2" />
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="2" />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="30,0" holdangle="270" handle1="15,-10" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      
+        <!-- Unwrap -->
+        <StatusEffect type="OnUse" target="This" ConditionPercentage="99" setvalue="true" oneshot="true" comparison="And">
+          <Conditional ConditionPercentage="100" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a bite instantly after unwrapping -->
+        <StatusEffect type="OnUse" target="This" aimpos="22,15" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="And" >
+          <Conditional ConditionPercentage="lt 100" />
+          <Conditional InWater="false" />
+          <Conditional HasTag="opened" />
+          <Affliction identifier="he-chewinggumbuff" amount="60.0" />
+          <ReduceAffliction identifier="mood" strength="0.35" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And" >
+          <Conditional ConditionPercentage="lt 100" />
+          <Conditional InWater="false" />
+          <Conditional HasTag="opened" />
+          <Conditional hunger="lt 10" />
+          <ReduceAffliction type="hunger" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+
   </Items>
 </Override>
