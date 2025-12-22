@@ -1070,6 +1070,7 @@
       </Fabricate>
       <Body width="157" height="59" density="40" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,-20" handle1="-59,-10" handle2="15,17" msg="ItemMsgPickUpSelect" />
+      <SkillRequirementHint identifier="medical" level="50" />
       <RepairTool range="10" barrelpos="32,10" combatpriority="0" targetforce="10" HitItems="false" >
         <!-- <RequiredItem identifier="he-emptybottle" type="Contained" msg="ItemMsgWeldingFuelRequired" /> -->
         <RequiredSkill identifier="medical" level="50" />
