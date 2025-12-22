@@ -18,7 +18,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="31" height="5" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="20" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
@@ -59,7 +59,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="0.3" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
@@ -87,7 +87,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="31" height="5" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="20" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
@@ -117,7 +117,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="0.4" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -155,7 +155,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="0.3" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -226,7 +226,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="0.3" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
@@ -278,7 +278,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="0.4" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -313,7 +313,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction type="hunger" amount="0.3" />
           <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="90,65,50,255" />
