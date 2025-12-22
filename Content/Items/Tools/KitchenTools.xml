@@ -1054,8 +1054,7 @@
       <DecorativeSprite name="fakeemptybottle90degrees" texture="%ModDir:2954998725%/Content/Items/Tools/MolochMilkItems.png" sourcerect="10,166,58,21" depth="0.54" offset="-66,17" Rotation="0" >
         <IsActiveConditional condition="gte 100" />
       </DecorativeSprite>
-      <DecorativeSprite name="animatedsuckysucky" texture="%ModDir:2954998725%/Content/Items/Tools/MolochMilkItems.png" sourcerect="0,56,155,55" depth="0.54" origin="0.49,0.5"
-                        offset="5,0" offsetanim="Sine" offsetanimspeed="25" >
+      <DecorativeSprite name="animatedsuckysucky" texture="%ModDir:2954998725%/Content/Items/Tools/MolochMilkItems.png" sourcerect="0,56,155,55" depth="0.54" origin="0.49,0.5" offset="5,0" offsetanim="Sine" offsetanimspeed="25" >
         <AnimationConditional IsActive="true" targetitemcomponent="RepairTool" />
       </DecorativeSprite>
       <Deconstruct time="10">
