@@ -26,8 +26,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_friedfood" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
-          <ReduceAffliction type="hunger" amount="0.0" />
+          <Affliction identifier="he-stuffed" amount="1.0" />
+          <ReduceAffliction type="hunger" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -38,8 +38,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_friedfood" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
-          <ReduceAffliction type="hunger" amount="2.0" />
+          <Affliction identifier="he-stuffed" amount="1.0" />
+          <ReduceAffliction type="hunger" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">

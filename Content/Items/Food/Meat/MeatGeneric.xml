@@ -378,9 +378,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="butchery" level="15" />
-        <RequiredItem tag="rawmeatpiece" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem tag="rawmeatpiece" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.2"/>
       </Fabricate>
       <Body width="34" radius="14" density="11" />
@@ -406,7 +404,7 @@
         <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
           <Conditional MaxValueLength="gte 45" />
           <Remove />
-          <SpawnItem identifier="he-cookednugget" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" count="16" />
+          <SpawnItem identifier="he-cookednugget" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" count="8" />
         </StatusEffect>
       </ItemComponent>
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->

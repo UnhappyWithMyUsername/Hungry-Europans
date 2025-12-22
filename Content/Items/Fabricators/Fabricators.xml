@@ -851,11 +851,11 @@
       <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.05" >
+        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.1" >
           <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnActive" targettype="This" comparison="And" condition="-1">
+        <StatusEffect type="OnActive" targettype="This" comparison="And" condition="-1" targetslot="0">
           <RequiredItem identifier="he-cookingoil" type="Contained" requireempty="true" />
           <Conditional Voltage="gt 0.5" />
           <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="0.5" scalemax="1.0" />
@@ -948,7 +948,7 @@
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
         <Containable items="cookingoil" />
-        <SubContainer capacity="3" maxstacksize="16">
+        <SubContainer capacity="3" maxstacksize="8">
           <Containable items="allowinfryer" />
         </SubContainer>
       </ItemContainer>
