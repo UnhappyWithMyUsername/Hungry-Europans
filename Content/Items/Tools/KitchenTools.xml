@@ -226,6 +226,7 @@
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="5" />
+          <Affliction identifier="he-butchered" strength="5" probability="0.5" />
         </StatusEffect>        
         
         <!--Cleaver degradation
