@@ -1045,6 +1045,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <fabricationdescription.salty>Any ingredient of salty taste.</fabricationdescription.salty>
 <fabricationheader.smallegg>Small Egg</fabricationheader.smallegg>
 <fabricationdescription.smallegg>Any alien egg of small caliber.</fabricationdescription.smallegg> 
+<fabricationheader.largeegg>Large Egg</fabricationheader.largeegg>
+<fabricationdescription.largeegg>Any alien egg of large caliber.</fabricationdescription.largeegg> 
  
 <!-- misc -->
 <entityname.money_5mk>5mk</entityname.money_5mk>
