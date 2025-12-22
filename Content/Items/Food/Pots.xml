@@ -5,7 +5,7 @@
     <!-- Soups allow you to use lower condition meat than normal -->
     
     <!-- SOUPS -->
-    <Item name="Pot of Craw Yum" identifier="he-potcrawyum" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot of Craw Yum" identifier="he-potcrawyum" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
@@ -59,7 +59,7 @@
       </Quality>
     </Item>
 
-    <Item name="Pot of Bone Broth" identifier="he-potbonebroth" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot of Bone Broth" identifier="he-potbonebroth" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
@@ -165,7 +165,7 @@
       </Quality>
     </Item>
 
-    <Item name="Pot of Fondue" identifier="he-potfondue" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot of Fondue" identifier="he-potfondue" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
