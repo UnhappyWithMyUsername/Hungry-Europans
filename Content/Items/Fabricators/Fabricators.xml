@@ -855,8 +855,8 @@
           <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnActive" targettype="This" comparison="And" condition="-1" targetslot="0">
-          <RequiredItem identifier="he-cookingoil" type="Contained" requireempty="true" />
+        <StatusEffect type="OnActive" targettype="This" comparison="And" condition="-1" >
+          <RequiredItem identifier="he-cookingoil" type="Contained" requireempty="true" targetslot="0"/>
           <Conditional Voltage="gt 0.5" />
           <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="0.5" scalemax="1.0" />
           <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" frequencymultiplier="1.5" />
