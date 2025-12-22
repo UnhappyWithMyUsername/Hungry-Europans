@@ -39,6 +39,7 @@
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptybowl">
           <StatusEffect type="OnInserted" target="Contained">
+            <DropContainedItems />
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
@@ -91,6 +92,7 @@
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptybowl">
           <StatusEffect type="OnInserted" target="Contained">
+            <DropContainedItems />
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
@@ -143,6 +145,7 @@
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptybowl">
           <StatusEffect type="OnInserted" target="Contained">
+            <DropContainedItems />
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
@@ -195,6 +198,7 @@
       <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
         <Containable items="emptybowl">
           <StatusEffect type="OnInserted" target="Contained">
+            <DropContainedItems />
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">

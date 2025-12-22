@@ -59,6 +59,7 @@ Trying to reduce the overall meat and meat values from enemies to a more reasona
 [*] Fix several duplicate recipes in cafeteria/vending machine (bowls, energy drinks...)
 [*] Fix dough/tea/coffee recipes having weird drinks as valid ingredients
 [*] Fix kitchen counter sprite looking disassembled when attached
+[*] Fix soup pots of excellent/masterwork quality not spawning soup (the quality only affects the chance of getting worm parasites)
 [/List]
 
 
