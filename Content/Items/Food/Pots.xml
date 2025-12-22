@@ -47,7 +47,7 @@
             <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
-            <Conditional Quality="eq 1" />
+            <Conditional Quality="gte 1" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-crawyumsoupgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
@@ -99,7 +99,7 @@
             <SpawnItem identifier="he-bonebroth" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
-            <Conditional Quality="eq 1" />
+            <Conditional Quality="gte 1" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-bonebrothgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
@@ -151,7 +151,7 @@
             <SpawnItem identifier="he-seaweedsoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
-            <Conditional Quality="eq 1" />
+            <Conditional Quality="gte 1" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-seaweedsoupgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
@@ -203,7 +203,7 @@
             <SpawnItem identifier="he-fondue" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
           <StatusEffect type="OnInserted" target="This" condition="-20" disabledeltatime="true">
-            <Conditional Quality="eq 1" />
+            <Conditional Quality="gte 1" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-fonduegood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
