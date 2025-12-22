@@ -10,9 +10,9 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="651,0,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="651,0,68,29" depth="0.525" origin="0.5,0.65" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" amount="1" >
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" amount="1" hideifnorecipe="true" >
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparedhuskfilets" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-preparedhuskfilets" amount="1" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
@@ -77,7 +77,7 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,30,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,30,68,29" depth="0.525" origin="0.5,0.65" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" amount="1" hideifnorecipe="true" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="huskeggsbasic" amount="2" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1" />

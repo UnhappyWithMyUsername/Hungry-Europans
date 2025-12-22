@@ -1094,7 +1094,7 @@
         </Abilities>
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="he-rawhuskmeat"/>
-      <AddedRecipe itemidentifier="he-rawhuskfilets"/>
+      <AddedRecipe itemidentifier="he-preparedhuskfilets"/>
       <AddedRecipe itemidentifier="he-cookedhuskfilet"/>
       <AddedRecipe itemidentifier="he-huskcaviarnori"/>
     </Talent>

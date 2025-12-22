@@ -40,7 +40,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="244,51,43,31" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="true" amount="4">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="true" amount="4" hideifnorecipe="true" >
         <RequiredSkill identifier="butchery" level="60" />
         <RequiredItem identifier="he-huskmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
@@ -73,13 +73,13 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-        
+    <!-- UNUSED, simplified -->
     <Item name="Raw husk Filets" identifier="he-rawhuskfilets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" depth="0.525" origin="0.5,0.65"  />
       <Body width="56" radius="6" density="12" />
-      <Price baseprice="164" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <!-- <Price baseprice="164" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
@@ -89,14 +89,14 @@
         <Price storeidentifier="merchantbutcher" />
         <Price storeidentifier="merchanthusk" multiplier="2.0" minavailable="0" maxavailable="16" sold="false" />
       </Price>
-      <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="true" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="true" amount="1" hideifnorecipe="true" >
         <RequiredSkill identifier="butchery" level="35" />
         <RequiredItem identifier="he-huskmeatchunk" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
-      </Fabricate>
+      </Fabricate> -->
+      <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -141,9 +141,9 @@
         <Price storeidentifier="merchanthusk" multiplier="2.0" minavailable="0" maxavailable="16" sold="false" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="true" amount="1" hideifnorecipe="true" >
         <RequiredSkill identifier="cooking" level="35" />
-        <RequiredItem identifier="he-rawhuskfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawhuskmeat" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.02"/>
       </Fabricate>
