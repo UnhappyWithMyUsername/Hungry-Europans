@@ -24,7 +24,7 @@ Important stuff:
 //////////////////////
 //////////////////////
 
-[hr]20/12/2025[/hr]
+[hr]23/12/2025[/hr]
 
 Balance update: 
 Trying to reduce the overall meat and meat values from enemies to a more reasonable level. The amount of meat harvested and hunger cured by raw meat has never been balanced since the meat cleaver was reworked months ago. Some food fabrication recipes also gave way more items than intended and trivialized hunger (nuggets, jerky)
