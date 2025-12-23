@@ -101,6 +101,8 @@
         <Item identifier="steel" amount="2" />
         <Item identifier="titaniumaluminiumalloy" amount="1" />
       </Deconstruct>
+      <SuitableTreatment type="defecate" suitability="50" />
+      <SuitableTreatment type="bladder" suitability="50" />
       <Controller UserPos="-20,0" direction="Left" hidehud="false" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="false" canbeselected="true" drawuserbehind="false">
         <limbposition limb="Head" position="-5,-20" />
         <limbposition limb="Torso" position="50,48" />
