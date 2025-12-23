@@ -1520,6 +1520,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-elastingum>Elastin Gum</entityname.he-elastingum>
 <entitydescription.he-elastingum>A sweet paste made of Elastin that some sailors like to chew to stave off cravings on lengthy journeys. May cause constipation if overused.</entitydescription.he-elastingum>
 
+<entityname.he-hygienehintitem>Take A Bath</entityname.he-hygienehintitem>
+<entitydescription.he-hygienehintitem>Submerge yourself in water without clothes equipped to wash the dirt away.</entitydescription.he-hygienehintitem>
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands
