@@ -2849,7 +2849,6 @@
         <RequiredItem identifier="antibloodloss2" amount="1" />
         <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <SuitableTreatment type="fatigue" suitability="50" />
       <SuitableTreatment identifier="alcoholwithdrawal" suitability="30" />
       <SuitableTreatment identifier="chemwithdrawal" suitability="30" />
       <SuitableTreatment identifier="he-tobaccoaddiction" suitability="30" />
