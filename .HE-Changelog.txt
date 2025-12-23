@@ -27,22 +27,22 @@ Important stuff:
 [hr]20/12/2025[/hr]
 
 Balance update: 
-Trying to reduce the overall meat and meat values from enemies to a more reasonable level. The amount of meat harvested and hunger cured by raw meat has never been balanced since the meat cleaver was reworked months ago. Some food fabrication recipes also gave way more items than intended (nuggets, jerky)
+Trying to reduce the overall meat and meat values from enemies to a more reasonable level. The amount of meat harvested and hunger cured by raw meat has never been balanced since the meat cleaver was reworked months ago. Some food fabrication recipes also gave way more items than intended and trivialized hunger (nuggets, jerky)
 
 [b]Additions:[/b]
 [List]
 [*] Added Fruity Bowl (something to use your 200 bananas on)
-[*] Added Elastin Gum
+[*] Added Elastin Gum (reduces hunger and craving gain, causes constipation) 
 [/List]
 
 [b]Changes:[/b] 
 [List]
 [*] Buffed some of the weaker talents, some with new effects (Delicacies, Master Brewer, Short Order, Dry Aging, Master Chef uniform)
+[*] Meat cleaver inflicts more "butchered" which should reduce the overall meat gathered from enemies, especially smaller/basic ones which gave too much meat
 [*] Meat Cleaver no longer despawns enemy corpses. Disappearing medium to large enemies looked very weird. Instead it now plays a sound when you can no longer harvest meat from a corpse.
 [*] Meat Cleaver loses condition when hitting an enemy corpse that can be butchered. If the cleaver does not lose condition, it means the corpse can no longer drop meat.
 [*] Meat Cleaver can be sharpened at a fabricator to reset its condition and get minor quality bonuses
 [*] Basic Meat Cleaver fabrication cost increased
-[*] Meat cleaver inflicts more "butchered" which should reduce the overall meat gathered from enemies, especially smaller/basic ones which gave too much meat
 [*] Nerfed nuggets by a lot (previously, a single raw meat would give you 96 hunger worth of nuggets)
 [*] Nerf Jerky recipe output from 8 to 1 (it gave 8x too much jerky)
 [*] Jerky can now stack
@@ -52,6 +52,7 @@ Trying to reduce the overall meat and meat values from enemies to a more reasona
 [*] Changed the black screen effect from being stunned, you can now see a little
 [*] Some recipe changes use more input and give more output at once to reduce craft times
 [*] Simplified husk recipes (disabled raw husk lump)
+[*] Added treatment hints for defecate/bladder/hygiene
 
 [/List]
 
@@ -89,21 +90,14 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
-- Mantis/Orange boy meat and meals, basically a lobster/crab
-Mantis Surimi, Tempura (fried food)... 
 - More Blender recipes
 - More Offal recipes
 - More Mushroom recipes?
-- Cookie jar
 - Cake + Slices
 - Pasta + pasta recipes
-- Chewing gum. Made from elastin. Slows down hunger but accelerates need to defecate if too high?
 - Endeavour's cuppa: minor healing properties, slow metabolism cures psychosis and hallucinations, cures husk 
 - Grog! It'd be made of sea water and rum.
 - Homemade kvass from water, bread, yeast and sugar.
-- Burger Double Deluxe (burger with 2x patties and cheese)
-
-
 
 
 
@@ -119,18 +113,14 @@ NEEDS:
 
 
 LongTermPlans:
-- Meat Cleaver sharpening + Whetstone - prevents players from harvesting too much meat in one go
-- Blender and juices
 - Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations	
-- "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
 - Kuru sickness
 - "Brain freeze" from eating ice cream too fast
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
-- Abyssal meats?
-- Plant based talents. Craftable item that makes items grow faster? Special fertilizer?
+- Abyssal meats and recipes?
 - Better Entertainer talents to replace the whole "graduation" copy
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
