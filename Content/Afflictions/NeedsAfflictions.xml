@@ -299,6 +299,7 @@
       activationthreshold="0"
       showinhealthscannerthreshold="0"
       treatmentthreshold="60"
+      TreatmentSuggestionThreshold="1000"
       maxstrength="100"
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0"
