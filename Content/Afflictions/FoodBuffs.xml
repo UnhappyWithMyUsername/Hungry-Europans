@@ -326,7 +326,7 @@
       MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="1800"
         strengthchange="-1"
-        resistancefor="hunger"
+        resistancefor="hunger,he-hungryforhumanmeat"
         minresistance="0.35"
         maxresistance="0.35">
         <!-- reduce buff faster if no defecate enabled -->

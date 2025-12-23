@@ -828,7 +828,7 @@
       showiconthreshold="20"
       showicontoothersthreshold="1000"
       showinhealthscannerthreshold="1000"
-      treatmentthreshold="80"
+      TreatmentSuggestionThreshold="0"
       maxstrength="100"
       affectmachines="false"
       MedicalSkillGain="0.0">
