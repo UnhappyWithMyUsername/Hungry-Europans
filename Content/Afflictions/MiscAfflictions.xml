@@ -1178,6 +1178,11 @@
           <Conditional he-passoutreaper="gt 0" />
           <Affliction identifier="stun" strength="3" />
         </StatusEffect>
+        <!-- heal some fatigue and minor damage -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <ReduceAffliction identifier="fatigue" strength="2" />
+          <ReduceAffliction type="damage" strength="0.2" />
+        </StatusEffect>
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
