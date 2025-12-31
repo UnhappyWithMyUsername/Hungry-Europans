@@ -604,7 +604,7 @@
     </Item>
     
     <!-- cooks things in a pot? -->
-    <Item name="Stove (Installation)" identifier="he-stove_installation" invulnerabletodamage="True" tags="stove,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Stove (Installation)" identifier="he-stove_installation" invulnerabletodamage="True" tags="stove,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5"  impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="97,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -711,7 +711,7 @@
     </Item>
 
     <!-- cooks things  -->
-    <Item name="Oven (Installation)" identifier="he-oven_installation" invulnerabletodamage="True" tags="oven,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Oven (Installation)" identifier="he-oven_installation" invulnerabletodamage="True" tags="oven,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power."  impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="193,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -812,7 +812,7 @@
     </Item>
     
     <!-- fries things using oil, overfrying causes fire, water causes explosion -->
-    <Item name="Fryer (Installation)" identifier="he-fryer_installation" invulnerabletodamage="True" tags="fryer,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Fryer (Installation)" identifier="he-fryer_installation" invulnerabletodamage="True" tags="fryer,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power."  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="481,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -955,7 +955,7 @@
     </Item>
     
     <!-- grills things, overgrilling causes fire -->
-    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" invulnerabletodamage="True" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" invulnerabletodamage="True" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5"  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="289,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -1247,7 +1247,7 @@
     </Item>
 
     <!-- cleans dishes, requires dishwasher tablets to clean dishes -->
-    <Item name="Dishwasher (Installation)" identifier="he-dishwasher_installation" invulnerabletodamage="True" tags="dishwasher,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Dishwasher (Installation)" identifier="he-dishwasher_installation" invulnerabletodamage="True" tags="dishwasher,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power."  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="769,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
