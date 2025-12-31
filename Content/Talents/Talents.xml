@@ -33,7 +33,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="fatigue" amount="0.015" />
+                <Affliction identifier="fatigue" amount="0.012" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
