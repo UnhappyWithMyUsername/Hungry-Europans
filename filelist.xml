@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Hungry Europans" modversion="2.0.17" corepackage="False" steamworkshopid="2954998725" gameversion="1.11.5.0">
+<contentpackage name="Hungry Europans" modversion="2.0.18" corepackage="False" steamworkshopid="2954998725" gameversion="1.11.5.0">
   <Afflictions file="%ModDir%/Content/Afflictions/FoodBuffs.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/MiscAfflictions.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/NeedsAfflictions.xml" />
@@ -73,8 +73,8 @@
   <UpgradeModules file="%Moddir%/Content/upgrademodules.xml" />
   <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Bulker - Swordfish.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Bulker - Swordfish.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
 </contentpackage>
