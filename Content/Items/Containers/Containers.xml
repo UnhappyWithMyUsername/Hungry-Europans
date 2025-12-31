@@ -135,7 +135,7 @@
           </Containable>
         </SubContainer>
         <SubContainer capacity="19">
-          <Containable items="canspoil,canexpire,meat,fooditem,drinkitem,mobilebattery,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,organ" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+          <Containable items="canspoil,canexpire,meat,fooditem,drinkitem,mobilebattery,egg,organ" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
         </SubContainer>
       </ItemContainer>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
@@ -402,7 +402,7 @@
         <!-- Icon - Fryer/Coffee Machine/Blender -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="24" sourcerect="256,853,85,85" origin="0.5,0.5" />
         <!--Regular Slots-->
-        <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
+        <Containable items="smallitem,mediumitem,egg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
         <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
         <!-- oven/dishwasher -->
         <SubContainer capacity="1" maxstacksize="1">
@@ -1036,7 +1036,7 @@
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="31" sourcerect="341,853,85,85" origin="0.5,0.5" />
         <!-- Icon - Fryer/Cutting Board -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="32" sourcerect="86,853,85,85" origin="0.5,0.5" />
-        <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
+        <Containable items="smallitem,mediumitem,egg" excludedidentifiers="mobilecontainer" />
         <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
         <!-- stove/grill -->
         <SubContainer capacity="1" maxstacksize="1">
@@ -1620,7 +1620,7 @@
       <ItemContainer capacity="40" slotsperrow="8" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
-        <Containable items="fooditem,drinkitem,meat,plantitem,organ,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
+        <Containable items="fooditem,drinkitem,meat,plantitem,organ,canspoil,canexpire,emptybottle,emptyjar,egg" />
         <StatusEffect type="OnPicked" target="this">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
         </StatusEffect>
