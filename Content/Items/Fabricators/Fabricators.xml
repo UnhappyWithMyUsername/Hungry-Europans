@@ -1190,7 +1190,7 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="0,0,1,1" origin="0.5,0.5" usewhenattached="true" />
       <DecorativeSprite name="shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5"  offset="8,4" offsetanim="Noise" offsetanimspeed="5" comparison="and" >
         <AnimationConditional IsActive="True" targetitemcomponent="Fabricator" />
-        <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" />
+        <!-- <IsActiveConditional IsAttached="true" targetitemcomponent="Holdable" /> -->
       </DecorativeSprite>
       <!-- DecorativeSprite to display the empty cup when it is contained -->
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
