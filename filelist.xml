@@ -74,7 +74,7 @@
   <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
-  <Submarine file="%ModDir%/#Testkitchen.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Swordfish.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
+  <Submarine file="%ModDir%/#Testkitchen.sub" />
 </contentpackage>
