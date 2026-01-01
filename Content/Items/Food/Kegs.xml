@@ -153,6 +153,7 @@
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="4" />
+        <RequiredItem identifier="phosphorous" amount="2" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
@@ -395,8 +396,7 @@
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="8" />
-        <RequiredItem identifier="ethanol" amount="1" />
-        <RequiredItem identifier="raptorbane" amount="8" />
+        <RequiredItem identifier="raptorbane" amount="6" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
@@ -442,9 +442,8 @@
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="8" />
-        <RequiredItem identifier="ethanol" amount="3" />
-        <RequiredItem identifier="badraptorbane" amount="3" />
-        <RequiredItem identifier="uranium" amount="1" />
+        <RequiredItem identifier="badraptorbane" amount="2" />
+        <RequiredItem identifier="uranium" amount="2" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
@@ -489,7 +488,7 @@
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="7" />
-        <RequiredItem identifier="badraptorbane" amount="1" />
+        <RequiredItem identifier="mutatedplant" amount="1" />
         <RequiredItem identifier="bubbleberries" amount="1" />
         <RequiredItem identifier="slimebacteria" amount="1" />
       </Fabricate>
@@ -538,7 +537,7 @@
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="7" />
         <RequiredItem identifier="badbubbleberries" amount="1" />
-        <RequiredItem identifier="badpopnutpopped" amount="1" />
+        <RequiredItem identifier="mutatedplant" amount="1" />
         <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">
