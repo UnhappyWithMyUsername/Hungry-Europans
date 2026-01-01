@@ -1716,7 +1716,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1.5" />
-          <Affliction identifier="he-reaperstribute" amount="12" />
+          <Affliction identifier="he-reaperstribute" amount="17" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
@@ -1797,7 +1797,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1.5" />
-          <Affliction identifier="he-reaperstribute" amount="12" />
+          <Affliction identifier="he-reaperstribute" amount="17" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />

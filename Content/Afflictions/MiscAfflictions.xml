@@ -1098,59 +1098,60 @@
     <Affliction identifier="he-reaperstribute" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" 
       maxstrength="99" 
-      strengthchange="-1" 
-      interval="0.5" 
+      strengthchange="-5" 
       minchromaticaberration="0.0" 
-      maxchromaticaberration="10.0">
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.01" LowPassMultiplier="0.1" comparison="And" multiplyafflictionsbymaxvitality="true">
+      maxchromaticaberration="10.0"
+      MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.25">
+        <!-- Increasing levels of distortion, volume and low pass filter -->
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.0" LowPassMultiplier="0.1" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 10" />
           <Conditional he-reaperstribute="lt 20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.2" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.012" LowPassMultiplier="0.2" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.05" LowPassMultiplier="0.2" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 20" />
           <Conditional he-reaperstribute="lt 30" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.4" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.014" LowPassMultiplier="0.3" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.10" LowPassMultiplier="0.3" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 30" />
           <Conditional he-reaperstribute="lt 40" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.6" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.016" LowPassMultiplier="0.4" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.15" LowPassMultiplier="0.4" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 40" />
           <Conditional he-reaperstribute="lt 50" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.8" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.018" LowPassMultiplier="0.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.20" LowPassMultiplier="0.5" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 50" />
           <Conditional he-reaperstribute="lt 60" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.02" LowPassMultiplier="0.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.25" LowPassMultiplier="0.6" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 60" />
           <Conditional he-reaperstribute="lt 70" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.2" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.022" LowPassMultiplier="0.7" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.30" LowPassMultiplier="0.7" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 70" />
           <Conditional he-reaperstribute="lt 80" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.4" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.024" LowPassMultiplier="0.8" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.35" LowPassMultiplier="0.8" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 80" />
           <Conditional he-reaperstribute="lt 90" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.6" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.026" LowPassMultiplier="0.9" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.40" LowPassMultiplier="0.9" comparison="And" setvalue="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 90" />
           <Conditional he-reaperstribute="lt 99" />
@@ -1160,47 +1161,47 @@
       <Effect minstrength="99" 
       maxstrength="100" 
       strengthchange="1" 
-      interval="0.5" 
       minchromaticaberration="10.0" 
-      maxchromaticaberration="10.0">
-        <StatusEffect type="Always" target="Character" comparison="And">
+      maxchromaticaberration="10.0"
+      MinAfflictionOverlayAlphaMultiplier="0.25" MaxAfflictionOverlayAlphaMultiplier="0.25">
+        <!-- knocks you out -->
+        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.40" LowPassMultiplier="1.0" comparison="And" setvalue="true">
+          <Affliction identifier="he-passoutreaper" strength="100" />
           <Conditional IsLocalPlayer="true" />
-          <Conditional he-reaperstribute="gte 99" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" collapseeffectstrength="0.1" LowPassMultiplier="1.0" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional he-reaperstribute="gte 99" />
-          <Affliction identifier="he-passoutreaper" strength="1" />
-        </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/ReapersTributeOverlay.png" />
+      <!-- <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay2.png" /> -->
     </Affliction>    
     
+    <!-- pass out on the floor, shake violently,  wake up after some time. Heal fatigue and damage slightly -->
     <Affliction identifier="he-passoutreaper" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
-        <StatusEffect type="Always" target="Character" comparison="And" delay="10" disabledeltatime="true" stackable="false">
+      <Effect
+      minstrength="0"
+      maxstrength="100"
+      strengthchange="0"
+      convulseamount="0.8">
+        <StatusEffect type="Always" target="Character" comparison="And" delay="20" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-passoutreaper="gte 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReaperLeaving.ogg" volume="2.0" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
-        <StatusEffect type="Always" target="Character" comparison="And" delay="10" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false">
+        <StatusEffect type="Always" target="Character" comparison="And" delay="20" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false">
           <Conditional he-passoutreaper="gte 100" />
-          <ReduceAffliction identifier="he-reaperstribute" strength="1000" />
+          <ReduceAffliction identifier="he-reaperstribute" strength="2" />
           <ReduceAffliction identifier="he-passoutreaper" strength="1000" />
           <ReduceAffliction identifier="reaperstax" strength="1000" />
-          <ReduceAffliction identifier="embarrassment" strength="2000" />
         </StatusEffect>
         <StatusEffect type="Always" target="Character" comparison="And" multiplyafflictionsbymaxvitality="true" setvalue="true">
           <Conditional he-passoutreaper="gt 0" />
           <Affliction identifier="stun" strength="3" />
         </StatusEffect>
         <!-- heal some fatigue and minor damage -->
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" CanGiveMedicalSkill="false">
           <ReduceAffliction identifier="fatigue" strength="2" />
-          <ReduceAffliction type="damage" strength="0.2" />
+          <ReduceAffliction type="damage" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
     <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
