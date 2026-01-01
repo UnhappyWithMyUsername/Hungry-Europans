@@ -495,7 +495,7 @@ Can put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-cleaver>Meat Cleaver</entityname.he-cleaver>
 <entitydescription.he-cleaver>Time is up! Chop chop!\n\nCan harvest meat from the corpses of creatures. Needs to be sharpened regularly.</entitydescription.he-cleaver>
 <entityname.he-skillbooktheeuropan>The Europan Volume 66</entityname.he-skillbooktheeuropan>
-<entitydescription.he-skillbooktheeuropan>"... Peek behind the curtain of time. Is that you, Robert? No, I am Robert. But I am also Doris. I am the meat. Eat of me and become one with the Worm. ..."</entitydescription.he-skillbooktheeuropan>
+<entitydescription.he-skillbooktheeuropan>Gives some ‖color:gui.orange‖Cooking‖end‖ skill when read. \n\n"... Peek behind the curtain of time. Is that you, Robert? No, I am Robert. But I am also Doris. I am the meat. Eat of me and become one with the Worm. ..."</entitydescription.he-skillbooktheeuropan>
 <entityname.he-skillbookauntdoris>THE ART OF DEEP SEA COOKING by Aunt Doris</entityname.he-skillbookauntdoris>
 <entitydescription.he-skillbookauntdoris>The europan way of cooking.</entitydescription.he-skillbookauntdoris>
 <entityname.he-genesaw>Genetics Extractor</entityname.he-genesaw>

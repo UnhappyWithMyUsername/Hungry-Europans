@@ -741,12 +741,13 @@
     
     <Item name="The Europan Volume 66" identifier="he-skillbooktheeuropan" description="" category="Misc" Tags="smallitem,skillbook" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.5" impactsoundtag="impact_soft" cargocontaineridentifier="metalcrate">
       <PreferredContainer primary="crewcab"/>
-      <Price baseprice="150" buyingpricemodifier="2.5" minleveldifficulty="0" sold="True" >
+      <Price baseprice="150" buyingpricemodifier="1.5" minleveldifficulty="0" sold="True" >
         <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="1" />
         <Price storeidentifier="merchantcity" minavailable="1" maxavailable="4" />
         <Price storeidentifier="merchantresearch" maxavailable="1" />
-        <Price storeidentifier="merchantmilitary" maxavailable="1" />
-        <Price storeidentifier="merchantmine" maxavailable="1" />
+        <Price storeidentifier="merchantmilitary" sold="false" />
+        <Price storeidentifier="merchantmine" sold="false" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" />
       </Price>
       <Deconstruct time="20">
         <Item identifier="carbon" />
@@ -756,10 +757,20 @@
       <Body width="75" height="12" density="8" />
       <Holdable slots="Any,RightHand+LeftHand" aimable="false" aimpos="40,10" handle1="5,0" aimangle="80" swingamount="0,3" swingspeed="0.5" swingwhenaiming="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" Condition="-10" />
-        <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true">
+        <!-- give some more skill if low skill -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true" oneshot="true" comparison="and" >
           <Conditional Condition="lte 0" />
-          <GiveSkill skillidentifier="cooking" amount="1" triggertalents="false" />
-          <GiveSkill skillidentifier="butchery" amount="1" triggertalents="false" />
+          <Conditional skillrequirement="true" cooking="lt 15" />
+          <Conditional skillrequirement="true" butchery="lt 15" />
+          <GiveSkill skillidentifier="cooking" amount="2" triggertalents="false" />
+          <GiveSkill skillidentifier="butchery" amount="2" triggertalents="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true" oneshot="true" >
+          <Conditional Condition="lte 0" />
+          <GiveSkill skillidentifier="cooking" amount="3" triggertalents="false" />
+          <GiveSkill skillidentifier="butchery" amount="3" triggertalents="false" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This" >
           <RemoveItem />
         </StatusEffect>
       </Holdable>
