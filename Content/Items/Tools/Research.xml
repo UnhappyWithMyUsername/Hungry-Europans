@@ -792,9 +792,7 @@
       <Body width="75" height="12" density="8" />
       <Holdable slots="Any,RightHand+LeftHand" aimable="false" aimpos="40,10" handle1="5,0" aimangle="80" swingamount="0,3" swingspeed="0.5" swingwhenaiming="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" Condition="-10" />
-        <StatusEffect type="OnBroken" target="This,Character" disabledeltatime="true" unlockrecipe="he-rawendwormsausage" oneshot="true" />
-        <StatusEffect type="OnBroken" target="This,Character" disabledeltatime="true" unlockrecipe="he-endwormsausage" oneshot="true" />
-        <StatusEffect type="OnBroken" target="This,Character" disabledeltatime="true" unlockrecipe="he-endwormhotdog" oneshot="true" />
+        <StatusEffect type="OnBroken" target="This,Character" disabledeltatime="true" unlockrecipe="he-rawendwormsausage,he-endwormsausage,he-endwormhotdog" oneshot="true" />
         <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true" oneshot="true">
           <Conditional Condition="lte 0" />
           <GiveSkill skillidentifier="cooking" amount="10" triggertalents="false" />
