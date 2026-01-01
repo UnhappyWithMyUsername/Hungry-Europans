@@ -46,7 +46,7 @@
           <Conditional conditionpercentage="lt 100" />
           <ReduceAffliction identifier="infection" amount="0.4" />
           <Affliction identifier="burn" amount="0.15" />
-        </StatusEffect>      
+        </StatusEffect>
         
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="99" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -5329,7 +5329,19 @@
         </StatusEffect>
         <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
         <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
-                
+               
+        <!-- When used in Health GUI -->
+        <!-- <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
+          <ReduceAffliction identifier="welderseye" amount="2" />
+        </StatusEffect> -->
+        
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
