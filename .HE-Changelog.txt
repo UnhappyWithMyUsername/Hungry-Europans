@@ -24,45 +24,33 @@ Important stuff:
 //////////////////////
 //////////////////////
 
-[hr]23/12/2025[/hr]
+[hr]01/01/2026[/hr]
 
-Balance update: 
-Trying to reduce the overall meat and meat values from enemies to a more reasonable level. The amount of meat harvested and hunger cured by raw meat has never been balanced since the meat cleaver was reworked months ago. Some food fabrication recipes also gave way more items than intended and trivialized hunger (nuggets, jerky)
 
 [b]Additions:[/b]
 [List]
-[*] Added Fruity Bowl (something to use your 200 bananas on)
-[*] Added Elastin Gum (reduces hunger and craving gain, causes constipation) 
+[*] Nothing :(
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Buffed some of the weaker talents, some with new effects (Delicacies, Master Brewer, Short Order, Dry Aging, Master Chef uniform)
-[*] Meat cleaver inflicts more "butchered" which should reduce the overall meat gathered from enemies, especially smaller/basic ones which gave too much meat
-[*] Meat Cleaver no longer despawns enemy corpses. Disappearing medium to large enemies looked very weird. Instead it now plays a sound when you can no longer harvest meat from a corpse.
-[*] Meat Cleaver loses condition when hitting an enemy corpse that can be butchered. If the cleaver does not lose condition, it means the corpse can no longer drop meat.
-[*] Meat Cleaver can be sharpened at a fabricator to reset its condition and get minor quality bonuses
-[*] Basic Meat Cleaver fabrication cost increased
-[*] Nerfed nuggets by a lot (previously, a single raw meat would give you 96 hunger worth of nuggets)
-[*] Nerf Jerky recipe output from 8 to 1 (it gave 8x too much jerky)
-[*] Jerky can now stack
-[*] Increase Hammerhead ribs required ingredients from 1 to 3 (it gave 3x too many ribs)
-[*] Nerf Meat patty recipe output from 2 to 1 (you could make 16 patties with a single crawler)
-[*] Increase watering can water usage
-[*] Changed the black screen effect from being stunned, you can now see a little
-[*] Some recipe changes use more input and give more output at once to reduce craft times
-[*] Simplified husk recipes (disabled raw husk lump)
-[*] Added treatment hints for defecate/bladder/hygiene
+[*] Improved Beer descriptions to hopefully clarify what they do
+[*] Reaper's Tribute beer effects improved, now reduces Fatigue and heals slightly when passing out
+[*] Very slightly reduced the amount of passive fatigue gained (you would sleep more than you would eat in the HUNGRY mod)
+[*] Fewer empty cans in outposts (less aluminium everywhere)
+[*] Increased the amount of base cooking/butchery skill from injecting "Enable Hungry Europan"
+[*] Increased the amount of cooking/butchery skill from reading book, reading books improves mood
+[*] Trying to apply bottles via Health UI (to heal infections/burns...) will unbottle them
 
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fix several duplicate recipes in cafeteria/vending machine (bowls, energy drinks...)
-[*] Fix dough/tea/coffee recipes having weird drinks as valid ingredients
-[*] Fix kitchen counter sprite looking disassembled when attached
-[*] Fix soup pots of excellent/masterwork quality not spawning soup (the quality only affects the chance of getting worm parasites)
-[*] Fix stack of bowls being deleted when inserted inside soup pots
+[*] Fix lack of ambientlight on some subs
+[*] Fix installation boxes taking damage from explosions and breaking
+[*] Reduced cleaver "no meat" sound range, it was supposed to only play for the person swinging the cleaver but this didnt work as expected and the sound can be heard from far away.
+[*] Fix blender not shaking
+[*] Fix some containers not taking all types of eggs
 [/List]
 
 
