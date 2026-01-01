@@ -36,16 +36,17 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-20.0" disabledeltatime="true" >
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-20.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="Limb" duration="10">
-          <Conditional infection="gt 0" />
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
           <ReduceAffliction identifier="infection" amount="0.4" />
-          <Affliction identifier="burn" amount="0.15" /> 
-        </StatusEffect>        
+          <Affliction identifier="burn" amount="0.15" />
+        </StatusEffect>      
         
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="99" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -253,20 +254,17 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="26,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And" >
-          <Conditional huskinfection="lt 50" />
-          <ReduceAffliction identifier="huskinfection" amount="1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This, Limb" duration="2">
-          <Conditional infection="gt 0" />
-          <ReduceAffliction identifier="infection" amount="1.5" />
-          <Affliction identifier="burn" amount="0.15" /> 
-        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
+          <ReduceAffliction identifier="infection" amount="0.65" />
+          <Affliction identifier="burn" amount="0.20" />
+        </StatusEffect>         
         
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -468,19 +466,16 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="26,26" aimangle="120" holdpos="30,-15" settags="opened" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And" >
-          <Conditional huskinfection="lt 50" />
-          <ReduceAffliction identifier="huskinfection" amount="1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This, Limb" duration="2">
-          <Conditional infection="gt 0" />
-          <ReduceAffliction identifier="infection" amount="1.5" />
-          <Affliction identifier="burn" amount="0.15" /> 
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
+          <ReduceAffliction identifier="infection" amount="0.6" />
+          <Affliction identifier="burn" amount="0.2" />
         </StatusEffect>
         
         <!-- Unbottle -->
@@ -3002,15 +2997,16 @@
       <SuitableTreatment type="thirst" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
+        <!-- When used in Health GUI -->
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
-          <Conditional burn="gt 0" />
-          <Conditional burn="lt 2" />
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
+          <Conditional burn="lte 3" />
           <ReduceAffliction identifier="burn" amount="0.5" />
         </StatusEffect>
         
@@ -3476,18 +3472,20 @@
           <Sound file="Content/Sounds/Water/Splash0.ogg" range="200" volume="0.5"/>
         </StatusEffect>   
 
-        <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
+        <!-- When used in Health GUI -->
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
-          <Conditional burn="gt 0" />
-          <Conditional burn="lt 2" />
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
+          <Conditional burn="lte 3" />
           <ReduceAffliction identifier="burn" amount="0.5" />
           <Affliction identifier="infection" amount="1" probability="0.1"/>
         </StatusEffect>
+        
         
         <!--////////// BOT DRINKING \\\\\\\\\\-->
         <!-- Bots "drink" by holding the food in their hands -->
@@ -3901,18 +3899,20 @@
       </Deconstruct>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
+        <!-- When used in Health GUI -->
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Conditional conditionpercentage="lt 100" />
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
-          <Conditional burn="gt 0" />
-          <Conditional burn="lt 2" />
+        <StatusEffect type="OnSuccess" target="This,Limb" duration="10" comparison="and">
+          <Conditional conditionpercentage="lt 100" />
+          <Conditional burn="lte 3" />
           <ReduceAffliction identifier="burn" amount="0.5" />
           <Affliction identifier="infection" amount="1" probability="0.1"/>
         </StatusEffect>
+        
         
         <!--////////// BOT DRINKING \\\\\\\\\\-->
         <!-- Bots "drink" by holding the food in their hands -->
@@ -5307,7 +5307,7 @@
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="3" comparison="And">
           <Conditional burn="gt 0" />
-          <Conditional burn="lt 2" />
+          <Conditional burn="lte 3" />
           <ReduceAffliction identifier="burn" amount="0.5" />
         </StatusEffect>
         
