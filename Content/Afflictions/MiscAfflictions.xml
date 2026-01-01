@@ -1228,7 +1228,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay2.png" />
     </Affliction>
         
-    <!-- literally just a black screen -->
+    <!-- literally just a black screen, used to simulate "blinking" when passed out -->
     <Affliction identifier="he-blackout" maxstrength="100" showiconthreshold="1000" showinhealthscannerthreshold="1000" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="-50" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" duration="1" >
