@@ -287,13 +287,13 @@ Improves Mood
 Decreases Embarassment
 Gives temporary Clown Power</entitydescription.he-beerclownjuice><!--Patch 10-->
 <entityname.he-beerreaperstribute>Reaper's Tribute</entityname.he-beerreaperstribute><!--Patch 10-->
-<entitydescription.he-beerreaperstribute>A strong beer to pay tribute to fallen sailors.
+<entitydescription.he-beerreaperstribute>A knockout beer to pay tribute to fallen sailors.
 
 Causes light Drunkenness
 Resists Psychosis
 Improves Mood
 Decreases Embarassment
-Can put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
+Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 
 <entityname.he-water>Water</entityname.he-water>
