@@ -769,6 +769,7 @@
           <Conditional Condition="lte 0" />
           <GiveSkill skillidentifier="cooking" amount="3" triggertalents="false" />
           <GiveSkill skillidentifier="butchery" amount="3" triggertalents="false" />
+          <ReduceAffliction type="mood" amount="25" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This" >
           <RemoveItem />
@@ -797,6 +798,7 @@
           <Conditional Condition="lte 0" />
           <GiveSkill skillidentifier="cooking" amount="10" triggertalents="false" />
           <GiveSkill skillidentifier="butchery" amount="10" triggertalents="false" />
+          <ReduceAffliction type="mood" amount="25" />
           <RemoveItem />
         </StatusEffect>
       </Holdable>
