@@ -432,26 +432,26 @@
         <!-- CORPSE REMOVAL 
         For now, corpses aren't removed. A sound is played locally instead to indicate no butchering left
         TODO: BUGGED display requireditem message about having reached maximum butchery. https://github.com/FakeFishGames/Barotrauma/discussions/16161 -->
-        <StatusEffect type="OnUse" target="UseTarget" comparison="And">
+        <StatusEffect type="OnUse" target="UseTarget" comparison="And" targetlimb="Torso" >
           <Conditional isdead="true"/>
           <Conditional he-butchered="gte 100" />
-          <Conditional mass="lt 500"/>
-          <!-- <DropContainedItems /> -->
-          <!-- <RemoveCharacter /> -->
+          <!-- <BreakLimb/>
+          <DropContainedItems />
+          <RemoveCharacter /> -->
           <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
           <ParticleEmitter particle="heavygib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
-          <!-- <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" selectionmode="random"/>
+          <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" selectionmode="random"/>
           <Sound file="Content/Sounds/Damage/Gore2.ogg" range="500" selectionmode="random"/>
-          <Sound file="Content/Sounds/Damage/Gore3.ogg" range="500" selectionmode="random"/> -->
+          <Sound file="Content/Sounds/Damage/Gore3.ogg" range="500" selectionmode="random"/>
         </StatusEffect>
         
         <!-- play a sound for the player if butcher is 100 instead of corpse removal TODO: somehow make this display a message or play the sound locally -->
         <StatusEffect type="OnUse" target="UseTarget,Character" forceplaysounds="true" >
           <Conditional he-butchered="gte 100" />
           <Conditional IsLocalPlayer="True"/>
-          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" />
+          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" dontmuffle="true" />
         </StatusEffect>
-        
+                
       </MeleeWeapon>
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
