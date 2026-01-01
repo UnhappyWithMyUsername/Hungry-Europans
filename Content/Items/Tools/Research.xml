@@ -14,6 +14,7 @@
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
         </StatusEffect>
+        <!-- give small amount of cooking/butchery as a starter so you're not completely locked out of kitchen stuff -->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional skillrequirement="true" cooking="lt 10" />
           <Conditional skillrequirement="true" butchery="lt 10" />
