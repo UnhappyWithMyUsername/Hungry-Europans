@@ -1197,7 +1197,7 @@
         <!-- heal some fatigue and minor damage -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" CanGiveMedicalSkill="false">
           <ReduceAffliction identifier="fatigue" strength="2" />
-          <ReduceAffliction type="damage" strength="0.1" />
+          <ReduceAffliction type="damage" strength="0.15" />
         </StatusEffect>
       </Effect>
     </Affliction>
