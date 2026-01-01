@@ -1183,11 +1183,9 @@
       convulseamount="0.8">
         <StatusEffect type="Always" target="Character" comparison="And" delay="20" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
-          <Conditional he-passoutreaper="gte 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReaperLeaving.ogg" volume="2.0" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
         <StatusEffect type="Always" target="Character" comparison="And" delay="20" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false">
-          <Conditional he-passoutreaper="gte 100" />
           <ReduceAffliction identifier="he-reaperstribute" strength="2" />
           <ReduceAffliction identifier="he-passoutreaper" strength="1000" />
           <ReduceAffliction identifier="reaperstax" strength="1000" />
