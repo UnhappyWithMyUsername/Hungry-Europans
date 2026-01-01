@@ -1043,7 +1043,7 @@
   
   <!--BANANAGUN (banana x saltvine)
   it's a banana, it's a gun, it's a bananagun-->
-  <Item name="bananagun" identifier="bananagun" Category="Misc" Tags="smallitem,plant,plantitem,weapon,gun,pistolitem,provocativetohumanai,mountableweapon" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">
+  <Item name="bananagun" identifier="bananagun" Category="Misc" Tags="smallitem,plant,plantitem,weapon,gun,pistolitem,provocativetohumanai,mountableweapon" health="35" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">
     <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,384,64,64" depth="0.52" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
