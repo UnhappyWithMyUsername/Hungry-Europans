@@ -503,10 +503,10 @@
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
-          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="200,0" />
-          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="150,0" />
-          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="225,0" />
-          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="110,0" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="200,0" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="150,0" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="225,0" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="110,0" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
           <Conditional HasTag="outposttrashcan" targetcontainer="true" />
@@ -519,10 +519,10 @@
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
-          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
-          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
-          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
-          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
           <Conditional HasTag="outposttrashcan" targetcontainer="true" />
@@ -535,10 +535,10 @@
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
           <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
-          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-150,0" />
-          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-200,0" />
-          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-225,0" />
-          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-110,0" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="-150,0" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="-200,0" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="-225,0" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="1" aimspread="360" rotation="180" offset="-110,0" />
         </StatusEffect>
 
         <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
@@ -594,8 +594,8 @@
     </Item>
 
     <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
-      <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
+      <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="outposttrashcan" secondary="crewcab"/>
       <Deconstruct time="1" chooserandom="true">
@@ -624,8 +624,8 @@
     </Item>
 
     <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycanenergy1" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
-      <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
+      <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="outposttrashcan" secondary="crewcab"/>
       <Deconstruct time="1" chooserandom="true">
@@ -805,7 +805,7 @@
 
     <!-- Paint -->
     <redpaint name="" identifier="redpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,0,0,255" InventoryIconColor="255,0,0,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="1" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="140" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -857,7 +857,7 @@
     </redpaint>
 
     <greenpaint name="" identifier="greenpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="0,128,0,255" InventoryIconColor="0,255,0,255" scale="0.5" impactsoundtag="impact_metal_light"  impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="1" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -909,7 +909,7 @@
     </greenpaint>
 
     <bluepaint name="" identifier="bluepaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="0,0,128,255" InventoryIconColor="0,0,255,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="1" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -961,7 +961,7 @@
     </bluepaint>
 
     <blackpaint name="" identifier="blackpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="20,20,20,255" InventoryIconColor="20,20,20,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="1" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -1013,7 +1013,7 @@
     </blackpaint>
 
     <whitepaint name="" identifier="whitepaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,128,128,255" InventoryIconColor="128,128,128,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="1" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
