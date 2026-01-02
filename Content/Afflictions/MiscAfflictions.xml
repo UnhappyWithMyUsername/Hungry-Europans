@@ -566,7 +566,6 @@
       showicontoothersthreshold="1000"
       showinhealthscannerthreshold="0"
       maxstrength="100"
-      duration="2"
       MedicalSkillGain="0.0">
       <Description
         textidentifier="afflictiondescription.invertcontrols"
@@ -574,7 +573,8 @@
       <Description
         textidentifier="afflictiondescription.invertcontrols.self"
         target="Self" />
-      <Effect minstrength="1" maxstrength="100"
+      <Effect minstrength="0" maxstrength="100"
+        strengthchange="-50"
         minspeedmultiplier="0.7"
         maxspeedmultiplier="0.7">
       <!--<StatusEffect target="Character" disabledeltatime="true">
@@ -1086,7 +1086,7 @@
     </Affliction>
 
     <Affliction name="Radiant Influence" identifier="he-giveradianttalent" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false" MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0" >
         <StatusEffect type="Always" target="Character" comparison="And" interval="0.1" multiplyafflictionsbymaxvitality="true" stackable="false">
           <Conditional he-giveradianttalent="gte 99" />
           <GiveTalentInfo giverandom="true" talentidentifiers="prodigy,downwiththeship,lonewolf, physicalconditioning,swole,beatcop, exampleofhealth,laresistance,drsubmarine, egghead,grounded,unstoppablecuriosity, ballastdenizen,miner,mudraptorwrestler, skedaddle,revengesquad,thewaitinglist" />
