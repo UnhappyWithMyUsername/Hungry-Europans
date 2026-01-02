@@ -164,7 +164,7 @@
         minresistance="0.0"
         maxresistance="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.08" probability="1.0" />
+          <Affliction identifier="he-alcoholism" strength="0.18" probability="1.0" />
           <ReduceAffliction identifier="embarrassment" strength="0.5" />
           <ReduceAffliction identifier="mood" strength="0.3" />
         </StatusEffect>
@@ -193,7 +193,7 @@
         minresistance="0.1"
         maxresistance="0.2">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.09" probability="1.0" />
+          <Affliction identifier="he-alcoholism" strength="0.19" probability="1.0" />
           <ReduceAffliction identifier="embarrassment" strength="1" />
           <ReduceAffliction identifier="mood" strength="0.5" />
         </StatusEffect>
@@ -227,7 +227,7 @@
         minresistance="0.2"
         maxresistance="0.3">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.10" probability="1.0" />
+          <Affliction identifier="he-alcoholism" strength="0.20" probability="1.0" />
           <Affliction identifier="organdamage" strength="0.25" probability="0.25" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <ReduceAffliction identifier="mood" strength="1" />
