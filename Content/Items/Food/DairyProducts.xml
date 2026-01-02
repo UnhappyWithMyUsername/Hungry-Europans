@@ -568,10 +568,10 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,1,39,21" depth="0.61" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" maxcondition="99" fadein="true" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="90" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="stove" requiredtime="90" requiresrecipe="false" amount="2" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" />
-        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" usecondition="true" />
+        <RequiredItem tag="milk" usecondition="true" />
         <RequiredItem identifier="he-pot" amount="1" MinCondition="0" usecondition="true" />
       </Fabricate>
       <Deconstruct time="1" />
@@ -591,7 +591,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,distilleringredient,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
+    <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,distilleringredient,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="10">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -645,7 +645,7 @@
       </ItemContainer>
     </Item>
 
-    <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
+    <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="10">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -674,9 +674,9 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="20" />
-          <Affliction identifier="huskinfectionresistance" amount="20" />
-          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-calciumrich" amount="30" />
+          <Affliction identifier="huskinfectionresistance" amount="30" />
+          <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -711,7 +711,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,5,38,3" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,59,36,20" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="6" requiresrecipe="false" amount="6">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="6" requiresrecipe="false" amount="4">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="he-molochcheese" amount="1"/>
       </Fabricate>
