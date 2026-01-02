@@ -469,7 +469,7 @@
     <!-- APPLY DRUNK OVER TIME | To simulate alcohol kicking in after some time -->
     <Affliction identifier="applydrunk"
       description="Converts into normal drunk affliction over time to simulate alcohol taking time to take effect"
-      type="debuff"
+      type="applydrunkeffect"
       causeofdeathdescription="Alcohol poisoning"
       selfcauseofdeathdescription="You have died of alcohol poisoning."
       limbspecific="false"
@@ -496,7 +496,7 @@
 
     <Affliction identifier="applydrunkmedium"
       description="Converts into normal drunk affliction over time to simulate alcohol taking time to take effect"
-      type="debuff"
+      type="applydrunkeffect"
       causeofdeathdescription="Alcohol poisoning"
       selfcauseofdeathdescription="You have died of alcohol poisoning."
       limbspecific="false"
@@ -523,7 +523,7 @@
 
     <Affliction identifier="applydrunkfast"
       description="Converts into normal drunk affliction over time to simulate alcohol taking time to take effect"
-      type="debuff"
+      type="applydrunkeffect"
       causeofdeathdescription="Alcohol poisoning"
       selfcauseofdeathdescription="You have died of alcohol poisoning."
       limbspecific="false"
