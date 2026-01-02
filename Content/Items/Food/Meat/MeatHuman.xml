@@ -149,17 +149,6 @@
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-rawhumanfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
-      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
-        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
-          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 50" />
-        </StatusEffect>
-      </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
