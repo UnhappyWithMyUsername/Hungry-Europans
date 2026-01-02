@@ -1074,10 +1074,9 @@
       <RepairTool range="10" barrelpos="32,10" combatpriority="0" targetforce="10" HitItems="false" >
         <!-- <RequiredItem identifier="he-emptybottle" type="Contained" msg="ItemMsgWeldingFuelRequired" /> -->
         <RequiredSkill identifier="medical" level="50" />
-        <!-- applies milkextraction, more effective with high medical skill -->
+        <!-- applies milkextraction,  apply extra by succeeding medical skill check -->
         <StatusEffect type="OnSuccess" targettype="Usetarget" multiplyafflictionsbymaxvitality="true" comparison="and">
           <Conditional group="moloch" />
-          <Conditional mass="gt 500" />
           <Conditional IsDead="false" />
           <Affliction identifier="milkextraction" strength="15" />
           <Affliction identifier="slow" strength="10" />
@@ -1085,23 +1084,27 @@
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Usetarget" multiplyafflictionsbymaxvitality="true" comparison="and">
           <Conditional group="moloch" />
-          <Conditional mass="gt 500" />
           <Conditional IsDead="false" />
+          <Conditional milkingimmunity="lt 100" />
           <Affliction identifier="milkextraction" strength="15" />
           <Affliction identifier="slow" strength="15" />
-          <AITrigger state="Freeze" duration="2" probability="1" mindamage="0" allowtobeoverridden="false" allowtooverride="true" />
+          <AITrigger state="Idle" duration="2" probability="1" mindamage="0" allowtobeoverridden="false" allowtooverride="true" />
           <ParticleEmitter particle="whitegoosplash" particlespersecond="6" copyentityangle="true" anglemin="170" anglemax="190" distancemin="-30" distancemax="-40" velocitymin="120" velocitymax="200" scalemin="0.5" scalemax="1" drawontop="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze1.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze5.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze6.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />
         </StatusEffect> 
+        
         <!-- bugged, the SE wont remove the contained item, seems like it will only trigger its effect on the target that validates conditional;
              meaning even if I have an empty bottle in the invetory and the effect triggers properly, it will not target the bottle, only the moloch
              I wish I could put both removeitem and spawnitem in here to avoid JANK JANK JANK 
-             https://github.com/FakeFishGames/Barotrauma/discussions/14461 -->
+             https://github.com/FakeFishGames/Barotrauma/discussions/14461 -->             
+        <!-- when reaching 100 milked, spawn milk and reduce milked to 0. 
+        Also apply milking immunity which gives milking resistance, specifically to avoid infinite milking on pupas -->
         <StatusEffect type="OnUse" targettype="This,Usetarget" disabledeltatime="true">
           <Conditional target="UseTarget" milkextraction="gte 100" />
           <ReduceAffliction identifier="milkextraction" strength="999" />
+          <Affliction identifier="milkingimmunity" strength="100" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" frequencymultiplier="0.5" volume="3" dontmuffle="true"/>
           <SpawnItem identifier="he-milk" spawnposition="ThisInventory" />
         </StatusEffect>

@@ -862,19 +862,33 @@
     <Affliction
       name="Milked"
       identifier="milkextraction"
-      description="Milk being extracted."
       type="genetic"
       indicatorlimb="Torso"
       limbspecific="false"
       minstrength="0"
       maxstrength="100"
-      targets="moloch,blackmoloch,human"
       showiconthreshold="000"
       showinhealthscannerthreshold="000">
       <Effect minstrength="0" maxstrength="99" strengthchange="-10" />
-      <Effect minstrength="99" maxstrength="100" strengthchange="0" >    
+      <Effect minstrength="99" maxstrength="100" strengthchange="0" >
         <StatusEffect target="Character" settags="milked" />
       </Effect>
+      <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0"/>
+    </Affliction>    
+        
+    <!-- MILKED immunity
+    makes miliking harder especially on pupas -->
+    <Affliction
+      name="Milked"
+      identifier="milkingimmunity"
+      type="genetic"
+      indicatorlimb="Torso"
+      limbspecific="false"
+      minstrength="0"
+      maxstrength="100"
+      showiconthreshold="000"
+      showinhealthscannerthreshold="000">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.4" resistancefor="milkextraction" minresistance="0.0" maxresistance="1.0"/>
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0"/>
     </Affliction>
     

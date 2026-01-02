@@ -1579,6 +1579,23 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-hygienehintitem>Take A Bath</entityname.he-hygienehintitem>
 <entitydescription.he-hygienehintitem>Submerge yourself in water without clothes equipped to wash the dirt away.</entitydescription.he-hygienehintitem>
 
+<afflictionname.milkextraction>Milking</afflictionname.milkextraction>
+<afflictiondescription.milkextraction>Milking the Moloch.</afflictiondescription.milkextraction>
+
+<afflictionname.milkingimmunity>Milked Dry</afflictionname.milkingimmunity>
+<afflictiondescription.milkingimmunity>The Moloch is running out of milk.</afflictiondescription.milkingimmunity>
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands
 (only applies to PLAYERS, not bots):
