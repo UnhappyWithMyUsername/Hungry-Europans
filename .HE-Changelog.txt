@@ -6,17 +6,20 @@
 Search "TODO:" in the mod for things that need updating
 
 SHORT TERM TODO / NEXT UPDATE:
+-
+-
+-
 
 Include underused ingredients
 - Plants and mutated plants
 - Creature Loot as ingredients (swim bladder, etc)
 - Exotic nonsense like husk stingers
+- Have multiple recipes for each meat type (at least 2). Ingredients must have multiple uses
 
-Important stuff:
-- TEST NEw FEATURES
+Important:
+- TEST NEW FEATURES, avoid bugs
 - Plant RE-rework when DLC comes out
 - Ensure Neurotrauma compatibility
-- Have multiple recipes for each create meat type (at least 2)
 
 
 
@@ -36,7 +39,7 @@ Important stuff:
 [List]
 [*] Improved Beer descriptions to hopefully clarify what they do
 [*] Reaper's Tribute beer effects improved, now reduces Fatigue and heals slightly when passing out
-[*] Very slightly reduced the amount of passive fatigue gained (you would sleep more than you would eat in the HUNGRY mod)
+[*] Very slightly reduced the amount of passive Fatigue gained (you would sleep more than you would eat in the HUNGRY mod)
 [*] Fewer empty cans in outposts (less aluminium everywhere)
 [*] Increased the amount of base cooking/butchery skill from injecting "Enable Hungry Europan" from 5 to 10
 [*] Increased the amount of cooking/butchery skill from reading book, extra skill if you have low cooking/butchery, reading books improves mood
@@ -59,7 +62,7 @@ Important stuff:
 
 [b]KNOWN BUGS/ISSUES:[/b]
 [*] Bad bot support. It is NOT advised giving bots NEEDS.
-[*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
+[*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty (like bottles)
 [*] Poisons are not working for fork/spoon/fingerfood meals
 [*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
 
@@ -83,36 +86,22 @@ LIST OF FOODS IDEAS:
 
 - More Blender recipes
 - More Offal recipes
-- More Mushroom recipes?
+- Thalami Salami
+- More Mushroom recipes? cooked mushrooms item to not use a full mushroom
 - Cake + Slices
 - Pasta + pasta recipes
-- Endeavour's cuppa: minor healing properties, slow metabolism cures psychosis and hallucinations, cures husk 
-- Grog! It'd be made of sea water and rum.
-- Homemade kvass from water, bread, yeast and sugar.
-
-
-
-Enforced NEEDS:
-- Changes to the lua function. Mainly important for singleplayer or multiplayer with bots:
-Bots will now only get the "Hungry Europan" talent and thus the hunger and thirst afflictions if you actively control them. Hunger and thirst values will be stored and then set to 0 for characters controlled by a bot. Upon taking back control over the character, the previous hunger and thirst values for this specific character will be restored. Switching into the next round will however delete all stored values that are currently not in use so always switch back to your main character or your hunger and thirst will be reset to 0.
-
-Deathwish: Fix controller component showing when interacting with surgical table on stimpy subs
-
-NEEDS:
-- Updated to the latest version of Hungry Europans. See changelogs [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2954998725]HERE[/url]
-
+- Homemade kvass fermented from water, bread, yeast and sugar.
 
 
 LongTermPlans:
 - Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations	
-- Kuru sickness
+- Kuru sickness (eating brains)
 - "Brain freeze" from eating ice cream too fast
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
 - Abyssal meats and recipes?
 - Better Entertainer talents to replace the whole "graduation" copy
-- Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
-- Assistant "Tasty target" talent for Chef
+- Talents that boost assistants / sous-chef
 - Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
