@@ -139,14 +139,15 @@
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
-      <!-- Reduce alcohol withdrawal symptoms and improve the mood -->
-      <Effect minstrength="0" maxstrength="20" strengthchange="-0.015">
+      <!-- -6 per minute -->
+      <!-- improve the mood -->
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="0.26" probability="0.25" />
           <ReduceAffliction identifier="mood" strength="0.2" />
         </StatusEffect>
       </Effect>
       <!-- Low level of drunkenness decreases speed slightly -->
+      <!-- -3 per minute -->
       <Effect minstrength="20" maxstrength="40"
         minscreendistort="0"
         maxscreendistort="0.2"
@@ -154,7 +155,7 @@
         maxscreenblur="0.2"
         minradialdistort="0"
         maxradialdistort="0.2"
-        strengthchange="-0.025"
+        strengthchange="-0.05"
         minfacetint="255,0,0,0"
         maxfacetint="255,0,0,50"
         minspeedmultiplier="1.0"
@@ -163,35 +164,26 @@
         minresistance="0.0"
         maxresistance="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.005" probability="1.0" />
-          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="1" probability="0.25" />
+          <Affliction identifier="he-alcoholism" strength="0.18" probability="1.0" />
           <ReduceAffliction identifier="embarrassment" strength="0.5" />
           <ReduceAffliction identifier="mood" strength="0.3" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional he-alcoholism="lt 25" />
-          <Conditional InWater="false" />
-          <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.05" />
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional fatigue="gt 0" />
           <Affliction identifier="fatigue" strength="0.2" probability="0.1" />
         </StatusEffect>
-        <!--<StatusEffect target="Character">
-          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
-        </StatusEffect>-->
       </Effect>
       <!-- Heavier drunkenness decreases speed more -->
+      <!-- -3 per minute -->
       <Effect minstrength="40" maxstrength="80"
         minscreendistort="0.2"
-        maxscreendistort="1.0"
+        maxscreendistort="0.5"
         minscreenblur="0.2"
-        maxscreenblur="1.0"
+        maxscreenblur="0.5"
         minradialdistort="0.2"
-        maxradialdistort="5.0"
-        strengthchange="-0.025"
+        maxradialdistort="0.6"
+        strengthchange="-0.05"
         dialogflag="DrunkMedium"
         minfacetint="255,0,0,50"
         maxfacetint="255,0,0,75"
@@ -199,42 +191,32 @@
         maxspeedmultiplier="0.7"
         resistancefor="damage"
         minresistance="0.1"
-        maxresistance="0.5">
+        maxresistance="0.2">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.01" probability="1.0" />
-          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" probability="0.5" />
+          <Affliction identifier="he-alcoholism" strength="0.19" probability="1.0" />
           <ReduceAffliction identifier="embarrassment" strength="1" />
           <ReduceAffliction identifier="mood" strength="0.5" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional he-alcoholism="lt 50" />
-          <Conditional InWater="false" />
-          <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.15" />
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional fatigue="gt 0" />
-          <Affliction identifier="fatigue" strength="0.4" probability="0.2" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional he-alcoholism="gte 20" />
-          <Affliction identifier="nausea" strength="10" probability="0.005" />
+          <Affliction identifier="fatigue" strength="0.2" probability="0.1" />
         </StatusEffect>
         <StatusEffect target="Character">
           <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
           <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
-      <!-- After drinking enough the effect starts to get lethal -->
+      <!-- After drinking enough -->
       <Effect minstrength="80" maxstrength="100"
         minvitalitydecrease="0"
-        maxvitalitydecrease="110"
-        minscreendistort="1.0"
-        maxscreendistort="3.0"
-        minscreenblur="1.0"
-        maxscreenblur="3.0"
-        minradialdistort="5.0"
-        maxradialdistort="6.0"
+        maxvitalitydecrease="20"
+        minscreendistort="0.5"
+        maxscreendistort="1.0"
+        minscreenblur="0.5"
+        maxscreenblur="1.0"
+        minradialdistort="0.6"
+        maxradialdistort="1.0"
         strengthchange="-0.05"
         dialogflag="DrunkHigh"
         minfacetint="255,0,0,75"
@@ -242,34 +224,61 @@
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5"
         resistancefor="damage"
-        minresistance="0.5"
-        maxresistance="1.0">
+        minresistance="0.2"
+        maxresistance="0.3">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.04" probability="1" />
-          <Affliction identifier="organdamage" strength="0.5" probability="0.5" />
-          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" probability="1" />
+          <Affliction identifier="he-alcoholism" strength="0.20" probability="1.0" />
+          <Affliction identifier="organdamage" strength="0.25" probability="0.25" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <ReduceAffliction identifier="mood" strength="1" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional he-alcoholism="lt 75" />
-          <Conditional InWater="false" />
-          <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.5" />
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional fatigue="gt 0" />
-          <Affliction identifier="fatigue" strength="0.6" probability="0.5" />
-        </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional he-alcoholism="gte 20" />
-          <Affliction identifier="nausea" strength="20" probability="0.05" />
+          <Affliction identifier="fatigue" strength="0.2" probability="0.1" />
         </StatusEffect>
         <StatusEffect target="Character">
           <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
           <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
         </StatusEffect>
-      </Effect>
+      </Effect>      
+        <!-- disorient -->
+      <PeriodicEffect minstrength="20" maxstrength="40" mininterval="45" maxinterval="90" >
+        <StatusEffect target="Character" duration="2" comparison="And">
+          <Conditional he-alcoholism="lt 25" />
+          <Conditional InWater="false" />
+          <Affliction identifier="he-drunkinvertcontrols" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <PeriodicEffect minstrength="40" maxstrength="60" mininterval="35" maxinterval="70" >
+        <StatusEffect target="Character" duration="2" comparison="And">
+          <Conditional he-alcoholism="lt 50" />
+          <Conditional InWater="false" />
+          <Affliction identifier="he-drunkinvertcontrols" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <PeriodicEffect minstrength="60" maxstrength="80" mininterval="25" maxinterval="50" >
+        <StatusEffect target="Character" duration="2" comparison="And">
+          <Conditional he-alcoholism="lt 50" />
+          <Conditional InWater="false" />
+          <Affliction identifier="he-drunkinvertcontrols" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <PeriodicEffect minstrength="80" maxstrength="100" mininterval="15" maxinterval="30" >
+        <StatusEffect target="Character" duration="2" comparison="And">
+          <Conditional he-alcoholism="lt 75" />
+          <Conditional InWater="false" />
+          <Affliction identifier="he-drunkinvertcontrols" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <!-- pass out if tired -->
+      <PeriodicEffect minstrength="40" maxstrength="100" mininterval="30" maxinterval="60" >
+        <StatusEffect target="Character" duration="2" comparison="And">
+          <Conditional fatigue="gt 30" />
+          <Affliction identifier="he-exhaustedsleep" strength="10" />
+        </StatusEffect>
+      </PeriodicEffect>
+      
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     
@@ -309,11 +318,6 @@
           <ReduceAffliction identifier="embarrassment" strength="0.5" />
           <ReduceAffliction identifier="mood" strength="0.3" />
         </StatusEffect>
-        <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional he-alcoholism="lt 25" />
-          <Conditional InWater="false" />
-          <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.025" />
-        </StatusEffect>-->
       </Effect>
       <Effect minstrength="40" maxstrength="80"
         minscreenblur="0.0"
@@ -336,11 +340,6 @@
           <ReduceAffliction identifier="embarrassment" strength="1" />
           <ReduceAffliction identifier="mood" strength="0.5" />
         </StatusEffect>
-        <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional he-alcoholism="lt 50" />
-          <Conditional InWater="false" />
-          <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.05" />
-        </StatusEffect>-->
       </Effect>
       <Effect minstrength="80" maxstrength="100"
         minscreenblur="0.25"
@@ -363,11 +362,6 @@
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <ReduceAffliction identifier="mood" strength="1" />
         </StatusEffect>
-        <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional he-alcoholism="lt 75" />
-          <Conditional InWater="false" />
-          <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.05" />
-        </StatusEffect>-->
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
@@ -575,11 +569,8 @@
         target="Self" />
       <Effect minstrength="0" maxstrength="100"
         strengthchange="-50"
-        minspeedmultiplier="0.7"
-        maxspeedmultiplier="0.7">
-      <!--<StatusEffect target="Character" disabledeltatime="true">
-      <Affliction identifier="stun" strength="3" probability="0.05" />
-      </StatusEffect>-->
+        minspeedmultiplier="0.4"
+        maxspeedmultiplier="0.8">
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,256,128,128" color="255,255,2255,255" origin="0.5,0.5" />
     </Affliction>
@@ -1251,6 +1242,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
+    <!-- Sleeping - cures fatigue and a variety of secondary afflictions -->
     <Affliction name="Sleeping" identifier="he-sleep" iconcolors="50,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Description
         textidentifier="afflictiondescription.he-sleep"
@@ -1270,17 +1262,18 @@
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
           <ReduceAffliction identifier="he-cannibalism" strength="0.025" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.025" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.1" />
           <ReduceAffliction identifier="embarrassment" strength="3" />
           <ReduceAffliction type="damage" strength="0.1" />
           <ReduceAffliction identifier="bloodloss" strength="0.05" />
           <ReduceAffliction identifier="bleeding" strength="0.05" />
           <reduceaffliction identifier="infection" strength="0.05" />
-          <reduceaffliction identifier="opiatewithdrawal" strength="0.1" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.3" />
           <reduceaffliction identifier="opiateaddiction" strength="0.1" />
-          <reduceaffliction identifier="chemwithdrawal" strength="0.1" />
+          <reduceaffliction identifier="chemwithdrawal" strength="0.3" />
           <reduceaffliction identifier="chemaddiction" strength="0.025" />
-          <reduceaffliction identifier="he-tobaccoaddiction" strength="0.1" />
+          <reduceaffliction identifier="he-tobaccoaddiction" strength="0.2" />
+          <reduceaffliction identifier="he-alcoholwithdrawal" strength="0.3" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional adrenalinerush="gt 0" />
@@ -1304,23 +1297,23 @@
           <Conditional adrenalinerush="lte 0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringClown.ogg" volume="3" range="400" loop="true" />
         </StatusEffect>
-      </Effect>
-     
+      </Effect>     
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay2.png" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
     
-    <Affliction name="Sleeping" identifier="he-exhaustedsleep" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <!-- Exhausted Sleeping - only cures fatigue -->
+    <Affliction name="Exhausted Sleeping" identifier="he-exhaustedsleep" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Description
         textidentifier="afflictiondescription.he-exhaustedsleep"
         target="Self"
         minstrength="0"
-        maxstrength="1" />
+        maxstrength="60" />
       <Description
         textidentifier="afflictiondescription.he-exhaustedsleep.others"
         target="OtherCharacter"
         minstrength="0"
-        maxstrength="1" />
+        maxstrength="60" />
       <Effect minstrength="0" maxstrength="60" resistancefor="fatigue" minresistance="1.0" maxresistance="1.0" strengthchange="-1" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <!-- exhausted sleep is less effective than regular sleep and only reduces fatigue -->
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
@@ -1352,7 +1345,7 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringClown.ogg" volume="3" range="400" loop="true" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay2.png" />
+      <!-- <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay2.png" /> -->
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
     

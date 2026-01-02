@@ -599,7 +599,7 @@
     </Affliction>
     
 
-    <!-- ALOHOLIC -->
+    <!-- ALOHOLIC - generates alcohol withdrawal if not drunk, goes away after a while -->
     <Affliction name="Alcoholic"
       identifier="he-alcoholism"
       description="The patient is happy enough... so long as they get what they need."
@@ -622,15 +622,14 @@
       <Description
         textidentifier="advancedafflictiondescription.others.he-alcoholism"
         target="OtherCharacter" />
-      <Effect minstrength="0" maxstrength="20" strengthchange="-0.003">
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.15">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunknodebuffs="gte 1" />
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="20" maxstrength="40"
-        dialogflag="alcoholiclight"
-        strengthchange="0.0">
+      <Effect minstrength="20" maxstrength="40" strengthchange="-0.15"
+        dialogflag="alcoholiclight" >
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
           <Affliction identifier="he-alcoholwithdrawal" strength="0.05" />
@@ -640,9 +639,8 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="40" maxstrength="80"
-        dialogflag="alcoholicmedium"
-        strengthchange="0.0">
+      <Effect minstrength="40" maxstrength="80" strengthchange="-0.15"
+        dialogflag="alcoholicmedium" >
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
           <Affliction identifier="he-alcoholwithdrawal" strength="0.1" />
@@ -652,9 +650,8 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="80" maxstrength="100"
+      <Effect minstrength="80" maxstrength="100" strengthchange="-0.15"
         dialogflag="alcoholicheavy"
-        strengthchange="0.0"
         minvitalitydecrease="0"
         maxvitalitydecrease="20">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -669,6 +666,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
     
+    <!-- alcohol withdrawal - gives bad effects if not drinking -->
     <Affliction name="Alcohol withdrawal"
       identifier="he-alcoholwithdrawal"
       description="Agitation and a tremor are obvious, as are the signs of nausea."
@@ -704,11 +702,17 @@
         maxstrength="100" 
         target="OtherCharacter" />
       <!-- no effects at this point -->
-      <Effect minstrength="0" maxstrength="20" />  
+      <Effect minstrength="0" maxstrength="20" >      
+        <!-- reduce withdrawal if drunk -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional drunk="gt 0" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>      
+      </Effect>  
       <!-- Slow down the character and slightly decrease vitality -->
       <Effect minstrength="20" maxstrength="40"
         minvitalitydecrease="0"
-        maxvitalitydecrease="20"
+        maxvitalitydecrease="0"
         strengthchange="0.00"
         minchromaticaberration="0.0"
         maxchromaticaberration="1.0"
@@ -716,10 +720,22 @@
         minfacetint="255,255,255,0"
         maxfacetint="255,255,255,50"
         minspeedmultiplier="1.0"
-        maxspeedmultiplier="0.8">
+        maxspeedmultiplier="0.8"
+        convulseamount="0.1">
+        <!-- reduce withdrawal if drunk -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional drunk="gt 0" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>
+        <!-- reduce withdrawal if not alcoholic -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional he-alcoholism="lt 0" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>
+        <!-- bad effects -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Affliction identifier="nausea" strength="5" probability="0.05" />
-          <Affliction identifier="psychosis" strength="2" probability="0.02" />
+          <Affliction identifier="he-stomachache" strength="4" probability="0.1" />
           <ReduceAffliction identifier="he-alcoholism" strength="0.025" probability="1.0" />
         </StatusEffect>
         <!-- only increase (worsen) the mood if it's enabled -->
@@ -731,19 +747,31 @@
       <!-- Decrease vitality more. The strength of the affliction drops faster, meaning that 
       the character needs a stronger opiate addiction for the withdrawal symptoms to stay at this level -->
       <Effect minstrength="40" maxstrength="80"
-        minvitalitydecrease="20"
-        maxvitalitydecrease="50"
+        minvitalitydecrease="0"
+        maxvitalitydecrease="10"
         strengthchange="0.0"
         minchromaticaberration="1.0"
-        maxchromaticaberration="5.0"
+        maxchromaticaberration="2.0"
         dialogflag="OpiateWithdrawalMedium"
         minfacetint="255,255,255,50"
         maxfacetint="255,255,255,100"
         minspeedmultiplier="0.8"
-        maxspeedmultiplier="0.7">
+        maxspeedmultiplier="0.7"
+        convulseamount="0.2">
+        <!-- reduce withdrawal if more drunk -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional drunk="gt 20" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>
+        <!-- reduce withdrawal if not alcoholic -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional he-alcoholism="lt 0" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>
+        <!-- bad effects -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Affliction identifier="nausea" strength="20" probability="0.1" />
-          <Affliction identifier="psychosis" strength="4" probability="0.1" />
+          <Affliction identifier="he-stomachache" strength="4" probability="0.1" />
           <ReduceAffliction identifier="he-alcoholism" strength="0.05" probability="1.0" />
         </StatusEffect>
         <!-- only increase (worsen) the mood if it's enabled -->
@@ -753,23 +781,35 @@
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
-        minvitalitydecrease="50"
-        maxvitalitydecrease="180"
+        minvitalitydecrease="10"
+        maxvitalitydecrease="20"
         minscreendistort="0.0"
-        maxscreendistort="3.0"
+        maxscreendistort="1.0"
         strengthchange="0.0"
-        minchromaticaberration="5.0"
-        maxchromaticaberration="10.0"
+        minchromaticaberration="2.0"
+        maxchromaticaberration="5.0"
         minradialdistort="10.0"
         maxradialdistort="40.0"
         dialogflag="OpiateWithdrawalHigh"
         minfacetint="255,255,255,100"
         maxfacetint="255,255,255,150"
         minspeedmultiplier="0.7"
-        maxspeedmultiplier="0.5">
+        maxspeedmultiplier="0.5"
+        convulseamount="0.3">
+        <!-- reduce withdrawal if very drunk -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="nausea" strength="50" probability="0.25" />
-          <Affliction identifier="psychosis" strength="10" probability="0.15" />
+          <Conditional drunk="gt 40" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>
+        <!-- reduce withdrawal if not alcoholic -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional he-alcoholism="lt 0" />
+          <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" />
+        </StatusEffect>
+        <!-- bad effects -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Affliction identifier="nausea" strength="10" probability="0.25" />
+          <Affliction identifier="he-stomachache" strength="4" probability="0.1" />
           <ReduceAffliction identifier="he-alcoholism" strength="0.1" probability="1.0" />
         </StatusEffect>
         <!-- only increase (worsen) the mood if it's enabled -->
