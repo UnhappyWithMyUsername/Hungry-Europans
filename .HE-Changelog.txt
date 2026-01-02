@@ -38,10 +38,11 @@ Important stuff:
 [*] Reaper's Tribute beer effects improved, now reduces Fatigue and heals slightly when passing out
 [*] Very slightly reduced the amount of passive fatigue gained (you would sleep more than you would eat in the HUNGRY mod)
 [*] Fewer empty cans in outposts (less aluminium everywhere)
-[*] Increased the amount of base cooking/butchery skill from injecting "Enable Hungry Europan"
-[*] Increased the amount of cooking/butchery skill from reading book, reading books improves mood
+[*] Increased the amount of base cooking/butchery skill from injecting "Enable Hungry Europan" from 5 to 10
+[*] Increased the amount of cooking/butchery skill from reading book, extra skill if you have low cooking/butchery, reading books improves mood
 [*] Trying to apply bottles via Health UI (to heal infections/burns...) will unbottle them
-
+[*] Enabled milking all Moloch (including babies), milking molochs will build milking immunity over time so there is a finite amount of milk you can get (use Health Scanner to keep track)
+[*] Cheese recipe gives 2x more cheese, reduced cheese food value and cheese slices
 [/List]
 
 [b]Fixes:[/b] 
@@ -51,6 +52,8 @@ Important stuff:
 [*] Reduced cleaver "no meat" sound range, it was supposed to only play for the person swinging the cleaver but this didnt work as expected and the sound can be heard from far away.
 [*] Fix blender not shaking
 [*] Fix some containers not taking all types of eggs
+[*] Fix popnut/berry leaves not going in the refrigerator
+[*] Fix prepared roasts/filets decaying when out of refrigerator
 [/List]
 
 
