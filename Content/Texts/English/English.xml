@@ -781,10 +781,10 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 <afflictionname.defecate>Need to defecate</afflictionname.defecate><!--Patch 13-->
 <afflictiondescription.defecate>What goes in must come out.</afflictiondescription.defecate><!--Patch 13-->
-<afflictiondescription.defecate.self>Your colon is pristine.</afflictiondescription.defecate.self><!--Patch 13-->
+<afflictiondescription.defecate.self>Your colon is not so pristine.</afflictiondescription.defecate.self><!--Patch 13-->
 <afflictiondescription.defecate.self.high>You are struggling to hold it in! Seek the nearest toilet!</afflictiondescription.defecate.self.high><!--Patch 13-->
 <afflictiondescription.defecate.other.low>The patient has good bowel movement.</afflictiondescription.defecate.other.low><!--Patch 13-->
-<afflictiondescription.defecate.other>The patient looks sweating and constipated.</afflictiondescription.defecate.other><!--Patch 13-->
+<afflictiondescription.defecate.other>The patient looks sweaty and constipated.</afflictiondescription.defecate.other><!--Patch 13-->
 <afflictiondescription.defecate.other.high>The patient's sphincter is about to give out!</afflictiondescription.defecate.other.high><!--Patch 13-->
 
 <afflictionname.embarrassment>Embarrassed</afflictionname.embarrassment><!--Patch 13-->
