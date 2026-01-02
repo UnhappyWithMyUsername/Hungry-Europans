@@ -622,13 +622,13 @@
       <Description
         textidentifier="advancedafflictiondescription.others.he-alcoholism"
         target="OtherCharacter" />
-      <Effect minstrength="0" maxstrength="20" strengthchange="-0.15">
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.05">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunknodebuffs="gte 1" />
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="20" maxstrength="40" strengthchange="-0.15"
+      <Effect minstrength="20" maxstrength="40" strengthchange="-0.05"
         dialogflag="alcoholiclight" >
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
@@ -639,7 +639,7 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="40" maxstrength="80" strengthchange="-0.15"
+      <Effect minstrength="40" maxstrength="80" strengthchange="-0.05"
         dialogflag="alcoholicmedium" >
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
@@ -650,7 +650,7 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="80" maxstrength="100" strengthchange="-0.15"
+      <Effect minstrength="80" maxstrength="100" strengthchange="-0.05"
         dialogflag="alcoholicheavy"
         minvitalitydecrease="0"
         maxvitalitydecrease="20">
