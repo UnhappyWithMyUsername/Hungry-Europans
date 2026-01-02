@@ -769,7 +769,7 @@
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.2"/>
-        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
+        <RequiredItem tag="egg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
       </Fabricate>
       <Deconstruct time="1" />
       <Body radius="12" height="55" density="7" />
@@ -861,7 +861,7 @@
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-dough" amount="1" />
         <RequiredItem identifier="he-chocolatemix" amount="1" UseCondition="True" MinCondition="0.40" />
-        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
+        <RequiredItem tag="egg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
         <RequiredItem identifier="he-emptyjar" amount="1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
