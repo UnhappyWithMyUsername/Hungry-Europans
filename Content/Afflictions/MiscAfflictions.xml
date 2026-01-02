@@ -147,7 +147,7 @@
         </StatusEffect>
       </Effect>
       <!-- Low level of drunkenness decreases speed slightly -->
-      <!-- -3 per minute -->
+      <!-- -6 per minute -->
       <Effect minstrength="20" maxstrength="40"
         minscreendistort="0"
         maxscreendistort="0.2"
@@ -175,7 +175,7 @@
         </StatusEffect>
       </Effect>
       <!-- Heavier drunkenness decreases speed more -->
-      <!-- -3 per minute -->
+      <!-- -6 per minute -->
       <Effect minstrength="40" maxstrength="80"
         minscreendistort="0.2"
         maxscreendistort="0.5"
