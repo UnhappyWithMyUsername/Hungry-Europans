@@ -451,7 +451,7 @@
         <StatusEffect type="OnUse" target="UseTarget,Character" forceplaysounds="true" >
           <Conditional he-butchered="gte 100" />
           <Conditional IsLocalPlayer="True"/>
-          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" dontmuffle="true" />
+          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" dontmuffle="false" />
         </StatusEffect>
                 
       </MeleeWeapon>
