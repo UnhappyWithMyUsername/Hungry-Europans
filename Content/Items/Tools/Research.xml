@@ -760,8 +760,8 @@
         <!-- give some more skill if low skill -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true" oneshot="true" comparison="and" >
           <Conditional Condition="lte 0" />
-          <Conditional skillrequirement="true" cooking="lt 15" />
-          <Conditional skillrequirement="true" butchery="lt 15" />
+          <Conditional skillrequirement="true" cooking="lt 20" />
+          <Conditional skillrequirement="true" butchery="lt 20" />
           <GiveSkill skillidentifier="cooking" amount="2" triggertalents="false" />
           <GiveSkill skillidentifier="butchery" amount="2" triggertalents="false" />
         </StatusEffect>
