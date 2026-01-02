@@ -155,7 +155,7 @@
         maxscreenblur="0.2"
         minradialdistort="0"
         maxradialdistort="0.2"
-        strengthchange="-0.05"
+        strengthchange="-0.1"
         minfacetint="255,0,0,0"
         maxfacetint="255,0,0,50"
         minspeedmultiplier="1.0"
@@ -164,7 +164,7 @@
         minresistance="0.0"
         maxresistance="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.18" probability="1.0" />
+          <Affliction identifier="he-alcoholism" strength="0.13" probability="1.0" />
           <ReduceAffliction identifier="embarrassment" strength="0.5" />
           <ReduceAffliction identifier="mood" strength="0.3" />
         </StatusEffect>
@@ -183,7 +183,7 @@
         maxscreenblur="0.5"
         minradialdistort="0.2"
         maxradialdistort="0.6"
-        strengthchange="-0.05"
+        strengthchange="-0.1"
         dialogflag="DrunkMedium"
         minfacetint="255,0,0,50"
         maxfacetint="255,0,0,75"
@@ -193,7 +193,7 @@
         minresistance="0.1"
         maxresistance="0.2">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.19" probability="1.0" />
+          <Affliction identifier="he-alcoholism" strength="0.14" probability="1.0" />
           <ReduceAffliction identifier="embarrassment" strength="1" />
           <ReduceAffliction identifier="mood" strength="0.5" />
         </StatusEffect>
@@ -217,7 +217,7 @@
         maxscreenblur="1.0"
         minradialdistort="0.6"
         maxradialdistort="1.0"
-        strengthchange="-0.05"
+        strengthchange="-0.1"
         dialogflag="DrunkHigh"
         minfacetint="255,0,0,75"
         maxfacetint="255,0,0,100"
@@ -227,7 +227,7 @@
         minresistance="0.2"
         maxresistance="0.3">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.20" probability="1.0" />
+          <Affliction identifier="he-alcoholism" strength="0.15" probability="1.0" />
           <Affliction identifier="organdamage" strength="0.25" probability="0.25" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <ReduceAffliction identifier="mood" strength="1" />
