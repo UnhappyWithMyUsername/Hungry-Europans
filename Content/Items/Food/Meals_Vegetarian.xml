@@ -72,7 +72,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Bubble Berry Jam Sandwich" identifier="he-sandwichbbjam" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with bubble berry jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Bubble Berry Jam Sandwich" identifier="he-sandwichbbjam" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with bubble berry jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -97,10 +97,10 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_sandwich" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.0" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="1.0" />
-          <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="thirst" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -112,10 +112,10 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_sandwich" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.0" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="1.0" />
-          <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="thirst" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -126,7 +126,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Pomegrenade Jam Sandwich" identifier="he-sandwichpgjam" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with pomegrenade jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Pomegrenade Jam Sandwich" identifier="he-sandwichpgjam" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with pomegrenade jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -152,9 +152,9 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
-          <Affliction identifier="he-sugarrich" amount="8" />
+          <Affliction identifier="he-sugarrich" amount="12" />
           <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="thirst" amount="0.25" />
+          <ReduceAffliction type="thirst" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -167,9 +167,9 @@
           <Conditional InWater="false" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
-          <Affliction identifier="he-sugarrich" amount="8" />
+          <Affliction identifier="he-sugarrich" amount="12" />
           <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="thirst" amount="0.25" />
+          <ReduceAffliction type="thirst" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
