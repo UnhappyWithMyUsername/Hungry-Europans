@@ -98,7 +98,7 @@
         </Planter>
       </Item>
       
-      <Item name="" identifier="fertilizer" tags="fertilizer,fertilizercontainer,smallitem" maxstacksize="32" maxstacksizecharacterinventory="8" category="Equipment,Misc" subcategory="Gardening" scale="0.5" health="800">
+      <Item name="" identifier="fertilizer" tags="fertilizer,fertilizercontainer,mediumitem" maxstacksize="1" maxstacksizecharacterinventory="1" category="Equipment,Misc" subcategory="Gardening" scale="0.5" health="800">
         <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="910,128,87,125" depth="0.55" origin="0.5,0.5" />
         <Price baseprice="140" minleveldifficulty="1">
           <Price storeidentifier="merchantoutpost" minavailable="1" />
@@ -128,9 +128,6 @@
         </Deconstruct>
         <Body width="85" height="122" density="25" />
         <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="95" handle1="-20,55" msg="ItemMsgPickUpSelect">
-          <StatusEffect type="OnBroken" target="This">
-            <Remove />
-          </StatusEffect>
         </Holdable>
       </Item>
       
