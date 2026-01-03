@@ -569,7 +569,7 @@
     </Item>
 
     <!-- JAMS -->
-    <Item name="Bubble Berry Jam" identifier="he-jambubbleberry" health="15" category="Misc" subcategory="Ingredients" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Tasty jam made out of bubble berries. Known to quench a bit of thirst." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" canflipx="true">
+    <Item name="Bubble Berry Jam" identifier="he-jambubbleberry" health="15" category="Misc" subcategory="Ingredients" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Tasty jam made out of bubble berries. Known to quench a bit of thirst." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" canflipx="true">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -646,7 +646,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Pomegrenade Jam" identifier="he-jampomegrenade" health="15" category="Misc" subcategory="Ingredients" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Tasty jam made out of pomegrenade. Known to be a bit more filling." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" canflipx="true">
+    <Item name="Pomegrenade Jam" identifier="he-jampomegrenade" health="15" category="Misc" subcategory="Ingredients" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Tasty jam made out of pomegrenade. Known to be a bit more filling." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" canflipx="true">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
