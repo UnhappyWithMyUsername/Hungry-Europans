@@ -84,7 +84,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="651,60,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="22" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="35" />
-        <RequiredItem identifier="he-rawmudraptormeat" amount="1" UseCondition="false" />
+        <RequiredItem identifier="he-rawmudraptormeat" amount="1" MinCondition="0.5" UseCondition="false" />
         <RequiredItem identifier="yeastshroom" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
