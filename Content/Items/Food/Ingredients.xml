@@ -589,6 +589,7 @@
         <RequiredItem identifier="bubbleberries" amount="4" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25" />
         <RequiredItem tag="emptyjar" amount="1" />
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="216,84,39,50" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="216,84,39,50" origin="0.5,0.5" />
@@ -662,9 +663,10 @@
       </Deconstruct>
       <Fabricate suitablefabricators="stove" requiredtime="25" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="creepingorange" amount="3" />
+        <RequiredItem identifier="creepingorange" amount="4" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25" />
         <RequiredItem tag="emptyjar" amount="1" />
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="255,84,39,50" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="255,84,39,50" origin="0.5,0.5" />
