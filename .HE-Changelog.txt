@@ -27,7 +27,7 @@ Important:
 //////////////////////
 //////////////////////
 
-[hr]01/01/2026[/hr]
+[hr]02/01/2026[/hr]
 
 
 [b]Additions:[/b]
@@ -37,15 +37,18 @@ Important:
 
 [b]Changes:[/b] 
 [List]
-[*] Improved Beer descriptions to hopefully clarify what they do
-[*] Reaper's Tribute beer effects improved, now reduces Fatigue and heals slightly when passing out
 [*] Very slightly reduced the amount of passive Fatigue gained (you would sleep more than you would eat in the HUNGRY mod)
-[*] Fewer empty cans in outposts (less aluminium everywhere)
+[*] Improved Beer descriptions to hopefully clarify what they do
+[*] Made some keg recipes less painful to craft
+[*] Reaper's Tribute beer effects improved, now reduces Fatigue and heals slightly when passing out
+[*] Fewer empty cans in outposts (less aluminium spam)
 [*] Increased the amount of base cooking/butchery skill from injecting "Enable Hungry Europan" from 5 to 10
 [*] Increased the amount of cooking/butchery skill from reading book, extra skill if you have low cooking/butchery, reading books improves mood
 [*] Trying to apply bottles via Health UI (to heal infections/burns...) will unbottle them
 [*] Enabled milking all Moloch (including babies), milking molochs will build milking immunity over time so there is a finite amount of milk you can get (use Health Scanner to keep track)
 [*] Cheese recipe gives 2x more cheese, reduced cheese food value and cheese slices
+[*] Some Egg recipes can use large eggs too
+[*] No longer get partial glass shards when breaking glasses/shakers, only have a 50% chance of getting shard instead
 [/List]
 
 [b]Fixes:[/b] 
@@ -57,6 +60,7 @@ Important:
 [*] Fix some containers not taking all types of eggs
 [*] Fix popnut/berry leaves not going in the refrigerator
 [*] Fix prepared roasts/filets decaying when out of refrigerator
+[*] Fix Leucocytes giving Offal
 [/List]
 
 
