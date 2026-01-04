@@ -283,7 +283,10 @@
         MaxAfflictionOverlayAlphaMultiplier="1"
         minfacetint="255,255,255,0"
         maxfacetint="255,100,255,150"
-        ThermalOverlayRange="1500" ThermalOverlayColor="130,70,145,150">
+        ThermalOverlayRange="1500" ThermalOverlayColor="130,70,145,150"
+        resistancefor="blind,blind_hard,welderseye,applywelderseye"
+        minresistance="0.8"
+        maxresistance="0.8">
         <StatusEffect target="Character" targetlimb="Head" >
           <Affliction identifier="hallucinating" amount="1.5" />
           <ParticleEmitter particle="muzzleflashpulselaser" particleamount="1" emitinterval="3" scalemin="0.2" scalemax="0.3" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" lifetimemultiplier="1" colormultiplier="50,0,150,255"/>
