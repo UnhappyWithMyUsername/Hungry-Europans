@@ -1611,5 +1611,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 ‖color:gui.red‖manualenforceallneeds‖end‖ (all of the above)
 </eventtext.manualenforceinfo>
 
+<!-- Regex to remove all the patch xx we no longer use -->
+(?#.+)<!--Patch \d\d-->+$ 
+
 </Override>
 </infotexts>
