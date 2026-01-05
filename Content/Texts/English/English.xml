@@ -444,9 +444,9 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-glassfragments>Glass Fragments</entityname.he-glassfragments><!--Patch 10-->
 <entitydescription.he-glassfragments>Shattered glass. Can be obtained through smashing bottles or crafting them from quartz at a fabricator. Used for crafting at a fabricator or bottle printer.</entitydescription.he-glassfragments><!--Patch 10-->
 <entityname.he-jambubbleberry>Bubbleberry Jam</entityname.he-jambubbleberry><!--Patch 10-->
-<entitydescription.he-jambubbleberry>Tasty jam made out of bubbleberries. Known to quench a bit of thirst.</entitydescription.he-jambubbleberry><!--Patch 10-->
+<entitydescription.he-jambubbleberry>Tasty jam made out of bubbleberries.</entitydescription.he-jambubbleberry><!--Patch 10-->
 <entityname.he-jampomegrenade>Pomegrenade Jam</entityname.he-jampomegrenade><!--Patch 13-->
-<entitydescription.he-jampomegrenade>Tasty jam made out of pomegrenade. Known to be slightly more filling.</entitydescription.he-jampomegrenade><!--Patch 13-->
+<entitydescription.he-jampomegrenade>Tasty jam made out of pomegrenade.</entitydescription.he-jampomegrenade><!--Patch 13-->
 <entityname.he-seaweedstrip>Sea Weed Strips</entityname.he-seaweedstrip><!--Patch 13-->
 <entitydescription.he-seaweedstrip>Sea weed pressed and sliced into strips. Let it dry into Nori.</entitydescription.he-seaweedstrip><!--Patch 13-->
 <entityname.he-nori>Nori</entityname.he-nori><!--Patch 13-->
