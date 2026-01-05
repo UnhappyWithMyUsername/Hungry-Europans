@@ -2,6 +2,77 @@
 <Override>
   <Items>
   
+    <!-- Nuggets -->
+    <Item name="Pile of Raw Nuggets" identifier="he-rawnuggets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowinfryer,canspoil,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="176,437,48,29" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="109,0,81,54" origin="0.5,0.5" />
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="butchery" level="15" />
+        <RequiredItem tag="rawmeatpiece" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.2"/>
+      </Fabricate>
+      <Body width="34" radius="14" density="11" />
+      <!--<Price baseprice="15" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+        <Price storeidentifier="merchantoutpost"/>
+        <Price storeidentifier="merchantcity"/>
+        <Price storeidentifier="merchantresearch"/>
+        <Price storeidentifier="merchantmilitary"/>
+        <Price storeidentifier="merchantmine"/>
+        <Price storeidentifier="merchantmedical"/>
+        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
+      </Price>-->
+      <!-- ItemComponent hosts the effects for frying the item -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
+        <ActiveConditional HasStatusTag="eq activefryer" targetcontainer="true" />
+        <!-- MaxValueLength is used to track the time spent in the fryer. It is increased by 1 every second the item is in a container with the "activefryer" status tag -->
+        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
+        <!-- Reset the MaxValueLength when the item is no longer contained in a container with the "activefryer" status tag -->
+        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
+          <Conditional HasStatusTag="neq activefryer" targetcontainer="true" />
+        </StatusEffect>
+        <!-- Check every second if the MaxValueLength reached or exceeded a value of 45, then remove the item and spawn the fried version in its place -->
+        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
+          <Conditional MaxValueLength="gte 45" />
+          <Remove />
+          <SpawnItem identifier="he-cookednugget" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" count="8" />
+        </StatusEffect>
+      </ItemComponent>
+      <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
+      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
+        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
+          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" Condition="-0.25" timeframe="-10" disabledeltatime="true" interval="0.9">
+          <Conditional timeframe="gte 50" />
+        </StatusEffect>
+      </GreaterComponent>
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <!-- When using (eating) the item, reduce the condition by 4 per second -->
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
+        <!-- When using (eating) the item -->
+        <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.25" />
+          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
+          <Affliction identifier="nausea" amount="6" probability="0.5" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <!-- When the item's condition reaches 0 (item breaks), remove the item -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="True" />
+    </Item>
+    
     <!-- Nuggets can't be poisoned -->
     <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="3" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
