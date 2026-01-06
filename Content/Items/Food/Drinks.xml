@@ -155,7 +155,7 @@
     <Item name="Energy Drink" identifier="energydrink" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11"  canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="25" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Deconstruct time="2">
@@ -1907,7 +1907,7 @@
     <Item name="Can of Couwola Cola" identifier="he-colacan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola. Super refreshing and good for when you're absolutely shit-faced and need to sober up a quickly. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,cola,colafuel1" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="29" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Deconstruct time="2">
@@ -1974,7 +1974,7 @@
     <Item name="Can of Couwola Cola Zero" identifier="he-colazerocan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola Zero. No sugar, but full flavor! Very refreshing and good for when you're absolutely shit-faced and need to sober up a quickly." Tags="smallitem,drinkitem,colazero,colafuel2" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="29" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Deconstruct time="2">
@@ -2041,7 +2041,7 @@
     <Item name="Couwola Cola" identifier="he-colabottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola. Super refreshing and helpful when you're shit-faced. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,bottle,cola,colafuel1" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="liquorcrate"/>
       <Price baseprice="35" sold="true">
         <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="8" sold="true" />
@@ -2206,7 +2206,7 @@
     <Item name="Couwola Cola Zero" identifier="he-colazerobottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Very refreshing and kind of helpful when you're shit-faced." Tags="smallitem,drinkitem,bottle,colazero,colafuel2" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="liquorcrate"/>
       <Price baseprice="35" sold="true">
         <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="8" sold="true" />
@@ -2372,7 +2372,7 @@
     <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="liquorcrate"/>
       <!-- <Price baseprice="1399" sold="true">
         <Price storeidentifier="merchanthusk" multiplier="1.0" minavailable="0" maxavailable="40" sold="true">
@@ -3451,7 +3451,7 @@
     <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle,seawaterrefill_common,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,140,21,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,148,21,58" origin="0.5,0.5" />
@@ -3887,7 +3887,7 @@
     <Item name="Water" identifier="he-toiletwater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterregular,toiletwater,seawater,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
-      <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
+      <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,140,21,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="55,148,21,58" origin="0.5,0.5" />
