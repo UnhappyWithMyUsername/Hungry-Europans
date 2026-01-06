@@ -521,7 +521,7 @@
         maxspeedmultiplier="0.9">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gt 0" />
-          <Affliction identifier="defecate" strength="0.1" />
+          <Affliction identifier="defecate" strength="0.01" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.02"
@@ -534,7 +534,7 @@
         dialogflag="stuffedheavy">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gt 0" />
-          <Affliction identifier="defecate" strength="0.1" />
+          <Affliction identifier="defecate" strength="0.01" />
         </StatusEffect>
       </Effect>
       <PeriodicEffect mininterval="60" maxinterval="180" minstrength="80" maxstrength="100">
