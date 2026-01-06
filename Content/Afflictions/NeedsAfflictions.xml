@@ -477,6 +477,7 @@
       showinhealthscannerthreshold="1"
       limbspecific="false"
       maxstrength="100"
+      iconcolors="50,120,80,255;140,40,0,255"
       affectmachines="false"
       treatmentthreshold="10000"
       karmachangeonapplied="0"
@@ -514,23 +515,25 @@
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="80" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.05"
-        dialogflag="stuffedlight">
+      <Effect minstrength="0" maxstrength="80" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.02"
+        dialogflag="stuffedlight"
+        minspeedmultiplier="1.0"
+        maxspeedmultiplier="0.9">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
-          <Conditional defecate="gte 0.01" />
+          <Conditional defecate="gt 0" />
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="80" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.05"
+      <Effect minstrength="80" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.02"
         minfacetint="230,255,230,0"
         maxfacetint="210,255,210,150"
         minbodytint="230,255,230,0"
         maxbodytint="210,255,210,100"
-        minspeedmultiplier="1.0"
+        minspeedmultiplier="0.9"
         maxspeedmultiplier="0.6"
         dialogflag="stuffedheavy">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
-          <Conditional defecate="gte 0.01" />
+          <Conditional defecate="gt 0" />
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
