@@ -27,40 +27,30 @@ Important:
 //////////////////////
 //////////////////////
 
-[hr]02/01/2026[/hr]
+[hr]07/01/2026[/hr]
 
+PERFORMANCE UPDATE
 
 [b]Additions:[/b]
 [List]
-[*] Nothing :(
+[*] Added a silly Sippy Cap
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Very slightly reduced the amount of passive Fatigue gained (you would sleep more than you would eat in the HUNGRY mod)
-[*] Improved Beer descriptions to hopefully clarify what they do
-[*] Made some keg recipes less painful to craft
-[*] Reaper's Tribute beer effects improved, now reduces Fatigue and heals slightly when passing out
-[*] Fewer empty cans in outposts (less aluminium spam)
-[*] Increased the amount of base cooking/butchery skill from injecting "Enable Hungry Europan" from 5 to 10
-[*] Increased the amount of cooking/butchery skill from reading book, extra skill if you have low cooking/butchery, reading books improves mood
-[*] Trying to apply bottles via Health UI (to heal infections/burns...) will unbottle them
-[*] Enabled milking all Moloch (including babies), milking molochs will build milking immunity over time so there is a finite amount of milk you can get (use Health Scanner to keep track)
-[*] Cheese recipe gives 2x more cheese, reduced cheese food value and cheese slices
-[*] Some Egg recipes can use large eggs too
-[*] No longer get partial glass shards when breaking glasses/shakers, only have a 50% chance of getting shard instead
+[*] Big performance improvement for the kitchen, you will notice the extra frames
+[*] "Stuffed" affliction goes down 60% slower and builds up defecate 90% slower. Stuffed now goes down at 2x the speed of Hunger buildup. In other words, it's worth stuffing yourself if you have lots of food to gain food buffs and slow down hunger, but it will be half as efficient per unit of food consumed
+[*] Increased overall quantity of Foodbuff given
+[*] Some minor recipe adjustments for QOL, balance and consistency (ingredients, craft time...)
+[*] Watcher meat foodbuff now gives 80% resistance to Welder's Eye (from immersive repairs)
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fix lack of ambientlight on some subs
-[*] Fix installation boxes taking damage from explosions and breaking
-[*] Reduced cleaver "no meat" sound range, it was supposed to only play for the person swinging the cleaver but this didnt work as expected and the sound can be heard from far away.
-[*] Fix blender not shaking
-[*] Fix some containers not taking all types of eggs
-[*] Fix popnut/berry leaves not going in the refrigerator
-[*] Fix prepared roasts/filets decaying when out of refrigerator
-[*] Fix Leucocytes giving Offal
+[*] Fix some items not fitting in the fridge/cart
+[*] Fix fertilizer can deleting itself (also no longer stacks)
+[*] Fix drink glasses going inside player pockets
+[*] Fix pickled hammerhead being impossible to craft
 [/List]
 
 
