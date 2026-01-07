@@ -1585,7 +1585,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <afflictionname.milkingimmunity>Milked Dry</afflictionname.milkingimmunity>
 <afflictiondescription.milkingimmunity>The Moloch is running out of milk.</afflictiondescription.milkingimmunity>
 
-
+<entityname.he-sippycap>Sippy Cap</entityname.he-sippycap>
+<entitydescription.he-sippycap>A piece of headgear sponsored by Couwola Cola, usually worn while watching sports events. Allows the wearer to quench their thirst without effort, but with much embarassment.</entitydescription.he-sippycap>
 
 
 

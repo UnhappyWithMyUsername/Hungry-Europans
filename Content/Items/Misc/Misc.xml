@@ -1346,8 +1346,49 @@
       </Holdable>
     </Item> -->
  
-    
-    
+      
+    <Item name="" identifier="he-sippycap" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4" health="30">
+      <PreferredContainer primary="crewcab" notcampaign="true"/>
+      <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.01" />
+      <Price baseprice="125" sold="true" >
+        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="0.9"  minavailable="2" maxavailable="4"/>
+        <Price storeidentifier="merchantresearch" sold="false" />
+        <Price storeidentifier="merchantmilitary" sold="false" />
+        <Price storeidentifier="merchantmine" sold="false" />
+      </Price>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" hideifnorecipe="true" >
+        <RequiredSkill identifier="mechanical" level="20" />
+        <RequiredItem identifier="baseballcap" amount="1" />
+        <RequiredItem identifier="he-colacan" amount="2" />
+      </Fabricate>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" hideifnorecipe="true" displayname="recycleitem" >
+        <RequiredSkill identifier="mechanical" level="20" />
+        <RequiredItem identifier="he-sippycap" amount="1" MinCondition="0"/>
+        <RequiredItem identifier="he-colacan" amount="2" />
+      </Fabricate>
+      <Deconstruct time="5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="232,0,88,69" depth="0.6" origin="0.5,0.5" />
+      <Body width="80" height="50" density="15" waterdragcoefficient="10"/>
+      <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+        <sprite name="cap" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="232,0,88,69" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" origin="0.45,0.8" />
+        <StatusEffect type="OnWearing" target="Character" unlockrecipe="he-sippycap" oneshot="true" />
+        <StatusEffect type="OnWearing" target="Character" interval="1" disabledeltatime="true">
+          <Affliction identifier="embarrassment" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="This,Character" condition="-1" interval="10" duration="5" stackable="false" >
+          <Conditional thirst="gt 5" />
+          <ReduceAffliction identifier="drunk" amount="1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="1" />
+          <ReduceAffliction identifier="hallucinating" amount="1" />
+          <Affliction identifier="haste" amount="8.0" />
+          <ReduceAffliction type="thirst" amount="1" />
+          <Affliction identifier="fillbladder" amount="1.5" />
+          <Affliction identifier="drank_cola" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="3.0" />
+        </StatusEffect>
+      </Wearable>
+    </Item>
     
     
     <!-- EFFEC ITEMS -->
