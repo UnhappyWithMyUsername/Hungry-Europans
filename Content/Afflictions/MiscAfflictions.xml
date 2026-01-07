@@ -1368,7 +1368,7 @@
       activationthreshold="0"
       treatmentthreshold="1000"
       maxstrength="1800"
-      iconcolors="180,180,0,255;180,180,0,255"
+      iconcolors="200,200,120,255;180,180,0,255"
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
       <Description
