@@ -606,7 +606,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <Affliction identifier="he-sugarrich" amount="10" />
+          <Affliction identifier="he-sugarrich" amount="15" />
           <ReduceAffliction type="hunger" amount="0.4" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -633,7 +633,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <Affliction identifier="he-sugarrich" amount="10" />
+          <Affliction identifier="he-sugarrich" amount="15" />
           <ReduceAffliction type="hunger" amount="0.4" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
@@ -683,7 +683,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <Affliction identifier="he-sugarrich" amount="10" />
+          <Affliction identifier="he-sugarrich" amount="15" />
           <ReduceAffliction type="hunger" amount="0.4" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -710,7 +710,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
-          <Affliction identifier="he-sugarrich" amount="10" />
+          <Affliction identifier="he-sugarrich" amount="15" />
           <ReduceAffliction type="hunger" amount="0.4" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
