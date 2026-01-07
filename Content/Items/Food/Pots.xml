@@ -175,7 +175,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-pot" />
-        <RequiredItem identifier="he-molochcheese" amount="2"/>
+        <RequiredItem identifier="he-molochcheese" amount="3"/>
         <RequiredItem identifier="he-bread" amount="1" />
         <RequiredItem tag="alcoholitem" amount="1" MinCondition="0.99" UseCondition="true" />
       </Fabricate>
@@ -497,11 +497,11 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fatrich" amount="40.0" />
-          <Affliction identifier="he-calciumrich" amount="40.0" />
+          <Affliction identifier="he-fatrich" amount="30.0" />
+          <Affliction identifier="he-calciumrich" amount="30.0" />
           <Affliction identifier="ate_soup" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2.5" />
-          <ReduceAffliction type="hunger" amount="2.5" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -516,11 +516,11 @@
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fatrich" amount="40.0" />
-          <Affliction identifier="he-calciumrich" amount="40.0" />
+          <Affliction identifier="he-fatrich" amount="30.0" />
+          <Affliction identifier="he-calciumrich" amount="30.0" />
           <Affliction identifier="ate_soup" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2.5" />
-          <ReduceAffliction type="hunger" amount="2.5" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
