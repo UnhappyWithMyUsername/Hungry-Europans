@@ -23,7 +23,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-proteinrich" amount="8.0" />
+          <Affliction identifier="he-proteinrich" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -43,7 +43,7 @@
         <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="And">
           <Conditional InWater="false" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="he-proteinrich" amount="8.0" />
+          <Affliction identifier="he-proteinrich" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -79,7 +79,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-proteinrich" amount="8.0" />
+          <Affliction identifier="he-proteinrich" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -100,7 +100,7 @@
           <Conditional condition="lte 15" />
           <Conditional InWater="false" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="he-proteinrich" amount="8.0" />
+          <Affliction identifier="he-proteinrich" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
