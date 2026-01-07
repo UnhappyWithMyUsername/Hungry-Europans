@@ -111,8 +111,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="12" />
-          <Affliction identifier="he-sugarrich" amount="6" />
+          <Affliction identifier="he-calciumrich" amount="16" />
+          <Affliction identifier="he-sugarrich" amount="9" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -126,8 +126,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="12" />
-          <Affliction identifier="he-sugarrich" amount="6" />
+          <Affliction identifier="he-calciumrich" amount="16" />
+          <Affliction identifier="he-sugarrich" amount="9" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -251,8 +251,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="6" />
-          <Affliction identifier="he-sugarrich" amount="12" />
+          <Affliction identifier="he-calciumrich" amount="9" />
+          <Affliction identifier="he-sugarrich" amount="16" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -266,8 +266,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="6" />
-          <Affliction identifier="he-sugarrich" amount="12" />
+          <Affliction identifier="he-calciumrich" amount="9" />
+          <Affliction identifier="he-sugarrich" amount="16" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -390,8 +390,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="6" />
-          <Affliction identifier="he-sugarrich" amount="12" />
+          <Affliction identifier="he-calciumrich" amount="9" />
+          <Affliction identifier="he-sugarrich" amount="16" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -405,8 +405,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="6" />
-          <Affliction identifier="he-sugarrich" amount="12" />
+          <Affliction identifier="he-calciumrich" amount="9" />
+          <Affliction identifier="he-sugarrich" amount="16" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -529,8 +529,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="6" />
-          <Affliction identifier="he-sugarrich" amount="12" />
+          <Affliction identifier="he-calciumrich" amount="9" />
+          <Affliction identifier="he-sugarrich" amount="16" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -544,8 +544,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.15" />
-          <Affliction identifier="he-calciumrich" amount="6" />
-          <Affliction identifier="he-sugarrich" amount="12" />
+          <Affliction identifier="he-calciumrich" amount="9" />
+          <Affliction identifier="he-sugarrich" amount="16" />
           <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
@@ -615,7 +615,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="14" />
+          <Affliction identifier="he-calciumrich" amount="20" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -628,7 +628,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="14" />
+          <Affliction identifier="he-calciumrich" amount="20" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -674,7 +674,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="30" />
+          <Affliction identifier="he-calciumrich" amount="50" />
           <Affliction identifier="huskinfectionresistance" amount="30" />
           <ReduceAffliction type="hunger" amount="1.2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -688,8 +688,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="20" />
-          <Affliction identifier="huskinfectionresistance" amount="20" />
+          <Affliction identifier="he-calciumrich" amount="50" />
+          <Affliction identifier="huskinfectionresistance" amount="35" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -727,7 +727,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Affliction identifier="he-calciumrich" amount="7" />
+          <Affliction identifier="he-calciumrich" amount="10" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -740,7 +740,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Affliction identifier="he-calciumrich" amount="7" />
+          <Affliction identifier="he-calciumrich" amount="10" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -783,7 +783,7 @@
           <ReduceAffliction type="hunger" amount="0.4" />
           <Affliction identifier="he-stuffed" amount="0.4" />
           <Affliction identifier="ate_sweet" amount="1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-calciumrich" amount="6" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -791,12 +791,12 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreammilky" type="contained" />
-          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-calciumrich" amount="6" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamsugary" type="contained"/>
-          <Affliction identifier="he-sugarrich" amount="4" />
+          <Affliction identifier="he-sugarrich" amount="6" />
         </StatusEffect>        
         
         <!-- waffle eating effects -->
@@ -919,7 +919,7 @@
         </StatusEffect>
         <!-- eating -->
         <StatusEffect type="OnUse" target="Character" oneshot="true" duration="1">
-          <Affliction identifier="he-sugarrich" amount="35.0" />
+          <Affliction identifier="he-sugarrich" amount="40.0" />
           <Affliction identifier="he-stuffed" amount="2" />
           <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="ate_sweet" amount="1" />
