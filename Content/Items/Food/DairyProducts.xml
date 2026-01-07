@@ -84,7 +84,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Ball of Milky Ice Cream" identifier="he-icecreamballmilky" health="15" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Milky Ice Cream. People say they feel more resilient for a longer period of time after eating it." Tags="smallitem,icecreamball,icecreammilky,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Ball of Milky Ice Cream" identifier="he-icecreamballmilky" health="10" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Milky Ice Cream. People say they feel more resilient for a longer period of time after eating it." Tags="smallitem,icecreamball,icecreammilky,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="27,23,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
@@ -110,10 +110,10 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="8" />
-          <Affliction identifier="he-sugarrich" amount="4" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="12" />
+          <Affliction identifier="he-sugarrich" amount="6" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -125,10 +125,10 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="8" />
-          <Affliction identifier="he-sugarrich" amount="4" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="12" />
+          <Affliction identifier="he-sugarrich" amount="6" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -224,7 +224,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Ball of Pomegrenade Ice Cream" identifier="he-icecreamballpomegrenade" health="15" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Pomegrenade Ice Cream. A tasty snack that apparently reduces a bit of pain and makes more resilient." Tags="smallitem,icecreamball,icecreamsugary,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Ball of Pomegrenade Ice Cream" identifier="he-icecreamballpomegrenade" health="10" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Pomegrenade Ice Cream. A tasty snack that apparently reduces a bit of pain and makes more resilient." Tags="smallitem,icecreamball,icecreamsugary,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="27,51,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
@@ -250,10 +250,10 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="6" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -265,10 +265,10 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="6" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -363,7 +363,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Ball of Pop Nut Ice Cream" identifier="he-icecreamballpopnut" health="15" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst quite good." Tags="smallitem,icecreamball,icecreamsugary,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Ball of Pop Nut Ice Cream" identifier="he-icecreamballpopnut" health="10" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst quite good." Tags="smallitem,icecreamball,icecreamsugary,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="55,23,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
@@ -389,10 +389,10 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="6" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -404,10 +404,10 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="6" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -502,7 +502,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Ball of Bubble Berry Ice Cream" identifier="he-icecreamballbubbleberry" health="15" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Bubble Berry Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst a little bit." Tags="smallitem,icecreamball,icecreamsugary,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Ball of Bubble Berry Ice Cream" identifier="he-icecreamballbubbleberry" health="10" impacttolerance="0.1" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Bubble Berry Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst a little bit." Tags="smallitem,icecreamball,icecreamsugary,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="55,51,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
@@ -528,10 +528,10 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="6" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -543,10 +543,10 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
-          <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="hunger" amount="0.1" />
+          <Affliction identifier="he-stuffed" amount="0.15" />
+          <Affliction identifier="he-calciumrich" amount="6" />
+          <Affliction identifier="he-sugarrich" amount="12" />
+          <ReduceAffliction type="hunger" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
