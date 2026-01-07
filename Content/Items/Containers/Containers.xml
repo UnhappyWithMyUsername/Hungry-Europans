@@ -447,15 +447,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="oven_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.8" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="he-dishwasher_installation,installationblocker">
@@ -499,15 +492,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="dishwasher_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.9" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -554,15 +540,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.7" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="he-electricgrill_installation,installationblocker">
@@ -606,15 +585,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.6" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -661,15 +633,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="sink_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.5" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -716,15 +681,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.4" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -771,15 +729,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.3" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="coffeemachine_installation,installationblocker">
@@ -823,15 +774,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.2" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="he-blender_installation,installationblocker">
@@ -875,15 +819,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="blender_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.1" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -1081,15 +1018,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.7" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="he-electricgrill_installation,installationblocker">
@@ -1133,15 +1063,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.6" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -1188,15 +1111,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.2" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="he-blender_installation,installationblocker">
@@ -1240,15 +1156,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="blender_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.1" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -1295,15 +1204,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.3" />
             </StatusEffect>
           </Containable>
           <Containable identifiers="he-cuttingboard_installation,installationblocker">
@@ -1347,15 +1249,8 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
             <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
-            <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="140" disabledeltatime="true">
-              <DropContainedItems />
-              <Remove />
-              <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
-              <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+            <StatusEffect type="OnRemoved" target="This" disabledeltatime="true">
+              <SpawnItem identifier="he-kitchencounterremoveitem" spawnposition="This" condition="0.4" />
             </StatusEffect>
           </Containable>
         </SubContainer>
@@ -1949,6 +1844,125 @@
         <!-- Delete this item to stop all of its "Always" StatusEffects that haven't succeeded due to unmet conditions from being processed in the background constantly -->
         <StatusEffect type="Always" target="This" delay="0.1" disabledeltatime="true" stackable="false">
           <Remove />
+        </StatusEffect>
+      </ItemComponent>
+    </Item>
+    
+    <!-- //// REMOVE INSTALLATION ITEM //// -->
+    <!-- //// REMOVE INSTALLATION ITEM //// -->
+    <!-- //// REMOVE INSTALLATION ITEM //// -->
+    <Item name="" identifier="he-kitchencounterremoveitem" tags="kitchencounter,smallitem,mobilecontainer,kitchenfabremover" category="Hidden" description="" scale="0.5" hideinmenus="true" SpriteColor="255,0,0,255" InventoryIconColor="0,0,0,0" noninteractable="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.510" sourcerect="0,0,507,299" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,507,299" origin="0.5,0.5" />
+      <Body width="50" height="50" bodytype="static" />
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
+        <!-- DISHWASHER | remove the installed dishwasher -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,dishwasher_installed" range="140" oneshot="true">
+          <Conditional condition="90" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- OVEN | remove the installed oven -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,oven_installed" range="140" oneshot="true">
+          <Conditional condition="80" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- STOVE | remove the installed stove -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,stove_installed" range="140" oneshot="true">
+          <Conditional condition="70" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- ELECTRIC GRILL | remove the installed electric grill -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,electricgrill_installed" range="140" oneshot="true">
+          <Conditional condition="60" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- SINK | remove the installed sink -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,sink_installed" range="140" oneshot="true">
+          <Conditional condition="50" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- CUTTING BOARD | remove the installed cutting board -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,cuttingboard_installed" range="140" oneshot="true">
+          <Conditional condition="40" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- FRYER | remove the installed fryer -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,fryer_installed" range="140" oneshot="true">
+          <Conditional condition="30" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- COFFEE MACHINE | remove the installed coffee machine -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,coffeemachine_installed" range="140" oneshot="true">
+          <Conditional condition="20" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+        </StatusEffect>
+        <!-- BLENDER | remove the installed blender -->
+        <StatusEffect type="Always" target="This,NearbyItems" targets="kitchenfabremover,blender_installed" range="140" oneshot="true">
+          <Conditional condition="10" />
+          <DropContainedItems />
+          <Remove />
+          <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal2.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal3.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal4.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal5.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
         </StatusEffect>
       </ItemComponent>
     </Item>
