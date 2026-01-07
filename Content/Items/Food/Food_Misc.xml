@@ -765,7 +765,7 @@
       </CustomInterface>
     </Item>
     
-    <Item hideinmenus="false" name="Sauerkraut" identifier="he-sauerkraut" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Sauerkraut" identifier="he-sauerkraut" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,60,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,60,68,29" depth="0.525" origin="0.5,0.65" />
@@ -790,9 +790,9 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fiberrich" amount="50.0" />
+          <Affliction identifier="he-fiberrich" amount="60.0" />
           <Affliction identifier="ate_salad" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2" />
+          <Affliction identifier="he-stuffed" amount="3" />
           <ReduceAffliction type="hunger" amount="2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -808,9 +808,9 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fiberrich" amount="50.0" />
+          <Affliction identifier="he-fiberrich" amount="60.0" />
           <Affliction identifier="ate_salad" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2" />
+          <Affliction identifier="he-stuffed" amount="3" />
           <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
