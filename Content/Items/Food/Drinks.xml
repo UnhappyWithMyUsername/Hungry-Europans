@@ -2572,7 +2572,7 @@
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
-          <Affliction identifier="he-sugarrich" amount="15.0" />
+          <Affliction identifier="he-sugarrich" amount="25.0" />
           <Affliction identifier="fillbladder" amount="2.5" />
           <Affliction identifier="ate_sweet" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
@@ -5051,7 +5051,7 @@
           <ReduceAffliction identifier="drunk" amount="5.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
-          <Affliction identifier="he-sugarrich" amount="12.0" />
+          <Affliction identifier="he-sugarrich" amount="18.0" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
@@ -5206,7 +5206,7 @@
           <ReduceAffliction identifier="drunk" amount="5.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
-          <Affliction identifier="he-sugarrich" amount="12.0" />
+          <Affliction identifier="he-sugarrich" amount="18.0" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
@@ -5348,7 +5348,7 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="he-calciumrich" amount="14" />
+          <Affliction identifier="he-calciumrich" amount="20" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
@@ -5430,7 +5430,7 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-calciumrich" amount="14" />
+          <Affliction identifier="he-calciumrich" amount="20" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
