@@ -436,9 +436,9 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,421,50,8" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,421,50,8" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,421,50,8" depth="0.525" origin="0.5,0.05"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="8">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="8" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-bread" amount="1"/>
+        <RequiredItem identifier="he-bread" amount="1" MinCondition="0.5" UseCondition="True" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="50" radius="8" density="5" />
@@ -450,8 +450,8 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="he-stuffed" amount="0.65" />
+          <ReduceAffliction type="hunger" amount="0.65" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -462,8 +462,8 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="he-stuffed" amount="0.65" />
+          <ReduceAffliction type="hunger" amount="0.65" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
