@@ -34,5 +34,36 @@
       </StatusEffect>
     </StatusEffectAction>
   </ScriptedEvent>
+  
+  
+  <ScriptedEvent identifier="uninstallevent_oven">
+    <TagAction criteria="itemidentifier:he-oven_installation" tag="uninstalledbox" />
+    <TagAction criteria="itemidentifier:he-oven" tag="uninstalltarget" />      
+    <TriggerAction target1tag="uninstalledbox" target2tag="uninstalltarget" applytotarget2="uninstallthis" radius="150" />
+
+    <StatusEffectAction targettag="uninstalledbox">
+      <StatusEffect target="This" disabledeltatime="true" spritecolor="0,255,0,255" setvalue="true"/>
+    </StatusEffectAction>
+    <StatusEffectAction targettag="uninstalltarget">
+      <StatusEffect target="This" disabledeltatime="true" spritecolor="255,0,0,255" setvalue="true"/>
+    </StatusEffectAction>
+    
+    <WaitAction time="3" />
+
+    <StatusEffectAction targettag="uninstallthis">
+      <StatusEffect target="This" disabledeltatime="true">
+        <DropContainedItems />
+        <Remove />
+        <Sound file="Content/Sounds/Damage/HitMetal1.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
+      </StatusEffect>
+    </StatusEffectAction>
+  </ScriptedEvent>
+  
+  
+  
+  
+  
+  
+  
   </EventPrefabs>
 </Randomevents>
