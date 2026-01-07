@@ -1725,7 +1725,7 @@
     <!-- //// CHECK ITEM //// -->
     <!-- //// CHECK ITEM //// -->
     <!-- //// CHECK ITEM //// -->
-    <Item name="" identifier="he-kitchencountercheckitem" tags="kitchencounter,smallitem,mobilecontainer" category="Hidden" description="" scale="0.5" hideinmenus="true" SpriteColor="255,0,0,255" InventoryIconColor="0,0,0,0" noninteractable="true">
+    <Item name="" identifier="he-kitchencountercheckitem" tags="kitchencounter,smallitem,mobilecontainer" category="Hidden" description="" scale="0.5" hideinmenus="true" SpriteColor="255,0,0,0" InventoryIconColor="0,0,0,0" noninteractable="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.510" sourcerect="0,0,507,299" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,507,299" origin="0.5,0.5" />
       <Body width="50" height="50" bodytype="static" />
@@ -1847,11 +1847,11 @@
         </StatusEffect>
       </ItemComponent>
     </Item>
-    
+
     <!-- //// REMOVE INSTALLATION ITEM //// -->
     <!-- //// REMOVE INSTALLATION ITEM //// -->
     <!-- //// REMOVE INSTALLATION ITEM //// -->
-    <Item name="" identifier="he-kitchencounterremoveitem" tags="kitchencounter,smallitem,mobilecontainer,kitchenfabremover" category="Hidden" description="" scale="0.5" hideinmenus="true" SpriteColor="255,0,0,255" InventoryIconColor="0,0,0,0" noninteractable="true">
+    <Item name="" identifier="he-kitchencounterremoveitem" tags="kitchencounter,smallitem,mobilecontainer,kitchenfabremover" category="Hidden" description="" scale="0.5" hideinmenus="true" SpriteColor="255,0,0,0" InventoryIconColor="0,0,0,0" noninteractable="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.510" sourcerect="0,0,507,299" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,507,299" origin="0.5,0.5" />
       <Body width="50" height="50" bodytype="static" />
