@@ -374,7 +374,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fatrich" amount="15.0" />
+          <Affliction identifier="he-fatrich" amount="25.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.25" />
           <ReduceAffliction type="hunger" amount="1.25" />
@@ -392,7 +392,7 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fatrich" amount="15.0" />
+          <Affliction identifier="he-fatrich" amount="25.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.25" />
           <ReduceAffliction type="hunger" amount="1.25" />
