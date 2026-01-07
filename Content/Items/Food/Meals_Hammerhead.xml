@@ -145,9 +145,7 @@
         <RequiredSkill identifier="cooking" level="75" />
         <RequiredItem identifier="he-hammerheadspawnmeatchunk" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-emptyjar" amount="1"/>
-        <RequiredItem identifier="he-vinegar" amount="1"/>
-        <RequiredItem identifier="he-sugar" amount="1"/>
-        <RequiredItem tag="cleanwater" amount="1" UseCondition="True" MinCondition="0.99"/>
+        <RequiredItem identifier="he-vinegar" amount="1" MinCondition="0.20" UseCondition="true"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="67" density="12" />
