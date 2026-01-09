@@ -118,7 +118,7 @@
         </Fabricate>
         <Fabricate suitablefabricators="fabricator" requiredtime="20" displayname="recycleitem">
           <RequiredSkill identifier="electrical" level="15" />
-          <RequiredItem identifier="fertilizer" maxcondition="0.1" />
+          <RequiredItem identifier="fertilizer" mincondition="0" maxcondition="0.1" />
           <RequiredItem identifier="uranium" />
           <RequiredItem tag="fertilizeringredient" amount="2" description="fabricationdescription.fertilizeringredient" />
         </Fabricate>
