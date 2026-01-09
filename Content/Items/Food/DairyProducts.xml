@@ -843,7 +843,7 @@
       <ItemContainer name="icecreamcontainer" capacity="3" maxstacksize="1" hideitems="false" drawinventory="true" canbeselected="true" allowaccess="true" allowdraganddrop="true" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="true" removecontaineditemsondeconstruct="true" itempos="0,30" iteminterval="1,13" itemrotation="0" itemsperrow="1" slotsperrow="1" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85" msg="ItemMsgInteractSelect">
         <Containable items="icecreamball">
           <!--Reduce condition by 1 once if ice cream was inserted to make the waffle non-stackable-->
-          <StatusEffect type="OnInserted" target="This" condition="-1" disabledeltatime="true" oneshot="true" />
+          <StatusEffect type="OnInserted" target="This" condition="-0.01" disabledeltatime="true" oneshot="true" />
         </Containable>
       </ItemContainer>
     </Item>
