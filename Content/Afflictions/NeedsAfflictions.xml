@@ -1091,7 +1091,8 @@
       maxstrength="1"
       affectmachines="false"
       MedicalSkillGain="0.0"
-      sendmessages="false">
+      sendmessages="false"
+      causespeechimpediment="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" >
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0" />
