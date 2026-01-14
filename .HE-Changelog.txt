@@ -27,30 +27,25 @@ Important:
 //////////////////////
 //////////////////////
 
-[hr]07/01/2026[/hr]
+[hr]14/01/2026[/hr]
 
 PERFORMANCE UPDATE
 
 [b]Additions:[/b]
 [List]
-[*] Added a silly Sippy Cap
+[*] 
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Big performance improvement for the kitchen, you will notice the extra frames
-[*] "Stuffed" affliction goes down 60% slower and builds up defecate 90% slower. Stuffed now goes down at 2x the speed of Hunger buildup. In other words, it's worth stuffing yourself if you have lots of food to gain food buffs and slow down hunger, but it will be half as efficient per unit of food consumed
-[*] Increased overall quantity of Foodbuff given
-[*] Some minor recipe adjustments for QOL, balance and consistency (ingredients, craft time...)
-[*] Watcher meat foodbuff now gives 80% resistance to Welder's Eye (from immersive repairs)
+[*] 
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fix some items not fitting in the fridge/cart
-[*] Fix fertilizer can deleting itself (also no longer stacks)
-[*] Fix drink glasses going inside player pockets
-[*] Fix pickled hammerhead being impossible to craft
+[*] Fix fertilizer recycle recipe not working properly
+[*] Fix wafflecone taking too much damage when eaten
+[*] Fix cannibal mouth causing players to be mute (again??)
 [/List]
 
 
