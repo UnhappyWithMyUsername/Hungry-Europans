@@ -795,7 +795,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" origin="0.5,0.5" maxcondition="20" fadein="true" />
       <Body width="52" height="2" density="25" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" condition="-0.75" interval="0.1" disabledeltatime="true" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" condition="-1" interval="0.1" disabledeltatime="true" comparison="And">
           <Conditional HasStatusTag="neq usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
         </StatusEffect>
@@ -829,7 +829,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" origin="0.5,0.5" maxcondition="20" fadein="true" />
       <Body width="52" height="2" density="25" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" condition="-0.75" interval="0.1" disabledeltatime="true" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" condition="-1" interval="0.1" disabledeltatime="true" comparison="And">
           <Conditional HasStatusTag="neq usingspoon" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyspoon" targetcontainer="true" />
         </StatusEffect>
@@ -843,6 +843,29 @@
       <ItemComponent canbeselected="false" allowingameediting="false" characterusable="false">
         <StatusEffect type="OnUse" target="This" condition="1" disabledeltatime="true" />
       </ItemComponent>
+    </Item>
+        
+    <Item name="Dementonite Spork" identifier="he-spork" Tags="smallitem,tableware,fork,spoon" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="1" maxstacksizecharacterinventory="1" spritecolor="220,120,100,255">
+      <PreferredContainer primary="wreckcrewcab,abandonedcrewcab,abandonedstoragecab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer primary="kitchen,table" secondary="crewcab"/>
+      <Deconstruct time="3" requireddeconstructor="deconstructor" >        
+        <Item identifier="dementonite" />
+      </Deconstruct>
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="445,61,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,0,56,5" depth="0.55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,0,56,5" depth="0.525" origin="0.5,-0.9" />
+      <Body width="52" height="2" density="25" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character" >
+        <Affliction identifier="hallucinating" strength="5" />
+        <Affliction identifier="psychosis" strength="0.5" />
+      </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" interval="0.1" disabledeltatime="true" comparison="And">
+          <Conditional HasStatusTag="neq usingfork" targetcontainer="true" />
+          <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" tags="usingfork,usingspoon" interval="0.1" duration="0.2" AllowWhenBroken="true" />
+      </Holdable>
     </Item>
 
     <!--////////// DIRTY TABLEWARE \\\\\\\\\\-->
