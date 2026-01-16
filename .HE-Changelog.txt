@@ -38,7 +38,7 @@ PERFORMANCE UPDATE
 
 [b]Changes:[/b] 
 [List]
-[*] 
+[*] Added a rare (joke) spork drop
 [/List]
 
 [b]Fixes:[/b] 

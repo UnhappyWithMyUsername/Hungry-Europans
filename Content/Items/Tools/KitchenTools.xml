@@ -848,6 +848,12 @@
     <Item name="Dementonite Spork" identifier="he-spork" Tags="smallitem,tableware,fork,spoon" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="1" maxstacksizecharacterinventory="1" spritecolor="220,120,100,255">
       <PreferredContainer primary="wreckcrewcab,abandonedcrewcab,abandonedstoragecab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen,table" secondary="crewcab"/>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" hideifnorecipe="true" >
+        <RequiredSkill identifier="cooking" level="50" />
+        <RequiredItem identifier="dementonite" amount="2" />
+        <RequiredItem identifier="he-fork" amount="1" />
+        <RequiredItem identifier="he-spoon" amount="1" />
+      </Fabricate>
       <Deconstruct time="3" requireddeconstructor="deconstructor" >        
         <Item identifier="dementonite" />
       </Deconstruct>
@@ -865,6 +871,7 @@
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="Character" tags="usingfork,usingspoon" interval="0.1" duration="0.2" AllowWhenBroken="true" />
+        <StatusEffect type="OnActive" target="Character" unlockrecipe="he-spork" oneshot="true" />
       </Holdable>
     </Item>
 
