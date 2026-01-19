@@ -59,11 +59,62 @@
     </StatusEffectAction>
   </ScriptedEvent>
   
-  
-  
-  
-  
-  
+  <!-- Prototype for Trait selector using events -->
+  <ScriptedEvent identifier="traitselectorevent">
+    <!-- <Label name="start" /> -->
+    <Waitaction time="0.2" />
+    <!-- <CheckConditionalAction targettag="traitselector_player" >
+      <Conditional fatigue="lte 0.0" />
+      <Failure>
+        <Goto name="end" />
+      </Failure>
+    </CheckConditionalAction> -->
+    <StatusEffectAction targettag="traitselector_player">
+      <StatusEffect target="This" disabledeltatime="true">
+        <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
+      </StatusEffect>
+    </StatusEffectAction>
+    <Label name="foodselector" />
+    <ConversationAction text="Select Favorite Food" targettag="traitselector_player" eventsprite="heartofgold" >
+      <Option text="burgers" >
+        <StatusEffectAction targettag="traitselector_player">
+          <StatusEffect target="This" disabledeltatime="true" >
+            <Affliction identifier="fatigue" amount="0.1" />
+            <Affliction identifier="he-traitselectorcounterfood" amount="1" />
+            <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_burgers" />
+          </StatusEffect>
+        </StatusEffectAction>
+      </Option>        
+    </ConversationAction>
+    <CheckConditionalAction targettag="traitselector_player" >
+      <Conditional he-traitselectorcounterfood="gte 2" />
+      <Failure>
+        <Goto name="foodselector" />
+      </Failure>
+    </CheckConditionalAction>        
+    <Label name="drinkselector" />
+    <ConversationAction text="Select Favorite Drink" targettag="traitselector_player" eventsprite="heartofgold" >
+      <Option text="beer" >
+        <StatusEffectAction targettag="traitselector_player">
+          <StatusEffect target="This" disabledeltatime="true">
+            <Affliction identifier="fatigue" amount="0.1" />
+            <Affliction identifier="he-traitselectorcounterdrink" amount="1" />
+            <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_beer" />
+          </StatusEffect>
+        </StatusEffectAction>
+      </Option>        
+    </ConversationAction>
+    <CheckConditionalAction targettag="traitselector_player" >
+      <Conditional he-traitselectorcounterdrink="gte 1" />  
+      <Failure>
+        <Goto name="drinkselector" />
+      </Failure>
+    </CheckConditionalAction>    
+    <ConversationAction text="Done." targettag="traitselector_player" eventsprite="heartofgold" endconversation="true" />
+    <Label name="end" />
+    <ClearTagAction tag="traitselector_player" />
+  </ScriptedEvent>
+
   
   </EventPrefabs>
 </Randomevents>

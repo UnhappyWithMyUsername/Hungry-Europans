@@ -1517,7 +1517,35 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
-    
-    
+     
+    <!-- Trait selector counter, only exists for trait selector check event -->
+    <Affliction name="Trait selector counter FOOD"
+      identifier="he-traitselectorcounterfood"
+      limbspecific="false"
+      indicatorlimb="Head"
+      activationthreshold="0"
+      showiconthreshold="0"
+      showicontoothersthreshold="1000"
+      maxstrength="2"
+      affectmachines="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0">
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction> 
+         
+    <!-- Trait selector counter, only exists for trait selector check event -->
+    <Affliction name="Trait selector counter DRINK"
+      identifier="he-traitselectorcounterDRINK"
+      limbspecific="false"
+      indicatorlimb="Head"
+      activationthreshold="0"
+      showiconthreshold="0"
+      showicontoothersthreshold="1000"
+      maxstrength="1"
+      affectmachines="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0">
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction> 
   </Afflictions>
 </Override>
