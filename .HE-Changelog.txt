@@ -33,12 +33,13 @@ PERFORMANCE UPDATE
 
 [b]Additions:[/b]
 [List]
-[*] 
+[*] Added a rare (joke) spork drop
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Added a rare (joke) spork drop
+[*] You can see the range of the Sprinkler when interacting using Electician Goggles. Range might not be perfectly accurate
+[*] Spare ribs recipe uses 2 ribs instead of 3 (to match the amount of ribs you get from hammerhead)
 [/List]
 
 [b]Fixes:[/b] 
