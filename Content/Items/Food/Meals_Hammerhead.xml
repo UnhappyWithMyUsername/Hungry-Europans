@@ -81,9 +81,9 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="201,339,61,40" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="oven" requiredtime="90" requiresrecipe="false" amount="3" displayname="hammerheadfooditem">
+      <Fabricate suitablefabricators="oven" requiredtime="90" requiresrecipe="false" amount="2" displayname="hammerheadfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-rawhammerheadspareribs" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawhammerheadspareribs" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
