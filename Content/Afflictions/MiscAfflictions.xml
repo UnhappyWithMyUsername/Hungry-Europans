@@ -1521,6 +1521,7 @@
     <!-- Trait selector counter, only exists for trait selector check event -->
     <Affliction name="Trait selector counter FOOD"
       identifier="he-traitselectorcounterfood"
+      resetbetweenrounds="true"
       limbspecific="false"
       indicatorlimb="Head"
       activationthreshold="0"
@@ -1536,6 +1537,7 @@
     <!-- Trait selector counter, only exists for trait selector check event -->
     <Affliction name="Trait selector counter DRINK"
       identifier="he-traitselectorcounterDRINK"
+      resetbetweenrounds="true"
       limbspecific="false"
       indicatorlimb="Head"
       activationthreshold="0"
