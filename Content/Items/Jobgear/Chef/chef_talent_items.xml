@@ -114,6 +114,8 @@
         <IsActiveConditional targetcontaineditem="true" conditionpercentage="lte 20"/>
       </LightComponent>
       
+      <!-- non-functional motionsensor only exist to visualize the range using electrician goggles -->
+      <MotionSensor Target="Pet" TargetCharacters="nothing" IgnoreDead="True" RangeX="130" RangeY="100" DetectOffset="0,-80" UpdateInterval="100" MaxOutputLength="1" Output="" FalseOutput="" MinimumVelocity="999" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" />
     </Item>
   </Items>
 </Override>
