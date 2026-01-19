@@ -1052,7 +1052,7 @@
     <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Equipment" subcategory="Tableware" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="false" RequireAimToUse="false" maxstacksize="8" maxstacksizecharacterinventory="1">
       <PreferredContainer primary="dishwasher" secondary="kitchen,crewcab"/>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="383,61,64,64" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="382,61,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" depth="0.525" origin="0.5,-0.9"  />
       <Body width="52" height="2" density="25" />
