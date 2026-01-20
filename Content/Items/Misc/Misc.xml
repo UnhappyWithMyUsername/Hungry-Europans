@@ -1439,6 +1439,16 @@
       <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,826,72,72" depth="0.85" origin="0.5,0.5" />
       <SuitableTreatment type="hygiene" suitability="50" />
     </Item> 
+    
+    <!-- hint for how to heal hygiene TODO: sprite -->
+    <Item identifier="he-fakeABXitem" nameidentifier="antibiotics" descriptionidentifier="antibiotics" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,704,64,64" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment identifier="worminfection" suitability="50" />
+      <SuitableTreatment identifier="tapeworminfection" suitability="50" />
+    </Item> 
+    
+    
+    
   
     <!-- Copy-pasted from DE - An invisible holder that deletes itself after taking an item from it -->
     <Item name="Take Item" identifier="invisibleholder" description="An invisible item holder that deletes itself when interacted with. Good for making items hold in place without using platforms" SpriteColor="195,136,60,100" IntentoryIconColor="255,255,255,255" category="misc" tags="holder" canflipx="true" canflipy="true" scale="0.5" noninteractable="False">
