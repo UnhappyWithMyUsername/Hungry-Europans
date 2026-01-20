@@ -249,7 +249,7 @@
       <ContainedSprite allowedcontainertags="table" texture="Content/Items/Jobgear/TalentGear.png" sourcerect="486,212,27,66" depth="0.525" origin="0.5,0.85"  />
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="25" />
-      <SuitableTreatment type="embarrassment" suitability="70" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="70" />
       <SuitableTreatment type="huskinfection" suitability="30" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
@@ -652,7 +652,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="82,0,27,66" depth="0.6" maxcondition="99" />
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="25" />
-      <SuitableTreatment type="embarrassment" suitability="80" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="80" />
       <SuitableTreatment type="chemaddiction" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
@@ -836,7 +836,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="393,0,31,66" depth="0.6" maxcondition="99" />
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="15" />
-      <SuitableTreatment type="embarrassment" suitability="100" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
@@ -1177,7 +1177,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="30" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -1349,7 +1349,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,133,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="30" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -1525,7 +1525,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,200,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="30" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -1696,7 +1696,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,265,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="30" />
-      <SuitableTreatment type="embarrassment" suitability="100" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
@@ -1854,7 +1854,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="437,199,19,65" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="20" height="56" density="12" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
+      <SuitableTreatment type="embarrassmentDISABLEDFORNOW" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="-5,-30" aimpos="12,5" aimable="false" swingwhenaiming="true" swingamount="3,2" swingspeed="0.2" msg="ItemMsgPickUpSelect">
               
         <!-- Regular drinking RMB --> 
