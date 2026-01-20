@@ -2762,7 +2762,7 @@
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <SuitableTreatment type="fatigue" suitability="50" />
+      <SuitableTreatment type="fatigue" suitability="20" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
@@ -4870,7 +4870,7 @@
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,436,24,37" depth="0.55" origin="0.5,0.42" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,436,24,37" depth="0.525" origin="0.5,0.7"  />
       <Body width="31" height="34" density="12" />
-      <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="30" />
+      <SuitableTreatment type="fatigue" suitability="10" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand,Any" aimpos="30,-15" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">

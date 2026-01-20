@@ -52,7 +52,7 @@
       <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1296,1289,463,387" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
       <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,-95" />
       <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,105" />
-      <SuitableTreatment type="fatigue" suitability="50" />
+      <SuitableTreatment type="fatigue" suitability="40" />
       <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true" noninteractablewhenflippedy="true">
         <!-- don't allow laying in bed when wearing an exosuit -->
         <RequiredItem items="deepdivinglarge" type="Picked" requireempty="true" />
