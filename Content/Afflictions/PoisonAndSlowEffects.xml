@@ -25,7 +25,8 @@
         <!-- Self remove if ABX buff is applied recently. For reference, ABX gives 300 on failure -->
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
-          <ReduceAffliction identifier="worminfection" strength="4" />
+          <ReduceAffliction identifier="worminfection" strength="1" />
+          <Affliction identifier="he-stomachache" strength="3" probability="0.25" />
         </StatusEffect>
       </Effect>
       <PeriodicEffect mininterval="180" maxinterval="420" minstrength="25" maxstrength="50" > 
@@ -84,7 +85,8 @@
       maxresistance="1">
         <StatusEffect target="Character" interval="2" disabledeltatime="true">
           <Conditional huskinfectionresistance="gt 200" />
-          <ReduceAffliction identifier="tapeworminfection" strength="4" />
+          <ReduceAffliction identifier="tapeworminfection" strength="1" />
+          <Affliction identifier="he-stomachache" strength="3" probability="0.25" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character">
           <Conditional hunger="gt 0" />
