@@ -2629,7 +2629,7 @@
         <RequiredItem identifier="stabilozine" amount="1" />
         <RequiredItem identifier="he-emptyglass" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <SuitableTreatment identifier="he-stomachache" suitability="90" />
+      <SuitableTreatment identifier="he-stomachache" suitability="50" />
       <SuitableTreatment identifier="worminfection" suitability="20" />
       <SuitableTreatment identifier="tapeworminfection" suitability="20" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">

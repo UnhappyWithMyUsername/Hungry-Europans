@@ -635,7 +635,7 @@
       limbspecific="false"
       maxstrength="100"
       affectmachines="false"
-      treatmentthreshold="1000"
+      treatmentthreshold="30"
       karmachangeonapplied="-0.1"
       damageoverlayalpha="0"
       healcostmultiplier="2.25"
