@@ -1367,7 +1367,7 @@
       limbspecific="false"
       indicatorlimb="Head"
       activationthreshold="0"
-      treatmentthreshold="1000"
+      treatmentthreshold="30"
       maxstrength="1800"
       iconcolors="200,200,120,255;180,180,0,255"
       healableinmedicalclinic="false"
