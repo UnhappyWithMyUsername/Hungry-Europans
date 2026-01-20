@@ -597,7 +597,7 @@
       <Fabricate suitablefabricators="vendingmachine" requiredtime="3" requiredmoney="175" fabricationlimitmin="0" fabricationlimitmax="1" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- Unwrap -->
         <StatusEffect type="OnUse" target="This" Condition="10" setvalue="true" oneshot="true" comparison="And">

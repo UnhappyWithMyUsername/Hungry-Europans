@@ -14,7 +14,7 @@
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="29" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="47" radius="13" density="9" />
-      <SuitableTreatment type="hunger" suitability="25" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="25" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,0" aimangle="-50" holdangle="270" holdpos="0,0" handle1="0,-8" handle2="0,-8" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -70,7 +70,7 @@
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="39" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="35" height="36" density="9.4" />
-      <SuitableTreatment type="hunger" suitability="25" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="25" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,0" holdangle="270" handle1="10,-10" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -127,7 +127,7 @@
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         <StatusEffect type="OnUse" target="This" Condition="14" aimangle="120" setvalue="true" oneshot="true">
@@ -217,7 +217,7 @@
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         <StatusEffect type="OnUse" target="This" Condition="14" aimangle="120" setvalue="true" oneshot="true">
@@ -311,7 +311,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="72" height="34" density="9" />
-      <SuitableTreatment type="hunger" suitability="30" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="30" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -354,7 +354,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" radius="10" density="6" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -397,7 +397,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="53" radius="18" density="6" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -442,7 +442,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="50" radius="8" density="5" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -544,8 +544,8 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="20" fabricationlimitmin="0" fabricationlimitmax="40" />
       <Body width="40" height="7" density="12" />
-      <SuitableTreatment type="hunger" suitability="15" />
-      <SuitableTreatment type="thirst" suitability="-30" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="15" />
+      <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="-30" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="25,14" holdangle="270" holdpos="20,30" handle1="10,-10" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -643,7 +643,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="28" height="39" density="10.3" />
-      <SuitableTreatment type="hunger" suitability="100" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="100" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,10" aimable="false" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -780,7 +780,7 @@
         <Item identifier="he-dirtyplate" amount="1" />
       </Deconstruct>
       <Body width="60" radius="10" density="11" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
@@ -850,7 +850,7 @@
       <Deconstruct time="2">
         <Item identifier="aluminium" amount="1" />
       </Deconstruct>
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <SuitableTreatment identifier="he-stomachache" suitability="-50" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 

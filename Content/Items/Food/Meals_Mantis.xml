@@ -47,7 +47,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,112,29,24" depth="0.525" origin="0.5,0.05"  />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="78" radius="15" density="11" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="20,18" holdangle="270" holdpos="36,20" handle1="5,-5" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
 
@@ -105,7 +105,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="159" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="10" density="11" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         

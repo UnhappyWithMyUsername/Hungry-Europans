@@ -89,7 +89,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="27,23,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
-      <SuitableTreatment type="hunger" suitability="10" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -229,7 +229,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="27,51,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
-      <SuitableTreatment type="hunger" suitability="10" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -368,7 +368,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="55,23,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
-      <SuitableTreatment type="hunger" suitability="10" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -507,7 +507,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="55,51,27,27" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
-      <SuitableTreatment type="hunger" suitability="10" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -597,7 +597,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,1,39,21" depth="0.6" origin="0.5,0.5" />
       <Body width="39" height="21" density="10.5" />
-      <SuitableTreatment type="hunger" suitability="15" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="15" />
       <Price baseprice="50" >
         <Price storeidentifier="merchantoutpost" sold="true" minamount="0" maxamount="3" />
         <Price storeidentifier="merchantcity" sold="true" minamount="2" maxamount="9" />
@@ -651,7 +651,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="81,1,39,21" depth="0.6" origin="0.5,0.5" />
       <Body width="39" height="21" density="10.5" />
-      <SuitableTreatment type="hunger" suitability="15" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="15" />
       <Price baseprice="320" sold="false" >
         <Price storeidentifier="merchantoutpost" sold="false" />
         <Price storeidentifier="merchantcity" sold="false" />
@@ -717,7 +717,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="38" height="3" density="10.2" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -866,7 +866,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="67" density="12" />
-      <SuitableTreatment type="hunger" suitability="20" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         
         <!-- Pop open the Jar, make sure condition conditionals work -->

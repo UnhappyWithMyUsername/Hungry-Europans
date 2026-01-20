@@ -235,7 +235,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
@@ -317,7 +317,7 @@
       </Fabricate>-->
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
@@ -404,7 +404,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
@@ -486,7 +486,7 @@
       </Fabricate>-->
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
@@ -572,7 +572,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
@@ -644,7 +644,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hunger" suitability="80" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
