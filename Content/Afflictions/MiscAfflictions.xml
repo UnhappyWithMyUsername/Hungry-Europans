@@ -639,7 +639,8 @@
       karmachangeonapplied="-0.1"
       damageoverlayalpha="0"
       healcostmultiplier="2.25"
-      MedicalSkillGain="0.0">
+      MedicalSkillGain="0.0"
+      iconcolors="140,90,70,255;140,70,50,255;140,45,20,255">
       <Description
         textidentifier="advancedafflictiondescription.self.he-stomachache"
         target="Self"
@@ -749,7 +750,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
         </StatusEffect>
       </PeriodicEffect>
-      <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,384,128,128" origin="0,0"/>
     </Affliction>
     
     <Affliction
