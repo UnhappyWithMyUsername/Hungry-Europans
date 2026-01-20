@@ -1373,7 +1373,10 @@
         dialogflag="filthyheavy"
         strengthchange="0"
         minspeedmultiplier="0.9"
-        maxspeedmultiplier="0.8">
+        maxspeedmultiplier="0.8"
+        resistancefor="applybadsmell" 
+        minresistance="1.0"
+        maxresistance="1.0">
         <!-- particles -->
         <StatusEffect target="Character" >
           <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" distancemin="0" distancemax="30" velocitymin="0" velocitymax="30" scalemin="0.25" scalemax="0.5" scalemultiplier="1,0.5" lifetimemultiplier="0.25" colormultiplier="255,255,255,255"/>
@@ -1383,13 +1386,11 @@
           <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="0.25" />
         </StatusEffect>
-        <!-- BUGGED, impossible to make the effect check for conditionals on individual targets. As a result it applies the effect on every target if one of the NearbyCharacters checks the conditional -->
         <!-- makes nearby characters gain nausea in your presence up to a point -->
-        <!-- <StatusEffect target="Character,NearbyCharacters" range="150" interval="1" disabledeltatime="true" comparison="And">
+        <StatusEffect target="NearbyCharacters" range="120" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
-          <Conditional nausea="lt 20" />
-          <Affliction identifier="nausea" amount="2" />
-        </StatusEffect> -->
+          <Affliction identifier="applybadsmell" amount="2" />
+        </StatusEffect>
         <!-- Reduce the hygiene each second if the character is in water -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />

@@ -1518,6 +1518,38 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
+    
+    <!-- Does something If something smelly is nearby -->
+    <Affliction identifier="applybadsmell"
+      type=""
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="0"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="1"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+        <!-- makes nearby characters gain nausea in your presence up to a point -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional IsPlayer="true" />
+          <Conditional nausea="lt 20" />
+          <Affliction identifier="nausea" amount="3" />
+        </StatusEffect>
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional IsPlayer="true" />
+          <Conditional mood="gt 0" />
+          <Affliction identifier="mood" amount="07.05" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
+     
      
     <!-- Trait selector counter, only exists for trait selector check event -->
     <Affliction name="Trait selector counter FOOD"
