@@ -55,6 +55,8 @@
         strengthchange="0.0"
         minscreenblur="0.0"
         maxscreenblur="0.1"
+        minskillmultiplier="0.9"
+        maxskillmultiplier="0.7"
         minchromaticaberration="0.0"
         maxchromaticaberration="1.0">
         <StatusEffect type="OnActive" target="Character" interval="1">
@@ -65,18 +67,15 @@
       <PeriodicEffect mininterval="30" maxinterval="120">
         <StatusEffect type="OnActive" target="Character" comparison="and" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional fatigue="gte 80" />
-          <Affliction identifier="he-exhaustedsleep" amount="8" probability="0.2" />
-          <Affliction identifier="he-exhaustedsleep" amount="6" probability="0.2" />
-          <Affliction identifier="he-exhaustedsleep" amount="4" probability="0.2" />
-          <Affliction identifier="he-exhaustedsleep" amount="2" probability="0.2" />
-          <Affliction identifier="he-exhaustedsleep" amount="1" probability="0.2" />
+          <Affliction identifier="he-exhaustedsleep" amount="10" probability="0.25" />
+          <Affliction identifier="he-exhaustedsleep" amount="8" probability="0.5" />
+          <Affliction identifier="he-exhaustedsleep" amount="5" probability="1" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" comparison="and" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional fatigue="gte 100" />
           <Affliction identifier="he-exhaustedsleep" amount="20" probability="0.5" />
           <Affliction identifier="he-exhaustedsleep" amount="15" probability="0.75" />
-          <Affliction identifier="he-exhaustedsleep" amount="10" probability="0.75" />
-          <Affliction identifier="he-exhaustedsleep" amount="5" probability="1" />
+          <Affliction identifier="he-exhaustedsleep" amount="10" probability="1" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
