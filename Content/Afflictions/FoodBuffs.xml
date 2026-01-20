@@ -523,22 +523,24 @@
       affectmachines="false"
       MedicalSkillGain="0.0"
       healableinmedicalclinic="false">
-      <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+      <!-- only has an effect if you drink it to 9, so you have to drink the whole glass -->
+      <Effect minstrength="0" maxstrength="9" strengthchange="-1" />
+      <Effect minstrength="9" maxstrength="10" strengthchange="0">
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction identifier="he-stomachache" strength="5" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="Or">
           <Conditional worminfection="lte 50" />
-          <ReduceAffliction identifier="worminfection" strength="3" />
+          <ReduceAffliction identifier="worminfection" strength="5" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="Or">
           <Conditional tapeworminfection="lte 50" />
-          <ReduceAffliction identifier="tapeworminfection" strength="3" />
+          <ReduceAffliction identifier="tapeworminfection" strength="5" />
         </StatusEffect>
-        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" stackable="false" comparison="And">
           <Conditional defecate="gt 0" />
           <Conditional defecate="lt 98" />
-          <Affliction identifier="defecate" strength="15" />
+          <Affliction identifier="defecate" strength="12" />
         </StatusEffect>
         <!-- nausea if you can't poop -->
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
@@ -546,6 +548,12 @@
           <Affliction identifier="nausea" strength="4" />
         </StatusEffect>
       </Effect>
+      <!-- remove itself after 10 seconds -->
+      <PeriodicEffect minstrength="9" maxstrength="10" mininterval="10" maxinterval="10">
+        <StatusEffect target="Character" disabledeltatime="true">
+          <ReduceAffliction identifier="he-purgestomach" strength="100" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>  
     

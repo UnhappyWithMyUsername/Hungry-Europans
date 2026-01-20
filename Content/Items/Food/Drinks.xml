@@ -2639,7 +2639,7 @@
           <Conditional InWater="false" />
           <ReduceAffliction type="thirst" amount="1" />
           <Affliction identifier="fillbladder" amount="1" />
-          <Affliction identifier="he-purgestomach" amount="1.0" />
+          <Affliction identifier="he-purgestomach" amount="4.0" />
           <Affliction identifier="applydrunk" amount="1.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
