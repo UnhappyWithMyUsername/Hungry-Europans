@@ -1525,7 +1525,7 @@
       limbspecific="false"
       indicatorlimb="Torso"
       activationthreshold="0"
-      showiconthreshold="0"
+      showiconthreshold="1000"
       showicontoothersthreshold="1000"
       hideiconafterdelay="true"
       showinhealthscannerthreshold="1000"
