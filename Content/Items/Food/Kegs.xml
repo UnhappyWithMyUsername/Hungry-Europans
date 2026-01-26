@@ -82,7 +82,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Water" identifier="he-kegwater" Tags="keg,filledkeg,waterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Water" identifier="he-kegwater" Tags="keg,filledkeg,waterkeg,freshwaterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
