@@ -552,6 +552,7 @@
       <PeriodicEffect minstrength="9" maxstrength="10" mininterval="10" maxinterval="10">
         <StatusEffect target="Character" disabledeltatime="true">
           <ReduceAffliction identifier="he-purgestomach" strength="100" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="300" selectionmode="random" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
