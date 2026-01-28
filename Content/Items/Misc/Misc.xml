@@ -482,7 +482,7 @@
     </Item>
 
     <!-- EMPTY CANS -->
-    <Item hideinmenus="true" DontCleanUp="true" name="Empty Can" identifier="trashcan_emptycanspawner" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Hidden" Tags="smallitem" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item hideinmenus="true" DontCleanUp="true" name="Empty Can" identifier="trashcan_emptycanspawner" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Hidden" Tags="smallitem" scale="0.5" impactsoundtag="impact_aluminiumcan" maxstacksize="8">
       <PreferredContainer primary="outposttrashcan" amount="1" spawnprobability="0.75" />
       <Deconstruct time="1" chooserandom="true">
         <Item identifier="aluminium" amount="1"/>
@@ -593,7 +593,7 @@
       </ItemComponent>
     </Item>
 
-    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan" maxstacksize="8">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
@@ -623,7 +623,7 @@
       </Projectile>
     </Item>
 
-    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycanenergy1" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycanenergy1" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan" maxstacksize="8">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
@@ -653,7 +653,7 @@
       </Projectile>
     </Item>
 
-    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancola" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancola" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan" maxstacksize="8">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
@@ -683,7 +683,7 @@
       </Projectile>
     </Item>
 
-    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancolazero" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancolazero" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan" maxstacksize="8">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
