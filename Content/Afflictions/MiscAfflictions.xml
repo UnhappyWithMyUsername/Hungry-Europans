@@ -1544,7 +1544,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
           <Conditional mood="gt 0" />
-          <Affliction identifier="mood" amount="07.05" />
+          <Affliction identifier="mood" amount="0.05" />
         </StatusEffect>
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
