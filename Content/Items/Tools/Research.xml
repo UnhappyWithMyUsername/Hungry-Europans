@@ -124,13 +124,13 @@
       <Body width="35" height="65" density="10.2" />
       <Holdable slots="Any,RightHand,LeftHand" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This,Character" comparison="And" Condition="-100.0" setvalue="true">
-          <Conditional fatigue="lte 0.0" />
+          <Conditional mood="lte 0.0" />
           <TriggerEvent identifier="traitselectorevent" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="0.1" >
-          <Conditional fatigue="lte 0.0" />
+          <Conditional mood="lte 0.0" />
           <EventTarget eventidentifier="traitselectorevent" tag="traitselector_player"/>
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">

@@ -79,7 +79,7 @@
       <Option text="burgers" >
         <StatusEffectAction targettag="traitselector_player">
           <StatusEffect target="This" disabledeltatime="true" >
-            <Affliction identifier="fatigue" amount="0.1" />
+            <Affliction identifier="mood" amount="0.1" />
             <Affliction identifier="he-traitselectorcounterfood" amount="1" />
             <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_burgers" />
           </StatusEffect>
@@ -97,7 +97,7 @@
       <Option text="beer" >
         <StatusEffectAction targettag="traitselector_player">
           <StatusEffect target="This" disabledeltatime="true">
-            <Affliction identifier="fatigue" amount="0.1" />
+            <Affliction identifier="mood" amount="0.1" />
             <Affliction identifier="he-traitselectorcounterdrink" amount="1" />
             <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_beer" />
           </StatusEffect>
