@@ -443,7 +443,7 @@
           <ParticleEmitter particle="waterdrop" scalemin="0.75" scalemax="1.5" velocitymin="0.0" velocitymax="5.0" anglemin="0" anglemax="0" distancemin="-30" distancemax="30" particlespersecond="5" colormultiplier="255,50,20,255" />
         </StatusEffect>
         <StatusEffect type="Always" target="This,NearbyCharacters" range="150" disabledeltatime="true" interval="1" >
-          <Affliction identifier="nausea" strength="1.5" />
+          <Affliction identifier="applybadsmell" strength="2" />
         </StatusEffect>
       </ItemContainer>
       <AiTarget maxsoundrange="300" maxsightrange="3000" static="true" />
