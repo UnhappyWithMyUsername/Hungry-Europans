@@ -45,6 +45,8 @@ AllOWEDJOBS include jobs
 <!-- heavy -->
 
 
+<!-- TODO: Bot support is dead and these conversations are almost impossible to trigger, shift these conversations to outpostNPC  -->
+
 <!-- GENERAL CONVERSATIONS -->
 <Conversation line="Can't wait to see the catch of the day!" speaker="0" flags="Initial" allowedjobs="chef">
 	<Conversation line="A husk infection, that's what you'll catch if you go out there." speaker="1">
@@ -303,6 +305,29 @@ AllOWEDJOBS include jobs
 	<Conversation line="" speaker="0"/>
 	<Conversation line="Hey, toughen up big boy. We're almost there." speaker="1" speakertag="tough" />
 	<Conversation line="It never ends it never ends it never ends..." speaker="1" speakertags="crazy" />
+</Conversation>
+
+
+
+<Conversation line="So, about what REALLY happened in Tormsdale..." speaker="0" flags="OutpostNPC" allowedjobs="engineer">
+	<Conversation line="Don't tell me it's another of those conspiracy theories you heard on the radio." speaker="1" flags="OutpostNPC">
+    <Conversation line="They say the engineer on shift that day was trying to grill sausages in the main reactor using radiation. That's what caused the meltdown." speaker="0" >
+      <Conversation line="That's a load of nonsense." speaker="1" >      
+        <Conversation line="If you don't believe me, maybe we should try..." speaker="0" >        
+          <Conversation line="Absolutely do not." speaker="1" >          
+            <Conversation line="So you DO believe me!" speaker="0" />
+          </Conversation>
+        </Conversation>
+      </Conversation>
+    </Conversation>  
+  </Conversation>
+</Conversation>
+
+<Conversation line="More mouths to feed, just what we needed..." speaker="0" flags="EnterOutpost,LowReputation,OutpostNPC"/>
+
+<Conversation line="I'm tired of eating this grub every day..." speaker="0" flags="OutpostNPC">
+	<Conversation line="Don't let the higher ups hear you. It's already hard enough to fill your plate." speaker="1" flags="OutpostNPCCoalition" />
+	<Conversation line="I can picture those coalition fat cats gorging themselves on wine and buttery thresher meat..." speaker="1" flags="OutpostNPCSeparatists"/>
 </Conversation>
 
 
