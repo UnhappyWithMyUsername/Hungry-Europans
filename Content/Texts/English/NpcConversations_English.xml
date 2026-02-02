@@ -82,19 +82,6 @@ AllOWEDJOBS include jobs
 	</Conversation>
 </Conversation>
 
-<Conversation line="A pomegrenade a day keeps the doctor away..." speaker="0" allowedjobs="chef">
-  <Conversation line="This is not proper medical advice. Please consult a trained professional regularly." speaker="1" allowedjobs="medicaldoctor"/>
-	<Conversation line="A mutated fruit a day burns the submarine away." speaker="1" />
-</Conversation>
-
-<Conversation line="" speaker="0" >
-	<Conversation line="So, I got your blood work in, and I've got a couple questions... Just about how many hotdogs do you eat a day?" speaker="1" allowedjobs="medicaldoctor" >
-		<Conversation line="Well... I usually have a hotdog at breakfast. And if I walk by the cafeteria, I might grab one or two hotdogs." speaker="0">
-      <Conversation line="Three. Hotdogs. I hope there's no more hotdogs in the day..." speaker="1" />
-    </Conversation>
-	</Conversation>
-</Conversation>
-
 
 <!-- NPC IS HUNGRY - different levels -->
 <!-- Light -->
@@ -123,8 +110,7 @@ AllOWEDJOBS include jobs
 
 <!-- medium -->
 <Conversation line="I feel hungry..." speaker="0" flags="hungrymedium">
-	<Conversation line="" speaker="0"/>
-	<Conversation line="Don't worry, I'm not letting you starve." speaker="1" allowedjobs="medicaldoctor" />
+	<Conversation line="Don't worry, I'm not letting you starve to death." speaker="1" allowedjobs="medicaldoctor" />
 	<Conversation line="You're right, I'm craving some nuggets right now." speaker="1" >
 		<Conversation line="I only see you eating fast-food, at this rate, you'll get rounder than Jupiter." speaker="2"/>
 	</Conversation>
@@ -307,7 +293,61 @@ AllOWEDJOBS include jobs
 	<Conversation line="It never ends it never ends it never ends..." speaker="1" speakertags="crazy" />
 </Conversation>
 
+<!-- xxxxxxxxxxxxxxxxxxxxx -->
 
+
+<Conversation line="A pomegrenade a day keeps the doctor away..." speaker="0" flags="OutpostNPC">
+  <Conversation line="This is not proper medical advice. Please consult a trained professional regularly." speaker="1" allowedjobs="medicaldoctor"/>
+	<Conversation line="A mutated fruit a day burns the submarine away." speaker="1" />
+</Conversation>
+
+<Conversation line="Hey I've always wondered how Couwola Cola is made." speaker="0" flags="OutpostNPC">
+	<Conversation line="They keep the recipe a secret." speaker="1" >
+    <Conversation line="Probably salt water pushed through an old sailor's sock..." speaker="2" />
+  </Conversation>
+</Conversation>
+
+<Conversation line="My father left to get milk one day. Never came back." speaker="0" flags="OutpostNPC">
+	<Conversation line="No kidding. You'd have to be insane to be milking molochs for a living. One wrong move and you're done for." speaker="1" flags="OutpostNPC" />
+	<Conversation line="Damn, what happened?" speaker="1" flags="OutpostNPC" >  
+    <Conversation line="Had a job as a moloch herder. One of the new hires thought it would be hilarious to honk a horn during a sortie... You can guess what happened next." speaker="0" />
+  </Conversation>
+</Conversation>
+
+<Conversation line="The coffee on this station is disgusting..." speaker="0" flags="OutpostNPC">
+	<Conversation line="That's just about every station from my experience." speaker="1" flags="OutpostNPC" />
+	<Conversation line="You're drinking the industrial stuff. My old boss got his from a hydrothermal brew in the wastes, best I've ever tasted." speaker="1" flags="OutpostNPC" >
+    <Conversation line="Must be awfully expensive..." speaker="0" />
+  </Conversation>
+</Conversation>
+
+<Conversation line="I will need your research materials on splicing fruit." speaker="0" flags="researcher">
+	<Conversation line="Sure, what for?" speaker="1" flags="researcher" >
+    <Conversation line="The children of the honkmother have put a request to try and create a banana that only grows peel." speaker="0" >    
+      <Conversation line="That sounds like a weapon of mass disruption..." speaker="1" flags="researcher" />    
+    </Conversation>
+  </Conversation>
+</Conversation>
+
+<Conversation line="So, I got your blood work in, and I've got a couple questions... Just about how many hotdogs do you eat a day?" flags="OutpostNPC" speaker="0" allowedjobs="medicaldoctor" >
+  <Conversation line="Well... I usually get a hotdog at breakfast. And if I walk by the cafeteria, I might grab a salad, and occasionally one one or two hotdogs on my off day." speaker="1" flags="OutpostNPC">
+    <Conversation line="Three. Hotdogs. A day. I hope there's no more hotdogs after that..." speaker="0" />
+  </Conversation>
+</Conversation>
+
+<Conversation line="Your cholesterol levels are concerning. I suggest low-fat diet for the next two months." flags="OutpostNPC" speaker="0" allowedjobs="medicaldoctor" >
+  <Conversation line="How am I supposed to keep up with my workload if you only have me eat algae every day?" speaker="1" flags="OutpostNPC">
+    <Conversation line="We can't have you die from a heart attack." speaker="0" >    
+      <Conversation line="Would you have me die from exhaustion?" speaker="1" />
+    </Conversation>
+  </Conversation>
+</Conversation>
+
+<Conversation line="These military rations taste like cardboard..." speaker="0" flags="OutpostNPC" allowedjobs="security" >
+  <Conversation line="Don't chew on the wrapper." speaker="1" flags="OutpostNPC" allowedjobs="security" />
+</Conversation>
+
+<!-- xxxxxxxxxxxxxxxxxxxxx -->
 
 <Conversation line="So, about what REALLY happened in Tormsdale..." speaker="0" flags="OutpostNPC" allowedjobs="engineer">
 	<Conversation line="Don't tell me it's another of those conspiracy theories you heard on the radio." speaker="1" flags="OutpostNPC">
