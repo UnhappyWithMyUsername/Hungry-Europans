@@ -310,7 +310,7 @@ AllOWEDJOBS include jobs
 <Conversation line="My father left to get milk one day. Never came back." speaker="0" flags="OutpostNPC">
 	<Conversation line="No kidding. You'd have to be insane to be milking molochs for a living. One wrong move and you're done for." speaker="1" flags="OutpostNPC" />
 	<Conversation line="Damn, what happened?" speaker="1" flags="OutpostNPC" >  
-    <Conversation line="Had a job as a moloch herder. One of the new hires thought it would be hilarious to honk a horn during a sortie... You can guess what happened next." speaker="0" />
+    <Conversation line="Had a job as a moloch herder. One of the new hires thought it would be hilarious to honk a bike horn during a sortie... You know the rest." speaker="0" />
   </Conversation>
 </Conversation>
 
@@ -347,8 +347,6 @@ AllOWEDJOBS include jobs
   <Conversation line="Don't chew on the wrapper." speaker="1" flags="OutpostNPC" allowedjobs="security" />
 </Conversation>
 
-<!-- xxxxxxxxxxxxxxxxxxxxx -->
-
 <Conversation line="So, about what REALLY happened in Tormsdale..." speaker="0" flags="OutpostNPC" allowedjobs="engineer">
 	<Conversation line="Don't tell me it's another of those conspiracy theories you heard on the radio." speaker="1" flags="OutpostNPC">
     <Conversation line="They say the engineer on shift that day was trying to grill sausages in the main reactor using radiation. That's what caused the meltdown." speaker="0" >
@@ -367,8 +365,36 @@ AllOWEDJOBS include jobs
 
 <Conversation line="I'm tired of eating this grub every day..." speaker="0" flags="OutpostNPC">
 	<Conversation line="Don't let the higher ups hear you. It's already hard enough to fill your plate." speaker="1" flags="OutpostNPCCoalition" />
-	<Conversation line="I can picture those coalition fat cats gorging themselves on wine and buttery thresher meat..." speaker="1" flags="OutpostNPCSeparatists"/>
+	<Conversation line="I can picture those coalition fat cats gorging themselves on wine and buttery mantis meat..." speaker="1" flags="OutpostNPCSeparatists"/>
 </Conversation>
 
+<Conversation line="What do you think the ancients eat?" speaker="0" flags="OutpostNPC" >
+	<Conversation line="Same as everything else on this moon. Fish." speaker="1" flags="OutpostNPC">
+    <Conversation line="But what if there was no fish when they arrived? What if they ate rocks?" speaker="0" >
+      <Conversation line="You look like you eat rocks." speaker="1" alloweddialogtags="rude" />
+      <Conversation line="I don't think a race capable of gravity manipulation would have trouble feeding itself." speaker="1" >
+        <Conversation line="Then how did they all die off?" speaker="0" >
+          <Conversation line="Same as everything else... Eaten by a bigger fish." speaker="1" />
+          <Conversation line="I'm not in a hurry to find out." speaker="1" />
+          <Conversation line="Radiation, pollution, viruses, war, boredom... I'm afraid we're next." speaker="1" />
+        </Conversation>
+      </Conversation>
+    </Conversation>
+  </Conversation>  
+</Conversation>
+
+<Conversation line="So, this cargo ship I served in, a real rust bucket. One day, the chef decided to cook up the usual fried junk. Crawler, Thresher, couldn't tell you the meat." speaker="0" flags="OutpostNPC">
+	<Conversation line="Anyway, we were late on a delivery. The captain went too hard on the bottle and hit an iceberg. Nothing the ship couldn't handle, but I turn around and the whole kitchen is on fire." speaker="0" >
+    <Conversation line="It sent oil flying all over. The chef turned into a human torch. I ran to grab an extinguiser, but all of them missing or empty. Later found out the security officer secretely pawned our supplies during a poker game." speaker="0" >
+      <Conversation line="You learn about new ways to die every day..." speaker="1" />
+    </Conversation>  
+  </Conversation>   
+</Conversation>
+
+<Conversation line="I've had the runs for two weeks. What do they put in the water?" speaker="0" flags="OutpostNPC">
+</Conversation>
+
+<Conversation line="Have you seen my pet out there? It's small, orange and it purrs." speaker="0" flags="EnterOutpost,OutpostNPC">
+</Conversation>
 
 </Conversations>
