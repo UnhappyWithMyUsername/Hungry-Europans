@@ -34,6 +34,7 @@ PERFORMANCE UPDATE
 [b]Additions:[/b]
 [List]
 [*] Added a rare (joke) spork drop
+[*] Added loading screen tips
 [/List]
 
 [b]Changes:[/b] 
@@ -47,6 +48,7 @@ PERFORMANCE UPDATE
 [*] You can see the range of the Sprinkler when interacting using Electician Goggles. Range might not be perfectly accurate
 [*] Spare ribs recipe uses 2 ribs instead of 3 (to match the amount of ribs you get from hammerhead)
 [*] Made empty cans stack because some of you trash gremlins complained
+[*] Tried to move some conversations to outpost NPCs instead of crew bots (they never triggered outside of singleplayer)
 [/List]
 
 [b]Fixes:[/b] 
