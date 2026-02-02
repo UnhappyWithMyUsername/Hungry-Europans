@@ -77,4 +77,5 @@
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Swordfish.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
+  <Text file="%ModDir%/Content/Texts/English/Loadingtips.xml" />
 </contentpackage>
