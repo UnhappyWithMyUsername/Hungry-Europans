@@ -695,7 +695,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-tastyfood>Your food is known to be amongst the best. If they are not hungry, crewmates gain ‖color:gui.orange‖High Morale‖end‖. If they are stuffed, they gain ‖color:gui.orange‖Excellent Morale‖end‖ instead, doubling the following bonuses:</talentdescription.he-tastyfood><!--Patch 13-->
 <talentname.he-favorite>Everyone's Favorite</talentname.he-favorite><!--Patch 13-->
 <talentname.he-piper>Piper</talentname.he-piper><!--Patch 13-->
-<talentdescription.he-piper>Playing the ‖color:gui.orange‖Bagpipes‖end‖ near your crew grants them the following bonuses:\n‖color:gui.orange‖20 to Weapons\n20% Increased Walking Speed\n25% Increased Melee Damage\n25% Damage Resistance ‖end‖.</talentdescription.he-piper><!--Patch 13-->
+<talentdescription.he-piper>Playing the ‖color:gui.orange‖Bagpipes‖end‖ near your crewmates grants them the following bonuses:\n‖color:gui.green‖+20‖end‖ ‖color:gui.orange‖Bonus Weapons Skill‖end‖\n‖color:gui.green‖+20%‖end‖ ‖color:gui.orange‖Walking Speed‖end‖\n‖color:gui.green‖+25%‖end‖ ‖color:gui.orange‖Melee Damage‖end‖\n‖color:gui.green‖+25%‖end‖ ‖color:gui.orange‖Damage Resistance‖end‖</talentdescription.he-piper><!--Patch 13-->
 <talentname.he-lazygardener>Lazy Gardener</talentname.he-lazygardener><!--Patch 14-->
 <talentdescription.he-lazygardener>The time spent watering your plants was just too much for you.</talentdescription.he-lazygardener><!--Patch 14-->
 <talentname.he-farmersmarket>Farmers' Market</talentname.he-farmersmarket><!--Patch 17-->
@@ -726,12 +726,12 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-seafoodsamurai>If you are in the open sea, gain an additional [amount]% [stattype].</talentdescription.he-seafoodsamurai><!--Patch 17-->
 <talentname.he-parttimejob>Part-Time Job</talentname.he-parttimejob><!--Patch 17-->
 <talentname.he-dinnertheater>Dinner Theater</talentname.he-dinnertheater><!--Patch 17-->
-<talentdescription.he-dinnertheater>Playing the ‖color:gui.orange‖Bagpipes‖end‖ prolongs the duration of food and drink buffs for you and nearby allies.</talentdescription.he-dinnertheater><!--Patch 17-->
+<talentdescription.he-dinnertheater>Playing the ‖color:gui.orange‖Bagpipes‖end‖ prolongs the duration of food and drink buffs for you and nearby crewmates.</talentdescription.he-dinnertheater><!--Patch 17-->
 <talentname.he-teppanyaki>Teppanyaki</talentname.he-teppanyaki><!--Patch 17-->
 <talentdescription.he-teppanyaki>Whenever you gain a [skillname1] or [skillname2] skill point, your crew gains a point as well.\nDeal [powerincrease]% more damage with ‖color:gui.orange‖Pans‖end‖.</talentdescription.he-teppanyaki><!--Patch 17-->
 <talentname.he-workpromotion>Work Promotion</talentname.he-workpromotion><!--Patch 17-->
 <talentname.he-headchef>Head Chef</talentname.he-headchef><!--Patch 17-->
-<talentdescription.he-headchef>Allies in the same room gain [amount]% [stattype].</talentdescription.he-headchef><!--Patch 17-->
+<talentdescription.he-headchef>Crewmates in the same room gain [amount]% [stattype].</talentdescription.he-headchef><!--Patch 17-->
 <talentname.he-huskegghunt>Husk Egg Hunt</talentname.he-huskegghunt><!--Patch 17-->
 <talentdescription.he-huskegghunt>Husks drop one extra [item].</talentdescription.he-huskegghunt><!--Patch 17-->
 <talentname.he-creamery>Creamery</talentname.he-creamery>
