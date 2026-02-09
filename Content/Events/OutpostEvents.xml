@@ -256,7 +256,7 @@
   <EventSet identifier="he-outpostevent.hirechef.hydroponics" leveltype="outpost" locationtype="hydroponics" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="he-hirechef" commonness="50" probability="1.0"/>
   </EventSet>
-  <EventSet identifier="he-outpostevent.couwolasuit" leveltype="outpost" locationtype="outpost,settlement,colony,city,camp,base,military,blockade,study,research,clinic,hospital,hydroponics,factory,shipyard" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="70" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
+  <EventSet identifier="he-outpostevent.couwolasuit" leveltype="outpost" locationtype="outpost,settlement,colony,city,camp,base,military,blockade,study,research,clinic,hospital,hydroponics,factory,shipyard" allowatstart="true" minleveldifficulty="10" maxleveldifficulty="70" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="couwolaprizequest" commonness="50" probability="0.2"/>
   </EventSet>
   <EventSet identifier="he-outpostevent.cafeteria" leveltype="outpost" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
