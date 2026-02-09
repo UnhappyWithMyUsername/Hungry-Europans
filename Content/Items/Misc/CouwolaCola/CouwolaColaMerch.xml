@@ -1,6 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+  
+    <Item identifier="he-dirtycouwolaexosuit" category="Diving,Equipment" tags="couwolasuit,ductblock" nameidentifier="he-couwolaexosuit" scale="0.605" impactsoundtag="impact_metal_heavy" damagedbyrepairtools="true" health="100">
+      <Sprite name="Exosuit Item" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" sourcerect="2,266,203,244" depth="0.56" origin="0.5,0.5" />
+      <!-- gunk sprites -->
+      <DecorativeSprite texture="%ModDir:2532991202%/Items/DE-ItemsAtlas.png" depth="0.57" sourcerect="421,376,124,58" origin="0.5,0.5" rotation="0" offset="0,-100" scale="1.25">
+        <IsActiveConditional hastag="neq pickedup" />
+      </DecorativeSprite>
+      <DecorativeSprite texture="Content/Map/Outposts/AbandonedOutpost/MonsterScumsA.png" sourcerect="741,191,145,235" depth="0.52" origin="0.5,0.5" offset="0,0">
+        <IsActiveConditional conditionpercentage="gt 75" />
+      </DecorativeSprite>
+      <DecorativeSprite texture="Content/Map/Outposts/AbandonedOutpost/MonsterScumsA.png" sourcerect="551,312,137,200" depth="0.53" origin="0.5,0.5" offset="0,0" >
+        <IsActiveConditional conditionpercentage="gt 50" />
+      </DecorativeSprite>
+      <DecorativeSprite texture="Content/Map/Outposts/AbandonedOutpost/MonsterScumsA.png" sourcerect="119,155,137,200" depth="0.54" origin="0.5,0.5" offset="0,0" >
+        <IsActiveConditional conditionpercentage="gt 25" />
+      </DecorativeSprite>
+      <DecorativeSprite texture="Content/Map/Outposts/AbandonedOutpost/MonsterScumsA.png" sourcerect="514,296,167,200" depth="0.55" origin="0.5,0.5" offset="0,0" >
+        <IsActiveConditional conditionpercentage="gt 0" />
+      </DecorativeSprite>
+      <Body width="150" height="230" density="30" />
+      <!-- SFX -->
+      <ItemComponent>
+        <StatusEffect type="Always" target="This" interval="1" oneshot="true">
+          <Conditional condition="lte 75" />
+          <particleemitter particle="organeruption" drawontop="true" particleamount="10" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.5" scalemax="0.8" colormultiplier="35,60,35,255" />
+          <Sound file="Content/Sounds/Damage/Gore1.ogg" range="800" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" interval="1" oneshot="true">
+          <Conditional condition="lte 50" />
+          <particleemitter particle="organeruption" drawontop="true" particleamount="10" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.45" scalemax="0.7" colormultiplier="35,60,35,255" />
+          <Sound file="Content/Sounds/Damage/Gore3.ogg" range="800" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" interval="1" oneshot="true">
+          <Conditional condition="lte 25" />
+          <particleemitter particle="organeruption" drawontop="true" particleamount="10" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.4" scalemax="0.6" colormultiplier="35,60,35,255" />
+          <Sound file="Content/Sounds/Damage/Gore4.ogg" range="800" />
+        </StatusEffect>       
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="organeruption" drawontop="true" particleamount="10" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.35" scalemax="0.5" colormultiplier="35,60,35,255" />
+          <Sound file="Content/Sounds/Damage/Gore8.ogg" range="800" />
+          <SpawnItem identifier="he-couwolaexosuit" spawnposition="This" />
+          <Remove />
+        </StatusEffect>   
+        <StatusEffect type="OnDamaged" target="This" disabledeltatime="true" setvalue="true">
+          <particleemitter particle="whitechunks" drawontop="true" particleamount="3" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.2" scalemax="0.35" colormultiplier="35,60,35,255" />
+          <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
+        </StatusEffect>     
+      </ItemComponent>
+    </Item> 
+  
     <Item name="Limited Edition Couwola Cola Exosuit" identifier="he-couwolaexosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,cuttingequipment,provocative,containradiation" scale="0.605" fireproof="true" description="A limited edition Exosuit produced by Couwola Cola. It is more fuel efficient and allows the wearer to breath oxygen from their surroundings while only using the oxygen tanks when needed." isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01">
       <Price baseprice="80" canbespecial="false" sold="false" />
       <Deconstruct time="30">
@@ -187,5 +237,6 @@
       </ItemContainer>
       <aitarget maxsightrange="1500" />
     </Item>  
+    
   </Items>
 </Override>

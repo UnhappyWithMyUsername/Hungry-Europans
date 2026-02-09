@@ -1598,6 +1598,35 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entitydescription.he-moodhintitem>Smoke, drink, gamble... improve your mood by doing side activities and eating the food you like.</entitydescription.he-moodhintitem>
 
 
+<eventtext.couwolaprize.accostyou>A disgruntled technician accosts you out. "Aren't you one of the travellers that just docked? I've got to tell you about something."</eventtext.couwolaprize.accostyou>
+<eventtext.couwolaprize.luckywinner>"I've been stuck on a maintenance gig for the past month or so. Two days ago during my lunch break, I pulled a very special can from the vending machine. Turns out I'm the lucky owner of the 1 000 000th Couwola can, and won a unique prize to boot! Can you believe that?"</eventtext.couwolaprize.luckywinner>
+<eventtext.couwolaprize.prizeyousay>"A prize you say?"</eventtext.couwolaprize.prizeyousay>
+<eventtext.couwolaprize.shitluck>"Well, I'm actually shit out of luck. When it was time to claim my reward, news arrived that the very station I was supposed to reach had been evacuated... \nSo here I am, the grand winner of nothing-at-all. I can't leave this place until my contract is over, and even if I did, Jove knows what awaits on that abandoned station."</eventtext.couwolaprize.shitluck>
+<eventtext.couwolaprize.tiplocation>"So here's a proposition: I'll tip you the location for 300mk. That's worth more to me than some junk Couwola merch at the end of Europa anyway."</eventtext.couwolaprize.tiplocation>
+<eventtext.couwolaprize.payup>Pay 300mk</eventtext.couwolaprize.payup>
+<eventtext.couwolaprize.nomoney>"Come back with the money or piss off."</eventtext.couwolaprize.nomoney>
+<eventtext.couwolaprize.gooddeal>"Good deal. The prize is yours, if you don't bleed out on the way..."</eventtext.couwolaprize.gooddeal>
+
+<missionname.gotocouwolaraffle>The Grand Couwola Raffle</missionname.gotocouwolaraffle>
+<missiondescription.gotocouwolaraffle>You've been told that there is some Limited Edition Couwola merchandise on this station. It might be worth taking a look...</missiondescription.gotocouwolaraffle>
+<missionheader0.gotocouwolaraffle>The Grand Couwola Raffle.</missionheader0.gotocouwolaraffle>
+<missionmessage0.gotocouwolaraffle>You've been told that there is some Limited Edition Couwola merchandise on this station. It might be worth taking a look...</missionmessage0.gotocouwolaraffle>
+<missionsuccess.gotocouwolaraffle>You found the Limited Edition Couwola Cola Exosuit!</missionsuccess.gotocouwolaraffle>
+<missionfailure.gotocouwolaraffle>You didn't find the Couwola merchandise.</missionfailure.gotocouwolaraffle>
+
+<eventtext.spawncouwolasuit.cleanthesuit>Looks like you found the prized Couwola Suit, but it's long been abandoned and is now covered with gunk. You should try cutting it all off with a tool.</eventtext.spawncouwolasuit.cleanthesuit>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands

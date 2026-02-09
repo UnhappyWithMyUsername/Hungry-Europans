@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+
+  <GotoMission
+    name=""
+    identifier="gotocouwolaraffle"
+    type="GoTo"
+    difficulty="1"
+    commonness="0"
+    reward="0"
+    BlockLocationTypeChanges="true">
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,0,256,256" color="49,93,233"/>
+    <TriggerEvent state="1" delay="5" eventidentifier="spawncouwolasuit" campaignonly="true"/>
+    <LocationType identifier="Abandoned" />
+    <CompleteCheckDataAction identifier="foundcouwolasuit" condition="gte 1" />  
+  </GotoMission>
+  
+  
+</Missions>

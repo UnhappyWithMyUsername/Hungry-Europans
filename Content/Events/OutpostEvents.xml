@@ -93,8 +93,93 @@
       <Label name="end" />
     </ScriptedEvent>    
     
+     
+    <!-- recover alien core mission -->
+    <ScriptedEvent identifier="couwolaprizequest" commonness="20" >
+      <CheckDataAction identifier="pickedcouwolasuitquest" condition="gt 0" >
+        <Success>
+          <Goto name="end" />
+        </Success>
+      </CheckDataAction>
+      <TagAction criteria="player" tag="player" />
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="miner" targettag="couwolanpc" spawnlocation="Outpost" targetmoduletags="crewmodule"/>
+      <Label name="waitforinteraction" />
+      <ClearTagAction tag="triggerer_player" />
+      <TriggerAction target1tag="couwolanpc" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
+      <NPCWaitAction npctag="couwolanpc" wait="true" priority="50"  />
+      <ConversationAction text="eventtext.couwolaprize.accostyou" targettag="triggerer_player" eventsprite="instructor" >
+        <Option text="EventText.generic.continue" >
+          <ConversationAction text="eventtext.couwolaprize.luckywinner" targettag="triggerer_player" eventsprite="instructor">
+            <Option text="eventtext.couwolaprize.prizeyousay" >                
+              <ConversationAction text="eventtext.couwolaprize.shitluck" targettag="triggerer_player" eventsprite="instructor">              
+                <Option text="EventText.generic.continue" >
+                  <Label name="askformoney" />
+                  <ConversationAction text="eventtext.couwolaprize.tiplocation" targettag="triggerer_player" eventsprite="instructor">
+                    <Option text="eventtext.couwolaprize.payup" >
+                      <CheckMoneyAction Amount="300">
+                        <Success>
+                          <MoneyAction amount="-300" />
+                          <ConversationAction text="eventtext.couwolaprize.gooddeal" targettag="triggerer_player" eventsprite="instructor"  endconversation="true" />
+                          <MissionAction missionidentifier="gotocouwolaraffle" locationtype="Abandoned" />
+                          <SetDataAction identifier="pickedcouwolasuitquest" value="1" />
+                          <Goto name="end" />
+                        </Success>
+                        <Failure>
+                          <ConversationAction text="eventtext.couwolaprize.nomoney" targettag="triggerer_player" endconversation="true"/>
+                          <Label name="payagain" />
+                          <ClearTagAction tag="triggerer_player" />
+                          <WaitAction time="3" />
+                          <TriggerAction target1tag="couwolanpc" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
+                          <Goto name="askformoney" />
+                        </Failure>
+                      </CheckMoneyAction>
+                    </Option>
+                    <Option text="eventtext.generic.walkaway" endconversation="true" >
+                      <Goto name="payagain" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+              </ConversationAction>
+            </Option>    
+           </ConversationAction>
+          </Option>
+        <Option text="eventtext.generic.ignore" endconversation="true" >
+          <Goto name="waitforinteraction" />
+        </Option>
+      </ConversationAction>
+      <Label name="end" />
+    </ScriptedEvent> 
     
-
+    <ScriptedEvent identifier="spawncouwolasuit" commonness="100">
+      <CheckDataAction identifier="foundcowolasuit" condition="gt 0" >
+        <Success>
+          <Goto name="end" />
+        </Success>
+      </CheckDataAction>
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:abandonedstoragecab" submarinetype="outpost" tag="randomcabinet" chooserandom="true" />
+      <SpawnAction itemidentifier="he-dirtycouwolaexosuit" targettag="couwolasuit" amount="1" spawnlocation="Outpost" spawnpointtag="randomcabinet" targetmoduletags="abandonedcrewmodule" offset="60" />
+      <SpawnAction itemidentifier="he-colaradiantbottle" targettag="supercola" amount="5" spawnlocation="Outpost" targetinventory="randomcabinet" />
+      <SpawnAction itemidentifier="he-colabottle" amount="2" spawnlocation="Outpost" targetinventory="randomcabinet" />
+      <SpawnAction itemidentifier="he-colazerocan" amount="3" spawnlocation="Outpost" targetinventory="randomcabinet" />
+      <Label name="retry" />
+      <ClearTagAction tag="triggerer_player" />
+      <WaitAction time="3" />
+      <TriggerAction target1tag="couwolasuit" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
+      <SetDataAction identifier="foundcowolasuit" value="1" />
+      <ConversationAction text="eventtext.spawncouwolasuit.cleanthesuit" targettag="triggerer_player" eventsprite="brokenmachinery" endconversation="true" dialogtype="small"/>
+      <StatusEffectAction targettag="couwolasuit" >
+        <StatusEffect target="This" invulnerabletodamage="false" setvalue="true" />
+      </StatusEffectAction>
+      <Goto name="retry" />
+    </ScriptedEvent> 
+    
+    
+    
+    
+    
+    
+    <!-- disables cafeterias in abandoned outposts (a short time after they have been enabled by default) -->
     <ScriptedEvent identifier="disableabandonedcafeterias">
       <WaitAction time="5" />
       <TagAction criteria="itemidentifier:op_cafeteriawindow" tag="disablecafeteria" submarinetype="Outpost" />
@@ -103,6 +188,8 @@
       </StatusEffectAction>
     </ScriptedEvent>   
     
+        
+    <!-- ENFORCER EVENTS     -->
         
     <ScriptedEvent identifier="manualenforceinfo">
       <TagAction criteria="player" tag="player" />
@@ -166,6 +253,9 @@
   </EventSet>
   <EventSet identifier="he-outpostevent.hirechef.hydroponics" leveltype="outpost" locationtype="hydroponics" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="he-hirechef" commonness="50" probability="1.0"/>
+  </EventSet>
+  <EventSet identifier="he-outpostevent.couwolasuit" leveltype="outpost" locationtype="outpost,settlement,colony,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="70" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
+    <ScriptedEvent identifier="couwolaprizequest" commonness="50" probability="0.2"/>
   </EventSet>
   <EventSet identifier="he-outpostevent.cafeteria" leveltype="outpost" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="enablecafeteria" commonness="100" probability="1.0"/>
