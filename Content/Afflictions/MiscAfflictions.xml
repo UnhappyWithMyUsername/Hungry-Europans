@@ -1582,5 +1582,29 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
+    
+             
+    <!-- Hidden affliction used to set a cooldown to applying stress from moodyeuropan talent when bad event occurs (like getting attacked)
+          1 strength = 1 second of cooldown -->
+    <Affliction name="Mood cooldown"
+      identifier="moodcooldown"
+      resetbetweenrounds="false"
+      limbspecific="false"
+      indicatorlimb="Head"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      maxstrength="5"
+      affectmachines="true">
+      <Effect minstrength="0" maxstrength="5" strengthchange="0">
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction> 
+
+    
+    moodcooldown
+    
+    
+    
   </Afflictions>
 </Override>
