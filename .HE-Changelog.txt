@@ -27,36 +27,26 @@ Important:
 //////////////////////
 //////////////////////
 
-[hr]06/02/2026[/hr]
+[hr]xx/02/2026[/hr]
 
-PERFORMANCE UPDATE
+Minor update
 
 [b]Additions:[/b]
 [List]
-[*] Added a rare (joke) spork drop
-[*] Added loading screen tips
+[*] You can now find a very special Couwola collector item...
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Make suggested treatments clearer, with less items suggested to not spam the medical UI
-[*] Increased fatigue effects (it barely did anything)
-[*] High hygiene makes you smelly, giving some mood loss and limited nausea around you
-[*] Minor rebalance of stomachache, change stomachache icon to be more distinct
-[*] Minor rebalance of worm and tapeworm, no longer use the "infection" tag, reduce rate at which it is healed by ABX and causes some stomachache in the process
-[*] Gardening sprinkler sprite changed to be smaller + fixed watering not being even
-[*] You can see the range of the Sprinkler when interacting using Electician Goggles. Range might not be perfectly accurate
-[*] Spare ribs recipe uses 2 ribs instead of 3 (to match the amount of ribs you get from hammerhead)
-[*] Made empty cans stack because some of you trash gremlins complained
-[*] Tried to move some conversations to outpost NPCs instead of crew bots (they never triggered outside of singleplayer)
+[*] Reworked/Fixed Stress sometimes building up extremely fast. Stress buildup from negative actions (getting attacked) now has a cooldown, preventing very fast damaging weapons like welding tools from triggering stress 10 times per second.
+[*] Added a hint treatment icon for stress
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fix fertilizer recycle recipe not working properly
-[*] Fix wafflecone taking too much damage when eaten
-[*] Fix cannibal mouth causing players to be mute (again??)
-[*] Fix/Reworked Raptorzine not applying the correct amount of buff
+[*] Fix some talent text
+[*] Fix blender inventory not stacking (couldnt make muesli by itself)
+[*] Allow popped popnut to be used in research table
 [/List]
 
 
