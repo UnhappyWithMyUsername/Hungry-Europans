@@ -1609,8 +1609,6 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 <missionname.gotocouwolaraffle>The Grand Couwola Raffle</missionname.gotocouwolaraffle>
 <missiondescription.gotocouwolaraffle>You've been told that there is some Limited Edition Couwola merchandise on this station. It might be worth taking a look...</missiondescription.gotocouwolaraffle>
-<missionheader0.gotocouwolaraffle>The Grand Couwola Raffle.</missionheader0.gotocouwolaraffle>
-<missionmessage0.gotocouwolaraffle>You've been told that there is some Limited Edition Couwola merchandise on this station. It might be worth taking a look...</missionmessage0.gotocouwolaraffle>
 <missionsuccess.gotocouwolaraffle>You found the Limited Edition Couwola Cola Exosuit!</missionsuccess.gotocouwolaraffle>
 <missionfailure.gotocouwolaraffle>You didn't find the Couwola merchandise.</missionfailure.gotocouwolaraffle>
 
