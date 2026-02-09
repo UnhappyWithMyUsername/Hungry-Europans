@@ -107,19 +107,19 @@
       <ClearTagAction tag="triggerer_player" />
       <TriggerAction target1tag="couwolanpc" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
       <NPCWaitAction npctag="couwolanpc" wait="true" priority="50"  />
-      <ConversationAction text="eventtext.couwolaprize.accostyou" targettag="triggerer_player" eventsprite="instructor" >
+      <ConversationAction text="eventtext.couwolaprize.accostyou" targettag="triggerer_player" eventsprite="mechanic" >
         <Option text="EventText.generic.continue" >
-          <ConversationAction text="eventtext.couwolaprize.luckywinner" targettag="triggerer_player" eventsprite="instructor">
+          <ConversationAction text="eventtext.couwolaprize.luckywinner" targettag="triggerer_player" eventsprite="mechanic">
             <Option text="eventtext.couwolaprize.prizeyousay" >                
-              <ConversationAction text="eventtext.couwolaprize.shitluck" targettag="triggerer_player" eventsprite="instructor">              
+              <ConversationAction text="eventtext.couwolaprize.shitluck" targettag="triggerer_player" eventsprite="mechanic">              
                 <Option text="EventText.generic.continue" >
                   <Label name="askformoney" />
-                  <ConversationAction text="eventtext.couwolaprize.tiplocation" targettag="triggerer_player" eventsprite="instructor">
+                  <ConversationAction text="eventtext.couwolaprize.tiplocation" targettag="triggerer_player" eventsprite="mechanic">
                     <Option text="eventtext.couwolaprize.payup" >
                       <CheckMoneyAction Amount="300">
                         <Success>
                           <MoneyAction amount="-300" />
-                          <ConversationAction text="eventtext.couwolaprize.gooddeal" targettag="triggerer_player" eventsprite="instructor"  endconversation="true" />
+                          <ConversationAction text="eventtext.couwolaprize.gooddeal" targettag="triggerer_player" eventsprite="mechanic"  endconversation="true" />
                           <MissionAction missionidentifier="gotocouwolaraffle" locationtype="Abandoned" />
                           <SetDataAction identifier="pickedcouwolasuitquest" value="1" />
                           <Goto name="end" />
@@ -167,7 +167,7 @@
       <WaitAction time="3" />
       <TriggerAction target1tag="couwolasuit" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
       <SetDataAction identifier="foundcowolasuit" value="1" />
-      <ConversationAction text="eventtext.spawncouwolasuit.cleanthesuit" targettag="triggerer_player" eventsprite="brokenmachinery" endconversation="true" dialogtype="small"/>
+      <ConversationAction text="eventtext.spawncouwolasuit.cleanthesuit" targettag="triggerer_player" eventsprite="note2" endconversation="true" dialogtype="small"/>
       <StatusEffectAction targettag="couwolasuit" >
         <StatusEffect target="This" invulnerabletodamage="false" setvalue="true" />
       </StatusEffectAction>
