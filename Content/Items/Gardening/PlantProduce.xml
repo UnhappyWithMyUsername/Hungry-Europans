@@ -362,6 +362,10 @@
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="nutberrybrushseed" commonness="3" requiredotheritem="bubbleberries" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       
       <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
