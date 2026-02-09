@@ -1227,7 +1227,7 @@
         <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
         <input name="power_in" displayname="connection.powerin" />
       </ConnectionPanel>
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="4" maxstacksize="1" hideitems="true" allowuioverlap="true">
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="4" maxstacksize="8" hideitems="true" allowuioverlap="true">
         <Containable items="plantitem,smallitem" />
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
