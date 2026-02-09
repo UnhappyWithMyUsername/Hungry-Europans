@@ -1609,7 +1609,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 <missionname.gotocouwolaraffle>The Grand Couwola Raffle</missionname.gotocouwolaraffle>
 <missiondescription.gotocouwolaraffle>You've been told that there is some Limited Edition Couwola merchandise on this station. It might be worth taking a look...</missiondescription.gotocouwolaraffle>
-<missionsuccess.gotocouwolaraffle>You found the Limited Edition Couwola Cola Exosuit!</missionsuccess.gotocouwolaraffle>
+<missionsuccess.gotocouwolaraffle>You have found the Limited Edition Couwola Cola Exosuit!</missionsuccess.gotocouwolaraffle>
 <missionfailure.gotocouwolaraffle>You didn't find the Couwola merchandise.</missionfailure.gotocouwolaraffle>
 
 <eventtext.spawncouwolasuit.cleanthesuit>Looks like you have found the prized Couwola Suit, but it's long been abandoned and is now covered with gunk. Try cutting it all off with a tool.</eventtext.spawncouwolasuit.cleanthesuit>
