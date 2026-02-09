@@ -1612,7 +1612,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <missionsuccess.gotocouwolaraffle>You found the Limited Edition Couwola Cola Exosuit!</missionsuccess.gotocouwolaraffle>
 <missionfailure.gotocouwolaraffle>You didn't find the Couwola merchandise.</missionfailure.gotocouwolaraffle>
 
-<eventtext.spawncouwolasuit.cleanthesuit>Looks like you found the prized Couwola Suit, but it's long been abandoned and is now covered with gunk. You should try cutting it all off with a tool.</eventtext.spawncouwolasuit.cleanthesuit>
+<eventtext.spawncouwolasuit.cleanthesuit>Looks like you have found the prized Couwola Suit, but it's long been abandoned and is now covered with gunk. Try cutting it all off with a tool.</eventtext.spawncouwolasuit.cleanthesuit>
 
 
 
