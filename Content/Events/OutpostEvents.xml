@@ -172,6 +172,7 @@
         <StatusEffect target="This" invulnerabletodamage="false" setvalue="true" />
       </StatusEffectAction>
       <Goto name="retry" />
+      <Label name="end" />
     </ScriptedEvent> 
     
     
