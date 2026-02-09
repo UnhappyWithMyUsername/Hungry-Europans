@@ -2,7 +2,7 @@
 <Override>
   <Items>
   
-    <Item identifier="he-dirtycouwolaexosuit" category="Diving,Equipment" tags="couwolasuit,ductblock" nameidentifier="he-couwolaexosuit" scale="0.605" impactsoundtag="impact_metal_heavy" damagedbyrepairtools="true" health="100">
+    <Item identifier="he-dirtycouwolaexosuit" category="Diving,Equipment" tags="couwolasuit,ductblock" nameidentifier="he-couwolaexosuit" scale="0.605" impactsoundtag="impact_metal_heavy" damagedbyrepairtools="true" health="100" invulnerabletodamage="true">
       <Sprite name="Exosuit Item" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" sourcerect="2,266,203,244" depth="0.56" origin="0.5,0.5" />
       <!-- gunk sprites -->
       <DecorativeSprite texture="%ModDir:2532991202%/Items/DE-ItemsAtlas.png" depth="0.57" sourcerect="421,376,124,58" origin="0.5,0.5" rotation="0" offset="0,-100" scale="1.25">
