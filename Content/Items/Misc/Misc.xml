@@ -1442,8 +1442,15 @@
         
     <!-- hint for how to heal embarrassment -->
     <Item identifier="he-embarrassmenthintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
-      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,739,72,72" depth="0.85" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,741,72,72" depth="0.85" origin="0.5,0.5" />
       <SuitableTreatment type="embarrassment" suitability="50" />
+      <SuitableTreatment type="mood" suitability="50" />
+    </Item> 
+    
+    <!-- hint for how to heal mood -->
+    <Item identifier="he-moodhintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,663,72,72" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment type="mood" suitability="50" />
     </Item> 
     
     <!-- hint for how to heal hygiene TODO: sprite -->

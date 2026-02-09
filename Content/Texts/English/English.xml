@@ -1594,7 +1594,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-embarrassmenthintitem>Get Drunk</entityname.he-embarrassmenthintitem>
 <entitydescription.he-embarrassmenthintitem>Get drunk and forget about all your worries.</entitydescription.he-embarrassmenthintitem>
 
-
+<entityname.he-moodhintitem>Relax</entityname.he-moodhintitem>
+<entitydescription.he-moodhintitem>Smoke, drink, gamble... improve your mood by doing side activities and eating the food you like.</entitydescription.he-moodhintitem>
 
 
 
