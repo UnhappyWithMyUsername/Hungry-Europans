@@ -162,11 +162,12 @@
       <SpawnAction itemidentifier="he-colaradiantbottle" targettag="supercola" amount="5" spawnlocation="Outpost" targetinventory="randomcabinet" />
       <SpawnAction itemidentifier="he-colabottle" amount="2" spawnlocation="Outpost" targetinventory="randomcabinet" />
       <SpawnAction itemidentifier="he-colazerocan" amount="3" spawnlocation="Outpost" targetinventory="randomcabinet" />
+      <TriggerAction target1tag="randomcabinet" target2tag="player" radius="250" waitforinteraction="false" />
+      <SetDataAction identifier="foundcouwolasuit" value="1" />
       <Label name="retry" />
       <ClearTagAction tag="triggerer_player" />
       <WaitAction time="3" />
       <TriggerAction target1tag="couwolasuit" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
-      <SetDataAction identifier="foundcowolasuit" value="1" />
       <ConversationAction text="eventtext.spawncouwolasuit.cleanthesuit" targettag="triggerer_player" eventsprite="note2" endconversation="true" dialogtype="small"/>
       <StatusEffectAction targettag="couwolasuit" >
         <StatusEffect target="This" invulnerabletodamage="false" setvalue="true" />
