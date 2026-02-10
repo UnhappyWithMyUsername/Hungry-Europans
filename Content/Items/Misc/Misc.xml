@@ -1385,7 +1385,7 @@
           <ReduceAffliction type="thirst" amount="1" />
           <Affliction identifier="fillbladder" amount="1.5" />
           <Affliction identifier="drank_cola" amount="1" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="250" volume="5.0" />
         </StatusEffect>
       </Wearable>
     </Item>
