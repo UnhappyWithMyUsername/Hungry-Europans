@@ -686,7 +686,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentname.he-lifesaver>Life Saver</talentname.he-lifesaver>
 <talentdescription.he-lifesaver>Gain a bonus of [amount] to [skill].</talentdescription.he-lifesaver><!--Patch 17-->
 <talentname.he-delicacies>Delicacies</talentname.he-delicacies>
-<talentdescription.he-delicacies>Crewmembers gain a small amount of [affliction1], [affliction2] and [affliction3] effects when eating ‖color:gui.orange‖Fruit‖end‖.</talentdescription.he-delicacies><!--Patch 22 -->
+<talentdescription.he-delicacies>Crewmembers gain a small amount of [affliction1], [affliction2] and [affliction3] effects when eating raw ‖color:gui.orange‖Fruit‖end‖.</talentdescription.he-delicacies><!--Patch 22 -->
 <talentname.he-huskfood>Husk Food</talentname.he-huskfood><!--Patch 13-->
 <talentdescription.he-huskfood>You can now turn the meat of a [itemname1] into edible food.</talentdescription.he-huskfood><!--Patch 13-->
 <talentname.he-masterbrewer>Master Brewer</talentname.he-masterbrewer><!--Patch 10-->
