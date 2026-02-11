@@ -19,7 +19,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_friedfoods="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -32,7 +32,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_burgers="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -45,7 +45,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_hotdogs="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -58,7 +58,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_pizza="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -71,7 +71,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_filets="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -84,7 +84,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_roasts="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -97,7 +97,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_sandwiches="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -110,7 +110,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_omelettes="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -123,7 +123,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_soups="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -136,7 +136,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_salads="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -153,7 +153,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_sweets="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -170,7 +170,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_fruits="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>    
@@ -183,7 +183,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_pasta="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_food" amount="20" />
+          <ReduceAffliction type="craving_food" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -202,7 +202,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_beer="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_drink" amount="20" />
+          <ReduceAffliction type="craving_drink" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -215,7 +215,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_rum="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_drink" amount="20" />
+          <ReduceAffliction type="craving_drink" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -228,7 +228,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_whiskey="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_drink" amount="20" />
+          <ReduceAffliction type="craving_drink" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -241,7 +241,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_drink" amount="20" />
+          <ReduceAffliction type="craving_drink" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
@@ -258,7 +258,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_cola="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
-          <ReduceAffliction type="craving_drink" amount="20" />
+          <ReduceAffliction type="craving_drink" amount="50" />
         </StatusEffect> 
       </Effect>
     </Affliction>
