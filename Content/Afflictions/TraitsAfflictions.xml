@@ -161,6 +161,18 @@
           <ReduceAffliction identifier="mood" amount="1.5" />
         </StatusEffect> 
       </Effect>
+    </Affliction>    
+
+    <Affliction name="" identifier="trait_likes_pastas" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_pasta" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likespasta"/>
+    </Affliction>
+    <Affliction name="" identifier="ate_pasta" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_pasta" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional trait_likes_pastas="gt 0" />
+          <ReduceAffliction identifier="mood" amount="1.5" />
+        </StatusEffect> 
+      </Effect>
     </Affliction>
 
     <!-- DRINKS -->
