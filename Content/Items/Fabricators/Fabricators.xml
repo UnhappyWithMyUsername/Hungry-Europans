@@ -354,7 +354,7 @@
           <Containable items="bottleprinterblueprint" />
         </SubContainer>
       </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="112,-194" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
+      <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="112,-194" hudpos="0.5, 0.8" slotsperrow="1" uilabel="" allowuioverlap="true">
         <!-- <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="621,1,128,364" origin="0.5,0.5" /> -->
       </ItemContainer>
       <Body width="212" height="330" density="20"/>
@@ -599,7 +599,7 @@
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
       </Holdable>-->
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="6" canbeselected="true" hideitems="true" slotsperrow="6" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.785"/>
     </Item>
     
@@ -706,7 +706,8 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="6" canbeselected="true" hideitems="true" slotsperrow="6" uilabel="" allowuioverlap="true" >     
+      </ItemContainer>
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
 
@@ -807,7 +808,7 @@
           <Affliction identifier="stun" strength="4" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="6" canbeselected="true" hideitems="true" slotsperrow="6" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
     
@@ -1227,7 +1228,7 @@
         <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
         <input name="power_in" displayname="connection.powerin" />
       </ConnectionPanel>
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="4" maxstacksize="8" hideitems="true" allowuioverlap="true">
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="4" slotsperrow="5" maxstacksize="8" hideitems="true" allowuioverlap="true">
         <Containable items="plantitem,smallitem" />
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
