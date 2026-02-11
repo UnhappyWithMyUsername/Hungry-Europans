@@ -423,7 +423,7 @@
           <Use />
         </StatusEffect>
       </Throwable>
-      <Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+      <Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false" stickduration="0.2">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
@@ -433,6 +433,22 @@
           <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
         </StatusEffect>
       </Projectile>
+    </Item>
+
+    <Item name="Raw Pasta" identifier="he-rawpasta" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="25" />
+        <RequiredItem identifier="he-dough" mincondition="0.5" UseCondition="true" />
+      </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="48,207,47,26" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="48,207,47,26" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.525" origin="0.5,0.87"  />
+      <Body width="33" radius="12" density="12" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      </Holdable>
     </Item>
 
     <!-- BEVERAGE MIX -->
