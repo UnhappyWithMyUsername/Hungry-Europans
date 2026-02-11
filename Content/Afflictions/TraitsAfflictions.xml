@@ -14,7 +14,7 @@
     <Affliction name="" identifier="trait_likes_friedfoods" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_friedfood" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesfriedfood"/>
     </Affliction>
-    <Affliction name="" identifier="ate_friedfood" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_friedfood" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_friedfood" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_friedfoods="gt 0" />
@@ -26,7 +26,7 @@
     <Affliction name="" identifier="trait_likes_burgers" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_burger" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesburger"/>
     </Affliction>
-    <Affliction name="" identifier="ate_burger" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_burger" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_burger" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_burgers="gt 0" />
@@ -38,7 +38,7 @@
     <Affliction name="" identifier="trait_likes_hotdogs" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_hotdog" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likeshotdog"/>
     </Affliction>
-    <Affliction name="" identifier="ate_hotdog" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_hotdog" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_hotdog" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_hotdogs="gt 0" />
@@ -50,7 +50,7 @@
     <Affliction name="" identifier="trait_likes_pizza" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_pizza" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likespizza"/>
     </Affliction>
-    <Affliction name="" identifier="ate_pizza" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_pizza" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_pizza" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_pizza="gt 0" />
@@ -62,7 +62,7 @@
     <Affliction name="" identifier="trait_likes_filets" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_filet" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesfilet"/>
     </Affliction>
-    <Affliction name="" identifier="ate_filet" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_filet" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_filet" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_filets="gt 0" />
@@ -74,7 +74,7 @@
     <Affliction name="" identifier="trait_likes_roasts" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_roast" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesroast"/>
     </Affliction>
-    <Affliction name="" identifier="ate_roast" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_roast" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_roast" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_roasts="gt 0" />
@@ -86,7 +86,7 @@
     <Affliction name="" identifier="trait_likes_sandwiches" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_sandwich" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessandwich"/>
     </Affliction>
-    <Affliction name="" identifier="ate_sandwich" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_sandwich" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_sandwich" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_sandwiches="gt 0" />
@@ -98,7 +98,7 @@
     <Affliction name="" identifier="trait_likes_omelettes" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_omelette" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesomelette"/>
     </Affliction>
-    <Affliction name="" identifier="ate_omelette" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_omelette" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_omelette" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_omelettes="gt 0" />
@@ -110,7 +110,7 @@
     <Affliction name="" identifier="trait_likes_soups" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_soup" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessoup"/>
     </Affliction>
-    <Affliction name="" identifier="ate_soup" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_soup" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_soup" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_soups="gt 0" />
@@ -122,7 +122,7 @@
     <Affliction name="" identifier="trait_likes_salads" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_salad" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessalad"/>
     </Affliction>
-    <Affliction name="" identifier="ate_salad" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_salad" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_salad" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_salads="gt 0" />
@@ -134,7 +134,7 @@
     <Affliction name="" identifier="trait_likes_sweets" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_sweets" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessweet"/>
     </Affliction>
-    <Affliction name="" identifier="ate_sweet" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_sweet" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_sweet" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_dislikes_sweets="neq 1" />
@@ -150,7 +150,7 @@
     <Affliction name="" identifier="trait_likes_fruits" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_fruits" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessweet"/>
     </Affliction>
-    <Affliction name="" identifier="ate_fruit" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_fruit" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_sweet" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_dislikes_fruits="neq 1" />
@@ -163,13 +163,13 @@
       </Effect>
     </Affliction>    
 
-    <Affliction name="" identifier="trait_likes_pastas" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="trait_likes_pasta" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_pasta" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likespasta"/>
     </Affliction>
-    <Affliction name="" identifier="ate_pasta" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="ate_pasta" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_pasta" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional trait_likes_pastas="gt 0" />
+          <Conditional trait_likes_pasta="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.5" />
         </StatusEffect> 
       </Effect>
@@ -184,7 +184,7 @@
     <Affliction name="" identifier="trait_likes_beer" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_beer" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesbeer"/>
     </Affliction>
-    <Affliction name="" identifier="drank_beer" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="drank_beer" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="drank_beer" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_beer="gt 0" />
@@ -196,7 +196,7 @@
     <Affliction name="" identifier="trait_likes_rum" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_rum" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesrum"/>
     </Affliction>
-    <Affliction name="" identifier="drank_rum" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="drank_rum" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="drank_rum" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_rum="gt 0" />
@@ -208,7 +208,7 @@
     <Affliction name="" identifier="trait_likes_whiskey" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_whiskey" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likeswhiskey"/>
     </Affliction>
-    <Affliction name="" identifier="drank_whiskey" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="drank_whiskey" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="drank_whiskey" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_whiskey="gt 0" />
@@ -220,7 +220,7 @@
     <Affliction name="" identifier="trait_likes_tea" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_tea" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likestea"/>
     </Affliction>
-    <Affliction name="" identifier="drank_tea" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="drank_tea" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="drank_tea" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_likes_tea="gt 0" />
@@ -232,7 +232,7 @@
     <Affliction name="" identifier="trait_likes_cola" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_cola" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likescola"/>
     </Affliction>
-    <Affliction name="" identifier="drank_cola" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+    <Affliction name="" identifier="drank_cola" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="drank_cola" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional trait_dislikes_cola="neq 1" />
