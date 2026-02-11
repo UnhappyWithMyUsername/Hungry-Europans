@@ -40,6 +40,7 @@ Minor update
 [List]
 [*] Reworked/Fixed Stress sometimes building up extremely fast. Stress buildup from negative actions (getting attacked) now has a cooldown, preventing very fast damaging weapons like welding tools from triggering stress 10 times per second.
 [*] Added a hint treatment icon for stress
+[*] Being drunk gives minor radiation resistance (apparently it's a thing)
 [/List]
 
 [b]Fixes:[/b] 
@@ -61,25 +62,23 @@ Minor update
 //////////////////////
 //////////////////////
 
-Misc TODOs:
-
-- Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
-- Change drunkness to not apply disoriented while in water and instead slow the character down
-- Ethanol gives some radiation resistance
-- Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
-- Fix meat spoiling in fabricators.
-- Make tea kettle storable in cafeteria cart
-
-
+Misc TODO:
+-Make raw husk meat not count as rawmeatpiece?
 
 LIST OF FOODS IDEAS:
+
+- Pasta + pasta recipes
+- Raw pasta (1/2 dough)
+- Spaghetti and Meatballs (raw pasta, 2x raw meat, ketchup, water pot)
+- MudRamen soup (raw pasta, mudraptor meat, egg, water pot)
+- Mac & Moloch (raw pasta, moloch cheese, moloch meat)
+- Aioli Ravioli (raw pasta, crawler/thresher, salt bulb, oil, water pot)
 
 - More Blender recipes
 - More Offal recipes
 - Thalami Salami
 - More Mushroom recipes? cooked mushrooms item to not use a full mushroom
 - Cake + Slices
-- Pasta + pasta recipes
 - Homemade kvass fermented from water, bread, yeast and sugar.
 
 
