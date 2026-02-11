@@ -44,6 +44,38 @@
     <Talent name="Moody Europan" identifier="he-moodyeuropan">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,504,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
+      
+      <!-- Attempt at adding a random craving -->
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Affliction identifier="trait_likes_friedfoods" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_burgers" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_hotdogs" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_pizza" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_filets" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_roasts" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_sandwiches" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_omelettes" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_soups" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_salads" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_sweets" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_fruits" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_pasta" probability="0.01" amount="1200" />                
+                <Affliction identifier="trait_likes_beer" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_rum" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_whiskey" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_tea" probability="0.01" amount="1200" />
+                <Affliction identifier="trait_likes_cola" probability="0.01" amount="1200" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+      
       <AbilityGroupInterval interval="5.0">
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
