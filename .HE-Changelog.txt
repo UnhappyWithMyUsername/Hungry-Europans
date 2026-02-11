@@ -33,6 +33,7 @@ Minor update
 
 [b]Additions:[/b]
 [List]
+[*] Added some pasta meals: Spaghetti and meatballs, MudRamen, Toasty Ravioli, Mac and Cheese
 [*] You can now find a very special Couwola collector item...
 [/List]
 
@@ -41,6 +42,7 @@ Minor update
 [*] Reworked/Fixed Stress sometimes building up extremely fast. Stress buildup from negative actions (getting attacked) now has a cooldown, preventing very fast damaging weapons like welding tools from triggering stress 10 times per second.
 [*] Added a hint treatment icon for stress
 [*] Being drunk gives minor radiation resistance (apparently it's a thing)
+[*] Increased slots for cutting board, oven and stove by 1
 [/List]
 
 [b]Fixes:[/b] 
@@ -66,13 +68,6 @@ Misc TODO:
 -Make raw husk meat not count as rawmeatpiece?
 
 LIST OF FOODS IDEAS:
-
-- Pasta + pasta recipes
-- Raw pasta (1/2 dough)
-- Spaghetti and Meatballs (raw pasta, 2x raw meat, ketchup, water pot)
-- MudRamen soup (raw pasta, mudraptor meat, egg, water pot)
-- Mac & Moloch (raw pasta, moloch cheese, moloch meat)
-- Aioli Ravioli (raw pasta, crawler/thresher, salt bulb, oil, water pot)
 
 - More Blender recipes
 - More Offal recipes
