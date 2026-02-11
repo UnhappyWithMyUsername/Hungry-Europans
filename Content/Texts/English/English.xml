@@ -1598,6 +1598,24 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entitydescription.he-moodhintitem>Smoke, drink, gamble... improve your mood by doing side activities and eating the food you like.</entitydescription.he-moodhintitem>
 
 
+<entityname.he-rawpasta>Raw Pasta</entityname.he-rawpasta>
+<entitydescription.he-rawpasta>A handful of raw pasta that can be pressed into various shapes. Mamma mia!</entitydescription.he-rawpasta>
+
+<entityname.he-potmudramensoup>Mud Ramen Pot</entityname.he-potmudramensoup>
+<entitydescription.he-potmudramensoup>A hot nooodle soup with Mudraptor roast and a side of boiled egg. Many sailors used to stop by Yamato Station to taste this dish, long before gigantic radioactive monster had devastated the outpost.</entitydescription.he-potmudramensoup>
+<entityname.he-mudramensoup>Mud Ramen</entityname.he-mudramensoup>
+<entitydescription.he-mudramensoup>A hot nooodle soup with Mudraptor roast and a side of boiled egg. Many sailors used to stop by Yamato Station to taste this dish, long before gigantic radioactive monster had devastated the outpost.</entitydescription.he-mudramensoup>
+
+<entityname.he-spaghettimeatballs>Spaghetti and Minceballs</entityname.he-spaghettimeatballs>
+<entitydescription.he-spaghettimeatballs>Meat finely minced and rolled into balls with al dente spaghetti. The choice of Ketchup as seasoning has been the subject of heated debate in culinary circles.</entitydescription.he-spaghettimeatballs>
+
+<entityname.he-macandmoloch>Mac And Moloch Cheese</entityname.he-macandmoloch>
+<entitydescription.he-macandmoloch>Macaroni drowning in a hefty dose of molten moloch cheese. While being one of the simplest existing recipes, some still prefer to buy it out of the box, blurring the line between convenience and sloth...</entitydescription.he-macandmoloch>
+
+<entityname.he-ailoravioli>Toasty Aioli Ravioli</entityname.he-ailoravioli>
+<entitydescription.he-ailoravioli>Ravioli stuffed with crawler meat, fried in a unique blend of oil and crushed salt bulb. Keep away from water.</entitydescription.he-ailoravioli>
+
+
 <eventtext.couwolaprize.accostyou>A disgruntled technician accosts you out. "Aren't you one of the travellers that just docked? I've got to tell you about something."</eventtext.couwolaprize.accostyou>
 <eventtext.couwolaprize.luckywinner>"I've been stuck on a maintenance gig for the past month or so. Two days ago during my lunch break, I pulled a very special can from the vending machine. Turns out I'm the lucky owner of the 1 000 000th Couwola can, and won a unique prize to boot! Can you believe that?"</eventtext.couwolaprize.luckywinner>
 <eventtext.couwolaprize.prizeyousay>"A prize you say?"</eventtext.couwolaprize.prizeyousay>
