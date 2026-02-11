@@ -160,7 +160,7 @@
         maxfacetint="255,0,0,50"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8"
-        resistancefor="damage"
+        resistancefor="damage,radiationsickness"
         minresistance="0.0"
         maxresistance="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -189,7 +189,7 @@
         maxfacetint="255,0,0,75"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.7"
-        resistancefor="damage"
+        resistancefor="damage,radiationsickness"
         minresistance="0.1"
         maxresistance="0.2">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -223,7 +223,7 @@
         maxfacetint="255,0,0,100"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5"
-        resistancefor="damage"
+        resistancefor="damage,radiationsickness"
         minresistance="0.2"
         maxresistance="0.3">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
