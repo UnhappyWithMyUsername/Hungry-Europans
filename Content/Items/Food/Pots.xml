@@ -217,7 +217,59 @@
         <QualityStat stattype="Condition" value="0.0"/>
       </Quality>
     </Item>
-
+  
+    <Item name="Pot of Mudramen Soup" identifier="he-potmudramensoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
+      <PreferredContainer primary="kitchen" />
+      <PreferredContainer secondary="crewcab" />
+      <Deconstruct time="5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="129,80,58,48" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
+      <Body width="58" height="46" density="13.0" />
+      <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
+        <RequiredSkill identifier="cooking" level="25" />
+        <RequiredItem identifier="he-potwithwater" />
+        <RequiredItem identifier="he-rawpasta" amount="2" />
+        <RequiredItem identifier="he-rawmudraptorroast" amount="1" />
+        <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
+      </Fabricate>
+      <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="This" offset="0,15">
+          <Conditional condition="gt 10" />
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" distancemin="-10" distancemax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" condition="-20" disabledeltatime="true" offset="0,10">
+          <Conditional condition="gt 21" />
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,120" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true" drawinventory="false" showcontainedstateindicator="false" allowdraganddrop="true">
+        <Containable items="emptybowl">
+          <StatusEffect type="OnInserted" target="Contained">
+            <DropContainedItems />
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-25" disabledeltatime="true">
+            <Conditional Quality="lte 0" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-mudramensoup" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" condition="-25" disabledeltatime="true">
+            <Conditional Quality="gte 1" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <SpawnItem identifier="he-mudramensoupgood" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <Quality MaxQuality="1">
+        <QualityStat stattype="Condition" value="0.0"/>
+      </Quality>
+    </Item>
 
 
     <!--SOUP BOWLS-->
@@ -555,21 +607,18 @@
       <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
 
-
-    <Item hideinmenus="false" name="Fiber Muesli" identifier="he-fibermueslibowl" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood" description="" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
+    <Item hideinmenus="false" name="Mud Ramen Soup" identifier="he-mudramensoup" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="288,0,72,72" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="144,0,72,72" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="blender" requiredtime="15" requiresrecipe="false" amount="1" >
+      <!--<Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="fiberplant" UseCondition="True" />
-        <RequiredItem identifier="popnutpopped" amount="1" />
-        <RequiredItem tag="seedingredient" amount="4" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
-      </Fabricate>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
+        <RequiredItem identifier="he-potmudramensoup" UseCondition="True" MinCondition="0.20"/>
+      </Fabricate>-->
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
@@ -583,11 +632,12 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fiberrich" amount="45.0" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <Affliction identifier="ate_fruit" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+          <Affliction identifier="he-proteinrich" amount="25.0" />
+          <Affliction identifier="ate_soup" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1.25" />
+          <ReduceAffliction type="hunger" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="1.25" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -601,24 +651,28 @@
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fiberrich" amount="45.0" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <Affliction identifier="ate_fruit" amount="1.0" />
+          <Affliction identifier="he-proteinrich" amount="25.0" />
+          <Affliction identifier="ate_soup" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1.25" />
+          <ReduceAffliction type="hunger" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="1.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" frequencymultiplier="0.8" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp1.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp2.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurp3.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">
           <Conditional HasStatusTag="usingspoon" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This" condition="-10" disabledeltatime="true" offset="0,10">
-          <ParticleEmitter particle="brownchunks" colormultiplier="255,255,255,255" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,120" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
           <Remove />
@@ -627,79 +681,14 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    
-
-    <Item hideinmenus="false" name="Fruity Bowl" identifier="he-fruitybowl" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood" description="" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="360,0,72,72" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" >
-        <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="banana" amount="2" />
-        <RequiredItem tag="fruit" amount="1" />
-        <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
-      </Fabricate>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="42" height="14" density="12" />
-      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
-      <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-5" handle2="0,-5" aimable="false" msg="ItemMsgPickUpSelect">
-        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
-        
-        <!--////////// BOT EATING \\\\\\\\\\-->
-        <!-- Bots "eat" by holding the food in their hands -->
-        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional hunger="gt 1" targetcontainer="true" />
-          <Conditional IsPlayer="false" targetcontainer="true" />
-          <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-vitaminrich" amount="25.0" />
-          <Affliction identifier="he-sugarrich" amount="15.0" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <Affliction identifier="ate_fruit" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <!-- Use the item when it's held and the spoon in the other hand is used (indicated by applying a "usingspoon" tag on the character which this item checks for -->
-        <StatusEffect type="OnActive" target="This" Condition="-1.0" disabledeltatime="true" stackable="false" comparison="And">
-          <Conditional HasStatusTag="usingspoon" targetcontainer="true" />
-          <Conditional HasStatusTag="neq emptyspoon" targetcontainer="true" />
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And" forceplaysounds="true">
-          <Conditional HasStatusTag="usingspoon" />
-          <Conditional HasStatusTag="neq emptyspoon"/>
-          <Conditional InWater="false" />
-          <Affliction identifier="he-vitaminrich" amount="25.0" />
-          <Affliction identifier="he-sugarrich" amount="15.0" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <Affliction identifier="ate_fruit" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" frequencymultiplier="0.8" />
-        </StatusEffect>
-        <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
-        <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">
-          <Conditional HasStatusTag="usingspoon" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" condition="-10" disabledeltatime="true" offset="0,10">
-          <ParticleEmitter particle="brownchunks" colormultiplier="255,255,255,255" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
-          <Remove />
-          <SpawnItem identifier="he-dirtybowl" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfNotInInventory="true" />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="true" />
+    <Item hideinmenus="true" nameidentifier="he-seaweedsoup" descriptionidentifier="he-seaweedsoup" identifier="he-mudramensoupgood" variantof="he-mudramensoup">
+      <ClearAll>
+        <Fabricate />
+        <Price />
+        <PreferredContainer />
+      </ClearAll>
+      <Quality QualityLevel="1" PickingTime="0" CanBePicked="False" LockGuiFramePosition="False" GuiFrameOffset="0,0" AllowInGameEditing="False" Msg="" />
     </Item>
+
   </Items>
 </Override>
