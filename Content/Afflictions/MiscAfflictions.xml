@@ -306,7 +306,7 @@
         strengthchange="-0.025"
         minfacetint="255,0,0,0"
         maxfacetint="255,0,0,50"
-        resistancefor="damage"
+        resistancefor="damage,radiationsickness"
         minresistance="0.0"
         maxresistance="0.1">
         <!-- remove "normal" drunkenness -->
@@ -328,7 +328,7 @@
         dialogflag="DrunkMedium"
         minfacetint="255,0,0,50"
         maxfacetint="255,0,0,100"
-        resistancefor="damage"
+        resistancefor="damage,radiationsickness"
         minresistance="0.1"
         maxresistance="0.25">
         <!-- remove "normal" drunkenness -->
@@ -350,7 +350,7 @@
         dialogflag="DrunkHigh"
         minfacetint="255,0,0,150"
         maxfacetint="255,0,0,150"
-        resistancefor="damage"
+        resistancefor="damage,radiationsickness"
         minresistance="0.25"
         maxresistance="0.5">
         <!-- remove "normal" drunkenness -->
