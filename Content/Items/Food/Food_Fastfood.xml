@@ -423,7 +423,7 @@
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem identifier="he-potwithwater" />
         <RequiredItem identifier="he-rawpasta" amount="1" />
-        <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem tag="rawmeatpiece" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.3"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
@@ -442,8 +442,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_pasta" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.2" />
-          <ReduceAffliction type="hunger" amount="1.2" />
+          <Affliction identifier="he-stuffed" amount="1.3" />
+          <ReduceAffliction type="hunger" amount="1.3" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -459,8 +459,8 @@
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
           <Affliction identifier="ate_pasta" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.2" />
-          <ReduceAffliction type="hunger" amount="1.2" />
+          <Affliction identifier="he-stuffed" amount="1.3" />
+          <ReduceAffliction type="hunger" amount="1.3" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
