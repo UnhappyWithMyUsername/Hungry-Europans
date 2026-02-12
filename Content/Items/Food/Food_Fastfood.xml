@@ -490,9 +490,8 @@
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-pan" />
         <RequiredItem identifier="he-rawpasta" amount="1" />
-        <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="saltbulb" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.2"/>
+        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
@@ -510,8 +509,8 @@
           <Affliction identifier="ate_pasta" amount="1" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-fatrich" amount="35" />
-          <ReduceAffliction type="hunger" amount="4.0" />
-          <ReduceAffliction type="stuffed" amount="4.0" />
+          <ReduceAffliction type="hunger" amount="3.5" />
+          <ReduceAffliction type="stuffed" amount="3.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
