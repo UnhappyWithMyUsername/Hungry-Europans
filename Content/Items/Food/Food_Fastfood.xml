@@ -421,7 +421,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,90,68,29" depth="0.525" origin="0.5,0.05"  />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-potwithwater" />
+        <RequiredItem identifier="he-potwithwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="he-rawpasta" amount="1" />
         <RequiredItem tag="rawmeatpiece" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.3"/>

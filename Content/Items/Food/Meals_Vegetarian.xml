@@ -332,7 +332,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-potwithwater" />
+        <RequiredItem identifier="he-potwithwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="he-rawpasta" amount="1" />
         <RequiredItem identifier="he-molochcheeseslice" amount="3" />
         <RequiredItem identifier="he-emptybowl" amount="1" />
