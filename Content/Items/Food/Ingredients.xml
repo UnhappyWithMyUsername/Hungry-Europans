@@ -403,7 +403,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Dough" identifier="he-dough" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+    <Item name="Dough" identifier="he-dough" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,canexpire" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
@@ -435,7 +435,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Raw Pasta" identifier="he-rawpasta" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+    <Item name="Raw Pasta" identifier="he-rawpasta" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,canexpire" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
