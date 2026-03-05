@@ -73,10 +73,6 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="worminfection" amount="1" probability="0.00053" />
-          <Affliction identifier="tapeworminfection" amount="1" probability="0.00053" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
