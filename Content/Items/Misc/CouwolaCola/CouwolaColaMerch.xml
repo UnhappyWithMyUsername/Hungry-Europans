@@ -114,7 +114,7 @@
         </StatusEffect>      
         <StatusEffect type="OnWearing" target="Contained,Character" Condition="-0.05" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
           <Conditional IsDead="false" />
-          <RequiredItem items="reactorfuel" targetslot="1" type="Contained" />
+          <RequiredItem items="reactorfuel,nuclearcartridge" targetslot="1" type="Contained" />
         </StatusEffect>
         <!-- 0 movement speed when out of fuel-->
         <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
@@ -163,11 +163,11 @@
         <RequiredItem items="colafuel1,colafuel2" type="Contained" targetslot="2" />
         <RequiredSkill identifier="mechanical" level="50" />
         <StatusEffect type="OnUse" targettype="Contained" targets="colafuel1,colafuel2" targetslot="2" Condition="-0.4" />
-        <StatusEffect type="OnUse" targettype="This" structurefixamount="-2.0" repairthroughwalls="false" repairthroughholes="true" levelwallfixamount="-5.0" setvalue="true" duration="0.1">
+        <StatusEffect type="OnUse" targettype="This" structurefixamount="-2.0" repairthroughwalls="false" repairthroughholes="true" levelwallfixamount="-5.0" extinguishamount="60.0" setvalue="true" duration="0.1">
           <RequiredItem items="colafuel1" type="Contained" targetslot="2" />
           <sound file="Content/Sounds/Water/FlowMedium.ogg" type="OnUse" range="500.0" loop="true" frequencymultiplier="0.5" dontmuffle="true" />
         </StatusEffect>
-        <StatusEffect type="OnUse" targettype="This" structurefixamount="2.0" repairthroughwalls="false" repairthroughholes="false" levelwallfixamount="0.0" setvalue="true" duration="0.1">
+        <StatusEffect type="OnUse" targettype="This" structurefixamount="2.0" repairthroughwalls="false" repairthroughholes="false" levelwallfixamount="0.0" extinguishamount="60.0" setvalue="true" duration="0.1">
           <RequiredItem items="colafuel2" type="Contained" targetslot="2" />
           <sound file="Content/Sounds/Water/FlowMedium.ogg" type="OnUse" range="500.0" loop="true" frequencymultiplier="0.5" dontmuffle="true" />
         </StatusEffect>
@@ -221,7 +221,7 @@
           <Containable items="oxygensource,weldingtoolfuel" />
         </SubContainer>
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="reactorfuel">
+          <Containable items="reactorfuel,nuclearcartridge">
             <StatusEffect type="OnContaining" target="This,Character" Voltage="1.0" setvalue="true">
               <Conditional IsDead="false" />
             </StatusEffect>
