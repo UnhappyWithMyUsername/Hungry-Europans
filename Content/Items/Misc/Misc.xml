@@ -1390,7 +1390,7 @@
       </Wearable>
     </Item>
     
-    <Item hideinmenus="false" name="Blubber" identifier="he-blubber" health="10" category="Misc" subcategory="Misc" maxstacksize="1" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Blubber" identifier="he-blubber" health="10" category="Misc" subcategory="Misc" maxstacksize="1" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="153,38,50,32" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
