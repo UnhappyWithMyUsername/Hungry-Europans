@@ -1283,7 +1283,7 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="300" selectionmode="random" />
         </StatusEffect>
       </PeriodicEffect>
-      <PeriodicEffect mininterval="30" maxinterval="120" minstrength="99" maxstrength="100">
+      <PeriodicEffect mininterval="30" maxinterval="45" minstrength="99" maxstrength="100">
         <StatusEffect type="OnActive" target="Character" duration="2" offset="-15,-30" multiplyafflictionsbymaxvitality="true" >
           <Affliction identifier="embarrassment" strength="900" />
           <Affliction identifier="hygiene" strength="50" />
