@@ -364,4 +364,44 @@
       sourcerect="5,1,32,4" />
   </jarlid>
   
+  
+  <soapbubbles
+    startsizemin="0.6,0.6"
+    startsizemax="1,1"
+    sizechangemin="0.1,0.1"
+    sizechangemax="0.5,0.5"
+    startrotationmin="0"
+    startrotationmax="360"
+    startcolor="200,255,255,200"
+    endcolor="255,255,255,0"
+    lifetime="2"
+    growtime="0.5"
+    usecollision="True"
+    deleteoncollision="True"
+    drawtarget="Both"
+    velocitychange="0,0"
+    startdelaymin="0"
+    startdelaymax="0"
+    angularvelocitymin="0"
+    angularvelocitymax="0"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0"
+    velocitychangewater="0,0.1"
+    collisionradius="30"
+    friction="0.5"
+    restitution="0.5"
+    blendstate="AlphaBlend"
+    animduration="1"
+    loopanim="True"
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False"
+    priority="-1">
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="270,5,103,119" />
+  </soapbubbles>
+  
 </prefabs>
