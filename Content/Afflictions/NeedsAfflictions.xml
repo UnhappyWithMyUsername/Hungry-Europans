@@ -1274,7 +1274,7 @@
           <ReduceAffliction identifier="defecate" amount="1000" />
         </StatusEffect>
       </Effect>
-      <PeriodicEffect mininterval="50" maxinterval="600" minstrength="50" maxstrength="99">
+      <PeriodicEffect mininterval="50" maxinterval="180" minstrength="50" maxstrength="99">
         <StatusEffect type="OnActive" target="Character">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
