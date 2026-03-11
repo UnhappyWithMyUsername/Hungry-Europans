@@ -246,7 +246,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
-                <SpawnItem identifiers="geneticmaterial_unresearched" spawnposition="ThisInventory" />
+                <SpawnItem identifiers="he-blubber" spawnposition="ThisInventory" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -268,7 +268,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
-                <SpawnItem identifiers="geneticmaterial_unresearched" amount="3" spawnposition="ThisInventory" />
+                <SpawnItem identifiers="he-blubber" amount="3" spawnposition="ThisInventory" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
