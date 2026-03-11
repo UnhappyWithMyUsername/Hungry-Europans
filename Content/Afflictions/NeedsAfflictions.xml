@@ -1363,8 +1363,7 @@
         </StatusEffect>
         <!-- Reduce the hygiene each second if the character is in water without clothes -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
-          <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
+          <Conditional he-naked="gt 0" />
           <Conditional InWater="true" />
           <ReduceAffliction identifier="hygiene" amount="4.0" />
         </StatusEffect>
@@ -1393,12 +1392,19 @@
         </StatusEffect>
         <!-- Reduce the hygiene each second if the character is in water -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
-          <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
+          <Conditional he-naked="gt 0" />
           <Conditional InWater="true" />
           <ReduceAffliction identifier="hygiene" amount="4.0" />
         </StatusEffect>
       </Effect>
+      <!-- mark character as naked if no clothes on -->
+      <PeriodicEffect mininterval="1" maxinterval="1">
+        <StatusEffect target="Character" disabledeltatime="true" comparison="And">
+          <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
+          <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
+          <Affliction identifier="he-naked" amount="1" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,384,128,128" origin="0,0" />
     </Affliction>
     

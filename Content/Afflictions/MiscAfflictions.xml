@@ -1601,8 +1601,26 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
     
+    <!-- just an affliction to check if character is naked, removes itself if clothes worn. Note: I had to make 2 SEs because for some reason the requireditem don't work with comparison="OR"  -->
+    <Affliction name="Naked" identifier="he-naked" iconcolors="255,0,50,255" showiconthreshold="999" showinhealthscannerthreshold="999" maxstrength="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+      <Effect
+      minstrength="0"
+      maxstrength="1"
+      strengthchange="0">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="or">
+          <RequiredItem item="clothing" type="Equipped" requireempty="false" CharacterInventorySlotType="InnerClothes" />
+          <ReduceAffliction identifier="he-naked" strength="999" />
+        </StatusEffect>
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="or">
+          <RequiredItem item="deepdiving" type="Equipped" requireempty="false" CharacterInventorySlotType="OuterClothes" />
+          <ReduceAffliction identifier="he-naked" strength="999" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
+    </Affliction>
+    
     <!-- Washed with Soap - gives some small hygiene resistance and improves mood -->
-    <Affliction name="Soap Washed" identifier="he-washedwithsoap" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <Affliction name="Soap Washed" identifier="he-washedwithsoap" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="600" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect
       minstrength="0"
       maxstrength="600"
