@@ -1620,7 +1620,7 @@
     </Affliction>
     
     <!-- Washed with Soap - gives some small hygiene resistance and improves mood -->
-    <Affliction name="Soap Washed" identifier="he-washedwithsoap" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="1200" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <Affliction name="Soap Washed" identifier="he-washedwithsoap" iconcolors="250,155,155,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="1200" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect
       minstrength="0"
       maxstrength="1200"
@@ -1637,7 +1637,7 @@
           <ReduceAffliction identifier="he-washedwithsoap" strength="999" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,512,128,128" origin="0,0" />
     </Affliction>
         
   </Afflictions>
