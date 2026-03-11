@@ -1395,7 +1395,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-sleepyeuropan>Make sure to take a rest in a bed from time to time.</talentdescription.he-sleepyeuropan>
 
 <talentname.he-moodyeuropan>Moody Europan</talentname.he-moodyeuropan>
-<talentdescription.he-moodyeuropan>Keep your stress low by enjoying foods and drinks you like.</talentdescription.he-moodyeuropan>
+<talentdescription.he-moodyeuropan>Keep your stress low. Satisfy your cravings and take some time off.</talentdescription.he-moodyeuropan>
 
 <seleectpreferredfood>Select your preferred food:</seleectpreferredfood>
 <seleectpreferreddrink>Select your preferred drink:</seleectpreferreddrink>
@@ -1425,6 +1425,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentname.he-trait_likes_sweets>Likes Sweets</talentname.he-trait_likes_sweets>
 <talentdescription.he-trait_likes_pizza>You like eating Pizza.</talentdescription.he-trait_likes_pizza>
 <talentname.he-trait_likes_pizza>Likes Pizza</talentname.he-trait_likes_pizza>
+<talentdescription.he-trait_likes_pasta>You like eating pasta.</talentdescription.he-trait_likes_pasta>
+<talentname.he-trait_likes_pasta>Likes pasta</talentname.he-trait_likes_pasta>
 
 <talentname.he-trait_likes_beer>Likes Beer</talentname.he-trait_likes_beer>
 <talentdescription.he-trait_likes_beer>You like drinking Beer.</talentdescription.he-trait_likes_beer>
@@ -1436,6 +1438,44 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-trait_likes_tea>You like drinking Tea.</talentdescription.he-trait_likes_tea>
 <talentname.he-trait_likes_cola>Likes Cola</talentname.he-trait_likes_cola>
 <talentdescription.he-trait_likes_cola>You like drinking Cola.</talentdescription.he-trait_likes_cola>
+
+
+<afflictionname.trait_likes_friedfoods>Craving Fried Food</afflictionname.trait_likes_friedfoods>
+<afflictiondescription.trait_likes_burgers>You are hungry for Fried Food.</afflictiondescription.trait_likes_burgers>
+<afflictionname.trait_likes_burgers>Craving Burgers</afflictionname.trait_likes_burgers>
+<afflictiondescription.trait_likes_hotdogs>You are hungry for Hotdogs.</afflictiondescription.trait_likes_hotdogs>
+<afflictionname.trait_likes_hotdogs>Craving Hotdogs</afflictionname.trait_likes_hotdogs>
+<afflictiondescription.trait_likes_pizzas>You are hungry for Pizzas.</afflictiondescription.trait_likes_pizzas>
+<afflictionname.trait_likes_pizzas>Craving Pizzas</afflictionname.trait_likes_pizzas>
+<afflictiondescription.trait_likes_filets>You are hungry for Filets.</afflictiondescription.trait_likes_filets>
+<afflictionname.trait_likes_filets>Craving Filets</afflictionname.trait_likes_filets>
+<afflictiondescription.trait_likes_roasts>You are hungry for Roasts.</afflictiondescription.trait_likes_roasts>
+<afflictionname.trait_likes_roasts>Craving Roasts</afflictionname.trait_likes_roasts>
+<afflictiondescription.trait_likes_sandwiches>You are hungry for Sandwiches.</afflictiondescription.trait_likes_sandwiches>
+<afflictionname.trait_likes_sandwiches>Craving Sandwiches</afflictionname.trait_likes_sandwiches>
+<afflictiondescription.trait_likes_omelettes>You are hungry for Omelette.</afflictiondescription.trait_likes_omelettes>
+<afflictionname.trait_likes_omelettes>Craving Omelette</afflictionname.trait_likes_omelettes>
+<afflictiondescription.trait_likes_soups>You are hungry for Soup.</afflictiondescription.trait_likes_soups>
+<afflictionname.trait_likes_soups>Craving Soup</afflictionname.trait_likes_soups>
+<afflictiondescription.trait_likes_salads>You are hungry for Salad.</afflictiondescription.trait_likes_salads>
+<afflictionname.trait_likes_salads>Craving Salad</afflictionname.trait_likes_salads>
+<afflictiondescription.trait_likes_sweets>You are hungry for Sweets.</afflictiondescription.trait_likes_sweets>
+<afflictionname.trait_likes_sweets>Craving Sweets</afflictionname.trait_likes_sweets>
+<afflictiondescription.trait_likes_pizza>You are hungry for Pizza.</afflictiondescription.trait_likes_pizza>
+<afflictionname.trait_likes_pizza>Craving Pizza</afflictionname.trait_likes_pizza>
+<afflictiondescription.trait_likes_pasta>You are hungry for pasta.</afflictiondescription.trait_likes_pasta>
+<afflictionname.trait_likes_pasta>Craving pasta</afflictionname.trait_likes_pasta>
+
+<afflictionname.trait_likes_beer>Craving Beer</afflictionname.trait_likes_beer>
+<afflictiondescription.trait_likes_beer>You are thirsting for Beer.</afflictiondescription.trait_likes_beer>
+<afflictionname.trait_likes_rum>Craving Rum</afflictionname.trait_likes_rum>
+<afflictiondescription.trait_likes_rum>You are thirsting for Rum.</afflictiondescription.trait_likes_rum>
+<afflictionname.trait_likes_whiskey>Craving Whiskey</afflictionname.trait_likes_whiskey>
+<afflictiondescription.trait_likes_whiskey>You are thirsting for Whiskey.</afflictiondescription.trait_likes_whiskey>
+<afflictionname.trait_likes_tea>Craving Tea</afflictionname.trait_likes_tea>
+<afflictiondescription.trait_likes_tea>You are thirsting for Tea.</afflictiondescription.trait_likes_tea>
+<afflictionname.trait_likes_cola>Craving Cola</afflictionname.trait_likes_cola>
+<afflictiondescription.trait_likes_cola>You are thirsting for Cola.</afflictiondescription.trait_likes_cola>
 
 
 <eventtext.he-hirechef.freechef>"Oh hello! You're from that submarine that just docked, aren't you? You don't happen to be in need of a new chef? I'm looking for work, but I'm not needed on this station."</eventtext.he-hirechef.freechef>
