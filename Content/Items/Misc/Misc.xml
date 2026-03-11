@@ -1404,6 +1404,8 @@
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stomachache" amount="3" />
           <Affliction identifier="he-stomachache" amount="5" probability="0.01" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="255,255,255,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
