@@ -45,13 +45,14 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,504,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
       
-      <!-- Attempt at adding a random craving -->
-      <AbilityGroupInterval interval="1.0">
+      <!-- Attempt at adding a random craving every minute (only if mood is above a certain %) -->
+      <AbilityGroupInterval interval="300.0">
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
                 <Conditional IsBot="false" />
+                <Conditional mood="gte 10" />
                 <Affliction identifier="trait_likes_friedfoods" probability="0.01" amount="1200" />
                 <Affliction identifier="trait_likes_burgers" probability="0.01" amount="1200" />
                 <Affliction identifier="trait_likes_hotdogs" probability="0.01" amount="1200" />
