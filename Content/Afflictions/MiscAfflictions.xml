@@ -750,8 +750,40 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
         </StatusEffect>
       </PeriodicEffect>
+      <!-- small % chance of diarrhea -->
+      <PeriodicEffect mininterval="30" maxinterval="120" minstrength="40" maxstrength="100">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional defecate="gt 0" />
+          <Affliction identifier="he-applydefecate" strength="10" probability="0.05"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="300" selectionmode="random" />
+        </StatusEffect>
+      </PeriodicEffect>     
+      
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,384,128,128" origin="0,0"/>
-    </Affliction>
+    </Affliction>    
+   
+    <!-- affliction to apply defecate over time -->
+    <Affliction identifier="he-applydefecate"
+      type="debuff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="10"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" >
+        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" stackable="false" comparison="And">
+          <Conditional defecate="gt 0" />
+          <Affliction identifier="defecate" strength="10" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction> 
+    
     
     <Affliction
       name="Tobacco addiction"
