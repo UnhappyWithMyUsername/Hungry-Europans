@@ -1436,12 +1436,11 @@
           <!-- <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
           <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" /> -->
           <Conditional he-naked="gt 0" />
-          <Conditional hygiene="gt 0" />
           <Affliction identifier="he-washedwithsoap" amount="200" /> 
           <ReduceAffliction identifier="hygiene" amount="5" /> 
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="300" volume="0.35" frequencymultiplier="0.6" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="300" volume="0.35" frequencymultiplier="0.4" />
           <ParticleEmitter particle="waterdrop" colormultiplier="255,255,255" copyentityangle="true" particlespersecond="3" anglemin="0" anglemax="360" distancemin="0" distancemax="30" scalemin="0.4" scalemax="0.8" velocitymin="0" velocitymax="10" highqualitycollisiondetection="false" />
-          <ParticleEmitter particle="soapbubbles" colormultiplier="255,255,255" copyentityangle="false" particlespersecond="3" anglemin="270" anglemax="280" distancemin="0" distancemax="10" scalemin="0.15" scalemax="0.2" velocitymin="0" velocitymax="10" highqualitycollisiondetection="false" />
+          <ParticleEmitter particle="soapbubbles" colormultiplier="255,255,255" copyentityangle="false" particlespersecond="3" anglemin="270" anglemax="280" distancemin="0" distancemax="10" scalemin="0.15" scalemax="0.2" velocitymin="0" velocitymax="10" highqualitycollisiondetection="false" scalemultiplier="1,1" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This" >
           <Remove />
