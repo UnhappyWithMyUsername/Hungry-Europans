@@ -229,7 +229,57 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupInterval>
+      
+      <!-- % chance of looting blubber from monsters to make soap -->
+      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Monster">
+            <Conditional maxhealth="gt 25"/>
+            <Conditional mass="gte 55"/>
+            <Conditional ismachine="false" />
+          </AbilityConditionCharacter>
+          <AbilityConditionCharacterNotLooted identifier="blubberlooted"/>
+          <AbilityConditionServerRandom randomchance="0.901" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityMarkAsLooted identifier="blubberlooted"/>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
+                <SpawnItem identifiers="geneticmaterial_unresearched" spawnposition="ThisInventory" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <!-- loot guaranteed on abyssals -->
+      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+        <Conditions>
+          <AbilityConditionCharacter targettype="Monster">
+            <Conditional maxhealth="gt 25"/>
+            <Conditional mass="gte 2000"/>
+            <Conditional ismachine="false" />
+          </AbilityConditionCharacter>
+          <AbilityConditionCharacterNotLooted identifier="blubberlootedabyssal"/>
+          <AbilityConditionServerRandom randomchance="1" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityMarkAsLooted identifier="blubberlootedabyssal"/>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" >
+                <SpawnItem identifiers="geneticmaterial_unresearched" amount="3" spawnposition="ThisInventory" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
     </Talent>
+        
+    <!--OVERRIDES-->
+    <!--OVERRIDES-->
+    <!--OVERRIDES-->
+    <!--OVERRIDES-->
     <!--OVERRIDES-->
     <!--Drunken Sailor to add recipes-->
     <Talent identifier="drunkensailor">
