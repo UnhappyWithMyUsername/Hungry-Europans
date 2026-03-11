@@ -6,8 +6,8 @@
 Search "TODO:" in the mod for things that need updating
 
 SHORT TERM TODO / NEXT UPDATE:
-- Allow emptying shakers/oil/vinegar/ketchup...
--
+- Allow emptying shakers/oil/vinegar/ketchup OR use any shaker in recipes (empty or full)
+- Disable skill requirement for fermenter/distiller? It's not intuitve and people fail their recipes if the plant gets consumed. More people would also participate in cooking
 -
 
 Include underused ingredients
