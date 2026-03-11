@@ -6,7 +6,7 @@
 Search "TODO:" in the mod for things that need updating
 
 SHORT TERM TODO / NEXT UPDATE:
--
+- Allow emptying shakers/oil/vinegar/ketchup...
 -
 -
 
@@ -33,23 +33,22 @@ Small hotfix - pasta recipes
 
 [b]Additions:[/b]
 [List]
-[*] Added some pasta meals: Spaghetti and meatballs, MudRamen, Toasty Ravioli, Mac and Cheese
-[*] You can now find a very special Couwola collector item...
+[*] Added Soap
+[*] Added "washed" affliction if you wash with soap. Slows down hygiene buildup and slowly improves mood
+[*] Added Blubber (soap ingredient). Can be looted on larger enemies if you have the Filthy Europan talent
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Reworked/Fixed Stress sometimes building up extremely fast. Stress buildup from negative actions (getting attacked) now has a cooldown, preventing very fast damaging weapons like welding tools from triggering stress 10 times per second.
-[*] Added a hint treatment icon for stress
-[*] Being drunk gives minor radiation resistance (apparently it's a thing)
-[*] Increased slots for cutting board, oven and stove by 1
+[*] Reworked preferred foods/drinks: You no longer get to pick your favourite food. Instead, random cravings from time to time appear if you have Moody Europans enable. Eating/Drinking the corresponding type will lower your stress, and make the craving go away.
+[*] Stomachache can sometimes cause diarrhea
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fix some talent text
-[*] Fix blender inventory not stacking (couldnt make muesli by itself)
-[*] Allow popped popnut to be used in research table
+[*] Fix Mule wall depth causing it to turn invisible if outside of LOS
+[*] Fix boiled mantis meat giving nausea
+[*] Improve Couwola Exosuit compatibility with Enhanced Reactor. Can use a cartridge instead of a raw fuel rod.
 [/List]
 
 
