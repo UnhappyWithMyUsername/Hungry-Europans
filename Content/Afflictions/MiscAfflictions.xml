@@ -1601,7 +1601,7 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction> 
     
-    <!-- Washed with Soap - gives some small hygiene resistance and improves mood-->
+    <!-- Washed with Soap - gives some small hygiene resistance and improves mood -->
     <Affliction name="Soap Washed" identifier="he-washedwithsoap" iconcolors="255,255,50,255" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect
       minstrength="0"
@@ -1610,15 +1610,17 @@
       minresistance="0.0"
       maxresistance="0.5"
       strengthchange="-1">
-        <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect target="Character" >
           <Conditional hygiene="lt 30" />
           <ReduceAffliction identifier="mood" strength="0.15" />
+        </StatusEffect>
+        <StatusEffect target="Character" disabledeltatime="true">
+          <Conditional hygiene="gte 30" />
+          <ReduceAffliction identifier="he-washedwithsoap" strength="999" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
-    
-    
-    
+        
   </Afflictions>
 </Override>
