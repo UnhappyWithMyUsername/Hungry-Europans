@@ -1390,12 +1390,11 @@
       </Wearable>
     </Item>
     
-    <Item hideinmenus="false" name="Blubber" identifier="he-blubber" health="10" category="Misc" subcategory="Misc" maxstacksize="1" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Blubber" identifier="he-blubber" health="10" category="Misc" subcategory="Misc" maxstacksize="1" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,485,47,27" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="153,38,50,32" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="47" radius="13" density="9" />
+      <Body width="50" radius="10" density="9" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="22,15" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -1417,22 +1416,20 @@
     
     
     <!-- Soap -->
-    <Item identifier="he-soap" tags="soap,mediumitem" category="misc" scale="0.5" impacttolerance="1" impactsoundtag="impact_metal_light" isshootable="true" requireaimtouse="true" donttransferbetweensubs="false" health="20">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,79,57,54" depth="0.6" origin="0.5,0.5" />
+    <Item identifier="he-soap" tags="soap,mediumitem" category="misc" scale="0.5" impacttolerance="1" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" donttransferbetweensubs="false" health="20">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="97,41,50,27" depth="0.6" origin="0.5,0.5" />
       <PreferredContainer primary="crewcab" />
-      <Body width="20" height="20" density="11" />
+      <Body width="50" height="27" density="11" />
       <Price baseprice="200">
         <Price locationtype="outpost" multiplier="1.3" sold="true" minavailable="0" maxavailable="1" />
         <Price locationtype="city" multiplier="1.0" sold="true" minavailable="2" maxavailable="4" />
       </Price>
-      <Deconstruct time="10">
-        <Item identifier="plastic" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="15">
-        <RequiredSkill identifier="mechanical" level="60" />
-        <Item identifier="plastic" amount="2" />
-        <Item identifier="aluminium" amount="1" />
-        <Item identifier="carbon" amount="1" />
+      <Deconstruct time="1" />
+      <Fabricate suitablefabricators="stove" requiredtime="40">
+        <RequiredSkill identifier="medical" level="30" />
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.1"/>
+        <Item identifier="he-blubber" amount="1" />
+        <Item identifier="sodium" amount="1" />
       </Fabricate>
       <Holdable slots="RightHand,LeftHand,Any" holdpos="10,-30" handle1="0,-15" handle2="50,50" swingwhenusing="true" swingamount="5,100" swingspeed="0.4" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="and">
