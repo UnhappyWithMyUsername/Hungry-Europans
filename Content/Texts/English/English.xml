@@ -1633,8 +1633,14 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <eventtext.spawncouwolasuit.cleanthesuit>Looks like you have found the prized Couwola Suit, but it's long been abandoned and is now covered with gunk. Try cutting it all off with a tool.</eventtext.spawncouwolasuit.cleanthesuit>
 
 
+<entityname.he-blubber>Blubber</entityname.he-blubber>
+<entitydescription.he-blubber>Fat tissue harvested from a sea monster.</entitydescription.he-blubber>
 
+<entityname.he-soap>Sailor's Soap</entityname.he-soap>
+<entitydescription.he-soap>A bar of soap that submarine crews use to rub off grease, oil and blood stains.</entitydescription.he-soap>
 
+<afflictionname.he-washedwithsoap>Clean and Fragrant</afflictionname.he-washedwithsoap>
+<afflictiondescription.he-washedwithsoap>Your skin is spotless and bears a pleasant smell. A clean sailor is a happy sailor.</afflictiondescription.he-washedwithsoap>
 
 
 
