@@ -27,7 +27,7 @@
       <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="80" fabricationlimitmin="5" fabricationlimitmax="10"/>
       <Fabricate suitablefabricators="distiller" requiredtime="220" amount="4">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="sugar" amount="1" />
+        <RequiredItem identifier="he-sugar" amount="1" />
         <RequiredItem identifier="yeastshroom" amount="1" MinCondition="0.0" UseCondition="True" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
