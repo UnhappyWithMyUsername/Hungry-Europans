@@ -151,7 +151,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
       <Holdable slots="Any,RightHand,LeftHand" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" stackable="false" comparison="And">
+        <!-- <StatusEffect type="OnUse" target="This" stackable="false" comparison="And">
           <Conditional hasspecifiertag="male" targetcontainer="true" />
           <Conditional mood="lte 0" targetcontainer="true" />
           <SpawnItem identifier="he-traitselector_food" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
@@ -160,7 +160,7 @@
           <Conditional hasspecifiertag="female" targetcontainer="true" />
           <Conditional mood="lte 0" targetcontainer="true" />
           <SpawnItem identifier="he-traitselector_food" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-        </StatusEffect>
+        </StatusEffect> -->
         <!--
         <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" delay="0.1" stackable="false">
           <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
