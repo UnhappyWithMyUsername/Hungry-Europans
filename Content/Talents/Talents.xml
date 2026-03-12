@@ -344,7 +344,7 @@
     </Talent>
     
     
-    
+    <!-- TODO: get rid of those traits? delete them? what happens if you load a character with nonexistent talent -->
     <!-- TRAITS -->
     <Talent name="Preferred Food: Fried Food" identifier="he-trait_likes_friedfoods">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,623,119,119" origin="0.5,0.5"/>
