@@ -38,6 +38,9 @@
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
+        <StatusEffect type="OnActive" target="This" interval="1" drawhudwhenequipped="true" targetitemcomponent="CustomInterface" setvalue="true" oneshot="true">
+          <Conditional ConditionPercentage="lt 50" />
+        </StatusEffect>
       </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
@@ -72,6 +75,15 @@
           <SpawnItem identifier="he-emptyshaker" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Projectile>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="false">
+        <RequiredItem items="he-salt" type="Equipped" excludefullcondition="true" />
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptyshaker">
+          <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
+            <Conditional ConditionPercentage="lt 50" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
     </Item>
 
     <Item name="Synthetic Pepper" identifier="he-pepper" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Pepper be prepared!" Tags="smallitem,ingredient,condiment,fullshaker" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5">
@@ -103,6 +115,9 @@
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
+        <StatusEffect type="OnActive" target="This" interval="1" drawhudwhenequipped="true" targetitemcomponent="CustomInterface" setvalue="true" oneshot="true">
+          <Conditional ConditionPercentage="lt 50" />
+        </StatusEffect>
       </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
@@ -137,6 +152,15 @@
           <SpawnItem identifier="he-emptyshaker" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Projectile>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="false">
+        <RequiredItem items="he-pepper" type="Equipped" excludefullcondition="true" />
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptyshaker">
+          <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
+            <Conditional ConditionPercentage="lt 50" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
     </Item>
 
     <Item name="Sugar" identifier="he-sugar" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Oh so sweet!" Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5" canflipx="false">

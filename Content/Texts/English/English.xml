@@ -961,6 +961,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <interaction.emptykeg>Empty the Keg</interaction.emptykeg><!--Patch 12-->
 <interaction.emptycup>Empty the Cup</interaction.emptycup><!--Patch 13-->
 <interaction.emptyglass>Empty the Glass</interaction.emptyglass><!--Patch 20-->
+<interaction.emptyshaker>Empty the Shaker</interaction.emptyshaker>
 <interaction.refillcup>Refill a Cup</interaction.refillcup><!--Patch 13-->
 <interaction.flushtoilet>Flush Toilet</interaction.flushtoilet><!--Patch 13-->
 <interaction.breakbottle>Break Bottle</interaction.breakbottle><!--Patch 13-->
@@ -971,6 +972,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <interaction.disassemble>Disassemble</interaction.disassemble><!--Patch 19-->
 <interaction.start>Start</interaction.start><!--Patch 19-->
 <interaction.cancel>Cancel</interaction.cancel><!--Patch 19-->
+
 <!-- ROOM NAMES -->
 <roomname.kitchen>Kitchen</roomname.kitchen><!--Patch 10-->
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
