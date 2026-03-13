@@ -3,7 +3,7 @@
   <Items>
   
     <!-- CONTAINERS -->
-    <Item name="Tool Belt with Lunch Box" identifier="he-toolbeltlunch" category="Equipment" subcategory="Container" tags="mediumitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="A Tool Belt with a Lunch Box attached to it to always carry your food with you." impactsoundtag="impact_soft" canflipx="false">
+    <Item name="Tool Belt with Lunch Box" identifier="he-toolbeltlunch" category="Equipment" subcategory="Container" tags="mediumitem,mobilecontainer,tool,lunchboxitem" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="A Tool Belt with a Lunch Box attached to it to always carry your food with you." impactsoundtag="impact_soft" canflipx="false">
       <PreferredContainer primary="engcab" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
@@ -53,7 +53,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
     
-    <Item name="Lunch Box" identifier="he-lunchbox" category="Equipment" subcategory="Container" tags="mediumitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="It's a box with a handle to carry your food around. Can be attached to a toolbelt at a fabricator." impactsoundtag="impact_metal_heavy" RequireAimToUse="True" canflipx="false">
+    <Item name="Lunch Box" identifier="he-lunchbox" category="Equipment" subcategory="Container" tags="mediumitem,mobilecontainer,tool,lunchboxitem" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="It's a box with a handle to carry your food around. Can be attached to a toolbelt at a fabricator." impactsoundtag="impact_metal_heavy" canflipx="false">
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
       <Deconstruct time="10">
@@ -73,18 +73,9 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="916,808,81,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,740,84,67" origin="0.5,0.5" depth="0.6" canflipx="false" />
       <Body width="84" height="67" density="12" />
-      <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
-        <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
-          <Affliction identifier="blunttrauma" strength="2" />
-          <Affliction identifier="stun" strength="0.6" />
-          <StatusEffect type="OnUse" target="UseTarget">
-            <Conditional entitytype="eq Character" />
-            <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500" />
-            <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
-          </StatusEffect>
-        </Attack>
-      </MeleeWeapon>
-      <ItemContainer capacity="9" slotsperrow="3" maxstacksize="1" keepopenwhenequipped="true" movableframe="true">
+      <Holdable slots="RightHand,LeftHand" controlpose="true" handle1="0,40" holdangle="85" msg="ItemMsgPickUpSelect">
+      </Holdable>
+      <ItemContainer capacity="9" slotsperrow="3" maxstacksize="1" keepopenwhenequipped="true" movableframe="true" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
       </ItemContainer>
@@ -1339,7 +1330,7 @@
         <RequiredItem identifier="aluminium" amount="2" />
       </Fabricate>
       <ItemContainer ItemsUseInventoryPlacement="true" capacity="30" canbeselected="true" selectkey="Select" hideitems="true" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.25,0.55" anchor="Center" style="ItemUI" />
+        <GuiFrame relativesize="0.22,0.60" anchor="Center" style="ItemUI" />
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="fooditem,drinkitem,emptybottle,emptyjar,kettle,tableware" />
         <StatusEffect type="OnPicked" target="this">
@@ -1347,6 +1338,10 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
         </StatusEffect>
+        <SubContainer capacity="3" maxstacksize="1">
+          <SlotIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,740,84,67" origin="0.5,0.5" />
+          <Containable items="lunchboxitem" />
+        </SubContainer>
       </ItemContainer>
       <Body width="191" height="322" density="16" friction="0.2" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="70,-58" handle1="-75,50" handle2="-75,70" holdangle="3" msg="ItemMsgDetach" PickingTime="0.5" attachable="false" aimable="true" >
