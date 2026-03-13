@@ -34,14 +34,17 @@ Small hotfix - pasta recipes
 [b]Additions:[/b]
 [List]
 [*] Added Soap
-[*] Added "washed" affliction if you wash with soap. Slows down hygiene buildup and slowly improves mood
+[*] Added "Clean and Fragrant" affliction if you wash with soap. Slows down hygiene buildup and slowly improves mood
 [*] Added Blubber (soap ingredient). Can be looted on larger enemies if you have the Filthy Europan talent
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Reworked preferred foods/drinks: You no longer get to pick your favourite food. Instead, random cravings from time to time appear if you have Moody Europans enable. Eating/Drinking the corresponding type will lower your stress, and make the craving go away.
+[*] Reworked preferred foods/drinks: You no longer get to pick your favourite food. Instead, random cravings from time to time appear if you have the Moody Europans talent enabled. Eating/Drinking the corresponding type will lower your stress, and make the craving go away.
 [*] Stomachache can sometimes cause diarrhea
+[*] Allow emptying shakers under 50% condition
+[*] Added a slot to put lunchboxes in cafeteria cart
+[*] No longer swing lunchboxes like a weapon when holding LMB
 [/List]
 
 [b]Fixes:[/b] 
