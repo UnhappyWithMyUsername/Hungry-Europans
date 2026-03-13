@@ -1676,7 +1676,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 
 <entityname.he-blubber>Blubber</entityname.he-blubber>
-<entitydescription.he-blubber>Fat tissue harvested from a sea monster.</entitydescription.he-blubber>
+<entitydescription.he-blubber>Fat tissue harvested from a sea monster. Can be used in the making of soap.</entitydescription.he-blubber>
 
 <entityname.he-soap>Sailor's Soap</entityname.he-soap>
 <entitydescription.he-soap>A bar of soap that submarine crews use to rub off grease, oil and blood stains.</entitydescription.he-soap>
