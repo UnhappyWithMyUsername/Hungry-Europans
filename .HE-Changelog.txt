@@ -41,8 +41,9 @@ Small hotfix - pasta recipes
 [b]Changes:[/b] 
 [List]
 [*] Reworked preferred foods/drinks: You no longer get to pick your favourite food. Instead, random cravings from time to time appear if you have the Moody Europans talent enabled. Eating/Drinking the corresponding type will lower your stress, and make the craving go away.
+[*] Can now cure some stress by playing instruments (up to 30 seconds of playing). Has a long cooldown. 
 [*] Stomachache can sometimes cause diarrhea
-[*] Allow emptying shakers under 50% condition
+[*] Allow emptying shakers and ketchup/vinegar/oil under 50% condition
 [*] Added a slot to put lunchboxes in cafeteria cart
 [*] No longer swing lunchboxes like a weapon when holding LMB
 [/List]
