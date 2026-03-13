@@ -70,7 +70,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="5" />
         <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="4" />
       </Price>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="916,808,81,64" origin="0.5,0.5" />
+      <!-- <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="916,808,81,64" origin="0.5,0.5" /> -->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,740,84,67" origin="0.5,0.5" depth="0.6" canflipx="false" />
       <Body width="84" height="67" density="12" />
       <Holdable slots="RightHand,LeftHand" controlpose="true" handle1="0,40" holdangle="85" msg="ItemMsgPickUpSelect">
