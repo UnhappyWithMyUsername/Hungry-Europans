@@ -76,6 +76,58 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupInterval>
+      
+      <!-- passively apply mood -->
+      <AbilityGroupInterval interval="5.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Affliction identifier="mood" probability="1" amount="0.01" />
+                <Affliction identifier="moodenabled" probability="1.0" amount="1.0" />
+                <!-- applies 1 moodcooldown every second -->
+                <Affliction identifier="moodcooldown" amount="5.0"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>      
+      <!-- random chance of mood if character is attacked -->
+	    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+        <Conditions>
+          <!-- when moodcooldown affliction reaches 100%, this can trigger. acts as a cooldown to prevent instant stress buildup from very fast attacks such as steam sprayer -->
+          <AbilityConditionHasAffliction afflictionidentifier="moodcooldown" minimumpercentage="1.0"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Affliction identifier="mood" probability="0.2" amount="3.0" />
+                <ReduceAffliction identifier="moodcooldown" amount="100.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <!-- random chance of mood if sub is attacked -->
+	    <AbilityGroupEffect abilityeffecttype="AfterSubmarineAttacked">
+        <Conditions>
+          <AbilityConditionHasAffliction afflictionidentifier="moodcooldown" minimumpercentage="1.0"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Affliction identifier="mood" probability="0.2" amount="3.0" />
+                <ReduceAffliction identifier="moodcooldown" amount="100.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
 
       <!-- Cure mood with music. Accumulates an affliction to simulate a cooldown to listening to music. The affliction deletes itself after a delay -->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
@@ -95,54 +147,7 @@
         </Abilities>
       </AbilityGroupEffect>
       
-      <AbilityGroupInterval interval="5.0">
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Conditional IsBot="false" />
-                <Affliction identifier="mood" probability="1" amount="0.01" />
-                <Affliction identifier="moodenabled" probability="1.0" amount="1.0" />
-                <!-- applies 1 moodcooldown every second -->
-                <Affliction identifier="moodcooldown" amount="5.0"/>
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupInterval>
-	    <AbilityGroupEffect abilityeffecttype="OnAttacked">
-        <Conditions>
-          <!-- when moodcooldown affliction reaches 100%, this can trigger. acts as a cooldown to prevent instant stress buildup from very fast attacks such as steam sprayer -->
-          <AbilityConditionHasAffliction afflictionidentifier="moodcooldown" minimumpercentage="1.0"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Conditional IsBot="false" />
-                <Affliction identifier="mood" probability="0.2" amount="3.0" />
-                <ReduceAffliction identifier="moodcooldown" amount="100.0" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-	    <AbilityGroupEffect abilityeffecttype="AfterSubmarineAttacked">
-        <Conditions>
-          <AbilityConditionHasAffliction afflictionidentifier="moodcooldown" minimumpercentage="1.0"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Conditional IsBot="false" />
-                <Affliction identifier="mood" probability="0.2" amount="3.0" />
-                <ReduceAffliction identifier="moodcooldown" amount="100.0" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
+      <!-- UNUSED applying mood through varied effects. It was too hard to balance having mood on everything -->
 <!-- 	    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
         <Conditions>
           <AbilityConditionHasAffliction afflictionidentifier="moodcooldown" minimumpercentage="1.0"/>
