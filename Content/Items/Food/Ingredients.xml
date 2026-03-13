@@ -80,7 +80,6 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptyshaker">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -157,7 +156,6 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptyshaker">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -275,7 +273,6 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -351,7 +348,6 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -426,7 +422,6 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
