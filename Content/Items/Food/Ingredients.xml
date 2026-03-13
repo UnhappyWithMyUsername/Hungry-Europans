@@ -39,7 +39,7 @@
           <Use />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This" interval="1" drawhudwhenequipped="true" targetitemcomponent="CustomInterface" setvalue="true" oneshot="true">
-          <Conditional ConditionPercentage="lt 50" />
+          <Conditional ConditionPercentage="lt 20" />
         </StatusEffect>
       </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
@@ -80,7 +80,7 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptyshaker">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 50" />
+            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -116,7 +116,7 @@
           <Use />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This" interval="1" drawhudwhenequipped="true" targetitemcomponent="CustomInterface" setvalue="true" oneshot="true">
-          <Conditional ConditionPercentage="lt 50" />
+          <Conditional ConditionPercentage="lt 20" />
         </StatusEffect>
       </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
@@ -157,7 +157,7 @@
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptyshaker">
           <StatusEffect type="OnUse" target="This" condition="0" setvalue="true">
-            <Conditional ConditionPercentage="lt 50" />
+            <Conditional ConditionPercentage="lt 20" />
           </StatusEffect>
         </Button>
       </CustomInterface>
