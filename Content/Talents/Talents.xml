@@ -76,6 +76,24 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupInterval>
+
+      <!-- Cure mood with music. Accumulates an affliction to simulate a cooldown to listening to music. The affliction deletes itself after a delay -->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem tags="instrument"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="NearbyCharacters" range="300" interval="1" disabledeltatime="true">
+                <Conditional moodmusiccooldown="lt 30" />
+                <Affliction identifier="moodmusiccooldown" amount="1" />
+                <ReduceAffliction identifier="mood" amount="0.5" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
       
       <AbilityGroupInterval interval="5.0">
         <Abilities>
