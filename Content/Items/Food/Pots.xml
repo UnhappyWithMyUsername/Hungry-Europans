@@ -681,7 +681,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item hideinmenus="true" nameidentifier="he-seaweedsoup" descriptionidentifier="he-seaweedsoup" identifier="he-mudramensoupgood" variantof="he-mudramensoup">
+    <Item hideinmenus="true" nameidentifier="he-mudramensoup" descriptionidentifier="he-mudramensoup" identifier="he-mudramensoupgood" variantof="he-mudramensoup">
       <ClearAll>
         <Fabricate />
         <Price />
