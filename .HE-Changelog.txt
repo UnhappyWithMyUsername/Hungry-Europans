@@ -6,7 +6,6 @@
 Search "TODO:" in the mod for things that need updating
 
 SHORT TERM TODO / NEXT UPDATE:
-- Allow emptying shakers/oil/vinegar/ketchup OR use any shaker in recipes (empty or full)
 - Disable skill requirement for fermenter/distiller? It's not intuitve and people fail their recipes if the plant gets consumed. More people would also participate in cooking
 -
 
@@ -43,7 +42,7 @@ Small hotfix - pasta recipes
 [*] Reworked preferred foods/drinks: You no longer get to pick your favourite food. Instead, random cravings from time to time appear if you have the Moody Europans talent enabled. Eating/Drinking the corresponding type will lower your stress, and make the craving go away.
 [*] Can now cure some stress by playing instruments (up to 30 seconds of playing). Has a long cooldown. 
 [*] Stomachache can sometimes cause diarrhea
-[*] Allow emptying shakers and ketchup/vinegar/oil under 50% condition
+[*] Allow emptying shakers and ketchup/vinegar/oil under 20% condition
 [*] Added a slot to put lunchboxes in cafeteria cart
 [*] No longer swing lunchboxes like a weapon when holding LMB
 [/List]
