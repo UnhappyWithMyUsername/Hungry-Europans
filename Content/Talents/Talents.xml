@@ -295,7 +295,7 @@
             <Conditional ismachine="false" />
           </AbilityConditionCharacter>
           <AbilityConditionCharacterNotLooted identifier="blubberlooted"/>
-          <AbilityConditionServerRandom randomchance="0.901" />
+          <AbilityConditionServerRandom randomchance="0.10" />
         </Conditions>
         <Abilities>
           <CharacterAbilityMarkAsLooted identifier="blubberlooted"/>
