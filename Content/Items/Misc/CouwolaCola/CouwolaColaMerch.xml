@@ -45,7 +45,7 @@
           <Remove />
         </StatusEffect>   
         <StatusEffect type="OnDamaged" target="This" disabledeltatime="true" setvalue="true">
-          <particleemitter particle="whitechunks" drawontop="true" particleamount="3" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.2" scalemax="0.35" colormultiplier="35,60,35,255" />
+          <particleemitter particle="smallwhitechunks" drawontop="true" particleamount="3" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.2" scalemax="0.35" colormultiplier="35,60,35,255" />
           <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
         </StatusEffect>     
       </ItemComponent>

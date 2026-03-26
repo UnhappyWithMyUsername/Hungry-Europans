@@ -45,7 +45,7 @@
         <Affliction identifier="he-vitaminrich" amount="10.0" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="200,100,50,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="200,100,50,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -58,7 +58,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter1" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="200,100,50,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,100,50,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,100,50,255" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -94,7 +94,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_purpledesat" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="120,105,70,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -143,7 +143,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_yellow" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="60,90,20,255"/> 
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="195,170,70,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="195,170,70,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -177,7 +177,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_orange" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="200,75,20,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,75,20,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,75,20,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -228,7 +228,7 @@
         <Affliction identifier="spill" amount="1000" probability="0.0005" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="3" scalemin="0.2" scalemax="0.35" distancemin="10" distancemax="15" anglemin="95" anglemax="95" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,220,180,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="3" scalemin="0.2" scalemax="0.35" distancemin="10" distancemax="15" anglemin="95" anglemax="95" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,220,180,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -244,7 +244,7 @@
         <Remove />
         <Explosion showEffects="false" decal="fruitsplatter_yellow" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="195,180,120,255" />
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="195,180,120,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="195,180,120,255"/>
       </StatusEffect>      
       <StatusEffect type="OnBroken" target="This">
         <Conditional HasStatusTag="neq onfire" />
@@ -284,7 +284,7 @@
         <Affliction identifier="he-vitaminrich" amount="10.0" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="70,125,190,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="70,125,190,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -297,7 +297,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_blue" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="70,125,190,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="70,125,190,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="70,125,190,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -346,7 +346,7 @@
         <Conditional HasStatusTag="onfire" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_brown" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="70,125,190,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="70,125,190,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="70,125,190,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -373,7 +373,7 @@
         <ReduceAffliction type="hunger" amount="1" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="90,70,40,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="90,70,40,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -385,7 +385,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_purpledesat" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="90,70,40,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="90,70,40,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="90,70,40,255" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -419,7 +419,7 @@
         <Affliction identifier="he-vitaminrich" amount="25.0" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="245,195,30,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="245,195,30,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -435,7 +435,7 @@
         <Conditional Scale="gte 0.75" />
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="245,195,30,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="245,195,30,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="245,195,30,255" />
         <Explosion range="50.0" force="3.0">
           <Affliction identifier="burn" strength="50" />
         </Explosion>
@@ -450,7 +450,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_yellow" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="245,195,30,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="245,195,30,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="245,195,30,255" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -498,7 +498,7 @@
         </Explosion>
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
         <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="20" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1.75" />
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255"/>
         <Remove />
       </StatusEffect>
     </Throwable>
@@ -549,7 +549,7 @@
 
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="105,115,45,255"/> 
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,50,50,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,50,50,255"/>
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
         <Remove />
       </StatusEffect>
@@ -616,7 +616,7 @@
         </Explosion>
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
         <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="15" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1.75" />
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="85,70,150,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="85,70,150,255" />
         <ParticleEmitter particle="aliengas" anglemin="80" anglemax="100" particleamount="5" velocitymin="50" velocitymax="100" distancemin="10" distancemax="30" scalemin="1" scalemax="1" />
         <Remove />
       </StatusEffect>
@@ -642,7 +642,7 @@
         <Affliction identifier="he-vitaminrich" amount="25.0" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="70,125,190,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="70,125,190,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -655,7 +655,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_cyan" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="70,125,190,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="70,125,190,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="70,125,190,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -695,7 +695,7 @@
         <Conditional HasStatusTag="onfire" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_yellow" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="220,210,60,255"/> 
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="140,45,65,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="140,45,65,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -719,7 +719,7 @@
         <Affliction identifier="he-stuffed" amount="2.5" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="140,45,65,255"/>
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="140,45,65,255"/>
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -745,7 +745,7 @@
         </Explosion>
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="20" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1.75" colormultiplier="220,205,100,255" />
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="140,45,65,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="140,45,65,255"/>
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
@@ -756,7 +756,7 @@
         <Conditional HasStatusTag="onfire" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_yellow" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="220,210,60,255"/> 
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="140,45,65,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="140,45,65,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -832,7 +832,7 @@
         <ReduceAffliction identifier="he-stomachache" amount="1.5" />
         <Affliction identifier="ate_sweet" amount="1.0" />
         <Affliction identifier="ate_fruit" amount="1.0" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="120,105,70,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="120,105,70,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -845,7 +845,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_crimson" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="120,105,70,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -875,7 +875,7 @@
         <ReduceAffliction type="hunger" amount="0.4" />
         <ReduceAffliction type="organdamage" amount="0.25" />
         <ReduceAffliction type="bloodloss" amount="0.5" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="170,80,0,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="170,80,0,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
@@ -903,7 +903,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_orange" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="170,80,0,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="170,80,0,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="170,80,0,255" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -934,7 +934,7 @@
         <Affliction identifier="hallucinating" amount="5" />
         <Affliction identifier="chemaddiction" amount="0.4" />
         <Affliction identifier="he-tobaccoaddiction" amount="1.5" />
-        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="200,150,70,255" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="200,150,70,255" />
         <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" selectionmode="random" volume="1" />
         <Sound file="Content/Items/Medical/ITEM_eatingLoop.ogg" range="250" loop="false" selectionmode="random" volume="1"/>
       </StatusEffect>
@@ -948,7 +948,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_purpledark" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="170,80,0,255"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,150,70,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,150,70,255" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -975,7 +975,7 @@
       <StatusEffect type="OnBroken" target="This">
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="750" volume="0.75"/>
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1.75" colormultiplier="215,120,20,255" />
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,150,70,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,150,70,255" />
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" targets="crawler,mudraptor,tigerthresher,hammerhead" disabledeltatime="true" oneshot="true">
@@ -1095,7 +1095,7 @@
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="2">
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.2" scalemax="0.3" colormultiplier="255,200,70,255" lifetimemultiplier="0.25"/>
-        <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="1" velocitymin="200" velocitymax="300" scalemin="0.15" scalemax="0.2" colormultiplier="195,180,120,255"/>
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="1" velocitymin="200" velocitymax="300" scalemin="0.15" scalemax="0.2" colormultiplier="195,180,120,255"/>
         <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.15" scalemax="0.2" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3">

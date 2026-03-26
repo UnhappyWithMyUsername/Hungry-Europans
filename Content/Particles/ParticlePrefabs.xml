@@ -268,7 +268,7 @@
       sourcerect="224,96,32,32" />
   </whiteshards>
 
-  <whitechunks
+  <smallwhitechunks
     lifetime="3"
     angularvelocitymin="-500"
     angularvelocitymax="500"
@@ -323,7 +323,7 @@
     <sprite
       texture="Content/Particles/ParticleAtlas.png"
       sourcerect="208,64,48,32" />
-  </whitechunks>
+  </smallwhitechunks>
   
   <jarlid
     lifetime="5"

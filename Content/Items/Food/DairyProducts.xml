@@ -809,7 +809,7 @@
           <Conditional InWater="false" />
           <RequiredItems items="icecreamball" type="Contained" requireempty="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="4.5" />
-          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
+          <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
         </StatusEffect>        
           
         <!--Use up contained ice cream from top to bottom-->
