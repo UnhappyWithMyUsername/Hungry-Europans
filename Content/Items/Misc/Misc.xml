@@ -1453,6 +1453,29 @@
       </Quality>
     </Item>
         
+  <!-- Burger Flipper 3000 -->
+  <Item name="PROSTHETICSPATULA" identifier="he-prostheticspatula" scale="0.55" category="Equipment" tags="smallitem,prosthetic" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="medcab" secondary="medcab"/>
+    <Price baseprice="100">
+      <Price storeidentifier="merchantbutcher" minavailable="2" />
+      <Price storeidentifier="merchantcity" minavailable="4" />
+    </Price>
+    <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="214,80,64,64" origin="0.5,0.5" />
+    <Sprite name="Spatula" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="281,80,38,99" depth="0.6" origin="0.5,0.5" />
+    <Body radius="8" height="60" density="15" />
+    <Wearable limbtype="RightForearm" prostheticsLimbTypes="RightForearm,RightHand" slots="Any,RightHandProsthetic" msg="ItemMsgPickUpSelect">
+      <sprite name="Hook Wearable Hand" texture="Content/Items/Tools/tools.png" sourcerect="0,0,1,1" limb="RightHand" hidelimb="true" hideotherwearables="true" />
+      <sprite name="Hook Wearable Forearm" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="281,80,38,99" limb="RightForearm" hidelimb="true" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" hideotherwearables="true" hidewearablesoftype="Item" origin="0.5,0.3" />
+      <StatValue stattype="AimWobble" value="0.5" />
+      <StatValue stattype="RepairSpeed" value="-0.2" />
+      <StatValue stattype="MeleeAttackMultiplier" value="0.2" />
+      <StatValue stattype="FabricationSpeed" tags="kitchenfabricator" value="10.2" />           
+      <SkillModifier skillidentifier="Cooking" skillvalue="10" />
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" />
+      <damagemodifier afflictiontypes="burn,bleeding,poison" armorsector="0.0,360.0" damagemultiplier="0.0" />
+    </Wearable>
+  </Item>   
+        
     <!-- EFFECT ITEMS -->
     <!-- EFFECT ITEMS -->
     <!-- EFFECT ITEMS -->
