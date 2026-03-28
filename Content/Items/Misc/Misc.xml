@@ -1453,7 +1453,7 @@
       </Quality>
     </Item>
         
-  <!-- Burger Flipper 3000 -->
+  <!-- Burger Flipper 3000 TODO: adjust the statvalues for spatula arm -->
   <!-- <Item name="PROSTHETICSPATULA" identifier="he-prostheticspatula" scale="0.55" category="Equipment" tags="smallitem,prosthetic" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="medcab"/>
     <Price baseprice="100">
