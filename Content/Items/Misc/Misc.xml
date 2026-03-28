@@ -1454,7 +1454,7 @@
     </Item>
         
   <!-- Burger Flipper 3000 -->
-  <Item name="PROSTHETICSPATULA" identifier="he-prostheticspatula" scale="0.55" category="Equipment" tags="smallitem,prosthetic" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <!-- <Item name="PROSTHETICSPATULA" identifier="he-prostheticspatula" scale="0.55" category="Equipment" tags="smallitem,prosthetic" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="medcab"/>
     <Price baseprice="100">
       <Price storeidentifier="merchantbutcher" minavailable="2" />
@@ -1474,7 +1474,7 @@
       <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" />
       <damagemodifier afflictiontypes="burn,bleeding,poison" armorsector="0.0,360.0" damagemultiplier="0.0" />
     </Wearable>
-  </Item>   
+  </Item> -->
         
     <!-- EFFECT ITEMS -->
     <!-- EFFECT ITEMS -->
