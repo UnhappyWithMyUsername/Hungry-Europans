@@ -1446,28 +1446,29 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <afflictionname.trait_likes_friedfoods>Craving Fried Food</afflictionname.trait_likes_friedfoods>
 <afflictiondescription.trait_likes_burgers>You are hungry for Fried Food.</afflictiondescription.trait_likes_burgers>
 <afflictionname.trait_likes_burgers>Craving Burgers</afflictionname.trait_likes_burgers>
-<afflictiondescription.trait_likes_hotdogs>You are hungry for Hotdogs.</afflictiondescription.trait_likes_hotdogs>
+<afflictiondescription.trait_likes_burgers>You are hungry for Burgers.</afflictiondescription.trait_likes_burgers>
 <afflictionname.trait_likes_hotdogs>Craving Hotdogs</afflictionname.trait_likes_hotdogs>
-<afflictiondescription.trait_likes_pizzas>You are hungry for Pizzas.</afflictiondescription.trait_likes_pizzas>
-<afflictionname.trait_likes_pizzas>Craving Pizzas</afflictionname.trait_likes_pizzas>
-<afflictiondescription.trait_likes_filets>You are hungry for Filets.</afflictiondescription.trait_likes_filets>
+<afflictiondescription.trait_likes_hotdogs>You are hungry for Hotdogs.</afflictiondescription.trait_likes_hotdogs>
 <afflictionname.trait_likes_filets>Craving Filets</afflictionname.trait_likes_filets>
-<afflictiondescription.trait_likes_roasts>You are hungry for Roasts.</afflictiondescription.trait_likes_roasts>
+<afflictiondescription.trait_likes_filets>You are hungry for Filets.</afflictiondescription.trait_likes_filets>
 <afflictionname.trait_likes_roasts>Craving Roasts</afflictionname.trait_likes_roasts>
-<afflictiondescription.trait_likes_sandwiches>You are hungry for Sandwiches.</afflictiondescription.trait_likes_sandwiches>
+<afflictiondescription.trait_likes_roasts>You are hungry for Roasts.</afflictiondescription.trait_likes_roasts>
 <afflictionname.trait_likes_sandwiches>Craving Sandwiches</afflictionname.trait_likes_sandwiches>
-<afflictiondescription.trait_likes_omelettes>You are hungry for Omelette.</afflictiondescription.trait_likes_omelettes>
+<afflictiondescription.trait_likes_sandwiches>You are hungry for Sandwiches.</afflictiondescription.trait_likes_sandwiches>
 <afflictionname.trait_likes_omelettes>Craving Omelette</afflictionname.trait_likes_omelettes>
-<afflictiondescription.trait_likes_soups>You are hungry for Soup.</afflictiondescription.trait_likes_soups>
+<afflictiondescription.trait_likes_omelettes>You are hungry for Omelette.</afflictiondescription.trait_likes_omelettes>
 <afflictionname.trait_likes_soups>Craving Soup</afflictionname.trait_likes_soups>
-<afflictiondescription.trait_likes_salads>You are hungry for Salad.</afflictiondescription.trait_likes_salads>
+<afflictiondescription.trait_likes_soups>You are hungry for Soup.</afflictiondescription.trait_likes_soups>
 <afflictionname.trait_likes_salads>Craving Salad</afflictionname.trait_likes_salads>
-<afflictiondescription.trait_likes_sweets>You are hungry for Sweets.</afflictiondescription.trait_likes_sweets>
+<afflictiondescription.trait_likes_salads>You are hungry for Salad.</afflictiondescription.trait_likes_salads>
 <afflictionname.trait_likes_sweets>Craving Sweets</afflictionname.trait_likes_sweets>
-<afflictiondescription.trait_likes_pizza>You are hungry for Pizza.</afflictiondescription.trait_likes_pizza>
+<afflictiondescription.trait_likes_sweets>You are hungry for Sweets.</afflictiondescription.trait_likes_sweets>
 <afflictionname.trait_likes_pizza>Craving Pizza</afflictionname.trait_likes_pizza>
-<afflictiondescription.trait_likes_pasta>You are hungry for pasta.</afflictiondescription.trait_likes_pasta>
-<afflictionname.trait_likes_pasta>Craving pasta</afflictionname.trait_likes_pasta>
+<afflictiondescription.trait_likes_pizza>You are hungry for Pizza.</afflictiondescription.trait_likes_pizza>
+<afflictionname.trait_likes_pasta>Craving Pasta</afflictionname.trait_likes_pasta>
+<afflictiondescription.trait_likes_pasta>You are hungry for Pasta.</afflictiondescription.trait_likes_pasta>
+<afflictionname.trait_likes_pasta>Craving Fruits</afflictionname.trait_likes_pasta>
+<afflictiondescription.trait_likes_pasta>You are hungry for Fruits.</afflictiondescription.trait_likes_pasta>
 
 <afflictionname.trait_likes_beer>Craving Beer</afflictionname.trait_likes_beer>
 <afflictiondescription.trait_likes_beer>You are thirsting for Beer.</afflictiondescription.trait_likes_beer>
