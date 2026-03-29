@@ -1405,32 +1405,31 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <randomizelikeddrink>Randomize (Will pick 1 random drink)</randomizelikeddrink>
 
 <talentname.he-trait_likes_friedfoods>Likes Fried Food</talentname.he-trait_likes_friedfoods>
-<talentdescription.he-trait_likes_burgers>You like eating Fried Food.</talentdescription.he-trait_likes_burgers>
+<talentdescription.he-trait_likes_friedfoods>You like eating Fried Food.</talentdescription.he-trait_likes_friedfoods>
 <talentname.he-trait_likes_burgers>Likes Burgers</talentname.he-trait_likes_burgers>
-<talentdescription.he-trait_likes_hotdogs>You like eating Hotdogs.</talentdescription.he-trait_likes_hotdogs>
+<talentdescription.he-trait_likes_burgers>You like eating Burgers.</talentdescription.he-trait_likes_burgers>
 <talentname.he-trait_likes_hotdogs>Likes Hotdogs</talentname.he-trait_likes_hotdogs>
-<talentdescription.he-trait_likes_pizzas>You like eating Pizzas.</talentdescription.he-trait_likes_pizzas>
-<talentname.he-trait_likes_pizzas>Likes Pizzas</talentname.he-trait_likes_pizzas>
-<talentdescription.he-trait_likes_filets>You like eating Filets.</talentdescription.he-trait_likes_filets>
+<talentdescription.he-trait_likes_hotdogs>You like eating Hotdogs.</talentdescription.he-trait_likes_hotdogs>
 <talentname.he-trait_likes_filets>Likes Filets</talentname.he-trait_likes_filets>
-<talentdescription.he-trait_likes_roasts>You like eating Roasts.</talentdescription.he-trait_likes_roasts>
+<talentdescription.he-trait_likes_filets>You like eating Filets.</talentdescription.he-trait_likes_filets>
 <talentname.he-trait_likes_roasts>Likes Roasts</talentname.he-trait_likes_roasts>
-<talentdescription.he-trait_likes_sandwiches>You like eating Sandwiches.</talentdescription.he-trait_likes_sandwiches>
+<talentdescription.he-trait_likes_roasts>You like eating Roasts.</talentdescription.he-trait_likes_roasts>
 <talentname.he-trait_likes_sandwiches>Likes Sandwiches</talentname.he-trait_likes_sandwiches>
-<talentdescription.he-trait_likes_omelettes>You like eating Omelette.</talentdescription.he-trait_likes_omelettes>
+<talentdescription.he-trait_likes_sandwiches>You like eating Sandwiches.</talentdescription.he-trait_likes_sandwiches>
 <talentname.he-trait_likes_omelettes>Likes Omelette</talentname.he-trait_likes_omelettes>
-<talentdescription.he-trait_likes_soups>You like eating Soup.</talentdescription.he-trait_likes_soups>
+<talentdescription.he-trait_likes_omelettes>You like eating Omelette.</talentdescription.he-trait_likes_omelettes>
 <talentname.he-trait_likes_soups>Likes Soup</talentname.he-trait_likes_soups>
-<talentdescription.he-trait_likes_salads>You like eating Salad.</talentdescription.he-trait_likes_salads>
+<talentdescription.he-trait_likes_soups>You like eating Soup.</talentdescription.he-trait_likes_soups>
 <talentname.he-trait_likes_salads>Likes Salad</talentname.he-trait_likes_salads>
-<talentdescription.he-trait_likes_sweets>You like eating Sweets.</talentdescription.he-trait_likes_sweets>
+<talentdescription.he-trait_likes_salads>You like eating Salad.</talentdescription.he-trait_likes_salads>
 <talentname.he-trait_likes_sweets>Likes Sweets</talentname.he-trait_likes_sweets>
-<talentdescription.he-trait_likes_pizza>You like eating Pizza.</talentdescription.he-trait_likes_pizza>
+<talentdescription.he-trait_likes_sweets>You like eating Sweets.</talentdescription.he-trait_likes_sweets>
 <talentname.he-trait_likes_pizza>Likes Pizza</talentname.he-trait_likes_pizza>
-<talentdescription.he-trait_likes_pasta>You like eating pasta.</talentdescription.he-trait_likes_pasta>
-<talentname.he-trait_likes_pasta>Likes pasta</talentname.he-trait_likes_pasta>
-<talentdescription.he-trait_likes_fruits>You like eating fruits.</talentdescription.he-trait_likes_fruits>
-<talentname.he-trait_likes_fruits>Likes fruits</talentname.he-trait_likes_fruits>
+<talentdescription.he-trait_likes_pizza>You like eating Pizza.</talentdescription.he-trait_likes_pizza>
+<talentname.he-trait_likes_pasta>Likes Pasta</talentname.he-trait_likes_pasta>
+<talentdescription.he-trait_likes_pasta>You like eating Pasta.</talentdescription.he-trait_likes_pasta>
+<talentname.he-trait_likes_fruits>Likes Fruits</talentname.he-trait_likes_fruits>
+<talentdescription.he-trait_likes_fruits>You like eating Fruits.</talentdescription.he-trait_likes_fruits>
 
 <talentname.he-trait_likes_beer>Likes Beer</talentname.he-trait_likes_beer>
 <talentdescription.he-trait_likes_beer>You like drinking Beer.</talentdescription.he-trait_likes_beer>
