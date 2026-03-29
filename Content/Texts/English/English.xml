@@ -1429,6 +1429,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentname.he-trait_likes_pizza>Likes Pizza</talentname.he-trait_likes_pizza>
 <talentdescription.he-trait_likes_pasta>You like eating pasta.</talentdescription.he-trait_likes_pasta>
 <talentname.he-trait_likes_pasta>Likes pasta</talentname.he-trait_likes_pasta>
+<talentdescription.he-trait_likes_fruits>You like eating fruits.</talentdescription.he-trait_likes_fruits>
+<talentname.he-trait_likes_fruits>Likes fruits</talentname.he-trait_likes_fruits>
 
 <talentname.he-trait_likes_beer>Likes Beer</talentname.he-trait_likes_beer>
 <talentdescription.he-trait_likes_beer>You like drinking Beer.</talentdescription.he-trait_likes_beer>
