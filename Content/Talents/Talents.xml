@@ -53,6 +53,7 @@
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
                 <Conditional IsBot="false" />
                 <Conditional mood="gte 10" />
+                <Conditional he-hungryforhumanmeat="lt 20" />
                 <Affliction identifier="trait_likes_friedfoods" probability="0.01" amount="1200" />
                 <Affliction identifier="trait_likes_burgers" probability="0.01" amount="1200" />
                 <Affliction identifier="trait_likes_hotdogs" probability="0.01" amount="1200" />
