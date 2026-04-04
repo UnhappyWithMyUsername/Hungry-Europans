@@ -1418,7 +1418,7 @@
     
     
     <!-- Soap -->
-    <Item identifier="he-soap" tags="soap,mediumitem" category="misc" scale="0.5" impacttolerance="1" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" donttransferbetweensubs="false" health="20">
+    <Item identifier="he-soap" tags="soap,mediumitem,cleaningagent" category="misc" scale="0.5" impacttolerance="1" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" donttransferbetweensubs="false" health="20">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="97,41,50,27" depth="0.6" origin="0.5,0.5" />
       <PreferredContainer primary="crewcab" />
       <Body width="50" height="27" density="11" />
