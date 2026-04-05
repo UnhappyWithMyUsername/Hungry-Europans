@@ -106,7 +106,7 @@
         <!-- <RequiredSkill identifier="cooking" level="20" /> -->
         <RequiredItem identifier="he-kegseawater" amount="1" />
       </Fabricate>
-      <!-- <Fabricate suitablefabricators="sink" requiredtime="300" requiresrecipe="false" amount="1">
+      <!-- <Fabricate suitablefabricators="sink" requiredtime="240" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="hose" amount="1" />
         <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.2" />
@@ -149,8 +149,8 @@
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="91,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Body width="91" height="136" density="10.1" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="25" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="false" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="25" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="4" />
         <RequiredItem identifier="phosphorus" amount="2" />
@@ -199,8 +199,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="819,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="25" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="false" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="25" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="4" />
         <RequiredItem identifier="flashpowder" amount="2" />
@@ -249,8 +249,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="910,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="25" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="false" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="25" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="4" />
         <RequiredItem identifier="huskeggsbasic" amount="1" />
@@ -297,8 +297,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,138,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="25" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="false" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="25" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="4" />
         <RequiredItem identifier="banana" amount="8" />
@@ -344,8 +344,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="728,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="25" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="false" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="25" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="5" />
         <RequiredItem identifier="badtobaccobud" amount="1" />
@@ -392,8 +392,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="182,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="true" amount="1">
-        <RequiredSkill identifier="cooking" level="30" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="true" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="30" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="8" />
         <RequiredItem identifier="raptorbane" amount="6" />
@@ -438,8 +438,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="273,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.5" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="true" amount="1">
-        <RequiredSkill identifier="cooking" level="35" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="true" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="35" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="8" />
         <RequiredItem identifier="badraptorbane" amount="2" />
@@ -484,8 +484,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="364,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="11" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="true" amount="1">
-        <RequiredSkill identifier="cooking" level="40" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="true" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="40" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="7" />
         <RequiredItem tag="mutatedplant" amount="1" />
@@ -532,8 +532,8 @@
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="455,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="11.5" />
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="true" amount="1">
-        <RequiredSkill identifier="cooking" level="50" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="true" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="50" /> -->
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="7" />
         <RequiredItem identifier="badbubbleberries" amount="1" />
