@@ -660,8 +660,8 @@
         <Price storeidentifier="merchantmine" sold="false" />
       </Price>
       <Deconstruct time="1" />
-      <Fabricate suitablefabricators="distiller" requiredtime="180" amount="3">
-        <RequiredSkill identifier="cooking" level="50" />
+      <Fabricate suitablefabricators="distiller" requiredtime="160" amount="3">
+        <!-- <RequiredSkill identifier="cooking" level="50" /> -->
         <RequiredItem identifier="he-molochcheese" amount="3" />
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
       </Fabricate>

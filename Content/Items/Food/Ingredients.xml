@@ -294,7 +294,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <Fabricate suitablefabricators="distiller" requiredtime="140" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="25" />
+        <!-- <RequiredSkill identifier="cooking" level="25" /> -->
         <RequiredItem identifier="ethanol" amount="2" />
         <RequiredItem identifier="slimebacteria" amount="1" UseCondition="true" MinCondition="0" />
         <RequiredItem tag="emptybottle" amount="1" />
