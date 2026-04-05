@@ -26,17 +26,18 @@ Important:
 //////////////////////
 //////////////////////
 
-[hr]03/04/2026[/hr]
+[hr]05/04/2026[/hr]
 
-Experimental Moody Rework
+Small fixes
 
 [b]Additions:[/b]
 [List]
-[*] 
+[*] Nothing :(
 [/List]
 
 [b]Changes:[/b] 
 [List]
+[*] Distiller and Brewer no longer use cooking skill, so other players can actually help in brewing. Some crafting time adjustments
 [*] No longer get random cravings if you are already craving human meat
 [*] Husk meat is no longer a valid meat type for non-husk recipes
 [/List]
@@ -62,7 +63,6 @@ Experimental Moody Rework
 //////////////////////
 
 Misc TODO:
--Make raw husk meat not count as rawmeatpiece?
 
 LIST OF FOODS IDEAS:
 
