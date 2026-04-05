@@ -9,7 +9,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" depth="0.525" origin="0.5,0.65" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1" displayname="vegetarian">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="bubbleberries" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -403,14 +403,14 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" displayname="vegetarian">
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
         <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" MinCondition="0" UseCondition="false"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.02"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.02"/>
       </Fabricate>
-      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="2" displayname="vegetarian">
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="2" >
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
         <RequiredItem tag="largeegg" amount="1" description="fabricationdescription.largeegg" header="fabricationheader.largeegg" MinCondition="0" UseCondition="false"/>
