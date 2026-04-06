@@ -13,6 +13,12 @@
     
     <Affliction name="" identifier="trait_likes_friedfoods" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesfriedfood"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_friedfood" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -28,6 +34,12 @@
 
     <Affliction name="" identifier="trait_likes_burgers" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesburger"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_burger" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -43,6 +55,12 @@
 
     <Affliction name="" identifier="trait_likes_hotdogs" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likeshotdog"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_hotdog" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -58,6 +76,12 @@
 
     <Affliction name="" identifier="trait_likes_pizza" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likespizza"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_pizza" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -73,6 +97,12 @@
 
     <Affliction name="" identifier="trait_likes_filets" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesfilet"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_filet" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -88,6 +118,12 @@
 
     <Affliction name="" identifier="trait_likes_roasts" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesroast"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_roast" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -103,6 +139,12 @@
 
     <Affliction name="" identifier="trait_likes_sandwiches" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessandwich"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_sandwich" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -118,6 +160,12 @@
 
     <Affliction name="" identifier="trait_likes_omelettes" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesomelette"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_omelette" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -133,6 +181,12 @@
 
     <Affliction name="" identifier="trait_likes_soups" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessoup"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_soup" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -148,6 +202,12 @@
 
     <Affliction name="" identifier="trait_likes_salads" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessalad"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_salad" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -163,6 +223,12 @@
 
     <Affliction name="" identifier="trait_likes_sweets" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessweet"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_sweet" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -182,6 +248,12 @@
     
     <Affliction name="" identifier="trait_likes_fruits" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessweet"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_fruit" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -201,6 +273,12 @@
 
     <Affliction name="" identifier="trait_likes_pasta" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likespasta"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_food" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="ate_pasta" description="" type="ate_food" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -222,6 +300,12 @@
 
     <Affliction name="" identifier="trait_likes_beer" description="" type="craving_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_drink" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesbeer"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_drink" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="drank_beer" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -237,6 +321,12 @@
 
     <Affliction name="" identifier="trait_likes_rum" description="" type="craving_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_drink" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesrum"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_drink" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="drank_rum" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -252,6 +342,12 @@
 
     <Affliction name="" identifier="trait_likes_whiskey" description="" type="craving_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_drink" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likeswhiskey"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_drink" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="drank_whiskey" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -267,6 +363,12 @@
 
     <Affliction name="" identifier="trait_likes_tea" description="" type="craving_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_drink" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likestea"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_drink" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="drank_tea" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
@@ -282,6 +384,12 @@
 
     <Affliction name="" identifier="trait_likes_cola" description="" type="craving_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_drink" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likescola"/>
+      <PeriodicEffect mininterval="3" maxinterval="3">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true">
+          <Conditional mood="lte 1" />
+          <ReduceAffliction type="craving_drink" amount="9999" />
+        </StatusEffect>
+      </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,512,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <Affliction name="" identifier="drank_cola" description="" type="drank_drink" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
