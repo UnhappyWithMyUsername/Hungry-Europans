@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- These are hidden afflictions that do not heal over time and are obtained by enabling mood on a character. -->
 <Override>
   <Afflictions>
-
-    <!-- TODO: IF DEVS ENABLE CONDITIONALS TO CHECK FOR TALENTS, REMOVE THE TRAIT_LIKES_XXXX AFFLICTION AND INSTEAD CHECK TALENT IN THE STATUSEFFECT. ALSO REMOVE THE SE FROM THE TALENTS THEMSELVES -->
-
     <!-- FOOD -->
     <!-- FOOD -->
     <!-- FOOD -->
     <!-- FOOD -->
     <!-- FOOD -->
+    
+    <!-- "Traits" afflictions have been reworked into "Cravings".
+    The Moody europan talent rolls all of these afflictions with a small probability every X minutes if stress is high enough.
+    Only a single food and drink craving can be active at a time (afflictions have innate 100% resistance for cravings)
+    Eating food that has the ate_xxxx affliction will reduce craving and reduce stress at the same time
+    Cravings will go away naturally if you reduce stress below 1 -->
+    
     
     <Affliction name="" identifier="trait_likes_friedfoods" description="" type="craving_food" limbspecific="false" indicatorlimb="Head" maxstrength="1200" affectmachines="false" showiconthreshold="0" showicontoothersthreshold="9999" showinhealthscannerthreshold="9999" healableinmedicalclinic="false" iconcolors="130,150,120;145,165,90;160,180,60">
       <Effect minstrength="0" maxstrength="1200" strengthchange="-1" resistancefor="craving_food" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likesfriedfood"/>
