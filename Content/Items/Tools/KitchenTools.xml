@@ -265,6 +265,7 @@
           <Conditional group="neq husk" />
           <Conditional group="neq ancientalien" />
           <Conditional group="neq thalamus" />
+          <Conditional speciesname="neq hammerheadspawn" />
           <Conditional mass="lte 10" />
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="10" />
@@ -304,10 +305,11 @@
           <SpawnItem identifier="he-hammerheadmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
           <SpawnItem identifier="hammerheadribs" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.1" />
         </StatusEffect>
+        <!-- hammerhead spawns are excluded -->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
           <Conditional speciesname="eq hammerheadspawn" />
           <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
+          <!-- <Conditional he-butchered="lt 100"/> -->
           <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
           <RemoveCharacter />
           <SpawnItem identifier="he-hammerheadspawnmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
@@ -427,6 +429,7 @@
           <Conditional group="neq abyss" />
           <Conditional group="neq mantisoid" />
           <Conditional group="neq thalamus" />
+          <Conditional speciesname="neq hammerheadspawn" />
           <Affliction identifier="he-butchered" strength="200" />
           <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
