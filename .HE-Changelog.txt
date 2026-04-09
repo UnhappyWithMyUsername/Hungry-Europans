@@ -45,6 +45,7 @@ Small fixes
 [b]Fixes:[/b] 
 [List]
 [*] Reduced blubber drop rate considerably, I accidentally left the drop rate % for testing purposes
+[*] Fixed hammerhead spawns not dropping at all and dropping offal instead
 [*] Fix mudramen soup using wrong text ID
 [*] Fix several cravings text and description
 [*] Fixed a particle name conflicting with vanilla
