@@ -461,6 +461,10 @@
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <SkillRequirementHint identifier="butchery" level="100"/>
+      <Quality>
+        <QualityStat stattype="StrikingPowerMultiplier" value="0.05"/>
+        <QualityStat stattype="StrikingSpeedMultiplier" value="0.05"/>
+      </Quality>
     </Item>
 
 
