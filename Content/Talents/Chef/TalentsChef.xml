@@ -367,6 +367,11 @@
           </CharacterAbilityRemoveRandomIngredient>
         </Abilities>
       </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGivePermanentStat statidentifier="cleaver" stattype="IncreaseFabricationQuality" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>      
     </Talent>
 
   <!--Disable meat rotting in inventory + 20% burn resistance -->

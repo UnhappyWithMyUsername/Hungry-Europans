@@ -719,7 +719,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-culinaryschool>After completing a mission, the first ‖color:gui.orange‖Gourmet‖end‖ meal you cook earns you a ‖color:gui.orange‖Commendation‖end‖.</talentdescription.he-culinaryschool>
 <!--Patch 17-->
 <talentname.he-thinnerslices>Thinner Slices</talentname.he-thinnerslices><!--Patch 17-->
-<talentdescription.he-thinnerslices>Gain a [chance]% chance to not consume raw meat when cooking.</talentdescription.he-thinnerslices><!--Patch 17-->
+<talentdescription.he-thinnerslices>Gain a [chance]% chance to not consume raw meat when cooking.\n‖color:gui.orange‖Cleavers‖end‖ you fabricate are of ‖color:gui.green‖1‖end‖ higher quality.</talentdescription.he-thinnerslices><!--Patch 17-->
 <talentname.he-dryaging>Dry-Aging</talentname.he-dryaging><!--Patch 17-->
 <talentname.he-slaughterhouse>Slaughterhouse</talentname.he-slaughterhouse><!--Patch 17-->
 <talentname.he-seafoodsamurai>Seafood Samurai</talentname.he-seafoodsamurai><!--Patch 17-->
