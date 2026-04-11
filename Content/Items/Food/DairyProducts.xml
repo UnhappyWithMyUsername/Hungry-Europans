@@ -19,7 +19,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -56,7 +56,7 @@
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.796" origin="0.5,0.78"  />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -90,7 +90,7 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="20" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -159,7 +159,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -196,7 +196,7 @@
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.796" origin="0.5,0.78"  />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -230,7 +230,7 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="20" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -298,7 +298,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -335,7 +335,7 @@
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.796" origin="0.5,0.78"  />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -369,7 +369,7 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="20" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -437,7 +437,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -474,7 +474,7 @@
       <ContainedSprite allowedcontainertags="cuttingboard" texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.796" origin="0.5,0.78"  />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
@@ -508,7 +508,7 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="10" />
-      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="20" interval="2" disabledeltatime="true" setvalue="true" comparison="Or">
