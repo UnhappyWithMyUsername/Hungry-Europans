@@ -1467,8 +1467,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <afflictiondescription.trait_likes_pizza>You are hungry for Pizza.</afflictiondescription.trait_likes_pizza>
 <afflictionname.trait_likes_pasta>Craving Pasta</afflictionname.trait_likes_pasta>
 <afflictiondescription.trait_likes_pasta>You are hungry for Pasta.</afflictiondescription.trait_likes_pasta>
-<afflictionname.trait_likes_pasta>Craving Fruits</afflictionname.trait_likes_pasta>
-<afflictiondescription.trait_likes_pasta>You are hungry for Fruits.</afflictiondescription.trait_likes_pasta>
+<afflictionname.trait_likes_fruits>Craving Fruits</afflictionname.trait_likes_fruits>
+<afflictiondescription.trait_likes_fruits>You are hungry for Fruits.</afflictiondescription.trait_likes_fruits>
 
 <afflictionname.trait_likes_beer>Craving Beer</afflictionname.trait_likes_beer>
 <afflictiondescription.trait_likes_beer>You are thirsting for Beer.</afflictiondescription.trait_likes_beer>
