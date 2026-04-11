@@ -543,16 +543,15 @@
           <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" comparison="and">
-                <Conditional hunger="gt 0" />
-                <Conditional hunger="lt 30" />
-                <Conditional he-stuffed="gte 35" />
+                <Conditional he-stuffed="gte 25" />
                 <Affliction identifier="excellentmorale" amount="10.0"/>
                 <ReduceAffliction identifier="highmorale" strength="10.0"/>
               </StatusEffect>
+              <!-- make sure the characters have hunger enabled otherwise the buff is applied regardless of condition -->
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" comparison="and">
                 <Conditional hunger="gt 0" />
                 <Conditional hunger="lt 30" />
-                <Conditional he-stuffed="lt 35" />
+                <Conditional he-stuffed="lt 25" />
                 <Affliction identifier="highmorale" amount="10.0"/>
                 <ReduceAffliction identifier="excellentmorale" strength="10.0"/>
               </StatusEffect>
