@@ -1151,13 +1151,13 @@
                 <Conditional isunconscious="true" />
                 <Conditional drunk="gt 0" />
                 <Affliction identifier="he-masterbrewerbuff" strength="2"/>
-                <Affliction identifier="drunk" strength="0.015"/>
+                <Affliction identifier="drunk" strength="0.1"/>
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
                 <Conditional isunconscious="true" />
                 <Conditional drunknodebuffs="gt 0" />
                 <Affliction identifier="he-masterbrewerbuff" strength="2"/>
-                <Affliction identifier="drunk" strength="0.015"/>
+                <Affliction identifier="drunk" strength="0.1"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
