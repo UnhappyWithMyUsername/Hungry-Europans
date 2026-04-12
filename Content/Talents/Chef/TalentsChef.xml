@@ -235,7 +235,7 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Drunken Sailor with new name and icon-->
+  <!-- UNUSED, merged with Masterbrewer - Drunken Sailor with new name and icon -->
     <Talent identifier="he-smellslikeabrewery">
       <Description tag="talentdescription.drunkensailor">
         <Replace tag="[stunresistance]" value="75" color="gui.green"/>
@@ -1127,12 +1127,15 @@
       </AbilityGroupInterval>
     </Talent>
 
-  <!--Unlock brewing recipes-->
+  <!--Unlock brewing recipes, heal drunk+unconscious crewmates, give "bad" drunkenness immunity -->
     <Talent identifier="he-masterbrewer">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-masterbrewer">
         <Replace tag="[affliction]" value="afflictionname.drunk" color="gui.orange"/>
         <Replace tag="[unconscious]" value="unconscious" color="gui.orange"/>
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.he-kegrum" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.unlockrecipe">
         <Replace tag="[itemname]" value="entityname.he-kegpiraterum" color="gui.orange"/>
@@ -1217,7 +1220,7 @@
       </AbilityGroupInterval>
     </Talent>
 
-  <!--20% chance to duplicate a cooked hotdog or burger-->
+  <!-- Gain damage resistance and unconscious immunity  -->
     <Talent identifier="he-shortorderchef">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-shortorderchef">
