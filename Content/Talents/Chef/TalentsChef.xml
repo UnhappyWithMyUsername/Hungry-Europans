@@ -567,10 +567,41 @@
     </Talent>
 
   <!-- TODO: Make sure to add ALL foodbuffs to dinnertheater talent -->
-  <!--Increases food buffs with bagpipes - Insanely long because it lists every food buff-->
+  <!--Prevents food buffs from decaying when playing with instruments + Build up a buff if stress is low
+  Insanely long because it lists every food buff-->
     <Talent identifier="he-dinnertheater">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,2" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.he-dinnertheater" />
+      <Description tag="talentdescription.he-dinnertheater" >
+        <Replace tag="[skillbonus]" value="5" color="gui.green"/>
+        <Replace tag="[skilllearnspeed]" value="50" color="gui.orange"/>
+        <Replace tag="[duration]" value="180" color="gui.orange"/>      
+      </Description>
+      <!-- Build up a buff if stress is low -->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem tags="instrument"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true">
+                <Conditional mood="gt 0"/>
+                <Conditional mood="lt 25"/>
+                <Affliction identifier="he-dinnertheaterbuff" amount="6" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true">
+                <Conditional mood="gt 0"/>
+                <Conditional mood="lt 25"/>
+                <Affliction identifier="he-dinnertheaterbuff" amount="6" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
       <!-- Generic food buffs -->
       <!--Calcium Food Buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">

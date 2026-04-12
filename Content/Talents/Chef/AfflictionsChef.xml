@@ -158,5 +158,32 @@
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,7" sheetelementsize="128,128" color="155,40,175,255" origin="0,0" />
   </Affliction>
   
+  
+  <Affliction
+    identifier="he-dinnertheaterbuff"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    indicatorlimb="Head"
+    maxstrength="180"
+    treatmentthreshold="1000"
+    showinhealthscannerthreshold="1000">
+    <Effect minstrength="0"
+            maxstrength="180"
+            strengthchange="-1"
+            minskillgainmultiplier="1.5"
+            maxskillgainmultiplier="1.5">
+      <StatValue stattype="ElectricalSkillBonus" value="5" />
+      <StatValue stattype="HelmSkillBonus" value="5" />
+      <StatValue stattype="MechanicalSkillBonus" value="5" />
+      <StatValue stattype="MedicalSkillBonus" value="5" />
+      <StatValue stattype="WeaponsSkillBonus" value="5" />
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="JollyWalk" priority="3" ExpectedSpecies="Human" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,7" sheetelementsize="128,128" color="200,240,65,255" origin="0,0" />
+  </Affliction>
+  
 </Override>
 </Afflictions>
