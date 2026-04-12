@@ -686,11 +686,11 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentname.he-lifesaver>Life Saver</talentname.he-lifesaver>
 <talentdescription.he-lifesaver>Gain a bonus of [amount] to [skill].</talentdescription.he-lifesaver><!--Patch 17-->
 <talentname.he-delicacies>Delicacies</talentname.he-delicacies>
-<talentdescription.he-delicacies>Crewmembers gain a small amount of [affliction1], [affliction2] and [affliction3] effects when eating raw ‖color:gui.orange‖Fruit‖end‖.</talentdescription.he-delicacies><!--Patch 22 -->
+<talentdescription.he-delicacies>Crewmembers gain a limited amount of [affliction1], [affliction2] and [affliction3] effects when eating raw ‖color:gui.orange‖Fruit‖end‖.</talentdescription.he-delicacies><!--Patch 22 -->
 <talentname.he-huskfood>Husk Food</talentname.he-huskfood><!--Patch 13-->
 <talentdescription.he-huskfood>You can now turn the meat of a [itemname1] into edible food.</talentdescription.he-huskfood><!--Patch 13-->
 <talentname.he-masterbrewer>Master Brewer</talentname.he-masterbrewer><!--Patch 10-->
-<talentdescription.he-masterbrewer>Crewmates that are [affliction] slowly regenerate health when [unconscious].</talentdescription.he-masterbrewer><!--Patch 22-->
+<talentdescription.he-masterbrewer>Crewmates that are [affliction] slowly regenerate health when [unconscious].\nGain immunity to the negative effects of drunkenness.</talentdescription.he-masterbrewer><!--Patch 22-->
 <talentname.he-tastyfood>Tasty Food</talentname.he-tastyfood><!--Patch 13-->
 <talentdescription.he-tastyfood>Your food is known to be amongst the best. If they are not hungry, crewmates gain ‖color:gui.orange‖High Morale‖end‖. If they are stuffed, they gain ‖color:gui.orange‖Excellent Morale‖end‖ instead, doubling the following bonuses:</talentdescription.he-tastyfood><!--Patch 13-->
 <talentname.he-favorite>Everyone's Favorite</talentname.he-favorite><!--Patch 13-->
@@ -726,7 +726,9 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-seafoodsamurai>If you are in the open sea, gain an additional [amount]% [stattype].</talentdescription.he-seafoodsamurai><!--Patch 17-->
 <talentname.he-parttimejob>Part-Time Job</talentname.he-parttimejob><!--Patch 17-->
 <talentname.he-dinnertheater>Dinner Theater</talentname.he-dinnertheater><!--Patch 17-->
-<talentdescription.he-dinnertheater>Playing the ‖color:gui.orange‖Bagpipes‖end‖ prolongs the duration of food and drink buffs for you and nearby crewmates.</talentdescription.he-dinnertheater><!--Patch 17-->
+<talentdescription.he-dinnertheater>Playing an ‖color:gui.orange‖Instrument‖end‖ prolongs the duration of food and drink buffs for you and nearby crewmates.\nIf they have low ‖color:gui.orange‖Stress‖end‖, they also gain +[skillbonus] to all skills and learn skills [skilllearnspeed]% faster for up to [duration] seconds.</talentdescription.he-dinnertheater><!--Patch 17-->
+<afflictionname.he-dinnertheaterbuff>Dinner Theater</afflictionname.he-dinnertheaterbuff><!--Patch 20-->
+<afflictiondescription.he-dinnertheaterbuff>A happy crew is an efficient crew.</afflictiondescription.he-dinnertheaterbuff><!--Patch 20-->
 <talentname.he-teppanyaki>Teppanyaki</talentname.he-teppanyaki><!--Patch 17-->
 <talentdescription.he-teppanyaki>Whenever you gain a [skillname1] or [skillname2] skill point, your crew gains a point as well.\nDeal [powerincrease]% more damage with ‖color:gui.orange‖Pans‖end‖.</talentdescription.he-teppanyaki><!--Patch 17-->
 <talentname.he-workpromotion>Work Promotion</talentname.he-workpromotion><!--Patch 17-->

@@ -158,7 +158,7 @@
         <Replace tag="[stattype]" value="stattypenames.meleeattackmultiplier" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.he-steadyhands">
-        <Replace tag="[amount]" value="15" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
@@ -235,7 +235,7 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Drunken Sailor with new name and icon-->
+  <!-- UNUSED, merged with Masterbrewer - Drunken Sailor with new name and icon -->
     <Talent identifier="he-smellslikeabrewery">
       <Description tag="talentdescription.drunkensailor">
         <Replace tag="[stunresistance]" value="75" color="gui.green"/>
@@ -567,10 +567,41 @@
     </Talent>
 
   <!-- TODO: Make sure to add ALL foodbuffs to dinnertheater talent -->
-  <!--Increases food buffs with bagpipes - Insanely long because it lists every food buff-->
+  <!--Prevents food buffs from decaying when playing with instruments + Build up a buff if stress is low
+  Insanely long because it lists every food buff-->
     <Talent identifier="he-dinnertheater">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,2" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.he-dinnertheater" />
+      <Description tag="talentdescription.he-dinnertheater" >
+        <Replace tag="[skillbonus]" value="5" color="gui.green"/>
+        <Replace tag="[skilllearnspeed]" value="50" color="gui.green"/>
+        <Replace tag="[duration]" value="180" color="gui.green"/>      
+      </Description>
+      <!-- Build up a buff if stress is low -->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem tags="instrument"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true">
+                <Conditional mood="gt 0"/>
+                <Conditional mood="lt 25"/>
+                <Affliction identifier="he-dinnertheaterbuff" amount="6" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true">
+                <Conditional mood="gt 0"/>
+                <Conditional mood="lt 25"/>
+                <Affliction identifier="he-dinnertheaterbuff" amount="6" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
       <!-- Generic food buffs -->
       <!--Calcium Food Buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
@@ -1115,11 +1146,14 @@
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
                 <Conditional ate_fruit="gt 0" />
-                <Affliction identifier="strengthen" strength="10"/>
-                <Affliction identifier="durationincrease" strength="20"/>
-                <Affliction identifier="stabilozineeffect" strength="6"/>
+                <Conditional strengthen="lt 180" />
+                <Conditional durationincrease="lt 180" />
+                <Conditional stabilozineeffect="lt 180" />
+                <Affliction identifier="strengthen" strength="11"/>
+                <Affliction identifier="durationincrease" strength="11"/>
+                <Affliction identifier="stabilozineeffect" strength="6.5"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
@@ -1127,12 +1161,15 @@
       </AbilityGroupInterval>
     </Talent>
 
-  <!--Unlock brewing recipes-->
+  <!--Unlock brewing recipes, heal drunk+unconscious crewmates, give "bad" drunkenness immunity -->
     <Talent identifier="he-masterbrewer">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-masterbrewer">
         <Replace tag="[affliction]" value="afflictionname.drunk" color="gui.orange"/>
         <Replace tag="[unconscious]" value="unconscious" color="gui.orange"/>
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.he-kegrum" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.unlockrecipe">
         <Replace tag="[itemname]" value="entityname.he-kegpiraterum" color="gui.orange"/>
@@ -1151,24 +1188,31 @@
                 <Conditional isunconscious="true" />
                 <Conditional drunk="gt 0" />
                 <Affliction identifier="he-masterbrewerbuff" strength="2"/>
-                <Affliction identifier="drunk" strength="0.015"/>
+                <Affliction identifier="drunk" strength="0.1"/>
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
                 <Conditional isunconscious="true" />
                 <Conditional drunknodebuffs="gt 0" />
                 <Affliction identifier="he-masterbrewerbuff" strength="2"/>
-                <Affliction identifier="drunk" strength="0.015"/>
+                <Affliction identifier="drunk" strength="0.1"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
         </Abilities>
       </AbilityGroupInterval>
-        
+      <!-- drunk no debuffs -->
+      <AbilityGroupEffect abilityeffecttype="OnAddDamageAffliction">
+        <Abilities>
+          <CharacterAbilityModifyAffliction afflictionidentifiers="drunk" replacewith="drunknodebuffs" />
+        </Abilities>
+        <FallbackAbilities>
+          <CharacterAbilityModifyAffliction afflictionidentifiers="drunk" replacewith="drunknodebuffs" />
+        </FallbackAbilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="he-kegrum"/>
       <AddedRecipe itemidentifier="he-kegpiraterum"/>
       <AddedRecipe itemidentifier="he-kegwhiskey"/>
-      <AddedRecipe itemidentifier="he-keghalucinova"/>
-      
-      
+      <AddedRecipe itemidentifier="he-keghalucinova"/>      
     </Talent>
 
   <!--Chance not to consume milk when crafting food-->
@@ -1210,7 +1254,7 @@
       </AbilityGroupInterval>
     </Talent>
 
-  <!--20% chance to duplicate a cooked hotdog or burger-->
+  <!-- Gain damage resistance and unconscious immunity  -->
     <Talent identifier="he-shortorderchef">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-shortorderchef">

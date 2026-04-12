@@ -138,7 +138,8 @@
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="NearbyCharacters" range="300" interval="1" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
+                <Conditional mood="gte 1" />
                 <Conditional moodmusiccooldown="lt 30" />
                 <Affliction identifier="moodmusiccooldown" amount="1" />
                 <ReduceAffliction identifier="mood" amount="0.5" />
