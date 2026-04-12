@@ -1,6 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+
+    <!-- Autofiller item - appears inside kitchen counters at the start of a campaign, then spawns other items and deletes itself
+         Easier than defining preferredcontainer in every single individual item -->
+    <Item name="Kitchen Autofiller" identifier="kitchen_autofiller" category="Hidden" hideinmenus="true" Tags="smallitem" scale="0.5" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="432,488,22,23" depth="0.502" origin="0.5,0.5" />
+      <Body radius="1" />
+      <PreferredContainer primary="he-kitchencounter" amount="1" spawnprobability="1" maxleveldifficulty="100" />
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
+        <!-- Spawn a selection of random and non-random items in the kitchen -->
+        <StatusEffect type="Always" target="This" oneshot="true" spawnitemrandomly="false">
+          <SpawnItem identifier="he-cleaver" spawnposition="SameInventory" mincount="1" maxcount="1" conditionpercentage="30" />
+          <SpawnItem identifier="he-emptyplate" spawnposition="SameInventory" mincount="1" maxcount="2" />
+          <SpawnItem identifier="he-emptybowl" spawnposition="SameInventory" mincount="1" maxcount="2" />
+          <SpawnItem identifier="he-fork" spawnposition="SameInventory" mincount="1" maxcount="2" />
+          <SpawnItem identifier="he-spoon" spawnposition="SameInventory" mincount="1" maxcount="2" />
+          <SpawnItem identifier="he-water" spawnposition="SameInventory" mincount="2" maxcount="2" />
+          <SpawnItem identifier="he-salt" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-pepper" spawnposition="SameInventory" mincount="1" maxcount="1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" oneshot="true" spawnitemrandomly="true">
+          <SpawnItem identifier="he-cookingoil" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-vinegar" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-ketchup" spawnposition="SameInventory" mincount="1" maxcount="1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" oneshot="true" spawnitemrandomly="true">
+          <SpawnItem identifier="he-flour" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-sugar" spawnposition="SameInventory" mincount="1" maxcount="1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" oneshot="true" spawnitemrandomly="true">
+          <SpawnItem identifier="he-pan" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-pot" spawnposition="SameInventory" mincount="1" maxcount="1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" oneshot="true" spawnitemrandomly="true">
+          <SpawnItem identifier="he-mreration" spawnposition="SameInventory" mincount="2" maxcount="2" />
+          <SpawnItem identifier="he-proteinalgaecake" spawnposition="SameInventory" mincount="2" maxcount="2" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" oneshot="true" spawnitemrandomly="true">
+          <SpawnItem identifier="proteinbar" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-chips1" spawnposition="SameInventory" mincount="1" maxcount="1" />
+          <SpawnItem identifier="he-chips2" spawnposition="SameInventory" mincount="1" maxcount="1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="1" oneshot="true" >
+          <Remove />
+        </StatusEffect>
+      </ItemComponent>
+    </Item>
+
+
+
     <!-- Water Filter -->
 
     <!-- TODO: Disabled hose/filter, they are useless and incomplete for now, reenable later when we figure out what to do with them. -->

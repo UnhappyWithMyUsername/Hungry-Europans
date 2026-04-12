@@ -380,7 +380,7 @@
         <RequiredItem identifier="steel" amount="6" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="20" canbeselected="true" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect">
+      <ItemContainer capacity="20" canbeselected="true" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect" autofill="true">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
         <!-- Icon - Oven/Dishwasher -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="20" sourcerect="426,853,85,85" origin="0.5,0.5" />
