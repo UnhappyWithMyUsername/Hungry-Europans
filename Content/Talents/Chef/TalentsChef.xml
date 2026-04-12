@@ -158,7 +158,7 @@
         <Replace tag="[stattype]" value="stattypenames.meleeattackmultiplier" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.he-steadyhands">
-        <Replace tag="[amount]" value="15" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
