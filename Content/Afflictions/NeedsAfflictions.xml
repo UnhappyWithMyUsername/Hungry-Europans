@@ -139,12 +139,14 @@
       <Effect minstrength="50" maxstrength="75"
         dialogflag="badmood"
         minskillmultiplier="0.9"
-        maxskillmultiplier="0.8">
+        maxskillmultiplier="0.8"
+        minresistance="1.0" maxresistance="1.0" resistancefor="highmorale,excellentmorale" >
       </Effect>
       <Effect minstrength="75" maxstrength="100"
         dialogflag="awfulmood"
         minskillmultiplier="0.8"
-        maxskillmultiplier="0.7">
+        maxskillmultiplier="0.7"
+        minresistance="1.0" maxresistance="1.0" resistancefor="highmorale,excellentmorale" >
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,256,128,128" origin="0,0" />
     </Affliction>
