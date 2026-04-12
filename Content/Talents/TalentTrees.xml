@@ -13,7 +13,7 @@
       <TalentOptions requiredtalents="2" maxchosentalents="6">
         <TalentOption identifier="he-steadyhands"/>
         <TalentOption identifier="he-foodtrucking"/>
-        <TalentOption identifier="he-smellslikeabrewery"/>		
+        <TalentOption identifier="he-huskegghunt"/>	
         <TalentOption identifier="he-lazygardener"/>
         <TalentOption identifier="he-culinaryschool"/>	
         <TalentOption identifier="he-psycookinesis"/>
@@ -59,8 +59,7 @@
     </SubTree>
     <SubTree identifier="chef" type="specialization" requires="chef_primary" blocks="entertainer,butcher">
       <TalentOptions>
-        <TalentOption identifier="he-headchef"/>	  
-        <TalentOption identifier="he-huskegghunt"/>
+        <TalentOption identifier="he-headchef"/>
       </TalentOptions>
       <TalentOptions>
         <TalentOption identifier="he-delicacies"/>
@@ -68,7 +67,7 @@
       </TalentOptions>
       <TalentOptions>
         <TalentOption identifier="he-creamery"/>
-        <TalentOption identifier="he-shortorderchef"/>		
+        <TalentOption identifier="he-shortorderchef"/>
       </TalentOptions>
       <TalentOptions>
         <ShowCaseTalent identifier="he-dietarypreference">

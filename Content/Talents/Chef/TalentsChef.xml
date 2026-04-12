@@ -1163,12 +1163,19 @@
           </CharacterAbilityApplyStatusEffectsToAllies>
         </Abilities>
       </AbilityGroupInterval>
-        
+      <!-- drunk no debuffs -->
+      <AbilityGroupEffect abilityeffecttype="OnAddDamageAffliction">
+        <Abilities>
+          <CharacterAbilityModifyAffliction afflictionidentifiers="drunk" replacewith="drunknodebuffs" />
+        </Abilities>
+        <FallbackAbilities>
+          <CharacterAbilityModifyAffliction afflictionidentifiers="drunk" replacewith="drunknodebuffs" />
+        </FallbackAbilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="he-kegrum"/>
       <AddedRecipe itemidentifier="he-kegpiraterum"/>
       <AddedRecipe itemidentifier="he-kegwhiskey"/>
-      <AddedRecipe itemidentifier="he-keghalucinova"/>
-      
-      
+      <AddedRecipe itemidentifier="he-keghalucinova"/>      
     </Talent>
 
   <!--Chance not to consume milk when crafting food-->
