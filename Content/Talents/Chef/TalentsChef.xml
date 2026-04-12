@@ -573,8 +573,8 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dinnertheater" >
         <Replace tag="[skillbonus]" value="5" color="gui.green"/>
-        <Replace tag="[skilllearnspeed]" value="50" color="gui.orange"/>
-        <Replace tag="[duration]" value="180" color="gui.orange"/>      
+        <Replace tag="[skilllearnspeed]" value="50" color="gui.green"/>
+        <Replace tag="[duration]" value="180" color="gui.green"/>      
       </Description>
       <!-- Build up a buff if stress is low -->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
