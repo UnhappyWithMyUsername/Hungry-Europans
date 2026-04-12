@@ -575,7 +575,7 @@
         <RequiredItem identifier="he-pot" amount="1" MinCondition="0" usecondition="true" />
       </Fabricate>
       <Deconstruct time="1" />
-      <Body width="39" radius="21" density="10.5" />
+      <Body width="39" height="21" density="10.5" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" condition="1.0" interval="10" stackable="false" disabledeltatime="true" AllowWhenBroken="true" />
         <StatusEffect type="OnContained" target="This" interval="1">
