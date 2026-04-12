@@ -1115,11 +1115,14 @@
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="and">
                 <Conditional ate_fruit="gt 0" />
-                <Affliction identifier="strengthen" strength="10"/>
-                <Affliction identifier="durationincrease" strength="20"/>
-                <Affliction identifier="stabilozineeffect" strength="6"/>
+                <Conditional strengthen="lt 180" />
+                <Conditional durationincrease="lt 180" />
+                <Conditional stabilozineeffect="lt 180" />
+                <Affliction identifier="strengthen" strength="11"/>
+                <Affliction identifier="durationincrease" strength="11"/>
+                <Affliction identifier="stabilozineeffect" strength="6.5"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
