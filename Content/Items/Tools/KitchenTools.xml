@@ -648,6 +648,10 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.525" origin="0.5,-0.3"  />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
       <Body width="62" height="2" radius="2" density="11" />
+      <Price baseprice="30" >
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="4" />
+        <Price storeidentifier="merchantcity" minavailable="4" maxavailable="6" />
+      </Price>
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
@@ -719,6 +723,10 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.499" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.525" origin="0.5,0.5"  />
       <Body width="22" height="4" radius="10" density="11.5" />
+      <Price baseprice="30" >
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="4" />
+        <Price storeidentifier="merchantcity" minavailable="4" maxavailable="6" />
+      </Price>
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
