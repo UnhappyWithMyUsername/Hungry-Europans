@@ -37,18 +37,25 @@ Small spring update with fixes
 
 [b]Changes:[/b] 
 [List]
-[*] Distiller and Brewer no longer use cooking skill, so other players can actually help in brewing. Some crafting time adjustments
-[*] No longer get random cravings if you are already craving human meat
-[*] Husk meat is no longer a valid meat type for non-husk recipes
+[*] Added some starting cooking supplies to the kitchen counter for campaign start using the Autofill function. Autofill is activated by default for the kitchen counter, so make sure to turn it off in your custom submarines if you already pre-fill your kitchen.
+[*] Increased the time it takes for food to start decaying after taking it out of a fridge from 10 to 30 seconds.
+[*] Added Quality to regular cleaver
+[*] Some talent changes and rebalancing (see below):
+[*] "Thinner Slices" increases Cleaver quality by 1
+[*] Increased "Steady Hands" stun resistance to 35%
+[*] Merged "Smells like a Brewery" into "Master Brewer"
+[*] Moved "Husk Egg Hunt" to tier 2
+[*] Added a limit to the buffs given by "Delicacies"
+[*] "Dinner Theater" now works with all instruments (not just bagpipes)
+[*] "Dinner Theater" now gives a buff to low-stressed crewmembers (you need stress enabled)
+[*] No longer get the "High Morale" and "Excellent Morale" if you have above 50% Stress
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Reduced blubber drop rate considerably, I accidentally left the drop rate % for testing purposes
-[*] Fixed hammerhead spawns not dropping at all and dropping offal instead
-[*] Fix mudramen soup using wrong text ID
-[*] Fix several cravings text and description
-[*] Fixed a particle name conflicting with vanilla
+[*] Fixed bowls and plates not being purchaseable
+[*] Fixed "Tasty Food" talent not giving the Excellent Morale buff
+[*] Fixed some broken Traits text
 [/List]
 
 
