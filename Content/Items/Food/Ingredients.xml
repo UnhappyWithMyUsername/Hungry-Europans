@@ -11,6 +11,7 @@
       <Price baseprice="69" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="2" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
@@ -93,6 +94,7 @@
       <Price baseprice="139" sold="false">
         <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
@@ -168,6 +170,7 @@
       <Price baseprice="79" sold="false">
         <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="3" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
@@ -210,6 +213,7 @@
       <Price baseprice="140" sold="false">
         <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.1" minavailable="3" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
@@ -285,6 +289,7 @@
       <Price baseprice="85" sold="false">
         <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="3" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
@@ -360,6 +365,7 @@
       <Price baseprice="72" sold="false">
         <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="3" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
@@ -435,6 +441,7 @@
       <Price baseprice="119" sold="false">
         <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="8" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" minavailable="2" maxavailable="3" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
