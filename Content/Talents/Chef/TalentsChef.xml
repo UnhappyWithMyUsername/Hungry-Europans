@@ -525,6 +525,18 @@
           </CharacterAbilityApplyStatusEffectsToAllies>
         </Abilities>
       </AbilityGroupEffect>
+      <!-- attempt to unlock other musical talents but that crashes the game for some reason TODO: reenable if fixed https://github.com/FakeFishGames/Barotrauma/discussions/17328-->
+      <!-- <AbilityGroupInterval interval="1">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" oneshot="true">
+                <GiveTalentInfo giverandom="true" talentidentifiers="steadytune,melodicrespite" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval> -->
     </Talent>
 
   <!--"Leading By Example" bonus if allies are fed, bigger bonus if stuffed -->
