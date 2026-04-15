@@ -369,7 +369,7 @@
       </AbilityGroupEffect>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
-          <CharacterAbilityGivePermanentStat statidentifier="cleaver" stattype="IncreaseFabricationQuality" value="1" />
+          <CharacterAbilityGivePermanentStat statidentifier="sharptool" stattype="IncreaseFabricationQuality" value="1" />
         </Abilities>
       </AbilityGroupEffect>      
     </Talent>
