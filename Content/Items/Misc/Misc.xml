@@ -1423,7 +1423,7 @@
         <sprite name="cap" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="232,0,88,69" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" origin="0.45,0.8" />
         <StatusEffect type="OnWearing" target="Character" unlockrecipe="he-sippycap" oneshot="true" />
         <StatusEffect type="OnWearing" target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="embarrassment" amount="1.5" />
+          <Affliction identifier="embarrassment" amount="1" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="This,Character" condition="-1" interval="10" duration="5" stackable="false" >
           <Conditional thirst="gt 5" />
