@@ -338,7 +338,7 @@
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
-          <AbilityConditionAttackData tags="sharptool"/>
+          <AbilityConditionAttackData tags="butcheritem"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityModifyAttackData addeddamagemultiplier="0.5"/>

@@ -677,7 +677,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentname.he-chefattire>Master Chef Attire</talentname.he-chefattire>
 <talentdescription.he-chefattire>Unlock the crafting recipes for [itemname1] and [itemname2].</talentdescription.he-chefattire>
 <talentname.he-frenzy>Frenzy</talentname.he-frenzy>
-<talentdescription.he-frenzy>Deal [powerincrease]% more damage with ‖color:gui.orange‖Sharp Tools‖end‖.\nIncrease your working speed on the cutting board by [amount]%.</talentdescription.he-frenzy>
+<talentdescription.he-frenzy>Deal [powerincrease]% more damage with ‖color:gui.orange‖Meat Cleavers‖end‖.\nIncrease your working speed on the cutting board by [amount]%.</talentdescription.he-frenzy>
 <talentname.he-butchershop>Butcher Shop</talentname.he-butchershop>
 <talentdescription.he-butchershop>You're a talented butcher and it shows!\nGet [amount]% more money when selling meat!</talentdescription.he-butchershop>
 <talentname.he-coldblood>Cold Blood</talentname.he-coldblood><!--Patch 13-->
