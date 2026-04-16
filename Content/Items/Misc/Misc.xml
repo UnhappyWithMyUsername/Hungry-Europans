@@ -840,6 +840,7 @@
               <Conditional mass="lt 200"/>
               <Conditional stun="lte 0"/>
               <Affliction identifier="stun" strength="0.25" />
+              <Affliction identifier="embarrassment" strength="30" />
               <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
               <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
               <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
