@@ -26,9 +26,9 @@ Important:
 //////////////////////
 //////////////////////
 
-[hr]09/04/2026[/hr]
+[hr]20/04/2026[/hr]
 
-Small spring update with fixes
+Small quality of life and talent rebalance
 
 [b]Additions:[/b]
 [List]
@@ -39,9 +39,12 @@ Small spring update with fixes
 [List]
 [*] Added some starting cooking supplies to the kitchen counter for campaign start using the Autofill function. Autofill is activated by default for the kitchen counter, so make sure to turn it off in your custom submarines if you already pre-fill your kitchen.
 [*] Increased the time it takes for food to start decaying after taking it out of a fridge from 10 to 30 seconds.
-[*] Added Quality to regular cleaver
+[*] Added Quality to regular Cleaver
+[*] Rescaled Embarassement so it's not as impactful at low values
+[*] Butcher shop (hydroponics from Dynamic Europa) now also sells basic cooking ingredients
+[*] Allow containing husk eggs in refrigerator
 [*] Some talent changes and rebalancing (see below):
-[*] "Thinner Slices" increases Cleaver quality by 1
+[*] "Thinner Slices" increases "Sharp Tool" quality by 1 (knives, sword, cleaver)
 [*] Increased "Steady Hands" stun resistance to 35%
 [*] Merged "Smells like a Brewery" into "Master Brewer"
 [*] Moved "Husk Egg Hunt" to tier 2
