@@ -1110,6 +1110,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <fabricationdescription.largeegg>Any alien egg of large caliber.</fabricationdescription.largeegg> 
  
 <!-- misc -->
+<entityname.he-freshness>Freshness</entityname.he-freshness>
+
 <entityname.money_5mk>5mk</entityname.money_5mk>
 <entitydescription.money_5mk>Adds 5mk to your bank account.</entitydescription.money_5mk>
 <entityname.money_25mk>25mk</entityname.money_25mk>
