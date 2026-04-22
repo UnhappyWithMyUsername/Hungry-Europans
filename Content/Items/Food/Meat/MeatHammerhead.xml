@@ -34,8 +34,10 @@
       </ItemComponent>
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
+      <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
         <Containable items="freshness" />
+        <!-- StatusEffect spawning in the freshness item at the start of a round -->
         <StatusEffect type="Always" target="This" spawnitemrandomly="true" oneshot="true">
           <SpawnItem identifier="he-freshness" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
         </StatusEffect>
@@ -78,8 +80,10 @@
       <Deconstruct time="10" requireddeconstructor="deconstructor">
         <!-- <Item identifier="alienblood" amount="0" /> -->
       </Deconstruct>
+      <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
         <Containable items="freshness" />
+        <!-- StatusEffect spawning in the freshness item at the start of a round -->
         <StatusEffect type="Always" target="This" spawnitemrandomly="true" oneshot="true">
           <SpawnItem identifier="he-freshness" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
         </StatusEffect>
@@ -119,8 +123,10 @@
         <RequiredSkill identifier="butchery" level="45" />
         <RequiredItem identifier="he-hammerheadmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
+      <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
         <Containable items="freshness" />
+        <!-- StatusEffect spawning in the freshness item at the start of a round -->
         <StatusEffect type="Always" target="This" spawnitemrandomly="true" oneshot="true">
           <SpawnItem identifier="he-freshness" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
         </StatusEffect>
@@ -160,8 +166,10 @@
         <RequiredSkill identifier="butchery" level="50" />
         <RequiredItem identifier="hammerheadribs" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
+      <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
         <Containable items="freshness" />
+        <!-- StatusEffect spawning in the freshness item at the start of a round -->
         <StatusEffect type="Always" target="This" spawnitemrandomly="true" oneshot="true">
           <SpawnItem identifier="he-freshness" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
         </StatusEffect>
@@ -206,8 +214,10 @@
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
+      <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
         <Containable items="freshness" />
+        <!-- StatusEffect spawning in the freshness item at the start of a round -->
         <StatusEffect type="Always" target="This" spawnitemrandomly="true" oneshot="true">
           <SpawnItem identifier="he-freshness" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
         </StatusEffect>
