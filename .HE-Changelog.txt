@@ -6,7 +6,6 @@
 Search "TODO:" in the mod for things that need updating
 
 SHORT TERM TODO / NEXT UPDATE:
-- Disable skill requirement for fermenter/distiller? It's not intuitve and people fail their recipes if the plant gets consumed. More people would also participate in cooking
 -
 
 Include underused ingredients
@@ -15,7 +14,7 @@ Include underused ingredients
 - Exotic nonsense like husk stingers
 - Have multiple recipes for each meat type (at least 2). Ingredients must have multiple uses
 
-Important:
+Important TODO:
 - TEST NEW FEATURES, avoid bugs
 - Plant RE-rework when DLC comes out
 - Ensure Neurotrauma compatibility
@@ -77,23 +76,22 @@ Misc TODO:
 
 LIST OF FOODS IDEAS:
 
+- Egg-plant that makes egg-like fruits for easier omelettes
+- Thalami Salami, found in Thalamus organs
+- Kvass fermented from bread, yeast and sugar (needs more fermenter slots)
 - More Blender recipes
 - More Offal recipes
-- Thalami Salami
-- More Mushroom recipes? cooked mushrooms item to not use a full mushroom
-- Cake + Slices
-- Homemade kvass fermented from water, bread, yeast and sugar.
+- More Mushroom recipes? add a cooked mushroom item to not use an entire yeast shroom per meal
 
 
 LongTermPlans:
-- Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
+- Canned food. Canned food from earth, requires can opener or knife to open. Give up on canned ingredients and just add canned meals.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations	
-- Kuru sickness (eating brains)
+- Kuru sickness (eating brains) for Neurotrauma?
 - "Brain freeze" from eating ice cream too fast
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
 - Abyssal meats and recipes?
 - Better Entertainer talents to replace the whole "graduation" copy
-- Talents that boost assistants / sous-chef
-- Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
+- Talents that boost assistants / sous-chef (need barodevs to allow giving custom skills via talents)
