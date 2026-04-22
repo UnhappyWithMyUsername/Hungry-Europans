@@ -678,5 +678,29 @@
         <QualityStat stattype="Condition" value="0.0"/>
       </Quality>
     </Item>
+
+    <!-- FRESHNESS -->
+    <Item hideinmenus="true" nameidentifier="he-freshness" identifier="he-freshness" health="100" category="Hidden" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="largeitem,freshness" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+      <PreferredContainer primary="meat" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+      <Body width="10" radius="5" density="12" />
+      <Deconstruct time="0" requireddeconstructor="deconstructor" />
+      <!-- Freshness gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 20, giving a 30 second grace period before decaying again. -->
+      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
+        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
+        <StatusEffect type="Always" target="This" timeframe="20" interval="2" disabledeltatime="true" setvalue="true">
+          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" targetgrandparent="true" />
+          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" targetgrandparent="true" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
+          <Conditional timeframe="gte 50" />
+        </StatusEffect>
+      </GreaterComponent>
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnBroken" target="This,Parent">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
   </Items>
 </Override>
