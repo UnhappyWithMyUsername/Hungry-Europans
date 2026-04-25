@@ -850,11 +850,22 @@
         textidentifier="advancedafflictiondescription.others.he-cannibalism"
         target="OtherCharacter" />
       <!-- no effect until 20, but still takes a while to disappear -->
-      <Effect minstrength="0" maxstrength="20" strengthchange="-0.02" />
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.02" >
+        <!-- >75 husk infection removes cannibalism fast-->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional huskinfection="gte 75" />
+          <ReduceAffliction identifier="he-cannibalism" strength="2" />
+        </StatusEffect>
+      </Effect>
       <!-- slowly gain craving, 1 point of cannibalism above 20 gives 2 points of craving total -->
       <Effect minstrength="20" maxstrength="100" strengthchange="-0.01">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Affliction identifier="he-hungryforhumanmeat" strength="0.02" />
+        </StatusEffect>
+        <!-- >75 husk infection removes cannibalism fast-->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional huskinfection="gte 75" />
+          <ReduceAffliction identifier="he-cannibalism" strength="2" />
         </StatusEffect>
       </Effect>
       <!--<AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/CannibalInfoOverlay.png" />-->
