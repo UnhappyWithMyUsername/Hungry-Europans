@@ -137,18 +137,18 @@
 
     <Item name="Toilet" identifier="he-toilet" tags="toilet,pipeweakpoint" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false" allowedlinks="valve">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.5" />
-      <Price baseprice="580" sold="true">
+      <Price baseprice="350" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="55" />
         <RequiredItem identifier="steel" amount="5" />
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+        <RequiredItem identifier="aluminium" amount="2" />
       </Fabricate>
       <Deconstruct time="25">
         <Item identifier="steel" amount="2" />
-        <Item identifier="titaniumaluminiumalloy" amount="1" />
+        <Item identifier="aluminium" amount="1" />
       </Deconstruct>
       <SuitableTreatment type="defecate" suitability="50" />
       <SuitableTreatment type="bladder" suitability="50" />
