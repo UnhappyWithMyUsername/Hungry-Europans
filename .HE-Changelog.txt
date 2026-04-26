@@ -37,7 +37,9 @@ Small quality of life update
 [b]Changes:[/b] 
 [List]
 [*] Meat stays stackable while spoiling
-[*] Removed ID requirement for the toxin cabinet of "Mule"
+[*] Significantly reduced the cost of kitchen installations
+[*] Husk infection over 75% can get rid of cannibalism, allowing consumption of human meat
+[*] Removed ID requirement for the toxin cabinet of "Mule" submarine
 [/List]
 
 [b]Fixes:[/b] 
