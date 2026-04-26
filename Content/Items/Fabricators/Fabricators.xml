@@ -488,8 +488,8 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
         <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="steel" amount="6" /><!--150-->
-        <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
+        <RequiredItem identifier="steel" amount="4" /><!--150-->
+        <RequiredItem identifier="plastic" amount="2" /><!--45x3-->
         <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
       </Fabricate>
       <Deconstruct time="10">
@@ -610,17 +610,16 @@
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
       <Deconstruct time="10">
         <Item identifier="steel" amount="2"/>
-        <Item identifier="titaniumaluminiumalloy" amount="2"/>
+        <Item identifier="titaniumaluminiumalloy" amount="1"/>
         <Item identifier="fpgacircuit" amount="1"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="5"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
+        <RequiredItem identifier="steel" amount="3"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="1"/>
         <RequiredItem identifier="fpgacircuit" amount="2"/>
-        <RequiredItem identifier="plastic" amount="2"/>
       </Fabricate>
-      <Price baseprice="1199" sold="true">
+      <Price baseprice="450" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -717,17 +716,17 @@
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
       <Deconstruct time="10">
-        <Item identifier="steel" amount="4"/>
-        <Item identifier="titaniumaluminiumalloy" amount="2"/>
+        <Item identifier="steel" amount="3"/>
+        <Item identifier="titaniumaluminiumalloy" amount="1"/>
         <Item identifier="fpgacircuit" amount="1"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="8"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="3"/>
+        <RequiredItem identifier="steel" amount="6"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
         <RequiredItem identifier="fpgacircuit" amount="2"/>
       </Fabricate>
-      <Price baseprice="1499" sold="true">
+      <Price baseprice="700" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -823,12 +822,11 @@
       </Deconstruct>
       <Fabricate selectkey="Select" suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="3"/>
-        <RequiredItem identifier="aluminium" amount="4"/>
+        <RequiredItem identifier="aluminium" amount="6"/>
         <RequiredItem identifier="fpgacircuit" amount="2"/>
         <RequiredItem identifier="plastic" amount="2"/>
       </Fabricate>
-      <Price baseprice="999" sold="true">
+      <Price baseprice="400" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -967,12 +965,11 @@
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="65" />
-        <RequiredItem identifier="steel" amount="5"/>
+        <RequiredItem identifier="steel" amount="3"/>
         <RequiredItem identifier="aluminium" amount="4"/>
         <RequiredItem identifier="fpgacircuit" amount="3"/>
-        <RequiredItem identifier="plastic" amount="2"/>
       </Fabricate>
-      <Price baseprice="999" sold="true">
+      <Price baseprice="400" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -1075,11 +1072,11 @@
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
         <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="4" /><!--20x4-->
-        <RequiredItem identifier="plastic" amount="6" /><!--45x3-->
-        <RequiredItem identifier="fpgacircuit" amount="3" /><!--80x2-->
+        <RequiredItem identifier="aluminium" amount="2" />
+        <RequiredItem identifier="plastic" amount="4" />
+        <RequiredItem identifier="fpgacircuit" amount="2" />
       </Fabricate>
-      <Price baseprice="899" sold="true">
+      <Price baseprice="300" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -1175,11 +1172,11 @@
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
         <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="4" /><!--20x4-->
-        <RequiredItem identifier="plastic" amount="6" /><!--45x3-->
-        <RequiredItem identifier="fpgacircuit" amount="3" /><!--80x2-->
+        <RequiredItem identifier="aluminium" amount="2" />
+        <RequiredItem identifier="plastic" amount="4" />
+        <RequiredItem identifier="fpgacircuit" amount="3" />
       </Fabricate>
-      <Price baseprice="899" sold="true">
+      <Price baseprice="300" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -1263,7 +1260,7 @@
         <RequiredItem identifier="fpgacircuit" amount="2"/>
         <RequiredItem identifier="plastic" amount="2"/>
       </Fabricate>
-      <Price baseprice="999" sold="true">
+      <Price baseprice="700" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
@@ -1388,6 +1385,7 @@
         </SubContainer>
       </ItemContainer>
     </Item>
+
     <!-- TODO: DecorativeSprite for open state when interacting, opening sound, closing sound, start/stop sounds -->
     <Item name="Mobile Dishwasher" identifier="he-dishwashermobile" tags="dishwasher,dishwasher_mobile,kitchen,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
