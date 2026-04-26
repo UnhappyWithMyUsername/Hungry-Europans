@@ -854,6 +854,7 @@
         <!-- >75 husk infection removes cannibalism fast-->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional huskinfection="gte 75" />
+          <Conditional husksymbiosis="gte 75" />
           <ReduceAffliction identifier="he-cannibalism" strength="2" />
         </StatusEffect>
       </Effect>
@@ -865,6 +866,7 @@
         <!-- >75 husk infection removes cannibalism fast-->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional huskinfection="gte 75" />
+          <Conditional husksymbiosis="gte 75" />
           <ReduceAffliction identifier="he-cannibalism" strength="2" />
         </StatusEffect>
       </Effect>
