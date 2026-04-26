@@ -1238,6 +1238,7 @@
           <ReduceAffliction type="damage" strength="0.15" />
         </StatusEffect>
       </Effect>
+      <!-- remove the effect after 20 seconds -->
       <PeriodicEffect minstrength="0" maxstrength="100" mininterval="20" maxinterval="20">
         <StatusEffect target="Character" duration="10" stackable="false" CheckConditionalAlways="true">
           <Conditional he-passoutreaper="gt 0" />
