@@ -948,5 +948,68 @@
       </Holdable>
     </Item>
 
+    <!-- WIP -->
+    <Item hideinmenus="false" name="Thalameat" identifier="he-thalameat" health="10" category="Misc" subcategory="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="kitchen"/>
+      <PreferredContainer secondary="storageorgan" minamount="1" maxamount="2" spawnprobability="0.8"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="153,38,50,32" depth="0.6" origin="0.5,0.5" />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="50" radius="10" density="9" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="22,15" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
+          <Affliction identifier="he-fatrich" amount="40" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="he-stomachache" amount="3" />
+          <Affliction identifier="he-stomachache" amount="5" probability="0.01" />
+          <Affliction identifier="worminfection" amount="1" probability="0.00052" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
+          <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="255,255,255,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+
+    <Item name="Thalami Salami" identifier="he-thalamisalami" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" canflipx="false">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="96,10,51,21" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="150,0,51,31" depth="0.6" origin="0.5,0.67" maxcondition="99" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="96,10,51,21" depth="0.525" origin="0.5,0.78" />
+      <Body width="51" height="21" density="11" />
+      <PreferredContainer primary="kitchen" />
+      <Fabricate suitablefabricators="blender" requiredtime="12" requiresrecipe="true" hideifnorecipe="true" amount="1">
+        <RequiredItem identifier="he-thalameat" amount="1" />
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
+      </Fabricate>
+      <Deconstruct time="1">
+        <Item identifier="aluminium" amount="1" />
+      </Deconstruct>
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,15" holdangle="80" holdpos="-26,-30" handle1="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Affliction identifier="he-stuffed" amount="2.2" />
+          <ReduceAffliction type="hunger" amount="2.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,30,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
   </Items>
 </Override>
