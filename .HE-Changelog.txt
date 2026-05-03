@@ -27,7 +27,7 @@ Important TODO:
 
 [hr]XX/XX/2026[/hr]
 
-Small quality of life update
+Small quality of life update regarding meat stacking
 
 [b]Additions:[/b]
 [List]
@@ -36,7 +36,8 @@ Small quality of life update
 
 [b]Changes:[/b] 
 [List]
-[*] Meat stays stackable while spoiling
+[*] Meat can be stacked even under 100% condition, meat stacks no longer "split" when outside a refrigerator. This is a bit experimental; meats will stack and display only one condition bar, but all meat items will still decay individually inside the stack.
+[*] Recipes no longer check for meat condition (any % is good)
 [*] Significantly reduced the cost of kitchen installations
 [*] Husk infection over 75% can get rid of cannibalism, allowing consumption of human meat
 [*] Removed ID requirement for the toxin cabinet of "Mule" submarine
@@ -44,7 +45,7 @@ Small quality of life update
 
 [b]Fixes:[/b] 
 [List]
-[*] None :(
+[*] Fixed Reaper's Tribute beer stunlocking players
 [/List]
 
 
