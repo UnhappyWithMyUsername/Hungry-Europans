@@ -952,7 +952,7 @@
     <Item hideinmenus="false" name="Thalameat" identifier="he-thalameat" health="10" category="Misc" subcategory="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen"/>
       <PreferredContainer secondary="storageorgan" minamount="1" maxamount="2" spawnprobability="0.8"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="153,38,50,32" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="154,158,87,35" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="50" radius="10" density="9" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="22,15" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -977,7 +977,7 @@
     </Item>
 
     <Item name="Thalami Salami" identifier="he-thalamisalami" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3,monsterfood" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" canflipx="false">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="96,10,51,21" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="153,202,87,34" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="150,0,51,31" depth="0.6" origin="0.5,0.67" maxcondition="99" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="96,10,51,21" depth="0.525" origin="0.5,0.78" />
       <Body width="51" height="21" density="11" />
