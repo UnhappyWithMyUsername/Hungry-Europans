@@ -71,7 +71,6 @@
   <NPCConversations file="%ModDir%/Content/Texts/English/NpcConversations_English.xml" />
   <Character file="%ModDir%/Content/Afflictions/CannibalHusk.xml" />
   <UpgradeModules file="%Moddir%/Content/upgrademodules.xml" />
-  <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Swordfish.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
   <Text file="%ModDir%/Content/Texts/English/Loadingtips.xml" />
@@ -79,4 +78,5 @@
   <Submarine file="%ModDir%/#Testkitchen.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
 </contentpackage>
