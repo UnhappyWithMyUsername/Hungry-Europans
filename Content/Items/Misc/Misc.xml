@@ -51,36 +51,7 @@
 
 
     <!-- Water Filter -->
-
-    <!-- TODO: Disabled hose/filter, they are useless and incomplete for now, reenable later when we figure out what to do with them. -->
-    <Item name="Hose" identifier="he-hose" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,hose" spritecolor="255,255,255,255" InventoryIconColor="255,255,255,255" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer secondary="storagecab" spawnprobability="0.0" />
-      <!-- TODO: Price -->
-      <!-- <Price baseprice="140" minleveldifficulty="5">
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantresearch" multiplier="1.2" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" multiplier="1.2" />
-      </Price> -->
-      <!-- TODO: Sprites & Body -->
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="379,78,27,58" depth="0.6" origin="0.5,0.5" />
-      <Body width="25" height="55" density="12" />
-      <!-- TODO: Recipe & Deconstruct -->
-      <!-- <Fabricate suitablefabricators="fabricator" requiredtime="30">
-        <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="organicfiber" />
-        <RequiredItem identifier="plastic" amount="2" />
-      </Fabricate> -->
-      <Deconstruct time="5">
-        <Item identifier="plastic" />
-      </Deconstruct>
-      <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-      </Holdable>
-    </Item>
-
-    <!-- TODO: Disabled hose/filter, they are useless and incomplete for now, reenable later when we figure out what to do with them. -->
+    <!-- TODO: Disabled filter, they are useless and incomplete for now, reenable later when we figure out what to do with them. -->
     <Item name="Water Filter" identifier="he-waterfilter" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,waterfilter" spritecolor="255,255,255,255" InventoryIconColor="255,255,255,255" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer secondary="storagecab" spawnprobability="0.0" />
       <!-- TODO: Price -->
