@@ -76,7 +76,7 @@
   <Text file="%ModDir%/Content/Texts/English/Loadingtips.xml" />
   <Missions file="%ModDir%/Content/Events/Missions.xml" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
 </contentpackage>
