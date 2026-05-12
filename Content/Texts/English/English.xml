@@ -982,9 +982,6 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <roomname.brewery>Brewery</roomname.brewery><!--Patch 10-->
 <roomname.restroom>Restroom</roomname.restroom><!--Patch 13-->
 
-
- <!-- TODO: sort this text in proper places when done  -->
-
 <itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> 
 
 <!-- RESEARCH STATION -->
