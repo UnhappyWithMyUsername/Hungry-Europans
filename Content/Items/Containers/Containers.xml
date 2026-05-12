@@ -1551,10 +1551,9 @@
       <Deconstruct time="1" />
       <!--Light component used to determine if tea was brewed or not-->
       <LightComponent range="0" lightcolor="47,146,209,255" flicker="0.0" powerconsumption="0" IsOn="false" castshadows="false" >
-        <!-- TODO: reenable particles if devs fix https://github.com/FakeFishGames/Barotrauma/discussions/16184 -->
-        <!-- <StatusEffect type="OnActive" target="This" offset="20,7">
-          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
-        </StatusEffect> -->
+        <StatusEffect type="OnActive" target="This" offset="35,10" OffsetCopiesEntityTransform="true" >
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="70" anglemax="110" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
         <!-- cool down after 100 seconds -->
         <StatusEffect type="OnActive" target="This" delay="100" duration="100" condition="-1" stackable="false" checkconditionalalways="true" >
           <Conditional IsActive="False" targetcontainer="true" targetitemcomponent="Fabricator" />
