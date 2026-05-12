@@ -1544,6 +1544,7 @@
     <!-- HINT ITEMS -->
     <!-- HINT ITEMS -->
     <!-- HINT ITEMS -->
+    <!-- These items only exist to show up in the medical UI as a "cure" for afflictions like hygiene, fatigue...  -->
     
     <!-- hint for how to heal hygiene -->
     <Item identifier="he-hygienehintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
