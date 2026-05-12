@@ -1564,8 +1564,8 @@
       <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,663,72,72" depth="0.85" origin="0.5,0.5" />
       <SuitableTreatment type="mood" suitability="50" />
     </Item> 
-    
-    <!-- hint for how to heal hygiene TODO: sprite -->
+        
+    <!-- hint for how to cure tapeworm that looks like ABX -->
     <Item identifier="he-fakeABXitem" nameidentifier="antibiotics" descriptionidentifier="antibiotics" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
       <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,704,64,64" depth="0.85" origin="0.5,0.5" />
       <SuitableTreatment identifier="worminfection" suitability="50" />
