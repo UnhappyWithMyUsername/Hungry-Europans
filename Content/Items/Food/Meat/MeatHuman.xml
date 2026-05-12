@@ -19,7 +19,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-5.0"/>
         <!-- increase cannibalism, reduce craving for human meat -->
-        <StatusEffect type="OnUse" target="Character">
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="he-cannibalism" amount="1.2" />
@@ -29,11 +29,12 @@
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <!-- give psychosis and nausea if you're not an accomplished cannibal -->
-        <StatusEffect type="OnUse" target="Character">
+        <!-- give psychosis and nausea if you're not an accomplished cannibal or a husk -->
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -63,7 +64,7 @@
       </ItemContainer>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
-        <StatusEffect type="OnUse" target="Character">
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="he-cannibalism" amount="1" />
@@ -73,10 +74,12 @@
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
+        <!-- give psychosis and nausea if you're not an accomplished cannibal or a husk -->
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -108,7 +111,7 @@
       </ItemContainer>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <StatusEffect type="OnUse" target="Character">
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="he-cannibalism" amount="0.75" />
@@ -118,10 +121,12 @@
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
+        <!-- give psychosis and nausea if you're not an accomplished cannibal or a husk -->
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -142,7 +147,7 @@
       </Fabricate>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <StatusEffect type="OnUse" target="Character">
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="he-cannibalism" amount="0.75" />
@@ -150,10 +155,12 @@
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
+        <!-- give psychosis and nausea if you're not an accomplished cannibal or a husk -->
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

@@ -39,8 +39,9 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" probability="1" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -66,13 +67,15 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
+        <!-- give psychosis and nausea if you're not an accomplished cannibal -->
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional HasStatusTag="usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
           <Conditional InWater="false" />
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" probability="1" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
@@ -118,12 +121,14 @@
           <ReduceAffliction type="hunger" amount="1.75" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
+        <!-- give psychosis and nausea if you're not an accomplished cannibal -->
         <StatusEffect type="OnActive" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" probability="1" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -148,13 +153,15 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
-          <Conditional HasStatusTag="usingfork" targetcontainer="true" />
-          <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
+        <!-- give psychosis and nausea if you're not an accomplished cannibal -->
+        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
           <Conditional he-cannibalism="lt 20" />
-          <Affliction identifier="psychosis" amount="0.5" />
-          <Affliction identifier="nausea" amount="0.5" />
+          <Conditional huskinfection="lt 75" />
+          <Affliction identifier="psychosis" amount="1.5" />
+          <Affliction identifier="nausea" amount="5" probability="1" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
