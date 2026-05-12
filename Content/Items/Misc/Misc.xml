@@ -1570,7 +1570,14 @@
       <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,704,64,64" depth="0.85" origin="0.5,0.5" />
       <SuitableTreatment identifier="worminfection" suitability="50" />
       <SuitableTreatment identifier="tapeworminfection" suitability="50" />
-    </Item> 
+    </Item>
+    
+    <!-- hint for how to pee/poop that looks like toilet UNUSED because it's just that obvious -->
+    <!-- <Item identifier="he-faketoiletitem" nameidentifier="he-toilet" descriptionidentifier="he-toilet" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment identifier="bladder" suitability="50" />
+      <SuitableTreatment identifier="defecate" suitability="50" />
+    </Item>  -->
     
     
     
