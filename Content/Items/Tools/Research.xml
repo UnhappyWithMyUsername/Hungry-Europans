@@ -27,14 +27,6 @@
           <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/male_damage2.ogg" />
           <Sound file="Content/Characters/Human/male_damage3.ogg" />
-          <Sound file="Content/Characters/Human/male_damage4.ogg" />
-          <Sound file="Content/Characters/Human/male_damage5.ogg" />
-          <Sound file="Content/Characters/Human/male_damage6.ogg" />
-          <Sound file="Content/Characters/Human/male_damage7.ogg" />
-          <Sound file="Content/Characters/Human/male_damage8.ogg" />
-          <Sound file="Content/Characters/Human/male_damage9.ogg" />
-          <Sound file="Content/Characters/Human/male_damage10.ogg" />
-          <Sound file="Content/Characters/Human/male_damage11.ogg" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-hungryeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
@@ -44,13 +36,6 @@
           <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/female_damage2.ogg" />
           <Sound file="Content/Characters/Human/female_damage3.ogg" />
-          <Sound file="Content/Characters/Human/female_damage4.ogg" />
-          <Sound file="Content/Characters/Human/female_damage5.ogg" />
-          <Sound file="Content/Characters/Human/female_damage6.ogg" />
-          <Sound file="Content/Characters/Human/female_damage7.ogg" />
-          <Sound file="Content/Characters/Human/female_damage8.ogg" />
-          <Sound file="Content/Characters/Human/female_damage9.ogg" />
-          <Sound file="Content/Characters/Human/female_damage10.ogg" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-hungryeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
@@ -81,14 +66,6 @@
           <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/male_damage2.ogg" />
           <Sound file="Content/Characters/Human/male_damage3.ogg" />
-          <Sound file="Content/Characters/Human/male_damage4.ogg" />
-          <Sound file="Content/Characters/Human/male_damage5.ogg" />
-          <Sound file="Content/Characters/Human/male_damage6.ogg" />
-          <Sound file="Content/Characters/Human/male_damage7.ogg" />
-          <Sound file="Content/Characters/Human/male_damage8.ogg" />
-          <Sound file="Content/Characters/Human/male_damage9.ogg" />
-          <Sound file="Content/Characters/Human/male_damage10.ogg" />
-          <Sound file="Content/Characters/Human/male_damage11.ogg" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-sleepyeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
@@ -98,13 +75,6 @@
           <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/female_damage2.ogg" />
           <Sound file="Content/Characters/Human/female_damage3.ogg" />
-          <Sound file="Content/Characters/Human/female_damage4.ogg" />
-          <Sound file="Content/Characters/Human/female_damage5.ogg" />
-          <Sound file="Content/Characters/Human/female_damage6.ogg" />
-          <Sound file="Content/Characters/Human/female_damage7.ogg" />
-          <Sound file="Content/Characters/Human/female_damage8.ogg" />
-          <Sound file="Content/Characters/Human/female_damage9.ogg" />
-          <Sound file="Content/Characters/Human/female_damage10.ogg" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-sleepyeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
@@ -116,7 +86,6 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    
         
     <Item name="Enable Moody Europan" identifier="he-enablemood" description="[RMB + E] Enables the mood affliction for the user, causing them to have to manage their mood by eating and drinking tasty things, using drugs or relaxing. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Legacy" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
@@ -132,14 +101,6 @@
           <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/male_damage2.ogg" />
           <Sound file="Content/Characters/Human/male_damage3.ogg" />
-          <Sound file="Content/Characters/Human/male_damage4.ogg" />
-          <Sound file="Content/Characters/Human/male_damage5.ogg" />
-          <Sound file="Content/Characters/Human/male_damage6.ogg" />
-          <Sound file="Content/Characters/Human/male_damage7.ogg" />
-          <Sound file="Content/Characters/Human/male_damage8.ogg" />
-          <Sound file="Content/Characters/Human/male_damage9.ogg" />
-          <Sound file="Content/Characters/Human/male_damage10.ogg" />
-          <Sound file="Content/Characters/Human/male_damage11.ogg" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
@@ -149,13 +110,6 @@
           <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/female_damage2.ogg" />
           <Sound file="Content/Characters/Human/female_damage3.ogg" />
-          <Sound file="Content/Characters/Human/female_damage4.ogg" />
-          <Sound file="Content/Characters/Human/female_damage5.ogg" />
-          <Sound file="Content/Characters/Human/female_damage6.ogg" />
-          <Sound file="Content/Characters/Human/female_damage7.ogg" />
-          <Sound file="Content/Characters/Human/female_damage8.ogg" />
-          <Sound file="Content/Characters/Human/female_damage9.ogg" />
-          <Sound file="Content/Characters/Human/female_damage10.ogg" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
@@ -191,14 +145,6 @@
           <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/male_damage2.ogg" />
           <Sound file="Content/Characters/Human/male_damage3.ogg" />
-          <Sound file="Content/Characters/Human/male_damage4.ogg" />
-          <Sound file="Content/Characters/Human/male_damage5.ogg" />
-          <Sound file="Content/Characters/Human/male_damage6.ogg" />
-          <Sound file="Content/Characters/Human/male_damage7.ogg" />
-          <Sound file="Content/Characters/Human/male_damage8.ogg" />
-          <Sound file="Content/Characters/Human/male_damage9.ogg" />
-          <Sound file="Content/Characters/Human/male_damage10.ogg" />
-          <Sound file="Content/Characters/Human/male_damage11.ogg" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional ishuman="true" />
@@ -206,13 +152,6 @@
           <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
           <Sound file="Content/Characters/Human/female_damage2.ogg" />
           <Sound file="Content/Characters/Human/female_damage3.ogg" />
-          <Sound file="Content/Characters/Human/female_damage4.ogg" />
-          <Sound file="Content/Characters/Human/female_damage5.ogg" />
-          <Sound file="Content/Characters/Human/female_damage6.ogg" />
-          <Sound file="Content/Characters/Human/female_damage7.ogg" />
-          <Sound file="Content/Characters/Human/female_damage8.ogg" />
-          <Sound file="Content/Characters/Human/female_damage9.ogg" />
-          <Sound file="Content/Characters/Human/female_damage10.ogg" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
