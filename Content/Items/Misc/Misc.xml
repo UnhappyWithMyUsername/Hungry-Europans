@@ -765,7 +765,7 @@
           <sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="500" />
           <sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="500" />
         </Attack>
-        <StatusEffect type="OnUse" target="This" delay="0.8">
+        <StatusEffect type="OnNotContained" target="This" delay="0.8">
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This" delay="0.5">
