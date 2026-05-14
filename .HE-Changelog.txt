@@ -52,6 +52,7 @@ Small quality of life update regarding meat stacking
 [*] Fixed Blubber not stacking properly
 [*] Fixed some particles not flipping properly (toilet, kettle)
 [*] Fixed eating human meat not giving enough nausea
+[*] Fixed the punch gun projectile sometimes not disappearing
 [/List]
 
 
