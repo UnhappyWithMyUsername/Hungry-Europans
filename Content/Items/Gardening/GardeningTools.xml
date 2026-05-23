@@ -237,13 +237,13 @@
             <Conditional HasStatusTag="neq cangenerate" />
           </StatusEffect>
           <!--"Use" the item if charge is equal to or larger than 900 to trigger the "OnUse" StatusEffects, reset the charge to 0 and "grow" a plant if the item has the status tag "cangenerate"-->
-          <StatusEffect type="OnActive" target="This" interval="0.5" stackable="false" charge="0" setvalue="true" disabledeltatime="true" comparison="And">
+          <StatusEffect type="OnActive" target="This" interval="0.5" charge="0" setvalue="true" comparison="And">
             <Conditional HasStatusTag="eq cangenerate" />
             <Conditional charge="gte 900" />
             <Use />
           </StatusEffect>
           <!--Set light color to white when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnActive" target="This" lightcolor="255,255,255,111" pulseamount="0" pulsefrequency="0" powerconsumption="200" interval="1" stackable="false" setvalue="true" disabledeltatime="true" >
+          <StatusEffect type="OnActive" target="This" lightcolor="180,255,180,111" pulseamount="0" pulsefrequency="0" powerconsumption="200" interval="1" stackable="false" setvalue="true" disabledeltatime="true" >
             <Conditional HasStatusTag="eq cangenerate" />
           </StatusEffect>
           <!--Set light color to orange and pulsate when the item is on, but is missing required items-->
@@ -254,6 +254,9 @@
           <StatusEffect type="OnActive" target="Contained" tag="waterkeg" disabledeltatime="true" condition="-0.03" delay="1" interval="1" targetslot="6" comparison="And" CheckConditionalAlways="true" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
           </StatusEffect>
+        </LightComponent>
+        <!-- Handle the plant spawning in Itemcomponent, before it was inside LightComponent and somehow that caused a bug that allowed spawning plants by holding LMB and RMB -->
+        <ItemComponent canbepicked="false" canbeselected="false" >
           <!--Drain condition of fertilizer and spawn a yeast shroom when all required items are contained and the item has the active tag "cangenerate"-->
           <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
@@ -289,8 +292,8 @@
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="he-seaweed" targetslot="8" type="Contained" />
             <SpawnItem identifier="he-seaweed" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
-          </StatusEffect>
-        </LightComponent>
+          </StatusEffect>        
+        </ItemComponent>        
         <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
           <GuiFrame relativesize="0.15,0.30" anchor="Center" relativeoffset="0,0" style="ItemUI" msg="ItemMsgInteractSelect" />
           <!--Watertank Icon-->
