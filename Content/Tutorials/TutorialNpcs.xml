@@ -3,7 +3,7 @@
   <Override>
     <npcset identifier="he-tutorialnpcs">
       <npc identifier="tutorial_masterchef"  spawnpointtags="tutorialguide" healthmultiplier="3" behavior="StayInHull">
-        <Character speciesname="human" tags="male,head6" job="he-chef" hairindex="1" beardindex="6" moustacheindex="0" faceattachmentindex="1" skincolor="252,225,198,255" haircolor="89,67,73,255" facialhaircolor="89,67,73,255">
+        <Character speciesname="human" tags="male,head6" job="he-chef" hairindex="15" beardindex="6" moustacheindex="0" faceattachmentindex="1" skincolor="252,225,198,255" haircolor="89,67,73,255" facialhaircolor="89,67,73,255">
           <job name="Chef" identifier="he-chef">
             <skill identifier="electrical" level="22" />
             <skill identifier="mechanical" level="26" />
@@ -57,6 +57,13 @@
         <ItemSet commonness="1">
           <Item identifier="idcard" equip="true"/>
           <Item identifier="minerclothes" equip="true"/>
+        </ItemSet>
+      </npc>
+      <npc identifier="tutorial_deliveryguy" commonness="0" job="watchman" behavior="Passive" healthmultiplier="1.0">
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="watchmanclothes" equip="true"/>
+          <Item identifier="he-cardboardbox" equip="true"/>
         </ItemSet>
       </npc>
     </npcset>
