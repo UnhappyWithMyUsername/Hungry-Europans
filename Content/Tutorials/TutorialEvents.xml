@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <!-- SCRIPTED EVENTS -->
+  <EventPrefabs>
+    <!-- TODO: Localization and text formatting for better readability | Best to have a separate localization file specific for tutorials -->
+    <ScriptedEvent identifier="tutorial_chef">
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="hullname:kitchen" tag="kitchen" />
+      <TagAction criteria="itemtag:toilet" tag="tutorialtoilet" />
+      <TagAction criteria="itemtag:tutorialcoffeemachine" tag="tutorialcoffeemachine" />
+      <TagAction criteria="itemtag:refrigerator" tag="tutorialfridge" />
+      <TagAction criteria="itemtag:stove" tag="tutorialstove" />
+      <TagAction criteria="itemtag:oven" tag="tutorialoven" />
+      <TagAction criteria="itemtag:sink" tag="tutorialsink" />
+      <TagAction criteria="itemtag:cuttingboard" tag="tutorialcuttingboard" />
+      <TagAction criteria="itemidentifier:he-kitchencounter" tag="tutorialkitchencounter" />
+      <TagAction criteria="itemidentifier:he-kitchencounter2" tag="tutorialkitchenpantry" />
+      <TagAction criteria="itemtag:electricgrill" tag="tutorialgrill" />
+      <TagAction criteria="itemtag:blender" tag="tutorialblender" />
+      <TagAction criteria="itemtag:tutorialpot" tag="tutorialpot" />
+      <TagAction criteria="itemtag:tutorialpan" tag="tutorialpan" />
+      <TagAction criteria="itemtag:brewkettle" tag="tutorialbrewingkettle" />
+      <TagAction criteria="itemtag:distiller" tag="tutorialdistifermenter" />
+      <TagAction criteria="itemtag:bottleprinter" tag="tutorialbottleprinter" />
+      <TagAction criteria="itemtag:hydroponicplanter" tag="tutorialhydroponics" />
+      <TagAction criteria="itemtag:cafeteria" tag="tutorialcafeteria" />
+      <TagAction criteria="itemtag:tutorialdoor" tag="tutorialdoor" />
+      <TagAction criteria="itemtag:tutoriallever" tag="tutoriallever" />
+      <TagAction criteria="itemtag:tutorialdoorterminal" tag="tutorialdoorterminal" />
+      <TagAction criteria="itemtag:npcdoor" tag="npcdoor" />
+      <TagAction criteria="itemtag:tutorialketchup" tag="tutorialketchup" />
+      <TagAction criteria="itemtag:tutorialyeastshroom" tag="tutorialyeastshroom" />
+      <TagAction criteria="itemtag:tutorialflour" tag="tutorialflour" />
+      <TagAction criteria="itemtag:tutorialwater" tag="tutorialwater" />
+      <TagAction criteria="itemtag:tutorialsalt" tag="tutorialsalt" />
+      <TagAction criteria="itemtag:tutorialpepper" tag="tutorialpepper" />
+      <TagAction criteria="itemtag:tutorialoil" tag="tutorialoil" />
+      <TagAction criteria="itemtag:tutorialplate" tag="tutorialplate" />
+      <SpawnAction npcsetidentifier="he-tutorialnpcs" npcidentifier="tutorial_masterchef" targettag="masterchef" spawnlocation="Outpost" spawnpointtag="tutorialguide" offset="0" />
+      <WaitAction time="1" />
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Ah hello there! You must be the new chef? Welcome!" targettag="player" />
+      <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="So, today we'll go through some basics of every day tasks for a submarine chef. Please follow me to the kitchen so we can get started." />
+      <NPCFollowAction npctag="masterchef" targettag="kitchen" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <EventObjectiveAction type="add" id="Follow the Master Chef" />
+      <TriggerAction target1tag="masterchef" target2tag="kitchen" radius="0" waitforinteraction="false" />
+      <NPCWaitAction npctag="masterchef" wait="true" />
+      <TriggerAction target1tag="player" target2tag="kitchen" radius="0" waitforinteraction="false" />
+      <EventObjectiveAction type="completeandremove" identifier="Follow the Master Chef" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Welcome to the kitchen! I'll do a quick rundown on things you'll usually find here." targettag="player" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialfridge" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialfridge" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="This is the refrigerator! It'll keep raw meat from spoiling and ice cream from melting. I've heard about desperate medics even storing organs in there to prevent them from decaying!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="The refrigerator has an integrated backup-power battery which will last for 5 minutes during a power outage. Once the backup-power battery is drained, the contents inside the refrigerator will start to spoil so make sure to restore power within those 5 minutes to prevent spoilage, should you ever run into a power outage." targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialfridge" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialkitchencounter" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Here we have the kitchen counter. Should be in every kitchen. In there you can store whatever you need for meal preparation, but be aware that it is not water proof! It's best to store water sensitive things elsewhere. It is also where you'll install and uninstall your oven, stove, etc. from. It comes with power connectors so you can wire newly installed equipment directly to it." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="If you've manually installed a kitchen counter, you can disassemble it again when holding a wrench while opening it up. The same goes for the kitchen pantry." targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialkitchencounter" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialkitchenpantry" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialkitchenpantry" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Speaking of the pantry. That's over there. It is basically the same as the kitchen counter in almost every way, except it doesn't support all installations. For example you can't put an oven in there. But what it lacks in compatibility, it makes up for by offering more storage space. Compared to the kitchen counter, the pantry is water proof so you won't need to worry about water sensitive things reacting, if your submarine ends up flooding." targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialkitchenpantry" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialoven" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialoven" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Here's the oven. With it you'll do baking and roasting. Not much else to say about it." targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialoven" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialstove" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialstove" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="This is the stove. You'll need a pot for cooking and a pan for frying. Without those the stove is basically useless, so make sure to put them on there. You can also put a kettle on there and brew some tea." targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialstove" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialsink" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialsink" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="With the sink you'll be hand-washing dirty dishes and pots or refill bottles and pots with water. Keep in mind to clean things you'll also need a cleaning agent like ethanol." targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialsink" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialcuttingboard" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="On the cutting board you'll be chopping all the ingredients into shape and finalize some dishes. Make sure to stay on the chopping. It's not going to magically continue chopping if you walk away!" targettag="player" />
+      <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
+      
+      <TagAction criteria="itemtag:npcdoor" tag="entrancedoor" SubmarineType="Outpost" chooserandom="true" />
+      <TagAction criteria="itemtag:npcdoor" tag="exitdoor" SubmarineType="Outpost" chooserandom="true" />
+      <!-- play a sound at the tagged entrance door to make it sound like someone is using it -->
+      <StatusEffectAction targettag="entrancedoor">
+        <StatusEffect target="This" disabledeltatime="true">
+          <Sound file="%ModDir%/Content/Tutorials/doorenter1.ogg" range="350" volume="1" loop="false" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <SpawnAction npcsetidentifier="he-tutorialnpcs" npcidentifier="tutorial_commoner" targettag="hungryeuropan" spawnlocation="Outpost" spawnpointtag="npcdoor" offset="0" />
+      <NPCFollowAction npctag="hungryeuropan" targettag="masterchef" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Oh hold on a second... I believe I heard a door. I think Someone is coming. Maybe your first customer?" targettag="player" />
+      <TriggerAction target1tag="hungryeuropan" target2tag="masterchef" radius="150" waitforinteraction="false" />
+      <NPCFollowAction npctag="masterchef" targettag="hungryeuropan" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <StatusEffectAction targettag="hungryeuropan">
+        <StatusEffect target="This">
+          <ForceSay message="Hey chef, when can we expect some meals? I'm hungry as hell!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="3" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="No worries! We will have some meals prepared in just a moment. What would you like to eat?" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="4" />
+      <StatusEffectAction targettag="hungryeuropan">
+        <StatusEffect target="This">
+          <ForceSay message="Uhh... I think I'd like some Spaghetti and Minceballs please." EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="3" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="Very Well! Your dish will be ready shortly. Please take a seat outside while we prepare it." EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="4" />
+      <StatusEffectAction targettag="hungryeuropan">
+        <StatusEffect target="This">
+          <ForceSay message="Ok great! Thank you!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <TagAction criteria="itemidentifier:he-cafeteriachair" tag="targetchair" chooserandom="true" />
+      <NPCFollowAction npctag="masterchef" targettag="hungryeuropan" follow="false" AbandonOnReset="false" ForceWalk="true" />
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <NPCFollowAction npctag="hungryeuropan" targettag="targetchair" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TriggerAction target1tag="hungryeuropan" target2tag="targetchair" radius="170" waitforinteraction="false" />
+      <NPCOperateItemAction NPCTag="hungryeuropan" TargetTag="targetchair" ItemComponentName="Controller" Operate="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Well, as you've heard it is time to prepare a meal. Our customer was asking for Spaghetti and Minceballs. Let's start by preparing the stove. Go and grab the pot on the pantry over there to the left." targettag="player" />
+      <TutorialHighlightAction state="true" targettag="tutorialpot" />
+      <EventObjectiveAction type="add" id="Collect the pot" />
+      <TriggerAction target1tag="player" target2tag="tutorialpot" radius="35" waitforinteraction="false" />
+      <Label name="checkfordirtypot" />
+      <CheckItemAction targettag="player" itemidentifiers="he-dirtypot" amount="1" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkfordirtypot" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Collect the pot" />
+      <TutorialHighlightAction state="false" targettag="tutorialpot" />
+      <ClearTagAction tag="tutorialpot" />
+      <TutorialHighlightAction state="true" targettag="tutorialsink" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Looks like the pot is dirty. We first need to clean it at the sink before we can cook with it. There should already be some ethanol in the sink for you to clean the pot with." targettag="player" />
+      <EventObjectiveAction type="add" id="Clean the pot in the sink" />
+      <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-pot" Amount="1" ApplyTagToItem="tutorialpot" />
+      <Label name="checkforcleanpot" />
+      <CheckItemAction targettag="player" itemidentifiers="he-pot" amount="1" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforcleanpot" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Clean the pot in the sink" />
+      <TutorialHighlightAction state="false" targettag="tutorialsink" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Very good! Now we should fill the pot with water from the sink. We will need it later to boil the pasta." targettag="player" />
+      <TutorialHighlightAction state="true" targettag="tutorialsink" />
+      <TutorialHighlightAction state="true" targettag="tutorialpot" />
+      <EventObjectiveAction type="add" id="Fill the pot with water" />
+      <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-potwithwater" Amount="1" ApplyTagToItem="tutorialpot" />
+      <Label name="checkforwaterpot" />
+      <CheckItemAction targettag="player" itemidentifiers="he-potwithwater" amount="1" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforwaterpot" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Fill the pot with water" />
+      <TutorialHighlightAction state="false" targettag="tutorialsink" />
+      <TutorialHighlightAction state="false" targettag="tutorialpot" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Perfect! You can put the filled pot onto the stove. Now we'll need to make some dough to create pasta from. Go ahead and grab the flour, the salt, a sea yeast shroom and a bottle of water from the kitchen counter." targettag="player" />
+      <EventObjectiveAction type="add" id="Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter" />
+      <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
+      <TutorialHighlightAction state="true" targettag="tutorialflour" />
+      <TutorialHighlightAction state="true" targettag="tutorialsalt" />
+      <TutorialHighlightAction state="true" targettag="tutorialyeastshroom" />
+      <TutorialHighlightAction state="true" targettag="tutorialwater" />
+      <Label name="checkforingredients" />
+      <CheckItemAction targettag="player" itemidentifiers="he-flour" amount="1" recursive="true">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforingredients" />
+        </Failure>
+      </CheckItemAction>
+      <CheckItemAction targettag="player" itemidentifiers="he-salt" amount="1" recursive="true">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforingredients" />
+        </Failure>
+      </CheckItemAction>
+      <CheckItemAction targettag="player" itemidentifiers="yeastshroom" amount="1" recursive="true">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforingredients" />
+        </Failure>
+      </CheckItemAction>
+      <CheckItemAction targettag="player" itemidentifiers="he-water" amount="1" recursive="true">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforingredients" />
+        </Failure>
+      </CheckItemAction>
+      <TutorialHighlightAction state="false" targettag="tutorialkitchencounter" />
+      <TutorialHighlightAction state="false" targettag="tutorialflour" />
+      <TutorialHighlightAction state="false" targettag="tutorialsalt" />
+      <TutorialHighlightAction state="false" targettag="tutorialyeastshroom" />
+      <TutorialHighlightAction state="false" targettag="tutorialwater" />
+      <EventObjectiveAction type="completeandremove" id="Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Wonderful! Go ahead and use them to prepare some dough at the cutting board." targettag="player" />
+      <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
+      <EventObjectiveAction type="add" id="Make some dough at the cutting board" />
+      <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-dough" Amount="1" ApplyTagToItem="tutorialdough" />
+      <Label name="checkfordough" />
+      <CheckItemAction targettag="player" itemidentifiers="he-dough" amount="1" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkfordough" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Make some dough at the cutting board" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Very good! Now also at the cutting board you can make some pasta from that dough." targettag="player" />
+      <EventObjectiveAction type="add" id="Make some pasta at the cutting board" />
+      <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-rawpasta" Amount="1" ApplyTagToItem="tutorialpasta" />
+      <Label name="checkforpasta" />
+      <CheckItemAction targettag="player" itemidentifiers="he-rawpasta" amount="1" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforpasta" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Make some pasta at the cutting board" />
+      <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="I see you've got quite the talent! We will also need some meat, but it looks like we ran fresh out of it. We'll have to butcher a crawler to get some fresh meat. Here, take my spare cleaver and follow me." targettag="player" />
+      <StatusEffectAction targettag="player">
+        <StatusEffect target="This">
+          <SpawnItem identifier="he-cleaver" spawnposition="ThisInventory" equip="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <SpawnAction speciesname="crawler" spawnpointtag="crawlerspawn" targettag="tutorialcrawler" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TriggerAction target1tag="masterchef" target2tag="tutorialdoor" radius="230" waitforinteraction="false" />
+      <StatusEffectAction targettag="tutorialdoorterminal">
+        <StatusEffect target="This" LightColor="0,92,23,255" noninteractable="true" setvalue="true" disabledeltatime="true" />
+      </StatusEffectAction>
+      <StatusEffectAction targettag="tutoriallever">
+        <StatusEffect target="This" State="true" setvalue="true" disabledeltatime="true" />
+      </StatusEffectAction>
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Here we are. In here you'll find a crawler. Kill it, then slash your meat cleaver on its corpse to harvest meat. If you start hearing a strange noise, you've harvested all the meat." targettag="player" />
+      <EventObjectiveAction type="add" id="Kill the crawler and harvest all of its meat" />
+      <TutorialHighlightAction state="true" targettag="tutorialcrawler" />
+      <GodModeAction targettag="player" enabled="true" />
+      <Label name="checkformeat" />
+      <CheckItemAction targettag="player" itemidentifiers="he-crawlermeatchunk" amount="1" recursive="true">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkformeat" />
+        </Failure>
+      </CheckItemAction>
+      <GodModeAction targettag="player" enabled="false" />
+      <TutorialHighlightAction state="false" targettag="tutorialcrawler" />
+      <EventObjectiveAction type="completeandremove" id="Kill the crawler and harvest all of its meat" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Very well done! Please follow me back to the kitchen so we can proceed with the meal preparation." targettag="player" />
+      <NPCFollowAction npctag="masterchef" targettag="tutorialcoffeemachine" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TriggerAction target1tag="player" target2tag="kitchen" radius="0" waitforinteraction="false" />
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Time to chop the meat into smaller pieces! Use the cutting board to prepare some raw crawler meat which we will be using for the minceballs." targettag="player" />
+      <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
+      <EventObjectiveAction type="add" id="Prepare raw crawler meat at the cutting board" />
+      <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-rawcrawlermeat" Amount="1" ApplyTagToItem="tutorialrawcrawlermeat" />
+      <Label name="checkforrawcrawlermeat" />
+      <CheckItemAction targettag="player" itemidentifiers="he-rawcrawlermeat" amount="2" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforrawcrawlermeat" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Prepare raw crawler meat at the cutting board" />
+      <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Now it is time to start cooking! Grab an empty plate and a bottle of ketchup from the kitchen counter and put all your ingredients into the stove, then start cooking." targettag="player" />
+      <TutorialHighlightAction state="true" targettag="tutorialstove" />
+      <TutorialHighlightAction state="true" targettag="tutorialrawcrawlermeat" />
+      <TutorialHighlightAction state="true" targettag="emptyplate" />
+      <TutorialHighlightAction state="true" targettag="tutorialketchup" />
+      <TutorialHighlightAction state="true" targettag="tutorialpot" />
+      <TutorialHighlightAction state="true" targettag="tutorialpasta" />
+      <EventObjectiveAction type="add" id="Prepare a meal: Spaghetti and Minceballs" />
+      <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-spaghettimeatballs" Amount="1" ApplyTagToItem="tutorialmeal" />
+      <TutorialHighlightAction state="false" targettag="tutorialrawcrawlermeat" />
+      <TutorialHighlightAction state="false" targettag="emptyplate" />
+      <TutorialHighlightAction state="false" targettag="tutorialketchup" />
+      <TutorialHighlightAction state="false" targettag="tutorialpot" />
+      <TutorialHighlightAction state="false" targettag="tutorialpasta" />
+      <Label name="checkforspaghettimeatballs" />
+      <CheckItemAction targettag="player" itemidentifiers="he-spaghettimeatballs" amount="1" recursive="false">
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforspaghettimeatballs" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Prepare a meal: Spaghetti and Minceballs" />
+      <TutorialHighlightAction state="false" targettag="tutorialstove" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="You're a natural! Grab the meal and let's bring it to our customer. They must be ravenous by now, haha!" targettag="player" />
+      <TutorialHighlightAction state="true" targettag="tutorialmeal" />
+      <TutorialHighlightAction state="true" targettag="hungryeuropan" />
+      <EventObjectiveAction type="add" id="Give the meal to the hungry europan" />
+      <Label name="checkformeal" />
+      <TriggerAction target1tag="player" target2tag="hungryeuropan" radius="1000" waitforinteraction="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="small" text="Oh finally! You got my food?" targettag="player">
+        <Option text="Yes, here you go!">
+          <CheckItemAction targettag="player" itemidentifiers="he-spaghettimeatballs" amount="1" recursive="true">
+            <Success>
+              <TutorialHighlightAction state="false" targettag="hungryeuropan" />
+              <TutorialHighlightAction state="false" targettag="hungryeuropan" />
+              <EventObjectiveAction type="completeandremove" id="Give the meal to the hungry europan" />
+              <RemoveItemAction targettag="tutorialmeal" amount="1" />
+              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="small" text="Thank you! Have a great day!" targettag="player" />
+              <StatusEffectAction targettag="hungryeuropan">
+                <StatusEffect target="This">
+                  <SpawnItem identifier="he-spaghettimeatballs" spawnposition="ThisInventory" equip="true" />
+                  <SpawnItem identifier="he-fork" spawnposition="ThisInventory" equip="true" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <WaitAction time="1" />
+              <TagAction criteria="itemidentifier:he-spaghettimeatballs" tag="removethis" continueifnotargetsfound="true" />
+              <TagAction criteria="itemidentifier:he-fork" tag="removethis" continueifnotargetsfound="true" />
+              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="You've satisfied your first customer! We'll be starting the next lesson in just a moment. I just quickly need to relief myself. Please wait in the kitchen for me, I'll be right with you!" targettag="player" />
+              <NPCOperateItemAction NPCTag="masterchef" TargetTag="tutorialtoilet" ItemComponentName="Controller" Operate="true" />
+              <NPCFollowAction npctag="hungryeuropan" targettag="exitdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
+              <TriggerAction target1tag="hungryeuropan" target2tag="exitdoor" radius="170" waitforinteraction="false" />
+              <NPCOperateItemAction NPCTag="hungryeuropan" TargetTag="exitdoor" ItemComponentName="Controller" Operate="true" />
+              <TriggerAction target1tag="hungryeuropan" target2tag="exitdoor" radius="60" waitforinteraction="false" />
+              <StatusEffectAction targettag="removethis">
+                <StatusEffect target="This" disabledeltatime="true">
+                  <Remove />
+                </StatusEffect>
+              </StatusEffectAction>
+              <StatusEffectAction targettag="exitdoor">
+                <StatusEffect target="This" disabledeltatime="true">
+                  <Sound file="%ModDir%/Content/Tutorials/doorenter2.ogg" range="350" volume="2" loop="false" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <StatusEffectAction targettag="hungryeuropan">
+                <StatusEffect target="This" disabledeltatime="true">
+                  <RemoveCharacter />
+                </StatusEffect>
+              </StatusEffectAction>
+            </Success>
+            <Failure>
+              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="small" text="Uhm... And where exactly?" targettag="player">
+                <Option text="Oh, my bad! Let me go grab it real quick. I'll be right back!" endconversation="true" />
+              </ConversationAction>
+              <GoTo name="checkformeal" />
+            </Failure>
+          </CheckItemAction>
+        </Option>
+        <Option text="Sorry, I need a bit more time">
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="small" text="Ugh, fine! But please hurry! I'm starving..." targettag="player" />
+          <GoTo name="checkformeal" />
+        </Option>
+      </ConversationAction>
+      <WaitAction time="3" />
+      <StatusEffectAction targettag="tutorialtoilet">
+        <StatusEffect target="This" disabledeltatime="true">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="false" range="500" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <NPCOperateItemAction NPCTag="masterchef" TargetTag="tutorialtoilet" ItemComponentName="Controller" Operate="false" />
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Ah I'm feeling much lighter. Alright! Onto the next lesson! What would you like to learn about next?" targettag="player" />
+      <!-- to be continued -->
+      
+      <!--<Label name="loop" />
+      <ClearTagAction tag="entrancedoor" />
+      <ClearTagAction tag="exitdoor" />-->
+    </ScriptedEvent>
+  </EventPrefabs>
+</Randomevents>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Tutorials>
+  <Tutorial identifier="cheftutorial" order="3" outpostpath="%ModDir:2954998725%/Content/Tutorials/TutorialKitchen.sub" levelparams="ColdCavernsOutpost" levelseed="nLoZLLtza" allowcharacterswitch="false">
+    <CharacterInfo jobidentifier="he-chef" startingitemtags="clothing,mobileradio,identitycard">
+      <Skill identifier="medical" level="10" />
+      <Skill identifier="weapons" level="10" />
+      <Skill identifier="mechanical" level="10" />
+      <Skill identifier="electrical" level="10" />
+      <Skill identifier="helm" level="10" />
+      <Skill identifier="cooking" level="100" />
+      <Skill identifier="butchery" level="75" />
+    </CharacterInfo>
+    <ScriptedEvent identifier="tutorial_chef" />
+    <Banner texture="%ModDir:2954998725%/Content/Tutorials/ChefTutorialBanner.png" />
+    <EndMessage type="restart" />
+  </Tutorial>
+</Tutorials>

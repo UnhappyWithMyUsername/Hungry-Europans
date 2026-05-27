@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+  <Override>
+    <npcset identifier="he-tutorialnpcs">
+      <npc identifier="tutorial_masterchef"  spawnpointtags="tutorialguide" healthmultiplier="3" behavior="StayInHull">
+        <Character speciesname="human" tags="male,head6" job="he-chef" hairindex="1" beardindex="6" moustacheindex="0" faceattachmentindex="1" skincolor="252,225,198,255" haircolor="89,67,73,255" facialhaircolor="89,67,73,255">
+          <job name="Chef" identifier="he-chef">
+            <skill identifier="electrical" level="22" />
+            <skill identifier="mechanical" level="26" />
+            <skill identifier="weapons" level="13" />
+            <skill identifier="medical" level="17" />
+            <skill identifier="helm" level="8" />
+            <skill identifier="cooking" level="100" />
+            <skill identifier="butchery" level="100" />
+          </job>
+        </Character>
+        <ItemSet commonness="1">
+          <Item identifier="he-chefscapmaster1" equip="true"/>
+          <Item identifier="he-chefsuniformmaster1" equip="true"/>
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="he-cleaver" equip="true"/>
+        </ItemSet>
+      </npc>
+      <npc identifier="tutorial_commoner" commonness="0" job="watchman" behavior="Passive" healthmultiplier="1.0">
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="commonerclothes1" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="commonerclothes1" equip="true"/>
+          <Item identifier="idcard" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="commonerclothes2" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="commonerclothes2" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="commonerclothes3" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="commonerclothes3" equip="true"/>
+          <Item identifier="idcard" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="commonerclothes4" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="watchmanclothes" equip="true"/>
+        </ItemSet>
+        <ItemSet commonness="1">
+          <Item identifier="idcard" equip="true"/>
+          <Item identifier="minerclothes" equip="true"/>
+        </ItemSet>
+      </npc>
+    </npcset>
+  </Override>
+</npcsets>
