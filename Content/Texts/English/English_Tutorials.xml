@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+<Override >
+
+<!-- Display names -->
+<tutorial.cheftutorial>Become a Chef</tutorial.cheftutorial>
+<tutorial.cheftutorial.description>In this tutorial, Chef Booger will guide you through the daily tasks of a submarine chef and get you prepared for you to support your crew.</tutorial.cheftutorial.description>
+
+</Override>
+</infotexts>
