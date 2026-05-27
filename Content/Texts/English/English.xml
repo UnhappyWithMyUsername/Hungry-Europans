@@ -537,6 +537,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entitydescription.he-dishwashertablet>A chemical tablet used inside dishwashers to clean even the most persistent stains off of tableware.\n- Not safe for consumption\n- Only store in dry areas</entitydescription.he-dishwashertablet><!--Patch 19-->
 <entityname.he-dishwashertabletbag>Bag of Dishwasher Tablets</entityname.he-dishwashertabletbag><!--Patch 19-->
 <entitydescription.he-dishwashertabletbag>A bag containing 10 chemical tablets used inside dishwashers to clean even the most persistent stains off of tableware.\n- Not safe for consumption</entitydescription.he-dishwashertabletbag><!--Patch 19-->
+<entityname.he-cardboardbox>Cardboard Box</entityname.he-cardboardbox>
+<entitydescription.he-cardboardbox>A cardboard box usually used for deliveries.</entitydescription.he-cardboardbox>
 
 <!-- Gear -->
 <entityname.he-chefscap1>Chef's Hat</entityname.he-chefscap1>
