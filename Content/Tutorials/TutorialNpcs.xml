@@ -3,7 +3,7 @@
   <Override>
     <npcset identifier="he-tutorialnpcs">
       <npc identifier="tutorial_masterchef"  spawnpointtags="tutorialguide" healthmultiplier="3" behavior="StayInHull">
-        <Character speciesname="human" tags="male,head6" job="he-chef" hairindex="15" beardindex="6" moustacheindex="0" faceattachmentindex="1" skincolor="252,225,198,255" haircolor="89,67,73,255" facialhaircolor="89,67,73,255">
+        <Character speciesname="human" name="Chef Booger" tags="male,head6" job="he-chef" hairindex="15" beardindex="6" moustacheindex="0" faceattachmentindex="1" skincolor="252,225,198,255" haircolor="139,126,108,255" facialhaircolor="187,169,129,255">
           <job name="Chef" identifier="he-chef">
             <skill identifier="electrical" level="22" />
             <skill identifier="mechanical" level="26" />
@@ -60,6 +60,15 @@
         </ItemSet>
       </npc>
       <npc identifier="tutorial_deliveryguy" commonness="0" job="watchman" behavior="Passive" healthmultiplier="1.0">
+        <Character speciesname="human" name="Johnny Beaver Boob" tags="male,head1" job="assistant" hairindex="16" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="200,165,131,255" haircolor="89,67,73,255" facialhaircolor="89,67,73,255">
+          <job name="Assistant" identifier="assistant">
+            <skill identifier="electrical" level="22" />
+            <skill identifier="mechanical" level="26" />
+            <skill identifier="weapons" level="20" />
+            <skill identifier="medical" level="23" />
+            <skill identifier="helm" level="18" />
+          </job>
+        </Character>
         <ItemSet commonness="1">
           <Item identifier="idcard" equip="true"/>
           <Item identifier="watchmanclothes" equip="true"/>

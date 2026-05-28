@@ -5,7 +5,7 @@
       <Skill identifier="medical" level="10" />
       <Skill identifier="weapons" level="10" />
       <Skill identifier="mechanical" level="10" />
-      <Skill identifier="electrical" level="10" />
+      <Skill identifier="electrical" level="100" />
       <Skill identifier="helm" level="10" />
       <Skill identifier="cooking" level="100" />
       <Skill identifier="butchery" level="75" />

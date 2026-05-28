@@ -1480,7 +1480,7 @@
       <Deconstruct time="5">
         <Item identifier="carbon" amount="1" />
       </Deconstruct>
-      <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="15" aimpos="65,-10" attachable="false" aimable="false" />
+      <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="40,-50" handle1="0,-28" handle2="0,-28" holdangle="10" aimpos="65,-10" attachable="false" aimable="false" />
     </Item>
         
   <!-- Burger Flipper 3000 TODO: Enable for DLC update, adjust the statvalues for spatula arm -->
