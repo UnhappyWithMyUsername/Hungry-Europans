@@ -98,9 +98,9 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="200" sold="true" >
-        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="1" maxavailable="1"/>
-        <Price storeidentifier="merchantcity" multiplier="1" minavailable="3" maxavailable="3" />
+      <Price baseprice="180" sold="true" >
+        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="2" maxavailable="3"/>
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="3" maxavailable="5" />
       </Price>
       <Fabricate suitablefabricators="brewkettle" requiredtime="150" requiresrecipe="false" amount="1">
         <!-- <RequiredSkill identifier="cooking" level="20" /> -->
