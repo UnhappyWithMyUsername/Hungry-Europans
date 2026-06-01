@@ -350,7 +350,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-kegempty>Empty Keg</entityname.he-kegempty><!--Patch 10-->
 <entitydescription.he-kegempty>An empty keg used for some recipes. Can be used in water to collect dirty water.</entitydescription.he-kegempty><!--Patch 10-->
 <entityname.he-kegseawater>Keg of Sea Water</entityname.he-kegseawater><!--Patch 10-->
-<entitydescription.he-kegseawater>A keg full of sea water. Can be used to refill bottles at a refill station. Can be cooked into clean water at a stove or brewing kettle. Also used in hydroponic planters.</entitydescription.he-kegseawater><!--Patch 10-->
+<entitydescription.he-kegseawater>A keg full of sea water. Can be used in hydroponic planters.</entitydescription.he-kegseawater><!--Patch 10-->
 <entityname.he-kegwater>Keg of Water</entityname.he-kegwater><!--Patch 10-->
 <entitydescription.he-kegwater>A keg full of water. Can be used to refill bottles at a refill station.</entitydescription.he-kegwater><!--Patch 10-->
 <entityname.he-kegcoalitionpremium>Keg of Coalition Premium Beer</entityname.he-kegcoalitionpremium><!--Patch 10-->
