@@ -72,7 +72,6 @@
         <ItemSet commonness="1">
           <Item identifier="idcard" equip="true"/>
           <Item identifier="watchmanclothes" equip="true"/>
-          <Item identifier="he-cardboardbox" equip="true"/>
         </ItemSet>
       </npc>
     </npcset>
