@@ -460,6 +460,7 @@
           <GoTo name="checkforspaghettiingredients" />
         </Failure>
       </CheckItemAction>
+      <TutorialHighlightAction state="false" targettag="tutorialkitchencounter" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-spaghettimeatballs" Amount="1" ApplyTagToItem="tutorialmeal" />
       <TutorialHighlightAction state="false" targettag="tutorialrawcrawlermeat" />
       <TutorialHighlightAction state="false" targettag="emptyplate" />
@@ -554,6 +555,9 @@
         </StatusEffect>
       </StatusEffectAction>
       <NPCOperateItemAction NPCTag="masterchef" TargetTag="tutorialtoilet" ItemComponentName="Controller" Operate="false" />
+      
+      <!-- \\\\\ FRYER AND KITCHEN INSTALLATION TUTORIAL START ///// -->
+      
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
       <TagAction criteria="itemtag:npcdoor" tag="entrancedoor" SubmarineType="Outpost" chooserandom="true" />
@@ -566,6 +570,11 @@
       </StatusEffectAction>
       <!-- spawn the delivery guy and have him walk towards the chef -->
       <SpawnAction npcsetidentifier="he-tutorialnpcs" npcidentifier="tutorial_deliveryguy" targettag="deliveryguy" spawnlocation="Outpost" spawnpointtag="npcdoor" offset="0" />
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <SpawnItem identifier="he-cardboardbox" spawnposition="ThisInventory" equip="true" />
+        </StatusEffect>
+      </StatusEffectAction>
       <NPCFollowAction npctag="deliveryguy" targettag="masterchef" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="I feel so much lighter now. Alright, now. Where were we? Oh wait! I think I hear someone. It might be the delivery guy..." targettag="player" />
       <TriggerAction target1tag="deliveryguy" target2tag="masterchef" radius="150" waitforinteraction="false" />
@@ -750,6 +759,8 @@
       <TutorialHighlightAction state="true" targettag="tutorialhammerheadspawnmeatchunk" />
       <EventObjectiveAction type="add" id="Grab the cooking oil and 3 hammerhead spawns" />
       <Label name="checkforoilandhammerheads" />
+      <InventoryHighlightAction targettag="player" itemidentifier="he-cookingoil" />
+      <InventoryHighlightAction targettag="player" itemidentifier="he-hammerheadspawnmeatchunk" />
       <CheckItemAction targettag="player" itemidentifiers="he-hammerheadspawnmeatchunk" amount="3" recursive="true">
         <Success>
           <TutorialHighlightAction state="false" targettag="tutorialhammerheadspawnmeatchunk" />
@@ -850,6 +861,9 @@
       <TagAction criteria="itemidentifier:he-tutorial.cookedhammerheadspawnfried" tag="tutorialhammerheadspawnfried" continueifnotargetsfound="true" />
       <!-- chef automatically "eats" the fried hammerhead spawns for 10 seconds -->
       <WaitAction time="10" />
+      
+      <!-- \\\\\ BREWING TUTORIAL START ///// -->
+      
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Ah, that hit the spot! But it made quite thirsty. I think it's time I explain everything around preparing drinks for your crew." targettag="player" />
       <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Please grab that liquor crate over there in that shelf and then follow me." targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialliquorcrate" />
@@ -928,7 +942,7 @@
           <TagAction criteria="itemidentifier:he-kegseawater" tag="tutorialseawaterkeg" />
           <Label name="checkforfullyfilledkeg" />
           <CheckConditionalAction targettag="tutorialseawaterkeg">
-            <Conditional condition="gte 105" />
+            <Conditional ConditionPercentage="gte 100" />
             <Success>
               <!-- continue -->
             </Success>
@@ -1079,6 +1093,38 @@
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Don't forget to move the filled bottles back into the crate. This machine has also been sped up so you should be able to fill the entire crate in no time!" targettag="player" />
       <EventObjectiveAction type="add" id="Fill all 20 bottles with Coalition Premium beer" />
       <TutorialHighlightAction state="true" targettag="tutorialrefillstation" />
+      <TagAction criteria="itemtag:npcdoor" tag="entrancedoor" SubmarineType="Outpost" chooserandom="true" />
+      <TagAction criteria="itemtag:npcdoor" tag="exitdoor" SubmarineType="Outpost" chooserandom="true" />
+      <!-- play a sound at the tagged entrance door to make it sound like someone is using it -->
+      <StatusEffectAction targettag="entrancedoor">
+        <StatusEffect target="This" disabledeltatime="true">
+          <Sound file="%ModDir%/Content/Tutorials/doorenter1.ogg" range="350" volume="1" loop="false" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <!-- spawn the delivery guy and have him walk towards the chef -->
+      <SpawnAction npcsetidentifier="he-tutorialnpcs" npcidentifier="tutorial_deliveryguy" targettag="deliveryguy" spawnlocation="Outpost" spawnpointtag="npcdoor" offset="0" />
+      <NPCFollowAction npctag="deliveryguy" targettag="masterchef" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <TriggerAction target1tag="deliveryguy" target2tag="masterchef" radius="150" waitforinteraction="false" />
+      <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <!-- have the delivery guy and chef talk to each other -->
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <ForceSay message="Hey Booger, I'm here to collect the beer crate you've called me about earlier!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="4" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="Hey Johnny Beaver Boob! Just a moment. My apprentice here should be finished any second!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="4" />
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <ForceSay message="Sounds good! I can wait." EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <NPCFollowAction npctag="masterchef" targettag="tutorialrefillstation" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <Label name="checkforbottlesfilled" />
       <CheckItemAction targettag="tutorialliquorcrate" itemidentifiers="he-beercoalitionpremium" amount="20" recursive="false">
         <Success>
@@ -1089,14 +1135,99 @@
           <GoTo name="checkforbottlesfilled" />
         </Failure>
       </CheckItemAction>
+      <TagAction criteria="itemidentifier:he-beercoalitionpremium" tag="tutorialbeer" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstation" />
       <EventObjectiveAction type="completeandremove" id="Fill all 20 bottles with Coalition Premium beer" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Wonderful! Those would surely make your crew happy!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Wonderful! Those would surely make any crew happy! Please hand the crate to Johnny Beaver Boob." targettag="player" />
+      <EventObjectiveAction type="add" id="Hand the crate to Johnny Beaver Boob" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="true" SpeakerTag="deliveryguy" dialogtype="small" text="I'll take that. Thank you very much!" targettag="player" />
+      <RemoveItemAction targettag="tutorialbeer" amount="20" />
+      <RemoveItemAction targettag="tutorialliquorcrate" amount="1" />
+      <SpawnAction ItemIdentifier="he-liquorcrate" TargetTag="tutorialliquorcrate" TargetInventory="deliveryguy" Amount="1" />
+      <SpawnAction ItemIdentifier="he-beercoalitionpremium" TargetInventory="tutorialliquorcrate" Amount="20" />
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <ForceSay message="Yup all seems good. Catch you guys later then!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="3" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="Bye Johnny Beaver Boob!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <!-- have the delivery guy walk to the exit door to despawn -->
+      <NPCFollowAction npctag="deliveryguy" targettag="exitdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <ForceSay message="Bye!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="Bye!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <ForceSay message="Bye bye!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="Bye bye Johnny!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This">
+          <ForceSay message="Bye bye Booger!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="2" />
+      <StatusEffectAction targettag="masterchef">
+        <StatusEffect target="This">
+          <ForceSay message="Bye!" EvenIfCantSpeak="true" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="2" />
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="true" ForceWalk="true" />
+      <!-- some long dialog to keep the player busy with reading while the event is dealing with the despawning of the delivery guy -->
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="true" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="It's always nice seeing Johnny Beaver Boob. Such a nice guy, don't you think? Glad he's the delivery guy at this station so we still see each other regularly. I wonder what the rest of the crew is up to nowadays..." targettag="player" />
+      <TriggerAction target1tag="deliveryguy" target2tag="exitdoor" radius="170" waitforinteraction="false" />
+      <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="exitdoor" ItemComponentName="Controller" Operate="true" />
+      <TriggerAction target1tag="deliveryguy" target2tag="exitdoor" radius="60" waitforinteraction="false" />
+      <StatusEffectAction targettag="tutorialliquorcrate">
+        <StatusEffect target="This" disabledeltatime="true">
+          <Remove />
+        </StatusEffect>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="exitdoor">
+        <StatusEffect target="This" disabledeltatime="true">
+          <Sound file="%ModDir%/Content/Tutorials/doorenter2.ogg" range="350" volume="2" loop="false" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="deliveryguy">
+        <StatusEffect target="This" disabledeltatime="true">
+          <RemoveCharacter />
+        </StatusEffect>
+      </StatusEffectAction>
+      <ClearTagAction tag="entrancedoor" />
+      <ClearTagAction tag="exitdoor" />
+      <WaitAction time="6" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Anyways! Next we should prepare some soup." targettag="player" />
       <!-- WIP - to be continued -->
       <!-- TODO: -->
       <!-- soup tutorial (gather seaweed, make nori, gather seeds, make seaweed soup) -->
       <!-- cafeteria tutorial (buy plated food, eat, return dirty dishes) -->
       <!-- hydroponics tutorial (gather fertilizer, gather seaweed, fill a hydroponic planter and start it) -->
+      <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
+      <!-- eating and drinking tutorial (eat fingerfood, eat fork/spoon food, open a bottle, drink) -->
 
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Well, I've taught you everything I know. I think you're ready to join and support a crew! Good luck out there!" targettag="player" />
       <TutorialCompleteAction />
