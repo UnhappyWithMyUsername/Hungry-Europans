@@ -68,7 +68,7 @@
         </StatusEffect>
         <!-- Exclusive to salt keg: Reload in salt water -->
         <StatusEffect type="OnSecondaryUse" target="This" condition="10" comparison="And">
-          <Conditional Condition="lt 100" />
+          <Conditional ConditionPercentage="lt 100" />
           <Conditional InWater="true" />
           <ParticleEmitter particle="bubbles" particlespersecond="2" scalemin="0.25" scalemax="0.5" distancemin="30" distancemax="35" velocitymin="20" velocitymax="50" copyentityangle="true" anglemin="90" anglemax="90" colormultiplier="255,255,255,255" lifetimemultiplier="1" /> 
           <Sound file="Content/Sounds/Water/SplashLoop.ogg" range="200" volume="1" loop="true" frequencymultiplier="2"/>
