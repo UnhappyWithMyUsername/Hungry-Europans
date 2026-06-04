@@ -238,7 +238,7 @@
       </Price>
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="175" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegrum" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegrum" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -450,7 +450,7 @@
       </Price>
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="299" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegpiraterum" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegpiraterum" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -640,7 +640,7 @@
       </Price>
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="125" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegwhiskey" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegwhiskey" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlewhiskey" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -824,7 +824,7 @@
       </Price>
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="249" fabricationlimitmin="0" fabricationlimitmax="3" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-keghalucinova" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-keghalucinova" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlehalucinova" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -996,7 +996,7 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegcoalitionpremium" UseCondition="True" MinCondition="0.05" />
+        <RequiredItem identifier="he-kegcoalitionpremium" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -1165,7 +1165,7 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegjovianforce" UseCondition="True" MinCondition="0.05" />
+        <RequiredItem identifier="he-kegjovianforce" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -1337,7 +1337,7 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="59" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegliquidascension" UseCondition="True" MinCondition="0.05" />
+        <RequiredItem identifier="he-kegliquidascension" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -1513,7 +1513,7 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="38" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegclownjuice" UseCondition="True" MinCondition="0.05" />
+        <RequiredItem identifier="he-kegclownjuice" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -1684,7 +1684,7 @@
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="666" fabricationlimitmin="0" fabricationlimitmax="3" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegreaperstribute" UseCondition="True" MinCondition="0.05" />
+        <RequiredItem identifier="he-kegreaperstribute" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
@@ -2980,7 +2980,7 @@
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlecommon" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
@@ -3117,7 +3117,7 @@
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
@@ -3187,7 +3187,7 @@
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlewhiskey" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
@@ -3257,7 +3257,7 @@
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlehalucinova" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
@@ -3327,7 +3327,7 @@
         <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate> -->
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
@@ -3459,7 +3459,7 @@
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirstDISABLEDFORNOW" suitability="5" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlecommon" amount="1" />
       </Fabricate>
       <Deconstruct time="2">
@@ -3583,7 +3583,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlewhiskey" amount="1" />
       </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
@@ -3642,7 +3642,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  /> 
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlewhiskey" amount="1" />
       </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
@@ -3701,7 +3701,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlehalucinova" amount="1" />
       </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
@@ -3760,7 +3760,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.04999"/>
         <RequiredItem tag="emptybottlebeer" amount="1" />
       </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
