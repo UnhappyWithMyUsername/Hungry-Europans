@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <Item hideinmenus="false" name="Fried Hammerhead Spawn" nameidentifier="he-cookedhammerheadspawnfried" identifier="he-tutorial.cookedhammerheadspawnfried" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" maxcondition="99" />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="78" radius="15" density="11" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdangle="0" holdpos="33,23" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="300" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+  </Items>
+</Override>
