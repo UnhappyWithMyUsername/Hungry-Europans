@@ -164,7 +164,7 @@
          
     <Item name="The Europan Volume 66" identifier="he-skillbooktheeuropan" description="" category="Misc" Tags="smallitem,skillbook" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.5" impactsoundtag="impact_soft" cargocontaineridentifier="metalcrate">
       <PreferredContainer primary="crewcab"/>
-      <Price baseprice="150" buyingpricemodifier="1.5" minleveldifficulty="0" sold="True" >
+      <Price baseprice="150" buyingpricemultiplier="1.5" minleveldifficulty="0" sold="True" >
         <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="1" />
         <Price storeidentifier="merchantcity" minavailable="1" maxavailable="4" />
         <Price storeidentifier="merchantresearch" maxavailable="1" />
@@ -202,7 +202,7 @@
     
     <Item name="&quot;The Art of Deep Sea Cooking&quot; by Aunt Doris" identifier="he-skillbookauntdoris" description="" category="Misc" Tags="smallitem,skillbook" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.5" impactsoundtag="impact_soft" cargocontaineridentifier="metalcrate">
       <PreferredContainer primary="crewcab"/>
-      <Price baseprice="350" buyingpricemodifier="2.5" minleveldifficulty="20" >
+      <Price baseprice="350" buyingpricemultiplier="2.5" minleveldifficulty="20" >
         <Price storeidentifier="merchantoutpost" maxavailable="1" sold="True" />
         <Price storeidentifier="merchantcity" maxavailable="1" sold="True" />
         <Price storeidentifier="merchantresearch" sold="False" />

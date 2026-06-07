@@ -86,7 +86,7 @@
     <Item name="Cooler Crate" identifier="he-coolercrate" category="Equipment" subcategory="Container" description="Used to prevent meat from spoiling. Needs a battery." tags="crate,kitchen,cooler,refrigeratedcontainer" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" canflipx="false" impactsoundtag="impact_metal_heavy">
       <Deconstruct time="0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
-      <Price baseprice="10" buyingpricemodifier="20.5" minleveldifficulty="0" sold="True">
+      <Price baseprice="50" buyingpricemultiplier="4" minleveldifficulty="0" sold="True">
         <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="2" />
         <Price storeidentifier="merchantcity" minavailable="1" maxavailable="4" />
         <Price storeidentifier="merchantresearch" maxavailable="1" />
