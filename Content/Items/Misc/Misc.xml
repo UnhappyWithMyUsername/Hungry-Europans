@@ -1244,8 +1244,23 @@
         </StatusEffect>
       </Pickable>
     </Item> 
-      
-      
+
+    <!-- fake nitroglycerin that deletes itself and spawns real nitro to avoid override 
+    TODO: use anarchist cookbook recipe? -->
+    <Item name="" identifier="blendernitroglycerin" nameidentifier="nitroglycerin" descriptionidentifier="nitroglycerin" category="Weapon" Tags="smallitem" maxstacksize="4">
+      <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,768,64,64" origin="0.5,0.5" />
+      <Body width="16" height="12" density="10" />      
+      <Fabricate suitablefabricators="blender" requiredtime="25" requiresrecipe="false" amount="1">
+        <RequiredItem identifier="badcreepingorange" amount="1" />
+        <RequiredItem tag="plantleaf" amount="1" />
+      </Fabricate>
+      <Pickable slots="Any" msg="ItemMsgPickUpSelect" >        
+        <StatusEffect type="Always" target="This">
+          <Remove />
+          <SpawnItem identifier="nitroglycerin" spawnposition="SameInventory"/>
+        </StatusEffect>
+      </Pickable>
+    </Item> 
       
       
       
@@ -1471,6 +1486,10 @@
         <QualityStat stattype="Condition" value="0.1" />
       </Quality>
     </Item>
+    
+    
+    
+    
         
   <!-- Burger Flipper 3000 TODO: Enable for DLC update, adjust the statvalues for spatula arm -->
   <!-- <Item name="PROSTHETICSPATULA" identifier="he-prostheticspatula" scale="0.55" category="Equipment" tags="smallitem,prosthetic" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
@@ -1495,9 +1514,67 @@
     </Wearable>
   </Item> -->
         
-    <!-- EFFECT ITEMS -->
-    <!-- EFFECT ITEMS -->
-    <!-- EFFECT ITEMS -->
+        
+    <!-- HINT ITEMS -->
+    <!-- HINT ITEMS -->
+    <!-- HINT ITEMS -->
+    <!-- These items only exist to show up in the medical UI as a "cure" for afflictions like hygiene, fatigue...  -->
+    
+    <!-- hint for how to heal hygiene -->
+    <Item identifier="he-hygienehintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,826,72,72" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment type="hygiene" suitability="50" />
+    </Item> 
+        
+    <!-- hint for how to heal embarrassment -->
+    <Item identifier="he-embarrassmenthintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,741,72,72" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment type="embarrassment" suitability="50" />
+      <SuitableTreatment type="mood" suitability="50" />
+    </Item> 
+    
+    <!-- hint for how to heal mood -->
+    <Item identifier="he-moodhintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,663,72,72" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment type="mood" suitability="50" />
+    </Item> 
+        
+    <!-- hint for how to cure tapeworm that looks like ABX -->
+    <Item identifier="he-fakeABXitem" nameidentifier="antibiotics" descriptionidentifier="antibiotics" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,704,64,64" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment identifier="worminfection" suitability="50" />
+      <SuitableTreatment identifier="tapeworminfection" suitability="50" />
+    </Item>
+    
+    <!-- hint for how to pee/poop that looks like toilet UNUSED because it's just that obvious -->
+    <!-- <Item identifier="he-faketoiletitem" nameidentifier="he-toilet" descriptionidentifier="he-toilet" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.85" origin="0.5,0.5" />
+      <SuitableTreatment identifier="bladder" suitability="50" />
+      <SuitableTreatment identifier="defecate" suitability="50" />
+    </Item>  -->
+        
+  
+    <!-- Copy-pasted from DE - An invisible holder that deletes itself after taking an item from it -->
+    <Item name="Take Item" identifier="invisibleholder" description="An invisible item holder that deletes itself when interacted with. Good for making items hold in place without using platforms" SpriteColor="195,136,60,100" IntentoryIconColor="255,255,255,255" category="misc" tags="holder" canflipx="true" canflipy="true" scale="0.5" noninteractable="False">
+      <InventoryIcon texture="%ModDir:2532991202%/Items/DE-ItemsAtlas.png" sourcerect="716,951,70,70" />
+      <Sprite texture="Content/UI/Focusindicator.png" sourcerect="228,124,105,89" depth="0.85" origin="0.5,0.5" />
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="40,-40" containedspritedepth="0.831" canbeselected="True" autointeractwithcontained="true" allowdraganddrop="false" QuickUseMovesItemsInside="false" msg="">
+        <Containable items="smallitem,mediumitem,bigitem,crate" >
+          <Statuseffect type="OnRemoved" target="This">
+            <Remove />
+          </Statuseffect>        
+        </Containable>        
+        <!-- makes itself invisible + you can't see inside inventory on startup. Needed to make this useable in subeditor -->
+        <Statuseffect type="Always" target="This" oneshot="true" spritecolor="0,0,0,0" drawinventory="false" setvalue="True" />
+      </ItemContainer>
+    </Item>
+    
+
+
+
+    <!-- EFFECT ITEMS - UNUSED but I left them here because??? -->
+    <!-- EFFECT ITEMS - UNUSED but I left them here because??? -->
+    <!-- EFFECT ITEMS - UNUSED but I left them here because??? -->
     <Item name="" identifier="effect_none" Category="Hidden" Tags="effect" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
       <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="0,0,1,1" />
       <Body radius="1" density="10" />
@@ -1540,62 +1617,6 @@
       </Holdable>
     </Item>
     
-        
-    <!-- HINT ITEMS -->
-    <!-- HINT ITEMS -->
-    <!-- HINT ITEMS -->
-    <!-- These items only exist to show up in the medical UI as a "cure" for afflictions like hygiene, fatigue...  -->
-    
-    <!-- hint for how to heal hygiene -->
-    <Item identifier="he-hygienehintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
-      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,826,72,72" depth="0.85" origin="0.5,0.5" />
-      <SuitableTreatment type="hygiene" suitability="50" />
-    </Item> 
-        
-    <!-- hint for how to heal embarrassment -->
-    <Item identifier="he-embarrassmenthintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
-      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,741,72,72" depth="0.85" origin="0.5,0.5" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
-      <SuitableTreatment type="mood" suitability="50" />
-    </Item> 
-    
-    <!-- hint for how to heal mood -->
-    <Item identifier="he-moodhintitem" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
-      <Sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="946,663,72,72" depth="0.85" origin="0.5,0.5" />
-      <SuitableTreatment type="mood" suitability="50" />
-    </Item> 
-        
-    <!-- hint for how to cure tapeworm that looks like ABX -->
-    <Item identifier="he-fakeABXitem" nameidentifier="antibiotics" descriptionidentifier="antibiotics" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
-      <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,704,64,64" depth="0.85" origin="0.5,0.5" />
-      <SuitableTreatment identifier="worminfection" suitability="50" />
-      <SuitableTreatment identifier="tapeworminfection" suitability="50" />
-    </Item>
-    
-    <!-- hint for how to pee/poop that looks like toilet UNUSED because it's just that obvious -->
-    <!-- <Item identifier="he-faketoiletitem" nameidentifier="he-toilet" descriptionidentifier="he-toilet" category="misc" tags="hintitem" scale="0.5" noninteractable="true" hideinmenus="true">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.85" origin="0.5,0.5" />
-      <SuitableTreatment identifier="bladder" suitability="50" />
-      <SuitableTreatment identifier="defecate" suitability="50" />
-    </Item>  -->
-    
-    
-    
-  
-    <!-- Copy-pasted from DE - An invisible holder that deletes itself after taking an item from it -->
-    <Item name="Take Item" identifier="invisibleholder" description="An invisible item holder that deletes itself when interacted with. Good for making items hold in place without using platforms" SpriteColor="195,136,60,100" IntentoryIconColor="255,255,255,255" category="misc" tags="holder" canflipx="true" canflipy="true" scale="0.5" noninteractable="False">
-      <InventoryIcon texture="%ModDir:2532991202%/Items/DE-ItemsAtlas.png" sourcerect="716,951,70,70" />
-      <Sprite texture="Content/UI/Focusindicator.png" sourcerect="228,124,105,89" depth="0.85" origin="0.5,0.5" />
-      <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="40,-40" containedspritedepth="0.831" canbeselected="True" autointeractwithcontained="true" allowdraganddrop="false" QuickUseMovesItemsInside="false" msg="">
-        <Containable items="smallitem,mediumitem,bigitem,crate" >
-          <Statuseffect type="OnRemoved" target="This">
-            <Remove />
-          </Statuseffect>        
-        </Containable>        
-        <!-- makes itself invisible + you can't see inside inventory on startup. Needed to make this useable in subeditor -->
-        <Statuseffect type="Always" target="This" oneshot="true" spritecolor="0,0,0,0" drawinventory="false" setvalue="True" />
-      </ItemContainer>
-    </Item>
   
   </Items>
 </Override>
