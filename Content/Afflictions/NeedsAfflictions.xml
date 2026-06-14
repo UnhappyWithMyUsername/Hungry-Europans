@@ -662,7 +662,7 @@
       <Effect minstrength="80" maxstrength="100" strengthchange="-0.10"
         dialogflag="alcoholicheavy"
         minvitalitydecrease="0"
-        maxvitalitydecrease="20">
+        maxvitalitydecrease="0">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
           <Affliction identifier="he-alcoholwithdrawal" strength="0.25" />
