@@ -1259,13 +1259,13 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entitydescription.he-potwithwater>A pot, with water.</entitydescription.he-potwithwater>
 
 <entityname.he-emptybowl>Bowl</entityname.he-emptybowl>
-<entitydescription.he-emptybowl>A ceramic bowl. Don't drop it.</entitydescription.he-emptybowl>
+<entitydescription.he-emptybowl>A ceramic bowl. Don't drop it. \n‖color:70,70,70,255‖Note: Make sure to removed contained bowls before crafting, or they will disappear!‖end‖</entitydescription.he-emptybowl>
 <entityname.he-dirtybowl>Dirty Bowl</entityname.he-dirtybowl>
-<entitydescription.he-dirtybowl>This bowl is stained with gunk. Clean it in a sink.</entitydescription.he-dirtybowl>
+<entitydescription.he-dirtybowl>This bowl is stained with gunk. Clean it in a sink. \n‖color:70,70,70,255‖Note: Make sure to removed contained bowls before crafting, or they will disappear!‖end‖</entitydescription.he-dirtybowl>
 <entityname.he-emptyplate>Plate</entityname.he-emptyplate>
-<entitydescription.he-emptyplate>A ceramic plate. Don't throw it.</entitydescription.he-emptyplate>
+<entitydescription.he-emptyplate>A ceramic plate. Don't throw it. \n‖color:70,70,70,255‖Note: Make sure to removed contained plates before crafting, or they will disappear!‖end‖</entitydescription.he-emptyplate>
 <entityname.he-dirtyplate>Dirty Plate</entityname.he-dirtyplate>
-<entitydescription.he-dirtyplate>This plate is stained with gunk. Clean it in a sink.</entitydescription.he-dirtyplate>
+<entitydescription.he-dirtyplate>This plate is stained with gunk. Clean it in a sink. \n‖color:70,70,70,255‖Note: Make sure to removed contained plates before crafting, or they will disappear!‖end‖</entitydescription.he-dirtyplate>
 
 <entityname.he-pan>Cooking Pan</entityname.he-pan>
 <entitydescription.he-pan>Use on the stove to cook food, use on crewmates to discipline them.</entitydescription.he-pan>
