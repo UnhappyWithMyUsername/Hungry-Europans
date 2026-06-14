@@ -369,7 +369,7 @@
       maxstrength="1800"
       MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
-        <StatusEffect tags="clown" type="Always" target="Character" HideFace="true" duration="0.5" stackable="false" >
+        <StatusEffect tags="clown" type="Always" target="Character" duration="0.5" stackable="false" >
           <Affliction identifier="clownpower" strength="1" />
         </StatusEffect>
       </Effect>
