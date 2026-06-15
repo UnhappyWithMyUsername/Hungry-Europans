@@ -368,7 +368,7 @@
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
       <Price baseprice="899" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
@@ -943,8 +943,8 @@
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
-      <Price baseprice="1149" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+      <Price baseprice="799" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
@@ -1315,8 +1315,8 @@
     
     <Item name="Cafeteria Cart" identifier="he-cafeteriacart" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="Content/Map/Outposts/Art/CafeteriaGardenAssets.png" sourcerect="2,647,191,329" depth="0.581" premultiplyalpha="false" origin="0.5,0.5" />
-      <Price baseprice="450" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+      <Price baseprice="400" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
@@ -1386,8 +1386,8 @@
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
-      <Price baseprice="1599" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+      <Price baseprice="999" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
