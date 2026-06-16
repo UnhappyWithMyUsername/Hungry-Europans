@@ -308,7 +308,7 @@
           </SubContainer>
           <!--Watertank Slot-->
           <SubContainer capacity="1" maxstacksize="1" slot="6">
-            <Containable items="he-kegwater,he-kegseawater" />
+            <Containable items="he-kegwater,he-kegseawater,he-kegempty" />
           </SubContainer>
           <!--Fertilizer Slot-->
           <SubContainer capacity="1" maxstacksize="1" slot="7">
