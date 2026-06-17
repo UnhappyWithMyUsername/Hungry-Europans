@@ -1236,17 +1236,26 @@
 
     <ScriptedEvent identifier="tutorial_botany">
       <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:botanydoor" tag="botanydoor" />
       <TagAction criteria="itemtag:botanychair" tag="botanychair" />
       <TagAction criteria="itemtag:rightplanter" tag="rightplanter" />
       <TagAction criteria="itemtag:leftplanter" tag="leftplanter" />
       <TagAction criteria="itemtag:tutorialplantedseed" tag="tutorialplantedseed" />
+      <TagAction criteria="itemtag:hydroponicplanter" tag="tutorialhydroponics" />
+      <TagAction criteria="itemtag:tutorialemptykeghydro" tag="tutorialemptykeghydro" />
+      <TagAction criteria="itemtag:tutorialseawaterkeghydro" tag="tutorialseawaterkeghydro" />
       <TagAction criteria="itemtag:tutorialresearchstation" tag="tutorialresearchstation" />
+      <TagAction criteria="itemtag:tutorialsprinkler" tag="tutorialsprinkler" />
+      <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
+      <StatusEffectAction targettag="botanydoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+      </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="researcher" targettag="botanyguy" spawnpointtag="botanychair" />
       <NPCOperateItemAction NPCTag="botanyguy" TargetTag="botanychair" ItemComponentName="Controller" Operate="true" />
       <Label name="loopbotanytutorial" />
       <TriggerAction target1tag="player" target2tag="botanyguy" radius="150" waitforinteraction="true" />
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Do you know anything about plants? Most sailors have never seen a vegetable in their life." >
-        <Option text="No, please explain.">
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Do you know anything about plants? Most sailors have never seen a vegetable in their life." >
+        <Option text="I want to learn.">
           <GoTo name="acceptbotanytutorial" />
         </Option>
         <Option text="Not interested.">
@@ -1257,11 +1266,21 @@
           <GoTo name="tempskip" />
         </Option>      
       </ConversationAction>
+      <!-- start tutorial and close door -->
       <Label name="acceptbotanytutorial" />
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="It's quite simple really, you put a seed in a pot, water it a little and watch it grow. All you have to do is not set your submarine on fire." />
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="What the... it looks like one of my plants just died. Replace it for me would you? Grab this seed, uproot the weeds and plant the seed." />
+      <StatusEffectAction targettag="botanydoor">
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" setvalue="true"/>
+      </StatusEffectAction>
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="It's quite simple really, you put a seed in a pot, water it a little and watch it grow. All you have to do is not set your submarine on fire." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="What the... it looks like one of my plants just died. Replace it for me would you? Grab this seed, uproot the weeds and plant the seed." />
       <SpawnAction ItemIdentifier="creepingorangevineseed" TargetTag="tutorialseed" TargetInventory="player" Amount="1" />
       <EventObjectiveAction type="add" id="Uproot the dead plant and plant the seed" />
+      <StatusEffectAction targettag="leftplanter">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="rightplanter">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
       <Label name="checkforseedplanted" />
       <TutorialHighlightAction state="true" targettag="rightplanter" />
       <InventoryHighlightAction targettag="player" itemidentifier="creepingorangevineseed" />
@@ -1273,9 +1292,12 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Uproot the dead plant and plant the seed" />
       <TutorialHighlightAction state="false" targettag="rightplanter" />
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="It will take a while for the plant to reach maturity. We can speed that up with a bit of fertilizer. And give it some water would you?" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="It will take a while for the plant to reach maturity. We can speed that up with a bit of fertilizer. And give it some water would you?" />
       <EventObjectiveAction type="add" id="Use fertilizer on the new plant" />
       <TutorialHighlightAction state="true" targettag="rightplanter" />
+      <StatusEffectAction targettag="tutorialfertilizerwaterer">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
       <Label name="checkforfertilized" />
       <CheckConditionalAction targettag="rightplanter">
         <Conditional fertilizer="gt 0" targetitemcomponent="Planter" />
@@ -1305,18 +1327,20 @@
       <WaitAction time="1" />
       <EventObjectiveAction type="completeandremove" id="Water the other plant" />
       <TutorialHighlightAction state="false" targettag="leftplanter" />
-      <Label name="tempskip" />
       <SpawnAction ItemIdentifier="bubbleberries" TargetTag="tutorialberries" spawnpointtag="leftplanter" Amount="1" />
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Very good. It looks like our other plant just yielded a fruit. You know they're ripe when they fall on the floor, that's just how nature works." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Very good. It looks like our other plant just yielded a fruit. You know they're ripe when they fall on the floor, that's just how nature works." />
       <TutorialHighlightAction state="true" targettag="tutorialberries" />
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Now come over here. I need to show you a fun project I've been working on: creating new species of fruit. I call them hybrids." endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Now come over here. I need to show you a fun project I've been working on: creating new species of fruit. I call them hybrids." endconversation="true" />
+      <StatusEffectAction targettag="tutorialresearchstation">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
       <TriggerAction target1tag="player" target2tag="tutorialresearchstation" waitforinteraction="true" selectontrigger="true"/>
       <SpawnAction ItemIdentifier="creepingorange" TargetTag="hybridfruitingredient" TargetInventory="tutorialresearchstation" targetslot="0"  />
       <SpawnAction ItemIdentifier="tobaccobud" TargetTag="hybridfruitingredient" TargetInventory="tutorialresearchstation" targetslot="1" />
       <StatusEffectAction targettag="hybridfruitingredient">
         <StatusEffect target="This" noninteractable="true" setvalue="true"/>
       </StatusEffectAction>
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="I've put two fruits inside that research station. Personnaly, I have no idea what to expect, so I'll let you press the button." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="I've put two fruits inside that research station. Personnaly, I have no idea what to expect, so I'll let you press the button." />
       <EventObjectiveAction type="add" id="Use the research station to create a hybrid plant" />
       <TutorialHighlightAction state="true" targettag="hybridfruitingredient" />
       <Label name="checkforhybridplant" />
@@ -1326,11 +1350,112 @@
           <GoTo name="checkforhybridplant" />
         </Failure>
       </CheckItemAction>
-      <ConversationAction ForceSay="true" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="Never seen this one before! Well it looks like you do have a green thumb after all!" />      
-      <!-- TODO: sprinkler, hydroponics -->
-    </ScriptedEvent>
-    
-    
-    
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Never seen this one before! I'll have to grow it later. But enough talked about the house plants..."  />
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Now I want to introduce you to hydroponics. These devices recreate the growth environment of Europan native plants. All it takes is a bit of water, fertilizer and electricity." />
+      <StatusEffectAction targettag="tutorialhydroponics">
+        <StatusEffect target="This" noninteractable="false" IsOn="true" targetitemcomponent="LightComponent" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="tutorialemptykeghydro">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Looks like this one is out of sea water. Remove that empty keg and grab the one by the door." />
+      <EventObjectiveAction type="add" id="Remove the empty keg" />
+      <EventObjectiveAction type="add" id="Put the sea water keg inside the Hydroponic planter" />
+      <TutorialHighlightAction state="true" targettag="tutorialhydroponics" />
+      <TutorialHighlightAction state="true" targettag="tutorialemptykeghydro" />
+      <Label name="checkforemptykeg" />
+      <CheckItemAction targettag="player" itemtags="tutorialemptykeghydro" amount="1" recursive="true">
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforemptykeg" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Remove the empty keg" />
+      <TutorialHighlightAction state="false" targettag="tutorialemptykeghydro" />
+      <TutorialHighlightAction state="true" targettag="tutorialseawaterkeghydro" />
+      <StatusEffectAction targettag="tutorialseawaterkeghydro">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforseawaterkeg2" />
+      <CheckItemAction targettag="tutorialhydroponics" itemtags="tutorialseawaterkeghydro" amount="1" recursive="true">
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforseawaterkeg2" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Put the sea water keg inside the Hydroponic planter" />
+      <TutorialHighlightAction state="false" targettag="tutorialhydroponics" />
+      <TutorialHighlightAction state="false" targettag="tutorialseawaterkeghydro" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="And now we wait. It takes a while for plants to grow, so don't be in a rush. " />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="Well it looks like you do have a green thumb after all! I've got nothing left to teach you. Before you leave, can you turn the sprinkler on?" />
+      <StatusEffectAction targettag="tutorialsprinkler">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <TutorialHighlightAction state="true" targettag="tutorialsprinkler" />
+      <EventObjectiveAction type="add" id="Turn the automated sprinkler on." />
+      <Label name="checksprinkleron" />
+      <CheckConditionalAction targettag="tutorialsprinkler">
+        <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+        <Success>
+          <!-- continue -->
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checksprinkleron" />
+        </Failure>
+      </CheckConditionalAction>     
+      <TutorialHighlightAction state="false" targettag="tutorialsprinkler" />
+      <EventObjectiveAction type="completeandremove" id="Turn the automated sprinkler on." /> 
+      <StatusEffectAction targettag="botanydoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+      </StatusEffectAction>
+    </ScriptedEvent>    
   </EventPrefabs>
+  
+  
+  
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  
+    <!-- Make item interactable -->
+    <!-- 
+      <StatusEffectAction targettag="tutorialitemXXX">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+       -->
+  
+    <!-- Check loop with highlight+tutorial actions -->  
+    <!-- 
+      <EventObjectiveAction type="add" id="tutorialobjective" />
+      <TutorialHighlightAction state="true" targettag="itemtocheck" />
+      <Label name="checkloop" />
+      <CheckItemAction targettag="itemtocheck" itemidentifiers="itemneeded" amount="1" recursive="true">
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkloop" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="tutorialobjective" />
+      <TutorialHighlightAction state="false" targettag="rightplanter" />
+       -->
+  
+  
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
+  
 </Randomevents>
