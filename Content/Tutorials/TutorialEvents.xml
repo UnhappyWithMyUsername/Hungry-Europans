@@ -1370,8 +1370,8 @@
       <EventObjectiveAction type="add" id="Put the sea water keg inside the Hydroponic planter" />
       <TutorialHighlightAction state="true" targettag="tutorialhydroponics" />
       <TutorialHighlightAction state="true" targettag="tutorialemptykeghydro" />
-      <InventoryHighlightAction targettag="tutorialhydroponics" itemidentifier="he-kegempty" />
       <Label name="checkforemptykeg" />
+      <InventoryHighlightAction targettag="tutorialhydroponics" itemidentifier="he-kegempty" />
       <CheckItemAction targettag="player" itemtags="tutorialemptykeghydro" amount="1" recursive="true">
         <Failure>
           <WaitAction time="0.5" />
