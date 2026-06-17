@@ -48,7 +48,6 @@
       <TagAction criteria="itemtag:tutorialfertilizer" tag="tutorialfertilizer" />
       <TagAction criteria="itemtag:tutorialseaweed" tag="tutorialseaweed" />
       <TagAction criteria="itemtag:tutorialphosphorus" tag="tutorialphosphorus" />
-      <TagAction criteria="itemidentifier:he-sprinkler" tag="tutorialsprinkler" />
       <TagAction criteria="itemtag:tutorialrefillstation" tag="tutorialrefillstation" />
       <TagAction criteria="itemtag:chefcrawlerposition" tag="chefcrawlerposition" />
       <TagAction criteria="itemidentifier:he-liquorcrate" tag="tutorialliquorcrate" />
@@ -1245,7 +1244,8 @@
       <TagAction criteria="itemtag:tutorialemptykeghydro" tag="tutorialemptykeghydro" />
       <TagAction criteria="itemtag:tutorialseawaterkeghydro" tag="tutorialseawaterkeghydro" />
       <TagAction criteria="itemtag:tutorialresearchstation" tag="tutorialresearchstation" />
-      <TagAction criteria="itemtag:tutorialsprinkler" tag="tutorialsprinkler" />
+      <TagAction criteria="itemidentifier:he-sprinkler" tag="tutorialsprinkler" />
+      <!-- <TagAction criteria="itemtag:tutorialsprinkler" tag="tutorialsprinkler" /> -->
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="botanydoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
