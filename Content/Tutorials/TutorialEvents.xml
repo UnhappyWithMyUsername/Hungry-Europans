@@ -1417,9 +1417,184 @@
       <StatusEffectAction targettag="botanydoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
       </StatusEffectAction>
-    </ScriptedEvent>    
-  </EventPrefabs>
+    </ScriptedEvent>  
   
+
+    <ScriptedEvent identifier="tutorial_brewery">
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:brewerydoor" tag="brewerydoor" />
+      <TagAction criteria="itemtag:brewerychair" tag="brewerychair" />
+      <TagAction criteria="itemtag:tutorialrefillstationbrewery" tag="tutorialrefillstationbrewery" />
+      <TagAction criteria="itemtag:tutorialbottleprinter" tag="tutorialbottleprinter" />
+      <TagAction criteria="itemtag:tutorialbrewerytable" tag="tutorialbrewerytable" />
+      <TagAction criteria="itemtag:tutorialbrewingkettle" tag="tutorialbrewingkettle" />
+      <TagAction criteria="itemtag:tutorialstorage" tag="tutorialstorage" />
+      <TagAction criteria="itemidentifier:he-kegempty" tag="tutorialemptykegbrewery" />
+      <TagAction criteria="itemtag:tutorialemptykegbrewery" tag="tutorialemptykegbrewery" />
+      <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
+      <StatusEffectAction targettag="brewerydoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="commoner" targettag="breweryguy" spawnpointtag="brewerychair" />
+      <NPCOperateItemAction NPCTag="breweryguy" TargetTag="brewerychair" ItemComponentName="Controller" Operate="true" />
+      <Label name="loopbrewerytutorial" />
+      <TriggerAction target1tag="player" target2tag="breweryguy" radius="150" waitforinteraction="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Hey there, you look dependable... and available. I hurt my hand the other day, wanna give brewing a try in my stead?" >
+        <Option text="I want to learn.">
+          <GoTo name="acceptbrewerytutorial" />
+        </Option>
+        <Option text="Not interested.">
+          <GoTo name="loopbrewerytutorial" />
+        </Option>
+        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
+        <Option text="Tempskip" endconversation="true">
+          <GoTo name="tempskip" />
+        </Option>      
+      </ConversationAction>
+      <!-- start tutorial and close door -->
+      <Label name="acceptbrewerytutorial" />
+      <StatusEffectAction targettag="brewerydoor">
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
+      </StatusEffectAction>
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Alright. See that big white machine next to me? That's a state of the art industrial brewer. That's where the booze is made." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Let's gather some ingredients. A good beer starts with water. Grab that keg and fill it in that little pool. Inspection told me it's sanitary, so don't worry about dipping your toes in your drink." />
+      <EventObjectiveAction type="add" id="Grab the keg and fill it with water from the pool" />
+      <TutorialHighlightAction state="true" targettag="tutorialemptykegbrewery" />
+      <StatusEffectAction targettag="tutorialemptykegbrewery">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforseawaterkeg" />
+      <CheckItemAction targettag="player" itemidentifiers="he-kegseawater" amount="1" >
+        <Conditional ConditionPercentage="100" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforseawaterkeg" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Grab the keg and fill it with water from the pool" />
+      <TutorialHighlightAction state="false" targettag="tutorialemptykegbrewery" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Great, now put that in the brewer." />
+      <TutorialHighlightAction state="true" targettag="tutorialbrewingkettle" />
+      <EventObjectiveAction type="add" id="Put the keg inside the brewing kettle" />
+      <StatusEffectAction targettag="tutorialbrewingkettle">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforemptykeginside" />
+      <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegseawater" amount="1" >
+        <Conditional ConditionPercentage="100" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforemptykeginside" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Put the keg inside the brewing kettle" />
+      <TutorialHighlightAction state="false" targettag="tutorialbrewingkettle" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="There should be more ingredients in that cabinet. Let's go with a simple recipe: Coalition Premium." />
+      <TutorialHighlightAction state="true" targettag="tutorialbrewingkettle" />
+      <TutorialHighlightAction state="true" targettag="tutorialstorage" />
+      <EventObjectiveAction type="add" id="Brew a keg of Coalition Premium" />
+      <StatusEffectAction targettag="tutorialstorage">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforkegbrewed" />
+      <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegcoalitionpremium" amount="1" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforkegbrewed" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Brew a keg of Coalition Premium" />
+      <TutorialHighlightAction state="false" targettag="tutorialbrewingkettle" />
+      <TutorialHighlightAction state="false" targettag="tutorialstorage" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="That's what I like to see, freshly brewed liquor. Now pour me a bottle would you? There's a refill station, just load the keg in there." />
+      <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
+      <TutorialHighlightAction state="true" targettag="tutorialrefillstationbrewery" />
+      <StatusEffectAction targettag="tutorialrefillstationbrewery">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforkeginrefillstation" />
+      <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-kegcoalitionpremium" amount="1" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforkeginrefillstation" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
+      <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Yeah just pull on the lever and... what do you mean there are no bottles? Damnit. Don't worry, we can print some at the machine on my left." endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Just rummage through the cabinet, you should be able to grab some glass fragments with your bare hands. Don't worry, insurance covers cuts and gashes." endconversation="true" />
+      <EventObjectiveAction type="add" id="Grab some glass fragments from the cabinet" />
+      <TutorialHighlightAction state="true" targettag="tutorialstorage" />
+      <SpawnAction ItemIdentifier="he-glassfragments" TargetTag="tutorialglassfragments" TargetInventory="tutorialstorage" Amount="3" />  
+      <Label name="checkforfragments" />
+      <CheckItemAction targettag="player" itemidentifiers="he-glassfragments" amount="3" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforfragments" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Grab some glass fragments from the cabinet" />
+      <TutorialHighlightAction state="false" targettag="tutorialstorage" />
+      <EventObjectiveAction type="add" id="Put the fragments inside the bottle printer" />
+      <TutorialHighlightAction state="true" targettag="tutorialbottleprinter" />    
+      <StatusEffectAction targettag="tutorialbottleprinter">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforfragmentsprinter" />
+      <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-glassfragments" amount="3" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforfragmentsprinter" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Put the fragments inside the bottle printer" />
+      <EventObjectiveAction type="add" id="Print 3 beer bottles" />
+      <Label name="checkforemptybottles" />
+      <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-emptybottlebeer" amount="3" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforemptybottles" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Print 3 beer bottles" />
+      <TutorialHighlightAction state="false" targettag="tutorialbottleprinter" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="What are you waiting for? Pour me some beers!" endconversation="true" />
+      <EventObjectiveAction type="completeandremove" id="Pour 3 bottles of Coalition Premium" />
+      <TutorialHighlightAction state="true" targettag="tutorialrefillstationbrewery" />
+      <Label name="checkforbeerspoured" />
+      <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-beercoalitionpremium" amount="3" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforbeerspoured" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Print 3 beer bottles" />
+      <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="At last, some refreshment. I've got nothing left to teach you. Leave one on the table before you leave!" endconversation="true" />
+      <EventObjectiveAction type="add" id="Leave a beer on the table" />
+      <TutorialHighlightAction state="true" targettag="tutorialbrewerytable" />
+      <Label name="checkforbeertable" />
+      <CheckItemAction targettag="tutorialbrewerytable" itemidentifiers="he-beercoalitionpremium" amount="1" >
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforbeertable" />
+        </Failure>
+      </CheckItemAction>
+      <EventObjectiveAction type="completeandremove" id="Leave a beer on the table" />
+      <TutorialHighlightAction state="false" targettag="tutorialbrewerytable" />
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
+      <StatusEffectAction targettag="brewerydoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+      </StatusEffectAction>
+    </ScriptedEvent>    
+    
+  </EventPrefabs>
   
   
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
