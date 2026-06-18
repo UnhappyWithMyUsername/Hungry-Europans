@@ -310,6 +310,7 @@
                   <SpawnAction npcsetidentifier="he-specialNPCs" npcidentifier="he-auntdoris" targettag="auntdoris" allowduplicates="false" spawnlocation="Outpost" />
                   <SetDataAction identifier="coalitionspecialhire2_spawned" value="true" />
                   <Label name="beginning" />
+                  <ClearTagAction tag="triggerer_player" />
                   <TriggerAction target1tag="auntdoris" target2tag="player" applytotarget2="triggerer_player" waitforinteraction="true" />
                   <NPCFollowAction npctag="auntdoris" targettag="triggerer_player" follow="true" />
                   <CheckDataAction identifier="coalitionspecialhire2_declinedonce" condition="eq true">
