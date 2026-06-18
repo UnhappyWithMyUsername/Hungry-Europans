@@ -1248,7 +1248,7 @@
       <!-- <TagAction criteria="itemtag:tutorialsprinkler" tag="tutorialsprinkler" /> -->
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="botanydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="researcher" targettag="botanyguy" spawnpointtag="botanychair" />
       <NPCOperateItemAction NPCTag="botanyguy" TargetTag="botanychair" ItemComponentName="Controller" Operate="true" />
@@ -1415,7 +1415,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialsprinkler" />
       <EventObjectiveAction type="completeandremove" id="Turn the automated sprinkler on." /> 
       <StatusEffectAction targettag="botanydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
       </StatusEffectAction>
     </ScriptedEvent>  
   
@@ -1433,7 +1433,7 @@
       <TagAction criteria="itemtag:tutorialemptykegbrewery" tag="tutorialemptykegbrewery" />
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="brewerydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="commoner" targettag="breweryguy" spawnpointtag="brewerychair" />
       <NPCOperateItemAction NPCTag="breweryguy" TargetTag="brewerychair" ItemComponentName="Controller" Operate="true" />
@@ -1497,6 +1497,8 @@
         <StatusEffect target="This" noninteractable="false" setvalue="true"/>
       </StatusEffectAction>
       <Label name="checkforkegbrewed" />
+      <InventoryHighlightAction targettag="tutorialstorage" itemidentifier="phosphorus" />
+      <InventoryHighlightAction targettag="tutorialstorage" itemidentifier="ethanol" />
       <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegcoalitionpremium" amount="1" >
         <Failure>
           <WaitAction time="0.5" />
@@ -1521,12 +1523,20 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Yeah just pull on the lever and... what do you mean there are no bottles? Damnit. Don't worry, we can print some at the machine on my left." endconversation="true" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Just rummage through the cabinet, you should be able to grab some glass fragments with your bare hands. Don't worry, insurance covers cuts and gashes." endconversation="true" />
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Yeah just pull on the lever and... what do you mean there are no bottles? Damnit. Don't worry, we can print some at the machine on my left." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="Just rummage through the cabinet, you should be able to grab some glass fragments with your bare hands. Don't worry, insurance covers cuts and gashes." /> 
       <EventObjectiveAction type="add" id="Grab some glass fragments from the cabinet" />
       <TutorialHighlightAction state="true" targettag="tutorialstorage" />
       <SpawnAction ItemIdentifier="he-glassfragments" TargetTag="tutorialglassfragments" TargetInventory="tutorialstorage" Amount="3" />  
       <Label name="checkforfragments" />
+      <InventoryHighlightAction targettag="tutorialstorage" itemidentifier="he-glassfragments" />
       <CheckItemAction targettag="player" itemidentifiers="he-glassfragments" amount="3" >
         <Failure>
           <WaitAction time="0.5" />
@@ -1582,15 +1592,8 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Leave a beer on the table" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewerytable" />
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
       <StatusEffectAction targettag="brewerydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" IsOpen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
       </StatusEffectAction>
     </ScriptedEvent>    
     
