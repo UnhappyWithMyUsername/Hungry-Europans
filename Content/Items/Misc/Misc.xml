@@ -1250,7 +1250,7 @@
     <Item name="" identifier="blendernitroglycerin" nameidentifier="nitroglycerin" descriptionidentifier="nitroglycerin" category="Weapon" Tags="smallitem" maxstacksize="4">
       <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,768,64,64" origin="0.5,0.5" />
       <Body width="16" height="12" density="10" />      
-      <Fabricate suitablefabricators="blender" requiredtime="25" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="blender" requiredtime="25" requiresrecipe="true" amount="1">
         <RequiredItem identifier="badcreepingorange" amount="1" />
         <RequiredItem tag="plantleaf" amount="1" />
       </Fabricate>
