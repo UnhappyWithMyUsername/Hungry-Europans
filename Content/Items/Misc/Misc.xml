@@ -758,8 +758,8 @@
       <Body width="50" height="50" radius="0" friction="10" density="10" />
       <Projectile characterusable="false" launchimpulse="5.0" maxtargetstohit="1" HitOnlyCharacters="true">
         <Attack structuredamage="1" itemdamage="1" targetforce="40" severlimbsprobability="0">
-          <Affliction identifier="blunttrauma" strength="5" />
-          <Affliction identifier="stun" strength="3" />
+          <Affliction identifier="blunttrauma" strength="4" />
+          <Affliction identifier="stun" strength="2" />
           <Affliction identifier="concussion" strength="1" probability="0.1" />
           <sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="500" />
           <sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="500" />
