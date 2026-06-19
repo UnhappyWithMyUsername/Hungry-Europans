@@ -25,13 +25,13 @@ Important TODO:
 //////////////////////
 //////////////////////
 
-[hr]XX/06/2026[/hr]
+[hr]19/06/2026[/hr]
 
-Small quality of life update regarding meat stacking
+Small bug fixing and quality of life update, tutorial coming soon
 
 [b]Additions:[/b]
 [List]
-[*] Make Nitroglycerin in blender
+[*] Make Nitroglycerin in blender (needs book recipe)
 [/List]
 
 [b]Changes:[/b] 
@@ -42,6 +42,7 @@ Small quality of life update regarding meat stacking
 [*] Reduced the cost of kitchen counters and fridge to make it easier to set up a kitchen
 [*] Fruits take longer to die from fire exposure
 [*] High "Alcoholic" affliction no longer reduces health, only drunk and withdrawal does
+[*] Nerfed punch gun a little
 [/List]
 
 [b]Fixes:[/b] 
@@ -53,7 +54,9 @@ Small quality of life update regarding meat stacking
 [*] Fixed bad keg description
 [*] Fixed cooler crate price
 [*] Fixed clown juice hiding your face
+[*] Fixed empty kegs falling off hydroponics
 [*] Added some in-game text about the plate/bowl fabrication bug
+[*] Updated the Aunt Doris recruitment event to match Vanilla
 [/List]
 
 
@@ -73,10 +76,12 @@ Misc TODO:
 LIST OF FOODS IDEAS:
 
 - Egg-plant that makes egg-like fruits for easier omelettes
+- Jotato recipes: Fries, Baked jotato, Bufo puree...
 - Kvass fermented from bread, yeast and sugar (needs more fermenter slots)
 - More Blender recipes
 - More Offal recipes
 - More Mushroom recipes? add a cooked mushroom item to not use an entire yeast shroom per meal
+- Recipe for Mutated Popnut
 
 
 LongTermPlans:
