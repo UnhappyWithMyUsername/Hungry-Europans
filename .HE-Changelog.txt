@@ -57,6 +57,7 @@ Small bug fixing and quality of life update, tutorial coming soon
 [*] Fixed empty kegs falling off hydroponics
 [*] Added some in-game text about the plate/bowl fabrication bug
 [*] Updated the Aunt Doris recruitment event to match Vanilla
+[*] Fixed Doris cookbook not appearing in butcher shop
 [/List]
 
 
