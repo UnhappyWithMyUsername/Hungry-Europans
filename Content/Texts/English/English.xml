@@ -439,7 +439,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-vinegar>Vinegar</entityname.he-vinegar>
 <entitydescription.he-vinegar>That smell...</entitydescription.he-vinegar>
 <entityname.he-cookingoil>Cooking Oil</entityname.he-cookingoil>
-<entitydescription.he-cookingoil>This one is not used in engines.</entitydescription.he-cookingoil>
+<entitydescription.he-cookingoil>All natural oil made from pressed seeds. Don't let the mechanic put it in the engine...</entitydescription.he-cookingoil>
 <entityname.he-flour>Flour</entityname.he-flour>
 <entitydescription.he-flour>All natural Europan flour made from crushed seeds treated with a drop of acid.</entitydescription.he-flour>
 <entityname.he-glassfragments>Glass Fragments</entityname.he-glassfragments><!--Patch 10-->
