@@ -851,7 +851,7 @@
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <!-- reduce oil condition, cookingoil health is XXX instead of 100 for Immersive Repairs compatibility  -->
-        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.1" >
+        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.04" >
           <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
         </StatusEffect>
