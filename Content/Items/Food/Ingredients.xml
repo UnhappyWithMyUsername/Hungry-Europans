@@ -358,7 +358,8 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <!-- TODO: adjust health for Immersive Repairs compatiblity -->
+    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" health="100">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
