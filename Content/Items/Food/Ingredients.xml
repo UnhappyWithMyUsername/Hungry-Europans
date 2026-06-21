@@ -358,7 +358,8 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5">
+    <!-- adjusted health for Immersive Repairs compatiblity -->
+    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,engineoil,condiment,bottle" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5" health="20">
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -663,7 +664,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="60" sold="false">
-        <Price storeidentifier="merchantoutpost" minavailable="1.5" maxavailable="5" sold="true" />
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="5" sold="true" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="3" maxavailable="8" sold="true" />
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>

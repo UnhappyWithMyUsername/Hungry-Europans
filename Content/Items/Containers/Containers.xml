@@ -83,10 +83,10 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
     
-    <Item name="Cooler Crate" identifier="he-coolercrate" category="Equipment" subcategory="Container" description="Used to prevent meat from spoiling. Needs a battery." tags="crate,kitchen,cooler,refrigeratedcontainer" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" canflipx="false" impactsoundtag="impact_metal_heavy">
+    <Item name="Cooler Crate" identifier="he-coolercrate" category="Equipment" subcategory="Container" description="Used to prevent meat from spoiling. Needs a battery." tags="crate,kitchen,cooler,refrigeratedcontainer" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" canflipx="false" impactsoundtag="impact_metal_heavy" invulnerabletodamage="false" fireproof="false">
       <Deconstruct time="0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
-      <Price baseprice="10" buyingpricemodifier="20.5" minleveldifficulty="0" sold="True">
+      <Price baseprice="50" buyingpricemultiplier="4" minleveldifficulty="0" sold="True">
         <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="2" />
         <Price storeidentifier="merchantcity" minavailable="1" maxavailable="4" />
         <Price storeidentifier="merchantresearch" maxavailable="1" />
@@ -106,15 +106,12 @@
         <StatusEffect type="OnActive" target="Contained" Condition="-0.05" interval="1" disabledeltatime="true" targetslot="0">
           <RequiredItem items="mobilebattery" targetslot="0" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="Contained" Condition="0.025" interval="1" disabledeltatime="true" targetslot="0">
-          <RequiredItem identifier="fulguriumbatterycell" targetslot="0" type="Contained" />
-        </StatusEffect>
-        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items | also set the tag "refrigerated" for Neurotrauma organ compatibility -->
-        <StatusEffect type="OnActive" target="This" disabledeltatime="false" StatusEffectTags="activecooling" SetTags="refrigerated" duration="0.1">
+        <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items | also set the tag "refrigerated" for Neurotrauma organ compatibility - also makes the crate fireproof -->
+        <StatusEffect type="OnActive" target="This" disabledeltatime="false" StatusEffectTags="activecooling" SetTags="refrigerated" duration="0.1" fireproof="true">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Cooler.ogg" type="OnActive" range="300" loop="true" volume="3" />
         </StatusEffect>
         <!-- When running out of power, replace the previously set "refrigerated" tag with "nonrefrigerated" to allow Neurotrauma organs to start rotting -->
-        <StatusEffect type="Always" target="This" disabledeltatime="false" SetTags="nonrefrigerated" setvalue="true" interval="5">
+        <StatusEffect type="Always" target="This" disabledeltatime="false" SetTags="nonrefrigerated" setvalue="true" interval="5" fireproof="false">
           <Conditional HasStatusTag="neq activecooling" />
         </StatusEffect>
       </LightComponent>
@@ -368,7 +365,7 @@
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
       <Price baseprice="899" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
@@ -943,8 +940,8 @@
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
-      <Price baseprice="1149" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+      <Price baseprice="799" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
@@ -1315,8 +1312,8 @@
     
     <Item name="Cafeteria Cart" identifier="he-cafeteriacart" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="Content/Map/Outposts/Art/CafeteriaGardenAssets.png" sourcerect="2,647,191,329" depth="0.581" premultiplyalpha="false" origin="0.5,0.5" />
-      <Price baseprice="450" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+      <Price baseprice="400" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">
@@ -1386,8 +1383,8 @@
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
-      <Price baseprice="1599" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+      <Price baseprice="999" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <Deconstruct time="10">

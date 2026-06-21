@@ -51,7 +51,7 @@
       
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -87,7 +87,7 @@
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -121,7 +121,7 @@
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true"/>
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="InWater" target="This" Condition="-1.0">
@@ -170,7 +170,7 @@
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -239,7 +239,7 @@
       </StatusEffect>   
 
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
         <Remove />
         <Explosion showEffects="false" decal="fruitsplatter_yellow" decalsize="1.0" />
@@ -290,7 +290,7 @@
       
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -339,7 +339,7 @@
         <SpawnItem spawnposition="This" identifier="popnutpopped" SpawnRotationType="target" impulse="0.0" />
       </StatusEffect>
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -378,7 +378,7 @@
       </StatusEffect>
       
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -443,7 +443,7 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -488,7 +488,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -543,7 +543,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>      
 
@@ -607,7 +607,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -648,7 +648,7 @@
       
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -688,7 +688,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -749,7 +749,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -838,7 +838,7 @@
       
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -881,7 +881,7 @@
       
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="InWater" target="This" Condition="-1.0">
@@ -941,7 +941,7 @@
       
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -1132,7 +1132,7 @@
     </Deconstruct>
     <Holdable canbepicked="true" characterusable="false" canBeCombined="false" slots="Any,RightHand,LeftHand" aimpos="0,0" holdangle="0" holdpos="20,-30" aimangle="0" aimable="false" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -1155,7 +1155,7 @@
     </Deconstruct>
     <Holdable canbepicked="true" characterusable="false" canBeCombined="false" slots="Any,RightHand,LeftHand" aimpos="0,0" holdangle="0" holdpos="20,-30" aimangle="0" aimable="false" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
-      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
+      <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="15" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">

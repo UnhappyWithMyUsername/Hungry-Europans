@@ -130,6 +130,11 @@
         dialogflag="goodmood"
         minskillmultiplier="1.1"
         maxskillmultiplier="1.1">
+        <!-- keep stress at 1 so that you don't keep losing the buff when you're drunk or some other affliction reduces stress-->
+        <StatusEffect target="Character" setvalue="true">
+          <Conditional Mood="lt 1" />
+          <Affliction identifier="mood" strength="1" />
+        </StatusEffect>
       </Effect>
       <Effect minstrength="25" maxstrength="50"
         dialogflag="mediummood"
@@ -657,7 +662,7 @@
       <Effect minstrength="80" maxstrength="100" strengthchange="-0.10"
         dialogflag="alcoholicheavy"
         minvitalitydecrease="0"
-        maxvitalitydecrease="20">
+        maxvitalitydecrease="0">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
           <Affliction identifier="he-alcoholwithdrawal" strength="0.25" />

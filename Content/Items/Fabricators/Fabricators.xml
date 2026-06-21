@@ -497,7 +497,7 @@
       </Deconstruct>
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="Sink" identifier="sink" tags="kitchen,sink,sink_installed" category="Machines" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+    <Item name="Sink" identifier="sink" tags="kitchen,sink,sink_installed" category="Machines" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the lower half of the sink behind objects -->
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
@@ -850,16 +850,19 @@
       <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.1" >
+        <!-- reduce oil condition, cookingoil health is XXX instead of 100 for Immersive Repairs compatibility  -->
+        <StatusEffect type="OnActive" target="Contained" targets="cookingoil" condition="-0.04" >
           <ParticleEmitter particle="waterdrop" particlespersecond="5" velocitymin="100.0" velocitymax="150.0" anglemin="60" anglemax="120" colormultiplier="255,255,0,255" lifetimemultiplier="0.3" />
           <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/FryingPan.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" />
         </StatusEffect>
+        <!-- black smoke and take damage if no oil -->
         <StatusEffect type="OnActive" targettype="This" comparison="And" condition="-1" >
           <RequiredItem identifier="he-cookingoil" type="Contained" requireempty="true" targetslot="0"/>
           <Conditional Voltage="gt 0.5" />
           <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="0.5" scalemax="1.0" />
           <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" type="OnActive" range="500.0" loop="true" volume="3.0" frequencymultiplier="1.5" />
         </StatusEffect>
+        <!-- take damage slowly when operating normally -->
         <StatusEffect type="OnActive" targettype="This" tags="activefryer" condition="-0.02" duration="0.2" stackable="false" comparison="And">
           <RequiredItem identifier="he-cookingoil" type="Contained" />
           <RequiredItem tag="allowinfryer" type="Contained" />
@@ -954,7 +957,7 @@
     </Item>
     
     <!-- grills things, overgrilling causes fire -->
-    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" invulnerabletodamage="True" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5"  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" invulnerabletodamage="True" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5"  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="289,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -1082,7 +1085,7 @@
       </Price>
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine,coffeemachine_installed" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+    <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine,coffeemachine_installed" category="Machines" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen"  description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="406,301,85,168" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the empty cup when it is contained -->
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
@@ -1163,7 +1166,7 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Blender (Installation)" identifier="he-blender_installation" invulnerabletodamage="True" tags="container,blender,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Blender (Installation)" identifier="he-blender_installation" invulnerabletodamage="True" tags="container,blender,kitchenupgrade,crate,ammobox" category="Machines" subcategory="Kitchen" description="Blends." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="673,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -1182,7 +1185,7 @@
       </Price>
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="Blender" identifier="he-blender" tags="container,blender,blender_installed" category="Machines" description="Blends food." scale="0.4" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_light">
+    <Item name="Blender" identifier="he-blender" tags="container,blender,blender_installed" category="Machines" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Blends food." scale="0.4" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_light">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="1954,1361,91,158" origin="0.5,0.5" />
       <!-- hide main sprite, display decorativesprite when attached, shake when fabricating -->
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.786" sourcerect="0,0,1,1" origin="0.5,0.5" usewhenattached="true" />
@@ -1245,7 +1248,7 @@
     </Item>
 
     <!-- cleans dishes, requires dishwasher tablets to clean dishes -->
-    <Item name="Dishwasher (Installation)" identifier="he-dishwasher_installation" invulnerabletodamage="True" tags="dishwasher,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power."  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
+    <Item name="Dishwasher (Installation)" identifier="he-dishwasher_installation" invulnerabletodamage="True" tags="dishwasher,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" isshootable="true" scale="0.5" description="Used for cleaning dishes. Needs power."  impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="769,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
