@@ -656,7 +656,9 @@
         target="OtherCharacter"
         minstrength="20"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="80" strengthchange="-0.1" 
+      <Effect minstrength="0" maxstrength="10" strengthchange="-0.1">
+      </Effect>
+      <Effect minstrength="10" maxstrength="80" strengthchange="-0.1" 
         minfacetint="90,255,90,0"
         maxfacetint="90,255,90,60"
         minskillmultiplier="1.0"
