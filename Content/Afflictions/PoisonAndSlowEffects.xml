@@ -106,6 +106,9 @@
           <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.04" />
         </StatusEffect>
+        <StatusEffect type="OnActive" target="Character">
+          <Affliction identifier="he-stomachache" strength="2" probability="0.25" />
+        </StatusEffect>
       </Effect>
       <Effect minstrength="75" maxstrength="100" strengthchange="0.05"
       resistancefor="worminfection"
@@ -118,6 +121,9 @@
         <StatusEffect type="OnActive" target="Character">
           <Conditional hunger="gt 0" />
           <Affliction identifier="hunger" strength="0.08" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Character">
+          <Affliction identifier="he-stomachache" strength="3" probability="0.25" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,384,128,128" color="170,194,147,255" origin="0,0" />
