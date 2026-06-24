@@ -32,31 +32,19 @@
       <PeriodicEffect mininterval="180" maxinterval="420" minstrength="25" maxstrength="50" > 
         <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" >
           <Affliction identifier="he-stomachache" strength="20" />
-          <Affliction identifier="he-stomachache" strength="10" probability="0.3" />
-          <Affliction identifier="he-stomachache" strength="8" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="6" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="4" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="2" probability="0.75" />
+          <Affliction identifier="he-stomachache" strength="10" probability="0.5" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect mininterval="180" maxinterval="420" minstrength="50" maxstrength="75" > 
         <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" >
           <Affliction identifier="he-stomachache" strength="40" />
-          <Affliction identifier="he-stomachache" strength="20" probability="0.3" />
-          <Affliction identifier="he-stomachache" strength="16" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="12" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="8" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="4" probability="0.75" />
+          <Affliction identifier="he-stomachache" strength="15" probability="0.5" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect mininterval="180" maxinterval="420" minstrength="75" maxstrength="100" > 
         <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" >
           <Affliction identifier="he-stomachache" strength="60" />
-          <Affliction identifier="he-stomachache" strength="30" probability="0.3" />
-          <Affliction identifier="he-stomachache" strength="24" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="18" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="12" probability="0.5" />
-          <Affliction identifier="he-stomachache" strength="6" probability="0.75" />
+          <Affliction identifier="he-stomachache" strength="20" probability="0.5" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,384,128,128" color="170,194,147,255" origin="0,0" />
