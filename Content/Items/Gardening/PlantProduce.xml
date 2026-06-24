@@ -822,6 +822,7 @@
     <Deconstruct time="5" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
+    <SuitableTreatment identifier="he-stomachache" suitability="50" />
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       
       <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />

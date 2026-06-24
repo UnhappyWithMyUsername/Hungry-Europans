@@ -872,8 +872,7 @@
           <Conditional InWater="false" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <Affliction identifier="he-stuffed" amount="1.5" />
-          <Affliction identifier="he-stomachache" amount="1" probability="0.1" />
-          <Affliction identifier="applystomachache" amount="5" probability="0.2" />
+          <Affliction identifier="applystomachache" amount="7" probability="0.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
@@ -962,8 +961,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-fatrich" amount="30" />
           <ReduceAffliction type="hunger" amount="1" />
-          <Affliction identifier="he-stomachache" amount="3" />
-          <Affliction identifier="he-stomachache" amount="5" probability="0.01" />
+          <Affliction identifier="applystomachache" amount="5" probability="0.02" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,70,255" />

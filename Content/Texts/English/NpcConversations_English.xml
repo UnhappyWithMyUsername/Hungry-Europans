@@ -231,7 +231,7 @@ AllOWEDJOBS include jobs
 </Conversation>
 
 <!-- STOMACHACHE -->
-<Conversation line="My tummy hurts..." speaker="0" flags="stomachache" allowedjobs="captain">
+<Conversation line="My tummy hurts..." speaker="0" flags="stomachache" >
 	<Conversation line="" speaker="0"/>
 </Conversation>
 

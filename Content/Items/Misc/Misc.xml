@@ -854,7 +854,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="applystomachache" strength="5.0" />
           <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <Affliction identifier="fillbladder" amount="1.0" />
@@ -906,7 +906,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="applystomachache" strength="5.0" />
           <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <Affliction identifier="fillbladder" amount="1.0" />
@@ -958,7 +958,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="applystomachache" strength="5.0" />
           <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <Affliction identifier="fillbladder" amount="1.0" />
@@ -1010,7 +1010,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="applystomachache" strength="5.0" />
           <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <Affliction identifier="fillbladder" amount="1.0" />
@@ -1062,7 +1062,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="applystomachache" strength="5.0" />
           <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <Affliction identifier="fillbladder" amount="1.0" />
@@ -1436,8 +1436,8 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-fatrich" amount="40" />
           <ReduceAffliction type="hunger" amount="1" />
-          <Affliction identifier="he-stomachache" amount="3" />
-          <Affliction identifier="he-stomachache" amount="5" probability="0.01" />
+          <Affliction identifier="nausea" amount="3" probability="0.02" />
+          <Affliction identifier="applystomachache" amount="5" probability="0.02" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
           <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="255,255,255,255" />
