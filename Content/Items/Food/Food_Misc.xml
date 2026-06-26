@@ -961,6 +961,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-fatrich" amount="30" />
           <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="nausea" amount="3" probability="0.02" />
           <Affliction identifier="applystomachache" amount="5" probability="0.02" />
           <Affliction identifier="worminfection" amount="1" probability="0.00052" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.00052" />
