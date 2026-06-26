@@ -1597,6 +1597,139 @@
       </StatusEffectAction>
     </ScriptedEvent>    
     
+    
+    
+
+    <ScriptedEvent identifier="tutorial_recroom">
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:recroomdoor" tag="recroomdoor" />
+      <TagAction criteria="itemtag:recroomchair" tag="recroomchair" />
+      <TagAction criteria="itemtag:recroombed" tag="recroombed" />
+      <TagAction criteria="itemtag:recroomtable" tag="recroomtable" />
+      <TagAction criteria="itemtag:recroomguitarholder" tag="recroomguitarholder" />
+      <TagAction criteria="itemtag:recroomguitar" tag="recroomguitar" />
+      <StatusEffectAction targettag="recroomdoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="clown" targettag="recroomguy" spawnpointtag="recroomchair" />
+      <NPCOperateItemAction NPCTag="recroomguy" TargetTag="recroomchair" ItemComponentName="Controller" Operate="true" />
+      <Label name="looprecroomtutorial" />
+      <TriggerAction target1tag="player" target2tag="recroomguy" radius="150" waitforinteraction="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="Hey I'm not slacking off okay? Just finished my shift at the clown nose factory. Everyone deserves some rest and recreation. Do you never take time off?" >
+        <Option text="I want to learn.">
+          <GoTo name="acceptrecroomtutorial" />
+        </Option>
+        <Option text="Not interested.">
+          <GoTo name="looprecroomtutorial" />
+        </Option>
+        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
+        <Option text="Tempskip" endconversation="true">
+          <GoTo name="tempskip" />
+        </Option>      
+      </ConversationAction>
+      <Label name="acceptrecroomtutorial" />
+      <StatusEffectAction targettag="recroomdoor">
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
+      </StatusEffectAction>
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Good. They say a happy fellow is a productive employee. If you never take a break, you'll get stressed, make mistakes, and even fall asleep from exhaustion." />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Speaking of which, you look paler than a clown. You probably should take a nap. Don't just lie down, actually close your eyes and sleep those bags off your face. " />
+      <EventObjectiveAction type="add" id="Sleep in the bad to reduce your fatigue" />
+      <TutorialHighlightAction state="true" targettag="recroombed" />
+      <StatusEffectAction targettag="recroombed">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="player">
+        <StatusEffect target="This">
+          <GiveTalentInfo giverandom="true" talentidentifiers="he-sleepyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <AfflictionAction targettag="player"  affliction="fatigue" strength="30" />
+      <Label name="checkforfatiguegone" />
+      <CheckConditionalAction targettag="player">
+        <Conditional fatigue="lte 10" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforfatiguegone" />
+        </Failure>
+      </CheckConditionalAction>
+      <EventObjectiveAction type="completeandremove" id="Sleep in the bad to reduce your fatigue" />
+      <TutorialHighlightAction state="false" targettag="recroombed" />
+      <AfflictionAction targettag="player"  affliction="stun" strength="0.5" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Damn, you're a snorer. Hey, a quick joke for you: why did the crawler not eat the clown? Because he tasted funny!" />
+      <StatusEffectAction targettag="player">
+        <StatusEffect target="This">
+          <GiveTalentInfo giverandom="true" talentidentifiers="he-moodyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
+      <AfflictionAction targettag="player"  affliction="mood" strength="40" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Tough crowd... Why are you frowning? I can sense a bit of a cortisol spike over here. Try playing the guitar, I hear music soothes the nerves." />
+      <EventObjectiveAction type="add" id="Reduce your stress by playing the guitar" />
+      <TutorialHighlightAction state="true" targettag="recroomguitar" />
+      <StatusEffectAction targettag="recroomguitarholder">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforstressgone1" />
+      <CheckConditionalAction targettag="player">
+        <Conditional mood="lte 30" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforstressgone1" />
+        </Failure>
+      </CheckConditionalAction>
+      <EventObjectiveAction type="completeandremove" id="Reduce your stress by playing the guitar" />
+      <TutorialHighlightAction state="false" targettag="recroomguitar" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="See, you feel better already! How about Hotdogs? Do you like Hotdogs? I can see it on your face, it's your favorite food! Here, grab the one on the table, it's my treat." />
+      <AfflictionAction targettag="player"  affliction="craving_food" strength="-9999" />
+      <AfflictionAction targettag="player"  affliction="trait_likes_hotdogs" strength="1000" />
+      <EventObjectiveAction type="add" id="Eat the hotdog to satisfy your craving and reduce stress" />
+      <TutorialHighlightAction state="true" targettag="recroomtable" />
+      <StatusEffectAction targettag="recroomtable">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforstressgone2" />
+      <CheckConditionalAction targettag="player">
+        <Conditional mood="lte 20" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforstressgone2" />
+        </Failure>
+      </CheckConditionalAction>
+      <EventObjectiveAction type="completeandremove" id="Eat the hotdog to satisfy your craving and reduce stress" />
+      <TutorialHighlightAction state="false" targettag="recroomtable" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="I knew you'd enjoy the meal. Now, wanna see a magic trick? I'll make this stress disappear! ...with alcohol. The magic is alcohol. Just can just drink your stress away. I left you a rum bottle. Bottoms up!" />
+      <EventObjectiveAction type="add" id="Get drunk to reduce your stress" />
+      <TutorialHighlightAction state="true" targettag="recroomrum" />
+      <Label name="checkfordrunk" />
+      <CheckConditionalAction targettag="player">
+        <Conditional drunk="gte 20" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkfordrunk" />
+        </Failure>
+      </CheckConditionalAction>
+      <EventObjectiveAction type="completeandremove" id="Get drunk to reduce your stress" />
+      <TutorialHighlightAction state="false" targettag="recroomrum" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="You're not walking right, that's a good sign. I've got nothing left to teach you. Because that's a job for the professors at the clown college. Now scram, I need to hone my honks."  endconversation="true" />
+      <StatusEffectAction targettag="recroomdoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <TriggerAction target1tag="player" target2tag="recroomguy" radius="300" type="outside" waitforinteraction="false" />
+      <StatusEffectAction targettag="recroomguy">
+        <StatusEffect target="this" >
+          <Sound file="Content/Items/Weapons/honk.ogg" range="1000" volume="2" />
+        </StatusEffect>
+      </StatusEffectAction>
+    </ScriptedEvent>
+    
+    
+    
   </EventPrefabs>
   
   
