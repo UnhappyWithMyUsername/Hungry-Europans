@@ -2,8 +2,6 @@
 <Override>
   <Items>
     <Item hideinmenus="false" name="Fried Hammerhead Spawn" nameidentifier="he-cookedhammerheadspawnfried" identifier="he-tutorial.cookedhammerheadspawnfried" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" maxcondition="99" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
@@ -23,6 +21,47 @@
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
+    </Item>
+
+    <Item name="Water Bottle" nameidentifier="he-water" identifier="he-tutorial.waterbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,20,66" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="264,0,20,66" depth="0.6" maxcondition="99" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
+      <Body width="21" height="58" density="15" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="28,24" holdangle="120" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+
+        <!-- Unbottle -->
+        <StatusEffect type="OnActive" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnActive" target="This" holdpos="25,24" holdangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
+        <StatusEffect type="OnBroken" target="This">
+          <RemoveItem identifier="he-emptybottle" />
+        </StatusEffect>
+        
+        <!--////////// BOT DRINKING \\\\\\\\\\-->
+        <!-- Bots "drink" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional HasTag="eq opened" />
+          <ReduceAffliction type="thirst" amount="4.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <StatusEffect type="OnImpact" target="This">
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
+        </StatusEffect>
+      </Holdable>
     </Item>
   </Items>
 </Override>
