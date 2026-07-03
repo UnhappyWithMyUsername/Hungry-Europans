@@ -513,7 +513,8 @@
               <TagAction criteria="itemidentifier:he-spaghettimeatballs" tag="removethis" continueifnotargetsfound="true" />
               <TagAction criteria="itemidentifier:he-fork" tag="removethis" continueifnotargetsfound="true" />
               <!-- have the chef use the toilet | this is due to us having to wait for the customer to despawn to continue the event so we use this as an excuse for a short break. Might also make the player aware that there's usable toilets -->
-              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="You've satisfied your first customer! Congratulations! Now, if you excuse me for a moment, I just need to quickly go relief myself. You can wait in the kitchen for me, I'll be back right with you!" targettag="player" />
+              <!-- TODO: move the toilet to hygiene tutorial? -->
+              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="You've satisfied your first customer! Congratulations! Now, if you excuse me for a moment, I just need to quickly go relieve myself. You can wait in the kitchen for me, I'll be back right with you!" targettag="player" />
               <NPCOperateItemAction NPCTag="masterchef" TargetTag="tutorialtoilet" ItemComponentName="Controller" Operate="true" />
               <!-- customer walks away and despawns when reaching the exit door -->
               <NPCFollowAction npctag="hungryeuropan" targettag="exitdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
@@ -1456,7 +1457,7 @@
       </CheckConditionalAction>
       <EventObjectiveAction type="completeandremove" id="Get drunk to reduce your stress" />
       <TutorialHighlightAction state="false" targettag="recroomrum" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="You're not walking right, that's a good sign. I've got nothing left to teach you. Because that's a job for the professors at the clown college. Now scram, I need to hone my honks."  endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="You're not walking right, which tells me you must be enjoying yourself. I've got nothing left to teach you, that's a job for the professors at the clown college. Now if you don't mind, I need to hone my honks." endconversation="true" />
       <StatusEffectAction targettag="recroomdoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
       </StatusEffectAction>
@@ -1467,7 +1468,142 @@
         </StatusEffect>
       </StatusEffectAction>
     </ScriptedEvent>
-    
+        
+    <ScriptedEvent identifier="tutorial_bathroom">
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:bathroomdoor" tag="bathroomdoor" />
+      <TagAction criteria="itemtag:bathroomswitch" tag="bathroomswitch" />
+      <TagAction criteria="itemtag:bathroomtoilet" tag="bathroomtoilet" />
+      <TagAction criteria="itemtag:bathroomcabinet" tag="bathroomcabinet" />
+      <TagAction criteria="itemtag:bathroompump" tag="bathroompump" />
+      <StatusEffectAction targettag="bathroomdoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="bathroomswitch">
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
+      </StatusEffectAction>
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="miner" targettag="bathroomguy" spawnpointtag="bathroomtoilet" />
+      <NPCOperateItemAction NPCTag="bathroomguy" TargetTag="bathroomtoilet" ItemComponentName="Controller" Operate="true" />
+      <Label name="loopbathroomtutorial" />
+      <TriggerAction target1tag="player" target2tag="bathroomguy" radius="150" waitforinteraction="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="mechanic" dialogtype="regular" text="Hey settle down, I'm almost done here! What do you want?" >
+        <Option text="I'm in a hurry.">
+          <GoTo name="acceptbathroomtutorial" />
+        </Option>
+        <Option text="My bad.">
+          <GoTo name="loopbathroomtutorial" />
+        </Option>
+        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
+        <Option text="Tempskip" endconversation="true">
+          <GoTo name="tempskip" />
+        </Option>      
+      </ConversationAction>
+      <Label name="acceptbathroomtutorial" />
+      <StatusEffectAction targettag="bathroomdoor">
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
+      </StatusEffectAction>
+      <NPCOperateItemAction NPCTag="bathroomguy" TargetTag="bathroomtoilet" ItemComponentName="Controller" Operate="false" />
+      <NPCFollowAction npctag="bathroomguy" targettag="bathroomswitch" follow="true" AbandonOnReset="false" ForceWalk="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="There, I'm finished. The throne's all yours. Don't look at me like that, do you also need me to explain how to do the deed?" />
+      <EventObjectiveAction type="add" id="Relieve your bladder on the toilet" />
+      <EventObjectiveAction type="add" id="Relieve your bowels on the toilet" />
+      <TutorialHighlightAction state="true" targettag="bathroomtoilet" />
+      <StatusEffectAction targettag="bathroomtoilet">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="player">
+        <StatusEffect target="This">
+          <GiveTalentInfo giverandom="true" talentidentifiers="he-filthyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <AfflictionAction targettag="player" affliction="defecate" strength="50" />
+      <AfflictionAction targettag="player" affliction="bladder" strength="50" />
+      <Label name="checkforbladderempty" />
+      <CheckConditionalAction targettag="player">
+        <Conditional bladder="lte 1" />
+        <Success>
+          <EventObjectiveAction type="completeandremove" id="Relieve your bladder on the toilet" />
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforbladderempty" />
+        </Failure>
+      </CheckConditionalAction>
+      <Label name="checkforbowelsempty" />
+      <CheckConditionalAction targettag="player">
+        <Conditional defecate="lte 1" />
+        <Success>
+          <EventObjectiveAction type="completeandremove" id="Relieve your bowels on the toilet" />
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforbowelsempty" />
+        </Failure>
+      </CheckConditionalAction>
+      <TutorialHighlightAction state="false" targettag="bathroomtoilet" />
+      <AfflictionAction targettag="player"  affliction="stun" strength="0.2" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Not only I can hear you from over here, but I can also smell you... When was the last time you took a bath?" />
+      <AfflictionAction targettag="player" affliction="hygiene" strength="60" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Wait, do you hear this?" />
+      <StatusEffectAction targettag="bathroomtoilet">
+        <StatusEffect target="This" condition="0" setvalue="true" >
+          <Sound file="Content/Sounds/Damage/StructureCrunch2.ogg" range="600" volume="3.0"/>
+        </StatusEffect>
+      </StatusEffectAction>
+      <WaitAction time="5" />
+      <StatusEffectAction targettag="bathroomtoilet">
+        <StatusEffect target="This" condition="100" setvalue="true" />
+      </StatusEffectAction>
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Did you just drop a depth charge in there? Can't believe I was about to drown in a bathroom..." />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Seems like the room is on lockdown... Take that opportunity to wash that grime off yourself. Take your clothes off, the water should clean the gunk away, no need to scrub." />
+      <EventObjectiveAction type="add" id="Remove your clothes and stand in water until fully cleaned"  />
+      <Label name="checkforcleaned" />
+      <CheckConditionalAction targettag="player">
+        <Conditional hygiene="lte 1" />
+        <Success>
+          <EventObjectiveAction type="completeandremove" id="Remove your clothes and stand in water until fully cleaned" />
+        </Success>
+        <Failure>
+          <WaitAction time="0.5" />
+          <GoTo name="checkforcleaned" />
+        </Failure>
+      </CheckConditionalAction>
+      <StatusEffectAction targettag="bathroompump">
+        <StatusEffect target="This" IsOn="true" targetitemcomponent="Pump" setvalue="true"/>
+      </StatusEffectAction>
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="The water is receeding at last... Why would anyone implement a bathroom lockdown protocol?" />
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Hey, looks like you missed a spot, you're greasier than a Psilotoad. Grab some soap and wash properly this time..." />
+      <AfflictionAction targettag="player" affliction="hygiene" strength="20" />
+      <EventObjectiveAction type="add" id="Remove your clothes and scrub yourself with soap"  />
+      <TutorialHighlightAction state="true" targettag="bathroomcabinet" />
+      <StatusEffectAction targettag="bathroomcabinet">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="checkforcleaned2" />
+      <CheckConditionalAction targettag="player">
+        <Conditional hygiene="lte 1" />
+        <Failure>
+          <WaitAction time="0.5" />
+          <InventoryHighlightAction targettag="player" itemidentifier="he-soap" />
+          <GoTo name="checkforcleaned2" />
+        </Failure>
+      </CheckConditionalAction>
+      <EventObjectiveAction type="completeandremove" id="Remove your clothes and scrub yourself with soap"  />
+      <TutorialHighlightAction state="false" targettag="bathroomcabinet" />"
+      />      
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="mechanic" dialogtype="regular" text="You don't exactly smell like roses, but it's an improvement. Now don't go and tell people we're urinal buddies. We're not." />
+      <StatusEffectAction targettag="bathroomdoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <TriggerAction target1tag="player" target2tag="bathroomguy" radius="300" type="outside" waitforinteraction="false" />
+    </ScriptedEvent>
     
     
   </EventPrefabs>
