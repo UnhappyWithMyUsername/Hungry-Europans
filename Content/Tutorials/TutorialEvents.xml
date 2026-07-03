@@ -924,6 +924,9 @@
       TEMPSKIP4="TEMPSKIP"
       />
       
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Looks like you're ready to feed a whole crew! Of course, there's more to being a chef than just cooking. Visit my colleagues in their respective rooms and they'll gladly teach you a thing or two." targettag="player" />
+      <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
+      
       <!-- load in secondary tutorials -->
       <TriggerEventAction identifier="tutorial_botany" />
       <TriggerEventAction identifier="tutorial_brewery" />
@@ -1380,7 +1383,7 @@
       TEMPSKIP4="TEMPSKIP"
       />
       <AfflictionAction targettag="player"  affliction="mood" strength="40" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Tough crowd... Why are you frowning? I can sense a bit of a cortisol spike over here. Try playing the guitar, I hear music soothes the nerves." />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Tough crowd... Why are you frowning? I'm no doctor, but I can sense your cortisol spiking. Try playing the guitar over there, I hear music soothes the nerves." />
       <EventObjectiveAction type="add" id="Reduce your stress by playing the guitar" />
       <TutorialHighlightAction state="true" targettag="recroomguitar" />
       <StatusEffectAction targettag="recroomguitarholder">
