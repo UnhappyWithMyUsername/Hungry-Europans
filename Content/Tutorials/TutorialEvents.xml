@@ -566,7 +566,7 @@
         </StatusEffect>
       </StatusEffectAction>
       <NPCFollowAction npctag="deliveryguy" targettag="masterchef" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="I feel so much lighter now. Alright, now. Where were we? Oh wait! I think I hear someone. It might be the delivery guy..." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Another satisfied customer! I think I hear someone. It might be the delivery guy..." targettag="player" />
       <TriggerAction target1tag="deliveryguy" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the delivery guy and chef talk to each other -->
