@@ -63,7 +63,6 @@
       <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
       <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Ah hello there! You must be the new chef? Welcome!" targettag="player" />
       <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="I'm chef Booger and I'll be teaching you how to keep your crew fed, but there's all kinds of folk around the station that can teach you things!" />
-      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="So if you want to learn about botany or the art of brewing, visit my colleagues in their respective rooms and they'll gladly teach you a thing or two." />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="I'll be heading to the kitchen upstairs. You can meet me there if you want to start learning about preparing meals and other basic kitchen tasks." />
       <NPCFollowAction npctag="masterchef" targettag="kitchen" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!--<EventObjectiveAction type="add" id="Follow the Master Chef" />-->
@@ -934,8 +933,6 @@
         </Failure>
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Drink (Hold [Aim])" />
-      <!-- TODO: Tutorials for: Clean dishes, cleaning food waste, washing clothes, showering -->
-      
             
       <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
       <Label
@@ -945,7 +942,7 @@
       TEMPSKIP3="TEMPSKIP"
       TEMPSKIP4="TEMPSKIP"
       />
-
+      
       <!-- WIP - to be continued -->
       <!-- TODO: -->
       <!-- soup tutorial (gather seaweed, make nori, gather seeds, make seaweed soup) -->
@@ -953,7 +950,7 @@
       <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
 
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Well, I've taught you everything I know. I think you're ready to join and support a crew! Good luck out there!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Looks like you're ready to feed a whole crew! Now there's more to being a chef than just cooking. Visit my colleagues in their respective rooms and they'll gladly teach you a thing or two." targettag="player" />
       
       <!-- load in secondary tutorials -->
       <TriggerEventAction identifier="tutorial_botany" />
