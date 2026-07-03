@@ -1417,6 +1417,7 @@
       </CheckConditionalAction>
       <EventObjectiveAction type="completeandremove" id="Eat the hotdog to satisfy your craving and reduce stress" />
       <TutorialHighlightAction state="false" targettag="recroomtable" />
+      <AfflictionAction targettag="player"  affliction="trait_likes_hotdogs" strength="-9999" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="I knew you'd enjoy the meal. Now, wanna see a magic trick? I'll make this stress disappear! ...with alcohol. The magic is alcohol. Just can just drink your stress away. I left you a rum bottle. Bottoms up!" />
       <EventObjectiveAction type="add" id="Get drunk to reduce your stress" />
       <TutorialHighlightAction state="true" targettag="recroomrum" />
