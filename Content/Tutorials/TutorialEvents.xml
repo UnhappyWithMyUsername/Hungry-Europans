@@ -964,7 +964,7 @@
       <TriggerAction target1tag="player" target2tag="botanyguy" radius="150" waitforinteraction="true" />
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Do you know anything about plants? Most sailors have never seen a vegetable in their life." >
         <Option text="I want to learn.">
-          <GoTo name="acceptbotanytutorial" />
+          <GoTo name="acceptbotanytutorial" EndConversation="false"/>
         </Option>
         <Option text="Not interested.">
           <GoTo name="loopbotanytutorial" />
@@ -1153,7 +1153,7 @@
       <TriggerAction target1tag="player" target2tag="breweryguy" radius="150" waitforinteraction="true" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Hey there, you look dependable... and available. I hurt my hand the other day, wanna give brewing a try in my stead?" >
         <Option text="I want to learn.">
-          <GoTo name="acceptbrewerytutorial" />
+          <GoTo name="acceptbrewerytutorial" EndConversation="false" />
         </Option>
         <Option text="Not interested.">
           <GoTo name="loopbrewerytutorial" />
@@ -1331,7 +1331,7 @@
       <TriggerAction target1tag="player" target2tag="recroomguy" radius="150" waitforinteraction="true" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="Hey I'm not slacking off okay? Just finished my shift at the red nose factory. Everyone deserves some rest and recreation. Do you never take time off?" >
         <Option text="I want to learn.">
-          <GoTo name="acceptrecroomtutorial" />
+          <GoTo name="acceptrecroomtutorial" EndConversation="false"/>
         </Option>
         <Option text="Not interested.">
           <GoTo name="looprecroomtutorial" />
@@ -1461,7 +1461,7 @@
       <TriggerAction target1tag="player" target2tag="bathroomguy" radius="150" waitforinteraction="true" />
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="mechanic" dialogtype="regular" text="Hey settle down, I'm almost done here! What do you want?" >
         <Option text="I'm in a hurry.">
-          <GoTo name="acceptbathroomtutorial" />
+          <GoTo name="acceptbathroomtutorial" EndConversation="false"/>
         </Option>
         <Option text="My bad.">
           <GoTo name="loopbathroomtutorial" />
