@@ -937,13 +937,20 @@
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
 
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" dialogtype="small" text="Well, I've taught you everything I know. I think you're ready to join and support a crew! Good luck out there!" targettag="player" />
-      <TutorialCompleteAction />
+      
+      <!-- load in secondary tutorials -->
+      <TriggerEventAction identifier="tutorial_botany" />
+      <TriggerEventAction identifier="tutorial_brewery" />
+      <TriggerEventAction identifier="tutorial_recroom" />
+      
+      <!-- <TutorialCompleteAction /> -->
     </ScriptedEvent>
     
 
     <ScriptedEvent identifier="tutorial_botany">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:botanydoor" tag="botanydoor" />
+      <TagAction criteria="itemtag:botanyswitch" tag="botanyswitch" />
       <TagAction criteria="itemtag:botanychair" tag="botanychair" />
       <TagAction criteria="itemtag:rightplanter" tag="rightplanter" />
       <TagAction criteria="itemtag:leftplanter" tag="leftplanter" />
@@ -957,6 +964,9 @@
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="botanydoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="botanyswitch">
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="researcher" targettag="botanyguy" spawnpointtag="botanychair" />
       <NPCOperateItemAction NPCTag="botanyguy" TargetTag="botanychair" ItemComponentName="Controller" Operate="true" />
@@ -1131,6 +1141,7 @@
     <ScriptedEvent identifier="tutorial_brewery">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:brewerydoor" tag="brewerydoor" />
+      <TagAction criteria="itemtag:breweryswitch" tag="breweryswitch" />
       <TagAction criteria="itemtag:brewerychair" tag="brewerychair" />
       <TagAction criteria="itemtag:tutorialrefillstationbrewery" tag="tutorialrefillstationbrewery" />
       <TagAction criteria="itemtag:tutorialbottleprinter" tag="tutorialbottleprinter" />
@@ -1142,6 +1153,9 @@
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="brewerydoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="breweryswitch">
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="commoner" targettag="breweryguy" spawnpointtag="brewerychair" />
       <NPCOperateItemAction NPCTag="breweryguy" TargetTag="brewerychair" ItemComponentName="Controller" Operate="true" />
@@ -1305,12 +1319,11 @@
       </StatusEffectAction>
     </ScriptedEvent>    
     
-    
-    
 
     <ScriptedEvent identifier="tutorial_recroom">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:recroomdoor" tag="recroomdoor" />
+      <TagAction criteria="itemtag:recroomswitch" tag="recroomswitch" />
       <TagAction criteria="itemtag:recroomchair" tag="recroomchair" />
       <TagAction criteria="itemtag:recroombed" tag="recroombed" />
       <TagAction criteria="itemtag:recroomtable" tag="recroomtable" />
@@ -1318,6 +1331,9 @@
       <TagAction criteria="itemtag:recroomguitar" tag="recroomguitar" />
       <StatusEffectAction targettag="recroomdoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="recroomswitch">
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="clown" targettag="recroomguy" spawnpointtag="recroomchair" />
       <NPCOperateItemAction NPCTag="recroomguy" TargetTag="recroomchair" ItemComponentName="Controller" Operate="true" />
