@@ -545,7 +545,6 @@
       <ClearTagAction tag="entrancedoor" />
       <ClearTagAction tag="exitdoor" />
       <WaitAction time="3" />
-      <TriggerAction target1tag="player" target2tag="kitchen" radius="0" waitforinteraction="false" />
       
       <!-- \\\\\ FRYER AND KITCHEN INSTALLATION TUTORIAL START ///// -->
       
