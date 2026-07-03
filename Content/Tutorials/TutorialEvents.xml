@@ -52,10 +52,6 @@
       <TagAction criteria="itemtag:tutorialrefillstation" tag="tutorialrefillstation" />
       <TagAction criteria="itemtag:chefcrawlerposition" tag="chefcrawlerposition" />
       <TagAction criteria="itemidentifier:he-liquorcrate" tag="tutorialliquorcrate" />
-      <!-- load in secondary tutorials -->
-      <TriggerEventAction identifier="tutorial_botany" />
-      <TriggerEventAction identifier="tutorial_brewery" />
-      <TriggerEventAction identifier="tutorial_recroom" />
       <!-- tutorial introduction -->
       <WaitAction time="1" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
@@ -867,7 +863,13 @@
       <WaitAction time="10" />
       
       <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-      <Label name="tempskip" />
+      <!-- <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      /> -->
       
       <!-- \\\\\ DRINKING & EATING TUTORIAL START ///// -->
 
@@ -928,6 +930,15 @@
       <EventObjectiveAction type="completeandremove" id="Drink (Hold [Aim])" />
       <!-- TODO: Tutorials for: Clean dishes, cleaning food waste, washing clothes, showering -->
       
+            
+      <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
 
       <!-- WIP - to be continued -->
       <!-- TODO: -->
