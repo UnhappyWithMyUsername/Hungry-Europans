@@ -1169,7 +1169,7 @@
         <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Alright. See that big white machine next to me? That's a state of the art industrial brewer. That's where the booze is made." />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Let's gather some ingredients. A good beer starts with water. Grab that keg and fill it in that little pool. Inspection told me it's sanitary, so don't worry about dipping your toes in your drink." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Let's gather some ingredients. A good beer starts with water. Grab that keg and fill it in that little pool. The health inspector told me ballast water is sanitary enough, so don't worry about dipping your toes in your drink." />
       <EventObjectiveAction type="add" id="Grab the keg and fill it with water from the pool" />
       <TutorialHighlightAction state="true" targettag="tutorialemptykegbrewery" />
       <StatusEffectAction targettag="tutorialemptykegbrewery">
