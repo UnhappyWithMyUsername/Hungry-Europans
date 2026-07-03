@@ -1553,7 +1553,7 @@
       TEMPSKIP3="TEMPSKIP"
       TEMPSKIP4="TEMPSKIP"
       />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Hey, looks like you missed a spot, you're greasier than a Psilotoad. Grab some soap and wash properly this time..." />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Hey, looks like you missed a spot, you're still greasier than a Psilotoad. Grab some soap and wash properly this time..." />
       <AfflictionAction targettag="player" affliction="hygiene" strength="31" />
       <EventObjectiveAction type="add" id="Remove your clothes and scrub yourself with soap"  />
       <TutorialHighlightAction state="true" targettag="bathroomcabinet" />
