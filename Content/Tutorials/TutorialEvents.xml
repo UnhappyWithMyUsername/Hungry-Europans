@@ -485,7 +485,7 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Prepare a meal: Spaghetti and Minceballs" />
       <TutorialHighlightAction state="false" targettag="tutorialstove" />
-      <!-- instruct the player to bring the meal to the customer-->
+      <!-- instruct the player to bring the meal to the customer-->                  
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="You're a natural! Grab the meal and let's bring it to our customer. They must be ravenous by now, haha!" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialmeal" />
       <TutorialHighlightAction state="true" targettag="hungryeuropan" />
@@ -502,20 +502,11 @@
               <EventObjectiveAction type="completeandremove" id="Give the meal to the hungry europan" />
               <RemoveItemAction targettag="tutorialmeal" amount="1" />
               <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="Thank you! Have a great day!" targettag="player" />
-              <StatusEffectAction targettag="hungryeuropan">
-                <StatusEffect target="This">
-                  <SpawnItem identifier="he-spaghettimeatballs" spawnposition="ThisInventory" equip="true" />
-                  <SpawnItem identifier="he-fork" spawnposition="ThisInventory" equip="true" />
-                </StatusEffect>
-              </StatusEffectAction>
+              <SpawnAction ItemIdentifier="he-spaghettimeatballs" TargetTag="removethis" TargetInventory="hungryeuropan" />  
+              <SpawnAction ItemIdentifier="he-fork" TargetTag="removethis" TargetInventory="hungryeuropan" />  
               <WaitAction time="1" />
               <TagAction criteria="itemidentifier:he-spaghettimeatballs" tag="removethis" continueifnotargetsfound="true" />
               <TagAction criteria="itemidentifier:he-fork" tag="removethis" continueifnotargetsfound="true" />
-              <!-- have the chef use the toilet | this is due to us having to wait for the customer to despawn to continue the event so we use this as an excuse for a short break. Might also make the player aware that there's usable toilets -->
-              <!-- TODO: move the toilet to hygiene tutorial? -->
-              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="You've satisfied your first customer! Congratulations! Now, if you excuse me for a moment, I just need to quickly go relieve myself. You can wait in the kitchen for me, I'll be back right with you!" targettag="player" />
-              <NPCOperateItemAction NPCTag="masterchef" TargetTag="tutorialtoilet" ItemComponentName="Controller" Operate="true" />
-              <!-- customer walks away and despawns when reaching the exit door -->
               <NPCFollowAction npctag="hungryeuropan" targettag="exitdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
               <TriggerAction target1tag="hungryeuropan" target2tag="exitdoor" radius="170" waitforinteraction="false" />
               <NPCOperateItemAction NPCTag="hungryeuropan" TargetTag="exitdoor" ItemComponentName="Controller" Operate="true" />
@@ -554,14 +545,7 @@
       <ClearTagAction tag="entrancedoor" />
       <ClearTagAction tag="exitdoor" />
       <WaitAction time="3" />
-      <!-- only have the chef return from toilet if the player is waiting in the kitchen as this is where we need to be when the delivery guy arrives to prevent the delivery guy from running like a maniac (caused by OperateItemAction) -->
       <TriggerAction target1tag="player" target2tag="kitchen" radius="0" waitforinteraction="false" />
-      <StatusEffectAction targettag="tutorialtoilet">
-        <StatusEffect target="This" disabledeltatime="true">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="false" range="1000" />
-        </StatusEffect>
-      </StatusEffectAction>
-      <NPCOperateItemAction NPCTag="masterchef" TargetTag="tutorialtoilet" ItemComponentName="Controller" Operate="false" />
       
       <!-- \\\\\ FRYER AND KITCHEN INSTALLATION TUTORIAL START ///// -->
       
@@ -867,15 +851,6 @@
       <!-- chef automatically "eats" the fried hammerhead spawns for 10 seconds -->
       <WaitAction time="10" />
       
-      <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-      <!-- <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      /> -->
-      
       <!-- \\\\\ DRINKING & EATING TUTORIAL START ///// -->
 
       <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Ah, that hit the spot! But it made quite thirsty. You look quite thirsty too, actually..." targettag="player" />
@@ -933,15 +908,6 @@
         </Failure>
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Drink (Hold [Aim])" />
-            
-      <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
       
       <!-- WIP - to be continued -->
       <!-- TODO: -->
