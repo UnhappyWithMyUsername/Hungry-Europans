@@ -6,5 +6,42 @@
 <tutorial.cheftutorial>Become a Chef</tutorial.cheftutorial>
 <tutorial.cheftutorial.description>In this tutorial, Chef Booger will guide you through the daily tasks of a submarine chef and get you prepared for you to support your crew.</tutorial.cheftutorial.description>
 
+
+
+
+
+
+
+
+
+
+<tutorial.recap.hungryeuropan>
+With Hunger and Thirst enabled, you slowly become hungry and thirsty over time, forcing you to eat and drink regularly.
+Being hungry and/or thirsty reduces your skills and can potentially kill you.
+Raw meat will decay over time and disappear after a while if not refrigerated
+Eating raw food can make you sick and infect you with parasites.
+
+You can also gain various buffs from food; the more advanced the food the better the buffs.
+</tutorial.recap.hungryeuropan>
+
+<tutorial.recap.filthyeuropan>
+With Hygiene enabled, you need to regularly urinate and defecate in a toilet.
+Holding it in will inflict various debuffs which can reduce your skills.
+
+Your hygiene also degrades over time, and you need to wash yourself in water.
+</tutorial.recap.filthyeuropan>
+
+<tutorial.recap.sleepyeuropan>
+With Sleep enabled, you need to sleep in a bed when you feel fatigue.
+Not sleeping enough reduces your skill and can cause you to pass out from exhaustion.
+</tutorial.recap.sleepyeuropan>
+
+<tutorial.recap.moodyeuropan>
+With Stress enabled, stress will build up over time, or as a result of negative events such as taking damage in combat.
+Building up too much stress will reduce your skills.
+
+You can reduce your stress by doing various activities, such as playing an instrument, drinking alcohol, reading a magazine or gambling.
+</tutorial.recap.moodyeuropan>
+
 </Override>
 </infotexts>
