@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Randomevents>
 
+
+  <!-- TODO: make sure tutorial can't be bricked, make items noninteractable until needed -->
+
   <EventSprites>
     <Sprite identifier="masterchef" texture="%ModDir:2954998725%/Content/UI/HE_Event_pic1.png" sourcerect="0,0,256,256" origin="0.5,0.5"/>
   </EventSprites>
