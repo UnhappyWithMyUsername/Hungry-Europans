@@ -59,7 +59,7 @@
     </StatusEffectAction>
   </ScriptedEvent>
   
-  
+    <!-- desperate attempt at making butchered sever all limbs when it hits 100 - TODO: wait for BreakLimb fix -->
   <ScriptedEvent identifier="butcheredbreaklimbsevent">
     <TagAction criteria="speciesname:crawler" tag="breaklimbstarget" />
     <WaitAction time="3" />
