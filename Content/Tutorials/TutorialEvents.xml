@@ -914,8 +914,15 @@
       <!-- cafeteria tutorial (buy plated food, eat, return dirty dishes) -->
       <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
-
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Looks like you're ready to feed a whole crew! Now there's more to being a chef than just cooking. Visit my colleagues in their respective rooms and they'll gladly teach you a thing or two." targettag="player" />
+      
+      <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
+      <Label
+      TEMPSKIP1="TEMPSKIP"
+      TEMPSKIP2="TEMPSKIP"
+      name="tempskip"
+      TEMPSKIP3="TEMPSKIP"
+      TEMPSKIP4="TEMPSKIP"
+      />
       
       <!-- load in secondary tutorials -->
       <TriggerEventAction identifier="tutorial_botany" />
