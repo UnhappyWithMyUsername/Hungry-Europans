@@ -148,6 +148,24 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
+
+      <!-- potentially use this to reduce stress when injecting drugs or something -->
+      <!-- <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+        <Conditions>
+          <AbilityConditionCharacter targettype="NotSelf" invert="true" />
+          <AbilityConditionItem identifiers="meth" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" comparison="And">
+                <Conditional mood="gte 1" />
+                <ReduceAffliction identifier="mood" amount="0.5" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect> -->
       
       <!-- UNUSED applying mood through varied effects. It was too hard to balance having mood on everything -->
 <!-- 	    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
