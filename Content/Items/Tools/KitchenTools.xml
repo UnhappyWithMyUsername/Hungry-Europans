@@ -801,8 +801,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,0,56,5" depth="0.525" origin="0.5,-0.9" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" origin="0.5,0.5" maxcondition="20" fadein="true" />
       <Body width="52" height="2" density="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" condition="-1" interval="0.1" disabledeltatime="true" comparison="And">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
           <Conditional HasStatusTag="neq usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
         </StatusEffect>
@@ -835,8 +834,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,6,58,6" depth="0.525" origin="0.5,-0.9" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,6,58,6" origin="0.5,0.5" maxcondition="20" fadein="true" />
       <Body width="52" height="2" density="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" condition="-1" interval="0.1" disabledeltatime="true" comparison="And">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
           <Conditional HasStatusTag="neq usingspoon" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyspoon" targetcontainer="true" />
         </StatusEffect>
@@ -868,7 +866,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,0,56,5" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,0,56,5" depth="0.525" origin="0.5,-0.9" />
       <Body width="52" height="2" density="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnActive" target="Character" >
         <Affliction identifier="hallucinating" strength="5" />
         <Affliction identifier="psychosis" strength="0.5" />
