@@ -852,8 +852,6 @@
 
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
-          <Conditional condition="gte 11" />
-          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
           <Remove />
           <Spawnitem identifier="he-spamopened" spawnposition="SameInventory" spawnifinventoryfull="true" equip="true"/>
