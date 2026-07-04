@@ -87,13 +87,14 @@
                 <Conditional IsBot="false" />
                 <Affliction identifier="mood" probability="1" amount="0.01" />
                 <Affliction identifier="moodenabled" probability="1.0" amount="1.0" />
-                <!-- applies 1 moodcooldown every second -->
+                <!-- applies 1 moodcooldown every second, see below -->
                 <Affliction identifier="moodcooldown" amount="5.0"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
-      </AbilityGroupInterval>      
+      </AbilityGroupInterval>  
+      
       <!-- random chance of mood if character is attacked -->
 	    <AbilityGroupEffect abilityeffecttype="OnAttacked">
         <Conditions>
@@ -112,6 +113,7 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
+      
       <!-- random chance of mood if sub is attacked -->
 	    <AbilityGroupEffect abilityeffecttype="AfterSubmarineAttacked">
         <Conditions>
@@ -149,18 +151,46 @@
         </Abilities>
       </AbilityGroupEffect>
 
-      <!-- potentially use this to reduce stress when injecting drugs or something -->
+      <!-- gain extra mood if high withdrawals -->
+      <AbilityGroupInterval interval="5.0">
+        <Conditions>
+          <AbilityConditionHasAffliction afflictionidentifier="mood" minimumpercentage="0.01"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="Or">
+                <Conditional opiatewithdrawal="gt 40" />
+                <Conditional chemwithdrawal="gt 40" />
+                <Conditional alcoholwithdrawal="gt 40" />
+                <Conditional tobaccowithdrawal="gt 40" />
+                <Affliction identifier="mood" probability="1" amount="0.01" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+      
+      <!-- potentially use this to reduce stress when injecting drugs or something
+      DOES NOT WORK BECAUSE YOU LITERALLY CANNOT TARGET YOURSELF WITH AbilityConditionCharacter WHAT THE ACTUAL FUCK -->
       <!-- <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
         <Conditions>
-          <AbilityConditionCharacter targettype="NotSelf" invert="true" />
-          <AbilityConditionItem identifiers="meth" />
+          <AbilityConditionCharacter invert="true" targettypes="Notself" />
+          <AbilityConditionItem tags="syringe" />
+          <AbilityConditionHasAffliction afflictionidentifier="opiatewithdrawal" minimumpercentage="0.2"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" comparison="And">
                 <Conditional mood="gte 1" />
+                <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" frequencymultiplier="2.5" />
+              </StatusEffect>
+              <StatusEffect type="OnAbility" target="Character" delay="5" duration="10" stackable="false" comparison="And">
+                <Conditional mood="gte 1" />
+                <Conditional opiatewithdrawal="lt 20" />
                 <ReduceAffliction identifier="mood" amount="0.5" />
+                <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" frequencymultiplier="0.5" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
