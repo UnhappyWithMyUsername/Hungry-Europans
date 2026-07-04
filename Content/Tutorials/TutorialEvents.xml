@@ -50,6 +50,9 @@
       <TagAction criteria="itemtag:tutorialpepper" tag="tutorialpepper" />
       <TagAction criteria="itemtag:tutorialoil" tag="tutorialoil" />
       <TagAction criteria="itemtag:tutorialplate" tag="tutorialplate" />
+      <TagAction criteria="itemtag:tutorialwire" tag="tutorialwire" />
+      <TagAction criteria="itemtag:tutorialwireholder" tag="tutorialwireholder" />
+      <TagAction criteria="itemtag:tutorialshelf" tag="tutorialshelf" />
       <TagAction criteria="itemtag:tutorialfryerinstallation" tag="tutorialfryerinstallation" />
       <TagAction criteria="itemtag:tutorialwire" tag="tutorialwire" />
       <TagAction criteria="itemtag:tutorialemptykeg" tag="tutorialemptykeg" />
@@ -674,6 +677,12 @@
       <!-- FOR SOME REASON THE CHEF STARTS FOLLOWING THE PLAYER AGAIN AFTER THIS, EVEN THOUGH THERE IS NO FOLLOW ACTION TO DO SO | workaround seems to be to keep this NPCFollowAction in the CheckItemAction loop too -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialkitchencounter" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <EventObjectiveAction type="add" id="Collect the Fryer Installation and the Wire" />
+      <StatusEffectAction targettag="tutorialshelf">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <StatusEffectAction targettag="tutorialwireholder">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
       <TutorialHighlightAction state="true" targettag="tutorialfryerinstallation" />
       <TutorialHighlightAction state="true" targettag="tutorialwire" />
       <Label name="checkforfryerinstallation" />
