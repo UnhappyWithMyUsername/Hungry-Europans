@@ -25,39 +25,26 @@ Important TODO:
 //////////////////////
 //////////////////////
 
-[hr]19/06/2026[/hr]
+[hr]XX/07/2026[/hr]
 
-Small bug fixing and quality of life update, tutorial coming soon
+Tutorial Update
 
 [b]Additions:[/b]
 [List]
-[*] Make Nitroglycerin in blender (needs book recipe)
+[*] Added a tutorial for the chef job, also covering NEEDS (hungry/filthy/sleepy/moody)
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Updated the Mule submarine to match Vanilla
-[*] More Water kegs are sold at outposts
-[*] More kitchen items can be linked to kitchen counters
-[*] Reduced the cost of kitchen counters and fridge to make it easier to set up a kitchen
-[*] Fruits take longer to die from fire exposure
-[*] High "Alcoholic" affliction no longer reduces health, only drunk and withdrawal does
-[*] Nerfed punch gun a little
+[*] Cooler crates are now fireproof as long as they are powered
+[*] Improved cooking oil compatibility with Immersive Repairs, increase fryer oil consumption to match
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed the Hydroponics exploit of clicking very fast
-[*] Fixed glass duplication by breaking/deconstructing glass items
-[*] Fixed breaking bottles giving shivs half the time
-[*] Fixed being Drunk reducing stress under 1 which removed the skill bonus of low stress
-[*] Fixed bad keg description
-[*] Fixed cooler crate price
-[*] Fixed clown juice hiding your face
-[*] Fixed empty kegs falling off hydroponics
-[*] Added some in-game text about the plate/bowl fabrication bug
-[*] Updated the Aunt Doris recruitment event to match Vanilla
-[*] Fixed Doris cookbook not appearing in butcher shop
+[*] Fixed "ghost forking" bug, where eating with fork in right hand prevented hunger from being reduced why eating. Fork/Spoon can only be held in left hand now.
+[*] Fixed Spam bugs, split spam into closed/open items (might break existing spam)
+[*] Fixed stomachache being applied the wrong way on some food items
 [/List]
 
 
