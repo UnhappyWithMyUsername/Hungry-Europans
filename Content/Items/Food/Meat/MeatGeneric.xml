@@ -13,7 +13,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="8" requiresrecipe="false" amount="1" displayname="alternative">
         <RequiredSkill identifier="butchery" level="20" />
-        <RequiredItem identifier="he-rawoffal" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawoffal" amount="2" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.025"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
@@ -176,7 +176,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="butchery" level="20" />
-        <RequiredItem identifier="he-rawoffal" amount="4" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawoffal" amount="4" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.025"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
