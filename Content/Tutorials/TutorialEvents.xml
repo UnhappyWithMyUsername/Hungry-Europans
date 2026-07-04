@@ -30,6 +30,7 @@
       <TagAction criteria="itemtag:electricgrill" tag="tutorialgrill" />
       <TagAction criteria="itemtag:blender" tag="tutorialblender" />
       <TagAction criteria="itemtag:tutorialpot" tag="tutorialpot" />
+      <TagAction criteria="itemtag:tutorialpotholder" tag="tutorialpotholder" />
       <TagAction criteria="itemtag:tutorialpan" tag="tutorialpan" />
       <TagAction criteria="itemtag:brewkettle" tag="tutorialbrewingkettle" />
       <TagAction criteria="itemtag:distiller" tag="tutorialdistifermenter" />
