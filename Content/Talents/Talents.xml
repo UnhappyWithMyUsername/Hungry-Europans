@@ -164,7 +164,7 @@
                 <Conditional chemwithdrawal="gt 40" />
                 <Conditional alcoholwithdrawal="gt 40" />
                 <Conditional tobaccowithdrawal="gt 40" />
-                <Affliction identifier="mood" probability="1" amount="0.01" />
+                <Affliction identifier="mood" probability="1" amount="0.02" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
