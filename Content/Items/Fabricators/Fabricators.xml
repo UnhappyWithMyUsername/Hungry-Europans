@@ -5,7 +5,7 @@
 
     <Item name="" identifier="op_vendingmachine1" tags="vendingmachinedrinks,vendingmachine" width="238" height="396" texturescale="1.0,1.0" scale="0.5" category="Decorative">
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="1,497,238,396" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
-      <Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="campaignstoretab.buy">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="campaignstoretab.buy">
         <GuiFrame relativesize="0.4,0.5" style="ItemUI" anchor="Center" />
         <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/VendingMachine.ogg" type="OnActive" range="200.0" loop="true" volume="3.0"/>
       </Fabricator>
@@ -18,7 +18,7 @@
 
     <Item name="" identifier="op_vendingmachine2" nameidentifier="op_vendingmachine1" tags="vendingmachinefood,vendingmachine" width="238" height="396" texturescale="1.0,1.0" scale="0.5" category="Decorative">
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="481,497,238,396" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
-      <Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="campaignstoretab.buy">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="campaignstoretab.buy">
         <GuiFrame relativesize="0.4,0.5" style="ItemUI" anchor="Center" />
         <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/VendingMachine.ogg" type="OnActive" range="200.0" loop="true" volume="3.0"/>
       </Fabricator>
@@ -31,7 +31,7 @@
 
     <Item name="" identifier="op_cafeteriawindow" width="600" height="217" scale="0.5" tags="cafeteria,donttakeitems,dontsellitems" linkable="true" allowedlinks="medcabinet,locker" noninteractable="false" category="Machine,Decorative" damagedbyexplosions="false">
       <sprite texture="Content/Map/Outposts/Art/CafeteriaGardenAssets.png" sourcerect="2,2,600,217" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
-      <Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="campaignstoretab.buy">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="campaignstoretab.buy">
         <GuiFrame relativesize="0.4,0.5" style="ItemUI" anchor="Center" />
         <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Cafeteria.ogg" type="OnActive" range="600.0" loop="true" volume="3.0"/>
         <StatusEffect target="This" type="Always">
@@ -89,8 +89,8 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,357,370,355" depth="0.795" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,713,370,355" depth="0.794" origin="0.5,0.5" maxcondition="0" fadein="false" />
       
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.6" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
         <StatusEffect type="OnActive" targettype="This" offset="-60,-40">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Distiller.ogg" type="OnActive" range="600.0" loop="true" volume="8.0" />
@@ -181,7 +181,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1,1,322,410" depth="0.797" premultiplyalpha="false" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1,412,322,410" depth="0.796" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1,823,322,410" depth="0.795" origin="0.5,0.5" maxcondition="0" fadein="false" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
         <StatusEffect type="OnActive" targettype="This" offset="-70,20">
@@ -415,7 +415,7 @@
         <RequiredItem identifier="plastic" amount="2"/>
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
           <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
@@ -506,7 +506,7 @@
         <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
       </Price>-->
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
           <Conditional IsActive="false" />
@@ -586,7 +586,7 @@
         <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
         <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
       </DecorativeSprite>
-      <Fabricator canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
       </Fabricator>
@@ -647,7 +647,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,137,162,35" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,190,162,35" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
       <Body width="162" height="15" density="30" bodytype="static" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
@@ -746,7 +746,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
       <Body width="165" height="188" density="30" bodytype="static" />
-      <Fabricator canbeselected="true" selectkey="Select" powerconsumption="300.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" canbeselected="true" selectkey="Select" powerconsumption="300.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnPicked" target="this">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/OvenInteract.ogg" volume="1" range="450" />
@@ -1105,7 +1105,7 @@
         <IsActiveConditional currpowerconsumption="gte 0.5" />
       </DecorativeSprite>-->
       <Body width="80" height="164" density="15" bodytype="static" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <!-- <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" /> -->
         <!-- <StatusEffect type="OnActive" target="This">
@@ -1198,7 +1198,7 @@
         <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
       </DecorativeSprite>
       <Body width="91" height="158" density="15" bodytype="static" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
+      <Fabricator ShowCategoryButtons="false" ShowSortByDropdown="false" selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.47" style="ItemUI" anchor="Center" />
         <!-- <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" /> -->
         <StatusEffect type="OnActive" target="This" >
