@@ -140,9 +140,9 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" itempos="180,-200" iteminterval="40,1" itemrotation="0" itemsperrow="2" containedspritedepths="0.797,0.798,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799" slotsperrow="3" uilabel="" allowuioverlap="true">
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="407,0,85,85" origin="0.5,0.5" />
-        <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="173,67,42,67" origin="0.5,0.5" />
+      <ItemContainer selectkey="Select" capacity="2" canbeselected="true" hideitems="true" itempos="180,-200" slotsperrow="4" uilabel="" allowuioverlap="true">
+        <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="407,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="3" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="173,67,42,67" origin="0.5,0.5" />
         <Containable items="distilleringredient" />
         <SubContainer capacity="1" maxstacksize="1" >
           <Containable items="yeastshroom,slimebacteria" />
@@ -151,8 +151,7 @@
           <Containable items="emptyjar,emptybottle,emptyshaker" />
         </SubContainer>
       </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">      
-      </ItemContainer>
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
       
     </Item>
     
