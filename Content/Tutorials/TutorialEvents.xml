@@ -83,10 +83,6 @@
           <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o2.c1" targettag="player" />
           <GoTo name="skip_kitchenexplanations" />
         </Option>
-        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="EventText.tutorial_botany.o3" endconversation="true">
-          <GoTo name="tempskip" />
-        </Option>
       </ConversationAction>
       <!-- explain refrigerator -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialfridge" follow="true" AbandonOnReset="false" ForceWalk="true" />
@@ -918,8 +914,6 @@
       <!-- cafeteria tutorial (buy plated food, eat, return dirty dishes) -->
       <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
-      <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c46" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
       <!-- load in secondary tutorials -->
@@ -960,10 +954,6 @@
         </Option>
         <Option text="EventText.tutorial_botany.o2">
           <GoTo name="loopbotanytutorial" />
-        </Option>
-        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="EventText.tutorial_botany.o3" endconversation="true">
-          <GoTo name="tempskip" />
         </Option>
       </ConversationAction>
       <!-- start tutorial and close door -->
@@ -1051,7 +1041,6 @@
         </Failure>
       </CheckItemAction>
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c8" />
-      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c9" />
       <StatusEffectAction targettag="tutorialhydroponics">
         <StatusEffect target="This" noninteractable="false" IsOn="true" targetitemcomponent="LightComponent" setvalue="true" />
@@ -1142,10 +1131,6 @@
         <Option text="EventText.tutorial_botany.o2">
           <GoTo name="loopbrewerytutorial" />
         </Option>
-        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="EventText.tutorial_botany.o3" endconversation="true">
-          <GoTo name="tempskip" />
-        </Option>
       </ConversationAction>
       <!-- start tutorial and close door -->
       <Label name="acceptbrewerytutorial" />
@@ -1219,7 +1204,6 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
-      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_brewery.c7" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_brewery.c8" />
       <EventObjectiveAction type="add" id="Grab some glass fragments from the cabinet" />
@@ -1312,10 +1296,6 @@
         <Option text="EventText.tutorial_botany.o2">
           <GoTo name="looprecroomtutorial" />
         </Option>
-        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="EventText.tutorial_botany.o3" endconversation="true">
-          <GoTo name="tempskip" />
-        </Option>
       </ConversationAction>
       <Label name="acceptrecroomtutorial" />
       <StatusEffectAction targettag="recroomdoor">
@@ -1351,7 +1331,6 @@
           <GiveTalentInfo giverandom="true" talentidentifiers="he-moodyeuropan" />
         </StatusEffect>
       </StatusEffectAction>
-      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
       <AfflictionAction targettag="player" affliction="mood" strength="40" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c5" />
       <EventObjectiveAction type="add" id="Reduce your stress by playing the guitar" />
@@ -1436,10 +1415,6 @@
         <Option text="EventText.tutorial_bathroom.o2">
           <GoTo name="loopbathroomtutorial" />
         </Option>
-        <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="EventText.tutorial_botany.o3" endconversation="true">
-          <GoTo name="tempskip" />
-        </Option>
       </ConversationAction>
       <Label name="acceptbathroomtutorial" />
       <StatusEffectAction targettag="bathroomdoor">
@@ -1515,7 +1490,6 @@
         <StatusEffect target="This" IsOn="true" targetitemcomponent="Pump" setvalue="true" />
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c7" />
-      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c8" />
       <AfflictionAction targettag="player" affliction="hygiene" strength="31" />
       <EventObjectiveAction type="add" id="Remove your clothes and scrub yourself with soap" />
