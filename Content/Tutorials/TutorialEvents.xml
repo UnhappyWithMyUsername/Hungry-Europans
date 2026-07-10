@@ -1,13 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Randomevents>
-
-
   <!-- TODO: make sure tutorial can't be bricked, make items noninteractable until needed -->
-
   <EventSprites>
-    <Sprite identifier="masterchef" texture="%ModDir:2954998725%/Content/UI/HE_Event_pic1.png" sourcerect="0,0,256,256" origin="0.5,0.5"/>
+    <Sprite identifier="masterchef" texture="%ModDir:2954998725%/Content/UI/HE_Event_pic1.png" sourcerect="0,0,256,256" origin="0.5,0.5" />
   </EventSprites>
-
   <!-- SCRIPTED EVENTS -->
   <EventPrefabs>
     <!-- TODO: Localization and text formatting for better readability | Best to have a separate localization file specific for tutorials -->
@@ -68,9 +64,9 @@
       <WaitAction time="1" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
-      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Ah hello there! You must be the new chef? Welcome!" targettag="player" />
-      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="I'm chef Booger and I'll be teaching you how to keep your crew fed, but there's all kinds of folk around the station that can teach you things!" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="I'll be heading to the kitchen upstairs. You can meet me there if you want to start learning about preparing meals and other basic kitchen tasks." />
+      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c1" targettag="player" />
+      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c2" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c3" />
       <NPCFollowAction npctag="masterchef" targettag="kitchen" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!--<EventObjectiveAction type="add" id="Follow the Master Chef" />-->
       <TriggerAction target1tag="masterchef" target2tag="kitchen" radius="0" waitforinteraction="false" />
@@ -79,70 +75,70 @@
       <TriggerAction target1tag="player" target2tag="kitchen" radius="0" waitforinteraction="false" />
       <TriggerAction target1tag="masterchef" target2tag="player" radius="300" waitforinteraction="true" />
       <!--<EventObjectiveAction type="completeandremove" identifier="Follow the Master Chef" />-->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Welcome to the kitchen! I'll do a quick rundown on things you'll usually find here, unless you're already familiar?" targettag="player">
-        <Option text="No, please explain.">
-          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Gladly! Alright so..." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c4" targettag="player">
+        <Option text="EventText.tutorial_chef.o1">
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o1.c1" targettag="player" />
         </Option>
-        <Option text="Yes, I'm already familiar. No need to explain.">
-          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Very well! Let's not waste time then and onto the next lesson!" targettag="player" />
+        <Option text="EventText.tutorial_chef.o2">
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o2.c1" targettag="player" />
           <GoTo name="skip_kitchenexplanations" />
         </Option>
         <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="Tempskip" endconversation="true">
+        <Option text="EventText.tutorial_botany.o3" endconversation="true">
           <GoTo name="tempskip" />
         </Option>
       </ConversationAction>
       <!-- explain refrigerator -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialfridge" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialfridge" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="This is the refrigerator! It'll keep raw meat from spoiling and ice cream from melting. I've heard about desperate medics even storing organs in there to prevent them from decaying!" targettag="player" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="The refrigerator has an integrated backup-power battery which will last for 5 minutes during a power outage. Once the backup-power battery is drained, the contents inside the refrigerator will start to spoil so make sure to restore power within those 5 minutes to prevent spoilage, should you ever run into a power outage." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c5" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c6" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialfridge" />
       <!-- explain kitchen counter -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialkitchencounter" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Here we have the kitchen counter. Should be in every kitchen. In there you can store whatever you need for meal preparation, but be aware that it is not water proof! It's best to store water sensitive things elsewhere. It is also where you'll install and uninstall your oven, stove, etc. from. It comes with power connectors so you can wire newly installed equipment directly to it." targettag="player" />
-      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="If you've manually installed a kitchen counter, you can disassemble it again when holding a wrench while opening it up. The same goes for the kitchen pantry." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c7" targettag="player" />
+      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c8" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialkitchencounter" />
       <!-- explain kitchen pantry -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialkitchenpantry" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchenpantry" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Speaking of the pantry. That's over there. Please come a bit closer." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c9" targettag="player" />
       <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="The pantry is basically the same as the kitchen counter in almost every way, except it doesn't support all installations. For example you can't put an oven in there. But what it lacks in compatibility, it makes up for by offering more storage space. Compared to the kitchen counter, the pantry is water proof so you won't need to worry about water sensitive things reacting, if your submarine ends up flooding." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c10" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialkitchenpantry" />
       <!-- explain blender -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialblender" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialblender" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Here we've got a blender. Perfect for making glasses of all kinds of juice or shred someone's ID card, haha!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c11" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialblender" />
       <!-- explain grill -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialgrill" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialgrill" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="This is an electric grill. Technically you can also grill something in a pan on a stove, but the grill allows for larger quantities grilled at once. Simply put what you want to grill onto it and wait, but don't forget to check regularly and take it off the grill before it burns!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c12" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialgrill" />
       <!-- explain fryer -->
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="We also have a fryer, but I think it's still in the storage room. We'll set it up later, but basically it functions like the grill, except for frying food. You will need oil in the fryer to fry stuff, obviously. Just make sure to not accidentally pour water into the hot fryer oil or you get an unpleasant surprise!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c13" targettag="player" />
       <!-- explain oven -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialoven" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialoven" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Here's the oven. With it you'll do baking and roasting. Not much else to say about it." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c14" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialoven" />
       <!-- explain stove -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialstove" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialstove" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="This is the stove. You'll need a pot for cooking and a pan for frying. Without those the stove is basically useless, so make sure to put them on there. You can also put a kettle on there and brew some tea." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c15" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialstove" />
       <!-- explain sink -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialsink" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialsink" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="With the sink you'll be hand-washing dirty dishes and pots or refill bottles and pots with water. Keep in mind to clean things you'll also need a cleaning agent like ethanol." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c16" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialsink" />
       <!-- explain cutting board -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialcuttingboard" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="On the cutting board you'll be chopping all the ingredients into shape and finalize some dishes. Make sure to stay on the chopping. It's not going to magically continue chopping if you walk away!" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c17" targettag="player" />
       <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
       <!-- start of cooking tutorial -->
       <Label name="skip_kitchenexplanations" />
@@ -157,7 +153,7 @@
       <!-- spawn a customer and have them walk to the chef -->
       <SpawnAction npcsetidentifier="he-tutorialnpcs" npcidentifier="tutorial_commoner" targettag="hungryeuropan" spawnlocation="Outpost" spawnpointtag="npcdoor" offset="0" />
       <NPCFollowAction npctag="hungryeuropan" targettag="masterchef" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Oh hold on a second... I believe I heard a door. I think Someone is coming. Maybe your first customer?" targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c18" targettag="player" />
       <TriggerAction target1tag="hungryeuropan" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="hungryeuropan" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the customer and the chef talk to each other (customer orders spaghetti and minceballs) -->
@@ -198,7 +194,7 @@
       <TriggerAction target1tag="hungryeuropan" target2tag="targetchair" radius="170" waitforinteraction="false" />
       <NPCOperateItemAction NPCTag="hungryeuropan" TargetTag="targetchair" ItemComponentName="Controller" Operate="true" />
       <!-- instruct player to obtain dirty pot -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Well, as you've heard it is time to prepare a meal. Our customer was asking for Spaghetti and Minceballs. Let's start by preparing the stove. Go and grab the pot on the pantry over there to the left." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c19" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialpot" />
       <EventObjectiveAction type="add" id="Collect the pot" />
       <TriggerAction target1tag="player" target2tag="tutorialpot" radius="35" waitforinteraction="false" />
@@ -218,7 +214,7 @@
       <ClearTagAction tag="tutorialpot" />
       <!-- instruct player to clean pot at sink -->
       <TutorialHighlightAction state="true" targettag="tutorialsink" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Looks like the pot is dirty. We first need to clean it at the sink before we can cook with it. There should already be some ethanol in the sink for you to clean the pot with." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c20" targettag="player" />
       <EventObjectiveAction type="add" id="Clean the pot in the sink" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-pot" Amount="1" ApplyTagToItem="tutorialpot" />
       <Label name="checkforcleanpot" />
@@ -234,7 +230,7 @@
       <InventoryHighlightAction targettag="player" itemidentifier="he-pot" />
       <EventObjectiveAction type="completeandremove" id="Clean the pot in the sink" />
       <!-- instruct player to fill the pot with water at the sink -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Very good! Now we should fill the pot with water from the sink. We will need it later to boil the pasta." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c21" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialpot" />
       <EventObjectiveAction type="add" id="Fill the pot with water" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-potwithwater" Amount="1" ApplyTagToItem="tutorialpot" />
@@ -253,7 +249,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialpot" />
       <!-- instruct the player to place the filled pot onto the stove -->
       <TutorialHighlightAction state="true" targettag="tutorialstove" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Perfect! Put the pot onto the stove for now. We'll come back to it later." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c22" targettag="player" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-potwithwater" />
       <Label name="checkforpotonstove" />
       <CheckItemAction targettag="tutorialstove" itemidentifiers="he-potwithwater" amount="1" recursive="true">
@@ -267,7 +263,7 @@
       </CheckItemAction>
       <TutorialHighlightAction state="false" targettag="tutorialstove" />
       <!-- instruct the player to grab flour, salt, yeast and water from the kitchen counter -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Ok, now we'll need to make some dough to create pasta from. Go ahead and grab the flour, the salt, a sea yeast shroom and a bottle of water from the kitchen counter." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c23" targettag="player" />
       <EventObjectiveAction type="add" id="Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="true" targettag="tutorialflour" />
@@ -322,7 +318,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialwater" />
       <EventObjectiveAction type="completeandremove" id="Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter" />
       <!-- instruct the player to make dough at the cutting board -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Wonderful! Go ahead and use them to prepare some dough at the cutting board." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c24" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
       <EventObjectiveAction type="add" id="Make some dough at the cutting board" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-dough" Amount="1" ApplyTagToItem="tutorialdough" />
@@ -339,7 +335,7 @@
       <InventoryHighlightAction targettag="player" itemidentifier="he-dough" />
       <EventObjectiveAction type="completeandremove" id="Make some dough at the cutting board" />
       <!-- instruct the player to make raw pasta at the cutting board -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Very good! Now also at the cutting board you can make some pasta from that dough." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c25" targettag="player" />
       <EventObjectiveAction type="add" id="Make some pasta at the cutting board" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-rawpasta" Amount="1" ApplyTagToItem="tutorialpasta" />
       <Label name="checkforpasta" />
@@ -355,7 +351,7 @@
       <EventObjectiveAction type="completeandremove" id="Make some pasta at the cutting board" />
       <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
       <!-- give a cleaver to the player and ask them to follow the chef for meat harvesting -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="I see you've got quite the talent! We will also need some meat, but it looks like we ran fresh out of it. We'll have to butcher a crawler to get some fresh meat. Here, take my spare cleaver and follow me." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c26" targettag="player" />
       <StatusEffectAction targettag="player">
         <StatusEffect target="This">
           <SpawnItem identifier="he-cleaver" spawnposition="ThisInventory" equip="true" />
@@ -372,7 +368,7 @@
       </StatusEffectAction>
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- instruct the player to kill the crawler and harvest its meat (player is set to godmode during this to prevent injuries from fighting the crawler) -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Here we are. In here you'll find a crawler. Kill it, then slash your meat cleaver on its corpse to harvest meat. If you start hearing a strange noise, you've harvested all the meat." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c27" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
       <NPCFollowAction npctag="masterchef" targettag="chefcrawlerposition" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <EventObjectiveAction type="add" id="Kill the crawler and harvest all of its meat" />
@@ -393,13 +389,13 @@
       <TutorialHighlightAction state="false" targettag="tutorialcrawler" />
       <EventObjectiveAction type="completeandremove" id="Kill the crawler and harvest all of its meat" />
       <!-- instruct the player to follow the chef back to the kitchen -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Very well done! Please follow me back to the kitchen so we can proceed with the meal preparation." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c28" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="tutorialcoffeemachine" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TriggerAction target1tag="player" target2tag="kitchen" radius="0" waitforinteraction="false" />
       <WaitAction time="1" />
       <!-- instruct the player to make raw crawler meat from the harvested meat chunk -->
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Time to chop the meat into smaller pieces! Use the cutting board to prepare some raw crawler meat which we will be using for the minceballs." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c29" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
       <EventObjectiveAction type="add" id="Prepare raw crawler meat at the cutting board" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-crawlermeatchunk" />
@@ -417,7 +413,7 @@
       <EventObjectiveAction type="completeandremove" id="Prepare raw crawler meat at the cutting board" />
       <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
       <!-- instruct the player to grab ketchup and an empty plate from the kitchen counter, then cook the finished meal at the stove using the collected ingredients -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Now it is time to start cooking! Grab an empty plate and a bottle of ketchup from the kitchen counter and put all your ingredients into the stove, then start cooking." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c30" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialstove" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="true" targettag="tutorialrawcrawlermeat" />
@@ -492,15 +488,15 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Prepare a meal: Spaghetti and Minceballs" />
       <TutorialHighlightAction state="false" targettag="tutorialstove" />
-      <!-- instruct the player to bring the meal to the customer-->                  
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="You're a natural! Grab the meal and let's bring it to our customer. They must be ravenous by now, haha!" targettag="player" />
+      <!-- instruct the player to bring the meal to the customer-->
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c31" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialmeal" />
       <TutorialHighlightAction state="true" targettag="hungryeuropan" />
       <EventObjectiveAction type="add" id="Give the meal to the hungry europan" />
       <Label name="checkformeal" />
       <TriggerAction target1tag="player" target2tag="hungryeuropan" radius="1000" waitforinteraction="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="Oh finally! You got my food?" targettag="player">
-        <Option text="Yes, here you go!">
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="EventText.tutorial_chef.c32" targettag="player">
+        <Option text="EventText.tutorial_chef..o1">
           <CheckItemAction targettag="player" itemidentifiers="he-spaghettimeatballs" amount="1" recursive="true">
             <Success>
               <!-- customer has received the meal and leaves -->
@@ -508,9 +504,9 @@
               <TutorialHighlightAction state="false" targettag="hungryeuropan" />
               <EventObjectiveAction type="completeandremove" id="Give the meal to the hungry europan" />
               <RemoveItemAction targettag="tutorialmeal" amount="1" />
-              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="Thank you! Have a great day!" targettag="player" />
-              <SpawnAction ItemIdentifier="he-spaghettimeatballs" TargetTag="removethis" TargetInventory="hungryeuropan" />  
-              <SpawnAction ItemIdentifier="he-fork" TargetTag="removethis" TargetInventory="hungryeuropan" />  
+              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="EventText.tutorial_chef..o1.c1" targettag="player" />
+              <SpawnAction ItemIdentifier="he-spaghettimeatballs" TargetTag="removethis" TargetInventory="hungryeuropan" />
+              <SpawnAction ItemIdentifier="he-fork" TargetTag="removethis" TargetInventory="hungryeuropan" />
               <WaitAction time="1" />
               <TagAction criteria="itemidentifier:he-spaghettimeatballs" tag="removethis" continueifnotargetsfound="true" />
               <TagAction criteria="itemidentifier:he-fork" tag="removethis" continueifnotargetsfound="true" />
@@ -536,25 +532,23 @@
             </Success>
             <Failure>
               <!-- customer has not yet received the meal so we loop back to check for it again -->
-              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="Uhm... And where exactly?" targettag="player">
-                <Option text="Oh, my bad! Let me go grab it real quick. I'll be right back!" endconversation="true" />
+              <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="EventText.tutorial_chef..o1.c2" targettag="player">
+                <Option text="EventText.tutorial_chef..o1.o1" endconversation="true" />
               </ConversationAction>
               <GoTo name="checkformeal" />
             </Failure>
           </CheckItemAction>
         </Option>
-        <Option text="Sorry, I need a bit more time">
+        <Option text="EventText.tutorial_chef..o2">
           <!-- customer has not yet received the meal so we loop back to check for it again -->
-          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="Ugh, fine! But please hurry! I'm starving..." targettag="player" />
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="EventText.tutorial_chef..o2.c1" targettag="player" />
           <GoTo name="checkformeal" />
         </Option>
       </ConversationAction>
       <ClearTagAction tag="entrancedoor" />
       <ClearTagAction tag="exitdoor" />
       <WaitAction time="3" />
-      
       <!-- \\\\\ FRYER AND KITCHEN INSTALLATION TUTORIAL START ///// -->
-      
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TriggerAction target1tag="masterchef" target2tag="player" radius="150" waitforinteraction="false" />
       <TagAction criteria="itemtag:npcdoor" tag="entrancedoor" SubmarineType="Outpost" chooserandom="true" />
@@ -573,7 +567,7 @@
         </StatusEffect>
       </StatusEffectAction>
       <NPCFollowAction npctag="deliveryguy" targettag="masterchef" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Another satisfied customer! I think I hear someone. It might be the delivery guy..." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c33" targettag="player" />
       <TriggerAction target1tag="deliveryguy" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the delivery guy and chef talk to each other -->
@@ -650,7 +644,7 @@
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="true" ForceWalk="true" />
       <WaitAction time="2" />
       <!-- some long dialog to keep the player busy with reading while the event is dealing with the despawning of the delivery guy -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="true" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="That was Johnny Beaver Boob. He used to be my apprentice and we got up to some silly things like convincing our colleague Polly Crackle it is in her best interest to get her limbs removed, haha... hah... Sounds a bit messed up when I say it out loud... Hmm." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="true" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c34" targettag="player" />
       <TriggerAction target1tag="deliveryguy" target2tag="exitdoor" radius="170" waitforinteraction="false" />
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="exitdoor" ItemComponentName="Controller" Operate="true" />
       <TriggerAction target1tag="deliveryguy" target2tag="exitdoor" radius="60" waitforinteraction="false" />
@@ -673,16 +667,16 @@
       <ClearTagAction tag="exitdoor" />
       <WaitAction time="4" />
       <!-- instruct player to go and collect the fryer and red wire from the storage room -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Well, we've got some more supplies now which is great for your training! I'm starting to get pekish, so your next task is to make me 3x Fried Hammerhead Spawn." targettag="player" />
-      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="For this you will need a fryer and a wire. We should still have one of each out in the hallway. Please go and bring them here." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c35" targettag="player" />
+      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c36" targettag="player" />
       <!-- FOR SOME REASON THE CHEF STARTS FOLLOWING THE PLAYER AGAIN AFTER THIS, EVEN THOUGH THERE IS NO FOLLOW ACTION TO DO SO | workaround seems to be to keep this NPCFollowAction in the CheckItemAction loop too -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialkitchencounter" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <EventObjectiveAction type="add" id="Collect the Fryer Installation and the Wire" />
       <StatusEffectAction targettag="tutorialshelf">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="tutorialwireholder">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <TutorialHighlightAction state="true" targettag="tutorialfryerinstallation" />
       <TutorialHighlightAction state="true" targettag="tutorialwire" />
@@ -713,7 +707,7 @@
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="false" targettag="tutorialwire" />
       <!-- instruct the player to put the fryer installation into the kitchen counter -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Very good! Now simply plug the fryer installation into the kitchen counter to install it." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c37" targettag="player" />
       <Label name="checkforfryerinstalled" />
       <CheckItemAction targettag="tutorialkitchencounter" itemidentifiers="he-fryer_installation" amount="1" recursive="false">
         <Success>
@@ -730,7 +724,7 @@
       <!-- instruct the player to wire the fryer to the kitchen counter -->
       <TagAction criteria="itemtag:fryer_installed" tag="tutorialfryer" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Perfect! Now you must connect it with the wire. You can hook it up directly to the kitchen counter. Here, take this screwdriver." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c38" targettag="player" />
       <StatusEffectAction targettag="player">
         <StatusEffect target="This">
           <SpawnItem identifier="screwdriver" spawnposition="ThisInventory" equip="true" />
@@ -755,7 +749,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialfryer" />
       <TutorialHighlightAction state="false" targettag="tutorialwire" />
       <!-- instruct the player to grab cooking oil from the kitchen counter and 3 hammerhead spawns from the fridge -->
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Ok, now we can use the fryer. Go ahead and grab the cooking oil from the kitchen counter and 3 hammerhead spawns from the refrigerator." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c39" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="true" targettag="tutorialfridge" />
       <TutorialHighlightAction state="true" targettag="tutorialoil" />
@@ -787,7 +781,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialfridge" />
       <TutorialHighlightAction state="false" targettag="tutorialoil" />
       <TutorialHighlightAction state="true" targettag="tutorialfryer" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Good, now put them all into the fryer and don't forget to turn it on. Then we'll wait for it to fry." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c40" targettag="player" />
       <EventObjectiveAction type="add" id="Put the oil and hammerheads into the fryer and turn it on" />
       <Label name="checkforoilandhammerheadsinfryer" />
       <CheckItemAction targettag="tutorialfryer" itemidentifiers="he-hammerheadspawnmeatchunk" amount="3" recursive="true">
@@ -832,7 +826,7 @@
       <TagAction criteria="itemidentifier:he-cookedhammerheadspawnfried" tag="tutorialhammerheadspawnfried" continueifnotargetsfound="true" />
       <TutorialHighlightAction state="true" targettag="tutorialfryer" />
       <TutorialHighlightAction state="true" targettag="tutorialhammerheadspawnfried" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Seems like they're done. Time to get them out before they burn." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c41" targettag="player" />
       <EventObjectiveAction type="add" id="Collect the fried hammerhead spawns" />
       <Label name="checkforfriedhammerheadspawns" />
       <CheckItemAction targettag="player" itemidentifiers="he-cookedhammerheadspawnfried" amount="3" recursive="true">
@@ -846,8 +840,8 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Collect the fried hammerhead spawns" />
       <TutorialHighlightAction state="false" targettag="tutorialfryer" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Very good! Please give them to me, I've gotten quite hungry." targettag="player">
-        <Option text="Here you go" endconversation="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c42" targettag="player">
+        <Option text="EventText.tutorial_chef..o3" endconversation="true" />
       </ConversationAction>
       <StatusEffectAction targettag="tutorialhammerheadspawnfried">
         <StatusEffect target="This" disabledeltatime="true">
@@ -862,12 +856,10 @@
       <TagAction criteria="itemidentifier:he-tutorial.cookedhammerheadspawnfried" tag="tutorialhammerheadspawnfried" continueifnotargetsfound="true" />
       <!-- chef automatically "eats" the fried hammerhead spawns for 10 seconds -->
       <WaitAction time="10" />
-      
       <!-- \\\\\ DRINKING & EATING TUTORIAL START ///// -->
-
-      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Ah, that hit the spot! But it made quite thirsty. You look quite thirsty too, actually..." targettag="player" />
+      <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c43" targettag="player" />
       <AfflictionAction targettag="player" affliction="thirst" strength="40" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Here, take these bottles and fill them at the sink. The sink has a built-in filter so the water is safe for consumption." targettag="player" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c44" targettag="player" />
       <SpawnAction ItemIdentifier="he-emptybottle" TargetInventory="player" Amount="2" />
       <EventObjectiveAction type="add" id="Fill 2 bottles with water at the sink" />
       <TutorialHighlightAction state="true" targettag="tutorialsink" />
@@ -884,10 +876,10 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Fill 2 bottles with water at the sink" />
       <TutorialHighlightAction state="false" targettag="tutorialsink" />
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Fresh, cold water. Please hand me a bottle." targettag="player">
-        <Option text="Here you go...">
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c45" targettag="player">
+        <Option text="EventText.tutorial_chef..o4">
           <RemoveItemAction targettag="tutorialwaterbottle" amount="1" />
-          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Thanks, now go ahead and drink yours too. Hydration is important!" targettag="player" />
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef..o4.c1" targettag="player" />
         </Option>
       </ConversationAction>
       <EventObjectiveAction type="add" id="Open your bottle (Press [Aim]+[Select])" />
@@ -920,36 +912,23 @@
         </Failure>
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Drink (Hold [Aim])" />
-      
       <!-- WIP - to be continued -->
       <!-- TODO: -->
       <!-- soup tutorial (gather seaweed, make nori, gather seeds, make seaweed soup) -->
       <!-- cafeteria tutorial (buy plated food, eat, return dirty dishes) -->
       <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
-      
       <!-- REMOVE TEMPSKIP LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
-      
-      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="Looks like you're ready to feed a whole crew! Of course, there's more to being a chef than just cooking. Visit my colleagues in their respective rooms and they'll gladly teach you a thing or two." targettag="player" />
+      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c46" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
-      
       <!-- load in secondary tutorials -->
       <TriggerEventAction identifier="tutorial_botany" />
       <TriggerEventAction identifier="tutorial_brewery" />
       <TriggerEventAction identifier="tutorial_recroom" />
       <TriggerEventAction identifier="tutorial_bathroom" />
-      
       <!-- <TutorialCompleteAction /> -->
     </ScriptedEvent>
-    
-
     <ScriptedEvent identifier="tutorial_botany">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:botanydoor" tag="botanydoor" />
@@ -966,41 +945,41 @@
       <!-- <TagAction criteria="itemtag:tutorialsprinkler" tag="tutorialsprinkler" /> -->
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="botanydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="botanyswitch">
-        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true" />
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="researcher" targettag="botanyguy" spawnpointtag="botanychair" />
       <NPCOperateItemAction NPCTag="botanyguy" TargetTag="botanychair" ItemComponentName="Controller" Operate="true" />
       <Label name="loopbotanytutorial" />
       <TriggerAction target1tag="player" target2tag="botanyguy" radius="150" waitforinteraction="true" />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Do you know anything about plants? Most sailors have never seen a vegetable in their life." >
-        <Option text="I want to learn.">
-          <GoTo name="acceptbotanytutorial" EndConversation="false"/>
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c1">
+        <Option text="EventText.tutorial_botany.o1">
+          <GoTo name="acceptbotanytutorial" EndConversation="false" />
         </Option>
-        <Option text="Not interested.">
+        <Option text="EventText.tutorial_botany.o2">
           <GoTo name="loopbotanytutorial" />
         </Option>
         <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="Tempskip" endconversation="true">
+        <Option text="EventText.tutorial_botany.o3" endconversation="true">
           <GoTo name="tempskip" />
-        </Option>      
+        </Option>
       </ConversationAction>
       <!-- start tutorial and close door -->
       <Label name="acceptbotanytutorial" />
       <StatusEffectAction targettag="botanydoor">
-        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="It's quite simple really, you put a seed in a pot, water it a little and watch it grow. All you have to do is not set your submarine on fire." />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="What the... it looks like one of my plants just died. Replace it for me would you? Grab this seed, uproot the weeds and plant the seed." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c2" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c3" />
       <SpawnAction ItemIdentifier="creepingorangevineseed" TargetTag="tutorialseed" TargetInventory="player" Amount="1" />
       <EventObjectiveAction type="add" id="Uproot the dead plant and plant the seed" />
       <StatusEffectAction targettag="leftplanter">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="rightplanter">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforseedplanted" />
       <TutorialHighlightAction state="true" targettag="rightplanter" />
@@ -1013,11 +992,11 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Uproot the dead plant and plant the seed" />
       <TutorialHighlightAction state="false" targettag="rightplanter" />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="It will take a while for the plant to reach maturity. We can speed that up with a bit of fertilizer. And give it some water would you?" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c4" />
       <EventObjectiveAction type="add" id="Use fertilizer on the new plant" />
       <TutorialHighlightAction state="true" targettag="rightplanter" />
       <StatusEffectAction targettag="tutorialfertilizerwaterer">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforfertilized" />
       <CheckConditionalAction targettag="rightplanter">
@@ -1049,19 +1028,19 @@
       <EventObjectiveAction type="completeandremove" id="Water the other plant" />
       <TutorialHighlightAction state="false" targettag="leftplanter" />
       <SpawnAction ItemIdentifier="bubbleberries" TargetTag="tutorialberries" spawnpointtag="leftplanter" Amount="1" />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Very good. It looks like our other plant just yielded a fruit. You know they're ripe when they fall on the floor, that's just how nature works." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c5" />
       <TutorialHighlightAction state="true" targettag="tutorialberries" />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="Now come over here. I need to show you a fun project I've been working on: creating new species of fruit. I call them hybrids." endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c6" endconversation="true" />
       <StatusEffectAction targettag="tutorialresearchstation">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
-      <TriggerAction target1tag="player" target2tag="tutorialresearchstation" waitforinteraction="true" selectontrigger="true"/>
-      <SpawnAction ItemIdentifier="creepingorange" TargetTag="hybridfruitingredient" TargetInventory="tutorialresearchstation" targetslot="0"  />
+      <TriggerAction target1tag="player" target2tag="tutorialresearchstation" waitforinteraction="true" selectontrigger="true" />
+      <SpawnAction ItemIdentifier="creepingorange" TargetTag="hybridfruitingredient" TargetInventory="tutorialresearchstation" targetslot="0" />
       <SpawnAction ItemIdentifier="tobaccobud" TargetTag="hybridfruitingredient" TargetInventory="tutorialresearchstation" targetslot="1" />
       <StatusEffectAction targettag="hybridfruitingredient">
-        <StatusEffect target="This" noninteractable="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="true" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="I've put two fruits inside that research station. Personnaly, I have no idea what to expect, so I'll let you press the button." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c7" />
       <EventObjectiveAction type="add" id="Use the research station to create a hybrid plant" />
       <TutorialHighlightAction state="true" targettag="hybridfruitingredient" />
       <Label name="checkforhybridplant" />
@@ -1071,22 +1050,16 @@
           <GoTo name="checkforhybridplant" />
         </Failure>
       </CheckItemAction>
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Never seen this one before! I'll have to grow it later. But enough talked about the house plants..."  />
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Now I want to introduce you to hydroponics. These devices recreate the growth environment of Europan native plants. All it takes is a bit of water, fertilizer and electricity." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c8" />
+      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c9" />
       <StatusEffectAction targettag="tutorialhydroponics">
-        <StatusEffect target="This" noninteractable="false" IsOn="true" targetitemcomponent="LightComponent" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" IsOn="true" targetitemcomponent="LightComponent" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="tutorialemptykeghydro">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Looks like this one is out of sea water. Remove that empty keg and grab the one by the door." />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c10" />
       <EventObjectiveAction type="add" id="Remove the empty keg" />
       <EventObjectiveAction type="add" id="Put the sea water keg inside the Hydroponic planter" />
       <TutorialHighlightAction state="true" targettag="tutorialhydroponics" />
@@ -1103,7 +1076,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialemptykeghydro" />
       <TutorialHighlightAction state="true" targettag="tutorialseawaterkeghydro" />
       <StatusEffectAction targettag="tutorialseawaterkeghydro">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforseawaterkeg2" />
       <CheckItemAction targettag="tutorialhydroponics" itemtags="tutorialseawaterkeghydro" amount="1" recursive="true">
@@ -1115,10 +1088,10 @@
       <EventObjectiveAction type="completeandremove" id="Put the sea water keg inside the Hydroponic planter" />
       <TutorialHighlightAction state="false" targettag="tutorialhydroponics" />
       <TutorialHighlightAction state="false" targettag="tutorialseawaterkeghydro" />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="And now we wait. It takes a while for plants to grow, so don't be in a rush. " />
-      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="Well it looks like you do have a green thumb after all! I've got nothing left to teach you. Before you leave, can you turn the sprinkler on?" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c11" />
+      <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c12" />
       <StatusEffectAction targettag="tutorialsprinkler">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <TutorialHighlightAction state="true" targettag="tutorialsprinkler" />
       <EventObjectiveAction type="add" id="Turn the automated sprinkler on." />
@@ -1132,15 +1105,13 @@
           <WaitAction time="0.5" />
           <GoTo name="checksprinkleron" />
         </Failure>
-      </CheckConditionalAction>     
+      </CheckConditionalAction>
       <TutorialHighlightAction state="false" targettag="tutorialsprinkler" />
-      <EventObjectiveAction type="completeandremove" id="Turn the automated sprinkler on." /> 
+      <EventObjectiveAction type="completeandremove" id="Turn the automated sprinkler on." />
       <StatusEffectAction targettag="botanydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
-    </ScriptedEvent>  
-  
-
+    </ScriptedEvent>
     <ScriptedEvent identifier="tutorial_brewery">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:brewerydoor" tag="brewerydoor" />
@@ -1155,41 +1126,41 @@
       <TagAction criteria="itemtag:tutorialemptykegbrewery" tag="tutorialemptykegbrewery" />
       <TagAction criteria="itemtag:tutorialfertilizerwaterer" tag="tutorialfertilizerwaterer" />
       <StatusEffectAction targettag="brewerydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="breweryswitch">
-        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true" />
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="commoner" targettag="breweryguy" spawnpointtag="brewerychair" />
       <NPCOperateItemAction NPCTag="breweryguy" TargetTag="brewerychair" ItemComponentName="Controller" Operate="true" />
       <Label name="loopbrewerytutorial" />
       <TriggerAction target1tag="player" target2tag="breweryguy" radius="150" waitforinteraction="true" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Hey there, you look dependable... and available. I hurt my hand the other day, wanna give brewing a try in my stead?" >
-        <Option text="I want to learn.">
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c1">
+        <Option text="EventText.tutorial_botany.o1">
           <GoTo name="acceptbrewerytutorial" EndConversation="false" />
         </Option>
-        <Option text="Not interested.">
+        <Option text="EventText.tutorial_botany.o2">
           <GoTo name="loopbrewerytutorial" />
         </Option>
         <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="Tempskip" endconversation="true">
+        <Option text="EventText.tutorial_botany.o3" endconversation="true">
           <GoTo name="tempskip" />
-        </Option>      
+        </Option>
       </ConversationAction>
       <!-- start tutorial and close door -->
       <Label name="acceptbrewerytutorial" />
       <StatusEffectAction targettag="brewerydoor">
-        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Alright. See that big white machine next to me? That's a state of the art industrial brewer. That's where the booze is made." />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Let's gather some ingredients. A good beer starts with water. Grab that keg and fill it in that little pool. The health inspector told me ballast water is sanitary enough, so don't worry about dipping your toes in your drink." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c2" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c3" />
       <EventObjectiveAction type="add" id="Grab the keg and fill it with water from the pool" />
       <TutorialHighlightAction state="true" targettag="tutorialemptykegbrewery" />
       <StatusEffectAction targettag="tutorialemptykegbrewery">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforseawaterkeg" />
-      <CheckItemAction targettag="player" itemidentifiers="he-kegseawater" amount="1" >
+      <CheckItemAction targettag="player" itemidentifiers="he-kegseawater" amount="1">
         <Conditional ConditionPercentage="100" />
         <Failure>
           <WaitAction time="0.5" />
@@ -1198,14 +1169,14 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Grab the keg and fill it with water from the pool" />
       <TutorialHighlightAction state="false" targettag="tutorialemptykegbrewery" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="Great, now put that in the brewer." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c4" />
       <TutorialHighlightAction state="true" targettag="tutorialbrewingkettle" />
       <EventObjectiveAction type="add" id="Put the keg inside the brewing kettle" />
       <StatusEffectAction targettag="tutorialbrewingkettle">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforemptykeginside" />
-      <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegseawater" amount="1" >
+      <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegseawater" amount="1">
         <Conditional ConditionPercentage="100" />
         <Failure>
           <WaitAction time="0.5" />
@@ -1214,17 +1185,17 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Put the keg inside the brewing kettle" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewingkettle" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="There should be more ingredients in that cabinet. Let's go with a simple recipe: Coalition Premium." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c5" />
       <TutorialHighlightAction state="true" targettag="tutorialbrewingkettle" />
       <TutorialHighlightAction state="true" targettag="tutorialstorage" />
       <EventObjectiveAction type="add" id="Brew a keg of Coalition Premium" />
       <StatusEffectAction targettag="tutorialstorage">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforkegbrewed" />
       <InventoryHighlightAction targettag="tutorialstorage" itemidentifier="phosphorus" />
       <InventoryHighlightAction targettag="tutorialstorage" itemidentifier="ethanol" />
-      <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegcoalitionpremium" amount="1" >
+      <CheckItemAction targettag="tutorialbrewingkettle" itemidentifiers="he-kegcoalitionpremium" amount="1">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforkegbrewed" />
@@ -1233,14 +1204,14 @@
       <EventObjectiveAction type="completeandremove" id="Brew a keg of Coalition Premium" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewingkettle" />
       <TutorialHighlightAction state="false" targettag="tutorialstorage" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="That's what I like to see, freshly brewed liquor. Now pour me a bottle would you? There's a refill station, just load the keg in there." />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c6" />
       <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
       <TutorialHighlightAction state="true" targettag="tutorialrefillstationbrewery" />
       <StatusEffectAction targettag="tutorialrefillstationbrewery">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforkeginrefillstation" />
-      <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-kegcoalitionpremium" amount="1" >
+      <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-kegcoalitionpremium" amount="1">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforkeginrefillstation" />
@@ -1248,21 +1219,15 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="Yeah just pull on the lever and... what do you mean there are no bottles? Damnit. Don't worry, we can print some at the machine on my left." />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="Just rummage through the cabinet, you should be able to grab some glass fragments with your bare hands. Don't worry, insurance covers cuts and gashes." /> 
+      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_brewery.c7" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_brewery.c8" />
       <EventObjectiveAction type="add" id="Grab some glass fragments from the cabinet" />
       <TutorialHighlightAction state="true" targettag="tutorialstorage" />
-      <SpawnAction ItemIdentifier="he-glassfragments" TargetTag="tutorialglassfragments" TargetInventory="tutorialstorage" Amount="3" />  
+      <SpawnAction ItemIdentifier="he-glassfragments" TargetTag="tutorialglassfragments" TargetInventory="tutorialstorage" Amount="3" />
       <Label name="checkforfragments" />
       <InventoryHighlightAction targettag="tutorialstorage" itemidentifier="he-glassfragments" />
-      <CheckItemAction targettag="player" itemidentifiers="he-glassfragments" amount="3" >
+      <CheckItemAction targettag="player" itemidentifiers="he-glassfragments" amount="3">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforfragments" />
@@ -1271,12 +1236,12 @@
       <EventObjectiveAction type="completeandremove" id="Grab some glass fragments from the cabinet" />
       <TutorialHighlightAction state="false" targettag="tutorialstorage" />
       <EventObjectiveAction type="add" id="Put the fragments inside the bottle printer" />
-      <TutorialHighlightAction state="true" targettag="tutorialbottleprinter" />    
+      <TutorialHighlightAction state="true" targettag="tutorialbottleprinter" />
       <StatusEffectAction targettag="tutorialbottleprinter">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforfragmentsprinter" />
-      <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-glassfragments" amount="3" >
+      <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-glassfragments" amount="3">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforfragmentsprinter" />
@@ -1285,7 +1250,7 @@
       <EventObjectiveAction type="completeandremove" id="Put the fragments inside the bottle printer" />
       <EventObjectiveAction type="add" id="Print 3 beer bottles" />
       <Label name="checkforemptybottles" />
-      <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-emptybottlebeer" amount="3" >
+      <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-emptybottlebeer" amount="3">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforemptybottles" />
@@ -1293,11 +1258,11 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Print 3 beer bottles" />
       <TutorialHighlightAction state="false" targettag="tutorialbottleprinter" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="What are you waiting for? Pour me some beers!" endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c9" endconversation="true" />
       <EventObjectiveAction type="completeandremove" id="Pour 3 bottles of Coalition Premium" />
       <TutorialHighlightAction state="true" targettag="tutorialrefillstationbrewery" />
       <Label name="checkforbeerspoured" />
-      <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-beercoalitionpremium" amount="3" >
+      <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-beercoalitionpremium" amount="3">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforbeerspoured" />
@@ -1305,11 +1270,11 @@
       </CheckItemAction>
       <EventObjectiveAction type="completeandremove" id="Print 3 beer bottles" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
-      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="At last, some refreshment. I've got nothing left to teach you. Leave one on the table before you leave!" endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c10" endconversation="true" />
       <EventObjectiveAction type="add" id="Leave a beer on the table" />
       <TutorialHighlightAction state="true" targettag="tutorialbrewerytable" />
       <Label name="checkforbeertable" />
-      <CheckItemAction targettag="tutorialbrewerytable" itemidentifiers="he-beercoalitionpremium" amount="1" >
+      <CheckItemAction targettag="tutorialbrewerytable" itemidentifiers="he-beercoalitionpremium" amount="1">
         <Failure>
           <WaitAction time="0.5" />
           <GoTo name="checkforbeertable" />
@@ -1318,11 +1283,9 @@
       <EventObjectiveAction type="completeandremove" id="Leave a beer on the table" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewerytable" />
       <StatusEffectAction targettag="brewerydoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
-    </ScriptedEvent>    
-    
-
+    </ScriptedEvent>
     <ScriptedEvent identifier="tutorial_recroom">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:recroomdoor" tag="recroomdoor" />
@@ -1333,44 +1296,44 @@
       <TagAction criteria="itemtag:recroomguitarholder" tag="recroomguitarholder" />
       <TagAction criteria="itemtag:recroomguitar" tag="recroomguitar" />
       <StatusEffectAction targettag="recroomdoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="recroomswitch">
-        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true" />
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="clown" targettag="recroomguy" spawnpointtag="recroomchair" />
       <NPCOperateItemAction NPCTag="recroomguy" TargetTag="recroomchair" ItemComponentName="Controller" Operate="true" />
       <Label name="looprecroomtutorial" />
       <TriggerAction target1tag="player" target2tag="recroomguy" radius="150" waitforinteraction="true" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="Hey I'm not slacking off okay? Just finished my shift at the red nose factory. Everyone deserves some rest and recreation. Do you never take time off?" >
-        <Option text="I want to learn.">
-          <GoTo name="acceptrecroomtutorial" EndConversation="false"/>
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c1">
+        <Option text="EventText.tutorial_botany.o1">
+          <GoTo name="acceptrecroomtutorial" EndConversation="false" />
         </Option>
-        <Option text="Not interested.">
+        <Option text="EventText.tutorial_botany.o2">
           <GoTo name="looprecroomtutorial" />
         </Option>
         <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="Tempskip" endconversation="true">
+        <Option text="EventText.tutorial_botany.o3" endconversation="true">
           <GoTo name="tempskip" />
-        </Option>      
+        </Option>
       </ConversationAction>
       <Label name="acceptrecroomtutorial" />
       <StatusEffectAction targettag="recroomdoor">
-        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Good. They say a happy fellow is a productive employee. If you never take a break, you'll get stressed, make mistakes, and even fall asleep from exhaustion." />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Speaking of which, you look paler than a clown. You probably should take a nap. Don't just lie down, actually close your eyes and sleep those bags off your face. " />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c2" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c3" />
       <EventObjectiveAction type="add" id="Sleep in the bad to reduce your fatigue" />
       <TutorialHighlightAction state="true" targettag="recroombed" />
       <StatusEffectAction targettag="recroombed">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="player">
         <StatusEffect target="This">
           <GiveTalentInfo giverandom="true" talentidentifiers="he-sleepyeuropan" />
         </StatusEffect>
       </StatusEffectAction>
-      <AfflictionAction targettag="player"  affliction="fatigue" strength="30" />
+      <AfflictionAction targettag="player" affliction="fatigue" strength="30" />
       <Label name="checkforfatiguegone" />
       <CheckConditionalAction targettag="player">
         <Conditional fatigue="lte 10" />
@@ -1381,26 +1344,20 @@
       </CheckConditionalAction>
       <EventObjectiveAction type="completeandremove" id="Sleep in the bad to reduce your fatigue" />
       <TutorialHighlightAction state="false" targettag="recroombed" />
-      <AfflictionAction targettag="player"  affliction="stun" strength="0.5" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Damn, you're a snorer. Hey, a quick joke for you: why did the crawler not eat the clown? Because he tasted funny!" />
+      <AfflictionAction targettag="player" affliction="stun" strength="0.5" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c4" />
       <StatusEffectAction targettag="player">
         <StatusEffect target="This">
           <GiveTalentInfo giverandom="true" talentidentifiers="he-moodyeuropan" />
         </StatusEffect>
       </StatusEffectAction>
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
-      <AfflictionAction targettag="player"  affliction="mood" strength="40" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="Tough crowd... Why are you frowning? I'm no doctor, but I can sense your cortisol spiking. Try playing the guitar over there, I hear music soothes the nerves." />
+      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
+      <AfflictionAction targettag="player" affliction="mood" strength="40" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c5" />
       <EventObjectiveAction type="add" id="Reduce your stress by playing the guitar" />
       <TutorialHighlightAction state="true" targettag="recroomguitar" />
       <StatusEffectAction targettag="recroomguitarholder">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforstressgone1" />
       <CheckConditionalAction targettag="player">
@@ -1412,13 +1369,13 @@
       </CheckConditionalAction>
       <EventObjectiveAction type="completeandremove" id="Reduce your stress by playing the guitar" />
       <TutorialHighlightAction state="false" targettag="recroomguitar" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="See, you feel better already! How about Hotdogs? Do you like Hotdogs? I can see it on your face, it's your favorite food! Here, grab the one on the table, it's my treat." />
-      <AfflictionAction targettag="player"  affliction="craving_food" strength="-9999" />
-      <AfflictionAction targettag="player"  affliction="trait_likes_hotdogs" strength="1000" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c6" />
+      <AfflictionAction targettag="player" affliction="craving_food" strength="-9999" />
+      <AfflictionAction targettag="player" affliction="trait_likes_hotdogs" strength="1000" />
       <EventObjectiveAction type="add" id="Eat the hotdog to satisfy your craving and reduce stress" />
       <TutorialHighlightAction state="true" targettag="recroomtable" />
       <StatusEffectAction targettag="recroomtable">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforstressgone2" />
       <CheckConditionalAction targettag="player">
@@ -1430,8 +1387,8 @@
       </CheckConditionalAction>
       <EventObjectiveAction type="completeandremove" id="Eat the hotdog to satisfy your craving and reduce stress" />
       <TutorialHighlightAction state="false" targettag="recroomtable" />
-      <AfflictionAction targettag="player"  affliction="trait_likes_hotdogs" strength="-9999" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="I knew you'd enjoy the meal. Now, wanna see a magic trick? I'll make this stress disappear! ...with alcohol. The magic is alcohol. Just can just drink your stress away. I left you a rum bottle. Bottoms up!" />
+      <AfflictionAction targettag="player" affliction="trait_likes_hotdogs" strength="-9999" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c7" />
       <EventObjectiveAction type="add" id="Get drunk to reduce your stress" />
       <TutorialHighlightAction state="true" targettag="recroomrum" />
       <Label name="checkfordrunk" />
@@ -1444,18 +1401,17 @@
       </CheckConditionalAction>
       <EventObjectiveAction type="completeandremove" id="Get drunk to reduce your stress" />
       <TutorialHighlightAction state="false" targettag="recroomrum" />
-      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="You're not walking right, which tells me you must be enjoying yourself. I've got nothing left to teach you, that's a job for the professors at the clown college. Now if you don't mind, I need to hone my honks." endconversation="true" />
+      <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c8" endconversation="true" />
       <StatusEffectAction targettag="recroomdoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
       <TriggerAction target1tag="player" target2tag="recroomguy" radius="300" type="outside" waitforinteraction="false" />
       <StatusEffectAction targettag="recroomguy">
-        <StatusEffect target="this" >
+        <StatusEffect target="this">
           <Sound file="Content/Items/Weapons/honk.ogg" range="1000" volume="2" />
         </StatusEffect>
       </StatusEffectAction>
     </ScriptedEvent>
-        
     <ScriptedEvent identifier="tutorial_bathroom">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:bathroomdoor" tag="bathroomdoor" />
@@ -1464,39 +1420,39 @@
       <TagAction criteria="itemtag:bathroomcabinet" tag="bathroomcabinet" />
       <TagAction criteria="itemtag:bathroompump" tag="bathroompump" />
       <StatusEffectAction targettag="bathroomdoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="bathroomswitch">
-        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true"/>
+        <StatusEffect target="This" state="true" targetitemcomponent="controller" setvalue="true" />
       </StatusEffectAction>
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="miner" targettag="bathroomguy" spawnpointtag="bathroomtoilet" />
       <NPCOperateItemAction NPCTag="bathroomguy" TargetTag="bathroomtoilet" ItemComponentName="Controller" Operate="true" />
       <Label name="loopbathroomtutorial" />
       <TriggerAction target1tag="player" target2tag="bathroomguy" radius="150" waitforinteraction="true" />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="mechanic" dialogtype="regular" text="Hey settle down, I'm almost done here! What do you want?" >
-        <Option text="I'm in a hurry.">
-          <GoTo name="acceptbathroomtutorial" EndConversation="false"/>
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c1">
+        <Option text="EventText.tutorial_bathroom.o1">
+          <GoTo name="acceptbathroomtutorial" EndConversation="false" />
         </Option>
-        <Option text="My bad.">
+        <Option text="EventText.tutorial_bathroom.o2">
           <GoTo name="loopbathroomtutorial" />
         </Option>
         <!-- REMOVE TEMPSKIP OPTION LATER (Just a temporary skip during development to not having to replay the entire tutorial every time) -->
-        <Option text="Tempskip" endconversation="true">
+        <Option text="EventText.tutorial_botany.o3" endconversation="true">
           <GoTo name="tempskip" />
-        </Option>      
+        </Option>
       </ConversationAction>
       <Label name="acceptbathroomtutorial" />
       <StatusEffectAction targettag="bathroomdoor">
-        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="true" spritecolor="150,150,150,255" isopen="false" setvalue="true" />
       </StatusEffectAction>
       <NPCOperateItemAction NPCTag="bathroomguy" TargetTag="bathroomtoilet" ItemComponentName="Controller" Operate="false" />
       <NPCFollowAction npctag="bathroomguy" targettag="bathroomswitch" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="There, I'm finished. The throne's all yours. Don't look at me like that, do you also need me to explain how to do the deed?" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c2" />
       <EventObjectiveAction type="add" id="Relieve your bladder on the toilet" />
       <EventObjectiveAction type="add" id="Relieve your bowels on the toilet" />
       <TutorialHighlightAction state="true" targettag="bathroomtoilet" />
       <StatusEffectAction targettag="bathroomtoilet">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <StatusEffectAction targettag="player">
         <StatusEffect target="This">
@@ -1528,22 +1484,22 @@
         </Failure>
       </CheckConditionalAction>
       <TutorialHighlightAction state="false" targettag="bathroomtoilet" />
-      <AfflictionAction targettag="player"  affliction="stun" strength="0.2" />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Not only I can hear you from over here, but I can also smell you... When was the last time you took a bath?" />
+      <AfflictionAction targettag="player" affliction="stun" strength="0.2" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c3" />
       <AfflictionAction targettag="player" affliction="hygiene" strength="60" />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Wait, do you hear this?" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c4" />
       <StatusEffectAction targettag="bathroomtoilet">
-        <StatusEffect target="This" condition="0" setvalue="true" >
-          <Sound file="Content/Sounds/Damage/StructureCrunch2.ogg" range="600" volume="3.0"/>
+        <StatusEffect target="This" condition="0" setvalue="true">
+          <Sound file="Content/Sounds/Damage/StructureCrunch2.ogg" range="600" volume="3.0" />
         </StatusEffect>
       </StatusEffectAction>
       <WaitAction time="5" />
       <StatusEffectAction targettag="bathroomtoilet">
         <StatusEffect target="This" condition="100" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Did you just drop a depth charge in there? Can't believe I was about to drown in a bathroom..." />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Seems like the room is on lockdown... Take that opportunity to wash that grime off yourself. Take your clothes off, the water should clean the gunk away, no need to scrub." />
-      <EventObjectiveAction type="add" id="Remove your clothes and stand in water until fully cleaned"  />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c5" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c6" />
+      <EventObjectiveAction type="add" id="Remove your clothes and stand in water until fully cleaned" />
       <Label name="checkforcleaned" />
       <CheckConditionalAction targettag="player">
         <Conditional hygiene="lte 1" />
@@ -1556,22 +1512,16 @@
         </Failure>
       </CheckConditionalAction>
       <StatusEffectAction targettag="bathroompump">
-        <StatusEffect target="This" IsOn="true" targetitemcomponent="Pump" setvalue="true"/>
+        <StatusEffect target="This" IsOn="true" targetitemcomponent="Pump" setvalue="true" />
       </StatusEffectAction>
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="The water is receeding at last... Why would anyone implement a bathroom lockdown protocol?" />
-      <Label
-      TEMPSKIP1="TEMPSKIP"
-      TEMPSKIP2="TEMPSKIP"
-      name="tempskip"
-      TEMPSKIP3="TEMPSKIP"
-      TEMPSKIP4="TEMPSKIP"
-      />
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="Hey, looks like you missed a spot, you're still greasier than a Psilotoad. Grab some soap and wash properly this time..." />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c7" />
+      <Label TEMPSKIP1="TEMPSKIP" TEMPSKIP2="TEMPSKIP" name="tempskip" TEMPSKIP3="TEMPSKIP" TEMPSKIP4="TEMPSKIP" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c8" />
       <AfflictionAction targettag="player" affliction="hygiene" strength="31" />
-      <EventObjectiveAction type="add" id="Remove your clothes and scrub yourself with soap"  />
+      <EventObjectiveAction type="add" id="Remove your clothes and scrub yourself with soap" />
       <TutorialHighlightAction state="true" targettag="bathroomcabinet" />
       <StatusEffectAction targettag="bathroomcabinet">
-        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <Label name="checkforcleaned2" />
       <CheckConditionalAction targettag="player">
@@ -1582,36 +1532,25 @@
           <GoTo name="checkforcleaned2" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Remove your clothes and scrub yourself with soap"  />
+      <EventObjectiveAction type="completeandremove" id="Remove your clothes and scrub yourself with soap" />
       <TutorialHighlightAction state="false" targettag="bathroomcabinet" />"
-      />      
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="mechanic" dialogtype="regular" text="You don't exactly smell like roses, but it's an improvement. Now don't go and tell people we're urinal buddies. We're not." />
-      <StatusEffectAction targettag="bathroomdoor">
-        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true"/>
-      </StatusEffectAction>
-      <TriggerAction target1tag="player" target2tag="bathroomguy" radius="300" type="outside" waitforinteraction="false" />
-    </ScriptedEvent>
-    
-    
+      /&gt;      
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c9" /><StatusEffectAction targettag="bathroomdoor"><StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" /></StatusEffectAction><TriggerAction target1tag="player" target2tag="bathroomguy" radius="300" type="outside" waitforinteraction="false" /></ScriptedEvent>
   </EventPrefabs>
-  
-  
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
-  
-    <!-- Make item interactable -->
-    <!-- 
+  <!-- Make item interactable -->
+  <!-- 
       <StatusEffectAction targettag="tutorialitemXXX">
         <StatusEffect target="This" noninteractable="false" setvalue="true"/>
       </StatusEffectAction>
        -->
-  
-    <!-- Check loop with highlight+tutorial actions -->  
-    <!-- 
+  <!-- Check loop with highlight+tutorial actions -->
+  <!-- 
       <EventObjectiveAction type="add" id="tutorialobjective" />
       <TutorialHighlightAction state="true" targettag="itemtocheck" />
       <Label name="checkloop" />
@@ -1624,13 +1563,10 @@
       <EventObjectiveAction type="completeandremove" id="tutorialobjective" />
       <TutorialHighlightAction state="false" targettag="rightplanter" />
        -->
-  
-  
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
-  
 </Randomevents>
