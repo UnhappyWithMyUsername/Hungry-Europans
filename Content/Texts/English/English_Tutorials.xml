@@ -114,6 +114,10 @@
 <EventText.tutorial_chef.c16>With the sink you'll be hand-washing dirty dishes and pots or refill bottles and pots with water. Keep in mind to clean things you'll also need a cleaning agent like ethanol.</EventText.tutorial_chef.c16>
 <EventText.tutorial_chef.c17>On the cutting board you'll be chopping all the ingredients into shape and finalize some dishes. Make sure to stay on the chopping. It's not going to magically continue chopping if you walk away!</EventText.tutorial_chef.c17>
 <EventText.tutorial_chef.c18>Oh hold on a second... I believe I heard a door. I think Someone is coming. Maybe your first customer?</EventText.tutorial_chef.c18>
+<EventText.tutorial_chef.hungryashell>Hey chef, when can we expect some meals? I'm hungry as hell!</EventText.tutorial_chef.hungryashell>
+<EventText.tutorial_chef.whattoeat>No worries! We will have some meals prepared in just a moment. What would you like to eat?</EventText.tutorial_chef.whattoeat>
+<EventText.tutorial_chef.spagballsplease>Uhh... I think I'd like some Spaghetti and Minceballs please.</EventText.tutorial_chef.spagballsplease>
+<EventText.tutorial_chef.takeaseat>Very Well! Your dish will be ready shortly. Please take a seat outside while we prepare it.</EventText.tutorial_chef.takeaseat>
 <EventText.tutorial_chef.c19>Well, as you've heard it is time to prepare a meal. Our customer was asking for Spaghetti and Minceballs. Let's start by preparing the stove. Go and grab the pot on the pantry over there to the left.</EventText.tutorial_chef.c19>
 <EventText.tutorial_chef.c20>Looks like the pot is dirty. We first need to clean it at the sink before we can cook with it. There should already be some ethanol in the sink for you to clean the pot with.</EventText.tutorial_chef.c20>
 <EventText.tutorial_chef.c21>Very good! Now we should fill the pot with water from the sink. We will need it later to boil the pasta.</EventText.tutorial_chef.c21>
@@ -135,6 +139,14 @@
 <EventText.tutorial_chef..o2>Sorry, I need a bit more time</EventText.tutorial_chef..o2>
 <EventText.tutorial_chef..o2.c1>Ugh, fine! But please hurry! I'm starving...</EventText.tutorial_chef..o2.c1>
 <EventText.tutorial_chef.c33>Another satisfied customer! I think I hear someone. It might be the delivery guy...</EventText.tutorial_chef.c33>
+
+<EventText.tutorial_chef.hungryashell>Hey Booger, I got your delivery! Shall I stock up for you?</EventText.tutorial_chef.hungryashell>
+<EventText.tutorial_chef.hungryashell>Oh hey! Yes please, that would be great!</EventText.tutorial_chef.hungryashell>
+<EventText.tutorial_chef.hungryashell>Alright. I believe this goes here....</EventText.tutorial_chef.hungryashell>
+<EventText.tutorial_chef.hungryashell>Hmm... These plates are dirty. I think they mixed something up during packaging... I'm very sorry! I'll take them back and bring the new ones next time.</EventText.tutorial_chef.hungryashell>
+<EventText.tutorial_chef.hungryashell>If that's ok with you? I'll leave them here then. Have a pleasant day you two!</EventText.tutorial_chef.hungryashell>
+<EventText.tutorial_chef.hungryashell>Thanks! You too!</EventText.tutorial_chef.hungryashell>
+
 <EventText.tutorial_chef.c34>That was Johnny Beaver Boob. He used to be my apprentice and we got up to some silly things like convincing our colleague Polly Crackle it is in her best interest to get her limbs removed, haha... hah... Sounds a bit messed up when I say it out loud... Hmm.</EventText.tutorial_chef.c34>
 <EventText.tutorial_chef.c35>Well, we've got some more supplies now which is great for your training! I'm starting to get pekish, so your next task is to make me 3x Fried Hammerhead Spawn.</EventText.tutorial_chef.c35>
 <EventText.tutorial_chef.c36>For this you will need a fryer and a wire. We should still have one of each out in the hallway. Please go and bring them here.</EventText.tutorial_chef.c36>

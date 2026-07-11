@@ -153,13 +153,13 @@
       <TriggerAction target1tag="hungryeuropan" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="hungryeuropan" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the customer and the chef talk to each other (customer orders spaghetti and minceballs) -->
-      <ForceSayAction message="Hey chef, when can we expect some meals? I'm hungry as hell!" targettag="hungryeuropan" />
+      <ForceSayAction message="EventText.tutorial_chef.hungryashell" targettag="hungryeuropan" />
       <WaitAction time="3" />
-      <ForceSayAction message="No worries! We will have some meals prepared in just a moment. What would you like to eat?" targettag="masterchef" />
+      <ForceSayAction message="EventText.tutorial_chef.whattoeat" targettag="masterchef" />
       <WaitAction time="4" />
-      <ForceSayAction message="Uhh... I think I'd like some Spaghetti and Minceballs please." targettag="hungryeuropan" />
+      <ForceSayAction message="EventText.tutorial_chef.spagballsplease" targettag="hungryeuropan" />
       <WaitAction time="3" />
-      <ForceSayAction message="Very Well! Your dish will be ready shortly. Please take a seat outside while we prepare it." targettag="masterchef" />
+      <ForceSayAction message="EventText.tutorial_chef.takeaseat" targettag="masterchef" />
       <WaitAction time="4" />
       <ForceSayAction  targettag="hungryeuropan" message="Ok great! Thank you!" />
       <!-- have the customer sit down at a random cafeteria chair -->
@@ -547,13 +547,13 @@
       <TriggerAction target1tag="deliveryguy" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the delivery guy and chef talk to each other -->
-      <ForceSayAction message="Hey Booger, I got your delivery! Shall I stock up for you?" targettag="deliveryguy" />
+      <ForceSayAction message="EventText.tutorial_chef.heybooger" targettag="deliveryguy" />
       <WaitAction time="3" />
-      <ForceSayAction message="Oh hey! Yes please, that would be great!" targettag="masterchef"/>
+      <ForceSayAction message="EventText.tutorial_chef.yesplease" targettag="masterchef"/>
       <WaitAction time="3" />
       <!-- have the delivery guy restock the refrigerator -->
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialfridge" ItemComponentName="Controller" Operate="true" />
-      <ForceSayAction message="Alright. I believe this goes here..." targettag="deliveryguy"/>
+      <ForceSayAction message="EventText.tutorial_chef.hungryashell" targettag="deliveryguy"/>
       <WaitAction time="2" />
       <SpawnAction ItemIdentifier="he-hammerheadspawnmeatchunk" TargetTag="tutorialhammerheadspawnmeatchunk" TargetInventory="tutorialfridge" Amount="6" />
       <WaitAction time="1" />
@@ -572,19 +572,19 @@
       <WaitAction time="1" />
       <SpawnAction ItemIdentifier="he-dirtyplate" TargetTag="tutorialdirtyplate" TargetInventory="tutorialkitchencounter" Amount="4" />
       <WaitAction time="1" />
-      <ForceSayAction message="Hmm... These plates are dirty. I think they mixed something up during packaging... I'm very sorry! I'll take them back and bring the new ones next time." targettag="deliveryguy"/>
+      <ForceSayAction message="EventText.tutorial_chef.dirtyplates" targettag="deliveryguy"/>
       <WaitAction time="5" />
-      <ForceSayAction message="It's ok. Leave them here. We can clean them." targettag="masterchef"/>
+      <ForceSayAction message="EventText.tutorial_chef.leaveplateshere" targettag="masterchef"/>
       <WaitAction time="3" />
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialkitchencounter" ItemComponentName="Controller" Operate="false" />
-      <ForceSayAction message="If that's ok with you? I'll leave them here then. Have a pleasant day you two!" targettag="deliveryguy"/>
+      <ForceSayAction message="EventText.tutorial_chef.leavedelivery" targettag="deliveryguy"/>
       <TagAction criteria="itemidentifier:he-cardboardbox" tag="removethis" continueifnotargetsfound="true" />
       <WaitAction time="3" />
       <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="false" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the delivery guy walk to the exit door to despawn -->
       <NPCFollowAction npctag="deliveryguy" targettag="exitdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <WaitAction time="1" />
-      <ForceSayAction message="Thanks! You too!" targettag="masterchef"/>
+      <ForceSayAction message="EventText.tutorial_chef.goodbye" targettag="masterchef"/>
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="true" ForceWalk="true" />
       <WaitAction time="2" />
       <!-- some long dialog to keep the player busy with reading while the event is dealing with the despawning of the delivery guy -->
