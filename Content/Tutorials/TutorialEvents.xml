@@ -192,7 +192,7 @@
       <!-- instruct player to obtain dirty pot -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c19" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialpot" />
-      <EventObjectiveAction type="add" id="Collect the pot" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.collectpot" />
       <TriggerAction target1tag="player" target2tag="tutorialpot" radius="35" waitforinteraction="false" />
       <Label name="checkfordirtypot" />
       <CheckItemAction targettag="player" itemidentifiers="he-dirtypot" amount="1" recursive="false">
@@ -205,13 +205,13 @@
         </Failure>
       </CheckItemAction>
       <InventoryHighlightAction targettag="player" itemidentifier="he-dirtypot" />
-      <EventObjectiveAction type="completeandremove" id="Collect the pot" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.collectpot" />
       <TutorialHighlightAction state="false" targettag="tutorialpot" />
       <ClearTagAction tag="tutorialpot" />
       <!-- instruct player to clean pot at sink -->
       <TutorialHighlightAction state="true" targettag="tutorialsink" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c20" targettag="player" />
-      <EventObjectiveAction type="add" id="Clean the pot in the sink" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.cleanpot" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-pot" Amount="1" ApplyTagToItem="tutorialpot" />
       <Label name="checkforcleanpot" />
       <CheckItemAction targettag="player" itemidentifiers="he-pot" amount="1" recursive="false">
@@ -224,11 +224,11 @@
         </Failure>
       </CheckItemAction>
       <InventoryHighlightAction targettag="player" itemidentifier="he-pot" />
-      <EventObjectiveAction type="completeandremove" id="Clean the pot in the sink" />
-      <!-- instruct player to fill the pot with water at the sink -->
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.cleanpot" />
+      <!-- instruct player to fillpot at the sink -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c21" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialpot" />
-      <EventObjectiveAction type="add" id="Fill the pot with water" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.fillpot" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-potwithwater" Amount="1" ApplyTagToItem="tutorialpot" />
       <Label name="checkforwaterpot" />
       <CheckItemAction targettag="player" itemidentifiers="he-potwithwater" amount="1" recursive="false">
@@ -240,7 +240,7 @@
           <GoTo name="checkforwaterpot" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Fill the pot with water" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.fillpot" />
       <TutorialHighlightAction state="false" targettag="tutorialsink" />
       <TutorialHighlightAction state="false" targettag="tutorialpot" />
       <!-- instruct the player to place the filled pot onto the stove -->
@@ -260,7 +260,7 @@
       <TutorialHighlightAction state="false" targettag="tutorialstove" />
       <!-- instruct the player to grab flour, salt, yeast and water from the kitchen counter -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c23" targettag="player" />
-      <EventObjectiveAction type="add" id="Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.collectflour" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="true" targettag="tutorialflour" />
       <TutorialHighlightAction state="true" targettag="tutorialsalt" />
@@ -312,11 +312,11 @@
       <TutorialHighlightAction state="false" targettag="tutorialsalt" />
       <TutorialHighlightAction state="false" targettag="tutorialyeastshroom" />
       <TutorialHighlightAction state="false" targettag="tutorialwater" />
-      <EventObjectiveAction type="completeandremove" id="Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.collectflour" />
       <!-- instruct the player to make dough at the cutting board -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c24" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
-      <EventObjectiveAction type="add" id="Make some dough at the cutting board" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.makedough" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-dough" Amount="1" ApplyTagToItem="tutorialdough" />
       <Label name="checkfordough" />
       <CheckItemAction targettag="player" itemidentifiers="he-dough" amount="1" recursive="false">
@@ -329,10 +329,10 @@
         </Failure>
       </CheckItemAction>
       <InventoryHighlightAction targettag="player" itemidentifier="he-dough" />
-      <EventObjectiveAction type="completeandremove" id="Make some dough at the cutting board" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.makedough" />
       <!-- instruct the player to make raw pasta at the cutting board -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c25" targettag="player" />
-      <EventObjectiveAction type="add" id="Make some pasta at the cutting board" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.makepasta" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-rawpasta" Amount="1" ApplyTagToItem="tutorialpasta" />
       <Label name="checkforpasta" />
       <CheckItemAction targettag="player" itemidentifiers="he-rawpasta" amount="1" recursive="false">
@@ -344,7 +344,7 @@
           <GoTo name="checkforpasta" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Make some pasta at the cutting board" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.makepasta" />
       <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
       <!-- give a cleaver to the player and ask them to follow the chef for meat harvesting -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c26" targettag="player" />
@@ -367,7 +367,7 @@
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c27" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
       <NPCFollowAction npctag="masterchef" targettag="chefcrawlerposition" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <EventObjectiveAction type="add" id="Kill the crawler and harvest all of its meat" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.butchercrawler" />
       <TutorialHighlightAction state="true" targettag="tutorialcrawler" />
       <GodModeAction targettag="player" enabled="true" />
       <Label name="checkformeat" />
@@ -383,7 +383,7 @@
       </CheckItemAction>
       <GodModeAction targettag="player" enabled="false" />
       <TutorialHighlightAction state="false" targettag="tutorialcrawler" />
-      <EventObjectiveAction type="completeandremove" id="Kill the crawler and harvest all of its meat" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.butchercrawler" />
       <!-- instruct the player to follow the chef back to the kitchen -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c28" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="tutorialcoffeemachine" follow="true" AbandonOnReset="false" ForceWalk="true" />
@@ -393,7 +393,7 @@
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c29" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialcuttingboard" />
-      <EventObjectiveAction type="add" id="Prepare raw crawler meat at the cutting board" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.makecrawlermeat" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-crawlermeatchunk" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-rawcrawlermeat" Amount="1" ApplyTagToItem="tutorialrawcrawlermeat" />
       <Label name="checkforrawcrawlermeat" />
@@ -406,7 +406,7 @@
           <GoTo name="checkforrawcrawlermeat" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Prepare raw crawler meat at the cutting board" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.makecrawlermeat" />
       <TutorialHighlightAction state="false" targettag="tutorialcuttingboard" />
       <!-- instruct the player to grab ketchup and an empty plate from the kitchen counter, then cook the finished meal at the stove using the collected ingredients -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c30" targettag="player" />
@@ -421,7 +421,7 @@
       <InventoryHighlightAction targettag="player" itemidentifier="he-rawpasta" />
       <InventoryHighlightAction targettag="tutorialkitchencounter" itemidentifier="he-emptyplate" />
       <InventoryHighlightAction targettag="tutorialkitchencounter" itemidentifier="he-ketchup" />
-      <EventObjectiveAction type="add" id="Prepare a meal: Spaghetti and Minceballs" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.makespaghetti" />
       <Label name="checkforspaghettiingredients" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-rawcrawlermeat" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-rawpasta" />
@@ -482,13 +482,13 @@
           <GoTo name="checkforspaghettimeatballs" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Prepare a meal: Spaghetti and Minceballs" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.makespaghetti" />
       <TutorialHighlightAction state="false" targettag="tutorialstove" />
       <!-- instruct the player to bring the meal to the customer-->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c31" targettag="player" />
       <TutorialHighlightAction state="true" targettag="tutorialmeal" />
       <TutorialHighlightAction state="true" targettag="hungryeuropan" />
-      <EventObjectiveAction type="add" id="Give the meal to the hungry europan" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.givespaghetti" />
       <Label name="checkformeal" />
       <TriggerAction target1tag="player" target2tag="hungryeuropan" radius="1000" waitforinteraction="true" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="EventText.tutorial_chef.c32" targettag="player">
@@ -498,7 +498,7 @@
               <!-- customer has received the meal and leaves -->
               <TutorialHighlightAction state="false" targettag="hungryeuropan" />
               <TutorialHighlightAction state="false" targettag="hungryeuropan" />
-              <EventObjectiveAction type="completeandremove" id="Give the meal to the hungry europan" />
+              <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.givespaghetti" />
               <RemoveItemAction targettag="tutorialmeal" amount="1" />
               <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="hungryeuropan" dialogtype="regular" text="EventText.tutorial_chef..o1.c1" targettag="player" />
               <SpawnAction ItemIdentifier="he-spaghettimeatballs" TargetTag="removethis" TargetInventory="hungryeuropan" />
@@ -667,7 +667,7 @@
       <ConversationAction ContinueConversation="true" ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c36" targettag="player" />
       <!-- FOR SOME REASON THE CHEF STARTS FOLLOWING THE PLAYER AGAIN AFTER THIS, EVEN THOUGH THERE IS NO FOLLOW ACTION TO DO SO | workaround seems to be to keep this NPCFollowAction in the CheckItemAction loop too -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialkitchencounter" follow="true" AbandonOnReset="false" ForceWalk="true" />
-      <EventObjectiveAction type="add" id="Collect the Fryer Installation and the Wire" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.getfryerandwire" />
       <StatusEffectAction targettag="tutorialshelf">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
@@ -696,10 +696,10 @@
           <GoTo name="checkforfryerinstallation" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Collect the Fryer Installation and the Wire" />
-      <EventObjectiveAction type="add" id="Bring the Fryer Installation and Wire to the Chef" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.getfryerandwire" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.bringfryer" />
       <TriggerAction target1tag="player" target2tag="masterchef" radius="150" waitforinteraction="false" />
-      <EventObjectiveAction type="completeandremove" id="Bring the Fryer Installation and Wire to the Chef" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.bringfryer" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="false" targettag="tutorialwire" />
       <!-- instruct the player to put the fryer installation into the kitchen counter -->
@@ -726,7 +726,7 @@
           <SpawnItem identifier="screwdriver" spawnposition="ThisInventory" equip="true" />
         </StatusEffect>
       </StatusEffectAction>
-      <EventObjectiveAction type="add" id="Connect the fryer to the power output of the kitchen counter" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.installyfryer" />
       <TutorialHighlightAction state="true" targettag="tutorialfryer" />
       <TutorialHighlightAction state="true" targettag="tutorialwire" />
       <TutorialHighlightAction state="true" targettag="tutorialkitchencounter" />
@@ -740,7 +740,7 @@
           <GoTo name="checkforfryerwired" />
         </Failure>
       </CheckConnectionAction>
-      <EventObjectiveAction type="completeandremove" id="Connect the fryer to the power output of the kitchen counter" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.installyfryer" />
       <TutorialHighlightAction state="false" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="false" targettag="tutorialfryer" />
       <TutorialHighlightAction state="false" targettag="tutorialwire" />
@@ -750,7 +750,7 @@
       <TutorialHighlightAction state="true" targettag="tutorialfridge" />
       <TutorialHighlightAction state="true" targettag="tutorialoil" />
       <TutorialHighlightAction state="true" targettag="tutorialhammerheadspawnmeatchunk" />
-      <EventObjectiveAction type="add" id="Grab the cooking oil and 3 hammerhead spawns" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.graboilandhammies" />
       <Label name="checkforoilandhammerheads" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-cookingoil" />
       <InventoryHighlightAction targettag="player" itemidentifier="he-hammerheadspawnmeatchunk" />
@@ -772,13 +772,13 @@
           <GoTo name="checkforoilandhammerheads" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Grab the cooking oil and 3 hammerhead spawns" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.graboilandhammies" />
       <TutorialHighlightAction state="false" targettag="tutorialkitchencounter" />
       <TutorialHighlightAction state="false" targettag="tutorialfridge" />
       <TutorialHighlightAction state="false" targettag="tutorialoil" />
       <TutorialHighlightAction state="true" targettag="tutorialfryer" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c40" targettag="player" />
-      <EventObjectiveAction type="add" id="Put the oil and hammerheads into the fryer and turn it on" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.turnonfryer" />
       <Label name="checkforoilandhammerheadsinfryer" />
       <CheckItemAction targettag="tutorialfryer" itemidentifiers="he-hammerheadspawnmeatchunk" amount="3" recursive="true">
         <Success>
@@ -807,7 +807,7 @@
           <GoTo name="checkforoilandhammerheadsinfryer" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Put the oil and hammerheads into the fryer and turn it on" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.turnonfryer" />
       <TutorialHighlightAction state="false" targettag="tutorialfryer" />
       <Label name="checkforfriedhammerheadspawnsinfryer" />
       <CheckItemAction targettag="tutorialfryer" itemidentifiers="he-cookedhammerheadspawnfried" amount="3" recursive="true">
@@ -823,7 +823,7 @@
       <TutorialHighlightAction state="true" targettag="tutorialfryer" />
       <TutorialHighlightAction state="true" targettag="tutorialhammerheadspawnfried" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c41" targettag="player" />
-      <EventObjectiveAction type="add" id="Collect the fried hammerhead spawns" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.collecthammies" />
       <Label name="checkforfriedhammerheadspawns" />
       <CheckItemAction targettag="player" itemidentifiers="he-cookedhammerheadspawnfried" amount="3" recursive="true">
         <Success>
@@ -834,7 +834,7 @@
           <GoTo name="checkforfriedhammerheadspawns" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Collect the fried hammerhead spawns" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.collecthammies" />
       <TutorialHighlightAction state="false" targettag="tutorialfryer" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c42" targettag="player">
         <Option text="EventText.tutorial_chef..o3" endconversation="true" />
@@ -857,7 +857,7 @@
       <AfflictionAction targettag="player" affliction="thirst" strength="40" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c44" targettag="player" />
       <SpawnAction ItemIdentifier="he-emptybottle" TargetInventory="player" Amount="2" />
-      <EventObjectiveAction type="add" id="Fill 2 bottles with water at the sink" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.fillbottleswater" />
       <TutorialHighlightAction state="true" targettag="tutorialsink" />
       <WaitForItemFabricatedAction CharacterTag="player" ItemIdentifier="he-water" Amount="2" ApplyTagToItem="tutorialwaterbottle" />
       <Label name="checkforbottledwater" />
@@ -870,7 +870,7 @@
           <GoTo name="checkforbottledwater" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Fill 2 bottles with water at the sink" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.fillbottleswater" />
       <TutorialHighlightAction state="false" targettag="tutorialsink" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c45" targettag="player">
         <Option text="EventText.tutorial_chef..o4">
@@ -878,8 +878,8 @@
           <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef..o4.c1" targettag="player" />
         </Option>
       </ConversationAction>
-      <EventObjectiveAction type="add" id="Open your bottle (Press [Aim]+[Select])" />
-      <EventObjectiveAction type="add" id="Drink (Hold [Aim])" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.openbottle" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.drinkbottle" />
       <StatusEffectAction targettag="masterchef">
         <StatusEffect target="This" disabledeltatime="true">
           <SpawnItem identifier="he-tutorial.waterbottle" spawnposition="ThisInventory" equip="true" />
@@ -896,7 +896,7 @@
           <GoTo name="checkforopenbottle" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Open your bottle (Press [Aim]+[Select])" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.openbottle" />
       <Label name="checkfordrankwater" />
       <CheckItemAction targettag="player" itemidentifiers="he-water" amount="1" recursive="true">
         <Success>
@@ -907,7 +907,7 @@
           <!-- continue -->
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Drink (Hold [Aim])" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.drinkbottle" />
       <!-- WIP - to be continued -->
       <!-- TODO: -->
       <!-- soup tutorial (gather seaweed, make nori, gather seeds, make seaweed soup) -->
@@ -923,6 +923,7 @@
       <TriggerEventAction identifier="tutorial_bathroom" />
       <!-- <TutorialCompleteAction /> -->
     </ScriptedEvent>
+    
     <ScriptedEvent identifier="tutorial_botany">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:botanydoor" tag="botanydoor" />
@@ -964,7 +965,7 @@
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c2" />
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c3" />
       <SpawnAction ItemIdentifier="creepingorangevineseed" TargetTag="tutorialseed" TargetInventory="player" Amount="1" />
-      <EventObjectiveAction type="add" id="Uproot the dead plant and plant the seed" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.uprootplant" />
       <StatusEffectAction targettag="leftplanter">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
@@ -980,10 +981,10 @@
           <GoTo name="checkforseedplanted" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Uproot the dead plant and plant the seed" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.uprootplant" />
       <TutorialHighlightAction state="false" targettag="rightplanter" />
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c4" />
-      <EventObjectiveAction type="add" id="Use fertilizer on the new plant" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.fertilizeplant" />
       <TutorialHighlightAction state="true" targettag="rightplanter" />
       <StatusEffectAction targettag="tutorialfertilizerwaterer">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -999,9 +1000,9 @@
           <GoTo name="checkforfertilized" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Use fertilizer on the new plant" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.fertilizeplant" />
       <TutorialHighlightAction state="false" targettag="rightplanter" />
-      <EventObjectiveAction type="add" id="Water the other plant" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.waterplant" />
       <TutorialHighlightAction state="true" targettag="leftplanter" />
       <Label name="checkforwatered" />
       <CheckConditionalAction targettag="tutorialplantedseed">
@@ -1015,7 +1016,7 @@
         </Failure>
       </CheckConditionalAction>
       <WaitAction time="1" />
-      <EventObjectiveAction type="completeandremove" id="Water the other plant" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.waterplant" />
       <TutorialHighlightAction state="false" targettag="leftplanter" />
       <SpawnAction ItemIdentifier="bubbleberries" TargetTag="tutorialberries" spawnpointtag="leftplanter" Amount="1" />
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c5" />
@@ -1031,7 +1032,7 @@
         <StatusEffect target="This" noninteractable="true" setvalue="true" />
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c7" />
-      <EventObjectiveAction type="add" id="Use the research station to create a hybrid plant" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.hybridizeplant" />
       <TutorialHighlightAction state="true" targettag="hybridfruitingredient" />
       <Label name="checkforhybridplant" />
       <CheckItemAction targettag="tutorialresearchstation" itemidentifiers="pomaccoseed" amount="1" recursive="true">
@@ -1049,8 +1050,8 @@
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c10" />
-      <EventObjectiveAction type="add" id="Remove the empty keg" />
-      <EventObjectiveAction type="add" id="Put the sea water keg inside the Hydroponic planter" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.removekeg" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.putkeginhydroponics" />
       <TutorialHighlightAction state="true" targettag="tutorialhydroponics" />
       <TutorialHighlightAction state="true" targettag="tutorialemptykeghydro" />
       <Label name="checkforemptykeg" />
@@ -1061,7 +1062,7 @@
           <GoTo name="checkforemptykeg" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Remove the empty keg" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.removekeg" />
       <TutorialHighlightAction state="false" targettag="tutorialemptykeghydro" />
       <TutorialHighlightAction state="true" targettag="tutorialseawaterkeghydro" />
       <StatusEffectAction targettag="tutorialseawaterkeghydro">
@@ -1074,7 +1075,7 @@
           <GoTo name="checkforseawaterkeg2" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Put the sea water keg inside the Hydroponic planter" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.putkeginhydroponics" />
       <TutorialHighlightAction state="false" targettag="tutorialhydroponics" />
       <TutorialHighlightAction state="false" targettag="tutorialseawaterkeghydro" />
       <ConversationAction Forcesay="true" SpeakerTag="botanyguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_botany.c11" />
@@ -1083,7 +1084,7 @@
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
       <TutorialHighlightAction state="true" targettag="tutorialsprinkler" />
-      <EventObjectiveAction type="add" id="Turn the automated sprinkler on." />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.turnonsprinkler" />
       <Label name="checksprinkleron" />
       <CheckConditionalAction targettag="tutorialsprinkler">
         <Conditional IsOn="true" targetitemcomponent="LightComponent" />
@@ -1096,11 +1097,12 @@
         </Failure>
       </CheckConditionalAction>
       <TutorialHighlightAction state="false" targettag="tutorialsprinkler" />
-      <EventObjectiveAction type="completeandremove" id="Turn the automated sprinkler on." />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.turnonsprinkler" />
       <StatusEffectAction targettag="botanydoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
     </ScriptedEvent>
+    
     <ScriptedEvent identifier="tutorial_brewery">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:brewerydoor" tag="brewerydoor" />
@@ -1139,7 +1141,7 @@
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c2" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c3" />
-      <EventObjectiveAction type="add" id="Grab the keg and fill it with water from the pool" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.fillkegpool" />
       <TutorialHighlightAction state="true" targettag="tutorialemptykegbrewery" />
       <StatusEffectAction targettag="tutorialemptykegbrewery">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1152,11 +1154,11 @@
           <GoTo name="checkforseawaterkeg" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Grab the keg and fill it with water from the pool" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.fillkegpool" />
       <TutorialHighlightAction state="false" targettag="tutorialemptykegbrewery" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c4" />
       <TutorialHighlightAction state="true" targettag="tutorialbrewingkettle" />
-      <EventObjectiveAction type="add" id="Put the keg inside the brewing kettle" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.keginbrewing" />
       <StatusEffectAction targettag="tutorialbrewingkettle">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
@@ -1168,12 +1170,12 @@
           <GoTo name="checkforemptykeginside" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Put the keg inside the brewing kettle" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.keginbrewing" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewingkettle" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c5" />
       <TutorialHighlightAction state="true" targettag="tutorialbrewingkettle" />
       <TutorialHighlightAction state="true" targettag="tutorialstorage" />
-      <EventObjectiveAction type="add" id="Brew a keg of Coalition Premium" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.brewbeer" />
       <StatusEffectAction targettag="tutorialstorage">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
@@ -1186,11 +1188,11 @@
           <GoTo name="checkforkegbrewed" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Brew a keg of Coalition Premium" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.brewbeer" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewingkettle" />
       <TutorialHighlightAction state="false" targettag="tutorialstorage" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c6" />
-      <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.loadrefill" />
       <TutorialHighlightAction state="true" targettag="tutorialrefillstationbrewery" />
       <StatusEffectAction targettag="tutorialrefillstationbrewery">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1202,11 +1204,11 @@
           <GoTo name="checkforkeginrefillstation" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Load the refill station with the keg of beer" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.loadrefill" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_brewery.c7" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="researcher" dialogtype="regular" text="EventText.tutorial_brewery.c8" />
-      <EventObjectiveAction type="add" id="Grab some glass fragments from the cabinet" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.grabglass" />
       <TutorialHighlightAction state="true" targettag="tutorialstorage" />
       <SpawnAction ItemIdentifier="he-glassfragments" TargetTag="tutorialglassfragments" TargetInventory="tutorialstorage" Amount="3" />
       <Label name="checkforfragments" />
@@ -1217,9 +1219,9 @@
           <GoTo name="checkforfragments" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Grab some glass fragments from the cabinet" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.grabglass" />
       <TutorialHighlightAction state="false" targettag="tutorialstorage" />
-      <EventObjectiveAction type="add" id="Put the fragments inside the bottle printer" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.glassinprinter" />
       <TutorialHighlightAction state="true" targettag="tutorialbottleprinter" />
       <StatusEffectAction targettag="tutorialbottleprinter">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1231,8 +1233,8 @@
           <GoTo name="checkforfragmentsprinter" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Put the fragments inside the bottle printer" />
-      <EventObjectiveAction type="add" id="Print 3 beer bottles" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.glassinprinter" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.printbottles" />
       <Label name="checkforemptybottles" />
       <CheckItemAction targettag="tutorialbottleprinter" itemidentifiers="he-emptybottlebeer" amount="3">
         <Failure>
@@ -1240,10 +1242,10 @@
           <GoTo name="checkforemptybottles" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Print 3 beer bottles" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.printbottles" />
       <TutorialHighlightAction state="false" targettag="tutorialbottleprinter" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c9" endconversation="true" />
-      <EventObjectiveAction type="completeandremove" id="Pour 3 bottles of Coalition Premium" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.pourbottles" />
       <TutorialHighlightAction state="true" targettag="tutorialrefillstationbrewery" />
       <Label name="checkforbeerspoured" />
       <CheckItemAction targettag="tutorialrefillstationbrewery" itemidentifiers="he-beercoalitionpremium" amount="3">
@@ -1252,10 +1254,10 @@
           <GoTo name="checkforbeerspoured" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Print 3 beer bottles" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.pourbottles" />
       <TutorialHighlightAction state="false" targettag="tutorialrefillstationbrewery" />
       <ConversationAction Forcesay="true" SpeakerTag="breweryguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="GuyWithAlcohol" dialogtype="regular" text="EventText.tutorial_brewery.c10" endconversation="true" />
-      <EventObjectiveAction type="add" id="Leave a beer on the table" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.leavebeer" />
       <TutorialHighlightAction state="true" targettag="tutorialbrewerytable" />
       <Label name="checkforbeertable" />
       <CheckItemAction targettag="tutorialbrewerytable" itemidentifiers="he-beercoalitionpremium" amount="1">
@@ -1264,12 +1266,13 @@
           <GoTo name="checkforbeertable" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="Leave a beer on the table" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.leavebeer" />
       <TutorialHighlightAction state="false" targettag="tutorialbrewerytable" />
       <StatusEffectAction targettag="brewerydoor">
         <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
       </StatusEffectAction>
     </ScriptedEvent>
+    
     <ScriptedEvent identifier="tutorial_recroom">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:recroomdoor" tag="recroomdoor" />
@@ -1303,7 +1306,7 @@
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c2" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c3" />
-      <EventObjectiveAction type="add" id="Sleep in the bad to reduce your fatigue" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.sleepinbed" />
       <TutorialHighlightAction state="true" targettag="recroombed" />
       <StatusEffectAction targettag="recroombed">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1322,7 +1325,7 @@
           <GoTo name="checkforfatiguegone" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Sleep in the bad to reduce your fatigue" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.sleepinbed" />
       <TutorialHighlightAction state="false" targettag="recroombed" />
       <AfflictionAction targettag="player" affliction="stun" strength="0.5" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c4" />
@@ -1333,7 +1336,7 @@
       </StatusEffectAction>
       <AfflictionAction targettag="player" affliction="mood" strength="40" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c5" />
-      <EventObjectiveAction type="add" id="Reduce your stress by playing the guitar" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.playguitar" />
       <TutorialHighlightAction state="true" targettag="recroomguitar" />
       <StatusEffectAction targettag="recroomguitarholder">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1346,12 +1349,12 @@
           <GoTo name="checkforstressgone1" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Reduce your stress by playing the guitar" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.playguitar" />
       <TutorialHighlightAction state="false" targettag="recroomguitar" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c6" />
       <AfflictionAction targettag="player" affliction="craving_food" strength="-9999" />
       <AfflictionAction targettag="player" affliction="trait_likes_hotdogs" strength="1000" />
-      <EventObjectiveAction type="add" id="Eat the hotdog to satisfy your craving and reduce stress" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.eathotdog" />
       <TutorialHighlightAction state="true" targettag="recroomtable" />
       <StatusEffectAction targettag="recroomtable">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1364,11 +1367,11 @@
           <GoTo name="checkforstressgone2" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Eat the hotdog to satisfy your craving and reduce stress" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.eathotdog" />
       <TutorialHighlightAction state="false" targettag="recroomtable" />
       <AfflictionAction targettag="player" affliction="trait_likes_hotdogs" strength="-9999" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c7" />
-      <EventObjectiveAction type="add" id="Get drunk to reduce your stress" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.drinkforstress" />
       <TutorialHighlightAction state="true" targettag="recroomrum" />
       <Label name="checkfordrunk" />
       <CheckConditionalAction targettag="player">
@@ -1378,7 +1381,7 @@
           <GoTo name="checkfordrunk" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Get drunk to reduce your stress" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.drinkforstress" />
       <TutorialHighlightAction state="false" targettag="recroomrum" />
       <ConversationAction Forcesay="true" SpeakerTag="recroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" eventsprite="clown" dialogtype="regular" text="EventText.tutorial_recroom.c8" endconversation="true" />
       <StatusEffectAction targettag="recroomdoor">
@@ -1391,6 +1394,7 @@
         </StatusEffect>
       </StatusEffectAction>
     </ScriptedEvent>
+    
     <ScriptedEvent identifier="tutorial_bathroom">
       <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:bathroomdoor" tag="bathroomdoor" />
@@ -1423,8 +1427,8 @@
       <NPCOperateItemAction NPCTag="bathroomguy" TargetTag="bathroomtoilet" ItemComponentName="Controller" Operate="false" />
       <NPCFollowAction npctag="bathroomguy" targettag="bathroomswitch" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c2" />
-      <EventObjectiveAction type="add" id="Relieve your bladder on the toilet" />
-      <EventObjectiveAction type="add" id="Relieve your bowels on the toilet" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.pissontoilet" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.shitontoilet" />
       <TutorialHighlightAction state="true" targettag="bathroomtoilet" />
       <StatusEffectAction targettag="bathroomtoilet">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1440,7 +1444,7 @@
       <CheckConditionalAction targettag="player">
         <Conditional bladder="lte 1" />
         <Success>
-          <EventObjectiveAction type="completeandremove" id="Relieve your bladder on the toilet" />
+          <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.pissontoilet" />
         </Success>
         <Failure>
           <WaitAction time="0.5" />
@@ -1451,7 +1455,7 @@
       <CheckConditionalAction targettag="player">
         <Conditional defecate="lte 1" />
         <Success>
-          <EventObjectiveAction type="completeandremove" id="Relieve your bowels on the toilet" />
+          <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.shitontoilet" />
         </Success>
         <Failure>
           <WaitAction time="0.5" />
@@ -1474,12 +1478,12 @@
       </StatusEffectAction>
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c5" />
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c6" />
-      <EventObjectiveAction type="add" id="Remove your clothes and stand in water until fully cleaned" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.washinwater" />
       <Label name="checkforcleaned" />
       <CheckConditionalAction targettag="player">
         <Conditional hygiene="lte 1" />
         <Success>
-          <EventObjectiveAction type="completeandremove" id="Remove your clothes and stand in water until fully cleaned" />
+          <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.washinwater" />
         </Success>
         <Failure>
           <WaitAction time="0.5" />
@@ -1492,7 +1496,7 @@
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c7" />
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c8" />
       <AfflictionAction targettag="player" affliction="hygiene" strength="31" />
-      <EventObjectiveAction type="add" id="Remove your clothes and scrub yourself with soap" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.washwishsoap" />
       <TutorialHighlightAction state="true" targettag="bathroomcabinet" />
       <StatusEffectAction targettag="bathroomcabinet">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1506,7 +1510,7 @@
           <GoTo name="checkforcleaned2" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="Remove your clothes and scrub yourself with soap" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.washwishsoap" />
       <TutorialHighlightAction state="false" targettag="bathroomcabinet" />"
       /&gt;      
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c9" /><StatusEffectAction targettag="bathroomdoor"><StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" /></StatusEffectAction><TriggerAction target1tag="player" target2tag="bathroomguy" radius="300" type="outside" waitforinteraction="false" /></ScriptedEvent>
@@ -1525,7 +1529,7 @@
        -->
   <!-- Check loop with highlight+tutorial actions -->
   <!-- 
-      <EventObjectiveAction type="add" id="tutorialobjective" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.tutorialobjective" />
       <TutorialHighlightAction state="true" targettag="itemtocheck" />
       <Label name="checkloop" />
       <CheckItemAction targettag="itemtocheck" itemidentifiers="itemneeded" amount="1" recursive="true">
@@ -1534,7 +1538,7 @@
           <GoTo name="checkloop" />
         </Failure>
       </CheckItemAction>
-      <EventObjectiveAction type="completeandremove" id="tutorialobjective" />
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.tutorialobjective" />
       <TutorialHighlightAction state="false" targettag="rightplanter" />
        -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
