@@ -153,35 +153,15 @@
       <TriggerAction target1tag="hungryeuropan" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="hungryeuropan" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the customer and the chef talk to each other (customer orders spaghetti and minceballs) -->
-      <StatusEffectAction targettag="hungryeuropan">
-        <StatusEffect target="This">
-          <ForceSay message="Hey chef, when can we expect some meals? I'm hungry as hell!" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Hey chef, when can we expect some meals? I'm hungry as hell!" targettag="hungryeuropan" />
       <WaitAction time="3" />
-      <StatusEffectAction targettag="masterchef">
-        <StatusEffect target="This">
-          <ForceSay message="No worries! We will have some meals prepared in just a moment. What would you like to eat?" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="No worries! We will have some meals prepared in just a moment. What would you like to eat?" targettag="masterchef" />
       <WaitAction time="4" />
-      <StatusEffectAction targettag="hungryeuropan">
-        <StatusEffect target="This">
-          <ForceSay message="Uhh... I think I'd like some Spaghetti and Minceballs please." EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Uhh... I think I'd like some Spaghetti and Minceballs please." targettag="hungryeuropan" />
       <WaitAction time="3" />
-      <StatusEffectAction targettag="masterchef">
-        <StatusEffect target="This">
-          <ForceSay message="Very Well! Your dish will be ready shortly. Please take a seat outside while we prepare it." EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Very Well! Your dish will be ready shortly. Please take a seat outside while we prepare it." targettag="masterchef" />
       <WaitAction time="4" />
-      <StatusEffectAction targettag="hungryeuropan">
-        <StatusEffect target="This">
-          <ForceSay message="Ok great! Thank you!" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction  targettag="hungryeuropan" message="Ok great! Thank you!" />
       <!-- have the customer sit down at a random cafeteria chair -->
       <TagAction criteria="itemidentifier:he-cafeteriachair" tag="targetchair" chooserandom="true" />
       <NPCFollowAction npctag="masterchef" targettag="hungryeuropan" follow="false" AbandonOnReset="false" ForceWalk="true" />
@@ -567,25 +547,13 @@
       <TriggerAction target1tag="deliveryguy" target2tag="masterchef" radius="150" waitforinteraction="false" />
       <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the delivery guy and chef talk to each other -->
-      <StatusEffectAction targettag="deliveryguy">
-        <StatusEffect target="This">
-          <ForceSay message="Hey Booger, I got your delivery! Shall I stock up for you?" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Hey Booger, I got your delivery! Shall I stock up for you?" targettag="deliveryguy" />
       <WaitAction time="3" />
-      <StatusEffectAction targettag="masterchef">
-        <StatusEffect target="This">
-          <ForceSay message="Oh hey! Yes please, that would be great!" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Oh hey! Yes please, that would be great!" targettag="masterchef"/>
       <WaitAction time="3" />
       <!-- have the delivery guy restock the refrigerator -->
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialfridge" ItemComponentName="Controller" Operate="true" />
-      <StatusEffectAction targettag="deliveryguy">
-        <StatusEffect target="This">
-          <ForceSay message="Alright. I believe this goes here..." EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Alright. I believe this goes here..." targettag="deliveryguy"/>
       <WaitAction time="2" />
       <SpawnAction ItemIdentifier="he-hammerheadspawnmeatchunk" TargetTag="tutorialhammerheadspawnmeatchunk" TargetInventory="tutorialfridge" Amount="6" />
       <WaitAction time="1" />
@@ -596,11 +564,7 @@
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialfridge" ItemComponentName="Controller" Operate="false" />
       <!-- have the delivery guy restock the kitchen counter -->
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialkitchencounter" ItemComponentName="Controller" Operate="true" />
-      <StatusEffectAction targettag="deliveryguy">
-        <StatusEffect target="This">
-          <ForceSay message="And this stuff goes here..." EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="And this stuff goes here..." targettag="deliveryguy"/>
       <WaitAction time="1" />
       <SpawnAction ItemIdentifier="he-seaweed" TargetTag="tutorialseaweed" TargetInventory="tutorialkitchencounter" Amount="1" />
       <WaitAction time="1" />
@@ -608,35 +572,19 @@
       <WaitAction time="1" />
       <SpawnAction ItemIdentifier="he-dirtyplate" TargetTag="tutorialdirtyplate" TargetInventory="tutorialkitchencounter" Amount="4" />
       <WaitAction time="1" />
-      <StatusEffectAction targettag="deliveryguy">
-        <StatusEffect target="This">
-          <ForceSay message="Hmm... These plates are dirty. I think they mixed something up during packaging... I'm very sorry! I'll take them back and bring the new ones next time." EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Hmm... These plates are dirty. I think they mixed something up during packaging... I'm very sorry! I'll take them back and bring the new ones next time." targettag="deliveryguy"/>
       <WaitAction time="5" />
-      <StatusEffectAction targettag="masterchef">
-        <StatusEffect target="This">
-          <ForceSay message="It's ok. Leave them here. We can clean them." EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="It's ok. Leave them here. We can clean them." targettag="masterchef"/>
       <WaitAction time="3" />
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialkitchencounter" ItemComponentName="Controller" Operate="false" />
-      <StatusEffectAction targettag="deliveryguy">
-        <StatusEffect target="This">
-          <ForceSay message="If that's ok with you? I'll leave them here then. Have a pleasant day you two!" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="If that's ok with you? I'll leave them here then. Have a pleasant day you two!" targettag="deliveryguy"/>
       <TagAction criteria="itemidentifier:he-cardboardbox" tag="removethis" continueifnotargetsfound="true" />
       <WaitAction time="3" />
       <NPCFollowAction npctag="masterchef" targettag="deliveryguy" follow="false" AbandonOnReset="false" ForceWalk="true" />
       <!-- have the delivery guy walk to the exit door to despawn -->
       <NPCFollowAction npctag="deliveryguy" targettag="exitdoor" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <WaitAction time="1" />
-      <StatusEffectAction targettag="masterchef">
-        <StatusEffect target="This">
-          <ForceSay message="Thanks! You too!" EvenIfCantSpeak="true" />
-        </StatusEffect>
-      </StatusEffectAction>
+      <ForceSayAction message="Thanks! You too!" targettag="masterchef"/>
       <NPCFollowAction npctag="masterchef" targettag="player" follow="true" AbandonOnReset="true" ForceWalk="true" />
       <WaitAction time="2" />
       <!-- some long dialog to keep the player busy with reading while the event is dealing with the despawning of the delivery guy -->
