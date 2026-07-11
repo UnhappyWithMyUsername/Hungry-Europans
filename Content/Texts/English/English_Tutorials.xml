@@ -6,6 +6,74 @@
 <tutorial.cheftutorial>Become a Chef</tutorial.cheftutorial>
 <tutorial.cheftutorial.description>In this tutorial, Chef Booger will guide you through the daily tasks of a submarine chef and get you prepared for you to support your crew.</tutorial.cheftutorial.description>
 
+<tutorial_HE.objective.example>tutorialobjective</tutorial_HE.objective.example>
+<tutorial_HE.objective.collectpot>Collect the pot</tutorial_HE.objective.collectpot>
+<tutorial_HE.objective.cleanpot>Clean the pot in the sink</tutorial_HE.objective.cleanpot>
+<tutorial_HE.objective.fillpot>Fill the pot with water</tutorial_HE.objective.fillpot>
+<tutorial_HE.objective.collectflour>Collect flour, salt, sea yeast shroom and a bottle of water from the kitchen counter</tutorial_HE.objective.collectflour>
+<tutorial_HE.objective.makedough>Make some dough at the cutting board</tutorial_HE.objective.makedough>
+<tutorial_HE.objective.makepasta>Make some pasta at the cutting board</tutorial_HE.objective.makepasta>
+<tutorial_HE.objective.butchercrawler>Kill the crawler and harvest all of its meat</tutorial_HE.objective.butchercrawler>
+<tutorial_HE.objective.makecrawlermeat>Prepare raw crawler meat at the cutting board</tutorial_HE.objective.makecrawlermeat>
+<tutorial_HE.objective.makespaghetti>Prepare a meal: Spaghetti and Minceballs</tutorial_HE.objective.makespaghetti>
+<tutorial_HE.objective.givespaghetti>Give the meal to the hungry europan</tutorial_HE.objective.givespaghetti>
+<tutorial_HE.objective.getfryerandwire>Collect the Fryer Installation and the Wire</tutorial_HE.objective.getfryerandwire>
+<tutorial_HE.objective.bringfryer>Bring the Fryer Installation and Wire to the Chef</tutorial_HE.objective.bringfryer>
+<tutorial_HE.objective.installyfryer>Connect the fryer to the power output of the kitchen counter</tutorial_HE.objective.installyfryer>
+<tutorial_HE.objective.graboilandhammies>Grab the cooking oil and 3 hammerhead spawns</tutorial_HE.objective.graboilandhammies>
+<tutorial_HE.objective.turnonfryer>Put the oil and hammerheads into the fryer and turn it on</tutorial_HE.objective.turnonfryer>
+<tutorial_HE.objective.collecthammies>Collect the fried hammerhead spawns</tutorial_HE.objective.collecthammies>
+<tutorial_HE.objective.fillbottleswater>Fill 2 bottles with water at the sink</tutorial_HE.objective.fillbottleswater>
+<tutorial_HE.objective.openbottle>Open your bottle (Press [Aim]+[Select])</tutorial_HE.objective.openbottle>
+<tutorial_HE.objective.drinkbottle>Drink (Hold [Aim])</tutorial_HE.objective.drinkbottle>
+<tutorial_HE.objective.uprootplant>Uproot the dead plant and plant the seed</tutorial_HE.objective.uprootplant>
+<tutorial_HE.objective.fertilizeplant>Use fertilizer on the new plant</tutorial_HE.objective.fertilizeplant>
+<tutorial_HE.objective.waterplant>Water the other plant</tutorial_HE.objective.waterplant>
+<tutorial_HE.objective.hybridizeplant>Use the research station to create a hybrid plant</tutorial_HE.objective.hybridizeplant>
+<tutorial_HE.objective.removekeg>Remove the empty keg</tutorial_HE.objective.removekeg>
+<tutorial_HE.objective.putkeginhydroponics>Put the sea water keg inside the Hydroponic planter</tutorial_HE.objective.putkeginhydroponics>
+<tutorial_HE.objective.turnonsprinkler>Turn the automated sprinkler on.</tutorial_HE.objective.turnonsprinkler>
+<tutorial_HE.objective.fillkegpool>Grab the keg and fill it with water from the pool</tutorial_HE.objective.fillkegpool>
+<tutorial_HE.objective.keginbrewing>Put the keg inside the brewing kettle</tutorial_HE.objective.keginbrewing>
+<tutorial_HE.objective.brewbeer>Brew a keg of Coalition Premium</tutorial_HE.objective.brewbeer>
+<tutorial_HE.objective.grabglass>Grab some glass fragments from the cabinet</tutorial_HE.objective.grabglass>
+<tutorial_HE.objective.glassinprinter>Put the fragments inside the bottle printer</tutorial_HE.objective.glassinprinter>
+<tutorial_HE.objective.printbottles>Print 3 beer bottles</tutorial_HE.objective.printbottles>
+<tutorial_HE.objective.leavebeer>Leave a beer on the table</tutorial_HE.objective.leavebeer>
+<tutorial_HE.objective.sleepinbed>Sleep in the bad to reduce your fatigue</tutorial_HE.objective.sleepinbed>
+<tutorial_HE.objective.playguitar>Reduce your stress by playing the guitar</tutorial_HE.objective.playguitar>
+<tutorial_HE.objective.eathotdog>Eat the hotdog to satisfy your craving and reduce stress</tutorial_HE.objective.eathotdog>
+<tutorial_HE.objective.drinkforstress>Get drunk to reduce your stress</tutorial_HE.objective.drinkforstress>
+<tutorial_HE.objective.pissontoilet>Relieve your bladder on the toilet</tutorial_HE.objective.pissontoilet>
+<tutorial_HE.objective.shitontoilet>Relieve your bowels on the toilet</tutorial_HE.objective.shitontoilet>
+<tutorial_HE.objective.washinwater>Remove your clothes and stand in water until fully cleaned</tutorial_HE.objective.washinwater>
+<tutorial_HE.objective.washwithsoap>Remove your clothes and scrub yourself with soap</tutorial_HE.objective.washwithsoap>
+
+
+<!-- EventObjectiveAction goes here - have to enter all these manually, fuck me -->
+<tutorial_HE.objective.example>Follow the Master Chef</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
 
 <EventText.tutorial_botany.c1>Do you know anything about plants? Most sailors have never seen a vegetable in their life.</EventText.tutorial_botany.c1>
 <EventText.tutorial_botany.o1>I want to learn.</EventText.tutorial_botany.o1>
