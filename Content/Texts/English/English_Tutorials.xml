@@ -6,6 +6,7 @@
 <tutorial.cheftutorial>Become a Chef</tutorial.cheftutorial>
 <tutorial.cheftutorial.description>In this tutorial, Chef Booger will guide you through the daily tasks of a submarine chef and get you prepared for you to support your crew.</tutorial.cheftutorial.description>
 
+<!-- EventObjectiveAction goes here - have to enter all these manually, fuck me -->
 <tutorial_HE.objective.example>tutorialobjective</tutorial_HE.objective.example>
 <tutorial_HE.objective.collectpot>Collect the pot</tutorial_HE.objective.collectpot>
 <tutorial_HE.objective.cleanpot>Clean the pot in the sink</tutorial_HE.objective.cleanpot>
@@ -50,32 +51,11 @@
 <tutorial_HE.objective.shitontoilet>Relieve your bowels on the toilet</tutorial_HE.objective.shitontoilet>
 <tutorial_HE.objective.washinwater>Remove your clothes and stand in water until fully cleaned</tutorial_HE.objective.washinwater>
 <tutorial_HE.objective.washwithsoap>Remove your clothes and scrub yourself with soap</tutorial_HE.objective.washwithsoap>
-
-
-<!-- EventObjectiveAction goes here - have to enter all these manually, fuck me -->
 <tutorial_HE.objective.example>Follow the Master Chef</tutorial_HE.objective.example>
 <tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
 <tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
-<tutorial_HE.objective.example>EventObjectiveGoesHere</tutorial_HE.objective.example>
+
+
 
 <EventText.tutorial_botany.c1>Do you know anything about plants? Most sailors have never seen a vegetable in their life.</EventText.tutorial_botany.c1>
 <EventText.tutorial_botany.o1>I want to learn.</EventText.tutorial_botany.o1>
@@ -92,27 +72,28 @@
 <EventText.tutorial_botany.c10>Looks like this one is out of sea water. Remove that empty keg and grab the one by the door.</EventText.tutorial_botany.c10>
 <EventText.tutorial_botany.c11>And now we wait. It takes a while for plants to grow, so don't be in a rush. </EventText.tutorial_botany.c11>
 <EventText.tutorial_botany.c12>Well it looks like you do have a green thumb after all! I've got nothing left to teach you. Before you leave, can you turn the sprinkler on?</EventText.tutorial_botany.c12>
+
 <EventText.tutorial_chef.c1>Ah hello there! You must be the new chef? Welcome!</EventText.tutorial_chef.c1>
 <EventText.tutorial_chef.c2>I'm chef Booger and I'll be teaching you how to keep your crew fed, but there's all kinds of folk around the station that can teach you things!</EventText.tutorial_chef.c2>
 <EventText.tutorial_chef.c3>I'll be heading to the kitchen upstairs. You can meet me there if you want to start learning about preparing meals and other basic kitchen tasks.</EventText.tutorial_chef.c3>
-<EventText.tutorial_chef.c4>Welcome to the kitchen! I'll do a quick rundown on things you'll usually find here, unless you're already familiar?</EventText.tutorial_chef.c4>
+<EventText.tutorial_chef.c4>Welcome to the kitchen! We will go over the equipment first, unless you're already familiar with cooking?</EventText.tutorial_chef.c4>
 <EventText.tutorial_chef.o1>No, please explain.</EventText.tutorial_chef.o1>
 <EventText.tutorial_chef.o1.c1>Gladly! Alright so...</EventText.tutorial_chef.o1.c1>
 <EventText.tutorial_chef.o2>Yes, I'm already familiar. No need to explain.</EventText.tutorial_chef.o2>
 <EventText.tutorial_chef.o2.c1>Very well! Let's not waste time then and onto the next lesson!</EventText.tutorial_chef.o2.c1>
 <EventText.tutorial_chef.c5>This is the refrigerator! It'll keep raw meat from spoiling and ice cream from melting. I've heard about desperate medics even storing organs in there to prevent them from decaying!</EventText.tutorial_chef.c5>
-<EventText.tutorial_chef.c6>The refrigerator has an integrated backup-power battery which will last for 5 minutes during a power outage. Once the backup-power battery is drained, the contents inside the refrigerator will start to spoil so make sure to restore power within those 5 minutes to prevent spoilage, should you ever run into a power outage.</EventText.tutorial_chef.c6>
-<EventText.tutorial_chef.c7>Here we have the kitchen counter. Should be in every kitchen. In there you can store whatever you need for meal preparation, but be aware that it is not water proof! It's best to store water sensitive things elsewhere. It is also where you'll install and uninstall your oven, stove, etc. from. It comes with power connectors so you can wire newly installed equipment directly to it.</EventText.tutorial_chef.c7>
+<EventText.tutorial_chef.c6>The refrigerator has an integrated backup-power battery which will last for several minutes during a power outage. Once the backup-power battery is drained, the contents inside the refrigerator will start to spoil. Should you ever run into a power outage, make sure to restore power before the battery runs out.</EventText.tutorial_chef.c6>
+<EventText.tutorial_chef.c7>Here we have the kitchen counter. Should be in every kitchen. In there you can store whatever you need for meal preparation. It is also where you'll install and uninstall your appliances. It comes with power connectors so you can wire newly installed equipment directly to it.</EventText.tutorial_chef.c7>
 <EventText.tutorial_chef.c8>If you've manually installed a kitchen counter, you can disassemble it again when holding a wrench while opening it up. The same goes for the kitchen pantry.</EventText.tutorial_chef.c8>
-<EventText.tutorial_chef.c9>Speaking of the pantry. That's over there. Please come a bit closer.</EventText.tutorial_chef.c9>
-<EventText.tutorial_chef.c10>The pantry is basically the same as the kitchen counter in almost every way, except it doesn't support all installations. For example you can't put an oven in there. But what it lacks in compatibility, it makes up for by offering more storage space. Compared to the kitchen counter, the pantry is water proof so you won't need to worry about water sensitive things reacting, if your submarine ends up flooding.</EventText.tutorial_chef.c10>
-<EventText.tutorial_chef.c11>Here we've got a blender. Perfect for making glasses of all kinds of juice or shred someone's ID card, haha!</EventText.tutorial_chef.c11>
+<EventText.tutorial_chef.c9>Speaking of the pantry. Please come over to the left.</EventText.tutorial_chef.c9>
+<EventText.tutorial_chef.c10>The pantry is basically the same as the kitchen counter in almost every way, except it doesn't support all installations. For example you can't put an oven in there. But what it lacks in compatibility, it makes up for by offering more storage space.</EventText.tutorial_chef.c10>
+<EventText.tutorial_chef.c11>Here we've got a blender. Perfect for making glasses of all kinds of juice and cocktails.</EventText.tutorial_chef.c11>
 <EventText.tutorial_chef.c12>This is an electric grill. Technically you can also grill something in a pan on a stove, but the grill allows for larger quantities grilled at once. Simply put what you want to grill onto it and wait, but don't forget to check regularly and take it off the grill before it burns!</EventText.tutorial_chef.c12>
-<EventText.tutorial_chef.c13>We also have a fryer, but I think it's still in the storage room. We'll set it up later, but basically it functions like the grill, except for frying food. You will need oil in the fryer to fry stuff, obviously. Just make sure to not accidentally pour water into the hot fryer oil or you get an unpleasant surprise!</EventText.tutorial_chef.c13>
+<EventText.tutorial_chef.c13>Looks like the fryer is still in the storage room, we'll set it up later. You will need oil in the fryer to fry stuff, obviously.</EventText.tutorial_chef.c13>
 <EventText.tutorial_chef.c14>Here's the oven. With it you'll do baking and roasting. Not much else to say about it.</EventText.tutorial_chef.c14>
-<EventText.tutorial_chef.c15>This is the stove. You'll need a pot for cooking and a pan for frying. Without those the stove is basically useless, so make sure to put them on there. You can also put a kettle on there and brew some tea.</EventText.tutorial_chef.c15>
-<EventText.tutorial_chef.c16>With the sink you'll be hand-washing dirty dishes and pots or refill bottles and pots with water. Keep in mind to clean things you'll also need a cleaning agent like ethanol.</EventText.tutorial_chef.c16>
-<EventText.tutorial_chef.c17>On the cutting board you'll be chopping all the ingredients into shape and finalize some dishes. Make sure to stay on the chopping. It's not going to magically continue chopping if you walk away!</EventText.tutorial_chef.c17>
+<EventText.tutorial_chef.c15>This is the stove. You need a pot for boiling and a pan for searing. You can also use a kettle to brew some tea.</EventText.tutorial_chef.c15>
+<EventText.tutorial_chef.c16>With the sink you'll be refilling bottles and pots, as well as hand-washing dirty dishes using a cleaning agent such as ethanol.</EventText.tutorial_chef.c16>
+<EventText.tutorial_chef.c17>And finally, the cutting board. There you'll be chopping all the ingredients into shape and finalize some dishes. The knife is not going to magically continue slicing if you walk away!</EventText.tutorial_chef.c17>
 <EventText.tutorial_chef.c18>Oh hold on a second... I believe I heard a door. I think Someone is coming. Maybe your first customer?</EventText.tutorial_chef.c18>
 <EventText.tutorial_chef.hungryashell>Hey chef, when can we expect some meals? I'm hungry as hell!</EventText.tutorial_chef.hungryashell>
 <EventText.tutorial_chef.whattoeat>No worries! We will have some meals prepared in just a moment. What would you like to eat?</EventText.tutorial_chef.whattoeat>
@@ -125,8 +106,8 @@
 <EventText.tutorial_chef.c23>Ok, now we'll need to make some dough to create pasta from. Go ahead and grab the flour, the salt, a sea yeast shroom and a bottle of water from the kitchen counter.</EventText.tutorial_chef.c23>
 <EventText.tutorial_chef.c24>Wonderful! Go ahead and use them to prepare some dough at the cutting board.</EventText.tutorial_chef.c24>
 <EventText.tutorial_chef.c25>Very good! Now also at the cutting board you can make some pasta from that dough.</EventText.tutorial_chef.c25>
-<EventText.tutorial_chef.c26>I see you've got quite the talent! We will also need some meat, but it looks like we ran fresh out of it. We'll have to butcher a crawler to get some fresh meat. Here, take my spare cleaver and follow me.</EventText.tutorial_chef.c26>
-<EventText.tutorial_chef.c27>Here we are. In here you'll find a crawler. Kill it, then slash your meat cleaver on its corpse to harvest meat. If you start hearing a strange noise, you've harvested all the meat.</EventText.tutorial_chef.c27>
+<EventText.tutorial_chef.c26>You're getting the hang of it! Now we need meat. Unfortunately our stock is empty, so we'll have to butcher a creature to get some fresh meat. Here, take my spare cleaver and follow me.</EventText.tutorial_chef.c26>
+<EventText.tutorial_chef.c27>Down there you'll find a crawler. Kill it, then slash your meat cleaver on its corpse to harvest meat. If you start hearing a strange noise, it means you've harvested all the meat.</EventText.tutorial_chef.c27>
 <EventText.tutorial_chef.c28>Very well done! Please follow me back to the kitchen so we can proceed with the meal preparation.</EventText.tutorial_chef.c28>
 <EventText.tutorial_chef.c29>Time to chop the meat into smaller pieces! Use the cutting board to prepare some raw crawler meat which we will be using for the minceballs.</EventText.tutorial_chef.c29>
 <EventText.tutorial_chef.c30>Now it is time to start cooking! Grab an empty plate and a bottle of ketchup from the kitchen counter and put all your ingredients into the stove, then start cooking.</EventText.tutorial_chef.c30>
@@ -138,26 +119,25 @@
 <EventText.tutorial_chef..o1.o1>Oh, my bad! Let me go grab it real quick. I'll be right back!</EventText.tutorial_chef..o1.o1>
 <EventText.tutorial_chef..o2>Sorry, I need a bit more time</EventText.tutorial_chef..o2>
 <EventText.tutorial_chef..o2.c1>Ugh, fine! But please hurry! I'm starving...</EventText.tutorial_chef..o2.c1>
-<EventText.tutorial_chef.c33>Another satisfied customer! I think I hear someone. It might be the delivery guy...</EventText.tutorial_chef.c33>
-
-<EventText.tutorial_chef.hungryashell>Hey Booger, I got your delivery! Shall I stock up for you?</EventText.tutorial_chef.hungryashell>
-<EventText.tutorial_chef.hungryashell>Oh hey! Yes please, that would be great!</EventText.tutorial_chef.hungryashell>
-<EventText.tutorial_chef.hungryashell>Alright. I believe this goes here....</EventText.tutorial_chef.hungryashell>
-<EventText.tutorial_chef.hungryashell>Hmm... These plates are dirty. I think they mixed something up during packaging... I'm very sorry! I'll take them back and bring the new ones next time.</EventText.tutorial_chef.hungryashell>
-<EventText.tutorial_chef.hungryashell>If that's ok with you? I'll leave them here then. Have a pleasant day you two!</EventText.tutorial_chef.hungryashell>
-<EventText.tutorial_chef.hungryashell>Thanks! You too!</EventText.tutorial_chef.hungryashell>
-
-<EventText.tutorial_chef.c34>That was Johnny Beaver Boob. He used to be my apprentice and we got up to some silly things like convincing our colleague Polly Crackle it is in her best interest to get her limbs removed, haha... hah... Sounds a bit messed up when I say it out loud... Hmm.</EventText.tutorial_chef.c34>
-<EventText.tutorial_chef.c35>Well, we've got some more supplies now which is great for your training! I'm starting to get pekish, so your next task is to make me 3x Fried Hammerhead Spawn.</EventText.tutorial_chef.c35>
-<EventText.tutorial_chef.c36>For this you will need a fryer and a wire. We should still have one of each out in the hallway. Please go and bring them here.</EventText.tutorial_chef.c36>
-<EventText.tutorial_chef.c37>Very good! Now simply plug the fryer installation into the kitchen counter to install it.</EventText.tutorial_chef.c37>
+<EventText.tutorial_chef.c33>Another satisfied customer! I think I heard the door open. It might be the delivery guy...</EventText.tutorial_chef.c33>
+<EventText.tutorial_chef.heybooger>Hey Booger, I got your delivery! Shall I stock up for you?</EventText.tutorial_chef.heybooger>
+<EventText.tutorial_chef.yesplease>Oh hey! Yes please, that would be great!</EventText.tutorial_chef.yesplease>
+<EventText.tutorial_chef.thisgoeshere>Alright. I believe this goes here....</EventText.tutorial_chef.thisgoeshere>
+<EventText.tutorial_chef.dirtyplates>Hmm... These plates are dirty. I think something spilled during transport... I'm very sorry! I'll take them back and bring clean ones next time.</EventText.tutorial_chef.dirtyplates>
+<EventText.tutorial_chef.leaveplateshere>It's ok. Leave them here, we will clean them later.</EventText.tutorial_chef.leaveplateshere>
+<EventText.tutorial_chef.leavedelivery>That's ok with you? I'll leave them here then. Have a pleasant day you two!</EventText.tutorial_chef.leavedelivery>
+<EventText.tutorial_chef.goodbye>Thanks! You too!</EventText.tutorial_chef.goodbye>
+<EventText.tutorial_chef.c34>That was Johnny Beaver Boob. He used to be my apprentice back in the day. We got up to some silly antics like convincing our colleague Polly it was in her best interest to get her limbs removed, haha... hah... Sounds a bit messed up when I say it out loud... Hmm.</EventText.tutorial_chef.c34>
+<EventText.tutorial_chef.c35>Well, we've got some more supplies now which is great for your training! I'm starting to get peckish, so your next task is to make me three Fried Hammerheads.</EventText.tutorial_chef.c35>
+<EventText.tutorial_chef.c36>For this you will need a fryer and a wire. You should find these in the hallway. Please go and bring them here.</EventText.tutorial_chef.c36>
+<EventText.tutorial_chef.c37>Very good! Now simply insert the box into the kitchen counter to install it.</EventText.tutorial_chef.c37>
 <EventText.tutorial_chef.c38>Perfect! Now you must connect it with the wire. You can hook it up directly to the kitchen counter. Here, take this screwdriver.</EventText.tutorial_chef.c38>
 <EventText.tutorial_chef.c39>Ok, now we can use the fryer. Go ahead and grab the cooking oil from the kitchen counter and 3 hammerhead spawns from the refrigerator.</EventText.tutorial_chef.c39>
 <EventText.tutorial_chef.c40>Good, now put them all into the fryer and don't forget to turn it on. Then we'll wait for it to fry.</EventText.tutorial_chef.c40>
 <EventText.tutorial_chef.c41>Seems like they're done. Time to get them out before they burn.</EventText.tutorial_chef.c41>
 <EventText.tutorial_chef.c42>Very good! Please give them to me, I've gotten quite hungry.</EventText.tutorial_chef.c42>
 <EventText.tutorial_chef..o3>Here you go</EventText.tutorial_chef..o3>
-<EventText.tutorial_chef.c43>Ah, that hit the spot! But it made quite thirsty. You look quite thirsty too, actually...</EventText.tutorial_chef.c43>
+<EventText.tutorial_chef.c43>Ah, that hit the spot! But it made thirsty. You look quite thirsty too, actually...</EventText.tutorial_chef.c43>
 <EventText.tutorial_chef.c44>Here, take these bottles and fill them at the sink. The sink has a built-in filter so the water is safe for consumption.</EventText.tutorial_chef.c44>
 <EventText.tutorial_chef.c45>Fresh, cold water. Please hand me a bottle.</EventText.tutorial_chef.c45>
 <EventText.tutorial_chef..o4>Here you go...</EventText.tutorial_chef..o4>
