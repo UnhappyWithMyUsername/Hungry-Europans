@@ -77,12 +77,39 @@
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c4" targettag="player">
         <Option text="EventText.tutorial_chef.o1">
           <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o1.c1" targettag="player" />
+          <GoTo name="continuecheftutorial" />
         </Option>
         <Option text="EventText.tutorial_chef.o2">
           <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o2.c1" targettag="player" />
           <GoTo name="skip_kitchenexplanations" />
         </Option>
+        <Option text="EventText.tutorial_chef.o3">
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o3.c1" targettag="player" />
+          <!-- load in secondary tutorials -->
+          <TriggerEventAction identifier="tutorial_botany" />
+          <TriggerEventAction identifier="tutorial_brewery" />
+          <TriggerEventAction identifier="tutorial_recroom" />
+          <TriggerEventAction identifier="tutorial_bathroom" />
+          <TriggerEventAction identifier="tutorial_cleaning" />
+        </Option>
       </ConversationAction>
+      <Label name="pausecheftutorial" />
+      <NPCWaitAction npctag="masterchef" wait="true" />
+      <TriggerAction target1tag="masterchef" target2tag="player" radius="300" waitforinteraction="true" />
+      <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.resume" targettag="player">
+        <Option text="EventText.tutorial_chef.o1">
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o1.c1" targettag="player" />
+          <GoTo name="continuecheftutorial" />
+        </Option>
+        <Option text="EventText.tutorial_chef.o2">
+          <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o2.c1" targettag="player" />
+          <GoTo name="skip_kitchenexplanations" />
+        </Option>
+        <Option text="EventText.tutorial_chef.o3.2">
+          <GoTo name="pausecheftutorial" />
+        </Option>
+      </ConversationAction>
+      <Label name="continuecheftutorial" />
       <!-- explain refrigerator -->
       <NPCFollowAction npctag="masterchef" targettag="tutorialfridge" follow="true" AbandonOnReset="false" ForceWalk="true" />
       <TutorialHighlightAction state="true" targettag="tutorialfridge" />
@@ -552,7 +579,7 @@
       <WaitAction time="3" />
       <!-- have the delivery guy restock the refrigerator -->
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialfridge" ItemComponentName="Controller" Operate="true" />
-      <ForceSayAction message="EventText.tutorial_chef.hungryashell" targettag="deliveryguy"/>
+      <ForceSayAction message="EventText.tutorial_chef.thisgoeshere" targettag="deliveryguy"/>
       <WaitAction time="2" />
       <SpawnAction ItemIdentifier="he-hammerheadspawnmeatchunk" TargetTag="tutorialhammerheadspawnmeatchunk" TargetInventory="tutorialfridge" Amount="6" />
       <WaitAction time="1" />
@@ -563,7 +590,7 @@
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialfridge" ItemComponentName="Controller" Operate="false" />
       <!-- have the delivery guy restock the kitchen counter -->
       <NPCOperateItemAction NPCTag="deliveryguy" TargetTag="tutorialkitchencounter" ItemComponentName="Controller" Operate="true" />
-      <ForceSayAction message="And this stuff goes here..." targettag="deliveryguy"/>
+      <ForceSayAction message="EventText.tutorial_chef.thatgoesthere" targettag="deliveryguy"/>
       <WaitAction time="1" />
       <SpawnAction ItemIdentifier="he-seaweed" TargetTag="tutorialseaweed" TargetInventory="tutorialkitchencounter" Amount="1" />
       <WaitAction time="1" />
@@ -861,13 +888,21 @@
       <!-- cafeteria tutorial (buy plated food, eat, return dirty dishes) -->
       <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
+      <Label name="tempskip" />
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c46" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
-      <!-- load in secondary tutorials -->
-      <TriggerEventAction identifier="tutorial_botany" />
-      <TriggerEventAction identifier="tutorial_brewery" />
-      <TriggerEventAction identifier="tutorial_recroom" />
-      <TriggerEventAction identifier="tutorial_bathroom" />
+      <TagAction criteria="bot" tag="bot" />
+      <CountTargetsAction targettag="bot" minamount="4">
+        <Success />
+        <Failure>
+          <!-- load in secondary tutorials -->
+          <TriggerEventAction identifier="tutorial_botany" />
+          <TriggerEventAction identifier="tutorial_brewery" />
+          <TriggerEventAction identifier="tutorial_recroom" />
+          <TriggerEventAction identifier="tutorial_bathroom" />
+          <TriggerEventAction identifier="tutorial_cleaning" />
+        </Failure>
+      </CountTargetsAction>
       <!-- <TutorialCompleteAction /> -->
     </ScriptedEvent>
     
@@ -1443,7 +1478,7 @@
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c7" />
       <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" ContinueConversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c8" />
       <AfflictionAction targettag="player" affliction="hygiene" strength="31" />
-      <EventObjectiveAction type="add" id="tutorial_HE.objective.washwishsoap" />
+      <EventObjectiveAction type="add" id="tutorial_HE.objective.washwithsoap" />
       <TutorialHighlightAction state="true" targettag="bathroomcabinet" />
       <StatusEffectAction targettag="bathroomcabinet">
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
@@ -1457,10 +1492,27 @@
           <GoTo name="checkforcleaned2" />
         </Failure>
       </CheckConditionalAction>
-      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.washwishsoap" />
-      <TutorialHighlightAction state="false" targettag="bathroomcabinet" />"
-      /&gt;      
-      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c9" /><StatusEffectAction targettag="bathroomdoor"><StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" /></StatusEffectAction><TriggerAction target1tag="player" target2tag="bathroomguy" radius="300" type="outside" waitforinteraction="false" /></ScriptedEvent>
+      <EventObjectiveAction type="completeandremove" id="tutorial_HE.objective.washwithsoap" />
+      <TutorialHighlightAction state="false" targettag="bathroomcabinet" />
+      <ConversationAction Forcesay="true" SpeakerTag="bathroomguy" Waitforinteraction="false" IgnoreInterruptDistance="true" endconversation="True" eventsprite="mechanic" dialogtype="regular" text="EventText.tutorial_bathroom.c9" />
+      <StatusEffectAction targettag="bathroomdoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
+      </StatusEffectAction>
+      <TriggerAction target1tag="player" target2tag="bathroomguy" radius="300" type="outside" waitforinteraction="false" />
+    </ScriptedEvent>
+
+    <ScriptedEvent identifier="tutorial_cleaning">
+      <!-- empty event which gets overridden by the Cleanup Duty Add-On to add the cleaning tutorial only if it's enabled -->
+
+      <!-- \\\\\ pre-tagged items in the tutorialkitchen.sub /////-->
+      <!-- cleaningdoor - use to open access to tutorial area -->
+      <!-- cleanupchair - use to spawn and seat the tutorial npc -->
+      <!-- foodwastespawn - make it remove itself and spawn food waste spots to clean in its place -->
+      <!-- pukespawn - make it remove itself and spawn puke to clean in its place -->
+      <!-- bucketspawn - make it remove itself and spawn bucket with mop in its place -->
+      <!-- tutorialrelay - require to hook up to washing machine -->
+      <!-- tutorialtrashcan - placeholder for now in case I want to use it at some point -->
+    </ScriptedEvent>
   </EventPrefabs>
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
