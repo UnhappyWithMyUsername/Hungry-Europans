@@ -29,7 +29,6 @@
       <TagAction criteria="itemtag:tutorialpotholder" tag="tutorialpotholder" />
       <TagAction criteria="itemtag:tutorialpan" tag="tutorialpan" />
       <TagAction criteria="itemtag:brewkettle" tag="tutorialbrewingkettle" />
-      <TagAction criteria="itemtag:distiller" tag="tutorialdistifermenter" />
       <TagAction criteria="itemtag:bottleprinter" tag="tutorialbottleprinter" />
       <TagAction criteria="itemtag:hydroponicplanter" tag="tutorialhydroponics" />
       <TagAction criteria="itemtag:cafeteria" tag="tutorialcafeteria" />
