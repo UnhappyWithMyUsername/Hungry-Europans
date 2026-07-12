@@ -38,7 +38,7 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
         </StatusEffect>
         <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
-        <StatusEffect type="OnActive" target="This" holdpos="25,24" holdangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <StatusEffect type="OnActive" target="This" holdpos="8,-30" holdangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
         <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottle" />
@@ -62,6 +62,26 @@
           <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
         </StatusEffect>
       </Holdable>
+    </Item>
+    
+    <!-- from Cleanup Duty add-on | simplified version | in here to be able to place it into the tutorial -->
+    <Item name="" identifier="op_towellocker" tags="towelstorage" width="107" height="236" scale="0.5" noninteractable="false" category="Misc" subcategory="generic" waterproof="true" isshootable="true" requireaimtouse="true" impactsoundtag="impact_metal_heavy" GrabWhenSelected="true">
+      <Upgrade gameversion="2.0.0.0" noninteractable="false" />
+      <sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="177,619,107,236" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <Body width="100" height="230" density="20" bodytype="static" />
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="50,-30" handle1="-40,35" handle2="50,35" holdangle="-5" aimangle="-5" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="60,-60" attachable="true" aimable="false" AttachesToFloor="true" attachedbydefault="true" DisallowAttachingOverTags="kitchencounter,towelstorage,washingmachine">
+        <RequiredItem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.2" />
+        <StatValue stattype="SwimmingSpeed" value="-0.4" />
+      </Holdable>
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="8" maxstacksize="1" slotsperrow="2" hideitems="true" autofill="true">
+        <GuiFrame relativesize="0.2,0.5" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
+        <Containable items="clothing,towel" />
+      </ItemContainer>
     </Item>
   </Items>
 </Override>
