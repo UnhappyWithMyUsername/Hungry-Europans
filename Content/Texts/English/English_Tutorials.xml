@@ -34,16 +34,16 @@
 <tutorial_HE.objective.removekeg>Remove the empty keg</tutorial_HE.objective.removekeg>
 <tutorial_HE.objective.putkeginhydroponics>Put the sea water keg inside the Hydroponic planter</tutorial_HE.objective.putkeginhydroponics>
 <tutorial_HE.objective.turnonsprinkler>Turn the automated sprinkler on.</tutorial_HE.objective.turnonsprinkler>
-<tutorial_HE.objective.fillkegpool>Grab the keg and fill it with water from the pool</tutorial_HE.objective.fillkegpool>
+<tutorial_HE.objective.fillkegpool>Grab the keg and fill it with water from the pool (Hold [Aim] in water)</tutorial_HE.objective.fillkegpool>
 <tutorial_HE.objective.keginbrewing>Put the keg inside the brewing kettle</tutorial_HE.objective.keginbrewing>
 <tutorial_HE.objective.brewbeer>Brew a keg of Coalition Premium</tutorial_HE.objective.brewbeer>
 <tutorial_HE.objective.loadrefill>Load the refill station with the keg of beer</tutorial_HE.objective.loadrefill>
 <tutorial_HE.objective.grabglass>Grab some glass fragments from the cabinet</tutorial_HE.objective.grabglass>
 <tutorial_HE.objective.glassinprinter>Put the fragments inside the bottle printer</tutorial_HE.objective.glassinprinter>
 <tutorial_HE.objective.printbottles>Print 3 beer bottles</tutorial_HE.objective.printbottles>
-<tutorial_HE.objective.pourbottles>Pour 3 bottles of COalition Premium</tutorial_HE.objective.pourbottles>
+<tutorial_HE.objective.pourbottles>Pour 3 bottles of Coalition Premium</tutorial_HE.objective.pourbottles>
 <tutorial_HE.objective.leavebeer>Leave a beer on the table</tutorial_HE.objective.leavebeer>
-<tutorial_HE.objective.sleepinbed>Sleep in the bad to reduce your fatigue</tutorial_HE.objective.sleepinbed>
+<tutorial_HE.objective.sleepinbed>Sleep in the bed to reduce your fatigue</tutorial_HE.objective.sleepinbed>
 <tutorial_HE.objective.playguitar>Reduce your stress by playing the guitar</tutorial_HE.objective.playguitar>
 <tutorial_HE.objective.eathotdog>Eat the hotdog to satisfy your craving and reduce stress</tutorial_HE.objective.eathotdog>
 <tutorial_HE.objective.drinkforstress>Get drunk to reduce your stress</tutorial_HE.objective.drinkforstress>
@@ -76,11 +76,15 @@
 <EventText.tutorial_chef.c1>Ah hello there! You must be the new chef? Welcome!</EventText.tutorial_chef.c1>
 <EventText.tutorial_chef.c2>I'm chef Booger and I'll be teaching you how to keep your crew fed, but there's all kinds of folk around the station that can teach you things!</EventText.tutorial_chef.c2>
 <EventText.tutorial_chef.c3>I'll be heading to the kitchen upstairs. You can meet me there if you want to start learning about preparing meals and other basic kitchen tasks.</EventText.tutorial_chef.c3>
-<EventText.tutorial_chef.c4>Welcome to the kitchen! We will go over the equipment first, unless you're already familiar with cooking?</EventText.tutorial_chef.c4>
+<EventText.tutorial_chef.c4>Welcome to the kitchen! We will go over the equipment first, unless you're already familiar with kitchen appliances and ready to cook?</EventText.tutorial_chef.c4>
 <EventText.tutorial_chef.o1>No, please explain.</EventText.tutorial_chef.o1>
 <EventText.tutorial_chef.o1.c1>Gladly! Alright so...</EventText.tutorial_chef.o1.c1>
 <EventText.tutorial_chef.o2>Yes, I'm already familiar. No need to explain.</EventText.tutorial_chef.o2>
 <EventText.tutorial_chef.o2.c1>Very well! Let's not waste time then and onto the next lesson!</EventText.tutorial_chef.o2.c1>
+<EventText.tutorial_chef.o3>I think I'd like to learn about other things first.</EventText.tutorial_chef.o3>
+<EventText.tutorial_chef.o3.c1>Oh... Sure, that's fine too! Go have a look around the station. I'll be here when you want to start learning how to cook.</EventText.tutorial_chef.o3.c1>
+<EventText.tutorial_chef.resume>Ah, you're back! Ready to learn about all things kitchen? I'll go over the equipment first, unless you're already familiar with kitchen appliances and ready to cook?</EventText.tutorial_chef.resume>
+<EventText.tutorial_chef.o3.2>Sorry, I didn't mean to talk to you yet. I'll be back later...</EventText.tutorial_chef.o3.2>
 <EventText.tutorial_chef.c5>This is the refrigerator! It'll keep raw meat from spoiling and ice cream from melting. I've heard about desperate medics even storing organs in there to prevent them from decaying!</EventText.tutorial_chef.c5>
 <EventText.tutorial_chef.c6>The refrigerator has an integrated backup-power battery which will last for several minutes during a power outage. Once the backup-power battery is drained, the contents inside the refrigerator will start to spoil. Should you ever run into a power outage, make sure to restore power before the battery runs out.</EventText.tutorial_chef.c6>
 <EventText.tutorial_chef.c7>Here we have the kitchen counter. Should be in every kitchen. In there you can store whatever you need for meal preparation. It is also where you'll install and uninstall your appliances. It comes with power connectors so you can wire newly installed equipment directly to it.</EventText.tutorial_chef.c7>
@@ -123,6 +127,7 @@
 <EventText.tutorial_chef.heybooger>Hey Booger, I got your delivery! Shall I stock up for you?</EventText.tutorial_chef.heybooger>
 <EventText.tutorial_chef.yesplease>Oh hey! Yes please, that would be great!</EventText.tutorial_chef.yesplease>
 <EventText.tutorial_chef.thisgoeshere>Alright. I believe this goes here....</EventText.tutorial_chef.thisgoeshere>
+<EventText.tutorial_chef.thatgoesthere>And this stuff goes here...</EventText.tutorial_chef.thatgoesthere>
 <EventText.tutorial_chef.dirtyplates>Hmm... These plates are dirty. I think something spilled during transport... I'm very sorry! I'll take them back and bring clean ones next time.</EventText.tutorial_chef.dirtyplates>
 <EventText.tutorial_chef.leaveplateshere>It's ok. Leave them here, we will clean them later.</EventText.tutorial_chef.leaveplateshere>
 <EventText.tutorial_chef.leavedelivery>That's ok with you? I'll leave them here then. Have a pleasant day you two!</EventText.tutorial_chef.leavedelivery>
@@ -142,20 +147,20 @@
 <EventText.tutorial_chef.c45>Fresh, cold water. Please hand me a bottle.</EventText.tutorial_chef.c45>
 <EventText.tutorial_chef..o4>Here you go...</EventText.tutorial_chef..o4>
 <EventText.tutorial_chef..o4.c1>Thanks, now go ahead and drink yours too. Hydration is important!</EventText.tutorial_chef..o4.c1>
-<EventText.tutorial_chef.c46>Looks like you're ready to feed a whole crew! Of course, there's more to being a chef than just cooking. Visit my colleagues in their respective rooms and they'll gladly teach you a thing or two.</EventText.tutorial_chef.c46>
+<EventText.tutorial_chef.c46>Looks like you're ready to feed a whole crew! Of course, there's more to being a chef than just cooking. Visit my colleagues in their respective rooms if you haven't yet and they'll gladly teach you a thing or two.</EventText.tutorial_chef.c46>
 <EventText.tutorial_recroom.c1>Hey I'm not slacking off okay? Just finished my shift at the red nose factory. Everyone deserves some rest and recreation. Do you never take time off?</EventText.tutorial_recroom.c1>
 <EventText.tutorial_recroom.c2>Good. They say a happy fellow is a productive employee. If you never take a break, you'll get stressed, make mistakes, and even fall asleep from exhaustion.</EventText.tutorial_recroom.c2>
 <EventText.tutorial_recroom.c3>Speaking of which, you look paler than a clown. You probably should take a nap. Don't just lie down, actually close your eyes and sleep those bags off your face. </EventText.tutorial_recroom.c3>
 <EventText.tutorial_recroom.c4>Damn, you're a snorer. Hey, a quick joke for you: why did the crawler not eat the clown? Because he tasted funny!</EventText.tutorial_recroom.c4>
 <EventText.tutorial_recroom.c5>Tough crowd... Why are you frowning? I'm no doctor, but I can sense your cortisol spiking. Try playing the guitar over there, I hear music soothes the nerves.</EventText.tutorial_recroom.c5>
 <EventText.tutorial_recroom.c6>See, you feel better already! How about Hotdogs? Do you like Hotdogs? I can see it on your face, it's your favorite food! Here, grab the one on the table, it's my treat.</EventText.tutorial_recroom.c6>
-<EventText.tutorial_recroom.c7>I knew you'd enjoy the meal. Now, wanna see a magic trick? I'll make this stress disappear! ...with alcohol. The magic is alcohol. Just can just drink your stress away. I left you a rum bottle. Bottoms up!</EventText.tutorial_recroom.c7>
+<EventText.tutorial_recroom.c7>I knew you'd enjoy the meal. Now, wanna see a magic trick? I'll make this stress disappear! ...with alcohol. The magic is alcohol. You can just drink your stress away. I left you a bottle of rum. Bottoms up!</EventText.tutorial_recroom.c7>
 <EventText.tutorial_recroom.c8>You're not walking right, which tells me you must be enjoying yourself. I've got nothing left to teach you, that's a job for the professors at the clown college. Now if you don't mind, I need to hone my honks.</EventText.tutorial_recroom.c8>
 <EventText.tutorial_bathroom.c1>Hey settle down, I'm almost done here! What do you want?</EventText.tutorial_bathroom.c1>
 <EventText.tutorial_bathroom.o1>I'm in a hurry.</EventText.tutorial_bathroom.o1>
 <EventText.tutorial_bathroom.o2>My bad.</EventText.tutorial_bathroom.o2>
 <EventText.tutorial_bathroom.c2>There, I'm finished. The throne's all yours. Don't look at me like that, do you also need me to explain how to do the deed?</EventText.tutorial_bathroom.c2>
-<EventText.tutorial_bathroom.c3>Not only I can hear you from over here, but I can also smell you... When was the last time you took a bath?</EventText.tutorial_bathroom.c3>
+<EventText.tutorial_bathroom.c3>Not only can I hear you from over here, but I can also smell you... When was the last time you took a bath?</EventText.tutorial_bathroom.c3>
 <EventText.tutorial_bathroom.c4>Wait, do you hear this?</EventText.tutorial_bathroom.c4>
 <EventText.tutorial_bathroom.c5>Did you just drop a depth charge in there? Can't believe I was about to drown in a bathroom...</EventText.tutorial_bathroom.c5>
 <EventText.tutorial_bathroom.c6>Seems like the room is on lockdown... Take that opportunity to wash that grime off yourself. Take your clothes off, the water should clean the gunk away, no need to scrub.</EventText.tutorial_bathroom.c6>
