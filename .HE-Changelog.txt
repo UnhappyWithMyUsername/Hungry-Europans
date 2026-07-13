@@ -25,13 +25,13 @@ Important TODO:
 //////////////////////
 //////////////////////
 
-[hr]XX/07/2026[/hr]
+[hr]13/07/2026[/hr]
 
 Tutorial Update
 
 [b]Additions:[/b]
 [List]
-[*] Added a tutorial for the chef job, also covering NEEDS (hungry/filthy/sleepy/moody)
+[*] Added a tutorial for the chef job, also explaining NEEDS (hungry/filthy/sleepy/moody)
 [/List]
 
 [b]Changes:[/b] 
