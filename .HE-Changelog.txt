@@ -38,6 +38,8 @@ Tutorial Update
 [List]
 [*] Cooler crates are now fireproof as long as they are powered
 [*] Improved cooking oil compatibility with Immersive Repairs, increase fryer oil consumption to match
+[*] Withdrawal (opiate, chem, alcohol, tobacco...) increases stress gained per second
+[*] Improved fabricator UIs by removing sorting buttons
 [/List]
 
 [b]Fixes:[/b] 
@@ -70,7 +72,7 @@ LIST OF FOODS IDEAS:
 - More Offal recipes
 - More Mushroom recipes? add a cooked mushroom item to not use an entire yeast shroom per meal
 - Recipe for Mutated Popnut
-
+- Dr Happy's vitamins (blender recipe made of scurrywags)
 
 LongTermPlans:
 - Canned food. Canned food from earth, requires can opener or knife to open. Give up on canned ingredients and just add canned meals.
