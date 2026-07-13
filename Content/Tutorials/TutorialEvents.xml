@@ -889,7 +889,7 @@
       <!-- cafeteria tutorial (buy plated food, eat, return dirty dishes) -->
       <!-- dishwasher tutorial (unpack a dishwasher tablet, insert dirty dishes, turn on dishwasher, collect clean dishes) -->
       <!-- Add-On exclusive - cleaning tutorial (clean food waste with mop, wash clothes, take a shower) -->
-      <Label name="tempskip" />
+      <!-- <Label name="tempskip" /> -->
       <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.c46" targettag="player" />
       <NPCFollowAction npctag="masterchef" targettag="player" follow="false" AbandonOnReset="false" ForceWalk="true" />
       <TagAction criteria="bot" tag="bot" />
@@ -1504,6 +1504,12 @@
     </ScriptedEvent>
 
     <ScriptedEvent identifier="tutorial_cleaning">
+      <TagAction criteria="player" tag="player" />  
+      <!-- <TagAction criteria="itemtag:cleaningdoor" tag="cleaningdoor" />
+      <StatusEffectAction targettag="leavetutorialdoor">
+        <StatusEffect target="This" noninteractable="false" spritecolor="255,255,255,255" shouldbeopen="true" setvalue="true" />
+      </StatusEffectAction> -->  
+      
       <!-- empty event which gets overridden by the Cleanup Duty Add-On to add the cleaning tutorial only if it's enabled -->
 
       <!-- \\\\\ pre-tagged items in the tutorialkitchen.sub /////-->
@@ -1519,7 +1525,7 @@
     
 
     <ScriptedEvent identifier="tutorial_leave">
-      <TagAction criteria="player" tag="player" />    
+      <TagAction criteria="player" tag="player" />
       <TagAction criteria="itemtag:leavetutorialdoor" tag="leavetutorialdoor" />
       <StatusEffectAction targettag="leavetutorialdoor">
         <StatusEffect target="This" noninteractable="false" setvalue="true"/>
