@@ -86,6 +86,7 @@
         <Option text="EventText.tutorial_chef.o3">
           <ConversationAction ForceSay="true" EndEventIfInterrupted="false" IgnoreInterruptDistance="true" ContinueAutomatically="false" WaitForInteraction="false" SpeakerTag="masterchef" eventsprite="masterchef" dialogtype="regular" text="EventText.tutorial_chef.o3.c1" targettag="player" />
           <!-- load in secondary tutorials -->
+          <TriggerEventAction identifier="tutorial_leave" />
           <TriggerEventAction identifier="tutorial_botany" />
           <TriggerEventAction identifier="tutorial_brewery" />
           <TriggerEventAction identifier="tutorial_recroom" />
@@ -896,6 +897,7 @@
         <Success />
         <Failure>
           <!-- load in secondary tutorials -->
+          <TriggerEventAction identifier="tutorial_leave" />
           <TriggerEventAction identifier="tutorial_botany" />
           <TriggerEventAction identifier="tutorial_brewery" />
           <TriggerEventAction identifier="tutorial_recroom" />
@@ -1513,7 +1515,61 @@
       <!-- tutorialrelay - require to hook up to washing machine -->
       <!-- tutorialtrashcan - placeholder for now in case I want to use it at some point -->
     </ScriptedEvent>
+    
+    
+
+    <ScriptedEvent identifier="tutorial_leave">
+      <TagAction criteria="player" tag="player" />    
+      <TagAction criteria="itemtag:leavetutorialdoor" tag="leavetutorialdoor" />
+      <StatusEffectAction targettag="leavetutorialdoor">
+        <StatusEffect target="This" noninteractable="false" setvalue="true"/>
+      </StatusEffectAction>
+      <Label name="goback" />
+      <WaitAction time="1" />
+      <TriggerAction target1tag="leavetutorialdoor" target2tag="player" radius="300" waitforinteraction="true" />
+      <Label name="exitprompt" />
+      <ConversationAction text="tutorial.recap.leavetutorial" eventsprite="noteopened" dialogtype="regular" >
+        <Option text="tutorial.recap.goback">
+          <GoTo name="goback" />
+        </Option>        
+        <Option text="tutorial.recap.learnhunger">
+          <ConversationAction text="tutorial.recap.explainhunger" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
+          <GoTo name="exitprompt" />
+        </Option>
+        <Option text="tutorial.recap.learnhygiene">
+          <ConversationAction text="tutorial.recap.explainhygiene" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
+          <GoTo name="exitprompt" />
+        </Option>
+        <Option text="tutorial.recap.learnfatigue">
+          <ConversationAction text="tutorial.recap.explainfatigue" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
+          <GoTo name="exitprompt" />
+        </Option>
+        <Option text="tutorial.recap.learnstress">
+          <ConversationAction text="tutorial.recap.explainstress" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
+          <GoTo name="exitprompt" />
+        </Option>        
+        <!-- leave and complete tutorial -->
+        <Option text="tutorial.recap.exittutorial" EndConversation="true">
+          <TutorialCompleteAction />
+        </Option>
+      </ConversationAction>
+      
+      
+      
+    </ScriptedEvent>
+    
+    
+    
   </EventPrefabs>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
   <!-- USEFUL TUTORIAL COPY-PASTE THINGS: -->
