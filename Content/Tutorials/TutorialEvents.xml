@@ -1556,9 +1556,8 @@
         </Option>        
         <!-- leave and complete tutorial -->
         <Option text="tutorial.recap.exittutorial" >
-          <ConversationAction text="tutorial.recap.leavetutorial" eventsprite="noteopened" dialogtype="regular" >              
-            <Option text="tutorial.recap.exittutorial" >
-              <ConversationAction text="tutorial.recap.testkitchen" eventsprite="noteopened" dialogtype="regular" EndConversation="true" />
+          <ConversationAction text="tutorial.recap.testkitchen" eventsprite="noteopened" dialogtype="regular" >              
+            <Option text="tutorial.recap.exittutorial" EndConversation="true" >
               <TutorialCompleteAction />
             </Option>          
           </ConversationAction>
