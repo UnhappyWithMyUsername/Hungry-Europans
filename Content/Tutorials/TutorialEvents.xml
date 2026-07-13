@@ -1540,19 +1540,19 @@
         </Option>        
         <Option text="tutorial.recap.learnhunger">
           <ConversationAction text="tutorial.recap.explainhunger" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
-          <GoTo name="exitprompt" />
+          <GoTo name="exitprompt" EndConversation="false"/>
         </Option>
         <Option text="tutorial.recap.learnhygiene">
           <ConversationAction text="tutorial.recap.explainhygiene" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
-          <GoTo name="exitprompt" />
+          <GoTo name="exitprompt" EndConversation="false"/>
         </Option>
         <Option text="tutorial.recap.learnfatigue">
           <ConversationAction text="tutorial.recap.explainfatigue" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
-          <GoTo name="exitprompt" />
+          <GoTo name="exitprompt" EndConversation="false"/>
         </Option>
         <Option text="tutorial.recap.learnstress">
           <ConversationAction text="tutorial.recap.explainstress" eventsprite="noteopened" dialogtype="regular" ContinueConversation="true" />
-          <GoTo name="exitprompt" />
+          <GoTo name="exitprompt" EndConversation="false"/>
         </Option>        
         <!-- leave and complete tutorial -->
         <Option text="tutorial.recap.exittutorial" EndConversation="true">

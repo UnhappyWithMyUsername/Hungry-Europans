@@ -192,8 +192,7 @@
 <tutorial.recap.exittutorial>Exit Tutorial</tutorial.recap.exittutorial>
 
 <tutorial.recap.explainhunger>With Hunger and Thirst enabled, you slowly become hungry and thirsty over time, forcing you to eat and drink regularly.
-Being very hungry and/or thirsty reduces your skills and can potentially kill you.
-You can eat while not hungry and become "stuffed", which will protect you from hunger.
+Being very hungry and/or thirsty reduces your skills and can potentially kill you. Eating while not hungry will protect you from hunger.
 Raw meat will decay over time and disappear after a while if not refrigerated. Eating raw food can make you sick and infect you with parasites.
 You can also gain various nutritional buffs from food; the more complicated the food the better the buffs.
 </tutorial.recap.explainhunger>
@@ -213,6 +212,8 @@ Beds and sleeping also help getting rid of secondary afflictions, such as addict
 Building up too much stress will reduce your skills.
 You can reduce your stress by doing various activities, such as playing an instrument, drinking alcohol, reading a magazine or gambling.
 </tutorial.recap.explainstress>
+
+<!-- ‖color:100,255,100‖green‖end‖ -->
 
 </Override>
 </infotexts>
