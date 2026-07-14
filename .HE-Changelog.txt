@@ -25,6 +25,19 @@ Important TODO:
 //////////////////////
 //////////////////////
 
+[hr]14/07/2026
+
+HOTFIX for Forks and Spoons
+
+[List]
+[*] Fixed accidentally inverting the hand for forks and spoons, while trying to fix a bug in the previous update
+[*] Added loading screen hint about Tutorial
+[/List]
+
+
+---------------------------------------------------------------------------
+
+
 [hr]14/07/2026[/hr]
 
 Tutorial Update
