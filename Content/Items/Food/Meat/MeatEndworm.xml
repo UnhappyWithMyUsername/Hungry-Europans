@@ -128,7 +128,6 @@
           <SpawnItem identifier="he-endwormsausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
         <Containable items="freshness" />
@@ -189,7 +188,6 @@
           <SpawnItem identifier="he-burnedendwormsausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </ItemComponent>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
@@ -223,7 +221,6 @@
           <Fire size="1" />
         </StatusEffect>
       </ItemComponent>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
