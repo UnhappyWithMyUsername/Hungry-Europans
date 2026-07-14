@@ -171,9 +171,8 @@
         </Abilities>
       </AbilityGroupInterval>
       
-      <!-- potentially use this to reduce stress when injecting drugs or something
-      DOES NOT WORK BECAUSE YOU LITERALLY CANNOT TARGET YOURSELF WITH AbilityConditionCharacter WHAT THE ACTUAL FUCK -->
-      <!-- <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <!-- DISABLED potentially reduce stress from clearing withdrawal: injecting a syringe and checking 5 seconds later if withdrawal is below threshold. Doesn't actually seem to work though... -->
+     <!--  <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
         <Conditions>
           <AbilityConditionCharacter invert="true" targettypes="Notself" />
           <AbilityConditionItem tags="syringe" />
@@ -186,10 +185,10 @@
                 <Conditional mood="gte 1" />
                 <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" frequencymultiplier="2.5" />
               </StatusEffect>
-              <StatusEffect type="OnAbility" target="Character" delay="5" duration="10" stackable="false" comparison="And">
+              <StatusEffect type="OnAbility" target="Character" delay="5" duration="10" stackable="false" comparison="And" checkconditionalalways="true">
                 <Conditional mood="gte 1" />
                 <Conditional opiatewithdrawal="lt 20" />
-                <ReduceAffliction identifier="mood" amount="0.5" />
+                <ReduceAffliction identifier="mood" amount="10.5" />
                 <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" frequencymultiplier="0.5" />
               </StatusEffect>
             </StatusEffects>
