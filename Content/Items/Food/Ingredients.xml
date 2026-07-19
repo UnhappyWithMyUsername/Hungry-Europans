@@ -821,6 +821,11 @@
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-seaweed" />
       </Fabricate>
+      <Fabricate suitablefabricators="stove" requiredtime="60" amount="1" outcondition="0.0">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem identifier="he-nori" amount="5" />
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.5"/>
+      </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="40" radius="6" density="10.2" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
