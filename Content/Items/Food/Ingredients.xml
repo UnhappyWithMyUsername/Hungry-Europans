@@ -830,7 +830,7 @@
         <StatusEffect type="InWater" target="This" condition="-1.0" interval="5" stackable="false" disabledeltatime="true" />
         <StatusEffect type="OnContained" target="This" interval="1">
           <Conditional condition="eq 100" />
-          <SpawnItem identifier="he-nori" spawnposition="SameInventory" count="8" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-nori" spawnposition="SameInventory" count="4" SpawnIfInventoryFull="true" />
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" interval="1">
