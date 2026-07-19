@@ -11,6 +11,7 @@
     </ScriptedEvent>
 
     <ScriptedEvent identifier="he-hirechef">
+      <TagAction criteria="player" tag="player" />
       <TagAction criteria="jobidentifier:he-chef" team="team1" tag="playerchef" ContinueIfNoTargetsFound="true" />
       <!-- do not trigger the event if you already have a chef on your crew -->
       <CountTargetsAction targettag="playerchef" MinAmount="1" >
@@ -18,77 +19,84 @@
           <Goto name="end" />
         </Success>
       </CountTargetsAction>
+      <!-- do not trigger the event twice -->
+      <CheckDataAction identifier="hirechefeventtriggered" condition="gt 0" >
+        <Success>
+          <Goto name="end" />
+        </Success>
+      </CheckDataAction>
       <SpawnAction npcsetidentifier="he-hirablenpcs" npcidentifier="regularchef" targettag="hirablechef" spawnlocation="Outpost" spawnpointtype="Path" targetmoduletags="crewmodule" />
-      <TagAction criteria="player" tag="player" />
-        <RNGAction chance="0.5">        
-          <!--Free chef-->
-          <Success>
-            <Label name="restart_free" />
-            <ClearTagAction tag="hc_player" />
-            <WaitAction time="1" />
-            <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="eventtext.he-hirechef.freechef">
-              <Option text="eventtext.he-hirechef.howmuch">
-                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.joinfree" waitforinteraction="false">
-                  <Option text="eventtext.he-hirechef.welcome">
-                    <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.chefhired" waitforinteraction="false"/>
-                    <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
-                    <GoTo name="end" />
-                  </Option>
-                  <Option text="eventtext.he-hirechef.thinkaboutit">
-                    <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
-                    <GoTo name="restart_free" />
-                  </Option>
-                </ConversationAction>
-              </Option>
-              <Option text="eventtext.he-hirechef.nothiring">
-                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
-                <GoTo name="restart_free" />
-              </Option>
-              <Option text="eventtext.he-hirechef.nokitchen">
-                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.buykitchen" waitforinteraction="false"/>
-                <GoTo name="restart_free" />
-              </Option>
-            </ConversationAction>
-          </Success>          
-          <!--Expensive chef-->
-          <Failure>
-            <Label name="restart_expensive" />
-            <ClearTagAction tag="hc_player" />
-            <WaitAction time="1" />
-            <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="eventtext.he-hirechef.expensivechef">
-              <Option text="eventtext.he-hirechef.howmuch">
-                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.joinexpensive" waitforinteraction="false">
-                  <Option text="eventtext.he-hirechef.welcome">
-                    <CheckMoneyAction targettag="hc_player" amount="1250">
-                      <Success>
-                        <MoneyAction targettag="hc_player" amount="-1250" />
-                        <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.chefhired" waitforinteraction="false"/>
-                        <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
-                        <GoTo name="end" />
-                      </Success>
-                      <Failure>
-                        <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.nomoney" waitforinteraction="false"/>
-                        <GoTo name="restart_expensive" />
-                      </Failure>
-                    </CheckMoneyAction>
-                  </Option>
-                  <Option text="eventtext.he-hirechef.thinkaboutit">
-                    <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
-                    <GoTo name="restart_expensive" />
-                  </Option>
-                </ConversationAction>
-              </Option>
-              <Option text="eventtext.he-hirechef.nothiring">
-                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
-                <GoTo name="restart_expensive" />
-              </Option>
-              <Option text="eventtext.he-hirechef.nokitchen">
-                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.buykitchen" waitforinteraction="false"/>
-                <GoTo name="restart_expensive" />
-              </Option>
-            </ConversationAction>       
-          </Failure>
-        </RNGAction>
+      <TriggerAction target1tag="hirablechef" target2tag="player" radius="200" waitforinteraction="false" />
+      <SetDataAction identifier="hirechefeventtriggered" value="1" />
+      <RNGAction chance="0.5">        
+        <!--Free chef-->
+        <Success>
+          <Label name="restart_free" />
+          <ClearTagAction tag="hc_player" />
+          <WaitAction time="1" />
+          <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="eventtext.he-hirechef.freechef">
+            <Option text="eventtext.he-hirechef.howmuch">
+              <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.joinfree" waitforinteraction="false">
+                <Option text="eventtext.he-hirechef.welcome">
+                  <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.chefhired" waitforinteraction="false"/>
+                  <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
+                  <GoTo name="end" />
+                </Option>
+                <Option text="eventtext.he-hirechef.thinkaboutit">
+                  <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+                  <GoTo name="restart_free" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="eventtext.he-hirechef.nothiring">
+              <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+              <GoTo name="restart_free" />
+            </Option>
+            <Option text="eventtext.he-hirechef.nokitchen">
+              <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.buykitchen" waitforinteraction="false"/>
+              <GoTo name="restart_free" />
+            </Option>
+          </ConversationAction>
+        </Success>          
+        <!--Expensive chef-->
+        <Failure>
+          <Label name="restart_expensive" />
+          <ClearTagAction tag="hc_player" />
+          <WaitAction time="1" />
+          <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="eventtext.he-hirechef.expensivechef">
+            <Option text="eventtext.he-hirechef.howmuch">
+              <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.joinexpensive" waitforinteraction="false">
+                <Option text="eventtext.he-hirechef.welcome">
+                  <CheckMoneyAction targettag="hc_player" amount="1250">
+                    <Success>
+                      <MoneyAction targettag="hc_player" amount="-1250" />
+                      <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.chefhired" waitforinteraction="false"/>
+                      <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
+                      <GoTo name="end" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.nomoney" waitforinteraction="false"/>
+                      <GoTo name="restart_expensive" />
+                    </Failure>
+                  </CheckMoneyAction>
+                </Option>
+                <Option text="eventtext.he-hirechef.thinkaboutit">
+                  <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+                  <GoTo name="restart_expensive" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="eventtext.he-hirechef.nothiring">
+              <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+              <GoTo name="restart_expensive" />
+            </Option>
+            <Option text="eventtext.he-hirechef.nokitchen">
+              <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.buykitchen" waitforinteraction="false"/>
+              <GoTo name="restart_expensive" />
+            </Option>
+          </ConversationAction>       
+        </Failure>
+      </RNGAction>
       <!--end the event-->
       <Label name="end" />
     </ScriptedEvent>    
