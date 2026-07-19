@@ -204,7 +204,7 @@
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="120" sold="false" mincondition="1" >
+      <Price baseprice="60" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -212,7 +212,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="60" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
@@ -283,7 +283,7 @@
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="120" sold="false" mincondition="1" >
+      <Price baseprice="60" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -291,7 +291,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="60" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
@@ -365,7 +365,7 @@
         <RequiredItem identifier="he-emptybowl" amount="1" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="120" sold="false" mincondition="1" >
+      <Price baseprice="80" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -373,7 +373,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="80" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />

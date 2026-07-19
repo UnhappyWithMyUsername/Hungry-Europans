@@ -20,7 +20,7 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="180" sold="false" mincondition="1" >
+      <Price baseprice="159" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -99,7 +99,7 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="180" sold="false" mincondition="1" >
+      <Price baseprice="179" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -108,7 +108,6 @@
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="159" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">

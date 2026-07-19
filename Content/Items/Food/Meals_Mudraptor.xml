@@ -17,7 +17,7 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="180" sold="false" mincondition="1" >
+      <Price baseprice="135" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -26,7 +26,7 @@
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="105" fabricationlimitmin="0" fabricationlimitmax="7" displayname="mudraptorfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="135" fabricationlimitmin="0" fabricationlimitmax="7" displayname="mudraptorfooditem" />
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="90" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
@@ -100,7 +100,7 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="180" sold="false" mincondition="1" >
+      <Price baseprice="120" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -109,7 +109,7 @@
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="105" fabricationlimitmin="0" fabricationlimitmax="7" displayname="mudraptorfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="7" displayname="mudraptorfooditem" />
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="90" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">

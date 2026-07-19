@@ -103,7 +103,7 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="200" sold="false" mincondition="1" >
+      <Price baseprice="159" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
