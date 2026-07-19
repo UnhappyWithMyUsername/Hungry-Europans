@@ -34,6 +34,8 @@
           <SpawnItem identifier="he-mantistempurafried" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" count="1" />
         </StatusEffect>
       </ItemComponent>
+      <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
+      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimable="false" handle1="5,-5" msg="ItemMsgPickUpSelect" />
     </Item>
     
