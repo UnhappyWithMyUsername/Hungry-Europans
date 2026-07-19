@@ -13,6 +13,15 @@
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-hotdogbun" amount="1"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="80" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="139,489,67,23" depth="0.6" origin="0.5,0.5" />
       <Body width="67" radius="11" density="15" />

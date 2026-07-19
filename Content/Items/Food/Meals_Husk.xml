@@ -17,6 +17,16 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="200" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchanthusk" sold="false" multiplier="1.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />
@@ -84,6 +94,16 @@
         <RequiredItem identifier="he-nori" amount="3" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="200" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0"/>
+        <Price storeidentifier="merchanthusk" sold="false" multiplier="1.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="80" />

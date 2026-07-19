@@ -17,6 +17,15 @@
         <RequiredItem identifier="popnutleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="120" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="10" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="95" />
@@ -194,6 +203,15 @@
         <RequiredItem tag="seedingredient" amount="4" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="120" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
@@ -264,6 +282,15 @@
         <RequiredItem tag="fruit" amount="1" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="120" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
@@ -337,6 +364,15 @@
         <RequiredItem identifier="he-molochcheeseslice" amount="3" />
         <RequiredItem identifier="he-emptybowl" amount="1" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="120" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="2" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="14" density="12" />
@@ -410,6 +446,15 @@
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.02"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.02"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="80" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="2" >
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
@@ -474,6 +519,15 @@
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
         <RequiredItem identifier="he-emptyjar" amount="1"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="100" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="67" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
@@ -558,6 +612,15 @@
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
         <RequiredItem identifier="he-emptyjar" amount="1"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="100" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="67" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
@@ -642,6 +705,15 @@
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
         <RequiredItem identifier="he-emptyjar" amount="1"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="100" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="67" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />

@@ -18,6 +18,15 @@
         <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="200" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />
       </Deconstruct>
@@ -87,6 +96,15 @@
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="100" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="80" fabricationlimitmin="0" fabricationlimitmax="7" displayname="hammerheadfooditem" />
       <Body width="61" radius="18" density="12" />
@@ -147,6 +165,15 @@
         <RequiredItem identifier="he-emptyjar" amount="1"/>
         <RequiredItem identifier="he-vinegar" amount="1" MinCondition="0.20" UseCondition="true"/>
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="50" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" height="67" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />

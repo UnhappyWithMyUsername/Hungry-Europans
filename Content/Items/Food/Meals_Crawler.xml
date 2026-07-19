@@ -16,6 +16,15 @@
         <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
+      <!-- generic food price for sale -->
+      <Price baseprice="150" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />
       </Deconstruct>
