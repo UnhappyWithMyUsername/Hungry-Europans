@@ -16,8 +16,8 @@
         </StatusEffect>
         <!-- give small amount of cooking/butchery as a starter so you're not completely locked out of kitchen stuff -->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional skillrequirement="true" cooking="lt 10" />
-          <Conditional skillrequirement="true" butchery="lt 10" />
+          <Conditional skillrequirement="true" cooking="lte 1" />
+          <Conditional skillrequirement="true" butchery="lte 1" />
           <GiveSkill skillidentifier="cooking" amount="10" triggertalents="false" />
           <GiveSkill skillidentifier="butchery" amount="10" triggertalents="false" />
         </StatusEffect>
