@@ -483,7 +483,7 @@
       type="stuffed"
       showiconthreshold="1"
       showicontoothersthreshold="1"
-      showinhealthscannerthreshold="1"
+      showinhealthscannerthreshold="1000"
       limbspecific="false"
       maxstrength="100"
       iconcolors="50,120,80,255;140,40,0,255"
