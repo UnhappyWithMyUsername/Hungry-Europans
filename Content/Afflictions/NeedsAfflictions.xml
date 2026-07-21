@@ -14,7 +14,8 @@
       maxstrength="100"
       affectmachines="false"
       showiconthreshold="25"
-      showinhealthscannerthreshold="0.5"
+      ShowIconToOthersThreshold="40"
+      showinhealthscannerthreshold="50"
       hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
