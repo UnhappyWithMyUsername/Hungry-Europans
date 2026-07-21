@@ -27,39 +27,37 @@ Important TODO:
 
 [hr]14/07/2026
 
-HOTFIX for Forks and Spoons
+HOTFIX 
 
 [List]
-[*] Fixed accidentally inverting the hand for forks and spoons, while trying to fix a bug in the previous update
-[*] Added loading screen hint about Tutorial
+[*] 
 [/List]
 
 
 ---------------------------------------------------------------------------
 
 
-[hr]14/07/2026[/hr]
+[hr]xx/xx/2026[/hr]
 
-Tutorial Update
+xxxxx update
 
 [b]Additions:[/b]
 [List]
-[*] Added a tutorial for the chef job, also explaining NEEDS (hungry/filthy/sleepy/moody)
+[*] 
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Cooler crates are now fireproof as long as they are powered
-[*] Improved cooking oil compatibility with Immersive Repairs, increase fryer oil consumption to match
-[*] Withdrawal (opiate, chem, alcohol, tobacco...) increases stress gained per second
-[*] Improved fabricator UIs by removing sorting buttons
+[*] You can rehydrate Nori into strips at a small loss
+[*] Recruiting Chef NPC event only triggers once in the campaign
+[*] Added price to cooked meals so you can sell them (Farmer's Market talent fix)
+[*] Hunger/Thirst/Fatigue only show up on health scanner and inspect at higher values (reduces scanner visual bloat)
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed "ghost forking" bug, where eating with fork in right hand prevented hunger from being reduced why eating. Fork/Spoon can only be held in left hand now.
-[*] Fixed Spam bugs, split spam into closed/open items (might break existing spam)
-[*] Fixed stomachache being applied the wrong way on some food items
+[*] Fixed getting 2x too much Nori in some cases
+[*] Fixed potentially getting extra cooking/butchery by injecting the Hungry Europan syringe twice
 [/List]
 
 
