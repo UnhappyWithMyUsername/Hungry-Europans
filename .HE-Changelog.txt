@@ -43,7 +43,7 @@ xxxxx update
 
 [b]Additions:[/b]
 [List]
-[*] 
+[*] Added "Hungry" versions of Humpback, Herja and Winterhalter
 [/List]
 
 [b]Changes:[/b] 
@@ -52,6 +52,7 @@ xxxxx update
 [*] Recruiting Chef NPC event only triggers once in the campaign
 [*] Added price to cooked meals so you can sell them (Farmer's Market talent fix)
 [*] Hunger/Thirst/Fatigue only show up on health scanner and inspect at higher values (reduces scanner visual bloat)
+[*] Nerfed planter pots by adding more placement restrictions (unpopular, but the farming situation was crazy with plants obstructing every single piece of machinery on submarines)
 [/List]
 
 [b]Fixes:[/b] 
