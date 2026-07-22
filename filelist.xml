@@ -85,5 +85,6 @@
   <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Item file="%ModDir%/Content/Tutorials/TutorialItems.xml" />
   <Outpost file="%ModDir%/Content/Tutorials/TutorialKitchen.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Hungry Herja.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Humpback.sub" />
 </contentpackage>
