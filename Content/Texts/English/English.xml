@@ -983,6 +983,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
 <roomname.brewery>Brewery</roomname.brewery><!--Patch 10-->
 <roomname.restroom>Restroom</roomname.restroom><!--Patch 13-->
+<roomname.bathroom>Bathroom</roomname.bathroom><!--Patch XX-->
 
 <itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> 
 
