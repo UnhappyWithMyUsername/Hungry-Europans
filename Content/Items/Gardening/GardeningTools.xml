@@ -42,7 +42,7 @@
         </Price>
         <PreferredContainer primary="crewcab" />
         <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
-        <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="planter,hydroponicplanter,fabricator,deconstructor,engine,oxygengenerator,geneticresearchstation,reactor,kitchen,divingsuitcontainer,oxygentankrefiller,turretammosource,supercapacitor,medicalfabricator,navterminal,depthchargeammosource,ammoboxcontainer,cargocontainer,battery,junctionbox"/>
+        <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="planter,hydroponicplanter,fabricator,deconstructor,engine,oxygengenerator,geneticresearchstation,reactor,kitchen,divingsuitcontainer,oxygentankrefiller,turretammosource,supercapacitor,medicalfabricator,navterminal,depthchargeammosource,ammoboxcontainer,cargocontainer,battery,junctionbox,pump,bunkbed,hospitalbed,locker,medcab,door"/>
         <Fabricate suitablefabricators="fabricator" requiredtime="45">
           <RequiredSkill identifier="mechanical" level="20" />
           <RequiredItem identifier="steel" />
