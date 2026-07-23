@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Hungry Europans" modversion="2.0.40" corepackage="False" steamworkshopid="2954998725" gameversion="1.13.4.0">
+<contentpackage name="Hungry Europans" modversion="2.0.41" corepackage="False" steamworkshopid="2954998725" gameversion="1.13.4.0">
   <Afflictions file="%ModDir%/Content/Afflictions/FoodBuffs.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/MiscAfflictions.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/NeedsAfflictions.xml" />
@@ -85,8 +85,8 @@
   <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Item file="%ModDir%/Content/Tutorials/TutorialItems.xml" />
   <Outpost file="%ModDir%/Content/Tutorials/TutorialKitchen.sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Hungry Herja.sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Hungry Humpback.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Winterhalter Shuttle.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Winterhalter.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Hungry Humpback.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Hungry Herja.sub" />
 </contentpackage>
