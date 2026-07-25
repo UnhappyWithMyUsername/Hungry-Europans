@@ -154,7 +154,7 @@
         <RequiredItem tag="waterkeg" amount="1" />
         <RequiredItem identifier="ethanol" amount="4" />
         <RequiredItem identifier="phosphorus" amount="4" />
-        <RequiredItem identifier="calcium" amount="4" />
+        <RequiredItem identifier="zinc" amount="1" />
       </Fabricate>
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
