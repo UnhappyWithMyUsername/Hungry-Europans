@@ -53,6 +53,8 @@ xxxxx update
 [*] Added price to cooked meals so you can sell them (Farmer's Market talent fix)
 [*] Hunger/Thirst/Fatigue only show up on health scanner and inspect at higher values (reduces scanner visual bloat)
 [*] Nerfed planter pots by adding more placement restrictions (unpopular, but the farming situation was crazy with plants obstructing every single piece of machinery on submarines)
+[*] Reduced overall cost of fruits at merchants
+[*] Keg of Coalition Premium is slightly more expensive (to match Jovian Force)
 [/List]
 
 [b]Fixes:[/b] 
@@ -77,8 +79,8 @@ Misc TODO:
 
 LIST OF FOODS IDEAS:
 
-- Egg-plant that makes egg-like fruits for easier omelettes
-- Jotato recipes: Fries, Baked jotato, Bufo puree...
+- Egg-plant that makes egg-like fruits for easier omelettes (wild plant)
+- Jotato recipes: Fries, Baked jotato, Bufo puree... (wild plant)
 - Kvass fermented from bread, yeast and sugar (needs more fermenter slots)
 - More Blender recipes
 - More Offal recipes
