@@ -106,7 +106,7 @@
   <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,salty,explodesinwater,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
-    <Price baseprice="65" >
+    <Price baseprice="40" >
       <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
@@ -155,7 +155,7 @@
   <Item name="Raptor Bane" identifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,monsterfood,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
-    <Price baseprice="42" >
+    <Price baseprice="29" >
       <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
@@ -198,7 +198,7 @@
     <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" origin="0.5,0.5" />
     <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.525" origin="0.5,0.7"  />
     <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="53,313,47,72" depth="0.52" maxcondition="99" />
-    <Price baseprice="51" >
+    <Price baseprice="32" >
       <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
       <Price storeidentifier="merchantclown" minavailable="3" maxavailable="5" sold="true">
@@ -263,7 +263,7 @@
   <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,fruit,petfood1,petfood2,petfood3,monsterfood" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="183,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <Price baseprice="39" >
+    <Price baseprice="33" >
       <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
@@ -310,7 +310,7 @@
   <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3,monsterfood" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.35" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
-    <Price baseprice="47" >
+    <Price baseprice="31" >
       <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
