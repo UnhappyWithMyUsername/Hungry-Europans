@@ -258,7 +258,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
-    <!-- Watcher, extra skill gain + thermal vision at the cost of psychosis -->
+    <!-- Watcher, extra skill gain + resistances to some visual effects + thermal vision at the cost of hallucinating -->
     <Affliction name="Watcher's sight (Food)"
       identifier="he-watchermindsense"
       type="foodbuff"
@@ -273,18 +273,18 @@
       MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1"
         minskillgainmultiplier="1.0"
-        maxskillgainmultiplier="1.25" 
+        maxskillgainmultiplier="1.35" 
         MinAfflictionOverlayAlphaMultiplier="0"
         MaxAfflictionOverlayAlphaMultiplier="0.2"/>
       <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
-        minskillgainmultiplier="1.25"
-        maxskillgainmultiplier="1.25"
+        minskillgainmultiplier="1.35"
+        maxskillgainmultiplier="1.35"
         MinAfflictionOverlayAlphaMultiplier="0.2"
         MaxAfflictionOverlayAlphaMultiplier="1"
         minfacetint="255,255,255,0"
         maxfacetint="255,100,255,150"
         ThermalOverlayRange="1500" ThermalOverlayColor="130,70,145,150"
-        resistancefor="blind,blind_hard,welderseye,applywelderseye"
+        resistancefor="blind,blind_hard,welderseye,applywelderseye,concussion"
         minresistance="0.8"
         maxresistance="0.8">
         <StatusEffect target="Character" targetlimb="Head" >
