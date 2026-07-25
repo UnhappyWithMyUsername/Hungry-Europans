@@ -333,7 +333,7 @@
               <!-- oily compatibility from Immersive Repairs -->
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="And">
                 <Conditional IsBot="false" />
-                <Conditional oily="gt 0" />
+                <Conditional oily="gt 30" />
                 <Affliction identifier="hygiene" strength="0.2"/>
               </StatusEffect>
             </StatusEffects>
