@@ -433,7 +433,7 @@
     </Item>
 
     <!--OMELETTE-->
-    <Item name="Omelette" identifier="he-omelette" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Omelette" identifier="he-omelette" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
