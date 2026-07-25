@@ -7,14 +7,14 @@
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="311,446,200,66" depth="0.6" origin="0.5,0.5" />
       <Body width="200" radius="33" density="12" />
-      <Price baseprice="108" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="100" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="10" requireddeconstructor="deconstructor">
         <Item identifier="alienblood" amount="1" />
@@ -50,14 +50,14 @@
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="311,446,200,66" depth="0.6" origin="0.5,0.5" />
       <Body width="200" radius="33" density="12" />
-      <Price baseprice="108" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="100" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="10" requireddeconstructor="deconstructor">
         <Item identifier="alienblood" amount="1" />
@@ -104,7 +104,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="0" maxavailable="32" sold="true" />
       </Price>
       <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="false" allowdraganddrop="false" showinventory="false" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" showcontentsintooltip="true" showcontainedstateindicator="true" removecontaineditemsondeconstruct="true">
@@ -137,14 +137,14 @@
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="186,313,93,25" depth="0.525" origin="0.5,0.65"  />
       <Body width="80" radius="12" density="12" />
-      <Price baseprice="164" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="120" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="false" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="0" maxavailable="16" sold="false" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="1">
@@ -185,14 +185,14 @@
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="186,287,93,25" depth="0.525" origin="0.5,0.65"  />
       <Body width="80" radius="12" density="12" />
-      <Price baseprice="164" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="120" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="oven" requiredtime="35" requiresrecipe="false" amount="1">

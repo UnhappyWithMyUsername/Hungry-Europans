@@ -16,7 +16,7 @@
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.05"/>
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="110" sold="false" mincondition="1" >
+      <Price baseprice="165" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
@@ -24,6 +24,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
         <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
       </Price>
+      <Fabricate suitablefabricators="cafeteria" requiredtime="12" requiredmoney="165" fabricationlimitmin="0" fabricationlimitmax="7" /> 
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="61" radius="18" density="12" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="95" />
@@ -83,7 +84,7 @@
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <!-- generic food price for sale -->
-      <Price baseprice="150" sold="false" mincondition="1" >
+      <Price baseprice="165" sold="false" mincondition="1" >
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>

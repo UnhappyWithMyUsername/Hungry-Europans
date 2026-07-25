@@ -10,14 +10,14 @@
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="204,236,74,30" depth="0.6" origin="0.5,0.5" />
       <Body width="74" radius="15" density="12" />
-      <Price baseprice="280" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
+      <Price baseprice="150" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
         <Price storeidentifier="merchantresearch"/>
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="9" sold="true" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="0" maxavailable="9" sold="true" />
       </Price>
       <Deconstruct time="10" requireddeconstructor="deconstructor">
         <!-- <Item identifier="alienblood" amount="0" /> -->

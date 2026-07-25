@@ -13,7 +13,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical" />
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="4" maxavailable="16" sold="false" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="4" maxavailable="16" sold="false" />
       </Price>
       <Deconstruct time="20" requireddeconstructor="deconstructor">
         <!-- <Item identifier="alienblood" amount="0" /> -->
@@ -65,7 +65,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical" />
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="4" maxavailable="23" sold="false" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="4" maxavailable="23" sold="false" />
       </Price>
       <Deconstruct time="6" requireddeconstructor="deconstructor" />
       <!-- ItemContainer for freshness item which is spawned in at the start of a round if the inventory does not yet contain a freshness item. It represents the item spoilage | Previously meat was losing condition directly when spoiling which made it non-stackable, but with spoilage moved to freshness item, meat stays stackable -->
@@ -114,7 +114,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical" />
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="2" maxavailable="32" sold="false" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="2" maxavailable="32" sold="false" />
       </Price>
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
@@ -175,7 +175,7 @@
         <Price storeidentifier="merchantmilitary"/>
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical" />
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="2" maxavailable="32" sold="false" />
+        <Price storeidentifier="merchantbutcher" multiplier="1.0" minavailable="2" maxavailable="32" sold="false" />
       </Price>
       <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
         <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
