@@ -1467,6 +1467,7 @@
         <Item identifier="he-blubber" amount="1" />
         <Item identifier="sodium" amount="1" />
       </Fabricate>
+      <SuitableTreatment type="oil" suitability="50" />
       <Holdable slots="RightHand,LeftHand,Any" holdpos="10,-30" handle1="0,-15" handle2="50,50" swingwhenusing="true" swingamount="5,100" swingspeed="0.4" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="and">
           <!-- <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
