@@ -1702,8 +1702,8 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,512,128,128" origin="0,0" />
     </Affliction>
         
-    <!-- compatibility affliction -->
-    <Affliction 
+    <!-- compatibility affliction - we do not need this since Immersive Repairs actually checks for sleeping -->
+    <!-- <Affliction 
       name="Welder's Eye Compat" 
       description="Does nothing. Only exists to allow beds to heal welderseye without throwing error about missing welderseye type" 
       identifier="welderseyecompatibility"
@@ -1719,7 +1719,7 @@
       healcostmultiplier="15"
       MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" />
-    </Affliction>  
+    </Affliction>   -->
         
         
   </Afflictions>
