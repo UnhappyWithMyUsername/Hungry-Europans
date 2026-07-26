@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Hungry Europans" modversion="2.0.43" corepackage="False" steamworkshopid="2954998725" gameversion="1.13.4.0">
+<contentpackage name="Hungry Europans" modversion="2.0.44" corepackage="False" steamworkshopid="2954998725" gameversion="1.13.4.0">
   <Afflictions file="%ModDir%/Content/Afflictions/FoodBuffs.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/MiscAfflictions.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/NeedsAfflictions.xml" />
@@ -77,8 +77,6 @@
   <Text file="%ModDir%/Content/Texts/English/Loadingtips.xml" />
   <Missions file="%ModDir%/Content/Events/Missions.xml" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
-  <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
   <Tutorials file="%ModDir%/Content/Tutorials/Tutorials.xml" />
   <RandomEvents file="%ModDir%/Content/Tutorials/TutorialEvents.xml" />
   <NPCSets file="%ModDir%/Content/Tutorials/TutorialNpcs.xml" />
@@ -88,5 +86,7 @@
   <Submarine file="%ModDir%/Content/Submarines/Hungry Herja.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Humpback.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Winterhalter Shuttle.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Winterhalter.sub" />
 </contentpackage>
