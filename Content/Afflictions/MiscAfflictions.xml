@@ -1318,6 +1318,7 @@
           <reduceaffliction identifier="chemaddiction" strength="0.025" />
           <reduceaffliction identifier="he-tobaccoaddiction" strength="0.2" />
           <reduceaffliction identifier="he-alcoholwithdrawal" strength="0.3" />
+          <reduceaffliction type="welderseye" strength="2" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional adrenalinerush="gt 0" />
@@ -1700,6 +1701,26 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,512,128,128" origin="0,0" />
     </Affliction>
+        
+    <!-- compatibility affliction -->
+    <Affliction 
+      name="Welder's Eye Compat" 
+      description="Does nothing. Only exists to allow beds to heal welderseye without throwing error about missing welderseye type" 
+      identifier="welderseyecompatibility"
+      type="welderseye"
+      limbspecific="false"
+      indicatorlimb="Head"
+      showiconthreshold="10"
+      showicontoothersthreshold="1000" 
+      showinhealthscannerthreshold="1000" 
+      maxstrength="100" 
+      afflictionoverlayalphaislinear="false" 
+      healableinmedicalclinic="true" 
+      healcostmultiplier="15"
+      MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="100" />
+    </Affliction>  
+        
         
   </Afflictions>
 </Override>
