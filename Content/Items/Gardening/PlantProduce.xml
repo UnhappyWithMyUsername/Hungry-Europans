@@ -817,7 +817,7 @@
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="20" sold="false">
+    <Price baseprice="20" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" >
       <Item identifier="carbon" mincondition="0.5" />
@@ -863,7 +863,7 @@
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="20" sold="false">
+    <Price baseprice="20" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="sodium" mincondition="0.5" />
@@ -920,7 +920,7 @@
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="20" sold="false">
+    <Price baseprice="20" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="sodium" mincondition="0.5" />
@@ -965,7 +965,7 @@
     <Body radius="28" density="10" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="20" sold="false">
+    <Price baseprice="20" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="carbon" mincondition="0.5" />
@@ -1009,7 +1009,7 @@
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="20" sold="false" >
+    <Price baseprice="20" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
@@ -1053,7 +1053,7 @@
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="20" sold="false" >
+    <Price baseprice="20" sold="false" CanBeSpecial="false" >
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
