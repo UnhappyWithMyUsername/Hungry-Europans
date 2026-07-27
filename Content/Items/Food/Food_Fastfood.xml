@@ -124,7 +124,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99.99" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="50" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="7" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="60" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-burgerbun" amount="1"/>
@@ -286,7 +286,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,92,41,16" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="173,96,27,41" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,92,41,16" depth="0.525" origin="0.5,0.05"  />
-      <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="20" fabricationlimitmin="0" fabricationlimitmax="7" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="32" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="38" height="13" density="5" />
       <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />

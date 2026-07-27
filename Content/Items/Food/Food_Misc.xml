@@ -714,7 +714,7 @@
     <!-- Fast Food Menus -->
     <Item name="Meal of Madness" identifier="he-madnessmeal" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Crawler Burger | 8x Crawler Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="105" fabricationlimitmin="2" fabricationlimitmax="5" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="135" fabricationlimitmin="2" fabricationlimitmax="5" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="61,63,61,74" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,404,79,107" origin="0.5,0.5" />
@@ -744,7 +744,7 @@
     
     <Item name="Pack of Nuggets" identifier="he-nuggetpack" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="35" fabricationlimitmin="0" fabricationlimitmax="8" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="40" fabricationlimitmin="0" fabricationlimitmax="8" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" origin="0.5,0.5" />
