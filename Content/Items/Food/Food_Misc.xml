@@ -735,6 +735,7 @@
             <SpawnItem identifier="punchgun" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="bikehorn" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="toyhammer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-whoopeecushion" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <Remove />
           </StatusEffect>
         </Button>
