@@ -1174,19 +1174,16 @@
   <Item name="Sea Weed" identifier="he-seaweed" category="Material" subcategory="Plants" Tags="smallitem,plant" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false">
     <PreferredContainer primary="kitchen" secondary="storagecab" />
     <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
-    <LightComponent lightcolor="139,211,197,100" range="100" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
-      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
-    </LightComponent>
     <Price baseprice="20" >
       <Price storeidentifier="merchantresearch" minavailable="4" maxavailable="7" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantcity" minavailable="5" maxavailable="10" multiplier="1" sold="true"/>
       <Price storeidentifier="merchantbutcher" minavailable="10" maxavailable="20" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" />
-    <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,80,69,67" origin="0.5,0.5" />
+    <Body width="48" radius="10" density="12" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.525" sourcerect="0,488,60,24" origin="0.5,0.5" />
     <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.55" sourcerect="102,0,100,178" origin="0.5,0.5" />
     <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" sourcerect="0,488,60,24" depth="0.525" origin="0.5,0.6"  />
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.525" sourcerect="0,488,60,24" origin="0.5,0.5" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.49" sourcerect="0,0,100,178" offset="20,0" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,30" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.48" sourcerect="203,0,100,178" offset="20,0" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,30" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="0,0,100,178" offset="-20,0" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,30" origin="0.5,0.5" randomgroupid="2" />
@@ -1194,13 +1191,63 @@
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.47" sourcerect="0,0,100,178" offset="0,-30" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,10" origin="0.5,0.5" randomgroupid="3" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.53" sourcerect="203,0,100,178" offset="0,-30" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,10" origin="0.5,0.5" randomgroupid="3" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.46" sourcerect="102,0,100,178" offset="0,-40" randomrotation="-20,20" origin="0.5,0.5" />
-    <Body width="48" radius="10" density="12" />
+    <LightComponent lightcolor="139,211,197,100" range="100" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
+      <IsActiveConditional Attached="true" />
+      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+    </LightComponent>
     <LevelResource deattachduration="1" randomoffsetfromwall="40">
       <Commonness commonness="1.0" cavecommonness="0.5" abysscommonness="0" />
     </LevelResource>
     <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false">
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Egg-Plant" identifier="he-eggplant" category="Material" subcategory="Plants" Tags="mediumitem,plant,egg,largeegg" maxstacksize="1" maxstacksizecharacterinventory="1" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.8" impactsoundtag="impact_soft" damagedbyexplosions="false" impacttolerance="3.5">
+    <PreferredContainer primary="kitchen" secondary="storagecab" />
+    <LightComponent lightcolor="139,211,197,100" range="100" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
+      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+    </LightComponent>
+    <Price baseprice="80" sold="false" CanBeSpecial="false">
+    </Price>
+    <Deconstruct time="5" />
+    <Body width="48" radius="22" density="12" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.525" sourcerect="300,247,52,59" origin="0.5,0.5" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.53" sourcerect="352,247,50,56" offset="0,0"  origin="0.5,0.5" rotation="50" rotationspeed="50" rotationanim="Noise" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.535" sourcerect="300,247,52,59" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" sourcerect="300,247,52,59" depth="0.525" origin="0.5,0.6"  />
+    <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.52" sourcerect="300,247,52,59" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" origin="0.5,0.5" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="0,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="100,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="200,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
+    <LightComponent lightcolor="200,200,30,100" range="50" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
+      <IsActiveConditional Attached="true" />
+      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+    </LightComponent>
+    <LightComponent lightcolor="200,200,30,255" range="25" powerconsumption="0" pulsefrequency="0.4" pulseamount="0.3" ison="true" >
+    </LightComponent>
+    <LevelResource deattachduration="2" randomoffsetfromwall="30">
+      <Commonness commonness="0.1" cavecommonness="0.1" abysscommonness="0" />
+    </LevelResource>
+    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="10,10" swingspeed="0.5" swingwhenholding="True" attachable="true" pickingtime="2.0">
+      <!-- VFX -->
+      <StatusEffect type="OnPicked" target="This">
+        <Conditional Attached="true" />
+        <particleemitter particleamount="120" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="80,150,50,255" />
+        <sound file="Content/Items/Weapons/honk.ogg" range="1000" volume="2" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" >
+        <Conditional Attached="true" />
+        <ParticleEmitter particle="impactfirearm" copyentityangle="true" AngleMin="40" AngleMax="140" DistanceMin="15" DistanceMax="25" scalemin="0.25" ScaleMax="0.35" particlespersecond="3" colormultiplier="255,255,50,100" LifeTimeMultiplier="8" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-1.0"/>
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
         <Remove />
       </StatusEffect>
     </Holdable>
