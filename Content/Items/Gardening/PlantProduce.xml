@@ -1215,6 +1215,7 @@
     <PreferredContainer primary="kitchen" secondary="storagecab" />
     <Price baseprice="80" sold="false" CanBeSpecial="false">
     </Price>
+    <!-- TODO: research into UGM? alien shit? -->
     <Deconstruct time="5" />
     <Body radius="22" density="12" />
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.525" sourcerect="300,247,52,59" origin="0.5,0.5" />
@@ -1225,15 +1226,13 @@
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="0,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="100,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="200,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
-
     <LightComponent lightcolor="200,200,30,100" range="50" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true" >
       <IsActiveConditional Attached="true" />
       <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
     </LightComponent>
     <LightComponent lightcolor="200,200,30,70" range="35" castshadows="false" powerconsumption="0" pulsefrequency="0.4" pulseamount="0.3" ison="true" lightoffset="0,5" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" sourcerect="352,247,50,56" depth="0.53" origin="0.5,0.48" alpha="0.15" />
-    </LightComponent>
-    
+    </LightComponent>    
     <LevelResource deattachduration="3" randomoffsetfromwall="30">
       <Commonness commonness="0.2" cavecommonness="0.2" abysscommonness="0" clustersize="1" />
     </LevelResource>
@@ -1264,6 +1263,61 @@
       </StatusEffect>
     </Holdable>
   </Item>
+    
+  <Item name="Jotato Bush" identifier="he-jotatobush" category="Material" subcategory="Plants" Tags="plant" maxstacksize="1" maxstacksizecharacterinventory="1" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.8" impactsoundtag="impact_soft" health="10" impacttolerance="4.0" pickdistance="60" interactdistance="60">
+    <Deconstruct time="5" />
+    <Body radius="22" density="12" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.525" sourcerect="300,360,52,59" origin="0.5,0.5" />
+    <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.52" sourcerect="300,247,52,59" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" origin="0.5,0.5" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="0,360,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="100,360,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="200,360,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
+    <LightComponent lightcolor="200,200,30,100" range="50" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true" >
+      <IsActiveConditional Attached="true" />
+      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+    </LightComponent>    
+    <LevelResource deattachduration="3" randomoffsetfromwall="30">
+      <Commonness commonness="0.2" cavecommonness="0.2" abysscommonness="0" clustersize="1" />
+    </LevelResource>
+    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" attachable="true" reattachable="false" pickingtime="1.0">
+      <StatusEffect type="OnNotContained" target="This" oneshot="true">
+        <Conditional PickingDone="true" />
+        <particleemitter particleamount="20" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="80,150,50,255" lifetimemultiplier="2" />
+        <sound file="Content/Items/Medical/ITEM_proteinBarOpen.ogg" range="300" volume="2" frequencymultiplier="1.3" />       
+        <SpawnItem identifier="he-jotato" spawnposition="This" count="6" aimspread="220" impulse="1" rotation="0" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Jotato" identifier="he-jotato" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,petfood1,petfood2,petfood3,monsterfood,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
+    <PreferredContainer primary="plantcontainer"/>
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,649,43,55" origin="0.5,0.5" />
+    <Body radius="30" density="10.5" />
+    <Price baseprice="15" >
+      <Price storeidentifier="merchantoutpost" minavailable="6" maxavailable="8" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="12" maxavailable="18" multiplier="1" sold="true" />
+    </Price>
+    <Deconstruct time="2" chooserandom="true" >
+    </Deconstruct>
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >      
+
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      <StatusEffect type="OnUse" target="Character">
+        <Affliction identifier="he-stuffed" amount="0.4" />
+        <ReduceAffliction type="hunger" amount="0.4" />
+        <Affliction identifier="he-fiberrich" amount="15.0" />
+        <ParticleEmitter particle="smallwhitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="190,200,130,255" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+      </StatusEffect>
+      
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="True" />
+  </Item>
+  
   
 </Items>
 </Override>
