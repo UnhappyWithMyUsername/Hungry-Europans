@@ -1705,6 +1705,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-eggplant>Ovoflorasite</entityname.he-eggplant>
 <entitydescription.he-eggplant>An odd parasitic plant that infects oviparous creatures, replacing their embryos with an egg-like fruit. The infected specimen then lays the plant among its eggs, until it bursts and repeats the cycle. But to any hungry europan, it's an ingredient like any other...</entitydescription.he-eggplant>
 
+<entityname.he-jotato>Jotato</entityname.he-jotato>
+<entitydescription.he-jotato>The crop that saved the Earth centuries ago made its way to Europa, but not unchanged by the radiation emanating from Jupiter. </entitydescription.he-jotato>
 
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
