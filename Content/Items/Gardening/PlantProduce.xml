@@ -1206,7 +1206,7 @@
     </Holdable>
   </Item>
   
-  <Item name="Egg-Plant" identifier="he-eggplant" category="Material" subcategory="Plants" Tags="mediumitem,plant,egg,largeegg" maxstacksize="1" maxstacksizecharacterinventory="1" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.8" impactsoundtag="impact_soft" damagedbyexplosions="false" impacttolerance="3.5">
+  <Item name="Egg-Plant" identifier="he-eggplant" category="Material" subcategory="Plants" Tags="mediumitem,plant,egg,largeegg" maxstacksize="1" maxstacksizecharacterinventory="1" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.8" impactsoundtag="impact_soft" damagedbyexplosions="true" impacttolerance="4.0" pickdistance="60" interactdistance="60">
     <PreferredContainer primary="kitchen" secondary="storagecab" />
     <LightComponent lightcolor="139,211,197,100" range="100" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
       <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
@@ -1214,7 +1214,7 @@
     <Price baseprice="80" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" />
-    <Body width="48" radius="22" density="12" />
+    <Body radius="22" density="12" />
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.525" sourcerect="300,247,52,59" origin="0.5,0.5" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.53" sourcerect="352,247,50,56" offset="0,0"  origin="0.5,0.5" rotation="50" rotationspeed="50" rotationanim="Noise" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.535" sourcerect="300,247,52,59" origin="0.5,0.5" />
@@ -1229,25 +1229,32 @@
     </LightComponent>
     <LightComponent lightcolor="200,200,30,255" range="25" powerconsumption="0" pulsefrequency="0.4" pulseamount="0.3" ison="true" >
     </LightComponent>
-    <LevelResource deattachduration="2" randomoffsetfromwall="30">
-      <Commonness commonness="0.1" cavecommonness="0.1" abysscommonness="0" />
+    <LevelResource deattachduration="3" randomoffsetfromwall="30">
+      <Commonness commonness="0.2" cavecommonness="0.2" abysscommonness="0" clustersize="1" />
     </LevelResource>
-    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="10,10" swingspeed="0.5" swingwhenholding="True" attachable="true" pickingtime="2.0">
+    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="10,10" swingspeed="0.5" swingwhenholding="True" attachable="true" reattachable="false" pickingtime="2.0">
       <!-- VFX -->
-      <StatusEffect type="OnPicked" target="This">
-        <Conditional Attached="true" />
-        <particleemitter particleamount="120" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="80,150,50,255" />
-        <sound file="Content/Items/Weapons/honk.ogg" range="1000" volume="2" />
-      </StatusEffect>
       <StatusEffect type="Always" target="This" >
         <Conditional Attached="true" />
-        <ParticleEmitter particle="impactfirearm" copyentityangle="true" AngleMin="40" AngleMax="140" DistanceMin="15" DistanceMax="25" scalemin="0.25" ScaleMax="0.35" particlespersecond="3" colormultiplier="255,255,50,100" LifeTimeMultiplier="8" />
+        <ParticleEmitter particle="impactfirearm" copyentityangle="true" AngleMin="40" AngleMax="140" DistanceMin="15" DistanceMax="25" scalemin="0.35" ScaleMax="0.45" particlespersecond="3" colormultiplier="255,255,50,100" LifeTimeMultiplier="8" />
       </StatusEffect>
-      <StatusEffect type="OnFire" target="This" Condition="-1.0"/>
+      <StatusEffect type="Always" target="This" oneshot="true">
+        <Conditional PickingDone="true" />
+        <particleemitter particleamount="20" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="80,150,50,255" lifetimemultiplier="2" />
+        <sound file="Content/Items/Medical/ITEM_proteinBarOpen.ogg" range="300" volume="2" frequencymultiplier="1.3" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-4.0"/>
+      <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" />
       <StatusEffect type="OnBroken" target="This">
-        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
-        <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
-        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Explosion showEffects="false" range="200.0" force="3.0" decal="fruitsplatter_yellow" decalSize="1.0">
+          <Affliction identifier="nausea" strength="10" />
+          <Affliction identifier="slow" strength="100" />
+          <Affliction identifier="worminfection" strength="20" />
+        </Explosion>
+        <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
+        <ParticleEmitter particle="egggoosplash" anglemin="0" anglemax="360" particleamount="3" velocitymin="0" velocitymax="0" scalemin="1" scalemax="1.2" colormultiplier="200,150,30,255" />
+        <ParticleEmitter particle="smallwhitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="150,120,150,255" />
+        <ParticleEmitter particle="organeruption" anglemin="0" anglemax="360" particleamount="20" velocitymin="200" velocitymax="300" scalemin="0.2" scalemax="0.3" colormultiplier="150,120,150,255" />
         <Remove />
       </StatusEffect>
     </Holdable>
