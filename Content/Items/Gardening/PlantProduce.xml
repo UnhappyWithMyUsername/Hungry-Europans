@@ -1211,29 +1211,29 @@
     </Holdable>
   </Item>
   
-  <Item name="Egg-Plant" identifier="he-eggplant" category="Material" subcategory="Plants" Tags="mediumitem,plant,egg,largeegg" maxstacksize="1" maxstacksizecharacterinventory="1" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.8" impactsoundtag="impact_soft" damagedbyexplosions="true" impacttolerance="4.0" pickdistance="60" interactdistance="60">
+  <Item name="Egg-Plant" identifier="he-eggplant" category="Material" subcategory="Plants" Tags="mediumitem,plant,egg,largeegg" maxstacksize="1" maxstacksizecharacterinventory="1" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.8" impactsoundtag="impact_soft" damagedbyexplosions="true" damagedbyprojectiles="true" health="10" impacttolerance="4.0" pickdistance="60" interactdistance="60">
     <PreferredContainer primary="kitchen" secondary="storagecab" />
-    <LightComponent lightcolor="139,211,197,100" range="100" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
-      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
-    </LightComponent>
     <Price baseprice="80" sold="false" CanBeSpecial="false">
     </Price>
     <Deconstruct time="5" />
     <Body radius="22" density="12" />
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.525" sourcerect="300,247,52,59" origin="0.5,0.5" />
-    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.53" sourcerect="352,247,50,56" offset="0,0"  origin="0.5,0.5" rotation="50" rotationspeed="50" rotationanim="Noise" />
+    <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.53" sourcerect="352,247,50,56" offset="0,0"  origin="0.5,0.5" rotation="50" rotationspeed="120" rotationanim="Noise" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.535" sourcerect="300,247,52,59" origin="0.5,0.5" />
     <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" sourcerect="300,247,52,59" depth="0.525" origin="0.5,0.6"  />
     <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.52" sourcerect="300,247,52,59" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" origin="0.5,0.5" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="0,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="100,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="200,240,100,80" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
-    <LightComponent lightcolor="200,200,30,100" range="50" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
+
+    <LightComponent lightcolor="200,200,30,100" range="50" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true" >
       <IsActiveConditional Attached="true" />
       <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
     </LightComponent>
-    <LightComponent lightcolor="200,200,30,255" range="25" powerconsumption="0" pulsefrequency="0.4" pulseamount="0.3" ison="true" >
+    <LightComponent lightcolor="200,200,30,70" range="35" castshadows="false" powerconsumption="0" pulsefrequency="0.4" pulseamount="0.3" ison="true" lightoffset="0,5" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" sourcerect="352,247,50,56" depth="0.53" origin="0.5,0.48" alpha="0.15" />
     </LightComponent>
+    
     <LevelResource deattachduration="3" randomoffsetfromwall="30">
       <Commonness commonness="0.2" cavecommonness="0.2" abysscommonness="0" clustersize="1" />
     </LevelResource>
@@ -1248,7 +1248,7 @@
         <particleemitter particleamount="20" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="80,150,50,255" lifetimemultiplier="2" />
         <sound file="Content/Items/Medical/ITEM_proteinBarOpen.ogg" range="300" volume="2" frequencymultiplier="1.3" />
       </StatusEffect>
-      <StatusEffect type="OnFire" target="This" Condition="-4.0"/>
+      <StatusEffect type="OnFire" target="This" Condition="-0.5"/>
       <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" />
       <StatusEffect type="OnBroken" target="This">
         <Explosion showEffects="false" range="200.0" force="3.0" decal="fruitsplatter_yellow" decalSize="1.0">
