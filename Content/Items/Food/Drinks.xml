@@ -990,7 +990,7 @@
       <Price baseprice="6" sold="true">
         <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="3" maxavailable="5" sold="true" />
       </Price>
-      <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="0" fabricationlimitmax="12" />
+      <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="15" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegcoalitionpremium" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
@@ -1158,7 +1158,7 @@
       <Price baseprice="6" sold="true">
         <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="3" maxavailable="5" sold="true" />
       </Price>
-      <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="0" fabricationlimitmax="12" />
+      <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="15" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegjovianforce" UseCondition="True" MinCondition="0.04999" />
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
