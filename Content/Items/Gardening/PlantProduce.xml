@@ -1199,6 +1199,11 @@
       <Commonness commonness="1.0" cavecommonness="0.5" abysscommonness="0" />
     </LevelResource>
     <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false">
+      <StatusEffect type="Always" target="This" oneshot="true">
+        <Conditional PickingDone="true" />
+        <particleemitter particleamount="20" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="40,180,60,255" lifetimemultiplier="2" />
+        <sound file="Content/Items/Medical/ITEM_proteinBarOpen.ogg" range="300" volume="2" frequencymultiplier="1.8" />
+      </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
         <Remove />
