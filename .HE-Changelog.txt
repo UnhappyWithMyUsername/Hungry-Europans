@@ -39,13 +39,15 @@ HOTFIX
 
 [hr]xx/xx/2026[/hr]
 
-xxxxx update
+Potato update
 
 [b]Additions:[/b]
 [List]
 [*] Added "Hungry" versions of Humpback, Herja and Winterhalter
 [*] Added a wild Egg-Plant (more eggs)
-[*] Added wild Jotato bushes
+[*] Added wild Jotato bushes (Jovian potatoes)
+[*] Added Pierogi and Gulash (offal recipes)
+[*] Added Vodka and Jotato Pancakes
 [/List]
 
 [b]Changes:[/b] 
@@ -86,13 +88,12 @@ Misc TODO:
 
 LIST OF FOODS IDEAS:
 
-- Egg-plant that makes egg-like fruits for easier omelettes (wild plant)
-- Jotato recipes: Fries, Baked jotato, Bufo puree... (wild plant)
+
+- Vodka
 - Kvass fermented from bread, yeast and sugar (needs more fermenter slots)
 - More Blender recipes
-- More Offal recipes
 - More Mushroom recipes? add a cooked mushroom item to not use an entire yeast shroom per meal
-- Recipe for Mutated Popnut
+- Recipe for Mutated Popnut (mutated popnut in a jar, just waterproof, explodes when thrown?)
 - Dr Happy's vitamins (blender recipe made of scurrywags)
 
 LongTermPlans:

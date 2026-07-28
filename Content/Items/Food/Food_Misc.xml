@@ -1071,7 +1071,7 @@
     </Item>
     
     <!-- pierogi Tempura (fried)  -->
-    <Item hideinmenus="false" name="Pierogi" identifier="he-pierogifried" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - pierogi" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True" health="10" >
+    <Item hideinmenus="false" name="Pierogi" identifier="he-pierogifried" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True" health="10" >
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="222,138,28,27" depth="0.6" origin="0.5,0.5" />
