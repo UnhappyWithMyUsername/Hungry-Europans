@@ -1731,6 +1731,7 @@
           <Affliction identifier="he-exhaustedsleep" amount="15" />
           <ReduceAffliction identifier="strengthen" amount="300" />
           <ReduceAffliction identifier="vodkadrunk" amount="999" />
+          <ReduceAffliction identifier="drunk" amount="5" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
