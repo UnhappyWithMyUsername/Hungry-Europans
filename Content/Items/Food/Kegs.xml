@@ -567,6 +567,54 @@
       </Holdable>
     </Item>
     
+    <!-- TODO: Keg of Vodka -->
+    
+    <Item name="Keg of Vodka" identifier="he-kegvodka" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+      <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
+      <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
+      -add a 1x1 invisible containedsprite, enabled in crate shelves
+      -add an inventoryicon, otherwise the icon becomes invisible in shelves
+      -add a decorativesprite that is the main sprite rotated 90°, because containedsprite doesnt handle rotation
+      -use decorativespritebehavior="HideWhenNotVisible" in the containedsprite to HIDE the decorativesprite when not contained 
+      TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="92,138,91,138" depth="0.699" origin="0.5,0.5" canflipx="false"/>
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="92,138,91,138" depth="0.699" origin="0.5,0.5" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="92,138,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
+      <Body width="91" height="136" density="11.5" />
+      <Fabricate suitablefabricators="brewkettle" requiredtime="240" requiresrecipe="false" amount="1">
+        <!-- <RequiredSkill identifier="cooking" level="50" /> -->
+        <RequiredItem tag="waterkeg" amount="1" />
+        <RequiredItem identifier="ethanol" amount="3" />
+        <RequiredItem identifier="he-jotato" amount="8" />
+        <RequiredItem identifier="yeastshroom" amount="1"/>
+      </Fabricate>
+      <Deconstruct time="2" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="3" outcondition="1.0"/>
+      </Deconstruct>
+      <Price baseprice="1200" sold="false">
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="0" maxavailable="1" />
+      </Price>
+      <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
+        <!-- Revert position if not emptying -->
+        <StatusEffect type="OnActive" target="This" holdpos="40,-40" holdangle="3" aimpos="65,-10" aimangle="0" setvalue="true" >
+          <Conditional hasstatustag="neq emptying" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" condition="-7" />
+        <StatusEffect type="OnUse" target="This" duration="0.1" statuseffecttags="emptying" holdpos="-40,0" holdangle="176" aimpos="0,0" aimangle="180" offset="0,-36" setvalue="true" comparison="and">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="10" distancemin="-3" distancemax="3" colormultiplier="20,90,45,255"/>
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" />
+        </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.3" />
+        <StatValue stattype="SwimmingSpeed" value="-0.4" />
+      </Holdable>
+    </Item>
+    
   </Items>
 
 </Override>

@@ -1896,13 +1896,13 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="liquorcrate" secondary="kitchen"/>
-      <Price baseprice="150" sold="true">
+      <Price baseprice="120" sold="true">
         <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="5" sold="true" />
       </Price>
-      <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="299" fabricationlimitmin="0" fabricationlimitmax="7" />
+      <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegpiratevodka" UseCondition="True" MinCondition="0.04999"/>
-        <RequiredItem tag="emptybottlevodka" Amount="1"/>
+        <RequiredItem identifier="he-kegvodka" UseCondition="True" MinCondition="0.04999"/>
+        <RequiredItem tag="emptybottle" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
