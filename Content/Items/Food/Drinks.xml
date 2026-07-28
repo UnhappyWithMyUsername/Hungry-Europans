@@ -1902,7 +1902,7 @@
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegvodka" UseCondition="True" MinCondition="0.04999"/>
-        <RequiredItem tag="emptybottlecommon" Amount="1"/>
+        <RequiredItem tag="emptybottlebeer" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -1948,7 +1948,7 @@
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
           <ReduceAffliction identifier="he-halucinova" amount="1" />
-          <Affliction identifier="applydrunkfast" amount="3" />
+          <Affliction identifier="applydrunkfast" amount="5" />
           <Affliction identifier="vodkadrunk" amount="10" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
@@ -2031,7 +2031,7 @@
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
           <ReduceAffliction identifier="he-halucinova" amount="1" />
-          <Affliction identifier="applydrunkfast" amount="3" />
+          <Affliction identifier="applydrunkfast" amount="5" />
           <Affliction identifier="vodkadrunk" amount="10" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
