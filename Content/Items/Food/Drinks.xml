@@ -1902,7 +1902,7 @@
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegvodka" UseCondition="True" MinCondition="0.04999"/>
-        <RequiredItem tag="emptybottle" Amount="1"/>
+        <RequiredItem tag="emptybottlecommon" Amount="1"/>
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
