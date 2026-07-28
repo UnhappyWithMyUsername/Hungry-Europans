@@ -1949,7 +1949,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Holdable>
       
