@@ -500,8 +500,75 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     
+
+    <!-- Jotato Pancake -->
+    <Item hideinmenus="false" name="Jotato Pancake" identifier="he-jotatopancake" variantof="he-poisoneffectpreset_regular" health="10" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,jotatopancake,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="91,377,42,39" depth="0.6" origin="0.5,0.5" />
+      <!-- generic food price for sale -->
+      <Price baseprice="20" sold="false" mincondition="1" >
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantcity" sold="false" multiplier="1.2"/>
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.8"/>
+        <Price storeidentifier="merchantbutcher" sold="false" multiplier="0.5"/>
+      </Price>
+      <Fabricate suitablefabricators="stove" requiredtime="40" requiresrecipe="false" amount="4" >
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-jotato" amount="6" />
+        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-nori" amount="2" />
+        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.1"/>
+      </Fabricate>
+      <Deconstruct time="1" />
+      <Body radius="20" density="10.2" />
+      <SuitableTreatment type="hungerDISABLEDFORNOW" suitability="20" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,15" holdangle="80" holdpos="-26,-30" handle1="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional hunger="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="ate_friedfood" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Affliction identifier="ate_friedfood" amount="1" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ParticleEmitter particle="smallwhitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,30,255" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+    
         
     <!-- FERMENTED FOODS -->
+    <!-- FERMENTED FOODS -->
+    <!-- FERMENTED FOODS -->
+    <!-- FERMENTED FOODS -->
+    
     <!-- Fermented Cabbage -->
     <Item hideinmenus="false" name="Fermented Cabbage" identifier="he-fermentedcabbage" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3,monsterfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True" health="10">
      <!--  <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />

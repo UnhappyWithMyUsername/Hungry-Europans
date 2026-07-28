@@ -1718,6 +1718,10 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-pierogi>Pierogi</entityname.he-pierogi>
 <entitydescription.he-pierogi>Meat and Jotato dumplings with shredded cheese, fried in oil. A warm and stuffy snack for long voyages.</entitydescription.he-pierogi>
 
+<entityname.he-jotatopancake>Jotato Pancake</entityname.he-jotatopancake>
+<entitydescription.he-jotatopancake>Shredded Jotatoes flattened and fried in a pan with touches of cut Nori. Easy to make, but not particularly nutritious.</entitydescription.he-jotatopancake>
+
+
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands
 (only applies to PLAYERS, not bots):
