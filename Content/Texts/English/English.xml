@@ -42,10 +42,10 @@ UNFORTUNATELY I HAVE LOST TRACK OF THE UPDATES... -->
 <!-- Food Items -->
 <entityname.he-proteinbar1>Protein Bar</entityname.he-proteinbar1>
 <entitydescription.he-proteinbar1>A somewhat tasty protein bar. Helps to speed up the healing process a bit.</entitydescription.he-proteinbar1>
-<entityname.he-chips1>Bag of Pomegrenade Chips</entityname.he-chips1>
-<entitydescription.he-chips1>Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to.</entitydescription.he-chips1>
-<entityname.he-chips2>Bag of Mutated Pomegrenade Chips</entityname.he-chips2>
-<entitydescription.he-chips2>Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit.</entitydescription.he-chips2>
+<entityname.he-chips1>Bag of Pomegrenade Crackers</entityname.he-chips1>
+<entitydescription.he-chips1>Dried pomegrenade crackers. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to.</entitydescription.he-chips1>
+<entityname.he-chips2>Bag of Jotato Chips</entityname.he-chips2>
+<entitydescription.he-chips2>Salt and vinegar flavored jotato chips. Best eaten on a couch watching Deepflix.</entitydescription.he-chips2>
 <entityname.he-bread>Bread</entityname.he-bread>
 <entitydescription.he-bread>A loaf of bread.</entitydescription.he-bread>
 <entityname.he-burgerbun>Burger Bun</entityname.he-burgerbun>

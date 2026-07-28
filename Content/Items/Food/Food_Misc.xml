@@ -205,7 +205,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="Bag of Mutated Pomegrenade Chips" identifier="he-chips2" health="11" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Bag of Jotato Chips" identifier="he-chips2" health="11" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -234,7 +234,6 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="1" />
-          <ReduceAffliction type="burn" amount="0.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -277,7 +276,6 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="1" />
-          <ReduceAffliction type="burn" amount="0.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
