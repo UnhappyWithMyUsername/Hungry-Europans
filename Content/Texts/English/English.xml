@@ -1713,6 +1713,11 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-gulashsoup>Gulash</entityname.he-gulashsoup>
 <entitydescription.he-gulashsoup>Stewed offal and vegetables with a good dose of spice. Gulash is somewhat unpopular in larger colonies, as it has often been associated with scarce hunting seasons and rationning.</entitydescription.he-gulashsoup>
 
+<entityname.he-pierogiraw>Pierogi (Raw)</entityname.he-pierogiraw>
+<entitydescription.he-pierogiraw>Meat and Jotato dumplings with shredded cheese. Must be fried.</entitydescription.he-pierogiraw>
+<entityname.he-pierogi>Pierogi</entityname.he-pierogi>
+<entitydescription.he-pierogi>Meat and Jotato dumplings with shredded cheese, fried in oil. A warm and stuffy snack for long voyages.</entitydescription.he-pierogi>
+
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands
 (only applies to PLAYERS, not bots):
