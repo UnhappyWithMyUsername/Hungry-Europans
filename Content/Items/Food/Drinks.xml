@@ -1994,7 +1994,7 @@
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
             <Remove />
-            <SpawnItem identifier="he-shiv" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
+            <SpawnItem identifier="he-shivcommon" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
           </StatusEffect>
         </Button>
       </CustomInterface>
