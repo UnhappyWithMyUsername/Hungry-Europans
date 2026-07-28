@@ -1721,6 +1721,15 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-jotatopancake>Jotato Pancake</entityname.he-jotatopancake>
 <entitydescription.he-jotatopancake>Shredded Jotatoes flattened and fried in a pan with touches of cut Nori. Easy to make, but not particularly nutritious.</entitydescription.he-jotatopancake>
 
+<entityname.he-vodka>Vanpost Vodka</entityname.he-vodka>
+<entitydescription.he-vodka>The cheapest, strongest booze one can drink without burning their throat. The fleeting sensation of strength this drink gives has left many station workers spiraling into addiction.</entitydescription.he-vodka>
+
+<entityname.he-kegvodka>Keg of Vanpost Vodka</entityname.he-kegvodka>
+<entitydescription.he-kegvodka>A keg full of Vanpost Vodka. Can be used to refill bottles at a refill station.</entitydescription.he-kegvodka>
+
+<entityname.he-glassofvodka>Glass of Vanpost Vodka</entityname.he-glassofvodka>
+<entitydescription.he-glassofvodka>A glass of Vanpost Vodka.</entitydescription.he-glassofvodka>
+
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
 <eventtext.manualenforceinfo>List of enforce manual needs commands

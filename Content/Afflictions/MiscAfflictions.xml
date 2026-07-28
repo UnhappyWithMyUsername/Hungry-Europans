@@ -1701,6 +1701,38 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,512,128,128" origin="0,0" />
     </Affliction>
         
+    <!-- drunk with vodka, gain vigor if drunk, and randomly pass out later if still drunk, losing the buffs -->
+    <Affliction 
+      identifier="vodkadrunk"
+      targets="human"
+      resetbetweenrounds="false"
+      limbspecific="false"
+      indicatorlimb="Head"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      maxstrength="100"
+      affectmachines="true">
+      <Effect minstrength="0" maxstrength="30" strengthchange="-1">
+      </Effect>
+      <Effect minstrength="30" maxstrength="100" strengthchange="-0.2">
+        <StatusEffect target="Character" comparison="And">
+          <Conditional drunk="gte 20" />
+          <Conditional strengthen="lt 300" />
+          <Affliction identifier="strengthen" amount="4" />
+        </StatusEffect>
+      </Effect>
+      <PeriodicEffect minstrength="30" maxstrength="100" mininterval="180" maxinterval="360" >
+        <StatusEffect target="Character" duration="1">
+          <Conditional drunk="gte 20" />
+          <Affliction identifier="he-exhaustedsleep" amount="10" />
+          <ReduceAffliction identifier="strengthen" amount="300" />
+          <ReduceAffliction identifier="vodkadrunk" amount="999" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction> 
+        
     <!-- compatibility affliction - we do not need this since Immersive Repairs actually checks for sleeping -->
     <!-- <Affliction 
       name="Welder's Eye Compat" 
