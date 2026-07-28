@@ -63,10 +63,9 @@
           <Conditional condition="lt 100" />
           <Conditional HasTag="opened" />
           <Affliction identifier="he-internalburn" amount="8" />
-          <Affliction identifier="psychosisresistance" amount="30" />
           <Affliction identifier="applydrunkfast" amount="6.0" />
-          <ReduceAffliction identifier="psychosis" amount="10.0" />
-          <ReduceAffliction identifier="hallucinating" amount="10.0" />
+          <ReduceAffliction identifier="psychosis" amount="2.0" />
+          <ReduceAffliction identifier="hallucinating" amount="2.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -280,7 +279,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="35" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
@@ -362,7 +360,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="35" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
@@ -491,7 +488,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="35" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
@@ -575,7 +571,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="35" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
@@ -668,7 +663,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="30" />
           <Affliction identifier="applydrunkmedium" amount="2.5" />
           <ReduceAffliction identifier="hallucinating" amount="2.0" />
           <ReduceAffliction identifier="psychosis" amount="2.0" />
@@ -751,7 +745,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="30" />
           <Affliction identifier="applydrunkmedium" amount="2.5" />
           <ReduceAffliction identifier="hallucinating" amount="2.0" />
           <ReduceAffliction identifier="psychosis" amount="2.0" />
@@ -1022,7 +1015,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
@@ -1101,7 +1093,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
@@ -1190,7 +1181,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
@@ -1269,7 +1259,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
@@ -1361,7 +1350,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <Affliction identifier="huskinfectionresistance" amount="20" />
           <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
@@ -1442,7 +1430,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <Affliction identifier="huskinfectionresistance" amount="20" />
           <Affliction identifier="huskinfection" amount="1" probability="0.001"/>
@@ -1536,7 +1523,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <Affliction identifier="he-clownjuice" amount="20" />
           <ReduceAffliction identifier="nausea" amount="1" />
@@ -1616,7 +1602,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <Affliction identifier="he-clownjuice" amount="20" />
           <ReduceAffliction identifier="nausea" amount="1" />
@@ -1706,7 +1691,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1.5" />
           <Affliction identifier="he-reaperstribute" amount="17" />
           <ReduceAffliction identifier="nausea" amount="1" />
@@ -1786,7 +1770,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1.5" />
           <Affliction identifier="he-reaperstribute" amount="17" />
           <ReduceAffliction identifier="nausea" amount="1" />
@@ -1850,7 +1833,6 @@
               
         <!-- Regular drinking RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" >
-          <Affliction identifier="psychosisresistance" amount="15" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
@@ -1943,7 +1925,6 @@
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
           <Conditional HasTag="opened" />
-          <Affliction identifier="psychosisresistance" amount="35" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
@@ -2026,7 +2007,6 @@
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="35" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
