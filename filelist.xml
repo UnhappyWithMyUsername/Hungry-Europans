@@ -76,7 +76,6 @@
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
   <Text file="%ModDir%/Content/Texts/English/Loadingtips.xml" />
   <Missions file="%ModDir%/Content/Events/Missions.xml" />
-  <Submarine file="%ModDir%/#Testkitchen.sub" />
   <Tutorials file="%ModDir%/Content/Tutorials/Tutorials.xml" />
   <RandomEvents file="%ModDir%/Content/Tutorials/TutorialEvents.xml" />
   <NPCSets file="%ModDir%/Content/Tutorials/TutorialNpcs.xml" />
@@ -89,4 +88,5 @@
   <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Hungry Winterhalter.sub" />
   <Outpost file="%ModDir%/Content/Tutorials/TutorialKitchen.sub" />
+  <Submarine file="%ModDir%/#Testkitchen.sub" />
 </contentpackage>
