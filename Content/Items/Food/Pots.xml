@@ -283,7 +283,7 @@
         <RequiredItem identifier="he-potwithwater" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.2"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.2"/>
-        <RequiredItem identifier="he-offal" amount="4" />
+        <RequiredItem identifier="he-rawoffal" amount="4" />
         <RequiredItem tag="fruit" amount="2" />
       </Fabricate>
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
