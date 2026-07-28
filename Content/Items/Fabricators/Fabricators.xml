@@ -1017,7 +1017,7 @@
       </LightComponent>
       <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
         <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
-        <TickBox text="On/Off">
+        <TickBox text="interaction.onoff">
           <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
           <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" />
         </TickBox>

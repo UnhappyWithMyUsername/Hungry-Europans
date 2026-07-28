@@ -63,6 +63,7 @@ Potato update
 [*] Soap now cleans "Oily" affliction from Immersive Repairs
 [*] "Oily" affliction from Immersive Repairs increases Hygiene
 [*] Keg of Coalition Premium is slightly more expensive (to match Jovian Force)
+[*] Alcohol builds up psychosis resistance slowly (instead of on drinking)
 [/List]
 
 [b]Fixes:[/b] 
