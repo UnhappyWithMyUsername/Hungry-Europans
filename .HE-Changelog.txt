@@ -71,6 +71,7 @@ Potato update
 [*] Fixed getting 2x too much Nori in some cases
 [*] Fixed potentially getting extra cooking/butchery by injecting the Hungry Europan syringe twice
 [*] Fixed Reaper's Tribute stunlocking forever (again?)
+[*] Fixed some Tutorial softlocks and issues
 [/List]
 
 
