@@ -1702,8 +1702,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-thalamisalami>Thalami Salami</entityname.he-thalamisalami>
 <entitydescription.he-thalamisalami>Ground up Thalamus blood sausage cured with spices and wrapped tightly. Only the most daring of divers can enjoy this unusual meal...</entitydescription.he-thalamisalami>
 
-<entityname.he-eggplant>Ovoflorasite</entityname.he-eggplant>
-<entitydescription.he-eggplant>An odd parasitic plant that infects oviparous creatures, replacing their embryos with an egg-like fruit. The infected specimen then lays the plant among its eggs, until it bursts and repeats the cycle. But to any hungry europan, it's an ingredient like any other...</entitydescription.he-eggplant>
+<entityname.he-eggplant>Ovoflora</entityname.he-eggplant>
+<entitydescription.he-eggplant>An odd parasitic plant that infects oviparous creatures, replacing their embryos with an egg-like fruit. The infected specimen then lays the plant among its eggs, until it bursts and repeats the cycle. But to a hungry europan, it's an ingredient like any other...</entitydescription.he-eggplant>
 
 <entityname.he-jotato>Jotato</entityname.he-jotato>
 <entitydescription.he-jotato>The crop that saved the Earth centuries ago made its way to Europa, but not unchanged by the radiation emanating from Jupiter. </entitydescription.he-jotato>
@@ -1729,6 +1729,12 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 <entityname.he-glassofvodka>Glass of Vanpost Vodka</entityname.he-glassofvodka>
 <entitydescription.he-glassofvodka>A glass of Vanpost Vodka.</entitydescription.he-glassofvodka>
+
+<entityname.he-lardjotatoes>Lard-roasted Jotatoes</entityname.he-lardjotatoes>
+<entitydescription.he-lardjotatoes>Thick Jotato cuts roasted in animal fat and garnished with Mushrooms. This meal is irresponsibly greasy, but thankfully no one on Europa lives long enough to die from clogged arteries.</entitydescription.he-lardjotatoes>
+
+
+
 
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
