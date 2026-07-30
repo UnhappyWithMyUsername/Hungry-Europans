@@ -1696,8 +1696,9 @@
           <Conditional hygiene="lt 30" />
           <ReduceAffliction identifier="mood" strength="0.15" />
         </StatusEffect>
-        <StatusEffect target="Character" disabledeltatime="true">
+        <StatusEffect target="Character" disabledeltatime="true" comparison="Or">
           <Conditional hygiene="gte 30" />
+          <Conditional oily="gte 50" />
           <ReduceAffliction identifier="he-washedwithsoap" strength="999" />
         </StatusEffect>
       </Effect>
