@@ -1277,8 +1277,7 @@
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="0,320,100,120" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="100,320,100,120" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
     <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.51" sourcerect="200,320,100,120" offset="0,0" randomrotation="0,0" randomscale="1,1" randomoffset="0,0" origin="0.5,0.5" randomgroupid="1" />
-    <LightComponent lightcolor="180,200,120,80" range="50" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true" >
-      <IsActiveConditional Attached="true" />
+    <LightComponent lightcolor="180,200,120,80" range="60" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true" >
       <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
     </LightComponent>    
     <LevelResource deattachduration="3" randomoffsetfromwall="30">
@@ -1298,7 +1297,7 @@
       <StatusEffect type="OnBroken" target="This" oneshot="true" >
         <particleemitter particleamount="20" particle="fruitchunks" velocitymin="100" velocitymax="300" anglemin="40" anglemax="140" copyentitangle="true" distancemin="0" distancemax="30" scalemin="0.35" scalemax="0.6" colormultiplier="80,150,50,255" lifetimemultiplier="2" />
         <sound file="Content/Items/Medical/ITEM_proteinBarOpen.ogg" range="300" volume="2" frequencymultiplier="1.3" />       
-        <SpawnItem identifier="he-jotato" spawnposition="This" count="6" aimspread="220" impulse="0.12" rotation="0" />
+        <SpawnItem identifier="he-jotato" spawnposition="This" count="6" spread="10" aimspread="220" impulse="0.12" rotation="0" />
         <Remove />
       </StatusEffect>
     </Holdable>
