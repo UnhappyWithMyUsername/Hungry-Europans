@@ -1236,7 +1236,10 @@
     <LevelResource deattachduration="3" randomoffsetfromwall="30">
       <!-- I have to use fixedquantity because clustersize only works there and not on random spawns, so incredibly stupid -->
       <!-- <Commonness commonness="0.2" cavecommonness="0.2" abysscommonness="0" clustersize="1" /> -->
-      <Commonness fixedquantity="true" clusterquantity="1" clustersize="1" />
+      <Commonness leveltype="europanridge" fixedquantity="true" clusterquantity="1" clustersize="1" />
+      <Commonness leveltype="theaphoticplateau" fixedquantity="true" clusterquantity="1" clustersize="1" />
+      <Commonness leveltype="thegreatsea" fixedquantity="true" clusterquantity="1" clustersize="1" />
+      <Commonness leveltype="hydrothermalwastes" fixedquantity="true" clusterquantity="1" clustersize="1" />
     </LevelResource>
     <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="10,10" swingspeed="0.5" swingwhenholding="True" attachable="true" reattachable="false" pickingtime="2.0">
       <!-- VFX -->
@@ -1281,7 +1284,11 @@
     <LevelResource deattachduration="3" randomoffsetfromwall="30">
       <!-- I have to use fixedquantity because clustersize only works there and not on random spawns, so incredibly stupid -->
       <!-- <Commonness commonness="1" cavecommonness="1" abysscommonness="0" /> -->
-      <Commonness fixedquantity="true" clusterquantity="3" clustersize="1" />
+      <Commonness leveltype="coldcaverns" fixedquantity="true" clusterquantity="1" clustersize="1" />
+      <Commonness leveltype="europanridge" fixedquantity="true" clusterquantity="3" clustersize="1" />
+      <Commonness leveltype="theaphoticplateau" fixedquantity="true" clusterquantity="3" clustersize="1" />
+      <Commonness leveltype="thegreatsea" fixedquantity="true" clusterquantity="3" clustersize="1" />
+      <Commonness leveltype="hydrothermalwastes" fixedquantity="true" clusterquantity="2" clustersize="1" />
     </LevelResource>
     <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" attachable="true" reattachable="false" pickingtime="1.0">
       <StatusEffect type="OnContained" target="This" Condition="-100" setvalue="true" oneshot="true" />
