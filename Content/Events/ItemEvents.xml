@@ -74,5 +74,15 @@
     <ClearTagAction tag="breaklimbstarget" />
   </ScriptedEvent>
   
+  <!-- simple event to tag and find bushes using debugdraw, only for testing -->
+  <ScriptedEvent identifier="tagbushesTEST">
+    <TagAction criteria="itemidentifier:he-jotatobush" tag="uninstalledbox" />
+    <TagAction criteria="itemidentifier:he-eggplant" tag="uninstalltarget" />
+    <Label name="loop"/>
+    <WaitAction time="1"/>
+    <Goto name="loop"/>
+  </ScriptedEvent>
+  
+  
   </EventPrefabs>
 </Randomevents>
