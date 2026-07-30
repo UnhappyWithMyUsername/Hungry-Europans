@@ -76,11 +76,14 @@
   
   <!-- simple event to tag and find bushes using debugdraw, only for testing -->
   <ScriptedEvent identifier="tagbushesTEST">
-    <TagAction criteria="itemidentifier:he-jotatobush" tag="uninstalledbox" />
-    <TagAction criteria="itemidentifier:he-eggplant" tag="uninstalltarget" />
-    <Label name="loop"/>
-    <WaitAction time="1"/>
-    <Goto name="loop"/>
+    <TagAction criteria="itemidentifier:he-jotatobush" tag="jotatobush" />
+    <TagAction criteria="itemidentifier:he-eggplant" tag="eggplant" />
+    <StatusEffectAction targettag="jotatobush">
+      <StatusEffect target="This" scale="10" setvalue="true" />
+    </StatusEffectAction>
+    <StatusEffectAction targettag="eggplant">
+      <StatusEffect target="This" scale="10" setvalue="true" />
+    </StatusEffectAction>
   </ScriptedEvent>
   
   
