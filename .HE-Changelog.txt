@@ -37,7 +37,7 @@ HOTFIX
 ---------------------------------------------------------------------------
 
 
-[hr]xx/xx/2026[/hr]
+[hr]30/07/2026[/hr]
 
 Potato update
 
@@ -47,14 +47,14 @@ Potato update
 [*] Added a wild Egg-Plant (more eggs)
 [*] Added wild Jotato bushes (Jovian potatoes)
 [*] Added Pierogi and Gulash (offal recipes)
-[*] Added Vodka and Jotato Pancakes
+[*] Added Jotato recipes: Vodka, Jotato Pancakes, Lard-roasted Jotatoes...
 [/List]
 
 [b]Changes:[/b] 
 [List]
 [*] Fries are crafted with Jotatoes instead of Pomegrenades
 [*] You can rehydrate Nori into strips at a small loss
-[*] Recruiting Chef NPC event only triggers once in the campaign
+[*] Recruiting Chef NPC event now only triggers once in the campaign
 [*] Added price to cooked meals so you can sell them (Farmer's Market talent fix)
 [*] Hunger/Thirst/Fatigue only show up on health scanner and inspect at higher values (reduces scanner visual bloat)
 [*] Nerfed planter pots by adding more placement restrictions (unpopular, but the farming situation was crazy with plants obstructing every single piece of machinery on submarines)
