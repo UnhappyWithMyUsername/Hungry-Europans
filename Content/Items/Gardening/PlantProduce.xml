@@ -1241,7 +1241,7 @@
       <Commonness leveltype="thegreatsea" fixedquantity="true" clusterquantity="2" clustersize="1" />
       <Commonness leveltype="hydrothermalwastes" fixedquantity="true" clusterquantity="2" clustersize="1" />
     </LevelResource>
-    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="10,10" swingspeed="0.5" swingwhenholding="True" attachable="true" reattachable="false" pickingtime="2.0">
+    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="10,10" swingspeed="0.5" swingwhenholding="True" attachable="true" reattachable="false" pickingtime="5.0">
       <!-- VFX -->
       <StatusEffect type="Always" target="This" >
         <Conditional Attached="true" />
@@ -1289,7 +1289,7 @@
       <Commonness leveltype="thegreatsea" fixedquantity="true" clusterquantity="4" clustersize="1" />
       <Commonness leveltype="hydrothermalwastes" fixedquantity="true" clusterquantity="3" clustersize="1" />
     </LevelResource>
-    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" attachable="true" reattachable="false" pickingtime="1.0">
+    <Holdable DisableWhenRangedWeaponEquipped="true" slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" attachable="true" reattachable="false" pickingtime="5.0">
       <StatusEffect type="OnContained" target="This" Condition="-100" setvalue="true" oneshot="true" />
       <StatusEffect type="OnNotContained" target="This" Condition="-100" setvalue="true" oneshot="true">      
         <Conditional PickingDone="true" />
