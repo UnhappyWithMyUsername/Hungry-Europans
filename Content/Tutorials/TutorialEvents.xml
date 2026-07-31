@@ -38,8 +38,6 @@
       <TagAction criteria="itemtag:npcdoor" tag="npcdoor" />
       <TagAction criteria="itemtag:tutorialketchup" tag="tutorialketchup" />
       <TagAction criteria="itemtag:tutorialyeastshroom" tag="tutorialyeastshroom" />
-      <TagAction criteria="itemtag:tutorialyeastshroombrewing" tag="tutorialyeastshroombrewing" />
-      <TagAction criteria="itemtag:tutorialsugar" tag="tutorialsugar" />
       <TagAction criteria="itemtag:tutorialflour" tag="tutorialflour" />
       <TagAction criteria="itemtag:tutorialwater" tag="tutorialwater" />
       <TagAction criteria="itemtag:tutorialsalt" tag="tutorialsalt" />
