@@ -25,12 +25,12 @@ Important TODO:
 //////////////////////
 //////////////////////
 
-[hr]14/07/2026
+[hr]01/08/2026
 
 HOTFIX 
 
 [List]
-[*] 
+[*] Fixed the tutorial not working
 [/List]
 
 
