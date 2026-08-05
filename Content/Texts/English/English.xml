@@ -1763,6 +1763,10 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 name="[^"]*"
 description="[^"]*"
 
+<!-- Use this to find missing text IDs 
+a lot of those are from vanilla, and others are for unushed/hidden items and afflictions -->
+checkmissingloca LocalMods/Hungry-Europans
+
 
 </Override>
 </infotexts>
