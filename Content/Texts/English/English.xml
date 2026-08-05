@@ -1759,5 +1759,10 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <!-- Regex to remove all the patch xx we no longer use -->
 (?#.+)<!--Patch \d\d-->+$ 
 
+<!-- Regex to delete all descriptions and name from items, so people can call out missing text id better -->
+name="[^"]*"
+description="[^"]*"
+
+
 </Override>
 </infotexts>
