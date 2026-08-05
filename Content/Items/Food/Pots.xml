@@ -752,7 +752,7 @@
       <!--<Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
-        <RequiredItem identifier="he-potgulashsoup" UseCondition="True" MinCondition="0.20"/>
+        <RequiredItem identifier="he-potgulash" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>-->
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>

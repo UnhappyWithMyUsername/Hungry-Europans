@@ -874,6 +874,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <advancedafflictiondescription.others.he-stuffed.2>The stomach is very full. The patient had almost too much to eat.</advancedafflictiondescription.others.he-stuffed.2>
 <advancedafflictiondescription.others.he-stuffed.3>The stomach is too full. The patient might vomit.</advancedafflictiondescription.others.he-stuffed.3>
 
+<afflictionname.he-internalburn>Internal Burns</afflictionname.he-internalburn>
 <afflictiondescription.self.he-internalburn.low>Your throat feels irritated and giving off a slight burning sensation.</afflictiondescription.self.he-internalburn.low><!--Patch 13-->
 <afflictiondescription.self.he-internalburn>Your throat is giving off a very painful burning sensation. Swallowing hurts.</afflictiondescription.self.he-internalburn><!--Patch 13-->
 <afflictiondescription.self.he-internalburn.high>Your throat burns like an open fire. You can barely speak.</afflictiondescription.self.he-internalburn.high><!--Patch 13-->
@@ -1279,10 +1280,10 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 <!-- Fast food -->
 <entityname.he-rawfries>Raw Fries</entityname.he-rawfries>
-<entitydescription.he-rawfries>Out of the pom, into the fryer.</entitydescription.he-rawfries>
+<entitydescription.he-rawfries>Throw the tater into the fryer.</entitydescription.he-rawfries>
 
 <entityname.he-fries>Fries</entityname.he-fries>
-<entitydescription.he-fries>Crunchy and salty pomegrenade fries.</entitydescription.he-fries>
+<entitydescription.he-fries>Crunchy and salty Jotato fries.</entitydescription.he-fries>
 
 <entityname.he-poutine>Poutine</entityname.he-poutine>
 <entitydescription.he-poutine>Fries topped with melted cheese and a thick sauce. As greasy as it is delicious.</entitydescription.he-poutine>
@@ -1449,7 +1450,7 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 
 <afflictionname.trait_likes_friedfoods>Craving Fried Food</afflictionname.trait_likes_friedfoods>
-<afflictiondescription.trait_likes_burgers>You are hungry for Fried Food.</afflictiondescription.trait_likes_burgers>
+<afflictiondescription.trait_likes_friedfoods>You are hungry for Fried Food.</afflictiondescription.trait_likes_friedfoods>
 <afflictionname.trait_likes_burgers>Craving Burgers</afflictionname.trait_likes_burgers>
 <afflictiondescription.trait_likes_burgers>You are hungry for Burgers.</afflictiondescription.trait_likes_burgers>
 <afflictionname.trait_likes_hotdogs>Craving Hotdogs</afflictionname.trait_likes_hotdogs>
@@ -1705,18 +1706,20 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-eggplant>Ovoflora</entityname.he-eggplant>
 <entitydescription.he-eggplant>An odd parasitic plant that infects oviparous creatures, replacing their embryos with an egg-like fruit. The infected specimen then lays the plant among its eggs, until it bursts and repeats the cycle. But to a hungry europan, it's an ingredient like any other...</entitydescription.he-eggplant>
 
+<entityname.he-jotatobush>Jotato Bush</entityname.he-jotatobush>
+<entitydescription.he-jotato>The crop that saved the Earth centuries ago made its way to Europa, but not unchanged by the radiation emanating from Jupiter. </entitydescription.he-jotato>
 <entityname.he-jotato>Jotato</entityname.he-jotato>
 <entitydescription.he-jotato>The crop that saved the Earth centuries ago made its way to Europa, but not unchanged by the radiation emanating from Jupiter. </entitydescription.he-jotato>
 
-<entityname.he-potgulashsoup>Gulash Pot</entityname.he-potgulashsoup>
-<entitydescription.he-potgulashsoup>Stewed offal and vegetables with a good dose of spice. Gulash is somewhat unpopular in larger colonies, as it has often been associated with scarce hunting seasons and rationning.</entitydescription.he-potgulashsoup>
+<entityname.he-potgulash>Gulash Pot</entityname.he-potgulash>
+<entitydescription.he-potgulash>Stewed offal and vegetables with a good dose of spice. Gulash is somewhat unpopular in larger colonies, as it has often been associated with scarce hunting seasons and rationning.</entitydescription.he-potgulash>
 <entityname.he-gulashsoup>Gulash</entityname.he-gulashsoup>
 <entitydescription.he-gulashsoup>Stewed offal and vegetables with a good dose of spice. Gulash is somewhat unpopular in larger colonies, as it has often been associated with scarce hunting seasons and rationning.</entitydescription.he-gulashsoup>
 
 <entityname.he-pierogiraw>Pierogi (Raw)</entityname.he-pierogiraw>
 <entitydescription.he-pierogiraw>Meat and Jotato dumplings with shredded cheese. Must be fried.</entitydescription.he-pierogiraw>
-<entityname.he-pierogi>Pierogi</entityname.he-pierogi>
-<entitydescription.he-pierogi>Meat and Jotato dumplings with shredded cheese, fried in oil. A warm and stuffy snack for long voyages.</entitydescription.he-pierogi>
+<entityname.he-pierogifried>Pierogi</entityname.he-pierogifried>
+<entitydescription.he-pierogifried>Meat and Jotato dumplings with shredded cheese, fried in oil. A warm and stuffy snack for long voyages.</entitydescription.he-pierogifried>
 
 <entityname.he-jotatopancake>Jotato Pancake</entityname.he-jotatopancake>
 <entitydescription.he-jotatopancake>Shredded Jotatoes flattened and fried in a pan with touches of cut Nori. Easy to make, but not particularly nutritious.</entitydescription.he-jotatopancake>
@@ -1733,7 +1736,8 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-lardjotatoes>Lard-roasted Jotatoes</entityname.he-lardjotatoes>
 <entitydescription.he-lardjotatoes>Thick Jotato cuts roasted in animal fat and garnished with Mushrooms. This meal is irresponsibly greasy, but thankfully no one on Europa lives long enough to die from clogged arteries.</entitydescription.he-lardjotatoes>
 
-
+<entityname.invisibleholder>Take Item</entityname.invisibleholder>
+<entitydescription.invisibleholder>An invisible item holder that deletes itself when interacted with. Good for making items hold in place without using platforms.</entitydescription.invisibleholder>
 
 
 
