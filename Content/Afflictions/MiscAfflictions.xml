@@ -1739,24 +1739,26 @@
     </Affliction> 
         
     <!-- compatibility affliction - we do not need this since Immersive Repairs actually checks for sleeping -->
-    <!-- <Affliction 
+    <Affliction 
       name="Welder's Eye Compat" 
       description="Does nothing. Only exists to allow beds to heal welderseye without throwing error about missing welderseye type" 
       identifier="welderseyecompatibility"
       type="welderseye"
-      limbspecific="false"
-      indicatorlimb="Head"
-      showiconthreshold="10"
-      showicontoothersthreshold="1000" 
-      showinhealthscannerthreshold="1000" 
-      maxstrength="100" 
-      afflictionoverlayalphaislinear="false" 
-      healableinmedicalclinic="true" 
-      healcostmultiplier="15"
-      MedicalSkillGain="0.0">
+      maxstrength="100" >
       <Effect minstrength="0" maxstrength="100" />
-    </Affliction>   -->
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction>  
         
+    <!-- compatibility affliction - we do not need this since Immersive Repairs actually checks for sleeping -->
+    <Affliction 
+      name="Oily Compat" 
+      description="Does nothing. Only exists to allow beds to heal oily without throwing error about missing oil type" 
+      identifier="oilycompatibility"
+      type="oil"
+      maxstrength="100" >
+      <Effect minstrength="0" maxstrength="100" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction>  
         
   </Afflictions>
 </Override>
