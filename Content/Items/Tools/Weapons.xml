@@ -2,7 +2,7 @@
 <Override>
   <Items>
   
-    <Item name="Bottle Shiv" identifier="he-shivcommon" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
+    <Item name="Bottle Shiv" identifier="he-shivcommon" nameidentifier="he-shivcommon" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <Deconstruct time="1">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5" />
@@ -34,7 +34,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="Bottle Shiv" identifier="he-shivbeer" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
+    <Item name="Bottle Shiv" identifier="he-shivbeer" nameidentifier="he-shivcommon" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <Deconstruct time="1">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5" />
@@ -66,7 +66,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="Bottle Shiv" identifier="he-shivhalucinova" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
+    <Item name="Bottle Shiv" identifier="he-shivhalucinova" nameidentifier="he-shivcommon" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <Deconstruct time="1">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5" />
@@ -98,7 +98,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="Bottle Shiv" identifier="he-shivwhiskey" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
+    <Item name="Bottle Shiv" identifier="he-shivwhiskey" nameidentifier="he-shivcommon" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <Deconstruct time="1">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5" />
@@ -130,7 +130,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="Bottle Shiv" identifier="he-shivrum" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
+    <Item name="Bottle Shiv" identifier="he-shivrum" nameidentifier="he-shivcommon" descriptionidentifier="he-shivcommon" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,shiv" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_glassfragments" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <Deconstruct time="1">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5" />
