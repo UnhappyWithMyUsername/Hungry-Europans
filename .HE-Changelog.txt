@@ -25,12 +25,13 @@ Important TODO:
 //////////////////////
 //////////////////////
 
-[hr]01/08/2026
+[hr]06/08/2026
 
-HOTFIX 
+HOTFIX, sorry for the inconvenience
 
 [List]
-[*] Fixed the tutorial not working
+[*] Fixed soap throwing errors about "oily" affliction
+[*] Fixed some broken text and missing text IDs 
 [/List]
 
 
