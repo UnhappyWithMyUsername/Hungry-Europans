@@ -162,11 +162,7 @@
     <!-- HUNGER AND THIRST -->
     <Affliction
       identifier="hunger"
-      name="Hunger"
-      description="The stomach is happy."
       type="hunger"
-      causeofdeathdescription="Starved"
-      selfcauseofdeathdescription="You have died of starvation."
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="true"
@@ -181,27 +177,27 @@
       MedicalSkillGain="0.0"
       VitalityLossRequiredForTreatment="False" >
       <Description
-        textidentifier="afflictiondescription.he-hunger.self"
+        textidentifier="afflictiondescription.hunger.self"
         target="Self"
         minstrength="30"
         maxstrength="80" />
       <Description
-        textidentifier="afflictiondescription.he-hunger.lethal.self"
+        textidentifier="afflictiondescription.hunger.lethal.self"
         target="Self"
         minstrength="80"
         maxstrength="100" />
       <Description
-        textidentifier="afflictiondescription.he-hunger.other.low"
+        textidentifier="afflictiondescription.hunger.other.low"
         target="OtherCharacter"
         minstrength="0"
         maxstrength="30" />
       <Description
-        textidentifier="afflictiondescription.he-hunger.other"
+        textidentifier="afflictiondescription.hunger.other"
         target="OtherCharacter"
         minstrength="30"
         maxstrength="80" />
       <Description
-        textidentifier="afflictiondescription.he-hunger.lethal.other"
+        textidentifier="afflictiondescription.hunger.lethal.other"
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
@@ -294,12 +290,9 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
         
-    <Affliction name="Thirst"
+    <Affliction
       identifier="thirst"
-      description="You feel refreshed."
       type="thirst"
-      causeofdeathdescription="Died of thirst"
-      selfcauseofdeathdescription="You have died of thirst."
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="true"
@@ -314,27 +307,27 @@
       MedicalSkillGain="0.0"
       VitalityLossRequiredForTreatment="False">
       <Description
-        textidentifier="afflictiondescription.he-thirst.self"
+        textidentifier="afflictiondescription.thirst.self"
         target="Self"
         minstrength="30"
         maxstrength="80" />
       <Description
-        textidentifier="afflictiondescription.he-thirst.lethal.self"
+        textidentifier="afflictiondescription.thirst.lethal.self"
         target="Self"
         minstrength="80"
         maxstrength="100" />
       <Description
-        textidentifier="afflictiondescription.he-thirst.other.low"
+        textidentifier="afflictiondescription.thirst.other.low"
         target="OtherCharacter"
         minstrength="0"
         maxstrength="30" />
       <Description
-        textidentifier="afflictiondescription.he-thirst.other"
+        textidentifier="afflictiondescription.thirst.other"
         target="OtherCharacter"
         minstrength="30"
         maxstrength="80" />
       <Description
-        textidentifier="afflictiondescription.he-thirst.lethal.other"
+        textidentifier="afflictiondescription.thirst.lethal.other"
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />

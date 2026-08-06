@@ -562,7 +562,9 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.he-kitchencounter2>Kitchen Pantry</entityname.he-kitchencounter2><!--Changed as of Patch 11 | New identifier-->
 <entitydescription.he-kitchencounter2>Can store up to 30 different small or medium items.</entitydescription.he-kitchencounter2><!--Changed -->
 <entityname.he-refrigerator>Refrigerator</entityname.he-refrigerator>
-<entitydescription.he-refrigerator>Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigerator><!--Changed as of Patch 10-->
+<entitydescription.he-refrigerator>Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigerator>
+<entityname.he-refrigeratornobattery>Refrigerator</entityname.he-refrigeratornobattery>
+<entitydescription.he-refrigeratornobattery>Sub-Editor exclusive variant of the refrigerator without the built-in battery. Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigeratornobattery>
 
 
 <entityname.sink_installation>Sink (Installation)</entityname.sink_installation><!--Patch 19-->
@@ -749,28 +751,27 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <talentdescription.he-psycookinesis>Being ‖color:gui.orange‖delirious‖end‖ allows you to use a nearby ‖color:gui.orange‖Cutting Board‖end‖... with the power of your mind!</talentdescription.he-psycookinesis><!--Patch 20-->
 <afflictionname.he-psycookinesisbuff>Psycookinesis</afflictionname.he-psycookinesisbuff><!--Patch 20-->
 <afflictiondescription.he-psycookinesisbuff>Control the knife with your thoughts!</afflictiondescription.he-psycookinesisbuff><!--Patch 20-->
-<!-- Afflictions -->
-<afflictionname.hunger>Hunger</afflictionname.hunger><!--Patch 10-->
-<afflictionname.he-hunger>Hunger</afflictionname.he-hunger>
-<afflictiondescription.he-hunger>The stomach is happy.</afflictiondescription.he-hunger>
-<afflictioncauseofdeath.he-hunger>Died of starvation.</afflictioncauseofdeath.he-hunger>
-<afflictioncauseofdeathself.he-hunger>You have died of starvation.</afflictioncauseofdeathself.he-hunger>
-<afflictiondescription.he-hunger.self>The stomach growls!</afflictiondescription.he-hunger.self>
-<afflictiondescription.he-hunger.lethal.self>Close to starving...</afflictiondescription.he-hunger.lethal.self>
-<afflictiondescription.he-hunger.other.low>The patient is starting to get a small appetite.</afflictiondescription.he-hunger.other.low>
-<afflictiondescription.he-hunger.other>The patient is hungry.</afflictiondescription.he-hunger.other>
-<afflictiondescription.he-hunger.lethal.other>The patient is starting to starve.</afflictiondescription.he-hunger.lethal.other>
 
-<afflictionname.thirst>Thirst</afflictionname.thirst><!--Patch 10-->
-<afflictionname.he-thirst>Thirst</afflictionname.he-thirst>
-<afflictiondescription.he-thirst>You feel refreshed.</afflictiondescription.he-thirst>
-<afflictioncauseofdeath.he-thirst>Died of thirst.</afflictioncauseofdeath.he-thirst>
-<afflictioncauseofdeathself.he-thirst>You have died of thirst.</afflictioncauseofdeathself.he-thirst>
-<afflictiondescription.he-thirst.self>The throat feels dry.</afflictiondescription.he-thirst.self>
-<afflictiondescription.he-thirst.lethal.self>Starting to die of thirst...</afflictiondescription.he-thirst.lethal.self>
-<afflictiondescription.he-thirst.other.low>The patient is starting to get thirsty.</afflictiondescription.he-thirst.other.low>
-<afflictiondescription.he-thirst.other>The patient is thirsty.</afflictiondescription.he-thirst.other>
-<afflictiondescription.he-thirst.lethal.other>The patient is starting to die of thirst.</afflictiondescription.he-thirst.lethal.other>
+<!-- Afflictions -->
+<afflictionname.hunger>Hunger</afflictionname.hunger>
+<afflictiondescription.hunger>The stomach is happy.</afflictiondescription.hunger>
+<afflictioncauseofdeath.hunger>Died of starvation.</afflictioncauseofdeath.hunger>
+<afflictioncauseofdeathself.hunger>You have died of starvation.</afflictioncauseofdeathself.hunger>
+<afflictiondescription.hunger.self>The stomach growls!</afflictiondescription.hunger.self>
+<afflictiondescription.hunger.lethal.self>Close to starving...</afflictiondescription.hunger.lethal.self>
+<afflictiondescription.hunger.other.low>The patient is starting to get a small appetite.</afflictiondescription.hunger.other.low>
+<afflictiondescription.hunger.other>The patient is hungry.</afflictiondescription.hunger.other>
+<afflictiondescription.hunger.lethal.other>The patient is starting to starve.</afflictiondescription.hunger.lethal.other>
+
+<afflictionname.thirst>Thirst</afflictionname.thirst>
+<afflictiondescription.thirst>You feel refreshed.</afflictiondescription.thirst>
+<afflictioncauseofdeath.thirst>Died of thirst.</afflictioncauseofdeath.thirst>
+<afflictioncauseofdeathself.thirst>You have died of thirst.</afflictioncauseofdeathself.thirst>
+<afflictiondescription.thirst.self>The throat feels dry.</afflictiondescription.thirst.self>
+<afflictiondescription.thirst.lethal.self>Starting to die of thirst...</afflictiondescription.thirst.lethal.self>
+<afflictiondescription.thirst.other.low>The patient is starting to get thirsty.</afflictiondescription.thirst.other.low>
+<afflictiondescription.thirst.other>The patient is thirsty.</afflictiondescription.thirst.other>
+<afflictiondescription.thirst.lethal.other>The patient is starting to die of thirst.</afflictiondescription.thirst.lethal.other>
 
 <afflictionname.quenched>Quenched</afflictionname.quenched><!--Patch 13-->
 <afflictiondescription.quenched>You don't get thirsty.</afflictiondescription.quenched><!--Patch 13-->
@@ -1738,6 +1739,10 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 
 <entityname.invisibleholder>Take Item</entityname.invisibleholder>
 <entitydescription.invisibleholder>An invisible item holder that deletes itself when interacted with. Good for making items hold in place without using platforms.</entitydescription.invisibleholder>
+
+<entityname.spawner>Spawner Item</entityname.spawner>
+<entitydescription.spawner>A simple spawner item that can be wired and spawn things using a signal.</entitydescription.spawner>
+
 
 
 
