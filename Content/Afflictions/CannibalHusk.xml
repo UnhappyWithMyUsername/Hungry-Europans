@@ -1,13 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Character specifiertags="true" SpeciesName="humancannibal" SpeciesTranslationOverride="" DisplayName="" Group="husk" Humanoid="true" HasInfo="True" CanInteract="True" Husk="True" UseHuskAppendage="True" NeedsAir="False" NeedsWater="False" IsMachine="False" CanSpeak="true" ShowHealthBar="True" UseBossHealthBar="False" Noise="100" Visibility="100" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="True" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False" AITurretPriority="1" AISlowTurretPriority="1" DespawnContainer="despawncontainer">
+<Character specifiertags="true" SpeciesName="humancannibal" SpeciesTranslationOverride="" DisplayName="" Group="Human" Humanoid="true" HasInfo="True" CanInteract="True" Husk="False" UseHuskAppendage="True" NeedsAir="True" NeedsWater="False" IsMachine="False" CanSpeak="true" ShowHealthBar="True" UseBossHealthBar="False" Noise="100" Visibility="100" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False" AITurretPriority="1" AISlowTurretPriority="1" DespawnContainer="despawncontainer">
 
   <ragdolls folder="Content/Characters/Human/Ragdolls" />
   <animations folder="Content/Characters/Human/Animations" />
   
-  <huskappendage affliction="he-cannibalmouth" path="%ModDir:2954998725%/Content/Afflictions/CannibalMouth.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="he-cannibalmouth" path="%ModDir:2954998725%/Content/Afflictions/CannibalMouth.xml" onlyfromafflictions="false" />
 
-  <health Vitality="50" DoesBleed="True" CrushDepth="6000" UseHealthWindow="True" BleedingReduction="10" BurnReduction="0" ConstantHealthRegeneration="1" HealthRegenerationWhenEating="0" StunImmunity="False" PoisonImmunity="False" PoisonVulnerability="0.5" EmpVulnerability="0" ApplyAfflictionColors="True">
+  <health Vitality="50" DoesBleed="True" CrushDepth="0" UseHealthWindow="True" BleedingReduction="0" BurnReduction="0" ConstantHealthRegeneration="0" HealthRegenerationWhenEating="0" StunImmunity="False" PoisonImmunity="False" PoisonVulnerability="1" EmpVulnerability="0" ApplyAfflictionColors="True">
+    <MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
+    <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
+    <Limb name="Head">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="2.0" />
+      <VitalityMultiplier type="burn" multiplier="2.0" />
+    </Limb>
+    <Limb name="Torso">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="1.0" />
+      <VitalityMultiplier type="burn" multiplier="2.0" />
+    </Limb>
+    <Limb name="LeftArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+    <Limb name="RightArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+    <Limb name="LeftLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+    <Limb name="RightLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
   </health>
+    
+  <StatusEffect type="Always" target="this" oneshot="true" disabledeltatime="true" multiplybymaxvitality="true">
+    <Affliction identifier="he-starvation" strength="999" />
+  </StatusEffect>
   
   <names path="Content/Characters/Human/names.xml" />
   

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <huskappendage>
-  <limb id="13" name="Cannibal Mouth" type="None" inheritlimbdepth="Head" width="0" height="0" healthindex="0" attackpriority="0" radius="1" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="True" hide="True" scale="0.5" InheritHiding="Head">
+  <limb id="13" name="Cannibal Mouth" type="None" inheritlimbdepth="Head" width="0" height="0" healthindex="1" attackpriority="0" radius="1" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="True" hide="True" scale="0.5" InheritHiding="Head">
     <sprite sourcerect="0,0,100,100" origin="0.5,0.5" depth="0.049" color="255,255,255,0" deadcolor="255,255,255,0" deadcolortime="0" texture="Content/Items/Genetic/Genetic.png" />
     <damagemodifier armorsector="0,360" afflictiontypes="damage,bleeding,burn" damagemultiplier="0" deflectprojectiles="false" probabilitymultiplier="1" />
     <attack context="Any" cooldown="1.75" cooldownrandomfactor="0.25" afterattack="Pursue" range="50" damagerange="50" duration="0.5" structuredamage="0" itemdamage="0" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="0" torque="50" force="10" applyforceonlimbs="0,1" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="True" applyforcesonlyonce="True" targetimpulse="5" targetimpulseworld="0,0" targetforceworld="0,-5" stickchance="0" priority="1" secondarycooldown="0" reverse="False" targetlimbtype="None" afterattackdelay="0" retreat="False" >

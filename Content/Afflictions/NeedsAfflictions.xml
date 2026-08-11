@@ -380,13 +380,12 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
     </Affliction>
 
+    <!-- Starvation, only happens if hunger is at 100 -->
     <Affliction
       identifier="he-starvation"
-      name="Starvation"
-      description="Starving"
       type="debuff"
-      causeofdeathdescription="Starved"
-      selfcauseofdeathdescription="You have died of starvation."
+      causeofdeathdescription="afflictioncauseofdeath.hunger"
+      selfcauseofdeathdescription="afflictioncauseofdeathself.hunger"
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="false"
@@ -827,10 +826,9 @@
     </Affliction>
 
     <!-- CANNIBAL -->
-    <Affliction name="Cannibalism"
+    <Affliction
       identifier="he-cannibalism"
-      description="The patient is happy enough... so long as they get what they need."
-      type="debuff"
+      type="cannibal"
       limbspecific="false"
       indicatorlimb="Head"
       showiconthreshold="20"
@@ -876,12 +874,11 @@
     </Affliction>
     
     <!-- why is this of space herpes type  -->
-    <Affliction name="Craving Human Meat"
+    <Affliction
       identifier="he-hungryforhumanmeat"
-      description="Agitation and a tremor are obvious, the eyes stare empty."
-      type="spaceherpes"
-      causeofdeathdescription="Lost their mind over human meat."
-      selfcauseofdeathdescription="You lost your mind over human meat."
+      type="cannibal"
+      causeofdeathdescription="afflictioncauseofdeath.he-hungryforhumanmeat"
+      selfcauseofdeathdescription="afflictioncauseofdeathself.he-hungryforhumanmeat"
       limbspecific="false"
       indicatorlimb="Torso"
       showiconthreshold="20"
@@ -1091,13 +1088,13 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0" />
     </Affliction>
 
-    <AfflictionHusk name="Cannibal Mouth"
+    <AfflictionHusk
       identifier="he-cannibalmouth"
-      description="So hungry for human meat you feel like biting people."
       healableinmedicalclinic="false"
       type="alieninfection"
-      huskedspeciesname="cannibal"
       targets="human"
+      huskedspeciesname="cannibal"
+      needsair="true"
       limbspecific="false"
       indicatorlimb="Torso"
       showiconthreshold="1000"
@@ -1111,7 +1108,7 @@
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" >
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0" />
-    </AfflictionHusk>    
+    </AfflictionHusk>
 
 
     <!--EXTRA NEEDS-->
