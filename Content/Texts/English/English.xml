@@ -1743,6 +1743,21 @@ Will put you to sleep</entitydescription.he-beerreaperstribute><!--Patch 13-->
 <entityname.spawner>Spawner Item</entityname.spawner>
 <entitydescription.spawner>A simple spawner item that can be wired and spawn things using a signal.</entitydescription.spawner>
 
+<npctitle.merchantbutcher>Butcher</npctitle.merchantbutcher>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
