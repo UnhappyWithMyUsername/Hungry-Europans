@@ -1215,7 +1215,6 @@
     <PreferredContainer primary="kitchen" secondary="storagecab" />
     <Price baseprice="80" sold="false" CanBeSpecial="false">
     </Price>
-    <!-- TODO: research into UGM? alien shit? -->
     <Deconstruct time="5" />
     <Body radius="22" density="12" />
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" depth="0.525" sourcerect="300,247,52,59" origin="0.5,0.5" />

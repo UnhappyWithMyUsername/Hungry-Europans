@@ -566,9 +566,7 @@
         <StatValue stattype="SwimmingSpeed" value="-0.4" />
       </Holdable>
     </Item>
-    
-    <!-- TODO: Keg of Vodka -->
-    
+        
     <Item name="Keg of Vodka" identifier="he-kegvodka" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
