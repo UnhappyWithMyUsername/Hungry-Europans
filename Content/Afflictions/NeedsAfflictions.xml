@@ -107,6 +107,7 @@
       maxstrength="100"
       affectmachines="true"
       showiconthreshold="0"
+      showicontoothersthreshold="50"
       showinhealthscannerthreshold="1000"
       hideiconafterdelay="true"
       healableinmedicalclinic="false"
@@ -1322,7 +1323,8 @@
       iconcolors="0,180,0,255;190,160,0,255"
       activationthreshold="0"
       showiconthreshold="30"
-      showinhealthscannerthreshold="0"
+      showicontoothersthreshold="50"
+      showinhealthscannerthreshold="50"
       maxstrength="100"
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
