@@ -1122,7 +1122,8 @@
       iconcolors="180,180,0,255;180,0,0,255"
       activationthreshold="0"
       showiconthreshold="50"
-      showinhealthscannerthreshold="0"
+      showicontoothersthreshold="80"
+      showinhealthscannerthreshold="80"
       maxstrength="100"
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
@@ -1226,7 +1227,8 @@
       iconcolors="0,180,0,255;180,0,0,255"
       activationthreshold="0"
       showiconthreshold="50"
-      showinhealthscannerthreshold="0"
+      showicontoothersthreshold="50"
+      showinhealthscannerthreshold="80"
       maxstrength="100"
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
