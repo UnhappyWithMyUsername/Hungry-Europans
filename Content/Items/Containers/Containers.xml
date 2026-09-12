@@ -832,7 +832,7 @@
       <!-- Item gets detached over time via button press when holding a wrench -->
       <CustomInterface canbeselected="true" Selectkey="Action" drawhudwhenequipped="false">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.10"/>
-        <RequiredItem items="wrench" type="Equipped" />
+        <RequiredItem items="Crowbar" type="Equipped" />
         <Button text="interaction.disassemble">
           <!-- Disable access to the item's inventory -->
           <StatusEffect type="OnUse" target="This" drawinventory="false" allowaccess="false" allowdraganddrop="false" setvalue="true" />
@@ -1261,7 +1261,7 @@
       <!-- Item gets detached over time via button press when holding a wrench -->
       <CustomInterface canbeselected="true" Selectkey="Action" drawhudwhenequipped="false">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.10"/>
-        <RequiredItem items="wrench" type="Equipped" />
+        <RequiredItem items="Crowbar" type="Equipped" />
         <Button text="interaction.disassemble">
           <!-- Disable access to the item's inventory -->
           <StatusEffect type="OnUse" target="This" drawinventory="false" allowaccess="false" allowdraganddrop="false" setvalue="true" />
