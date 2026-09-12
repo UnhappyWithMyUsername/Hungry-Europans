@@ -496,7 +496,10 @@
   <!--Buff allies for the duration of your bagpipe playing-->
     <Talent identifier="he-piper">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,2" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.he-piper" />
+      <Description tag="talentdescription.he-piper">
+        <Replace tag="[talent1]" value="talentname.melodicrespite" color="gui.orange"/>
+        <Replace tag="[talent2]" value="talentname.steadytune" color="gui.orange"/>
+      </Description>
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
@@ -525,18 +528,18 @@
           </CharacterAbilityApplyStatusEffectsToAllies>
         </Abilities>
       </AbilityGroupEffect>
-      <!-- attempt to unlock other musical talents but that crashes the game for some reason TODO: reenable if fixed https://github.com/FakeFishGames/Barotrauma/discussions/17328-->
-      <!-- <AbilityGroupInterval interval="1">
+      <AbilityGroupInterval maxtriggercount="1" >
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" oneshot="true">
-                <GiveTalentInfo giverandom="true" talentidentifiers="steadytune,melodicrespite" />
+                <GiveTalentInfo giverandom="false" talentidentifiers="melodicrespite" />
+                <GiveTalentInfo giverandom="false" talentidentifiers="steadytune" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
-      </AbilityGroupInterval> -->
+      </AbilityGroupInterval>
     </Talent>
 
   <!--"Leading By Example" bonus if allies are fed, bigger bonus if stuffed -->
