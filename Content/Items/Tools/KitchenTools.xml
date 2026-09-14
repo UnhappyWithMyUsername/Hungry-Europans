@@ -429,12 +429,9 @@
         <!-- CORPSE REMOVAL 
         For now, corpses aren't removed. A sound is played locally instead to indicate no butchering left
         TODO: BUGGED display requireditem message about having reached maximum butchery. https://github.com/FakeFishGames/Barotrauma/discussions/16161 -->
-        <StatusEffect type="OnUse" target="UseTarget" comparison="And" targetlimb="Torso" >
+        <StatusEffect type="OnUse" target="UseTarget" comparison="And" targetlimb="Torso" disabledeltatime="true">
           <Conditional isdead="true"/>
-          <Conditional he-butchered="gte 100" />
-          <!-- <BreakLimb/>
-          <DropContainedItems />
-          <RemoveCharacter /> -->
+          <Conditional he-butchered="gte 100" />          
           <ParticleEmitter particle="nomeatparticle" anglemin="0" anglemax="359" particleamount="1" distancemin="-8" distancemax="8" scalemin="0.2" scalemax="0.2" colormultiplier="255,255,255,255" />
           <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
           <ParticleEmitter particle="heavygib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
@@ -442,6 +439,16 @@
           <Sound file="Content/Sounds/Damage/Gore2.ogg" range="500" selectionmode="random"/>
           <Sound file="Content/Sounds/Damage/Gore3.ogg" range="500" selectionmode="random"/>
         </StatusEffect>
+        
+        <!-- failed attempt at corpse removal -->
+        <!-- <StatusEffect type="OnUse" target="UseTarget" targetlimbs="LeftHand,RightHand,LeftArm,RightArm,LeftForearm,RightForearm,
+        LeftLeg,RightLeg,LeftFoot,RightFoot,Head,Torso,Tail,Legs,RightThigh,LeftThigh,Waist,Jaw" AllowWhenBroken="true" comparison="And" disabledeltatime="true">
+          <Conditional isdead="true"/>
+          <Conditional he-butcheredremovecorpse="gte 100" />
+          <Breaklimb />
+          <RemoveCharacter />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" particleamount="1" ScaleMin="1" ScaleMax="1" />
+        </StatusEffect> -->
         
         <!-- play a sound for the player if butcher is 100 instead of corpse removal TODO: somehow make this display a message or play the sound locally -->
         <StatusEffect type="OnUse" target="UseTarget,Character" forceplaysounds="true" >
