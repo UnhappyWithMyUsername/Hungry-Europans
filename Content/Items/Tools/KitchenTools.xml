@@ -435,6 +435,7 @@
           <!-- <BreakLimb/>
           <DropContainedItems />
           <RemoveCharacter /> -->
+          <ParticleEmitter particle="nomeatparticle" anglemin="0" anglemax="359" particleamount="1" distancemin="-8" distancemax="8" scalemin="0.2" scalemax="0.2" colormultiplier="255,255,255,255" />
           <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="150" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
           <ParticleEmitter particle="heavygib" anglemin="0" anglemax="360" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="1.0" copyentityangle="true" colormultiplier="100,100,100,255" lifetimemultiplier="5" highqualitycollisiondetection="true"/>
           <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" selectionmode="random"/>
@@ -446,7 +447,9 @@
         <StatusEffect type="OnUse" target="UseTarget,Character" forceplaysounds="true" >
           <Conditional he-butchered="gte 100" />
           <Conditional IsLocalPlayer="True"/>
-          <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" dontmuffle="false" />
+          <!-- <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" dontmuffle="false" selectionmode="random"/> -->
+          <Sound file="Content/Sounds/UI/UI_labelcountminus.ogg" volume="3" range="200" frequencymultiplier="0.4" dontmuffle="false" selectionmode="random"/>
+          <Sound file="Content/Sounds/UI/UI_labelcountminus.ogg" volume="3" range="200" frequencymultiplier="0.3" dontmuffle="false" selectionmode="random"/>
         </StatusEffect>
                 
       </MeleeWeapon>
