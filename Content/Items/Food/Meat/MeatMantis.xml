@@ -56,12 +56,12 @@
       <Fabricate suitablefabricators="stove" requiredtime="80" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-mantismeatchunk" amount="1" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.199"/>
       </Fabricate>
       <Fabricate suitablefabricators="stove" requiredtime="100" amount="3">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-mantismeatchunk" amount="3" MinCondition="0.25" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.3"/>
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.299"/>
       </Fabricate>
       <Deconstruct time="10" requireddeconstructor="deconstructor">
         <!-- <Item identifier="alienblood" amount="0" /> -->

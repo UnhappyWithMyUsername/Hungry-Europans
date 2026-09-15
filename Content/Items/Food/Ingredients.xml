@@ -824,7 +824,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="60" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-nori" amount="5" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.5"/>
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.499"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="40" radius="6" density="10.2" />

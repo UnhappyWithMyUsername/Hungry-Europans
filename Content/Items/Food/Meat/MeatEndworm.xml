@@ -164,7 +164,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="true" hideifnorecipe="true" amount="3">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-rawendwormsausage" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.299"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Body width="67" radius="7" density="9" />

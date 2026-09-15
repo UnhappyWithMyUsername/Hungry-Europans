@@ -135,7 +135,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="true" amount="1" hideifnorecipe="true" >
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-rawhuskmeat" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.299"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.02"/>
       </Fabricate>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
