@@ -692,6 +692,7 @@
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" targetgrandparent="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" targetgrandparent="true" />
         </StatusEffect>
+        <!-- TODO: use RandomizeInitialInterval="true" to avoid lag when spawning/buying large amounts of meat? -->
         <StatusEffect type="Always" target="This" Condition="-3.0" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
         </StatusEffect>
