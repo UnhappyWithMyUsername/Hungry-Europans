@@ -30,49 +30,37 @@ Important TODO:
 HOTFIX, sorry for the inconvenience
 
 [List]
-[*] Fixed soap throwing errors about "oily" affliction
-[*] Fixed some broken text and missing text IDs 
+[*] 
 [/List]
 
 
 ---------------------------------------------------------------------------
 
 
-[hr]30/07/2026[/hr]
+[hr]xx/09/2026[/hr]
 
-Potato update
+Small fixes and QOL 
 
 [b]Additions:[/b]
 [List]
-[*] Added "Hungry" versions of Humpback, Herja and Winterhalter
-[*] Added a wild Egg-Plant (more eggs)
-[*] Added wild Jotato bushes (Jovian potatoes)
-[*] Added Pierogi and Gulash (offal recipes)
-[*] Added Jotato recipes: Vodka, Jotato Pancakes, Lard-roasted Jotatoes...
+[*] 
 [/List]
 
 [b]Changes:[/b] 
 [List]
-[*] Fries are crafted with Jotatoes instead of Pomegrenades
-[*] You can rehydrate Nori into strips at a small loss
-[*] Recruiting Chef NPC event now only triggers once in the campaign
-[*] Added price to cooked meals so you can sell them (Farmer's Market talent fix)
-[*] Hunger/Thirst/Fatigue only show up on health scanner and inspect at higher values (reduces scanner visual bloat)
-[*] Nerfed planter pots by adding more placement restrictions (unpopular, but the farming situation was crazy with plants obstructing every single piece of machinery on submarines)
-[*] Reduced overall cost of fruits at merchants
-[*] Reduced cost of most meats, especially in Butcher shop which had 2x the intended cost
-[*] Soap now cleans "Oily" affliction from Immersive Repairs
-[*] "Oily" affliction from Immersive Repairs increases Hygiene
-[*] Keg of Coalition Premium is slightly more expensive (to match Jovian Force)
-[*] Alcohol builds up psychosis resistance slowly (instead of on drinking)
+[*] Further increase medical scanner threshold for pee/poop/mood/hygiene to reduce scanner clutter
+[*] Disassembling Kitchen Counter requires a crowbar (no more accidents)
+[*] Piper talent also unlocks other musical talents
+[*] Added a particle when butchering to make it clearer that all meat has been harvested from a corpse
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed getting 2x too much Nori in some cases
-[*] Fixed potentially getting extra cooking/butchery by injecting the Hungry Europan syringe twice
-[*] Fixed Reaper's Tribute stunlocking forever (again?)
-[*] Fixed some Tutorial softlocks and issues
+[*] Changed the text ID of hunger/thirst description for consistency, make sure to update translations
+[*] Added missing nameidentifiers
+[*] Fixed dying when cannibal throwing errors 
+[*] Minor fixes to Hungry submarines
+[*] Prevent recipes using water pot from deleting the pot during fabrication
 [/List]
 
 
