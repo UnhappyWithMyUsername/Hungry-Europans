@@ -39,7 +39,7 @@ HOTFIX, sorry for the inconvenience
 
 [hr]18/09/2026[/hr]
 
-Small fixes and QOL 
+Small fixes and QOL
 
 [b]Additions:[/b]
 [List]
