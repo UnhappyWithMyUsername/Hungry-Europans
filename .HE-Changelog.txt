@@ -37,13 +37,13 @@ HOTFIX, sorry for the inconvenience
 ---------------------------------------------------------------------------
 
 
-[hr]xx/09/2026[/hr]
+[hr]18/09/2026[/hr]
 
 Small fixes and QOL 
 
 [b]Additions:[/b]
 [List]
-[*] 
+[*] Nothing :(
 [/List]
 
 [b]Changes:[/b] 
@@ -52,6 +52,7 @@ Small fixes and QOL
 [*] Disassembling Kitchen Counter requires a crowbar (no more accidents)
 [*] Piper talent also unlocks other musical talents
 [*] Added a particle when butchering to make it clearer that all meat has been harvested from a corpse
+[*] Improved Hungry Winterhalter shuttle
 [/List]
 
 [b]Fixes:[/b] 
@@ -61,6 +62,7 @@ Small fixes and QOL
 [*] Fixed dying when cannibal throwing errors 
 [*] Minor fixes to Hungry submarines
 [*] Prevent recipes using water pot from deleting the pot during fabrication
+[*] Another attempt at fixing the reaper stunlock bug
 [/List]
 
 
@@ -80,7 +82,6 @@ Misc TODO:
 LIST OF FOODS IDEAS:
 
 
-- Vodka
 - Kvass fermented from bread, yeast and sugar (needs more fermenter slots)
 - More Blender recipes
 - More Mushroom recipes? add a cooked mushroom item to not use an entire yeast shroom per meal
@@ -91,7 +92,6 @@ LongTermPlans:
 - Canned food. Canned food from earth, requires can opener or knife to open. Give up on canned ingredients and just add canned meals.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations	
-- Replace Poms with Jotatoes for fries recipe?
 - McJovenalds beacon with crazed cannibal chef inside
 - Kuru sickness (eating brains) for Neurotrauma?
 - "Brain freeze" from eating ice cream too fast
