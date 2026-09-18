@@ -455,8 +455,8 @@
           <Conditional he-butchered="gte 100" />
           <Conditional IsLocalPlayer="True"/>
           <!-- <Sound file="Content/Sounds/UI/UImsg.ogg" volume="1.5" range="200" frequencymultiplier="0.75" dontmuffle="false" selectionmode="random"/> -->
-          <Sound file="Content/Sounds/UI/UI_labelcountminus.ogg" volume="3" range="200" frequencymultiplier="0.4" dontmuffle="false" selectionmode="random"/>
-          <Sound file="Content/Sounds/UI/UI_labelcountminus.ogg" volume="3" range="200" frequencymultiplier="0.3" dontmuffle="false" selectionmode="random"/>
+          <Sound file="Content/Sounds/UI/UI_labelcountminus.ogg" volume="3" range="150" frequencymultiplier="0.4" dontmuffle="true" selectionmode="random"/>
+          <Sound file="Content/Sounds/UI/UI_labelcountminus.ogg" volume="3" range="150" frequencymultiplier="0.3" dontmuffle="true" selectionmode="random"/>
         </StatusEffect>
                 
       </MeleeWeapon>
