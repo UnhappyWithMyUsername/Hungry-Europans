@@ -221,16 +221,12 @@
         <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" VulnerableToEMP="false" />
         <LightComponent range="0.0" lightcolor="255,255,255,111" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="200">
           <sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="0,6,414,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-          <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
-          <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="cangenerate" duration="0.1">
+          <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active, also increase charge-->
+          <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="cangenerate" charge="1" duration="0.1" stackable="false">
             <RequiredItem items="he-kegwater,he-kegseawater" targetslot="6" type="Contained" />
             <RequiredItem items="fertilizer" targetslot="7" type="Contained" />
             <RequiredItem items="yeastshroom,slimebacteria,elastinplant,fiberplant,aquaticpoppy,he-seaweed" targetslot="8" type="Contained" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/hydroponics_loop.ogg" volume="1.5" range="400" loop="true" />
-          </StatusEffect>
-          <!--Increase charge by 1 each second to simulate growing if the item has the status tag "cangenerate"-->
-          <StatusEffect type="OnActive" target="This" targetitemcomponent="PowerContainer" interval="1" charge="1" stackable="false" disabledeltatime="true">
-            <Conditional HasStatusTag="eq cangenerate" />
           </StatusEffect>
           <!--Decrease charge by 1 every two seconds to simulate plant withering if the item doesn't have the status tag "cangenerate"-->
           <StatusEffect type="Always" target="This" targetitemcomponent="PowerContainer" interval="2" charge="-1" stackable="false" disabledeltatime="true">
@@ -243,52 +239,52 @@
             <Use />
           </StatusEffect>
           <!--Set light color to white when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnActive" target="This" lightcolor="180,255,180,111" pulseamount="0" pulsefrequency="0" powerconsumption="200" interval="1" stackable="false" setvalue="true" disabledeltatime="true" >
+          <StatusEffect type="OnActive" target="This" lightcolor="180,255,180,111" pulseamount="0" pulsefrequency="0" powerconsumption="200" interval="1" setvalue="true" >
             <Conditional HasStatusTag="eq cangenerate" />
           </StatusEffect>
           <!--Set light color to orange and pulsate when the item is on, but is missing required items-->
-          <StatusEffect type="OnActive" target="This" lightcolor="255,150,0,111" pulseamount="0.75" pulsefrequency="1" powerconsumption="5" interval="1" stackable="false" setvalue="true" disabledeltatime="true" >
+          <StatusEffect type="OnActive" target="This" lightcolor="255,150,0,111" pulseamount="0.75" pulsefrequency="1" powerconsumption="5" interval="1" setvalue="true" >
             <Conditional HasStatusTag="neq cangenerate" />
           </StatusEffect>
           <!--Drain condition of water tank every second when powered and all required items are contained-->
-          <StatusEffect type="OnActive" target="Contained" tag="waterkeg" disabledeltatime="true" condition="-0.03" delay="1" interval="1" targetslot="6" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnActive" target="Contained" tag="waterkeg" disabledeltatime="true" condition="-0.03" delay="1" interval="1" targetslot="6" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
           </StatusEffect>
         </LightComponent>
         <!-- Handle the plant spawning in Itemcomponent, before it was inside LightComponent and somehow that caused a bug that allowed spawning plants by holding LMB and RMB -->
         <ItemComponent canbepicked="false" canbeselected="false" >
           <!--Drain condition of fertilizer and spawn a yeast shroom when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="yeastshroom" targetslot="8" type="Contained" />
             <SpawnItem identifier="yeastshroom" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
           </StatusEffect>
           <!--Drain condition of fertilizer and spawn a slime bacteria when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="slimebacteria" targetslot="8" type="Contained" />
             <SpawnItem identifier="slimebacteria" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
           </StatusEffect>
           <!--Drain condition of fertilizer and spawn a elastin plant when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="elastinplant" targetslot="8" type="Contained" />
             <SpawnItem identifier="elastinplant" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
           </StatusEffect>
           <!--Drain condition of fertilizer and spawn a fiber plant when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="fiberplant" targetslot="8" type="Contained" />
             <SpawnItem identifier="fiberplant" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
           </StatusEffect>
           <!--Drain condition of fertilizer and spawn an aquatic poppy when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="aquaticpoppy" targetslot="8" type="Contained" />
             <SpawnItem identifier="aquaticpoppy" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
           </StatusEffect>
           <!--Drain condition of fertilizer and spawn an aquatic poppy when all required items are contained and the item has the active tag "cangenerate"-->
-          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" CheckConditionalAlways="true" stackable="false">
+          <StatusEffect type="OnUse" target="Contained" tag="fertilizer" disabledeltatime="true" condition="-134.0" targetslot="7" comparison="And" stackable="false">
             <Conditional HasStatusTag="eq cangenerate" targetcontainer="true" />
             <RequiredItem items="he-seaweed" targetslot="8" type="Contained" />
             <SpawnItem identifier="he-seaweed" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false" />
