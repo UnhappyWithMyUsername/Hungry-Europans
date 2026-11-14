@@ -37,9 +37,9 @@ HOTFIX, sorry for the inconvenience
 ---------------------------------------------------------------------------
 
 
-[hr]18/09/2026[/hr]
+[hr]XX/XX/2026[/hr]
 
-Small fixes and QOL
+Update for DLC
 
 [b]Additions:[/b]
 [List]
@@ -48,21 +48,18 @@ Small fixes and QOL
 
 [b]Changes:[/b] 
 [List]
-[*] Further increase medical scanner threshold for pee/poop/mood/hygiene to reduce scanner clutter
-[*] Disassembling Kitchen Counter requires a crowbar (no more accidents)
-[*] Piper talent also unlocks other musical talents
-[*] Added a particle when butchering to make it clearer that all meat has been harvested from a corpse
-[*] Improved Hungry Winterhalter shuttle
+[*] Made kitchen repairs easier: faster repairs and slower deterioration, to reduce the amount of time repairing the kitchen ON TOP of repairing the rest of the sub
+[*] Slightly increase mood threshold before cravings appear
+[*] Minor Hydroponic planter optimization, hopefully no bugs
+[*] Minor Freshness optimization
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Changed the text ID of hunger/thirst description for consistency, make sure to update translations
-[*] Added missing nameidentifiers
-[*] Fixed dying when cannibal throwing errors 
-[*] Minor fixes to Hungry submarines
-[*] Prevent recipes using water pot from deleting the pot during fabrication
-[*] Another attempt at fixing the reaper stunlock bug
+[*] Fix moloch sushi stacking
+[*] Jotato description now clearly says it cannot be grown
+[*] 
+[*] 
 [/List]
 
 
@@ -77,14 +74,16 @@ Small fixes and QOL
 //////////////////////
 //////////////////////
 
-Misc TODO:
+TODO: FOR DLC
+- Override every single DLC food item to remove them entirely and replace them with our own food? DLC food is just an inferior version of what we have and there's also some overlap with existing foods, like Moloch Milk
+
+
 
 LIST OF FOODS IDEAS:
 
-
+- Misfortune cookies, come with a prediction that can trigger an event in the future (possibly lots of fun bullshit)
+- Create a rolling smoke item (like the acid grenade clouds) for when something burns in the grill or oven? Room full of smoke
 - Kvass fermented from bread, yeast and sugar (needs more fermenter slots)
-- More Blender recipes
-- More Mushroom recipes? add a cooked mushroom item to not use an entire yeast shroom per meal
 - Recipe for Mutated Popnut (mutated popnut in a jar, just waterproof, explodes when thrown?)
 - Dr Happy's vitamins (blender recipe made of scurrywags)
 
