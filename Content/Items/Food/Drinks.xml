@@ -220,7 +220,7 @@
     </Item>
 
     <!--ADJUSTED ITEM TO APPLY EFFECTS WHILE DRINKING, GET DESTROYED ON IMPACT AND SPAWN EMPTY BOTTLE IF EMPTY-->
-    <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage." Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
+    <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage." Tags="smallitem,drinkitem,alcoholitem,bottle,rum" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
