@@ -188,44 +188,21 @@
         <Replace tag="[outpost]" value="200" color="gui.green" />
         <Replace tag="[helmbonus]" value="20" color="gui.green" />
       </Description>
-      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+      <AbilityGroupEffect abilityeffecttype="OnLocationVisited">
         <Conditions>
-          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Outpost"/>
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Outpost,Settlement,Colony,Hydroponics"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityGiveMoney amount="200"/>
         </Abilities>
       </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+      <AbilityGroupEffect abilityeffecttype="OnLocationVisited">
         <Conditions>
-          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Settlement"/>
+          <!-- TODO: maybe there's a better way for unique location compatibility? update this if we add more -->
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="City,Uusi-Turcu,NewIapetus"/>
         </Conditions>
         <Abilities>
-          <CharacterAbilityGiveMoney amount="200"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
-        <Conditions>
-          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Colony"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityGiveMoney amount="200"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
-        <Conditions>
-          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="City"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityGiveMoney amount="200"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
-        <Conditions>
-          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Hydroponics"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityGiveMoney amount="200"/>
+          <CharacterAbilityGiveMoney amount="400"/>
         </Abilities>
       </AbilityGroupEffect>
       <AbilityGroupEffect abilityeffecttype="None">
