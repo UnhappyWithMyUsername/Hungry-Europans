@@ -20,6 +20,7 @@
       <Skill identifier="medical" level="5,10"/>
       <Skill identifier="cooking" level="30,35" primary="true"/>
       <Skill identifier="butchery" level="15,25" />
+      <Skill identifier="farming" level="25,35" primary="true"/>
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false"/>
@@ -37,13 +38,16 @@
     </ItemSet>
     <AutonomousObjectives>
       <Order identifier="rescue" prioritymodifier="1"/>
+      <Order identifier="gardening" prioritymodifier="0.75"/>
+      <Order identifier="extinguishfires" prioritymodifier="0.2"/>
       <Order identifier="steer" option="maintainposition" prioritymodifier="0.1"/>
       <Order identifier="operatereactor" option="powerup" prioritymodifier="0.1"/>
       <Order identifier="fixleaks" prioritymodifier="0.1"/>
     </AutonomousObjectives>
     <AppropriateOrders>
-      <Order identifier="fightintruders" prioritymodifier="1"/>
-      <Order identifier="extinguishfires" prioritymodifier ="1"/>
+      <Order identifier="gardening" prioritymodifier="1"/>
+      <Order identifier="fightintruders" prioritymodifier="0.8"/>
+      <Order identifier="extinguishfires" prioritymodifier ="0.8"/>
     </AppropriateOrders>
   </Job>
 </Jobs>
