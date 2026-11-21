@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+  <!-- TODO: replace all identifiers with our own food, unless barodevs actually use tags instead of ids -->
+
+
+<Override>
+<Items>
+  <Item identifier="ranchersworkstation" descriptionidentifier="ranchersworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation,monsterfoodcontainer" scale="0.5" isshootable="true" GrabWhenSelected="true">
+    <Sprite texture="%ModDir%/Content/Items/RanchingItems.png" sourcerect="315,3,419,337" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+    <WorkstationComponent JobTitle="dwellerjob.rancher" 
+                          ResourceUIIdentifier="food"
+                          MenuOrder="3" 
+                          ItemsToTransportToWorkstation="monsterfood;monsterfood;monsterfood;monsterfood" 
+                          OrdersToAssign="ranching" 
+                          OrderReassignmentInterval="15" 
+                          MaxAssignedNPCs="1" 
+                          SkillIdentifier="farming"
+                          SkillIncreasePerWorldStep="100.0"
+                          IndicatorColor="154,213,163,255">
+      <ResourceGenerator>
+        <ProducedResource identifier="creaturefood" amount="6">
+          <ItemResourceItem item="compactedmeatchunk" />
+        </ProducedResource>
+      </ResourceGenerator>
+    </WorkstationComponent>
+    <ItemContainer capacity="6" slotsperrow="3" canbeselected="true" msg="ItemMsgInteractSelect" SpawnWithId="ranchingguide,smallmudraptoregg,peanutegg,orangeboyegg,compactedmeatchunk,compactedmeatchunk,compactedmeatchunk,compactedmeatchunk,compactedmeatchunk,compactedmeatchunk" SpawnWithIdOnce="true">
+      <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+  </Item>
+  
+    <Item identifier="farmerworkstation" descriptionidentifier="farmerworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation,farmingsupplies" scale="0.5" isshootable="true" GrabWhenSelected="true">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="0,0,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent OrdersToAssign="gardening"
+                            OverridingJobIdentifier="farmer" 
+                            MenuOrder="3"
+                            JobTitle="dwellerjob.farmer" 
+                            MaxAssignedNPCs="1"
+                            IndicatorColor="106,170,103,255"
+                            SkillIdentifier="farming"
+                            SkillIncreasePerWorldStep="100.0"
+                            ItemsToEquipOptional="wateringcan;fertilizer" >
+        <!-- ^ the character is able to get watering cans and fertilizers just by having the gardening order, but configuring them as items to equip in the workstation 
+              allows the workstation to make the character return them after being unassigned from the workstation -->
+        <!-- do not generate any resources, planters generate the resources instead -->
+      </WorkstationComponent>
+      <ItemContainer hideitems="false" drawinventory="true" ItemsUseInventoryPlacement="true" capacity="1" slotsperrow="2" itempos="70,-138" iteminterval="250,0" canbeselected="true" msg="ItemMsgInteractSelect"
+                     SpawnWithId="wateringcan,fertilizer" SpawnWithIdOnce="true">
+        <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+        <SlotIcon slotindex="0" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="896,0,128,128" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="910,128,87,125" origin="0.5,0.5" />
+        <Containable items="wateringcan" />
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="fertilizer"  itempos="174,-62" />
+        </SubContainer>
+      </ItemContainer>
+    </Item>
+
+    <Item identifier="doctorsworkstation" descriptionidentifier="doctorsworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation" scale="0.5" isshootable="true" GrabWhenSelected="true">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="416,0,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5"/>
+      <WorkstationComponent OverridingJobIdentifier="dweller_medicaldoctor" 
+                            JobTitle="dwellerjob.doctor"
+                            ItemsToEquipOptional="medicoutfit" 
+                            CampaignInteractionType="MedicalClinic" 
+                            IndicatorColor="0.81,0.31,0.19"
+                            SkillIdentifier="medical"
+                            SkillIncreasePerWorldStep="100.0">
+        <ResourceGenerator>
+          <ConvertItem resource="goods_essentials_raw" OutputResource="workstation_goods">
+            <ConsumedItem item="aquaticpoppy" Amount="1" />
+            <ProducedItem item="opium" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="goods_essentials_raw" OutputResource="workstation_goods">
+            <ConsumedItem item="fiberplant" Amount="1" />
+            <ProducedItem item="organicfiber" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="workstation_goods" OutputResource="goods_essentials">
+            <ConsumedItem item="organicfiber" Amount="1" />
+            <ProducedItem item="antibleeding1" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_essentials_raw" OutputResource="workstation_goods">
+            <ConsumedItem item="slimebacteria" Amount="1" />
+            <ProducedItem item="antibiotics" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="goods_essentials_raw" OutputResource="workstation_goods">
+            <ConsumedItem item="elastinplant" Amount="1" />
+            <ProducedItem item="elastin" Amount="3" />
+          </ConvertItem>
+          <!-- Base generation (ensures at least a base amount of medicines are generated)-->
+          <ProducedResource identifier="workstation_goods" AmountAtMinSkill="0.5" AmountAtMaxSkill="3" displaynametag="tags.medical">
+            <ItemResourceItem item="opium" />
+            <ItemResourceItem item="antibleeding1" />
+            <ItemResourceItem item="antibloodloss1" />
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item identifier="mechanicsworkstation" descriptionidentifier="mechanicsworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation,mechanicfabricator" scale="0.5" isshootable="true" GrabWhenSelected="true">
+      <sprite texture="Content/Items/Workstations/workstations.png" sourcerect="0,336,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent OverridingJobIdentifier="mechanic"
+                            MenuOrder="4"
+                            JobTitle="dwellerjob.mechanic"
+                            ConversationEventIdentifier="mechanicconversation"
+                            ConversationSpeakerTag="outpostmechanic"
+                            ItemsToEquipOptional="mechanicoutfit" 
+                            IndicatorColor="0.5,0.86,0.9" 
+                            ResourceUIIdentifier="producedgoods"
+                            SkillIdentifier="mechanical"
+                            SkillIncreasePerWorldStep="100.0">
+        <!-- Note: we don't define any assigned orders above, like
+            OrdersToAssign="repairmechanical;fixleaks;refuelitems" 
+            That would just force the bot to keep doing the last one, as if they'd been manually assigned that as the 1st prio order.
+            We can just let the bot do the autonomous objectives of the mechanic job, which includes the above. -->
+        <ResourceGenerator>
+          <!-- convert all yeast shrooms to ethanol -->
+          <ConvertItem resource="goods_essentials_raw" OutputResource="ethanol">
+            <ConsumedItem item="yeastshroom"/>
+            <ProducedItem item="ethanol" amount="3"/>
+          </ConvertItem>
+          <!-- if there's less than 3 welding fuel tanks available, convert ethanol to tanks (= mechanic's fabricate new tanks) -->
+          <ConvertItem resource="ethanol" OutputResource="goods_essentials">
+            <ConsumedItem item="ethanol"/>
+            <ProducedItem item="weldingfueltank"/>            
+          </ConvertItem>
+          <ProducedResource identifier="goods_essentials" AmountAtMinSkill="1" AmountAtMaxSkill="4" >
+            <ItemResourceItem item="oxygentank" />
+            <Requirement item="oxygentank" condition="lt 12"/>
+          </ProducedResource>
+          <ProducedResource identifier="workstation_goods" AmountAtMinSkill="0.1" AmountAtMaxSkill="0.4">
+            <ItemResourceItem item="weldingtool" />
+            <Requirement item="weldingtool" condition="lt 8"/>
+          </ProducedResource>
+          <ProducedResource identifier="workstation_goods" AmountAtMinSkill="0.1" AmountAtMaxSkill="0.4">
+            <ItemResourceItem item="divingmask" />
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item identifier="electriciansworkstation" descriptionidentifier="electriciansworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation,electricianfabricator" scale="0.5" isshootable="true" GrabWhenSelected="true" allowedlinks="locker">
+      <sprite texture="Content/Items/Workstations/workstations.png" sourcerect="1200,0,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent
+        OverridingJobIdentifier="engineer"
+        JobTitle="dwellerjob.engineer" 
+        MenuOrder="4"
+        ItemsToEquipOptional="engineeroutfit"
+        ItemsToCarryOptional="reactorfuel gt 1"
+        IndicatorColor="0.88,0.72,0.43"
+        ResourceUIIdentifier="producedgoods"
+        SkillIdentifier="electrical"
+        SkillIncreasePerWorldStep="100.0">
+        <!-- Note: we don't assign any orders above, the bot just does an engineer's objectives (see the comment in the mechanic's workstation -->
+        <ResourceGenerator>
+          <!-- Produced amount of advanced fuel has to be higher because of the itemratio value of 0.5 (1 rod = 2 fuel) -->
+          <ConvertItem resource="goods_mining" OutputResource="basicfuel">
+            <ConsumedItem item="uranium" Amount="1" />
+            <ProducedItem item="fuelrod" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="advancedfuel">
+            <ConsumedItem item="thorium" Amount="1" />
+            <ProducedItem item="thoriumfuelrod" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="advancedfuel">
+            <ConsumedItem item="fulgurium" Amount="1" />
+            <ProducedItem item="fulguriumfuelrod" Amount="2" />
+          </ConvertItem>
+          <ProducedResource identifier="workstation_goods" AmountAtMinSkill="0.1" AmountAtMaxSkill="0.4">
+            <ItemResourceItem item="batterycell" />
+            <Requirement item="batterycell" condition="lt 8"/>
+          </ProducedResource>
+          <ProducedResource identifier="workstation_goods" AmountAtMinSkill="1" AmountAtMaxSkill="4" DisplayNameTag="entityname.wire">
+            <ItemResourceItem item="electricalwire" />
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+      <Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" ShowSortByDropdown="false" ShowCategoryButtons="false">
+        <GuiFrame relativesize="0.4,0.5" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="200.0" loop="true"/>
+      </Fabricator>
+      <ItemContainer capacity="3" canbeselected="true" hideitems="true" slotsperrow="3" uilabel="" allowuioverlap="true"/>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true"/>
+    </Item>
+
+    <Item identifier="fisherworkstation" descriptionidentifier="fisherworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation,harpoongunholder,fishcontainer" scale="0.5" isshootable="true" GrabWhenSelected="true">
+      <sprite texture="Content/Items/Workstations/workstations.png" sourcerect="416,336,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent
+        OverridingJobIdentifier="outpostdweller"
+        MenuOrder="3"
+        IndicatorColor="0,170,148,255"
+        AllowOperateOutside="true"
+        ItemsRequiredForResourceGeneration="harpoongun;deepdiving"
+        ItemsToEquip="harpoongun"
+        CantFindItemsToEquipIdentifier="dialogcannotfinditemtoequip.fishing"
+        ItemsToCarry="oxygensource gte 100"
+        ItemsToCarryOptional="divingknife"
+        ItemsToDrop="oxygensource lt 100"
+        CantFindItemsToCarryIdentifier="dialogcannotfinditemtocarry.fishing"
+        OrdersToAssign="exploreoutside"
+        OrderReassignmentInterval="60"
+        OrdersRequireIdle="true"
+        JobTitle="dwellerjob.fisher"
+        MaxAssignedNPCs="1"
+        SkillIdentifier="weapons"
+        SkillIncreasePerWorldStep="100.0">
+        <!-- Each workstation reduces the production of the next by 50%. 
+        Food consumption is Population/3, so one fish feeds three people. Two maximum skill dwellers can produce 6 fish/workshift, meaning sustaining 18 population
+        Low skill dwellers (which is more likely) can sustain 9 population (if there are two)
+        More efficient would be to have just one fisher who sustains 6 population to 12 population on their own, depending on skill -->
+        <ResourceGenerator diminishingreturnid="fisherworkstation" diminishingreturn="0.5">
+          <ProducedResource identifier="rawfish" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="coldcaverns">
+            <ItemResourceItem item="ferrulusflesh" />
+            <ItemResourceItem item="illusoroidmantle" />
+          </ProducedResource>
+          <ProducedResource identifier="rawfish" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="europanridge">
+            <ItemResourceItem item="ferrulusflesh" />
+            <ItemResourceItem item="illusoroidmantle" />
+            <ItemResourceItem item="tatterfishfillet" />
+          </ProducedResource>
+          <ProducedResource identifier="rawfish" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="theaphoticplateau">
+            <ItemResourceItem item="illusoroidmantle" />
+            <ItemResourceItem item="tatterfishfillet" />
+            <ItemResourceItem item="charybtentacle" />
+          </ProducedResource>
+          <ProducedResource identifier="rawfish" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="thegreatsea">
+            <ItemResourceItem item="charybtentacle" />
+            <ItemResourceItem item="ashacleviscera"/>
+          </ProducedResource>
+          <ProducedResource identifier="rawfish" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="hydrothermalwastes">
+            <ItemResourceItem item="ashacleviscera"/>
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+      <ItemContainer capacity="6" slotsperrow="3" canbeselected="true" msg="ItemMsgInteractSelect" SpawnWithId="harpoongun,divingknife" SpawnWithIdOnce="true">
+        <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="smallitem,mediumitem" />
+      </ItemContainer>
+    </Item>
+
+    <Item identifier="divergathererworkstation" descriptionidentifier="divergathererworkstation" spritecolor="255,255,255,255" category="Misc" Tags="workstation,medfabcab" scale="0.5" isshootable="true" GrabWhenSelected="true">
+      <sprite texture="Content/Items/Workstations/workstations.png" sourcerect="416,672,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent
+        OverridingJobIdentifier="outpostdweller"
+        MenuOrder="3"
+        IndicatorColor="0,170,148,255"
+        AllowOperateOutside="true"
+        ItemsRequiredForResourceGeneration="plasmacutter;deepdiving"
+        ItemsToEquip="plasmacutter"
+        CantFindItemsToEquipIdentifier="dialogcannotfinditemtoequip.divergathering"
+        ItemsToCarry="oxygensource gte 100"
+        ItemsToDrop="oxygensource lt 100"
+        CantFindItemsToCarryIdentifier="dialogcannotfinditemtocarry.divergathering"
+        OrdersToAssign="exploreoutside"
+        OrderReassignmentInterval="60"
+        OrdersRequireIdle="true"
+        JobTitle="dwellerjob.divergatherer"
+        MaxAssignedNPCs="1"
+        ResourceUIIdentifier="producedgoods"
+        SkillIdentifier="mechanical"
+        SkillIncreasePerWorldStep="100.0">
+        <ResourceGenerator diminishingreturnid="divergathererworkstation" diminishingreturn="0.25">
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="coldcaverns">
+            <ItemResourceItem item="fiberplant" /><!-- organicfiber source -->
+            <ItemResourceItem item="aquaticpoppy" /><!-- opium source -->
+            <ItemResourceItem item="yeastshroom" /><!-- ethanol source -->
+          </ProducedResource>
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="1" AmountAtMaxSkill="2" biomes="coldcaverns">
+            <ItemResourceItem item="elastinplant" /><!-- elastin source, only used for plastiseal / antibiotic glue -->
+            <ItemResourceItem item="slimebacteria" /><!-- antibiotics source -->
+          </ProducedResource>
+          
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="europanridge">
+            <ItemResourceItem item="fiberplant" />
+            <ItemResourceItem item="aquaticpoppy" />
+            <ItemResourceItem item="yeastshroom" />
+          </ProducedResource>
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="1" AmountAtMaxSkill="2" biomes="europanridge">
+            <ItemResourceItem item="elastinplant" />
+            <ItemResourceItem item="slimebacteria" />
+          </ProducedResource>
+          
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="3" AmountAtMaxSkill="8" biomes="theaphoticplateau">
+            <ItemResourceItem item="fiberplant" />
+            <ItemResourceItem item="aquaticpoppy" />
+            <ItemResourceItem item="yeastshroom" />
+          </ProducedResource>
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="2" AmountAtMaxSkill="4" biomes="theaphoticplateau">
+            <ItemResourceItem item="elastinplant" />
+            <ItemResourceItem item="slimebacteria" />
+          </ProducedResource>
+          
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="4" AmountAtMaxSkill="6" biomes="thegreatsea">
+            <ItemResourceItem item="fiberplant" />
+            <ItemResourceItem item="aquaticpoppy" />
+            <ItemResourceItem item="yeastshroom" />
+          </ProducedResource>
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="1" AmountAtMaxSkill="4" biomes="thegreatsea">
+            <ItemResourceItem item="elastinplant" />
+            <ItemResourceItem item="slimebacteria" />
+          </ProducedResource>
+          
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="4" AmountAtMaxSkill="6" biomes="hydrothermalwastes">
+            <ItemResourceItem item="fiberplant" />
+            <ItemResourceItem item="aquaticpoppy" />
+            <ItemResourceItem item="yeastshroom" />
+          </ProducedResource>
+          <ProducedResource identifier="goods_essentials_raw" AmountAtMinSkill="1" AmountAtMaxSkill="4" biomes="hydrothermalwastes">
+            <ItemResourceItem item="elastinplant" />
+            <ItemResourceItem item="slimebacteria" />
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+      <ItemContainer capacity="6" slotsperrow="3" canbeselected="true" msg="ItemMsgInteractSelect" SpawnWithId="plasmacutter" SpawnWithIdOnce="true">
+        <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="smallitem,mediumitem" />
+      </ItemContainer>
+    </Item>
+
+    <Item name="" identifier="minerworkstation" category="Misc" Tags="workstation,mine" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="false">
+      <sprite texture="Content/Items/Workstations/workstations.png" sourcerect="1024,672,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent
+        OverridingJobIdentifier="outpostdweller"
+        MenuOrder="5"
+        JobTitle="dwellerjob.miner"
+        IndicatorColor="0.5,0.86,0.9"
+        AllowOperateOutside="true"
+        OrdersToAssign="repairmechanical;exploreoutside"
+        OrderReassignmentInterval="60"
+        OrdersRequireIdle="true"
+        ItemsRequiredForResourceGeneration="plasmacutter;deepdiving"
+        ItemsToEquip="plasmacutter"
+        SkillIdentifier="mechanical"
+        SkillIncreasePerWorldStep="100.0"
+        CantFindItemsToEquipIdentifier="dialogcannotfinditemtoequip.mining"
+        ItemsToCarry="oxygensource gte 100"
+        ItemsToDrop="oxygensource lt 100"
+        CantFindItemsToCarryIdentifier="dialogcannotfinditemtocarry.mining"
+        MaxAssignedNPCs="2"
+        ResourceUIIdentifier="producedgoods">
+        <ResourceGenerator>
+          <!-- Anything with over 50% commonness in the biome will show up as a possible ore -->
+          <ProducedResource identifier="goods_mining" AmountAtMinSkill="3" AmountAtMaxSkill="5" biomes="coldcaverns">
+            <ItemResourceItem item="quartz" /><!-- silicon-->
+            <ItemResourceItem item="diamond" /><!--carbon-->
+            <ItemResourceItem item="uraniumore" />
+            <ItemResourceItem item="stannite" /><!--copper, iron, tin-->
+            <ItemResourceItem item="galena" /><!--lead-->
+            <ItemResourceItem item="ironore" />
+            <ItemResourceItem item="lazulite" /><!--phosphorus, iron-->
+            <ItemResourceItem item="bornite" /><!--copper-->
+            <ItemResourceItem item="chrysoprase" /><!-- silicon-->
+          </ProducedResource>
+          <ProducedResource identifier="goods_mining" AmountAtMinSkill="4" AmountAtMaxSkill="7" biomes="europanridge">
+            <ItemResourceItem item="amblygonite" /><!--lithium, aluminum, sodium-->
+            <ItemResourceItem item="quartz" /><!-- silicon-->
+            <ItemResourceItem item="diamond" /><!--carbon-->
+            <ItemResourceItem item="uraniumore" />
+            <ItemResourceItem item="stannite" /><!--copper, iron, tin-->
+            <ItemResourceItem item="galena" /><!--lead-->
+            <ItemResourceItem item="chamosite" /><!--iron, aluminum-->
+            <ItemResourceItem item="ironore" />
+            <ItemResourceItem item="bornite" /><!--copper-->
+            <ItemResourceItem item="cassiterite" /><!--tin-->
+            <ItemResourceItem item="chrysoprase" /><!-- silicon-->
+          </ProducedResource>
+          <ProducedResource identifier="goods_mining" AmountAtMinSkill="5" AmountAtMaxSkill="9" biomes="theaphoticplateau">
+            <ItemResourceItem item="titanite" /><!--titanium,iron-->
+            <ItemResourceItem item="brockite" /><!--phosphorus,thorium-->
+            <ItemResourceItem item="thorianite" />
+            <ItemResourceItem item="amblygonite" /><!--lithium, aluminum, sodium-->
+            <ItemResourceItem item="pyromorphite" /><!--chlorine-->
+            <ItemResourceItem item="diamond" /><!--carbon-->
+            <ItemResourceItem item="uraniumore" />
+            <ItemResourceItem item="ilmenite" /><!--titanium-->
+            <ItemResourceItem item="stannite" /><!--copper, iron, tin-->
+            <ItemResourceItem item="galena" /><!--lead-->
+            <ItemResourceItem item="ironore" />
+            <ItemResourceItem item="polyhalite" /><!--potassium,calcium-->
+            <ItemResourceItem item="graphite" /><!--carbon-->
+            <ItemResourceItem item="bornite" /><!--copper-->
+            <ItemResourceItem item="langbeinite" /><!--potassium, magnesium -->
+            <ItemResourceItem item="sylvite" /><!--potassium, sodium -->
+            <ItemResourceItem item="cassiterite" /><!--tin-->
+            <ItemResourceItem item="cryolite" /><!--sodium-->
+          </ProducedResource>
+          <ProducedResource identifier="goods_mining" AmountAtMinSkill="5" AmountAtMaxSkill="11" biomes="thegreatsea">
+            <ItemResourceItem item="titanite" /><!--titanium,iron-->
+            <ItemResourceItem item="thorianite" />
+            <ItemResourceItem item="amblygonite" /><!--lithium, aluminum, sodium-->
+            <ItemResourceItem item="langbeinite" /><!--potassium, magnesium -->
+            <ItemResourceItem item="graphite" /><!--carbon-->
+            <ItemResourceItem item="sylvite" /><!--potassium, sodium -->
+            <ItemResourceItem item="cassiterite" /><!--tin-->
+            <ItemResourceItem item="cryolite" /><!--sodium-->
+            <!-- fully random -->
+            <ItemResourceItem item="ore" />
+          </ProducedResource>
+          <ProducedResource identifier="goods_mining" AmountAtMinSkill="5" AmountAtMaxSkill="13" biomes="hydrothermalwastes">
+            <ItemResourceItem item="titanite" /><!--titanium,iron-->
+            <ItemResourceItem item="thorianite" />
+            <ItemResourceItem item="amblygonite" /><!--lithium, aluminum, sodium-->
+            <ItemResourceItem item="langbeinite" /><!--potassium, magnesium -->
+            <ItemResourceItem item="sylvite" /><!--potassium, sodium -->
+            <ItemResourceItem item="cryolite" /><!--sodium-->
+            <!-- fully random alien ore (big benefit to hydrothermalwastes biome)-->
+            <ItemResourceItem item="alienore" />
+          </ProducedResource>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="uraniumore" Amount="1" />
+            <ProducedItem item="uranium" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="ilmenite" Amount="1" />
+            <ProducedItem item="titanium" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="stannite" Amount="1" />
+            <ProducedItem item="copper" Amount="1" />
+            <ProducedItem item="iron" Amount="1" />
+            <ProducedItem item="tin" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="chalcopyrite" Amount="1" />
+            <ProducedItem item="copper" Amount="1" />
+            <ProducedItem item="copper" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="esperite" Amount="1" />
+            <ProducedItem item="zinc" Amount="2" />
+            <ProducedItem item="lead" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="titanite" Amount="1" />
+            <ProducedItem item="titanium" Amount="3" />
+            <ProducedItem item="iron" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="brockite" Amount="1" />
+            <ProducedItem item="phosphorus" Amount="1" />
+            <ProducedItem item="thorium" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="thorianite" Amount="1" />
+            <ProducedItem item="thorium" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="amblygonite" Amount="1" />
+            <ProducedItem item="lithium" Amount="1" />
+            <ProducedItem item="aluminium" Amount="1" />
+            <ProducedItem item="sodium" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="sphalerite" Amount="1" />
+            <ProducedItem item="zinc" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="pyromorphite" Amount="1" />
+            <ProducedItem item="chlorine" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="quartz" Amount="1" />
+            <ProducedItem item="silicon" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="diamond" Amount="1" />
+            <ProducedItem item="carbon" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="hydroxyapatite" Amount="1" />
+            <ProducedItem item="calcium" Amount="1" />
+            <ProducedItem item="phosphorus" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="galena" Amount="1" />
+            <ProducedItem item="lead" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="triphylite" Amount="1" />
+            <ProducedItem item="lithium" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="langbeinite" Amount="1" />
+            <ProducedItem item="potassium" Amount="1" />
+            <ProducedItem item="magnesium" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="chamosite" Amount="1" />
+            <ProducedItem item="iron" Amount="2" />
+            <ProducedItem item="aluminium" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="ironore" Amount="1" />
+            <ProducedItem item="iron" Amount="4" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="polyhalite" Amount="1" />
+            <ProducedItem item="potassium" Amount="1" />
+            <ProducedItem item="calcium" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="graphite" Amount="1" />
+            <ProducedItem item="carbon" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="sylvite" Amount="1" />
+            <ProducedItem item="sodium" Amount="1" />
+            <ProducedItem item="potassium" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="lazulite" Amount="1" />
+            <ProducedItem item="phosphorus" Amount="1" />
+            <ProducedItem item="iron" Amount="1" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="bornite" Amount="1" />
+            <ProducedItem item="copper" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="cassiterite" Amount="1" />
+            <ProducedItem item="tin" Amount="3" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="cryolite" Amount="1" />
+            <ProducedItem item="sodium" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="aragonite" Amount="1" />
+            <ProducedItem item="calcium" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="goods_mining" OutputResource="goods_mining">
+            <ConsumedItem item="chrysoprase" Amount="1" />
+            <ProducedItem item="silicon" Amount="2" />
+          </ConvertItem>
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item name="" identifier="storefrontworkstation" category="Misc" Tags="workstation" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="true">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="848,672,160,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent 
+        OverridingJobIdentifier="dweller_storekeeper"
+        CampaignInteractionType="Store"
+        StoreIdentifier="merchantplayeroutpost;merchantoutpost;merchantmedical;merchantengineering"
+        JobTitle="dwellerjob.storekeeper"
+        IndicatorColor="255,151,17,255"
+        MaxAssignedNPCs="1" 
+        DeskJobWanderDistance="300"
+        SkillIdentifier="hospitality"
+        SkillIncreasePerWorldStep="100.0">
+        <!--
+        Generates wealth (when a dweller is assigned) scaled by the 'productionquantity' Resource, which already has the impact
+        of population, wealth-laziness modifier, food, starvation, and strikes built-in. Capped at 20.
+        -->
+        <ResourceGenerator>
+          <ProducedResource identifier="wealth" AmountAtMinSkill="1.0" AmountAtMaxSkill="2.0" ScaleByResource="productionquantity" AmountCap="20" />
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item name="" identifier="hrworkstation" category="Misc" Tags="workstation,newdwellergathering" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="true">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="1024,336,160,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent 
+        OverridingJobIdentifier="dweller_hrmanager" 
+        JobTitle="dwellerjob.hrmanager" 
+        CampaignInteractionType="Crew" 
+        IndicatorColor="131,136,240,255"
+        MaxAssignedNPCs="1" 
+        DeskJobWanderDistance="200"
+        SkillIdentifier="hospitality"
+        SkillIncreasePerWorldStep="100.0">
+        <!-- Generates wealth (when a dweller is assigned) scaled by the current population. 0 at 0, 2.5 at 50. -->
+        <ResourceGenerator>
+          <ProducedResource identifier="wealth" AmountAtMinSkill="0.05" AmountAtMaxSkill="0.25" ScaleByResource="currentpopulation" />
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item name="" identifier="outpostmanagerworkstation" category="Misc" Tags="workstation,outpostmanagement" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="false">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="1200,336,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent OverridingJobIdentifier="dweller_outpostmanager" MenuOrder="0" JobTitle="dwellerjob.outpostmanager" ConversationEventIdentifier="outpostmanagerconversation" ConversationSpeakerTag="outpostmanager" IndicatorColor="230,179,77,255" MaxAssignedNPCs="1" DeskJobWanderDistance="200">
+        <ResourceGenerator unlockresearchtiers="basic">
+          <ProducedResource identifier="researchpoints" amount="1" interval="1">
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+      <OutpostManagementComponent canbeselected="true" msg="ItemMsgInteractSelect" />
+    </Item>
+
+    <Item name="" identifier="adminterminal" category="Machine" Tags="smallitem,outpostmanagement" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
+      <Sprite texture="Content/Map/Outposts/Art/Storage.png" depth="0.8" sourcerect="1544,506,142,149" origin="0.5,0.5" />
+      <LightComponent range="0.0" lightcolor="255,255,255,0" powerconsumption="0" IsOn="true" castshadows="false" alphablend="true" allowingameediting="false">
+        <sprite texture="Content/Map/Outposts/Art/Storage.png" depth="0.025" sourcerect="1899,656,142,147" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="0.0" lightcolor="255,255,255,0" powerconsumption="0" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false" blinkfrequency="1">
+        <sprite texture="Content/Map/Outposts/Art/Storage.png" depth="0.025" sourcerect="1869,506,142,149" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <OutpostManagementComponent canbeselected="true" msg="ItemMsgInteractSelect" />
+    </Item>
+
+    <Item name="" identifier="descendantmonitor1" category="Misc" Tags="workstation,outpostmanagement" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="true" subcategory="descendants">
+      <sprite texture="%ModDir%/Content/Items/DescendantsDecorativeItems2.png" sourcerect="672,432,160,240" depth="0.95" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent OverridingJobIdentifier="dweller_outpostmanager" MenuOrder="0" JobTitle="dwellerjob.outpostmanager" ConversationEventIdentifier="outpostmanagerconversation" ConversationSpeakerTag="outpostmanager" IndicatorColor="230,179,77,255" MaxAssignedNPCs="1" DeskJobWanderDistance="200">
+        <ResourceGenerator unlockresearchtiers="basic">
+          <ProducedResource identifier="researchpoints" amount="1" interval="1">
+          </ProducedResource>
+        </ResourceGenerator>
+      </WorkstationComponent>
+      <OutpostManagementComponent canbeselected="true" msg="ItemMsgInteractSelect" />
+    </Item>
+
+    <!-- Guardpost -->
+    <Item name="" identifier="securityworkstation" category="Misc" Tags="workstation" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="true">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="848,336,160,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <!-- note: assigning a fight intruders or operate weapons order is unnecessary, the bot gets them as autonomous orders from the dweller_securityofficer job-->
+      <WorkstationComponent OrdersToAssign="findweapon" 
+                            OverridingJobIdentifier="dweller_securityofficer"
+                            ItemsToEquipOptional="securityofficeroutfit;armor;helmet"
+                            JobTitle="dwellerjob.securityofficer" 
+                            IndicatorColor="145,122,109,255" 
+                            MaxAssignedNPCs="2" 
+                            SkillIdentifier="weapons"
+                            SkillIncreasePerWorldStep="100.0"
+                            />
+      <!-- container for some weapons/ammo -->
+      <ItemContainer capacity="3" slotsperrow="3" canbeselected="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+        <Containable items="smallitem,mediumitem" />
+      </ItemContainer>
+    </Item>
+
+    <Item name="" identifier="submarinemerchantworkstation" category="Misc" Tags="workstation" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="false">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="848,0,160,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent 
+        OverridingJobIdentifier="dweller_submarinemerchant" 
+        JobTitle="dwellerjob.submarinemerchant" 
+        CampaignInteractionType="PurchaseSub" 
+        IndicatorColor="169,212,187,255" 
+        MaxAssignedNPCs="1" 
+        DeskJobWanderDistance="200" 
+        SkillIdentifier="helm"
+        SkillIncreasePerWorldStep="100.0">
+        <!--
+        Generates wealth (when a dweller is assigned) scaled by the 'productionquantity' Resource, which already has the impact
+        of population, wealth-laziness modifier, food, starvation, and strikes built-in. Capped at 10.
+        -->
+        <ResourceGenerator>
+          <ProducedResource identifier="wealth" amount="0.5" ScaleByResource="productionquantity" AmountCap="10" />
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item name="" identifier="submarineupgraderworkstation" category="Misc" Tags="workstation" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="false">
+      <Sprite texture="Content/Items/Workstations/workstations.png" sourcerect="1024,0,160,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <WorkstationComponent 
+        OverridingJobIdentifier="dweller_submarineupgrader" 
+        JobTitle="dwellerjob.submarineupgrader" 
+        CampaignInteractionType="Upgrade" 
+        IndicatorColor="255,209,102,255" 
+        MaxAssignedNPCs="1" 
+        DeskJobWanderDistance="200" 
+        SkillIdentifier="mechanical"
+        SkillIncreasePerWorldStep="100.0">
+        <!--
+        Generates wealth (when a dweller is assigned) scaled by the 'productionquantity' Resource, which already has the impact
+        of population, wealth-laziness modifier, food, starvation, and strikes built-in. Capped at 5.
+        -->
+        <ResourceGenerator>
+          <ProducedResource identifier="wealth" AmountAtMinSkill="0.25" AmountAtMaxSkill="0.5" ScaleByResource="productionquantity" AmountCap="5" />
+        </ResourceGenerator>
+      </WorkstationComponent>
+    </Item>
+
+    <Item name="" identifier="chefsworkstation" descriptionidentifier="chefsworkstation" category="Misc" Tags="workstation" scale="0.5" isshootable="true" spritecolor="255,255,255,255" GrabWhenSelected="true" allowedlinks="locker">
+      <sprite texture="Content/Items/Workstations/workstations.png" sourcerect="0,672,416,336" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" createbuttontext="chefsworkstation.cook" ShowSortByDropdown="false" ShowAvailableOnlyTickBox="true" ShowCategoryButtons="false">
+        <GuiFrame relativesize="0.4,0.5" style="ItemUI" anchor="Center" />
+        <sound file="%ModDir%/Content/Items/MACHINERY_chefStationLoop.ogg" type="OnActive" range="800.0" loop="true"/>
+      </Fabricator>
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true"/>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true"/>
+      <WorkstationComponent        
+        OverridingJobIdentifier="outpostdweller"
+        JobTitle="dwellerjob.chef" 
+        MaxAssignedNPCs="1" 
+        IndicatorColor="255,178,102,255" 
+        LogTextTag="economylog.workstation.cooking" 
+        ResourceUIIdentifier="food"
+        SkillIdentifier="farming"
+        SkillIncreasePerWorldStep="100.0">
+        <ResourceGenerator MaximumRecipesPerTick="1">
+          <!-- Raw creature item -> cooked creature item -->
+          <ConvertItem resource="basicfood" OutputResource="luxuryfood">
+            <ConsumedItem item="mantisroe" Amount="1" />
+            <ProducedItem item="mantisroe_cooked" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="basicfood" OutputResource="luxuryfood">
+            <ConsumedItem item="molochmilk" Amount="1" />
+            <ProducedItem item="molochmilk_cooked" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="luxuryfood" OutputResource="luxuryfood">
+            <ConsumedItem item="endwormparasites" Amount="1" />
+            <ProducedItem item="endwormparasites_cooked" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="basicfood" OutputResource="luxuryfood">
+            <ConsumedItem item="tigerthresherbreastfillet" Amount="1" />
+            <ProducedItem item="tigerthresherbreastfillet_cooked" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="basicfood" OutputResource="luxuryfood">
+            <ConsumedItem item="hammerheadspawnmeat" Amount="1" />
+            <ProducedItem item="hammerheadspawnmeat_cooked" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="basicfood" OutputResource="luxuryfood">
+            <ConsumedItem item="mudraptorexhausttubes" Amount="1" />
+            <ProducedItem item="mudraptorexhausttubes_cooked" Amount="5" />
+          </ConvertItem>
+          <ConvertItem resource="basicfood" OutputResource="luxuryfood">
+            <ConsumedItem item="crawlertorso" Amount="1" />
+            <ProducedItem item="crawlertorso_cooked" Amount="5" />
+          </ConvertItem>
+          <!-- Raw fish item -> cooked fish item -->
+          <ConvertItem resource="rawfish" OutputResource="basicfood">
+            <ConsumedItem item="ferrulusflesh" Amount="1" />
+            <ProducedItem item="ferrulusflesh_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawfish" OutputResource="basicfood">
+            <ConsumedItem item="illusoroidmantle" Amount="1" />
+            <ProducedItem item="illusoroidmantle_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawfish" OutputResource="basicfood">
+            <ConsumedItem item="tatterfishfillet" Amount="1" />
+            <ProducedItem item="tatterfishfillet_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawfish" OutputResource="basicfood">
+            <ConsumedItem item="charybtentacle" Amount="1" />
+            <ProducedItem item="charybtentacle_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawfish" OutputResource="basicfood">
+            <ConsumedItem item="ashacleviscera" Amount="1" />
+            <ProducedItem item="ashacleviscera_cooked" Amount="2" />
+          </ConvertItem>
+          <!-- Raw plant item -> cooked plant item -->
+          <ConvertItem resource="rawplant" OutputResource="basicfood">
+            <ConsumedItem item="halophytegrain" Amount="1" />
+            <ProducedItem item="halophytegrain_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawplant" OutputResource="basicfood">
+            <ConsumedItem item="greengrasp" Amount="1" />
+            <ProducedItem item="greengrasp_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawplant" OutputResource="basicfood">
+            <ConsumedItem item="molochbolete" Amount="1" />
+            <ProducedItem item="molochbolete_cooked" Amount="2" />
+          </ConvertItem>
+          <ConvertItem resource="rawplant" OutputResource="basicfood">
+            <ConsumedItem item="creepingorange" Amount="1" />
+            <ProducedItem item="creepingorange_cooked" Amount="2" />
+          </ConvertItem>
+        </ResourceGenerator>
+      </WorkstationComponent> 
+    </Item>
+    
+</Items>
+</Override>
